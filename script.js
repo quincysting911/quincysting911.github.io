@@ -20,14 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Here you would typically send the form data to a server
-        // For this example, we'll just log it to the console
         const formData = new FormData(contactForm);
-        console.log('Form submitted with the following data:');
-        for (let [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
-        alert('Thank you for your message! We will get back to you soon.');
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        // Simulate sending an email (in a real scenario, this would be handled by a server)
+        console.log(`Sending email to: qinyan_mcse@hotmail.com`);
+        console.log(`From: ${name} (${email})`);
+        console.log(`Message: ${message}`);
+
+        alert(`Thank you for your message, ${name}! Your query will be sent to qinyan_mcse@hotmail.com. We will get back to you soon.`);
         contactForm.reset();
     });
 });

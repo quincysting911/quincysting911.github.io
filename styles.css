@@ -142,24 +142,25 @@ h2 {
     color: var(--primary-color);
 }
 
-.partnership-highlights {
+.partner-logos {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
-.highlight {
-    flex-basis: 30%;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
+.partner-logo {
+    max-width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
 }
 
-.highlight h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.partner-logo:hover {
+    transform: scale(1.1);
 }
 
 #contact-form {
