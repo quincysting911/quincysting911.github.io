@@ -65,7 +65,7 @@ export default function Contact() {
             <h1 className="text-4xl font-bold text-aws-navy mb-4">Contact Us</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Have feedback, suggestions, or questions about AWS AI News Hub?
-              We'd love to hear from you. Send us a message and we'll get back to you soon.
+              We&apos;d love to hear from you. Send us a message and we&apos;ll get back to you soon.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function Contact() {
                 <div className="p-4 bg-green-50 border border-green-200 rounded-md">
                   <p className="text-green-700 text-sm">
                     Thank you for your message! Your email client should open with the pre-filled message.
-                    If it doesn't open automatically, please send your message using your preferred email application.
+                    If it doesn&apos;t open automatically, please send your message using your preferred email application.
                   </p>
                 </div>
               )}
@@ -178,7 +178,7 @@ export default function Contact() {
             <p className="text-gray-700 text-sm leading-relaxed">
               AWS AI News Hub is an automated news aggregation platform that delivers the latest AWS artificial
               intelligence and machine learning updates. We aggregate content from official AWS sources including
-              AWS What's New, AWS ML Blog, and AWS News Blog, featuring coverage of 35+ AWS AI services across
+              AWS What&apos;s New, AWS ML Blog, and AWS News Blog, featuring coverage of 35+ AWS AI services across
               9 categories with 150+ smart keywords for comprehensive content detection.
             </p>
             <p className="text-gray-700 text-sm mt-3">
