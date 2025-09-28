@@ -154,14 +154,37 @@ const SERVICE_CATEGORIES = {
     'codewhisperer', 'code generation'
   ],
   'industry-cases': [
-    'case study', 'customer story', 'use case', 'implementation',
-    'success story', 'deployment', 'adoption', 'solution',
-    'real-world', 'production', 'enterprise', 'business value',
-    'roi', 'transformation', 'industry', 'customer',
-    'financial services', 'healthcare', 'retail', 'manufacturing',
-    'automotive', 'media', 'entertainment', 'agriculture', 'energy',
-    'logistics', 'supply chain', 'education', 'telecommunications',
-    'gaming', 'startup', 'enterprise', 'digital transformation'
+    // Very specific customer story indicators
+    'customer story', 'case study', 'customer case study',
+    'customer success', 'customer spotlight', 'customer feature',
+
+    // Phrases unique to implementation stories (not product announcements)
+    'how we built', 'how they built', 'how to build', 'building a solution',
+    'real-world implementation', 'in this solution', 'this solution demonstrates',
+    'in practice', 'practical implementation', 'implementation guide',
+
+    // Business outcome language
+    'achieved results', 'business impact', 'transformed their business',
+    'reduced costs by', 'increased efficiency by', 'improved performance by',
+    'delivers value', 'business outcomes', 'measurable results',
+
+    // Industry-specific solution patterns
+    'healthcare solution', 'financial services solution', 'retail solution',
+    'manufacturing solution', 'media and entertainment solution',
+    'telecommunications solution', 'education solution', 'gaming solution',
+    'automotive solution', 'energy solution', 'supply chain solution',
+
+    // Customer-centric phrases (not found in service announcements)
+    'customer journey', 'customer experience improved', 'helped customers',
+    'customer testimonial', 'customer profile', 'customer adoption',
+
+    // Deployment stories (not feature announcements)
+    'production deployment', 'deployed solution', 'went live with',
+    'migrated to aws', 'moved to aws', 'running on aws',
+
+    // Problem-solution narrative (unique to case studies)
+    'faced challenges', 'solved the problem', 'overcame obstacles',
+    'business challenge', 'technical challenge', 'addressed the need'
   ]
 };
 
