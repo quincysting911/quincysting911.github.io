@@ -152,7 +152,7 @@ export default function Home({ newsData }: HomeProps) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
-    const dataPath = path.join(process.cwd(), 'public/data/news.json');
+    const dataPath = path.join(process.cwd(), 'public/data/all.json');
 
     // Check if data file exists, if not create empty data
     let newsData: NewsData;

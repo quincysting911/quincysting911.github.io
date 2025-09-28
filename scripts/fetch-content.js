@@ -587,6 +587,17 @@ async function main() {
       await fetcher.saveContent(categoryData, categoryPath);
     }
 
+    // Generate aggregated all.json file for main page
+    const allData = {
+      lastUpdated: content.lastUpdated,
+      totalItems: content.items.length,
+      sources: content.sources,
+      items: content.items,
+    };
+
+    const allPath = path.join(__dirname, '../public/data/all.json');
+    await fetcher.saveContent(allData, allPath);
+
     console.log('\n🎉 Content aggregation completed successfully!\n');
     process.exit(0);
   } catch (error) {
