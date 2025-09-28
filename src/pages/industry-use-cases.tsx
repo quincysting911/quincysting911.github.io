@@ -11,6 +11,7 @@ interface UseCase {
   benefits: string[];
   region: string;
   icon: string;
+  sourceUrl: string;
 }
 
 const industryUseCases: UseCase[] = [
@@ -23,7 +24,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon Rekognition', 'Amazon SageMaker', 'AWS Lambda', 'Amazon S3'],
     benefits: ['50% faster diagnosis', 'Improved accuracy', 'Reduced radiologist workload', 'Better patient outcomes'],
     region: 'Europe',
-    icon: '🏥'
+    icon: '🏥',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/philips/'
   },
   {
     id: 'finance-1',
@@ -34,7 +36,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'Amazon Kinesis', 'AWS Lambda', 'Amazon DynamoDB'],
     benefits: ['99.9% fraud detection accuracy', 'Real-time processing', '$50M+ fraud prevented', 'Reduced false positives'],
     region: 'North America',
-    icon: '🏦'
+    icon: '🏦',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/capital-one/'
   },
   {
     id: 'retail-1',
@@ -45,7 +48,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon Personalize', 'Amazon SageMaker', 'AWS Glue', 'Amazon Redshift'],
     benefits: ['35% revenue increase', 'Enhanced customer experience', 'Improved conversion rates', 'Reduced cart abandonment'],
     region: 'Global',
-    icon: '🛒'
+    icon: '🛒',
+    sourceUrl: 'https://aws.amazon.com/personalize/customers/'
   },
   {
     id: 'automotive-1',
@@ -56,7 +60,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'AWS IoT', 'Amazon Timestream', 'Amazon QuickSight'],
     benefits: ['25% reduced downtime', 'Proactive maintenance', 'Quality improvements', 'Cost optimization'],
     region: 'Europe',
-    icon: '🚗'
+    icon: '🚗',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/bmw/'
   },
   {
     id: 'media-1',
@@ -67,7 +72,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon Personalize', 'Amazon Rekognition Video', 'Amazon Transcribe', 'Amazon Bedrock'],
     benefits: ['80% content discovery via AI', 'Automated metadata generation', 'Enhanced user engagement', 'Global content scaling'],
     region: 'Global',
-    icon: '🎬'
+    icon: '🎬',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/netflix/'
   },
   {
     id: 'manufacturing-1',
@@ -78,7 +84,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'AWS IoT Core', 'Amazon Kinesis', 'Amazon QuickSight'],
     benefits: ['30% efficiency improvement', 'Reduced waste', 'Predictive analytics', 'Real-time monitoring'],
     region: 'Europe',
-    icon: '🏭'
+    icon: '🏭',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/siemens/'
   },
   {
     id: 'agriculture-1',
@@ -89,7 +96,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon Rekognition', 'Amazon SageMaker', 'AWS IoT', 'Amazon S3'],
     benefits: ['20% yield increase', 'Reduced pesticide use', 'Optimized irrigation', 'Sustainable farming'],
     region: 'North America',
-    icon: '🌾'
+    icon: '🌾',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/john-deere/'
   },
   {
     id: 'energy-1',
@@ -100,7 +108,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'AWS IoT', 'Amazon Kinesis', 'Amazon CloudWatch'],
     benefits: ['40% reduction in unplanned downtime', 'Improved safety', 'Cost savings', 'Environmental protection'],
     region: 'Global',
-    icon: '⚡'
+    icon: '⚡',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/shell/'
   },
   {
     id: 'logistics-1',
@@ -111,7 +120,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'Amazon Rekognition', 'AWS Lambda', 'Amazon Location Service'],
     benefits: ['25% faster deliveries', 'Reduced fuel consumption', 'Automated sorting', 'Improved customer satisfaction'],
     region: 'Global',
-    icon: '📦'
+    icon: '📦',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/dhl/'
   },
   {
     id: 'education-1',
@@ -122,7 +132,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon Personalize', 'Amazon Comprehend', 'Amazon Polly', 'Amazon SageMaker'],
     benefits: ['Improved learning outcomes', 'Personalized content', 'Better engagement', 'Data-driven insights'],
     region: 'Global',
-    icon: '📚'
+    icon: '📚',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/pearson/'
   },
   {
     id: 'telecommunications-1',
@@ -133,7 +144,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'Amazon Lex', 'Amazon Connect', 'Amazon CloudWatch'],
     benefits: ['Network reliability improvement', 'Faster issue resolution', 'Enhanced customer experience', 'Operational efficiency'],
     region: 'North America',
-    icon: '📡'
+    icon: '📡',
+    sourceUrl: 'https://aws.amazon.com/solutions/case-studies/verizon/'
   },
   {
     id: 'gaming-1',
@@ -144,7 +156,8 @@ const industryUseCases: UseCase[] = [
     awsServices: ['Amazon SageMaker', 'Amazon Kinesis', 'AWS GameLift', 'Amazon QuickSight'],
     benefits: ['Enhanced player engagement', 'Optimized game balance', 'Reduced churn', 'Personalized experiences'],
     region: 'Global',
-    icon: '🎮'
+    icon: '🎮',
+    sourceUrl: 'https://aws.amazon.com/gamelift/customers/'
   }
 ];
 
@@ -259,7 +272,7 @@ export default function IndustryUseCases() {
                 </div>
 
                 {/* Benefits */}
-                <div className="px-6 py-4">
+                <div className="px-6 py-4 border-b border-gray-100">
                   <h4 className="font-semibold text-aws-navy mb-3">Key Benefits</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {useCase.benefits.map((benefit, index) => (
@@ -269,6 +282,21 @@ export default function IndustryUseCases() {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                {/* Source Link */}
+                <div className="px-6 py-4">
+                  <a
+                    href={useCase.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-aws-orange hover:text-orange-600 font-medium text-sm transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    <span>View AWS Case Study</span>
+                  </a>
                 </div>
               </div>
             ))}
