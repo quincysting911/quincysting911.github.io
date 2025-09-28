@@ -113,17 +113,27 @@ const SERVICE_CATEGORIES = {
     'text generation', 'code generation', 'partyrock'
   ],
   'foundation-models': [
-    // Model availability announcements
+    // Model availability in Bedrock (very specific)
     'now available in bedrock', 'available in amazon bedrock',
-    'model now available', 'models now available', 'foundation model',
-    // Specific model names
-    'claude', 'claude 3', 'claude 4', 'claude sonnet', 'claude opus',
-    'llama', 'meta llama', 'mistral', 'cohere', 'ai21', 'titan',
-    'nova', 'amazon nova', 'stability ai', 'stable diffusion',
-    'deepseek', 'qwen', 'anthropic', 'jurassic',
-    // Model types
-    'multimodal model', 'embedding model', 'image generation model',
-    'distilled model', 'reasoning model'
+    'model now available in bedrock', 'models now available in bedrock',
+    'foundation model', 'foundation models',
+    // Specific model names with context
+    'claude 3', 'claude 4', 'claude sonnet', 'claude opus', 'claude haiku',
+    'meta llama', 'llama 3', 'llama model',
+    'mistral ai', 'mistral model', 'mistral large',
+    'cohere command', 'cohere embed',
+    'ai21 jamba', 'ai21 jurassic',
+    'amazon titan', 'titan embedding', 'titan image',
+    'amazon nova', 'nova pro', 'nova lite', 'nova micro',
+    'deepseek-r1', 'deepseek reasoning',
+    'qwen model', 'qwen2.5',
+    'stability ai', 'stable diffusion',
+    'anthropic claude',
+    // Model-specific announcements
+    'bedrock model', 'bedrock models',
+    'multimodal model', 'embedding model',
+    'distilled model', 'reasoning model',
+    'model customization', 'custom models'
   ],
   'machine-learning': [
     'sagemaker', 'mlops', 'model training', 'ml pipeline', 'autopilot',
@@ -316,11 +326,16 @@ class ContentFetcher {
   }
 
   /**
-   * Categorize content based on keywords
+   * Categorize content based on keywords and source
    */
-  categorizeContent(title, description) {
+  categorizeContent(title, description, source = null) {
     const text = `${title} ${description}`.toLowerCase();
     const categories = [];
+
+    // Source-based categorization for AWS News Blog
+    if (source === 'news-blog') {
+      categories.push('news');
+    }
 
     Object.entries(SERVICE_CATEGORIES).forEach(([category, keywords]) => {
       if (keywords.some(keyword => text.includes(keyword.toLowerCase()))) {
@@ -415,7 +430,7 @@ class ContentFetcher {
       }
 
       const services = this.extractServices(title, description);
-      const itemCategories = this.categorizeContent(title, description);
+      const itemCategories = this.categorizeContent(title, description, source);
       const tags = this.extractTags(title, description, services);
 
       processed.push({
