@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2025-09-28T12:48:49.486Z",
+  "lastUpdated": "2025-09-28T13:06:00.700Z",
   "category": "machine-learning",
-  "totalItems": 13,
+  "totalItems": 20,
   "items": [
     {
       "id": "aws-news-36218ab4636b",
@@ -9,7 +9,7 @@
       "description": "Today, AWS eliminated the networking bandwidth burst duration limitations for Amazon EC2 I7i and I8g instances on sizes larger than 4xlarge. This update doubles the Network Bandwidth available at all times for i7i and i8g instances on sizes larger than 4xlarge. Previously, these instance sizes had a baseline bandwidth and used a network I/O credit mechanism to burst beyond their baseline bandwidth on a best effort basis. Today these instance sizes can sustain their maximum performance indefinitely. With this improvement, customers running memory and network intensive workloads on larger instance sizes can now consistently maintain their maximum network bandwidth without interruption, delivering more predictable performance for applications that require sustained high-throughput network connectivity. This change applies only to instance sizes larger than 4xlarge, while smaller instances will continue to operate with their existing baseline and burst bandwidth configurations.\n \nAmazon EC2 I7i and I8g instances are designed for I/O intensive workloads that require rapid data access and real-time latency from storage. These instances excel at handling transactional, real-time, distributed databases, including MySQL, PostgreSQL, Hbase and NoSQL solutions like Aerospike, MongoDB, ClickHouse, and Apache Druid. They're also optimized for real-time analytics platforms such as Apache Spark, data lakehouse, and AI LLM pre-processing for training. These instances have up to 1.5 TiB of memory, and 45 TB local instance storage. They deliver up to 100 Gbps of network performance bandwidth, and 60 Gbps of dedicated bandwidth for Amazon Elastic Block Store (EBS).\n \nTo learn more, see Amazon EC2 I7i and I8g instances. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-announces-unlimited-network-burst-duration-i8g-i7i",
       "pubDate": "2025-09-24T07:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [],
       "categories": [
         "generative-ai",
@@ -26,7 +26,7 @@
       "description": "Amazon DataZone is now available in AWS Asia Pacific (Hong Kong), Asia Pacific (Malaysia) and Europe (Zurich) Regions.\n  Amazon DataZone is a fully managed data management service to catalog, discover, analyze, share, and govern data between data producers and consumers in your organization. With Amazon DataZone, data producers populate the business data catalog with structured data assets from AWS Glue Data Catalog and Amazon Redshift tables. Data consumers search and subscribe to data assets in the data catalog and share with other collaborators working on the same business use case. Consumers can analyze their subscribed data assets with tools—such as Amazon Redshift or Amazon Athena query editors—that are directly accessed from the Amazon DataZone portal. The integrated publishing and subscription workflow provides access to auditing capabilities across projects.\n  For more information on AWS Regions where Amazon DataZone is available in preview, see supported regions.\n \nAdditionally, Amazon DataZone powers governance in the next generation of Amazon SageMaker, which simplifies the discovery, governance, and collaboration of data and AI across your lakehouse, AI models, and GenAI applications. With Amazon SageMaker Catalog (built on Amazon DataZone), users can securely discover and access approved data and models using semantic search with generative AI–created metadata, or they could just ask Amazon Q Developer using natural language to find their data. For more information on AWS Regions where the next generation of SageMaker is available, see supported regions. To learn more about the next generation of SageMaker, visit the product webpage.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-datazone-additional-regions/",
       "pubDate": "2025-09-23T18:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "amazon q",
         "q developer",
@@ -53,7 +53,7 @@
       "description": "In this post, we showed how to use SageMaker and Comet together to spin up fully managed ML environments with reproducibility and experiment tracking capabilities.",
       "link": "https://aws.amazon.com/blogs/machine-learning/rapid-ml-experimentation-for-enterprises-with-amazon-sagemaker-ai-and-comet/",
       "pubDate": "2025-09-22T17:12:33.000Z",
-      "source": "ml-blog",
+      "source": "mlBlog",
       "services": [
         "sagemaker"
       ],
@@ -66,12 +66,35 @@
       ]
     },
     {
+      "id": "aws-news-33355eceeb89",
+      "title": "Use Apache Airflow workflows to orchestrate data processing on Amazon SageMaker Unified Studio",
+      "description": "Orchestrating machine learning pipelines is complex, especially when data processing, training, and deployment span multiple services and tools. In this post, we walk through a hands-on, end-to-end example of developing, testing, and running a machine learning (ML) pipeline using workflow capabilities in Amazon SageMaker, accessed through the Amazon SageMaker Unified Studio experience. These workflows are powered by Amazon Managed Workflows for Apache Airflow.",
+      "link": "https://aws.amazon.com/blogs/big-data/use-apache-airflow-workflows-to-orchestrate-data-processing-on-amazon-sagemaker-unified-studio/",
+      "pubDate": "2025-09-22T16:56:56.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning",
+        "natural-language",
+        "industry-cases"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "lex"
+      ]
+    },
+    {
       "id": "aws-news-d073fb3f6dab",
       "title": "Announcing AWS Neuron SDK 2.26.0",
       "description": "Today, AWS announces the general availability of Neuron SDK 2.26.0, delivering improvements for deep learning workloads on AWS Inferentia and Trainium-based instances. This release introduces support for PyTorch 2.8 and JAX 0.6.2, along with enhanced inference capabilities on Trainium2 (Trn2) instances. These updates enable developers to leverage the latest frameworks while benefiting from improved model deployment flexibility and performance optimizations.\n  With Neuron SDK 2.26.0, customers can now deploy FLUX.1-dev image generation model, along with Llama 4 Scout and Maverick variants (beta) on Trn2 instances. The release introduces expert parallelism support (beta) for efficient distribution of Mixture-of-Experts (MoE) models across multiple NeuronCores, and adds new capabilities through new Neuron Kernel Interface (NKI) APIs. The updated Neuron Profiler provides improved capabilities, including system profile grouping for distributed workloads.\n  The new SDK version is available in all AWS Regions supporting Inferentia and Trainium instances, offering enhanced performance and monitoring capabilities for machine learning workloads.\n  To learn more and for a full list of new features and enhancements, see:\n  \n \n \nAWS Neuron 2.26.0 release notes\n \n \nTrn2 Instances\n \n \nTrn1 Instances\n \n \nInf2 Instances",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-neuron-2-26-announce/",
       "pubDate": "2025-09-19T07:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "lex",
         "trainium",
@@ -102,7 +125,7 @@
       "description": "In this post, we show how to integrate AWS DLCs with MLflow to create a solution that balances infrastructure control with robust ML governance. We walk through a functional setup that your team can use to meet your specialized requirements while significantly reducing the time and resources needed for ML lifecycle management.",
       "link": "https://aws.amazon.com/blogs/machine-learning/use-aws-deep-learning-containers-with-amazon-sagemaker-ai-managed-mlflow/",
       "pubDate": "2025-09-18T15:29:35.000Z",
-      "source": "ml-blog",
+      "source": "mlBlog",
       "services": [
         "sagemaker"
       ],
@@ -120,7 +143,7 @@
       "description": "Amazon SageMaker HyperPod now supports managed node autoscaling using Karpenter, enabling customers to automatically scale their clusters to meet dynamic inference and training demands. Real-time inference workloads require automatic scaling to address unpredictable traffic patterns and maintain service level agreements, while optimizing costs. However, organizations often struggle with the operational overhead of installing, configuring, and maintaining complex autoscaling solutions. HyperPod-managed node autoscaling eliminates the undifferentiated heavy lifting of Karpenter setup and maintenance, while providing integrated resilience and fault tolerance capabilities.\n  Autoscaling on HyperPod with Karpenter enables customers to achieve just-in-time provisioning that rapidly adapts GPU compute for inference traffic spikes. Customers can scale to zero nodes during low-demand periods without maintaining dedicated controller infrastructure and benefit from workload-aware node selection that optimizes instance types and costs. For inference workloads, this provides automatic capacity scaling to handle production traffic bursts, cost reduction through intelligent node consolidation during idle periods, and seamless integration with event-driven pod autoscalers like KEDA. Training workloads also benefit from automatic resource optimization during model development cycles. You can enable autoscaling on HyperPod using the UpdateCluster API with AutoScaling mode set to \"Enable\" and AutoScalerType set to \"Karpenter\".\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod EKS clusters are supported. To learn more about autoscaling on SageMaker HyperPod with Karpenter, see the user guide and blog.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/sagemaker-hyperpod-autoscaling/",
       "pubDate": "2025-09-18T07:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "sagemaker",
         "hyperpod",
@@ -141,12 +164,32 @@
       ]
     },
     {
+      "id": "aws-news-61df979b79c6",
+      "title": "Tailor Amazon SageMaker Unified Studio project environments to your needs using custom blueprints",
+      "description": "Amazon SageMaker Unified Studio is a single data and AI development environment that brings together data preparation, analytics, machine learning (ML), and generative AI development in one place. By unifying these workflows, it saves teams from managing multiple tools and makes it straightforward for data scientists, analysts, and developers to build, train, and deploy ML […]",
+      "link": "https://aws.amazon.com/blogs/big-data/tailor-amazon-sagemaker-unified-studio-project-environments-to-your-needs-using-custom-blueprints/",
+      "pubDate": "2025-09-17T22:49:58.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "generative-ai",
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
       "id": "aws-news-914f37d8d608",
       "title": "Build Agentic Workflows with OpenAI GPT OSS on Amazon SageMaker AI and Amazon Bedrock AgentCore",
       "description": "In this post, we show how to deploy gpt-oss-20b model to SageMaker managed endpoints and demonstrate a practical stock analyzer agent assistant example with LangGraph, a powerful graph-based framework that handles state management, coordinated workflows, and persistent memory systems.",
       "link": "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/",
       "pubDate": "2025-09-17T19:31:44.000Z",
-      "source": "ml-blog",
+      "source": "mlBlog",
       "services": [
         "bedrock",
         "agentcore",
@@ -164,12 +207,52 @@
       ]
     },
     {
+      "id": "aws-news-e5fcb3da4695",
+      "title": "Amazon SageMaker introduces Amazon S3 based shared storage for enhanced project collaboration",
+      "description": "AWS recently announced that Amazon SageMaker now offers Amazon Simple Storage Service (Amazon S3) based shared storage as the default project file storage option for new Amazon SageMaker Unified Studio projects. This feature addresses the deprecation of AWS CodeCommit while providing teams with a straightforward and consistent way to collaborate on project files across the […]",
+      "link": "https://aws.amazon.com/blogs/big-data/amazon-sagemaker-introduces-amazon-s3-based-shared-storage-for-enhanced-project-collaboration/",
+      "pubDate": "2025-09-16T20:23:44.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "generative-ai",
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
+      "id": "aws-news-43f352818bda",
+      "title": "Break down data silos and seamlessly query Iceberg tables in Amazon SageMaker from Snowflake",
+      "description": "This blog post discusses how to create a seamless integration between Amazon SageMaker Lakehouse and Snowflake for modern data analytics. It specifically demonstrates how organizations can enable Snowflake to access tables in AWS Glue Data Catalog (stored in S3 buckets) through SageMaker Lakehouse Iceberg REST Catalog, with security managed by AWS Lake Formation. The post provides a detailed technical walkthrough of implementing this integration, including creating IAM roles and policies, configuring Lake Formation access controls, setting up catalog integration in Snowflake, and managing data access permissions. While four different patterns exist for accessing Iceberg tables from Snowflake, the blog focuses on the first pattern using catalog integration with SigV4 authentication and Lake Formation credential vending.",
+      "link": "https://aws.amazon.com/blogs/big-data/break-down-data-silos-and-seamlessly-query-iceberg-tables-in-amazon-sagemaker-from-snowflake/",
+      "pubDate": "2025-09-15T20:12:22.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning",
+        "industry-cases"
+      ],
+      "tags": [
+        "sagemaker",
+        "ga",
+        "integration"
+      ]
+    },
+    {
       "id": "aws-news-bd724f32f406",
       "title": "Amazon SageMaker HyperPod announces health monitoring agent support for Slurm clusters",
       "description": "Today, Amazon SageMaker HyperPod announces the general availability of the health monitoring agent for Slurm clusters. SageMaker HyperPod helps you provision resilient clusters for running machine learning (ML) workloads and developing state-of-the-art models such as large language models (LLMs), diffusion models, and foundation models (FMs). The health monitoring agent performs passive, background health checks of instances to identify problems in key areas without impact on application behavior or performance, flags failures instantly, and replaces any unhealthy instances to keep your training jobs running smoothly. \n \nThe agent runs continuously on all GPU- or Trainium-based nodes in your HyperPod cluster, watching for hardware issues such as unresponsive GPUs or NVLink error counters. When a fault is detected, it marks the node as unhealthy and automatically reboots or replaces it with a healthy node, keeping your jobs running without requiring manual intervention. The agent also follows a co-ordinated approach to handling failures with the job auto-resume functionality available with Slurm clusters. For example, jobs with auto-resume enabled will continue from the last saved checkpoint once nodes are replaced by the agent. This hands-free recovery—already available on HyperPod clusters orchestrated with Amazon EKS—now gives Slurm clusters the same resilient environment, helping teams train large models for weeks without disruption and reclaim time and costs that would otherwise be lost to mid-run failures. In addition, customers can now also reboot their nodes using a simple command in case of intermittent issues such as GPU driver issues requiring reset. \n \nHealth monitoring agent for Slurm is available in all regions where HyperPod is generally available. The agent is auto-enabled on all newly created Slurm clusters; to enable it on an existing cluster, simply upgrade to the latest HyperPod AMI by calling the UpdateClusterSoftware API. To learn more, visit the Amazon SageMaker HyperPod documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-sagemaker-hyperpod-health-monitoring-agent-slurm/",
       "pubDate": "2025-09-15T18:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "sagemaker",
         "hyperpod",
@@ -195,7 +278,7 @@
       "description": "In this post, we introduce topology-aware scheduling with SageMaker HyperPod task governance by submitting jobs that represent hierarchical network information. We provide details about how to use SageMaker HyperPod task governance to optimize your job efficiency.",
       "link": "https://aws.amazon.com/blogs/machine-learning/schedule-topology-aware-workloads-using-amazon-sagemaker-hyperpod-task-governance/",
       "pubDate": "2025-09-15T17:15:20.000Z",
-      "source": "ml-blog",
+      "source": "mlBlog",
       "services": [
         "sagemaker",
         "hyperpod"
@@ -215,7 +298,7 @@
       "description": "In this post, we walk through how to streamline your RAG development lifecycle from experimentation to automation, helping you operationalize your RAG solution for production deployments with Amazon SageMaker AI, helping your team experiment efficiently, collaborate effectively, and drive continuous improvement.",
       "link": "https://aws.amazon.com/blogs/machine-learning/automate-advanced-agentic-rag-pipeline-with-amazon-sagemaker-ai/",
       "pubDate": "2025-09-12T17:36:19.000Z",
-      "source": "ml-blog",
+      "source": "mlBlog",
       "services": [
         "sagemaker"
       ],
@@ -230,12 +313,32 @@
       ]
     },
     {
+      "id": "aws-news-276d02ef0edc",
+      "title": "Accelerate your data and AI workflows by connecting to Amazon SageMaker Unified Studio from Visual Studio Code",
+      "description": "In this post, we demonstrate how to connect your local VS Code to SageMaker Unified Studio so you can build complete end-to-end data and AI workflows while working in your preferred development environment.",
+      "link": "https://aws.amazon.com/blogs/big-data/accelerate-your-data-and-ai-workflows-by-connecting-to-amazon-sagemaker-unified-studio-from-visual-studio-code/",
+      "pubDate": "2025-09-12T15:59:57.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning",
+        "industry-cases"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
       "id": "aws-news-c1f00f103971",
       "title": "Amazon SageMaker notebooks now support P6-B200 instance type",
       "description": "We are pleased to announce general availability of Amazon EC2 P6-B200 instances on SageMaker notebooks.\n  Amazon EC2 P6-B200 instances are powered by 8 NVIDIA Blackwell GPUs with 1440 GB of high-bandwidth GPU memory and 5th Generation Intel Xeon processors (Emerald Rapids). These instances deliver up to 2x better performance compared to P5en instances for AI training. Customers can use P6-B200 instances to interactively develop and fine-tune large foundation models, including LLMs, mixture of experts models, and multi-modal reasoning models. These instances enable efficient experimentation with larger models directly in JupyterLab or CodeEditor environments for generative AI applications such as enterprise copilots and content generation across text, images, and video.\n  Amazon EC2 P6-B200 instances are available for SageMaker notebooks in the AWS US East (Ohio) and US West (Oregon) regions.\n  Visit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio and SageMaker notebook instances.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-sagemaker-notebooks-p6-b200-instance-type",
       "pubDate": "2025-09-12T14:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "sagemaker"
       ],
@@ -255,7 +358,7 @@
       "description": "Today, AWS announces remote connection from Visual Studio Code (VS Code) to Amazon SageMaker Unified Studio. This new capability allows developers to leverage their VS Code setup while accessing the scalable compute resources of Amazon SageMaker. By connecting VS Code to SageMaker Unified Studio, you can maintain your existing development workflows and configurations within a unified environment for AWS analytics and AI/ML services.\n  SageMaker Unified Studio, part of the next generation of Amazon SageMaker, offers a broad set of fully managed cloud interactive development environments (IDE), including JupyterLab and Code Editor based on Code-OSS (Open Source Software) like VS Code. Starting today, you can use your customized local VS Code setup while accessing your compute resources and data in Amazon SageMaker. Authentication is simple and secure using the AWS Toolkit extension in VS Code. This integration provides a streamlined path from your local development environment to scalable infrastructure for running data processing, SQL analytics, and ML workflows.\n  This feature is available in all Regions where Amazon SageMaker Unified Studio is available. To learn more, refer to the Administrator Guide and User Guide.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/sagemaker-unified-studio-vs-code/",
       "pubDate": "2025-09-12T07:00:00.000Z",
-      "source": "whats-new",
+      "source": "whatsNew",
       "services": [
         "sagemaker",
         "unified studio"
@@ -274,12 +377,30 @@
       ]
     },
     {
+      "id": "aws-news-55416b90a9f7",
+      "title": "Use the Amazon DataZone upgrade domain to Amazon SageMaker and expand to new SQL analytics, data processing, and AI uses cases",
+      "description": "Don’t miss our upcoming webinar! Register here to join AWS experts as they dive deeper and share practical insights for upgrading to SageMaker. Amazon DataZone and Amazon SageMaker announced a new feature that allows an Amazon DataZone domain to be upgraded to the next generation of SageMaker, making the investment customers put into developing Amazon […]",
+      "link": "https://aws.amazon.com/blogs/big-data/use-the-amazon-datazone-upgrade-domain-to-amazon-sagemaker-and-expand-to-new-sql-analytics-data-processing-and-ai-uses-cases/",
+      "pubDate": "2025-09-11T20:37:38.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "new-feature"
+      ]
+    },
+    {
       "id": "aws-news-6e94e435ee43",
       "title": "AWS Weekly Roundup: Single GPU P5 instances, Advanced Go Driver, Amazon SageMaker HyperPod and more (August 18, 2025)",
       "description": "Let me start this week’s update with something I’m especially excited about – the upcoming BeSA (Become a Solutions Architect) cohort. BeSA is a free mentoring program that I host along with a few other AWS employees on a volunteer basis to help people excel in their cloud careers. Last week, the instructors’ lineup was […]",
       "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-single-gpu-p5-instances-advanced-go-driver-amazon-sagemaker-hyperpod-and-more-august-18-2025/",
       "pubDate": "2025-08-18T15:39:10.000Z",
-      "source": "news-blog",
+      "source": "newsBlog",
       "services": [
         "sagemaker",
         "hyperpod"
@@ -292,6 +413,27 @@
         "sagemaker",
         "hyperpod",
         "update"
+      ]
+    },
+    {
+      "id": "aws-news-6a09dfeff5cf",
+      "title": "Optimizing fleet operations using Amazon SageMaker AI and Amazon Bedrock",
+      "description": "In this post, we'll explore how to maximize the value of dashcam footage through best practices for implementing and managing Computer Vision systems in commercial fleet operations. We'll demonstrate how to build and deploy edge-based machine learning models that provide real-time alerts for distracted driving behaviors, while effectively collecting, processing, and analyzing footage to train these AI models.",
+      "link": "https://aws.amazon.com/blogs/architecture/optimizing-fleet-operations-using-amazon-sagemaker-ai-and-amazon-bedrock/",
+      "pubDate": "2025-05-28T18:29:26.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "bedrock",
+        "sagemaker"
+      ],
+      "categories": [
+        "generative-ai",
+        "machine-learning",
+        "industry-cases"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker"
       ]
     }
   ]

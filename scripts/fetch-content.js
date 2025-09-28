@@ -16,6 +16,10 @@ const RSS_FEEDS = {
   whatsNew: 'https://aws.amazon.com/about-aws/whats-new/recent/feed/',
   mlBlog: 'https://aws.amazon.com/blogs/machine-learning/feed/',
   newsBlog: 'https://aws.amazon.com/blogs/aws/feed/',
+  bigDataBlog: 'https://aws.amazon.com/blogs/big-data/feed/',
+  architectureBlog: 'https://aws.amazon.com/blogs/architecture/feed/',
+  computeBlog: 'https://aws.amazon.com/blogs/compute/feed/',
+  developersAndDevOps: 'https://aws.amazon.com/blogs/developer/feed/',
 };
 
 // AI/ML Service Keywords for Filtering (Updated 2025-09-28)
@@ -102,6 +106,20 @@ const AI_KEYWORDS = [
   'neural network', 'ai model', 'ml model', 'training data',
   'inference', 'model deployment', 'model optimization',
   'responsible ai', 'ai safety', 'ai governance', 'ai ethics',
+
+  // Data Science & Analytics
+  'data science', 'analytics', 'big data', 'data lake', 'data pipeline',
+  'etl', 'data processing', 'data transformation', 'data mining',
+  'predictive analytics', 'business intelligence', 'visualization',
+
+  // Cloud AI/ML Infrastructure
+  'gpu', 'high performance computing', 'parallel computing', 'distributed computing',
+  'kubernetes', 'containers', 'docker', 'serverless computing', 'lambda',
+  'api gateway', 'microservices', 'event-driven', 'streaming',
+
+  // Modern Development Patterns
+  'cicd', 'automation', 'devops', 'infrastructure as code', 'monitoring',
+  'logging', 'observability', 'scalability', 'performance optimization',
 ];
 
 // Service Categories (Updated 2025-09-28)
@@ -333,7 +351,7 @@ class ContentFetcher {
     const categories = [];
 
     // Source-based categorization for AWS News Blog
-    if (source === 'news-blog') {
+    if (source === 'newsBlog') {
       categories.push('news');
     }
 
@@ -485,17 +503,16 @@ class ContentFetcher {
 
     const allItems = [];
 
-    // Fetch What's New
-    const whatsNewItems = await this.fetchFeed(RSS_FEEDS.whatsNew, 'whats-new');
-    allItems.push(...this.processFeedItems(whatsNewItems, 'whats-new'));
-
-    // Fetch ML Blog
-    const mlBlogItems = await this.fetchFeed(RSS_FEEDS.mlBlog, 'ml-blog');
-    allItems.push(...this.processFeedItems(mlBlogItems, 'ml-blog'));
-
-    // Fetch News Blog
-    const newsBlogItems = await this.fetchFeed(RSS_FEEDS.newsBlog, 'news-blog');
-    allItems.push(...this.processFeedItems(newsBlogItems, 'news-blog'));
+    // Fetch from all RSS sources
+    for (const [feedName, feedUrl] of Object.entries(RSS_FEEDS)) {
+      try {
+        const items = await this.fetchFeed(feedUrl, feedName);
+        allItems.push(...this.processFeedItems(items, feedName));
+      } catch (error) {
+        console.error(`✗ Failed to fetch ${feedName}:`, error.message);
+        // Continue with other feeds even if one fails
+      }
+    }
 
     // Deduplicate and sort
     const uniqueItems = this.deduplicateItems(allItems);
@@ -503,14 +520,16 @@ class ContentFetcher {
 
     console.log(`\n✅ Total AI/ML items aggregated: ${sortedItems.length}\n`);
 
+    // Generate sources count dynamically
+    const sources = {};
+    for (const feedName of Object.keys(RSS_FEEDS)) {
+      sources[feedName] = sortedItems.filter(i => i.source === feedName).length;
+    }
+
     return {
       lastUpdated: new Date().toISOString(),
       totalItems: sortedItems.length,
-      sources: {
-        'whats-new': sortedItems.filter(i => i.source === 'whats-new').length,
-        'ml-blog': sortedItems.filter(i => i.source === 'ml-blog').length,
-        'news-blog': sortedItems.filter(i => i.source === 'news-blog').length,
-      },
+      sources,
       items: sortedItems,
     };
   }
