@@ -22,6 +22,7 @@ const SERVICE_DISPLAY_NAMES: Record<ServiceCategory, string> = {
   'search': 'Intelligent Search',
   'personalization': 'Personalization & Forecasting',
   'specialized': 'Specialized AI Services',
+  'industry-cases': 'Industry Use Cases & Customer Stories',
   'general': 'General AI/ML',
 };
 
@@ -43,6 +44,8 @@ const SERVICE_DESCRIPTIONS: Record<ServiceCategory, string> = {
     'Real-time personalization, recommendations, and time-series forecasting',
   'specialized':
     'Specialized AI services including fraud detection, code analysis, and operational intelligence',
+  'industry-cases':
+    'Real-world customer success stories, industry implementations, and business transformation case studies using AWS AI/ML services',
   'general': 'General AWS AI and machine learning updates and announcements',
 };
 
@@ -102,6 +105,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'search',
     'personalization',
     'specialized',
+    'industry-cases',
   ];
 
   const paths = categories.map((service) => ({

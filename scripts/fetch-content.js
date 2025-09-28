@@ -153,6 +153,16 @@ const SERVICE_CATEGORIES = {
     'monitron', 'augmented ai', 'a2i', 'healthlake', 'healthscribe',
     'codewhisperer', 'code generation'
   ],
+  'industry-cases': [
+    'case study', 'customer story', 'use case', 'implementation',
+    'success story', 'deployment', 'adoption', 'solution',
+    'real-world', 'production', 'enterprise', 'business value',
+    'roi', 'transformation', 'industry', 'customer',
+    'financial services', 'healthcare', 'retail', 'manufacturing',
+    'automotive', 'media', 'entertainment', 'agriculture', 'energy',
+    'logistics', 'supply chain', 'education', 'telecommunications',
+    'gaming', 'startup', 'enterprise', 'digital transformation'
+  ]
 };
 
 // Service Name Mapping (Updated 2025-09-28)

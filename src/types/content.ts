@@ -14,6 +14,7 @@ export type ServiceCategory =
   | 'search'
   | 'personalization'
   | 'specialized'
+  | 'industry-cases'
   | 'general';
 
 export interface NewsItem {

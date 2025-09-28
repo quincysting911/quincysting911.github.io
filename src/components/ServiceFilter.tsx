@@ -17,6 +17,7 @@ const CATEGORIES: Array<{ id: ServiceCategory | 'all'; label: string; icon: stri
   { id: 'search', label: 'Search', icon: '🔍' },
   { id: 'personalization', label: 'Personalization', icon: '🎯' },
   { id: 'specialized', label: 'Specialized', icon: '🛠️' },
+  { id: 'industry-cases', label: 'Industry Cases', icon: '🏢' },
 ];
 
 export default function ServiceFilter({

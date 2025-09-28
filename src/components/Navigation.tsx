@@ -11,7 +11,7 @@ export default function Navigation() {
     { href: '/machine-learning', label: 'ML Platform' },
     { href: '/computer-vision', label: 'Vision' },
     { href: '/natural-language', label: 'NLP' },
-    { href: '/industry-use-cases', label: 'Industry Cases' },
+    { href: '/industry-cases', label: 'Industry Cases' },
     { href: '/contact', label: 'Contact Us' },
   ];
 
