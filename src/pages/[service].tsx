@@ -14,38 +14,32 @@ interface ServicePageProps {
 
 const SERVICE_DISPLAY_NAMES: Record<ServiceCategory, string> = {
   'generative-ai': 'Generative AI',
+  'foundation-models': 'Foundation Models',
   'machine-learning': 'Machine Learning',
-  'computer-vision': 'Computer Vision',
   'natural-language': 'Natural Language Processing',
-  'speech': 'Speech AI',
-  'document-intelligence': 'Document Intelligence',
-  'search': 'Intelligent Search',
-  'personalization': 'Personalization & Forecasting',
-  'specialized': 'Specialized AI Services',
+  'ai-safety': 'AI Safety & Governance',
+  'ai-services': 'AI Services',
   'industry-cases': 'Industry Use Cases & Customer Stories',
+  'news': 'AI News & Updates',
   'general': 'General AI/ML',
 };
 
 const SERVICE_DESCRIPTIONS: Record<ServiceCategory, string> = {
   'generative-ai':
-    'Foundation models, large language models, and generative AI applications with Amazon Bedrock, Amazon Q, and more',
+    'Generative AI applications, AI agents, RAG systems, and prompt engineering with Amazon Bedrock, Amazon Q, and AgentCore',
+  'foundation-models':
+    'Latest foundation model availability in Amazon Bedrock - Claude, Llama, Mistral, Nova, DeepSeek, Qwen, and more',
   'machine-learning':
-    'Complete ML platform with Amazon SageMaker for building, training, and deploying machine learning models',
-  'computer-vision':
-    'Image and video analysis with Amazon Rekognition, visual inspection, and computer vision at the edge',
+    'Complete ML platform with Amazon SageMaker for building, training, and deploying machine learning models at scale',
   'natural-language':
-    'Natural language processing, text analysis, translation, and conversational AI capabilities',
-  'speech':
-    'Speech-to-text transcription and text-to-speech synthesis with Amazon Transcribe and Polly',
-  'document-intelligence':
-    'Document analysis, OCR, and data extraction from forms and documents with Amazon Textract',
-  'search': 'Intelligent enterprise search powered by machine learning with Amazon Kendra',
-  'personalization':
-    'Real-time personalization, recommendations, and time-series forecasting',
-  'specialized':
-    'Specialized AI services including fraud detection, code analysis, and operational intelligence',
+    'Natural language processing, text analysis, translation, chatbots, and conversational AI capabilities',
+  'ai-safety':
+    'Responsible AI, guardrails, compliance, bias detection, content moderation, PII protection, and AI governance',
+  'ai-services':
+    'Specialized AI services including search (Kendra, OpenSearch), personalization, fraud detection, and code analysis',
   'industry-cases':
     'Real-world customer success stories, industry implementations, and business transformation case studies using AWS AI/ML services',
+  'news': 'Latest AWS AI and machine learning news, updates, and announcements',
   'general': 'General AWS AI and machine learning updates and announcements',
 };
 
@@ -97,15 +91,14 @@ export default function ServicePage({ service, newsData }: ServicePageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories: ServiceCategory[] = [
     'generative-ai',
+    'foundation-models',
     'machine-learning',
-    'computer-vision',
     'natural-language',
-    'speech',
-    'document-intelligence',
-    'search',
-    'personalization',
-    'specialized',
+    'ai-safety',
+    'ai-services',
     'industry-cases',
+    'news',
+    'general',
   ];
 
   const paths = categories.map((service) => ({

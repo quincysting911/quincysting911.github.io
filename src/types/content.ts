@@ -6,15 +6,13 @@ export type ContentSource = 'whats-new' | 'ml-blog' | 'news-blog' | 'security-bl
 
 export type ServiceCategory =
   | 'generative-ai'
+  | 'foundation-models'
   | 'machine-learning'
-  | 'computer-vision'
   | 'natural-language'
-  | 'speech'
-  | 'document-intelligence'
-  | 'search'
-  | 'personalization'
-  | 'specialized'
+  | 'ai-safety'
+  | 'ai-services'
   | 'industry-cases'
+  | 'news'
   | 'general';
 
 export interface NewsItem {

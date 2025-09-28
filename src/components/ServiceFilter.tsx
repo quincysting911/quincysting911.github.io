@@ -9,15 +9,13 @@ interface ServiceFilterProps {
 const CATEGORIES: Array<{ id: ServiceCategory | 'all'; label: string; icon: string }> = [
   { id: 'all', label: 'All Updates', icon: '📰' },
   { id: 'generative-ai', label: 'Generative AI', icon: '🤖' },
+  { id: 'foundation-models', label: 'Foundation Models', icon: '🔷' },
   { id: 'machine-learning', label: 'Machine Learning', icon: '🧠' },
-  { id: 'computer-vision', label: 'Computer Vision', icon: '👁️' },
   { id: 'natural-language', label: 'Natural Language', icon: '💬' },
-  { id: 'speech', label: 'Speech AI', icon: '🎤' },
-  { id: 'document-intelligence', label: 'Document Intelligence', icon: '📄' },
-  { id: 'search', label: 'Search', icon: '🔍' },
-  { id: 'personalization', label: 'Personalization', icon: '🎯' },
-  { id: 'specialized', label: 'Specialized', icon: '🛠️' },
+  { id: 'ai-safety', label: 'AI Safety & Governance', icon: '🛡️' },
+  { id: 'ai-services', label: 'AI Services', icon: '🛠️' },
   { id: 'industry-cases', label: 'Industry Cases', icon: '🏢' },
+  { id: 'news', label: 'News', icon: '📢' },
 ];
 
 export default function ServiceFilter({

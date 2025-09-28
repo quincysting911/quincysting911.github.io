@@ -107,11 +107,23 @@ const AI_KEYWORDS = [
 // Service Categories (Updated 2025-09-28)
 const SERVICE_CATEGORIES = {
   'generative-ai': [
-    'bedrock', 'foundation models', 'generative ai', 'claude', 'nova',
-    'amazon q', 'q developer', 'q business', 'llm', 'agentcore',
-    'ai agents', 'agentic ai', 'multi-agent', 'strands agents',
-    'cohere', 'ai21', 'stability ai', 'mistral', 'anthropic',
-    'multimodal', 'text-to-image', 'distilled models', 'rag'
+    'bedrock', 'generative ai', 'amazon q', 'q developer', 'q business',
+    'agentcore', 'ai agents', 'agentic ai', 'multi-agent', 'strands agents',
+    'rag', 'retrieval augmented', 'prompt engineering', 'fine-tuning',
+    'text generation', 'code generation', 'partyrock'
+  ],
+  'foundation-models': [
+    // Model availability announcements
+    'now available in bedrock', 'available in amazon bedrock',
+    'model now available', 'models now available', 'foundation model',
+    // Specific model names
+    'claude', 'claude 3', 'claude 4', 'claude sonnet', 'claude opus',
+    'llama', 'meta llama', 'mistral', 'cohere', 'ai21', 'titan',
+    'nova', 'amazon nova', 'stability ai', 'stable diffusion',
+    'deepseek', 'qwen', 'anthropic', 'jurassic',
+    // Model types
+    'multimodal model', 'embedding model', 'image generation model',
+    'distilled model', 'reasoning model'
   ],
   'machine-learning': [
     'sagemaker', 'mlops', 'model training', 'ml pipeline', 'autopilot',
@@ -119,39 +131,38 @@ const SERVICE_CATEGORIES = {
     'lakehouse', 'hyperpod', 'feature store', 'training plans',
     'trainium', 'inferentia', 'neuron', 'ml infrastructure'
   ],
-  'computer-vision': [
-    'rekognition', 'lookout for vision', 'panorama', 'image analysis',
-    'video analysis', 'facial recognition', 'custom labels',
-    'content moderation', 'image recognition'
-  ],
   'natural-language': [
     'comprehend', 'lex', 'translate', 'nlp', 'sentiment analysis',
     'comprehend medical', 'entity extraction', 'topic modeling',
     'pii detection', 'chatbot', 'conversational ai'
   ],
-  'speech': [
-    'transcribe', 'polly', 'speech to text', 'text to speech',
-    'voice synthesis', 'call analytics', 'medical transcription',
-    'neural voices', 'toxic speech detection'
+  'ai-safety': [
+    // Guardrails & Safety
+    'guardrails', 'bedrock guardrails', 'responsible ai', 'ai governance',
+    'ai safety', 'ai ethics', 'content filtering', 'harmful content',
+    // Bias & Fairness
+    'bias detection', 'fairness', 'toxicity', 'toxic content',
+    'content moderation', 'inappropriate content',
+    // Privacy & Security
+    'pii redaction', 'sensitive data', 'data privacy', 'data protection',
+    'redaction', 'anonymization', 'tokenization',
+    // Explainability
+    'explainability', 'interpretability', 'transparency', 'model explainability',
+    // Adversarial
+    'jailbreak', 'prompt injection', 'adversarial', 'security vulnerability',
+    // Watermarking & Trust
+    'watermarking', 'ai watermark', 'provenance', 'authenticity'
   ],
-  'document-intelligence': [
-    'textract', 'ocr', 'document analysis', 'form extraction',
-    'intelligent document processing', 'idp', 'handwriting recognition',
-    'table extraction'
-  ],
-  'search': [
-    'kendra', 'intelligent search', 'semantic search', 'vector search',
-    's3 vectors', 'opensearch serverless', 'vector database',
-    'embeddings', 'similarity search'
-  ],
-  'personalization': [
-    'personalize', 'forecast', 'recommendations', 'time series',
-    'demand forecasting', 'real-time personalization', 'user segmentation'
-  ],
-  'specialized': [
+  'ai-services': [
+    // Search & Knowledge
+    'kendra', 'opensearch serverless', 'vector search', 'semantic search',
+    'embeddings', 'vector database',
+    // Personalization & Forecasting
+    'personalize', 'forecast', 'recommendations', 'demand forecasting',
+    // Specialized AI
     'fraud detector', 'codeguru', 'devops guru', 'lookout for',
     'monitron', 'augmented ai', 'a2i', 'healthlake', 'healthscribe',
-    'codewhisperer', 'code generation'
+    'codewhisperer'
   ],
   'industry-cases': [
     // Blog post narrative patterns (very common in implementation stories)
