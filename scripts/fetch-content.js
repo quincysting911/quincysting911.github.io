@@ -154,37 +154,47 @@ const SERVICE_CATEGORIES = {
     'codewhisperer', 'code generation'
   ],
   'industry-cases': [
-    // Very specific customer story indicators
-    'customer story', 'case study', 'customer case study',
-    'customer success', 'customer spotlight', 'customer feature',
+    // Blog post narrative patterns (very common in implementation stories)
+    'in this post', 'in this blog', 'in this article', 'in this solution',
+    'this post explores', 'this post demonstrates', 'this post shows',
+    'we explore how', 'we demonstrate how', 'we show how', 'we walk through',
 
-    // Phrases unique to implementation stories (not product announcements)
+    // Customer story indicators
+    'customer story', 'case study', 'customer case study',
+    'customer success', 'customer spotlight', 'customer profile',
+
+    // Implementation narrative phrases
     'how we built', 'how they built', 'how to build', 'building a solution',
-    'real-world implementation', 'in this solution', 'this solution demonstrates',
-    'in practice', 'practical implementation', 'implementation guide',
+    'building with', 'build a', 'build an', 'build multi',
+    'accelerate', 'streamline', 'automate', 'move from poc to production',
+    'proof of concept to production', 'from experimentation to',
+
+    // Real-world usage indicators
+    'real-world implementation', 'production deployment', 'deployed solution',
+    'in production', 'production-ready', 'practical implementation',
+    'production deployments', 'enterprise deployment',
+
+    // Industry & vertical indicators
+    'for enterprises', 'enterprise solution', 'industry solution',
+    'benefits administration', 'claims processing', 'rating insights',
+    'property investment', 'healthcare agents', 'health care',
+    'financial services', 'site reliability',
+
+    // Partnership & collaboration patterns
+    'collaborated to build', 'partnership with', 'working with',
+    'together to build', 'in collaboration with',
+
+    // Problem-solution narrative
+    'faced challenges', 'solved the problem', 'overcame obstacles',
+    'business challenge', 'technical challenge', 'helps you',
 
     // Business outcome language
-    'achieved results', 'business impact', 'transformed their business',
-    'reduced costs by', 'increased efficiency by', 'improved performance by',
+    'achieved results', 'business impact', 'transformed business',
     'delivers value', 'business outcomes', 'measurable results',
 
-    // Industry-specific solution patterns
-    'healthcare solution', 'financial services solution', 'retail solution',
-    'manufacturing solution', 'media and entertainment solution',
-    'telecommunications solution', 'education solution', 'gaming solution',
-    'automotive solution', 'energy solution', 'supply chain solution',
-
-    // Customer-centric phrases (not found in service announcements)
-    'customer journey', 'customer experience improved', 'helped customers',
-    'customer testimonial', 'customer profile', 'customer adoption',
-
-    // Deployment stories (not feature announcements)
-    'production deployment', 'deployed solution', 'went live with',
-    'migrated to aws', 'moved to aws', 'running on aws',
-
-    // Problem-solution narrative (unique to case studies)
-    'faced challenges', 'solved the problem', 'overcame obstacles',
-    'business challenge', 'technical challenge', 'addressed the need'
+    // Tutorial & guide patterns (implementation-focused)
+    'guide to', 'walkthrough', 'step-by-step', 'getting started with',
+    'deep dive into', 'explore the', 'dive into how'
   ]
 };
 
@@ -303,7 +313,30 @@ class ContentFetcher {
 
     Object.entries(SERVICE_CATEGORIES).forEach(([category, keywords]) => {
       if (keywords.some(keyword => text.includes(keyword.toLowerCase()))) {
-        categories.push(category);
+        // Special filtering for industry-cases to exclude service announcements
+        if (category === 'industry-cases') {
+          const serviceAnnouncementPatterns = [
+            /now supports?/i,
+            /now available in \d+ (additional )?regions?/i,
+            /announces? (support|availability)/i,
+            /increases? (the )?(maximum|performance|size)/i,
+            /adds? support for/i,
+            /expands? to/i,
+            /available in .* regions?/i,
+            /is now available/i,
+            /are now available/i
+          ];
+
+          const isServiceAnnouncement = serviceAnnouncementPatterns.some(pattern =>
+            pattern.test(title) || pattern.test(description.substring(0, 200))
+          );
+
+          if (!isServiceAnnouncement) {
+            categories.push(category);
+          }
+        } else {
+          categories.push(category);
+        }
       }
     });
 
