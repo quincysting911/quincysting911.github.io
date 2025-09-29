@@ -30,16 +30,16 @@ export default function NewsCard({ item }: NewsCardProps) {
   return (
     <article className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
       {/* Header */}
-      <div className="mb-2">
+      <div className="mb-3">
         <h2 className="text-xl font-semibold text-aws-navy mb-1 hover:text-aws-orange transition-colors">
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             {item.title}
           </a>
         </h2>
-        <div className="text-sm text-gray-500 mb-2">
+        <div className="text-sm text-gray-500 mb-1">
           {timeAgo}
         </div>
-        <div className="mb-1">
+        <div>
           <span className={`px-2 py-1 rounded text-xs font-medium ${SOURCE_COLORS[item.source]}`}>
             {SOURCE_LABELS[item.source]}
           </span>
