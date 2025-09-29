@@ -165,21 +165,36 @@ const SERVICE_CATEGORIES = {
     'pii detection', 'chatbot', 'conversational ai'
   ],
   'ai-safety': [
-    // Guardrails & Safety
-    'guardrails', 'bedrock guardrails', 'responsible ai', 'ai governance',
-    'ai safety', 'ai ethics', 'content filtering', 'harmful content',
-    // Bias & Fairness
-    'bias detection', 'fairness', 'toxicity', 'toxic content',
-    'content moderation', 'inappropriate content',
-    // Privacy & Security
+    // Core AI Safety & Security
+    'ai safety', 'ai security', 'ai governance', 'responsible ai', 'ai ethics',
+    'ai regulation', 'ai compliance', 'ai oversight', 'ai accountability',
+    'ai risk management', 'ai risk assessment', 'risk mitigation',
+
+    // Guardrails & Content Safety
+    'guardrails', 'bedrock guardrails', 'content filtering', 'harmful content',
+    'content moderation', 'inappropriate content', 'toxicity', 'toxic content',
+    'bias detection', 'fairness', 'bias mitigation', 'bias monitoring',
+
+    // Privacy & Data Protection
     'pii redaction', 'sensitive data', 'data privacy', 'data protection',
-    'redaction', 'anonymization', 'tokenization',
-    // Explainability
-    'explainability', 'interpretability', 'transparency', 'model explainability',
-    // Adversarial
-    'jailbreak', 'prompt injection', 'adversarial', 'security vulnerability',
-    // Watermarking & Trust
-    'watermarking', 'ai watermark', 'provenance', 'authenticity'
+    'redaction', 'anonymization', 'tokenization', 'data masking',
+    'privacy protection', 'confidentiality', 'secure data handling',
+
+    // AI Security & Adversarial
+    'prompt injection', 'jailbreak', 'adversarial', 'security vulnerability',
+    'model security', 'ai security threats', 'secure ai deployment',
+    'threat modeling', 'security assessment', 'vulnerability assessment',
+
+    // Trust & Verification
+    'ai watermark', 'watermarking', 'provenance', 'authenticity',
+    'model verification', 'ai auditing', 'compliance monitoring',
+    'transparency', 'explainability', 'interpretability', 'model explainability',
+
+    // Governance & Policy
+    'ai policy', 'governance framework', 'regulatory compliance',
+    'ethical ai', 'ai standards', 'certification', 'audit trail',
+    'iam policy', 'service control policies', 'access control',
+    'organizations', 'permission guardrails'
   ],
   'ai-services': [
     // Search & Knowledge
@@ -193,47 +208,47 @@ const SERVICE_CATEGORIES = {
     'codewhisperer'
   ],
   'industry-cases': [
-    // Blog post narrative patterns (very common in implementation stories)
-    'in this post', 'in this blog', 'in this article', 'in this solution',
-    'this post explores', 'this post demonstrates', 'this post shows',
-    'we explore how', 'we demonstrate how', 'we show how', 'we walk through',
+    // GenAI & AWS Service Implementation Stories
+    'bedrock implementation', 'agentcore implementation', 'kira implementation',
+    'using bedrock for', 'with amazon bedrock', 'bedrock for',
+    'building with bedrock', 'deploy bedrock', 'bedrock solution',
+    'agentcore for', 'using agentcore', 'agent implementation',
+    'ai agents for', 'building ai agents', 'agentic workflows',
 
-    // Customer story indicators
-    'customer story', 'case study', 'customer case study',
-    'customer success', 'customer spotlight', 'customer profile',
+    // Industry Verticals & Use Cases
+    'healthcare ai', 'financial services ai', 'retail ai', 'manufacturing ai',
+    'automotive ai', 'media ai', 'education ai', 'government ai',
+    'enterprise ai', 'startup ai', 'supply chain ai', 'logistics ai',
+    'insurance ai', 'real estate ai', 'energy ai', 'telecoms ai',
 
-    // Implementation narrative phrases
-    'how we built', 'how they built', 'how to build', 'building a solution',
-    'building with', 'build a', 'build an', 'build multi',
-    'accelerate', 'streamline', 'automate', 'move from poc to production',
-    'proof of concept to production', 'from experimentation to',
+    // GenAI Application Patterns
+    'content generation', 'document processing', 'chatbot', 'virtual assistant',
+    'sentiment analysis', 'text summarization', 'code generation',
+    'translation', 'content personalization', 'recommendation engine',
+    'fraud detection', 'risk assessment', 'predictive analytics',
 
-    // Real-world usage indicators
-    'real-world implementation', 'production deployment', 'deployed solution',
-    'in production', 'production-ready', 'practical implementation',
-    'production deployments', 'enterprise deployment',
+    // Implementation & Deployment Indicators
+    'customer story', 'case study', 'customer success', 'success story',
+    'real-world', 'production deployment', 'enterprise deployment',
+    'implementation guide', 'practical implementation', 'deployed solution',
+    'customer spotlight', 'customer profile', 'use case',
 
-    // Industry & vertical indicators
-    'for enterprises', 'enterprise solution', 'industry solution',
-    'benefits administration', 'claims processing', 'rating insights',
-    'property investment', 'healthcare agents', 'health care',
-    'financial services', 'site reliability',
+    // Implementation Process Indicators
+    'how to build', 'building a solution', 'building with',
+    'we built', 'they built', 'implementation journey',
+    'from poc to production', 'proof of concept to production',
+    'move from experimentation to', 'scale from prototype',
 
-    // Partnership & collaboration patterns
-    'collaborated to build', 'partnership with', 'working with',
-    'together to build', 'in collaboration with',
+    // Business Impact & Outcomes
+    'business transformation', 'cost savings', 'efficiency gains',
+    'improved customer experience', 'accelerated innovation',
+    'digital transformation', 'automation benefits', 'roi',
+    'business value', 'competitive advantage', 'market differentiation',
 
-    // Problem-solution narrative
-    'faced challenges', 'solved the problem', 'overcame obstacles',
-    'business challenge', 'technical challenge', 'helps you',
-
-    // Business outcome language
-    'achieved results', 'business impact', 'transformed business',
-    'delivers value', 'business outcomes', 'measurable results',
-
-    // Tutorial & guide patterns (implementation-focused)
-    'guide to', 'walkthrough', 'step-by-step', 'getting started with',
-    'deep dive into', 'explore the', 'dive into how'
+    // Blog Pattern Indicators (GenAI focused)
+    'in this post', 'this post shows how', 'we demonstrate how',
+    'walk through', 'step-by-step', 'getting started with',
+    'deep dive into', 'explore how', 'learn how'
   ]
 };
 

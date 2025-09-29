@@ -110,19 +110,19 @@ export default function Home({ newsData }: HomeProps) {
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
               <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['whats-new'] || 0}
+                {newsData.sources?.['whatsNew'] || 0}
               </div>
               <div className="text-sm text-gray-600">What&apos;s New</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
               <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['ml-blog'] || 0}
+                {newsData.sources?.['mlBlog'] || 0}
               </div>
               <div className="text-sm text-gray-600">ML Blog Posts</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
               <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['news-blog'] || 0}
+                {newsData.sources?.['newsBlog'] || 0}
               </div>
               <div className="text-sm text-gray-600">News Articles</div>
             </div>
