@@ -36,11 +36,11 @@ export default function NewsCard({ item }: NewsCardProps) {
             {item.title}
           </a>
         </h2>
-        <div className="flex items-center gap-3 text-sm text-gray-500">
-          <span className={`px-2 py-1 rounded text-xs font-medium ${SOURCE_COLORS[item.source]}`}>
+        <div className="flex items-center text-sm text-gray-500">
+          <span className={`px-2 py-1 rounded text-xs font-medium mr-2 ${SOURCE_COLORS[item.source]}`}>
             {SOURCE_LABELS[item.source]}
           </span>
-          <span>{timeAgo}</span>
+          <span className="text-gray-500">{timeAgo}</span>
         </div>
       </div>
 
