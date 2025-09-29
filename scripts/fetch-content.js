@@ -215,11 +215,32 @@ const SERVICE_CATEGORIES = {
     'agentcore for', 'using agentcore', 'agent implementation',
     'ai agents for', 'building ai agents', 'agentic workflows',
 
-    // Industry Verticals & Use Cases
-    'healthcare ai', 'financial services ai', 'retail ai', 'manufacturing ai',
-    'automotive ai', 'media ai', 'education ai', 'government ai',
-    'enterprise ai', 'startup ai', 'supply chain ai', 'logistics ai',
-    'insurance ai', 'real estate ai', 'energy ai', 'telecoms ai',
+    // Healthcare Industry
+    'healthcare ai', 'healthcare industry', 'medical ai', 'clinical ai',
+    'patient care', 'healthcare provider', 'medical imaging',
+    'healthcare organizations', 'clinical workflows', 'medical records',
+    'healthcare delivery', 'healthcare solutions', 'medical diagnosis',
+    'healthcare infrastructure', 'clinical decision support',
+
+    // Financial Services Industry
+    'financial services ai', 'financial industry', 'banking ai', 'fintech',
+    'financial institutions', 'banks', 'investment', 'capital markets',
+    'financial technology', 'payment processing', 'financial analytics',
+    'risk management', 'compliance', 'financial data', 'trading',
+    'wealth management', 'insurance', 'credit scoring',
+
+    // Government & Public Sector
+    'government ai', 'public sector', 'federal agency', 'state government',
+    'local government', 'government agencies', 'civic technology',
+    'public administration', 'government services', 'policy',
+    'regulatory', 'citizen services', 'government operations',
+    'defense', 'national security', 'military', 'intelligence',
+
+    // Other Key Industries
+    'retail ai', 'manufacturing ai', 'automotive ai', 'media ai',
+    'education ai', 'enterprise ai', 'startup ai', 'supply chain ai',
+    'logistics ai', 'real estate ai', 'energy ai', 'telecoms ai',
+    'telecommunications', 'utilities', 'agriculture', 'construction',
 
     // GenAI Application Patterns
     'content generation', 'document processing', 'chatbot', 'virtual assistant',
@@ -314,6 +335,46 @@ const SERVICE_MAP = {
   'trainium3': 'AWS Trainium3',
   'inferentia': 'AWS Inferentia',
   'neuron': 'AWS Neuron',
+
+  // Core AWS Infrastructure (often mentioned in case studies)
+  'lambda': 'AWS Lambda',
+  's3': 'Amazon S3',
+  'ec2': 'Amazon EC2',
+  'emr': 'Amazon EMR',
+  'redshift': 'Amazon Redshift',
+  'opensearch': 'Amazon OpenSearch',
+  'opensearch service': 'Amazon OpenSearch Service',
+  'opensearch ingestion': 'Amazon OpenSearch Ingestion',
+  'dynamodb': 'Amazon DynamoDB',
+  'rds': 'Amazon RDS',
+  'ecs': 'Amazon ECS',
+  'eks': 'Amazon EKS',
+  'fargate': 'AWS Fargate',
+  'cloudformation': 'AWS CloudFormation',
+  'iam': 'AWS IAM',
+  'iam identity center': 'AWS IAM Identity Center',
+  'cloudfront': 'Amazon CloudFront',
+  'kinesis': 'Amazon Kinesis',
+  'kafka': 'Amazon MSK',
+  'msk': 'Amazon MSK',
+  'glue': 'AWS Glue',
+  'athena': 'Amazon Athena',
+  'quicksight': 'Amazon QuickSight',
+  'api gateway': 'Amazon API Gateway',
+  'eventbridge': 'Amazon EventBridge',
+  'step functions': 'AWS Step Functions',
+  'sns': 'Amazon SNS',
+  'sqs': 'Amazon SQS',
+  'secrets manager': 'AWS Secrets Manager',
+  'cloudwatch': 'Amazon CloudWatch',
+  'grafana': 'Amazon Managed Grafana',
+  'directory service': 'AWS Directory Service',
+  'waf': 'AWS WAF',
+  'organizations': 'AWS Organizations',
+  'localstack': 'LocalStack',
+  'graviton': 'AWS Graviton',
+  'outposts': 'AWS Outposts',
+  'transform for vmware': 'AWS Transform for VMware'
 };
 
 class ContentFetcher {

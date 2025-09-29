@@ -41,7 +41,7 @@ export default function NewsCard({ item }: NewsCardProps) {
             <span className={`px-2 py-1 rounded text-xs font-medium ${SOURCE_COLORS[item.source]}`}>
               {SOURCE_LABELS[item.source]}
             </span>
-            <span>{timeAgo}</span>
+            <span className="flex-shrink-0">{timeAgo}</span>
           </div>
         </div>
       </div>
