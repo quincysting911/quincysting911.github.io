@@ -348,43 +348,76 @@ class ContentFetcher {
    */
   categorizeContent(title, description, source = null) {
     const text = `${title} ${description}`.toLowerCase();
-    const categories = [];
 
-    // Source-based categorization for AWS News Blog
+    // HIERARCHY 1: Source-based categorization (highest priority)
     if (source === 'newsBlog') {
-      categories.push('news');
+      return ['news'];
     }
 
-    Object.entries(SERVICE_CATEGORIES).forEach(([category, keywords]) => {
-      if (keywords.some(keyword => text.includes(keyword.toLowerCase()))) {
-        // Special filtering for industry-cases to exclude service announcements
-        if (category === 'industry-cases') {
-          const serviceAnnouncementPatterns = [
-            /now supports?/i,
-            /now available in \d+ (additional )?regions?/i,
-            /announces? (support|availability)/i,
-            /increases? (the )?(maximum|performance|size)/i,
-            /adds? support for/i,
-            /expands? to/i,
-            /available in .* regions?/i,
-            /is now available/i,
-            /are now available/i
-          ];
+    // HIERARCHY 2: Specific AI/ML services (high priority, most specific)
+    // Foundation Models (very specific model announcements)
+    if (this.matchesCategory('foundation-models', text, title, description)) {
+      return ['foundation-models'];
+    }
 
-          const isServiceAnnouncement = serviceAnnouncementPatterns.some(pattern =>
-            pattern.test(title) || pattern.test(description.substring(0, 200))
-          );
+    // AI Safety (security, guardrails, governance)
+    if (this.matchesCategory('ai-safety', text, title, description)) {
+      return ['ai-safety'];
+    }
 
-          if (!isServiceAnnouncement) {
-            categories.push(category);
-          }
-        } else {
-          categories.push(category);
-        }
+    // Generative AI (broad AI generation capabilities)
+    if (this.matchesCategory('generative-ai', text, title, description)) {
+      return ['generative-ai'];
+    }
+
+    // HIERARCHY 3: Core ML (traditional machine learning)
+    if (this.matchesCategory('machine-learning', text, title, description)) {
+      return ['machine-learning'];
+    }
+
+    // HIERARCHY 4: Specialized services
+    if (this.matchesCategory('ai-services', text, title, description)) {
+      return ['ai-services'];
+    }
+
+    if (this.matchesCategory('natural-language', text, title, description)) {
+      return ['natural-language'];
+    }
+
+    // HIERARCHY 5: Implementation stories (lowest priority for specific topics)
+    if (this.matchesCategory('industry-cases', text, title, description)) {
+      // Special filtering for industry-cases to exclude service announcements
+      const serviceAnnouncementPatterns = [
+        /now supports?/i,
+        /now available in \d+ (additional )?regions?/i,
+        /announces? (support|availability)/i,
+        /increases? (the )?(maximum|performance|size)/i,
+        /adds? support for/i,
+        /expands? to/i,
+        /available in .* regions?/i,
+        /is now available/i,
+        /are now available/i
+      ];
+
+      const isServiceAnnouncement = serviceAnnouncementPatterns.some(pattern =>
+        pattern.test(title) || pattern.test(description.substring(0, 200))
+      );
+
+      if (!isServiceAnnouncement) {
+        return ['industry-cases'];
       }
-    });
+    }
 
-    return categories.length > 0 ? categories : ['general'];
+    // HIERARCHY 6: General fallback
+    return ['general'];
+  }
+
+  /**
+   * Helper method to check if content matches a specific category
+   */
+  matchesCategory(category, text, title, description) {
+    const keywords = SERVICE_CATEGORIES[category] || [];
+    return keywords.some(keyword => text.includes(keyword.toLowerCase()));
   }
 
   /**
