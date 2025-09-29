@@ -30,19 +30,17 @@ export default function NewsCard({ item }: NewsCardProps) {
   return (
     <article className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
       {/* Header */}
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex-1">
-          <h2 className="text-xl font-semibold text-aws-navy mb-2 hover:text-aws-orange transition-colors">
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              {item.title}
-            </a>
-          </h2>
-          <div className="flex items-center gap-3 text-sm text-gray-500">
-            <span className={`px-2 py-1 rounded text-xs font-medium ${SOURCE_COLORS[item.source]}`}>
-              {SOURCE_LABELS[item.source]}
-            </span>
-            <span className="flex-shrink-0">{timeAgo}</span>
-          </div>
+      <div className="mb-3">
+        <h2 className="text-xl font-semibold text-aws-navy mb-2 hover:text-aws-orange transition-colors">
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            {item.title}
+          </a>
+        </h2>
+        <div className="flex items-center gap-3 text-sm text-gray-500">
+          <span className={`px-2 py-1 rounded text-xs font-medium ${SOURCE_COLORS[item.source]}`}>
+            {SOURCE_LABELS[item.source]}
+          </span>
+          <span>{timeAgo}</span>
         </div>
       </div>
 
