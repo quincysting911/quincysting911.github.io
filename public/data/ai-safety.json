@@ -1,29 +1,131 @@
 {
-  "lastUpdated": "2025-09-30T06:15:36.701Z",
+  "lastUpdated": "2025-10-01T06:15:06.108Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 27,
   "items": [
     {
-      "id": "aws-news-bbbe40d49fd3",
-      "title": "Amazon ECS announces IPv6-only support",
-      "description": "Amazon Elastic Container Service (Amazon ECS) now supports running tasks in IPv6-only subnets. With this launch, Amazon ECS tasks and services can run using only IPv6 addresses, without requiring IPv4. This enables customers to deploy containerized applications in IPv6-only environments, scale without being limited by IPv4 address availability, and meet IPv6 compliance requirements through native IPv6 support in Amazon ECS.\n  Previously, Amazon ECS tasks always required an IPv4 address, even when launched in dual-stack subnets. This requirement could create scaling and management challenges for customers operating large fleets of containerized applications, where IPv4 address space became a bottleneck. With IPv6-only support, Amazon ECS tasks launched in IPv6-only subnets use only IPv6 addresses. This removes IPv4 as a dependency and helps organizations that must meet IPv6 adoption or regulatory mandates.\n  The feature works across all Amazon ECS launch types and can be used with awsvpc, bridge, and host networking modes. To get started, create IPv6-only subnets in your VPC and launch Amazon ECS services or tasks in those subnets. Amazon ECS automatically detects the configuration and provisions the appropriate networking. To learn more about IPv6-only task networking and supported AWS Regions, see the Amazon ECS task networking documentation for AWS Fargate launch type and EC2 launch type. You can also read our blog post for a detailed walkthrough and migration strategies.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-ecs-ipv6-only-support/",
-      "pubDate": "2025-09-29T17:00:00.000Z",
+      "id": "aws-news-43a95b750e25",
+      "title": "Amazon SNS expands support for FIPS 140-3 endpoints",
+      "description": "Amazon Simple Notification Service (Amazon SNS) now supports additional endpoints that have been validated under the Federal Information Processing Standard (FIPS) 140-3 program in AWS Regions in the United States and Canada.\n  FIPS compliant endpoints help companies contracting with the US federal government meet the FIPS security requirement to encrypt sensitive data in supported regions. With this expansion, you can use Amazon SNS for workloads that require a FIPS 140-3 validated cryptographic module when sending requests over dual-stack public or VPC endpoints.\n  Amazon SNS FIPS compliant endpoints are now available in the following regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary) and AWS GovCloud (US). To learn more about FIPS 140-3 at AWS, visit FIPS 140-3 Compliance.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-sns-fips-endpoints/",
+      "pubDate": "2025-09-30T15:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "ec2",
-        "ecs",
-        "fargate",
+        "sns"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sns",
+        "ga",
+        "now-available",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-7ed86b834879",
+      "title": "AWS Transform now enables Terraform for VMware network automation",
+      "description": "AWS Transform now offers Terraform as an additional option to generate network infrastructure code automatically from VMware environments. The service converts your source network definitions into reusable Terraform modules, complementing current AWS CloudFormation and AWS Cloud Development Kit (CDK) support.\n  AWS Transform for VMware is an agentic AI service that automates the discovery, planning, and migration of VMware workloads, accelerating infrastructure modernization with increased speed and confidence. These migrations require recreating network configurations while maintaining operational consistency. The service now generates Terraform modules alongside CDK and AWS CloudFormation templates. This addition enables organizations to maintain existing deployment pipelines while using preferred tools for modular, customizable network configurations.\n \nThe Terraform module generation capability is available in all AWS Regions where the service is offered.\n \nTo learn more, visit the AWS Transform for VMware product page, read the user guide, or get started in the AWS Transform web experience.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-transform-terraform-vmware-network-automation",
+      "pubDate": "2025-09-30T14:04:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "organizations",
+        "transform for vmware"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "cloudformation",
+        "organizations",
+        "transform for vmware",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-60fab45913cd",
+      "title": "AWS Transfer Family adds support for additional IAM condition keys",
+      "description": "AWS Transfer Family now supports four new service-specific condition keys for Identity and Access Management (IAM). With this feature, administrators can create more granular IAM policies and service control policies (SCPs) to restrict configurations for Transfer Family resources, enhancing security controls and compliance management. \n \nIAM condition keys allow you to author policies that enforce access control based on API request context. With these new condition keys, you can now author policies based on Transfer Family context to control which protocols, endpoint types, and storage domains can be configured through policy conditions. For example, you can use transfer:RequestServerEndpointType to prevent the creation of public servers, or transfer:RequestServerProtocols to ensure only SFTP servers can be created, enabling you to define additional permission guardrails for Transfer Family actions. \n  The new IAM condition keys are available in all AWS Regions where AWS Transfer Family is available. To learn more, visit the IAM Service Authorization Reference and Transfer Family User Guide. To learn more about how to manage permissions within your organization through SCPs, visit the AWS Organizations User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-transfer-family-iam-condition-keys",
+      "pubDate": "2025-09-30T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
         "organizations"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "ec2",
-        "ecs",
-        "fargate",
+        "iam",
         "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f63a85799e66",
+      "title": "AWS Outposts now supports external block volumes from Dell and HPE storage arrays",
+      "description": "Starting today, customers can use boot and data volumes backed by Dell PowerStore and HPE Alletra Storage MP B10000 storage arrays with Amazon Elastic Compute Cloud (Amazon EC2) instances on AWS Outposts, including authenticated and encrypted volumes. This enhancement extends our existing support for boot and data volumes to include Dell and HPE storage arrays, alongside our current support for NetApp® on-premises enterprise storage arrays and Pure Storage® FlashArray™. Outposts is a fully managed service that extends AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises or edge location for a truly consistent hybrid experience.\n  With Outposts, customers can maximize the value of their on-premises storage investments by leveraging their existing enterprise storage arrays for both boot and data volumes, complementing managed Amazon EBS and Local Instance Store options. This provides significant operational benefits, including streamlined operating system (OS) management via centralized boot volumes and advanced data management features through high-performance data volumes. By integrating their own storage, organizations can also satisfy data residency requirements and benefit from a consistent cloud operational model for their hybrid environments.\n  To simplify the process, AWS offers automation scripts through AWS Samples to help customers easily set up and use external block volumes with EC2 instances on Outposts. Customers can use the AWS Management Console or CLI to utilize third-party block volumes with EC2 instances on Outposts.\n  Third-party storage integration for Outposts with all compatible storage vendors is available on Outposts 2U servers and Outposts racks at no additional charge in all AWS Regions where Outposts is supported. See the FAQs for Outposts servers and Outposts racks for the latest list of supported Regions.\n  To learn more about implementation details and best practices, check out this blog post or visit our technical documentation for Outposts servers, second-generation Outposts racks, and first-generation Outposts racks.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-outposts-external-block-volumes-dell-hpe-storage-arrays",
+      "pubDate": "2025-09-30T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "organizations",
+        "outposts"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ec2",
+        "organizations",
+        "outposts",
+        "ga",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0dbef3f0591d",
+      "title": "AWS Storage Gateway now supports VPC endpoint policies",
+      "description": "AWS Storage Gateway now supports Virtual Private Cloud (VPC) endpoint policies for your VPC endpoints. With this feature, administrators can attach endpoint policies to VPC endpoints, allowing granular access control over Storage Gateway direct APIs for improved data protection and security posture.\n  AWS Storage Gateway is a hybrid cloud storage service that provides on-premises applications access to virtually unlimited storage in the cloud. You can use AWS Storage Gateway for backing up and archiving data to AWS, providing on-premises file shares backed by cloud storage, and providing on-premises applications low latency access to data in the cloud.\n  AWS Storage Gateway support for VPC endpoint policies is available in all AWS Regions where Storage Gateway is available. To learn more, visit our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-storage-gateway-vpc-endpoint-policies",
+      "pubDate": "2025-09-30T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-daf8a24916c7",
+      "title": "AWS Transfer Family now supports VPC endpoint policies and FIPS VPC endpoints",
+      "description": "AWS Transfer Family now supports Virtual Private Cloud (VPC) endpoint policies for your VPC endpoints. With this feature, administrators can attach an endpoint policy to an interface VPC endpoint, allowing granular access control over Transfer Family APIs for improved data protection and security posture. Additionally, Transfer Family now supports Federal Information Processing Standards (FIPS) 140-3 enabled VPC endpoints. \n  Previously, customers had full access to Transfer Family APIs through an interface VPC endpoint, powered by AWS PrivateLink. With this launch, you can now manage which Transfer Family API actions (CreateServer, StartServer, DeleteServer, etc) can be performed, which principals can perform them, and which resources they can act upon. These policies work with existing IAM user and role policies and organizational service control policies. \n  VPC endpoint policy support is available in all AWS Regions where the service is available. To learn more, visit the Transfer Family User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-transfer-family-vpc-endpoint-policies",
+      "pubDate": "2025-09-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "iam",
         "launch",
         "ga",
         "support"
@@ -45,6 +147,32 @@
       ],
       "tags": [
         "ec2",
+        "organizations",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bbbe40d49fd3",
+      "title": "Amazon ECS announces IPv6-only support",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now supports running tasks in IPv6-only subnets. With this launch, Amazon ECS tasks and services can run using only IPv6 addresses, without requiring IPv4. This enables customers to deploy containerized applications in IPv6-only environments, scale without being limited by IPv4 address availability, and meet IPv6 compliance requirements through native IPv6 support in Amazon ECS.\n  Previously, Amazon ECS tasks always required an IPv4 address, even when launched in dual-stack subnets. This requirement could create scaling and management challenges for customers operating large fleets of containerized applications, where IPv4 address space became a bottleneck. With IPv6-only support, Amazon ECS tasks launched in IPv6-only subnets use only IPv6 addresses. This removes IPv4 as a dependency and helps organizations that must meet IPv6 adoption or regulatory mandates.\n  The feature works across all Amazon ECS launch types and can be used with awsvpc, bridge, and host networking modes. To get started, create IPv6-only subnets in your VPC and launch Amazon ECS services or tasks in those subnets. Amazon ECS automatically detects the configuration and provisions the appropriate networking. To learn more about IPv6-only task networking and supported AWS Regions, see the Amazon ECS task networking documentation for AWS Fargate launch type and EC2 launch type. You can also read our blog post for a detailed walkthrough and migration strategies.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-ecs-ipv6-only-support/",
+      "pubDate": "2025-09-29T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs",
+        "fargate",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "fargate",
         "organizations",
         "launch",
         "ga",
@@ -373,30 +501,6 @@
         "organizations",
         "launch",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-36861798e0d8",
-      "title": "Amazon AppStream 2.0 adds support for fractional GPU instances",
-      "description": "Today, Amazon AppStream 2.0 announces support for Graphics G6 instances with fractionalized GPU sizes, which are built on the EC2 G6 family, designed to cater to graphics applications that need smaller GPU fractions.\n  Graphics G6 instances with fractionalized GPU sizes (G6f and Gr6f) allow users to utilize only the GPU resources they need, rather than provisioning full GPU instances. This approach helps enable better resource optimization through shared GPU capacity, offering flexibility to choose smaller GPU fractions (such as 1/2, 1/4, or 1/8) that align with specific workload requirements. Organizations can benefit from reduced costs by avoiding over-provisioning while maintaining access to GPU capabilities for applications that don't require full GPU power.\n  These new instance types are available in 10 AWS Regions, including US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Europe (Frankfurt, London), Asia Pacific (Tokyo, Mumbai, Sydney), and South America (Sao Paulo). AppStream 2.0 offers pay-as-you-go pricing, see Amazon AppStream 2.0 Pricing for more information.\n  To get started, select an AppStream 2.0 Graphics G6 instances with fractionalized GPU sizes when launching an image builder or creating a new fleet. You can launch Graphics G6 instances with fractionalized GPU sizes using either the AWS management console or the AWS SDK. To learn more, see AppStream 2.0 Instance Families.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-appstream-fractional-gpu/",
-      "pubDate": "2025-09-16T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
       ]
     },
     {
