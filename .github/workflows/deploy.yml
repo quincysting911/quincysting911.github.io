@@ -93,43 +93,14 @@ jobs:
         with:
           path: ./out
 
-  lighthouse:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: ./out
-
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v11
-        with:
-          urls: |
-            http://localhost:8080
-            http://localhost:8080/bedrock
-            http://localhost:8080/sagemaker
-          uploadArtifacts: true
-          temporaryPublicStorage: true
-          runs: 3
-          configPath: ./.lighthouserc.json
-
   deploy:
-    needs: [build, lighthouse]
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
@@ -142,3 +113,25 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Site URL**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
           echo "**Deployed at**: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+
+  lighthouse:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Wait for deployment
+        run: sleep 30
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            ${{ needs.deploy.outputs.page_url }}
+            ${{ needs.deploy.outputs.page_url }}/bedrock
+            ${{ needs.deploy.outputs.page_url }}/sagemaker
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
