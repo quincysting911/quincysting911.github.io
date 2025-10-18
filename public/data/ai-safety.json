@@ -1,8 +1,75 @@
 {
-  "lastUpdated": "2025-10-17T06:14:39.022Z",
+  "lastUpdated": "2025-10-18T06:13:34.503Z",
   "category": "ai-safety",
-  "totalItems": 19,
+  "totalItems": 21,
   "items": [
+    {
+      "id": "aws-news-c129a835c3dc",
+      "title": "CloudWatch Database Insights now supports tag based access control",
+      "description": "Amazon CloudWatch Database Insights now supports tag-based access control for database and per-query metrics powered by RDS Performance Insights. You can implement access controls across a logical grouping of database resources without managing individual resource-level permissions.\n  Previously, tags defined on RDS and Aurora instances did not apply to metrics powered by Performance Insights, creating significant overhead in manually configuring metric-related permissions at the database resource level. With this launch, those instance tags are now automatically evaluated to authorize metrics powered by Performance Insights. This allows you to define IAM policies using tag-based access conditions, resulting in improved governance and security consistency.\n  Please refer to RDS and Aurora documentation to get started with defining IAM policies with tag-based access control on database and per-query metrics. This feature is available in all AWS regions where CloudWatch Database Insights is available.\n  CloudWatch Database Insights delivers database health monitoring aggregated at the fleet level, as well as instance-level dashboards for detailed database and SQL query analysis. It offers vCPU-based pricing – see the pricing page for details. For further information, visit the Database Insights User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/database-insights-tag-based-access-control",
+      "pubDate": "2025-10-17T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-466dfd2484ad",
+      "title": "AWS Systems Manager Patch Manager launches security updates notification for Windows",
+      "description": "AWS Systems Manager announces the launch of security updates notification for Windows patching compliance, which helps customers identify security updates that are available but not approved by their patch baseline configuration. This feature introduces a new patch state called \"AvailableSecurityUpdate\" that reports security patches of all severity levels that are available to install on Windows instances but do not meet the approval rules in your patch baseline.\n  As organizations grow, administrators need to maintain secure systems while controlling when patches are applied. The security updates notification helps prevent situations where customers could unintentionally leave instances unpatched when using features like ApprovalDelay with large values. By default, instances with available security updates are marked as Non-Compliant, providing a clear signal that security patches require attention. Customers can also configure this behavior through their patch baseline settings to maintain existing compliance reporting if preferred.\n  This feature is available in all AWS Regions where AWS Systems Manager is available. To get started with security updates notification for Windows patching compliance, visit the AWS Systems Manager Patch Manager console. For more information about this feature, refer to our user documentation or update your patch baseline with the details here. There are no additional charges for using this feature beyond standard AWS Systems Manager pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-systems-manager-patch-manager-windows/",
+      "pubDate": "2025-10-17T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "launch",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-c3df5c11b27b",
+      "title": "Customer managed KMS keys now available for Automated Reasoning checks",
+      "description": "AWS announces support for customer managed AWS Key Management Service (KMS) keys in Automated Reasoning checks in Amazon Bedrock Guardrails. This enhancement enables you to use your own encryption keys to protect policy content and tests, giving you full control over key management. Automated Reasoning checks in Amazon Bedrock Guardrails is the first and only generative AI safeguard that helps correct factual errors from hallucinations using logically accurate and verifiable reasoning that explains why responses are correct.\n  This feature enables organizations in regulated industries like healthcare, financial services, and government to adopt Automated Reasoning checks while meeting compliance requirements for customer-owned encryption keys. For example, a financial institution can now use Automated Reasoning checks to validate loan processing guidelines while maintaining full control over the encryption keys protecting their policy content. When creating an Automated Reasoning policy, you can now select a customer managed KMS key to encrypt your content rather than using the default key.\n  Customer managed KMS key support for Automated Reasoning checks is available in all AWS Regions where Amazon Bedrock Guardrails is offered: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), Europe (Ireland), and Europe (Paris).\n  To get started, see the following resources:\n  \n \n \nAutomated Reasoning checks user guide\n \n \nAmazon Bedrock Guardrails product page\n \n \nAWS Key Management Service developer guide\n \n \nCreate an Automated Reasoning policy in the Bedrock console",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/customer-managed-kms-keys-automated-reasoning-checks/",
+      "pubDate": "2025-10-17T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "organizations",
+        "ga",
+        "now-available",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ad7fa072f6f9",
       "title": "Iterative fine-tuning on Amazon Bedrock for strategic model improvement",
@@ -47,31 +114,6 @@
       ]
     },
     {
-      "id": "aws-news-363a8b0536ad",
-      "title": "Second-generation AWS Outposts racks now supported in the AWS Europe (Ireland) Region",
-      "description": "Second-generation AWS Outposts racks are now supported in the AWS Europe (Ireland) Region. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Europe can now order their Outposts racks connected to this new supported region, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/second-generation-aws-outposts-racks-europe-ireland-region",
-      "pubDate": "2025-10-15T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations",
-        "outposts"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "outposts",
-        "ga",
-        "update",
-        "support",
-        "expansion"
-      ]
-    },
-    {
       "id": "aws-news-a74fa915331e",
       "title": "Amazon Aurora PostgreSQL zero-ETL integration with Amazon SageMaker is now available",
       "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports zero-ETL integration with Amazon SageMaker, enabling near real-time data availability for analytics workloads. This integration automatically extracts and loads data from PostgreSQL tables into your lakehouse where it's immediately accessible through various analytics engines and machine learning tools. The data synced into the lakehouse is compatible with Apache Iceberg open standards, enabling you to use your preferred analytics tools and query engines such as SQL, Apache Spark, BI, and AI/ML tools.\n  Through a simple no-code interface, you can create and maintain an up-to-date replica of your PostgreSQL data in your lakehouse without impacting production workloads. The integration features comprehensive, fine-grained access controls that are consistently enforced across all analytics tools and engines, ensuring secure data sharing throughout your organization. As a complement to the existing zero-ETL integrations with Amazon Redshift, this solution reduces operational complexity while enabling you to derive immediate insights from your operational data.\n  Amazon Aurora PostgreSQL zero-ETL integration with Amazon SageMaker is now available in the US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), South America (Sao Paulo), Asia Pacific (Hong Kong), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (Frankfurt), Europe (Ireland), Europe (London), and Europe (Stockholm) AWS Regions.\n  To learn more, visit What is zero-ETL. To begin using this new integration, visit the zero-ETL documentation for Aurora PostgreSQL.",
@@ -96,6 +138,31 @@
         "now-available",
         "integration",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-363a8b0536ad",
+      "title": "Second-generation AWS Outposts racks now supported in the AWS Europe (Ireland) Region",
+      "description": "Second-generation AWS Outposts racks are now supported in the AWS Europe (Ireland) Region. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Europe can now order their Outposts racks connected to this new supported region, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/second-generation-aws-outposts-racks-europe-ireland-region",
+      "pubDate": "2025-10-15T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "organizations",
+        "outposts"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "organizations",
+        "outposts",
+        "ga",
+        "update",
+        "support",
+        "expansion"
       ]
     },
     {
@@ -204,7 +271,7 @@
     {
       "id": "aws-news-bf1a543140e1",
       "title": "Amazon Kinesis Video Streams now supports IPv6 for Streams capability",
-      "description": "Today, AWS announces Internet Protocol version 6 (IPv6) addressing support for Amazon Kinesis Video Streams (KVS). With this enhancement, KVS now offers dual-stack endpoints that let customers use both IPv4 and IPv6 addresses to stream video from millions of devices. This means that existing IPv4 implementations continue to work seamlessly while gaining the benefits of IPv6 connectivity.\n  As customers increasingly encounter IPv4 address exhaustion in their private networks, this enhancement delivers much-needed flexibility. Organizations can now seamlessly stream videos using IPv4, IPv6, or dual-stack clients. This advancement simplifies IPv6-based system transitions, ensures compliance requirements are met, and eliminates dependency on costly address translation equipment.\n  IPv6 support is available in all commercial AWS Regions where Amazon KVS is available except Ap-Southeast-1 and GovCloud regions . To learn more about Amazon KVS, refer to the developer guide.",
+      "description": "Today, AWS announces Internet Protocol version 6 (IPv6) addressing support for Amazon Kinesis Video Streams (KVS). With this enhancement, KVS now offers dual-stack endpoints that let customers use both IPv4 and IPv6 addresses to stream video from millions of devices. This means that existing IPv4 implementations continue to work seamlessly while gaining the benefits of IPv6 connectivity.\n  As customers increasingly encounter IPv4 address exhaustion in their private networks, this enhancement delivers much-needed flexibility. Organizations can now seamlessly stream videos using IPv4, IPv6, or dual-stack clients. This advancement simplifies IPv6-based system transitions, ensures compliance requirements are met, and eliminates dependency on costly address translation equipment.\n  IPv6 support is available in all commercial AWS Regions where Amazon KVS is available except Ap-Southeast-1 and AWS GovCloud (US-West) regions . To learn more about Amazon KVS, refer to the developer guide.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-kinesis-video-streams-ipv6-streams-capability/",
       "pubDate": "2025-10-03T16:00:00.000Z",
       "source": "whatsNew",
@@ -314,29 +381,6 @@
         "update",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-743fda30c41c",
-      "title": "Amazon Neptune Database now integrates with GraphStorm for scalable graph machine learning",
-      "description": "Today, we’re announcing the integration of Amazon Neptune Database with GraphStorm, a scalable, open-source graph machine learning (ML) library built for enterprise-scale applications. This brings together Neptune’s OLTP (Online transaction processing) graph capabilities with GraphStorm’s scalable inference engine, making it easier for customers to deploy graph ML in latency-sensitive, transactional environments.\n  With this integration, developers can train GNN models using GraphStorm and deploy them as real-time inference endpoints that directly query Neptune for subgraph neighborhoods on demand. Predictions—such as node classifications or link predictions—can then be returned in sub-second timeframes, closing the loop between transactional graph updates and ML-driven decisions. This integration unlocks use cases such as fraud detection and prevention, where organizations can make real-time decisions based on complex relationships among accounts, devices, and transactions; dynamic recommendations, where systems can instantly adapt to user behavior using live graph context; and graph-based risk scoring, where risk assessments are continuously updated as the graph evolves. Customers can also combine real-time inference results with graph analytics queries for deeper operational insights, enabling ML feedback loops directly within graph applications.\n  This feature is available in all regions where Amazon Neptune Database is available. To learn more and try the integration yourself, check out our announcement blog: Modernize fraud prevention: GraphStorm v0.5 for real-time inference for a full walk-through.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-neptune-database-graphstorm",
-      "pubDate": "2025-10-02T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "ga",
-        "update",
-        "integration",
-        "announcement"
       ]
     },
     {
