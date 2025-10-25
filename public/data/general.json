@@ -1,8 +1,50 @@
 {
-  "lastUpdated": "2025-10-24T06:14:51.163Z",
+  "lastUpdated": "2025-10-25T06:13:19.619Z",
   "category": "general",
-  "totalItems": 52,
+  "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-548e59908fe6",
+      "title": "Amazon VPC Reachability Analyzer and Amazon VPC Network Access Analyzer are now available in AWS GovCloud (US) Regions",
+      "description": "With this launch, Amazon VPC Reachability Analyzer and Amazon VPC Network Access Analyzer are now available in both AWS GovCloud (US-West) and AWS GovCloud (US-East) Regions.\n  VPC Reachability Analyzer allows you to diagnose network reachability between a source resource and a destination resource in your virtual private clouds (VPCs) by analyzing your network configurations. For example, Reachability Analyzer can help you identify a missing route table entry in your VPC route table that could be blocking network reachability between an EC2 instance in Account A that is not able to connect to another EC2 instance in Account B in your AWS Organization.\n  VPC Network Access Analyzer allows you to identify unintended network access to your AWS resources, helping you meet your security and compliance guidelines. For example, you can create a scope to verify that all paths from your web-applications to the internet, traverse the firewall, and detect any paths that bypass the firewall.\n  For more information, visit documentation for VPC Reachability Analyzer and VPC Network Access Analyzer. For pricing, refer to the Network Analysis tab on the Amazon VPC Pricing Page.",
+      "link": "https://aws.amazon.comabout-aws/whats-new/2025/10/amazon-vpc-reachability-network-access-analyzer-govcloud",
+      "pubDate": "2025-10-24T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-5f20fa4f076a",
+      "title": "New Amazon CloudWatch metrics to monitor EC2 instances exceeding I/O performance",
+      "description": "Today, Amazon announced two new Amazon CloudWatch metrics that provide insight into when your application exceeds the I/O performance limits for your EC2 instance with attached EBS volumes. These two metrics, Instance EBS IOPS Exceeded Check and Instance EBS Throughput Exceeded Check, monitor if the driven IOPS or throughput is exceeding the maximum EBS IOPS or throughput that your instance can support.\n  With these two new metrics at the instance level, you can quickly identify and respond to application performance issues stemming from exceeding the EBS-Optimized limits of your instance. These metrics will return a value of 0 (performance not exceeded) or a 1 (performance exceeded) when your workload is exceeding the EBS-Optimized IOPS or throughput limit of the EC2 instance. With Amazon CloudWatch, you can use these new metrics to create customized dashboards and set alarms that notify you or automatically perform actions based on these metrics, such as moving to a larger instance size or a different instance type that supports higher EBS-Optimized limits.\n  The Instance EBS IOPS Exceeded Check and Instance EBS Throughput Exceeded Check metrics are available by default at a 1-minute frequency at no additional charges, for all Nitro-based Amazon EC2 instances with EBS volumes attached. You can access these metrics via the EC2 console, CLI, or CloudWatch API in all Commercial AWS Regions, including the AWS GovCloud (US) Regions and China Regions. To learn more about these CloudWatch metrics, please visit the EC2 CloudWatch Metrics documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-cloudwatch-metrics-monitor-ec2-instances-i-o-performance",
+      "pubDate": "2025-10-24T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "cloudwatch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b7276fec0ee1",
       "title": "Unlock real-time data insights with schema evolution using Amazon MSK Serverless, Iceberg, and AWS Glue streaming",
@@ -97,6 +139,24 @@
       ]
     },
     {
+      "id": "aws-news-f7a499ca3343",
+      "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
+      "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-generates-aws-cloudtrail-events",
+      "pubDate": "2025-10-22T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "now-available"
+      ]
+    },
+    {
       "id": "aws-news-cde0df35d350",
       "title": "Amazon CloudWatch Agent adds support for Windows Event Log Filters",
       "description": "Amazon CloudWatch agent has added support for configurable Windows Event log filters. This new feature allows customers to selectively collect and send system and application events to CloudWatch from Windows hosts running on Amazon EC2 or on-premises. The addition of customizable filters helps customers to focus on events that meet specific criteria, streamlining log management and analysis.\n  Using this new functionality of the CloudWatch agent, you can define filter criteria for each Windows Event log stream in the agent configuration file. The filtering options include event levels, event IDs, and regular expressions to either \"include\" or \"exclude\" text within events. The agent evaluates each log event against your defined filter criteria to determine whether it should be sent to CloudWatch. Events that don't match your criteria are discarded. Windows event filters help you to manage your log ingestion by processing only the events you need, such as those containing specific error codes, while excluding verbose or unwanted log entries.\n  Amazon CloudWatch Agent is available in all commercial AWS Regions, and the AWS GovCloud (US) Regions.\n  To get started, see Create or Edit the CloudWatch Agent Configuration File in the Amazon CloudWatch User Guide.",
@@ -116,24 +176,6 @@
         "ga",
         "new-feature",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f7a499ca3343",
-      "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
-      "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-generates-aws-cloudtrail-events",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "now-available"
       ]
     },
     {
@@ -373,24 +415,6 @@
       ]
     },
     {
-      "id": "aws-news-7c0cfe0368f8",
-      "title": "Configure and verify a distributed training cluster with AWS Deep Learning Containers on Amazon EKS",
-      "description": "Misconfiguration issues in distributed training with Amazon EKS can be prevented following a systematic approach to launch required components and verify their proper configuration. This post walks through the steps to set up and verify an EKS cluster for training large models using DLCs.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/configure-and-verify-a-distributed-training-cluster-with-aws-deep-learning-containers-on-amazon-eks/",
-      "pubDate": "2025-10-15T16:39:19.000Z",
-      "source": "mlBlog",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch"
-      ]
-    },
-    {
       "id": "aws-news-867f914f3036",
       "title": "AWS Application Load Balancer launches URL and Host Header Rewrite",
       "description": "Amazon Web Services (AWS) announces URL and Host Header rewrite capabilities for Application Load Balancer (ALB). This feature enables customers to modify request URLs and Host Headers using regex-based pattern matching before routing requests to targets.\n \nWith URL and Host Header rewrites, you can transform URLs using regex patterns (e.g., rewrite \"/api/v1/users\" to \"/users\"), standardize URL patterns across different applications, modify Host Headers for internal service routing, remove or add URL path prefixes, and redirect legacy URL structures to new formats. This capability eliminates the need for additional proxy layers and simplifies application architectures. The feature is valuable for microservices deployments where maintaining a single external hostname while routing to different internal services is critical.\n \nYou can configure URL and Host Header rewrites through the AWS Management Console, AWS CLI, AWS SDKs, and AWS APIs. There are no additional charges for using URL and Host Header rewrites. You pay only for your use of Application Load Balancer based on Application Load Balancer pricing.\n \nThis feature is now available in all AWS commercial regions.\n \nTo learn more, visit the ALB Documentation, and the AWS Blog post on URL and Host Header rewrites with Application Load Balancer.",
@@ -593,81 +617,6 @@
       ]
     },
     {
-      "id": "aws-news-4776823fd735",
-      "title": "AWS Direct Connect announces 100G expansion in Kansas City, MO",
-      "description": "Today, AWS announced the expansion of 10 Gbps and 100 Gbps dedicated connections with MACsec encryption capabilities at the existing AWS Direct Connect location in the Netrality KC1 data center near Kansas City, MO. You can now establish private, direct network access to all public AWS Regions (except those in China), AWS GovCloud Regions, and AWS Local Zones from this location.\n  The Direct Connect service enables you to establish a private, physical network connection between AWS and your data center, office, or colocation environment. These private connections can provide a more consistent network experience than those made over the public internet. \n  For more information on the over 146 Direct Connect locations worldwide, visit the locations section of the Direct Connect product detail pages. Or, visit our getting started page to learn more about how to purchase and deploy Direct Connect.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-direct-connect-100g-expansion-kansas-city/",
-      "pubDate": "2025-10-09T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-a0b9bf22ad59",
-      "title": "Amazon EC2 C6in instances are now available in Mexico (Central) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C6in instances are available in AWS Region Mexico (Central). These sixth-generation network optimized instances, powered by 3rd Generation Intel Xeon Scalable processors and built on the AWS Nitro System, deliver up to 200Gbps network bandwidth, for 2x more network bandwidth over comparable fifth-generation instances.\n  Customers can use C6in instances to scale the performance of applications such as network virtual appliances (firewalls, virtual routers, load balancers), Telco 5G User Plane Function (UPF), data analytics, high performance computing (HPC), and CPU based AI/ML workloads. C6in instances are available in 10 different sizes with up to 128 vCPUs, including bare metal size. Amazon EC2 sixth-generation x86-based network optimized EC2 instances deliver up to 100Gbps of Amazon Elastic Block Store (Amazon EBS) bandwidth, and up to 400K IOPS. C6in instances offer Elastic Fabric Adapter (EFA) networking support on 32xlarge and metal sizes.\n  C6in instances are available in these AWS Regions: US East (Ohio, N. Virginia), US West (N. California, Oregon), Europe (Frankfurt, Ireland, London, Milan, Paris, Spain, Stockholm, Zurich), Middle East (Bahrain, UAE), Israel (Tel Aviv), Asia Pacific (Hong Kong, Hyderabad, Jakarta, Malaysia, Melbourne, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokyo, Thailand), Africa (Cape Town), South America (Sao Paulo), Canada (Central), Canada West (Calgary), AWS GovCloud (US-West, US-East), and Mexico (Central). To learn more, see the Amazon EC2 C6in instances. To get started, see the AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ec2-c6in-instances-mexico-central-region",
-      "pubDate": "2025-10-09T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0987601e7773",
-      "title": "Amazon DynamoDB now supports Internet Protocol version 6 (IPv6)",
-      "description": "Amazon DynamoDB now offers customers the option to use Internet Protocol version 6 (IPv6) addresses in their Amazon Virtual Private Cloud (VPC) when connecting to DynamoDB tables, streams, and DynamoDB Accelerator (DAX), including with AWS PrivateLink Gateway and Interface endpoints. Customers moving to IPv6 can simplify their network stack and meet compliance requirements by using a network that supports both IPv4 and IPv6.\n \nThe continued growth of the internet is exhausting available Internet Protocol version 4 (IPv4) addresses. IPv6 increases the number of available addresses by several orders of magnitude and customers no longer need to manage overlapping address spaces in their VPCs. Customers can standardize their applications on the new version of Internet Protocol by moving to IPv6 with a few clicks in the AWS Management Console.\n \nSupport for IPv6 in Amazon DynamoDB is now available in all commercial AWS Regions in the United States and the AWS GovCloud (US) Regions. It will deploy to the remaining global AWS Regions where Amazon DynamoDB is available over the next few weeks.\n \nTo connect to DynamoDB using IPv6 addresses and check regional availability, please see the DynamoDB developer guide and the DynamoDB Accelerator user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dynamodb-ipv6/",
-      "pubDate": "2025-10-09T13:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "dynamodb",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "dynamodb",
-        "eks",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0520673886aa",
-      "title": "New General Purpose Amazon EC2 M8a Instances",
-      "description": "AWS announces the general availability of new general-purpose Amazon EC2 M8a instances. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n \n\n M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements.\n \n\n M8a instances are built on the AWS Nitro System and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n \n\n M8a instances are available in the following AWS Regions: US East (Ohio), US West (Oregon), and Europe (Spain). To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page or the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/general-purpose-amazon-ec2-m8a-instances/",
-      "pubDate": "2025-10-08T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-3dda8646e5ea",
       "title": "Best practices for migrating from Apache Airflow 2.x to Apache Airflow 3.x on Amazon MWAA",
       "description": "Apache Airflow 3.x on Amazon MWAA introduces architectural improvements such as API-based task execution that provides enhanced security and isolation. This migration presents an opportunity to embrace next-generation workflow orchestration capabilities while providing business continuity. This post provides best practices and a streamlined approach to successfully navigate this critical migration, providing minimal disruption to your mission-critical data pipelines while maximizing the enhanced capabilities of Airflow 3.",
@@ -793,23 +742,6 @@
       ],
       "tags": [
         "new-feature"
-      ]
-    },
-    {
-      "id": "aws-news-f9b892079d52",
-      "title": "Understanding and Remediating Cold Starts: An AWS Lambda Perspective",
-      "description": "Cold starts are an important consideration when building applications on serverless platforms. In AWS Lambda, they refer to the initialization steps that occur when a function is invoked after a period of inactivity or during rapid scale-up. While typically brief and infrequent, cold starts can introduce additional latency, making it essential to understand them, especially […]",
-      "link": "https://aws.amazon.com/blogs/compute/understanding-and-remediating-cold-starts-an-aws-lambda-perspective/",
-      "pubDate": "2025-08-07T22:19:56.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda"
       ]
     },
     {
