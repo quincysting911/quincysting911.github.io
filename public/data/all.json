@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-25T06:13:19.619Z",
+  "lastUpdated": "2025-10-26T06:13:38.592Z",
   "totalItems": 192,
   "sources": {
     "whatsNew": 92,
@@ -191,6 +191,30 @@
       ]
     },
     {
+      "id": "aws-news-98cfef58cd17",
+      "title": "Amazon SageMaker Unified Studio supports Amazon Athena workgroups",
+      "description": "Data engineers and data analysts using Amazon SageMaker Unified Studio can now connect to and run queries with pre-existing Amazon Athena workgroups. This feature enables data teams to run SQL queries in SageMaker Unified Studio with the default settings and properties from existing Athena workgroups. Since Athena workgroups are used to manage query access and control costs, data engineers and data analysts can save time by reusing Athena workgroups as their SQL analytics compute while maintaining data usage limits and tracking query usage by team or project. \n  When choosing a compute for SQL analytics within SageMaker Unified Studio, customers can create a new Athena compute connection or choose to connect to an existing Athena workgroup. To get started, navigate to SageMaker Unified Studio, select “Add compute” and choose “Connect to existing compute resources”. Then create a connection to your pre-existing Athena workgroups and save. This new compute is now available within the SageMaker Unified Studio query editor to run SQL queries.\n  Connecting to Athena workgroups within SageMaker Unified Studio is available in all regions where SageMaker Unified Studio is supported.\n  To learn more, refer to the SageMaker Unified Studio Guide and Athena Workgroups Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-sagemaker-unified-studio-athena-workgroups/",
+      "pubDate": "2025-10-24T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "athena"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "athena",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-e0919cbce33a",
       "title": "AWS Lambda increases maximum payload size from 256 KB to 1 MB for asynchronous invocations",
       "description": "AWS Lambda increases asynchronous invocations maximum payload size from 256 KB to 1 MB, allowing customers to ingest richer, complex payloads for their event-driven workloads without the need to split, compress, or externalize data. Customers invoke their Lambda functions asynchronously using either Lambda API directly, or by receiving push-based events from various AWS services like Amazon S3, Amazon CloudWatch, Amazon SNS, Amazon EventBridge, AWS Step Functions.\n  Modern cloud applications increasingly rely on AWS Lambda’s asynchronous invocations and its integration with various AWS serverless services to build scalable, event-driven architectures. These applications often need to process rich contextual data, including large-language model prompts, telemetry signals, and complex JSON structures for machine learning outputs. With increase in maximum payload size to 1MB for asynchronous invocations, developers can streamline their architectures by including comprehensive data, from detailed user profiles to complete transaction histories, in a single event, eliminating the need for complex data chunking or external storage solutions.\n  This feature is generally available in all AWS Commercial and AWS GovCloud (US) Regions. Customers can start sending asynchronous invocation payloads up to 1 MB using Lambda’s invoke API. Customers are charged for 1 request per each asynchronous invocation for first 256 KB. Individual payload size beyond 256 KB is charged 1 additional request for each 64 KB of chunk up to 1 MB. To learn more, read Lambda asynchronous invocation documentation and AWS Lambda pricing.",
@@ -219,30 +243,6 @@
         "cloudwatch",
         "generally-available",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-98cfef58cd17",
-      "title": "Amazon SageMaker Unified Studio supports Amazon Athena workgroups",
-      "description": "Data engineers and data analysts using Amazon SageMaker Unified Studio can now connect to and run queries with pre-existing Amazon Athena workgroups. This feature enables data teams to run SQL queries in SageMaker Unified Studio with the default settings and properties from existing Athena workgroups. Since Athena workgroups are used to manage query access and control costs, data engineers and data analysts can save time by reusing Athena workgroups as their SQL analytics compute while maintaining data usage limits and tracking query usage by team or project. \n  When choosing a compute for SQL analytics within SageMaker Unified Studio, customers can create a new Athena compute connection or choose to connect to an existing Athena workgroup. To get started, navigate to SageMaker Unified Studio, select “Add compute” and choose “Connect to existing compute resources”. Then create a connection to your pre-existing Athena workgroups and save. This new compute is now available within the SageMaker Unified Studio query editor to run SQL queries.\n  Connecting to Athena workgroups within SageMaker Unified Studio is available in all regions where SageMaker Unified Studio is supported.\n  To learn more, refer to the SageMaker Unified Studio Guide and Athena Workgroups Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-sagemaker-unified-studio-athena-workgroups/",
-      "pubDate": "2025-10-24T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "athena"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "athena",
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -752,24 +752,6 @@
       ]
     },
     {
-      "id": "aws-news-f7a499ca3343",
-      "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
-      "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-generates-aws-cloudtrail-events",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-cde0df35d350",
       "title": "Amazon CloudWatch Agent adds support for Windows Event Log Filters",
       "description": "Amazon CloudWatch agent has added support for configurable Windows Event log filters. This new feature allows customers to selectively collect and send system and application events to CloudWatch from Windows hosts running on Amazon EC2 or on-premises. The addition of customizable filters helps customers to focus on events that meet specific criteria, streamlining log management and analysis.\n  Using this new functionality of the CloudWatch agent, you can define filter criteria for each Windows Event log stream in the agent configuration file. The filtering options include event levels, event IDs, and regular expressions to either \"include\" or \"exclude\" text within events. The agent evaluates each log event against your defined filter criteria to determine whether it should be sent to CloudWatch. Events that don't match your criteria are discarded. Windows event filters help you to manage your log ingestion by processing only the events you need, such as those containing specific error codes, while excluding verbose or unwanted log entries.\n  Amazon CloudWatch Agent is available in all commercial AWS Regions, and the AWS GovCloud (US) Regions.\n  To get started, see Create or Edit the CloudWatch Agent Configuration File in the Amazon CloudWatch User Guide.",
@@ -811,6 +793,24 @@
         "improvement",
         "enhancement",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-f7a499ca3343",
+      "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
+      "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-generates-aws-cloudtrail-events",
+      "pubDate": "2025-10-22T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "now-available"
       ]
     },
     {
@@ -1217,25 +1217,6 @@
       ]
     },
     {
-      "id": "aws-news-df9024666c3f",
-      "title": "Amazon U7i instances now available in Europe (London) Region",
-      "description": "Starting today, Amazon EC2 High Memory U7i instances with 6TB of memory (u7i-6tb.112xlarge) are now available in the Europe (London) region. U7i-6tb instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-6tb instances offer 6TB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n  U7i-6tb instances offer 448 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n  To learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-u7i-instances-europe-london-region/",
-      "pubDate": "2025-10-21T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-8e47ff068b33",
       "title": "Amazon Nova now supports the customization of content moderation settings",
       "description": "Amazon Nova models now support the customization of content moderation settings for approved business use cases that require processing or generating sensitive content.\n  Organizations with approved business use cases can adjust content moderation settings across four domains: safety, sensitive content, fairness, and security. These settings allow customers to adjust specific settings relevant to their business requirements. Amazon Nova enforces essential, non-configurable controls to ensure responsible use of AI, such as controls to prevent harm to children and preserve privacy.\n  Customization of content moderation settings is available for Amazon Nova Lite and Amazon Nova Pro in the US East (N. Virginia) region.\n  To learn more about Amazon Nova, visit the Amazon Nova product page and to learn about Amazon Nova responsible use of AI, visit the AWS AI Service Cards, or see the User Guide. To see if your business model is appropriate to customize content moderation settings, contact your AWS Account Manager.",
@@ -1255,6 +1236,25 @@
         "rds",
         "organizations",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-df9024666c3f",
+      "title": "Amazon U7i instances now available in Europe (London) Region",
+      "description": "Starting today, Amazon EC2 High Memory U7i instances with 6TB of memory (u7i-6tb.112xlarge) are now available in the Europe (London) region. U7i-6tb instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-6tb instances offer 6TB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n  U7i-6tb instances offer 448 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n  To learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-u7i-instances-europe-london-region/",
+      "pubDate": "2025-10-21T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
         "support"
       ]
     },
@@ -2220,27 +2220,6 @@
       ]
     },
     {
-      "id": "aws-news-50d17ac8269d",
-      "title": "Amazon EBS now supports Volume Clones for instant volume copies",
-      "description": "Today, Amazon Web Services (AWS) announces the general availability of Volume Clones for Amazon Elastic Block Store (Amazon EBS), our high-performance block storage service. This new capability allows you to instantly create and access point-in-time copies of EBS volumes within the same Availability Zone (AZ), accelerating software development workflows and enhancing operational agility.\n  Customers use Amazon EBS volumes as durable block storage attached to Amazon EC2 instances. With Amazon EBS Volume Clones, you can instantly create copies of volumes and access the copied volumes with single-digit millisecond latency. Amazon EBS Volume Clones enables rapid creation of test and development environments from production volumes, eliminating manual copy workflows. Additionally, Volume Clones integrates with the Amazon EBS Container Storage Interface (CSI) driver, simplifying storage management for containerized applications.\n  Amazon EBS Volume Clones is available in all AWS Commercial Regions and AWS GovCloud (US) Regions. You can access Volume Clones through the AWS Console, AWS Command Line Interface (CLI), AWS SDKs, and AWS CloudFormation. This capability supports all EBS volume types and works for volume copies within the same account and AZ.\n  For detailed pricing information, please visit the EBS pricing page. To explore how Volume Clones can accelerate your software development processes and improve operational efficiency, visit the AWS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ebs-volume-clones-instant-volume-copies",
-      "pubDate": "2025-10-14T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "cloudformation",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
       "id": "aws-news-b4f91e644bb4",
       "title": "Announcing AWS for Fluent Bit 3.0.0 based on Fluent Bit 4.1.0",
       "description": "AWS for Fluent Bit announces version 3.0.0, based on Fluent Bit version 4.1.0 and Amazon Linux 2023. Container logging using AWS for Fluent Bit is now more performant and more feature-rich for AWS customers, including those using Amazon Elastic Container Services (Amazon ECS) and Amazon Elastic Kubernetes Service (Amazon EKS).\n  AWS for Fluent Bit enables Amazon ECS and Amazon EKS customers to collect, process, and route container logs to destinations including Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Kinesis Data Streams, and Amazon S3 without changing application code. AWS for Fluent Bit 3.0.0 upgrades the Fluent Bit version to 4.1.0, and upgrades the base image to Amazon Linux 2023. These updates deliver access to the latest Fluent Bit features, significant performance improvements, and enhanced security. New features include native OpenTelemetry (OTel) support for ingesting and forwarding OTLP logs, metrics, and traces with AWS SigV4 authentication—eliminating the need for additional sidecars. Performance improvements include faster JSON parsing, processing more logs per vCPU with lower latency. Security enhancements include TLS min version and cipher controls, which enforce your TLS policy on outputs from AWS for Fluent Bit for stronger protocol posture.\n  You can use AWS for Fluent Bit 3.0.0 on both ECS and EKS. On ECS, update the FireLens log-router container image in your task definition to the 3.0.0 tag from the Amazon ECR Public Gallery. On EKS, upgrade by either updating the Helm release or setting the DaemonSet image to the 3.0.0 version.\n  The AWS for Fluent Bit image is available in the Amazon ECR Public Gallery and in the Amazon ECR repository. You can also find it on GitHub for source code and additional guidance.",
@@ -2269,6 +2248,27 @@
         "improvement",
         "enhancement",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-50d17ac8269d",
+      "title": "Amazon EBS now supports Volume Clones for instant volume copies",
+      "description": "Today, Amazon Web Services (AWS) announces the general availability of Volume Clones for Amazon Elastic Block Store (Amazon EBS), our high-performance block storage service. This new capability allows you to instantly create and access point-in-time copies of EBS volumes within the same Availability Zone (AZ), accelerating software development workflows and enhancing operational agility.\n  Customers use Amazon EBS volumes as durable block storage attached to Amazon EC2 instances. With Amazon EBS Volume Clones, you can instantly create copies of volumes and access the copied volumes with single-digit millisecond latency. Amazon EBS Volume Clones enables rapid creation of test and development environments from production volumes, eliminating manual copy workflows. Additionally, Volume Clones integrates with the Amazon EBS Container Storage Interface (CSI) driver, simplifying storage management for containerized applications.\n  Amazon EBS Volume Clones is available in all AWS Commercial Regions and AWS GovCloud (US) Regions. You can access Volume Clones through the AWS Console, AWS Command Line Interface (CLI), AWS SDKs, and AWS CloudFormation. This capability supports all EBS volume types and works for volume copies within the same account and AZ.\n  For detailed pricing information, please visit the EBS pricing page. To explore how Volume Clones can accelerate your software development processes and improve operational efficiency, visit the AWS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ebs-volume-clones-instant-volume-copies",
+      "pubDate": "2025-10-14T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "cloudformation",
+        "support",
+        "new-capability"
       ]
     },
     {
