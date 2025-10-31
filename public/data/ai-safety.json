@@ -1,8 +1,56 @@
 {
-  "lastUpdated": "2025-10-30T06:15:13.288Z",
+  "lastUpdated": "2025-10-31T06:15:21.548Z",
   "category": "ai-safety",
-  "totalItems": 29,
+  "totalItems": 28,
   "items": [
+    {
+      "id": "aws-news-cb5205ff99f7",
+      "title": "AWS Cloud Map supports cross-account workloads in AWS GovCloud (US) Regions",
+      "description": "AWS Cloud Map now supports cross-account service discovery through integration with AWS Resource Access Manager (AWS RAM) in AWS GovCloud (US) Regions. This enhancement lets you seamlessly manage and discover cloud resources—such as Amazon ECS tasks, Amazon EC2 instances, and Amazon DynamoDB tables—across AWS accounts. By sharing your AWS Cloud Map namespace via AWS RAM, workloads in other accounts can discover and manage resources registered in that namespace. This enhancement simplifies resource sharing, reduces duplication, and promotes consistent service discovery across environments for organizations with multi-account architectures.\n  You can now share your AWS Cloud Map namespaces using AWS RAM with individual AWS accounts, specific Organizational Units (OUs), or your entire AWS Organization. To get started, create a resource share in AWS RAM, add the namespaces you want to share, and specify the principals (accounts, OUs, or the organization) that should have access. This enables platform engineers to maintain a centralized service registry—or a small set of registries—and share them across multiple accounts, simplifying service discovery. Application developers can then build services that rely on a consistent, shared registry without worrying about availability or synchronization across accounts. AWS Cloud Map's cross-account service discovery support improves operational efficiency and makes it easier to scale service discovery as your organization grows by reducing duplication and streamlining access to namespaces.\n  This feature is available now in the AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions via the AWS Management Console, API, SDK, CLI, and CloudFormation. To learn more, please refer to the AWS Cloud Map documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-cloud-map-cross-account-gov-cloud",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "dynamodb",
+        "ecs",
+        "cloudformation",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ec2",
+        "dynamodb",
+        "ecs",
+        "cloudformation",
+        "organizations",
+        "ga",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1f40c93d2ce3",
+      "title": "Amazon ECS Service Connect enhances observability with Envoy Access Logs",
+      "description": "Amazon Elastic Container Service (Amazon ECS) Service Connect now supports Envoy access logs, providing deeper observability into request-level traffic patterns and service interactions. This new capability captures detailed per-request telemetry for end-to-end tracing, debugging, and compliance monitoring.\n  Amazon ECS Service Connect makes it simple to build secure, resilient service-to-service communication across clusters, VPCs, and AWS accounts. It integrates service discovery and service mesh capabilities by automatically injecting AWS-managed Envoy proxies as sidecars that handle traffic routing, load balancing, and inter-service connectivity. Envoy Access logs capture detailed traffic metadata enabling request-level visibility into service communication patterns. This enables you to perform network diagnostics, troubleshoot issues efficiently, and maintain audit trails for compliance requirements.\n  You can now configure access logs within ECS Service Connect by updating the ServiceConnectConfiguration to enable access logging. Query strings are redacted by default to protect sensitive data. Envoy access logs will output to the standard output (STDOUT) stream alongside application logs and flow through the existing ECS log pipeline without requiring additional infrastructure. This configuration supports all existing application protocols (HTTP, HTTP2, GRPC and TCP). This feature is available in all regions where Amazon ECS Service Connect is supported. To learn more, visit the Amazon ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ecs-service-connect-envoy-access-logs",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ecs",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-b4d758513e47",
       "title": "Hosting NVIDIA speech NIM models on Amazon SageMaker AI: Parakeet ASR",
@@ -438,74 +486,6 @@
         "organizations",
         "ga",
         "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a74fa915331e",
-      "title": "Amazon Aurora PostgreSQL zero-ETL integration with Amazon SageMaker is now available",
-      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports zero-ETL integration with Amazon SageMaker, enabling near real-time data availability for analytics workloads. This integration automatically extracts and loads data from PostgreSQL tables into your lakehouse where it's immediately accessible through various analytics engines and machine learning tools. The data synced into the lakehouse is compatible with Apache Iceberg open standards, enabling you to use your preferred analytics tools and query engines such as SQL, Apache Spark, BI, and AI/ML tools.\n  Through a simple no-code interface, you can create and maintain an up-to-date replica of your PostgreSQL data in your lakehouse without impacting production workloads. The integration features comprehensive, fine-grained access controls that are consistently enforced across all analytics tools and engines, ensuring secure data sharing throughout your organization. As a complement to the existing zero-ETL integrations with Amazon Redshift, this solution reduces operational complexity while enabling you to derive immediate insights from your operational data.\n  Amazon Aurora PostgreSQL zero-ETL integration with Amazon SageMaker is now available in the US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), South America (Sao Paulo), Asia Pacific (Hong Kong), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (Frankfurt), Europe (Ireland), Europe (London), and Europe (Stockholm) AWS Regions.\n  To learn more, visit What is zero-ETL. To begin using this new integration, visit the zero-ETL documentation for Aurora PostgreSQL.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-aurora-postgresql-zero-etl-integration-sagemaker",
-      "pubDate": "2025-10-15T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "lex",
-        "redshift",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "lex",
-        "redshift",
-        "rds",
-        "ga",
-        "now-available",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-363a8b0536ad",
-      "title": "Second-generation AWS Outposts racks now supported in the AWS Europe (Ireland) Region",
-      "description": "Second-generation AWS Outposts racks are now supported in the AWS Europe (Ireland) Region. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Europe can now order their Outposts racks connected to this new supported region, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/second-generation-aws-outposts-racks-europe-ireland-region",
-      "pubDate": "2025-10-15T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations",
-        "outposts"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "outposts",
-        "ga",
-        "update",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-adb54897be57",
-      "title": "AWS Backup expands information in job APIs and Backup Audit Manager reports",
-      "description": "AWS Backup now provides more details in backup job API responses and Backup Audit Manager reports to give you better visibility into backup configurations and compliance settings. You can verify your backup policies with a single API call.\n \nList and Describe APIs for backup, copy, and restore jobs now return fields that required multiple API calls before. Delegated administrators can now view backup job details across their organization. Backup jobs APIs include retention settings, vault lock status, encryption details, and backup plan information like plan names, rule names, and schedules. Copy job APIs return destination vault configurations, vault type, lock state, and encryption settings. Restore job APIs show source resource details and vault access policies. Backup Audit Manager reports include new columns with vault type, lock status, encryption details, archive settings, and retention periods. You can use this information to enhance audit trails and verify compliance with data protection policies.\n \nThese expanded information fields are available today in all AWS Regions where AWS Backup and AWS Backup Audit Manager are supported, with no additional charges.\n \nTo learn more about AWS Backup Audit Manager, visit the product page and documentation. To get started, visit the AWS Backup console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-backup-expands-information-job-api-audit-manager/",
-      "pubDate": "2025-10-15T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ga",
         "support"
       ]
     },

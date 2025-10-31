@@ -1,8 +1,69 @@
 {
-  "lastUpdated": "2025-10-30T06:15:13.288Z",
+  "lastUpdated": "2025-10-31T06:15:21.548Z",
   "category": "natural-language",
   "totalItems": 12,
   "items": [
+    {
+      "id": "aws-news-eaa9d80ce2c9",
+      "title": "Amazon ECS now supports built-in Linear and Canary deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) announces support for linear and canary deployment strategies, giving you more flexibility and control when deploying containerized applications. These new strategies complement ECS built-in blue/green deployments, enabling you to choose the traffic shifting approach that best matches your application's risk profile and validation requirements.\n \nWith linear deployments, you can gradually shift traffic from your current service revision to the new revision in equal percentage increments over a specified time period. You configure the step percentage (for example, 10%) to control how much traffic shifts at each increment, and set a step bake time to wait between each traffic shift for monitoring and validation. This allows you to validate your new application version at multiple stages with increasing amounts of production traffic. With canary deployments, you can route a small percentage of production traffic to your new service revision while the majority of traffic remains on the current stable version. You set a canary bake time to monitor the new revision's performance, after which Amazon ECS shifts the remaining traffic to the new revision. Both strategies support a deployment bake time that waits after all production traffic has shifted to the new revision before terminating the old revision, enabling quick rollback without downtime if issues are detected. You can configure deployment lifecycle hooks to perform custom validation steps, and use Amazon CloudWatch alarms to automatically detect failures and trigger rollbacks.\n \nThe feature is available in all commercial AWS Regions where Amazon ECS is available. You can use linear and canary deployment strategies for new and existing Amazon ECS services that use Application Load Balancer (ALB) or ECS Service Connect, using the Console, SDK, CLI, CloudFormation, CDK, and Terraform. To learn more, see our documentation on Amazon ECS linear deployments and Amazon ECS canary deployments.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ecs-built-in-linear-canary-deployments",
+      "pubDate": "2025-10-30T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ecs",
+        "cloudformation",
+        "cloudwatch"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ecs",
+        "cloudformation",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8a1fee702148",
+      "title": "AWS Clean Rooms launches advanced configurations to optimize SQL performance",
+      "description": "Today, AWS Clean Rooms announces support for advanced configurations to improve the performance of Spark SQL queries. This launch enables you to customize Spark properties and compute sizes for SQL queries at runtime, offering increased flexibility to meet your performance, scale, and cost requirements. \n  With AWS Clean Rooms, you can configure Spark properties—such as shuffle partition settings for parallel processing and autoBroadcastJoinThreshold for optimizing join operations—to help you better control the behavior and tuning of SQL queries in a Clean Rooms collaboration. Additionally, you can choose to cache an existing table’s data containing results from a SQL query or create and cache a new table, which help improve the performance and reduce costs for complex queries using large datasets. For example, an advertiser running lift analysis on their advertising campaigns can specify a custom number of workers for an instance type and configure Spark properties—without editing their SQL query—to optimize costs.\n  With AWS Clean Rooms, customers can create a secure data clean room in minutes and collaborate with any company on AWS or Snowflake to generate unique insights about advertising campaigns, investment decisions, and research and development. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-clean-rooms-advanced-configurations-optimize-sql-performance",
+      "pubDate": "2025-10-30T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-82867e710e14",
+      "title": "Introducing the Amazon OCSF Ready Specialization",
+      "description": "We are excited to announce the Amazon OCSF Ready Specialization that recognizes AWS Partners who have technically validated their software solutions to integrate with OCSF-compatible Amazon services with proven customer success in production environments. The Open Cybersecurity Schema Framework (OCSF) is an open-source initiative that simplifies how security data is normalized and shared across your security tools. This validation ensures customers can confidently select solutions that will help them improve their security operations through standardized data formats, leading to efficient threat detection, vulnerability identification, and enhanced security analytics.\n  The AWS Service Ready Program provides customers with AWS Partner software solutions that work with AWS Services. This specialization helps you quickly find and deploy pre-validated AWS Partner solutions that work seamlessly with OCSF-compatible Amazon services, reducing the complexity of your security operations. Partners can participate in the Amazon OCSF Ready designation by either sending logs and security events in the OCSF schema, or receiving logs or security events from OCSF-compatible Amazon services. This standardization helps customers to collect, combine, and analyze security data reducing the time and effort needed for security operations.\n  Amazon OCSF Ready Partners receive AWS Specialization Program benefits, and have access to signature benefits, including private strategy sessions and AWS guest speaker support for virtual events. The Amazon OCSF specialization expands and replaces the Amazon Security Lake Specialization.\n  To learn more about how to become an Amazon OCSF Ready Partner, visit the AWS Service Ready Program webpage.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ocsf-ready-specialization/",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ea7698513d44",
       "title": "Amazon EC2 R8i and R8i-flex instances are now available in Europe (London)",
@@ -143,73 +204,6 @@
         "kafka",
         "msk",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-7d6fdbd109cc",
-      "title": "AWS SAM CLI adds Finch support, expanding local development tool options for serverless applications",
-      "description": "AWS Serverless Application Model Command Line Interface (SAM CLI) now supports Finch as an alternative to Docker for local development and testing of serverless applications. This gives developers greater flexibility in choosing their preferred local development environment when working with SAM CLI to build and test their serverless applications.\n  Developers building serverless applications spend significant time in their local development environments. SAM CLI is a command-line tool for local development and testing of serverless applications. It allows you to build, test, debug, and package your serverless applications locally before deploying to AWS Cloud. To provide the local development and testing environment for your applications, SAM CLI uses a tool that can run containers on your local device. Previously, SAM CLI only supported Docker as the tool for running containers locally. Starting today, SAM CLI also supports Finch as a container development tool. Finch is an open-source tool, developed and supported by AWS, for local container development. This means you can now choose between Docker and Finch as your preferred container tool for local development when working with SAM CLI.\n  You can use SAM CLI to invoke Lambda functions locally, test API endpoints, and debug your serverless applications with the same experience you would have in the AWS Cloud. With Finch support, SAM CLI now automatically detects and uses Finch as the container development tool when Docker is not available. You can also set Finch as your preferred container tool for SAM CLI. This new feature supports all core SAM CLI commands including sam build, sam local invoke, sam local start-api, and sam local start-lambda.\n  To learn more about using SAM CLI with Finch, visit the SAM CLI developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-sam-cli-finch-support",
-      "pubDate": "2025-10-15T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "lambda"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "lambda",
-        "new-feature",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3eb898c25f1c",
-      "title": "Amazon RDS for Oracle zero-ETL integration with Amazon Redshift is now available in 8 additional AWS regions",
-      "description": "Amazon RDS for Oracle zero-ETL integration with Amazon Redshift is now available in the Asia Pacific (Hyderabad), Asia pacific (Jakarta), Asia Pacific (Melbourne), Canada West (Calgary), Europe (Spain), Europe (Zurich), Israel (Tel Aviv), and Middle East(UAE) Regions. Amazon RDS for Oracle zero-ETL integration with Amazon Redshift enables near real-time analytics and machine learning (ML) to analyze petabytes of transactional data in Amazon Redshift without complex data pipelines for extract-transform-load (ETL) operations. Within seconds of data being written to an Amazon RDS for Oracle database instance, the data is replicated to Amazon Redshift. Zero-ETL integrations simplify the process of analyzing data from Amazon RDS for Oracle database instances, enabling you to derive holistic insights across multiple applications with ease. \n  You can use the AWS management console, API, CLI, and AWS CloudFormation to create and manage zero-ETL integrations between RDS for Oracle and Amazon Redshift. If you use Oracle multitenant architecture, you can choose specific pluggable databases (PDBs) to selectively replicate them. In addition, you can choose specific tables and tailor replication to your needs.\n  RDS for Oracle zero-ETL integration with Redshift is available with Oracle Database version 19c. To learn more, refer Amazon RDS and Amazon Redshift documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-rds-oracle-zero-etl-integration-redshift-8-regions/",
-      "pubDate": "2025-10-15T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift",
-        "rds",
-        "cloudformation"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
-        "rds",
-        "cloudformation",
-        "ga",
-        "now-available",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-af96d7936e65",
-      "title": "Amazon AppStream 2.0 announces availability of license included Microsoft applications",
-      "description": "Amazon AppStream 2.0 now offers Microsoft applications with licenses included, providing customers with the flexibility to run these applications on AppStream 2.0 fleets. As part of this launch, AppStream 2.0 provides Microsoft Office, Visio, and Project 2021/2024 in both Standard and Professional editions. Each is available in both 32-bit and 64-bit versions for On-Demand and Always-On fleets.\n  Administrators can dynamically control applications availability by adding or removing applications from AppStream 2.0 images and fleets. End users benefit from a seamless experience, accessing Microsoft applications that are fully integrated with their business applications within their AppStream 2.0 sessions. This helps in ensuring that users can work efficiently with both Microsoft and business applications in a unified environment, eliminating the need for switching between different platforms or services.\n  To get started, create an AppStream custom image by launching an image builder with a Windows Server operating system image. Select the desired set of applications to be installed. Then connect to the image builder and complete image creation by following the Amazon AppStream 2.0 Administration Guide. You must use an AppStream 2.0 Image Builder that uses an AppStream 2.0 agent released on or after October 2, 2025 Or, your image must use managed AppStream 2.0 image updates released on or after October 3, 2025.\n  This functionality is generally available in all regions where AppStream 2.0 is offered. Customers are billed per hour for the AppStream streaming resources, and per-user per-month (non-prorated) for Microsoft applications. Please see Amazon AppStream 2.0 Pricing for more information.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-appstream-license-included-apps",
-      "pubDate": "2025-10-14T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "generally-available",
-        "update"
       ]
     },
     {
