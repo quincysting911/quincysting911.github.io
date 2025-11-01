@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2025-10-31T06:15:21.548Z",
-  "totalItems": 193,
+  "lastUpdated": "2025-11-01T06:13:24.823Z",
+  "totalItems": 194,
   "sources": {
-    "whatsNew": 93,
+    "whatsNew": 94,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 19,
@@ -11,6 +11,323 @@
     "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-80368a73bde9",
+      "title": "Build reliable AI systems with Automated Reasoning on Amazon Bedrock – Part 1",
+      "description": "Enterprises in regulated industries often need mathematical certainty that every AI response complies with established policies and domain knowledge. Regulated industries can’t use traditional quality assurance methods that test only a statistical sample of AI outputs and make probabilistic assertions about compliance. When we launched Automated Reasoning checks in Amazon Bedrock Guardrails in preview at […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-reliable-ai-systems-with-automated-reasoning-on-amazon-bedrock-part-1/",
+      "pubDate": "2025-10-31T21:44:24.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "launch",
+        "preview"
+      ]
+    },
+    {
+      "id": "aws-news-d8165ac29c81",
+      "title": "Use trusted identity propagation for Apache Spark interactive sessions in Amazon SageMaker Unified Studio",
+      "description": "In this post, we provide step-by-step instructions to set up Amazon EMR on EC2, EMR Serverless, and AWS Glue within SageMaker Unified Studio, enabled with trusted identity propagation. We use the setup to illustrate how different IAM Identity Center users can run their Spark sessions, using each compute setup, within the same project in SageMaker Unified Studio. We show how each user will see only tables or part of tables that they’re granted access to in Lake Formation.",
+      "link": "https://aws.amazon.com/blogs/big-data/use-trusted-identity-propagation-for-apache-spark-interactive-sessions-in-amazon-sagemaker-unified-studio/",
+      "pubDate": "2025-10-31T20:55:40.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "ec2",
+        "emr",
+        "iam",
+        "iam identity center",
+        "glue"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "ec2",
+        "emr",
+        "iam",
+        "iam identity center",
+        "glue",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-d003f23227bd",
+      "title": "Amazon GameLift Streams adds AWS Health notifications for aging resources",
+      "description": "Amazon GameLift Streams is now integrated with AWS Health and will provide automated notifications about aging stream groups. Customers are sent regular reminders via AWS Health to re-create their stream groups starting as early as the 45th day to the 335th day from the stream group creation date. Stream groups older than 180 days are restricted from adding new applications and automatically expire after the 365th day.\n  This feature strengthens our customer’s security posture by helping customers manage the lifecycle of stream groups and prevent the use of outdated resources that might be missing updates. While the customer focuses on their game development, the service helps maintain the health of their resources.\n  AWS Health will send a reminder to the linked account on the 45th day and on the 150th day from the stream group creation day, informing customers that the stream group will be restricted from adding new applications after the 180-day. A last reminder to re-create the stream group will be sent on 335th day informing customers that the stream group will expire on the 365th day.\n  This feature is available in all AWS Regions where Amazon GameLift Streams is offered at no additional cost.\n  Maintenance warnings or the expiration date of a stream group can be viewed on the Stream group details page on the service console, or by using the ExpiresAt field in the GetStreamGroup API response. \n  To learn more about managing your stream groups and configuring notifications, visit the Amazon GameLift documentation on Stream group lifecycle.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-gamelift-streams-health-notifications",
+      "pubDate": "2025-10-31T20:28:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-67e44e4ac369",
+      "title": "Amazon Route 53 Resolver now supports AWS PrivateLink",
+      "description": "Amazon Route 53 Resolver now supports AWS PrivateLink. Customers can now access and manage Route 53 Resolver and all the related features (Resolver endpoints, Route 53 Resolver DNS Firewall, Resolver Query Logging, Resolver for AWS Outposts) privately, without going through the public internet. AWS PrivateLink provides private connectivity between VPCs, AWS services, and on-premises applications, securely over the Amazon network. When Route 53 Resolver and its features are accessed via AWS PrivateLink, all operations, such as creating, deleting, editing, and listing, can be handled via the Amazon private network. \n  Amazon Route 53 Resolver responds recursively to DNS queries from AWS resources for public records, Amazon VPC-specific DNS names, and Amazon Route 53 private hosted zones, and is available by default in all VPCs. Route 53 Resolver also offers features (Resolver endpoints, Route 53 Resolver DNS Firewall, Resolver Query Logging, Resolver for AWS Outposts) that you can opt-into. You can use Resolver and its features with AWS PrivateLink in regions where Route 53 Resolver and all its associated features are available today, including the AWS GovCloud (US) Regions. For more information about the AWS Regions where Resolver and its features are available, see here.\n  To learn more about Route 53 Resolver and its features, please refer to the service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-route53-resolver-supports-aws-privatelink",
+      "pubDate": "2025-10-31T18:49:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "outposts",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1361270bf235",
+      "title": "Amazon DynamoDB Accelerator now supports AWS PrivateLink",
+      "description": "Amazon DynamoDB Accelerator (DAX) now supports AWS PrivateLink, enabling you to securely access DAX management APIs such as CreateCluster, DescribeClusters, and DeleteCluster over private IP addresses within your virtual private cloud (VPC). DAX clusters already run inside your VPC, and all data plane operations like GetItem and Query are handled privately within the VPC. With this launch, you can now perform cluster management operations privately, without connecting to the public regional endpoint.\n  With AWS PrivateLink, you can simplify private network connectivity between virtual private clouds (VPCs), DAX, and your on-premises data centers using interface VPC endpoints and private IP addresses. It helps you meet compliance regulations and eliminates the need to use public IP addresses, configure firewall rules, or configure an Internet gateway to access DAX from your on-premises data centers.\n  AWS PrivateLink for DAX is available in all Regions where DAX is available today. For information about DAX Regional availability, see the “Service endpoints” section in Amazon DynamoDB endpoints and quotas. There is an additional cost to use the feature. Please see AWS PrivateLink pricing for more details. To get started with DAX and PrivateLink, see AWS PrivateLink for DAX.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dynamodb-accelerator-privatelink/",
+      "pubDate": "2025-10-31T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b6bba97fd8e4",
+      "title": "Amazon Aurora DSQL now supports FIPS 140-3 compliant endpoints",
+      "description": "Amazon Aurora DSQL now supports Federal Information Processing Standards (FIPS) 140-3 compliant endpoints, helping companies contracting with the US federal governments meet the FIPS security requirement to encrypt sensitive data in supported Regions. With this launch, you can use Aurora DSQL for workloads that require a FIPS 140-3 validated cryptographic module when sending requests over public or VPC endpoints.\n  Aurora DSQL is the fastest serverless, distributed SQL database with single- and multi-Region clusters providing active-active high availability and strong consistency. Aurora DSQL enables you to build applications with virtually unlimited scalability, the highest availability, and zero infrastructure management.\n  Aurora DSQL FIPS compliant endpoints are now available in the following regions: US East (N. Virginia), US East (Ohio), and US West (Oregon). To learn more about FIPS 140-3 at AWS, visit FIPS 140-3 Compliance.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-aurora-dsql-fips-140-3-endpoints",
+      "pubDate": "2025-10-31T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ef881c72aa57",
+      "title": "New SAP on AWS GROW Region Availability for SAP Cloud ERP",
+      "description": "SAP Cloud ERP on AWS (GROW) is now available in the Europe (Frankfurt) region. As a complete offering of solutions, best practices, adoption acceleration services, community and learning, SAP Cloud ERP on AWS helps any size organization adopt cloud enterprise resource planning (ERP) with speed, predictability, and continuous innovation on the world’s most comprehensive and broadly adopted cloud. SAP Cloud ERP on AWS can be implemented in months instead of years compared to traditional on-premises ERP implementations.\n  By implementing SAP Cloud ERP on AWS, you can simplify everyday work, grow your business, and secure your success. At the core of SAP Cloud ERP on AWS is SAP S/4HANA Cloud, Public edition a full-featured SaaS ERP suite built on the learnings of SAP's 50+ years of industry best practices. SAP Cloud ERP on AWS allows your organization to gain end-to-end process visibility and control with integrated systems across HR, procurement, sales, finance, supply chain, and manufacturing. It also includes SAP Business AI-powered processes leveraging AWS to provide data-driven insights and recommendations. Customers can also innovate with generative AI using their SAP data through Amazon Bedrock models in the SAP generative AI hub. SAP Cloud ERP on AWS takes advantage of AWS Graviton processors, which offer up to 60% less energy than comparable cloud instances for the same performance.\n  To learn more about deploying SAP Cloud ERP on AWS explore the SAP on AWS product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/sap-aws-grow-region-availability-sap-cloud-erp",
+      "pubDate": "2025-10-31T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "nova",
+        "graviton"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova",
+        "graviton",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-8f7b3e330639",
+      "title": "Custom Intelligence: Building AI that matches your business DNA",
+      "description": "In 2024, we launched the Custom Model Program within the AWS Generative AI Innovation Center to provide comprehensive support throughout every stage of model customization and optimization. Over the past two years, this program has delivered exceptional results by partnering with global enterprises and startups across diverse industries—including legal, financial services, healthcare and life sciences, […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/custom-intelligence-building-ai-that-matches-your-business-dna/",
+      "pubDate": "2025-10-31T16:07:19.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2537f16f1b31",
+      "title": "Clario streamlines clinical trial software configurations using Amazon Bedrock",
+      "description": "This post builds upon our previous post discussing how Clario developed an AI solution powered by Amazon Bedrock to accelerate clinical trials. Since then, Clario has further enhanced their AI capabilities, focusing on innovative solutions that streamline the generation of software configurations and artifacts for clinical trials while delivering high-quality clinical evidence.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/clario-streamlines-clinical-trial-software-configurations-using-amazon-bedrock/",
+      "pubDate": "2025-10-31T15:49:09.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-e7f08dca9bc5",
+      "title": "Amazon Connect now supports scheduling of individual agents",
+      "description": "Amazon Connect now supports scheduling of individual agents, giving you more flexibility in scheduling your workforce. For example, when onboarding 100 new agents to a business unit with schedules already published for next two months, you can create schedules for only those new agents and automatically merge them with existing schedules. This eliminates the need for workarounds such as manually copying schedules from existing agents to new agents or regenerating schedules for entire business unit, thus improving manager productivity and operational efficiency.\n  This feature is available in all AWS Regions where Amazon Connect agent scheduling is available. To learn more about Amazon Connect agent scheduling, click here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-connect-scheduling-individual-agents/",
+      "pubDate": "2025-10-31T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-14bfb61dfd36",
+      "title": "Introducing Amazon Bedrock cross-Region inference for Claude Sonnet 4.5 and Haiku 4.5 in Japan and Australia",
+      "description": "こんにちは, G’day. The recent launch of Anthropic’s Claude Sonnet 4.5 and Claude Haiku 4.5, now available on Amazon Bedrock, marks a significant leap forward in generative AI models. These state-of-the-art models excel at complex agentic tasks, coding, and enterprise workloads, offering enhanced capabilities to developers. Along with the new models, we are thrilled to announce that […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-cross-region-inference-for-claude-sonnet-4-5-and-haiku-4-5-in-japan-and-australia/",
+      "pubDate": "2025-10-31T14:45:37.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "lex"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "lex",
+        "launch",
+        "now-available",
+        "new-model"
+      ]
+    },
+    {
+      "id": "aws-news-3dc939af4c74",
+      "title": "AWS Marketplace now offers pricing model flexibility and simplified deployment for AI agents and tools",
+      "description": "AWS Marketplace now offers flexible pricing models, simplified authentication, and streamlined deployment for AI agents and tools. The new capabilities include contract-based and usage-based pricing for Amazon Bedrock AgentCore Runtime containers, and simplified OAuth credential management through Quick Launch for API-based AI agents and tools. Customers can also use supported remote MCP servers procured through AWS Marketplace as MCP targets on AgentCore Gateway, making it easier for them to connect to AI agents and tools from AWS Partners at scale. The improvements reduce deployment complexity while offering pricing models that better align with diverse customer needs.\n  For Partners, the new capabilities for AI agents and tools streamline management and provide additional pricing options through AWS Marketplace. Partners can now manage all their AI agents and tools listings from one page in the AWS Marketplace Management Portal, reducing the complexity of managing multiple listings across different interfaces. With usage-based and contract-based pricing options for AgentCore Runtime compatible products, Partners have more flexibility to implement pricing strategies that align with their business models and customers’ needs.\n  Customers can learn more in the buyer guide and start exploring AI agent solutions in AWS Marketplace on the solutions page. For partners interested in implementing the capabilities, visit the seller guide and complete the workshop.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-marketplace-pricing-ai-agents-tools/",
+      "pubDate": "2025-10-31T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "launch",
+        "ga",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-54f3dd3a8f30",
+      "title": "Amazon VPC IPAM automates prefix list updates",
+      "description": "Today, AWS announced the ability for Amazon VPC IP Address Manager (IPAM) to automate prefix lists updates with prefix list resolver (PLR). This feature allows network administrators to automatically update prefix lists based on their business logic in IPAM improving their operational posture and reducing overhead.\n  Using IPAM PLR, you can define business rules for synchronizing prefix lists with IP address ranges from various resources, such as VPCs, subnets and IPAM pools. These prefix lists can then be referenced in resources such as route tables and security groups across your AWS environment, based on your connectivity requirements. Previously, you had to manually update your prefix lists to add or remove IP address ranges based on changes to your AWS environment. This was operationally complex and error prone. IPAM PLR automates prefix list updates requiring no manual intervention, improving your operational posture.\n  This feature is now available in all AWS Regions where Amazon VPC IPAM is supported, including AWS China Regions, and AWS GovCloud (US) Regions.\n  To learn more about this feature, view the AWS IPAM documentation. For details on pricing, refer to the IPAM tab on the Amazon VPC Pricing Page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-vpc-ipam-prefix-list-automation/",
+      "pubDate": "2025-10-31T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-dc918b27e947",
+      "title": "The Model Context Protocol (MCP) Proxy for AWS is now generally available",
+      "description": "Today, AWS announces the general availability of the Model Context Protocol (MCP) Proxy for AWS, a client-side proxy that enables MCP clients to connect to remote, AWS-hosted MCP servers using AWS SigV4 authentication. The Proxy supports popular agentic AI development tools like Amazon Q Developer CLI, Kiro, Cursor, and popular agent frameworks like Strands Agents. Customers can connect to remote MCP servers with AWS credentials using the Proxy to automatically handle MCP protocol communications via SigV4. The Proxy also helps customers to connect to MCP servers built on Amazon Bedrock AgentCore Gateway or Runtime using SigV4 authentication.\n  This release allows developers and agents to extend development workflows to include AWS service interactions from AWS MCP server tools. For example, you can use AWS MCP servers to work with resources like AWS S3 buckets or Amazon RDS tables through existing MCP servers with SigV4. The MCP Proxy for AWS includes safety controls such as read-only mode to prevent unintended changes, configurable retry logic for reliability, and logging for troubleshooting. Customers can install the Proxy from source, through Python package managers, or by using a container making it simple to configure with their preferred MCP-supported development tool.\n  The MCP Proxy for AWS is open-source and available now. Visit the AWS GitHub repository to view the installation and configuration options and start connecting with remote AWS MCP Servers today.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/model-context-protocol-proxy-available/",
+      "pubDate": "2025-10-31T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "amazon q",
+        "q developer",
+        "s3",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "amazon q",
+        "q developer",
+        "s3",
+        "rds",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2b1c09fd44a5",
+      "title": "Announcing larger instances for Amazon Lightsail",
+      "description": "Amazon Lightsail now offers three larger instance bundles with up to 64 vCPUs and 256 GB memory. The new instance bundles are available with Linux operating system (OS) and application blueprints, for both IPv6-only and dual-stack networking types. You can create instances using the new bundles with pre-configured Linux OS and application blueprints including WordPress, cPanel & WHM, Plesk, Drupal, Magento, MEAN, LAMP, Node.js, Amazon Linux, Ubuntu, CentOS, Debian, AlmaLinux, and Windows.\n  The new larger instance bundles enable you to scale your web applications and run more compute and memory intensive workloads in Lightsail. These higher performance instance bundles are ideal for general purpose workloads that require ability to handle large spikes in load. Using this new bundle, you can run web and application servers, large databases, virtual desktops, batch processing, enterprise applications, and more.\n  These new bundles now available in all AWS Regions where Amazon Lightsail is available. For more information on pricing, or to get started with your free account, click here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/larger-instances-amazon-lightsail",
+      "pubDate": "2025-10-31T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-164c0c0d28a9",
       "title": "Reduce CAPTCHAs for AI agents browsing the web with Web Bot Auth (Preview) in Amazon Bedrock AgentCore Browser",
@@ -168,6 +485,25 @@
       ]
     },
     {
+      "id": "aws-news-8a1fee702148",
+      "title": "AWS Clean Rooms launches advanced configurations to optimize SQL performance",
+      "description": "Today, AWS Clean Rooms announces support for advanced configurations to improve the performance of Spark SQL queries. This launch enables you to customize Spark properties and compute sizes for SQL queries at runtime, offering increased flexibility to meet your performance, scale, and cost requirements. \n  With AWS Clean Rooms, you can configure Spark properties—such as shuffle partition settings for parallel processing and autoBroadcastJoinThreshold for optimizing join operations—to help you better control the behavior and tuning of SQL queries in a Clean Rooms collaboration. Additionally, you can choose to cache an existing table’s data containing results from a SQL query or create and cache a new table, which help improve the performance and reduce costs for complex queries using large datasets. For example, an advertiser running lift analysis on their advertising campaigns can specify a custom number of workers for an instance type and configure Spark properties—without editing their SQL query—to optimize costs.\n  With AWS Clean Rooms, customers can create a secure data clean room in minutes and collaborate with any company on AWS or Snowflake to generate unique insights about advertising campaigns, investment decisions, and research and development. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-clean-rooms-advanced-configurations-optimize-sql-performance",
+      "pubDate": "2025-10-30T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-ecd42bafa0a3",
       "title": "Introducing the Capacity Reservation Topology API for AI, ML, and HPC instance types",
       "description": "AWS announces the general availability of the Amazon Elastic Compute Cloud (EC2) Capacity Reservation Topology API. It joins the Instance Topology API in enabling customers to efficiently manage capacity, schedule jobs, and rank nodes for Artificial Intelligence, Machine Learning, and High-Performance Computing distributed workloads. The Capacity Reservation Topology API gives customers a unique per-account hierarchical view of the relative location of their capacity reservations.\n \nCustomers running distributed parallel workloads are managing thousands of instances across tens to hundreds of capacity reservations. With the Capacity Reservation Topology API, customers can describe the topology of their reservations as a network node set, which will show the relative proximity of their capacity without the need to launch an instance. This enables efficient capacity planning and management as customers provision workloads on tightly coupled capacity. Customers can then use the Instance Topology API, which provides consistent network nodes from the Capacity Reservation Topology API with further granularity, enabling a consistent and seamless way to schedule jobs and rank nodes for optimal performance in distributed parallel workloads.\n \nThe Capacity Reservation Topology API is available in the following AWS regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Africa (Cape Town), Asia Pacific (Jakarta), Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Middle East (Bahrain), Middle East (UAE), and South America (São Paulo), and it is supported on all instances available with the Instance Topology API.\n \nTo learn more, please visit the latest EC2 user guide.",
@@ -203,25 +539,6 @@
       "tags": [
         "step functions",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-8a1fee702148",
-      "title": "AWS Clean Rooms launches advanced configurations to optimize SQL performance",
-      "description": "Today, AWS Clean Rooms announces support for advanced configurations to improve the performance of Spark SQL queries. This launch enables you to customize Spark properties and compute sizes for SQL queries at runtime, offering increased flexibility to meet your performance, scale, and cost requirements. \n  With AWS Clean Rooms, you can configure Spark properties—such as shuffle partition settings for parallel processing and autoBroadcastJoinThreshold for optimizing join operations—to help you better control the behavior and tuning of SQL queries in a Clean Rooms collaboration. Additionally, you can choose to cache an existing table’s data containing results from a SQL query or create and cache a new table, which help improve the performance and reduce costs for complex queries using large datasets. For example, an advertiser running lift analysis on their advertising campaigns can specify a custom number of workers for an instance type and configure Spark properties—without editing their SQL query—to optimize costs.\n  With AWS Clean Rooms, customers can create a secure data clean room in minutes and collaborate with any company on AWS or Snowflake to generate unique insights about advertising campaigns, investment decisions, and research and development. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-clean-rooms-advanced-configurations-optimize-sql-performance",
-      "pubDate": "2025-10-30T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "support"
       ]
     },
     {
@@ -1660,28 +1977,6 @@
       ]
     },
     {
-      "id": "aws-news-e18b0e809647",
-      "title": "Amazon DCV releases version 2025.0 with enhanced keyboard handling and WebAuthn support",
-      "description": "AWS announces Amazon DCV 2025.0, the latest version of the high-performance remote display protocol that enables customers to securely access remote desktops and application sessions. This release focuses on enhancing user productivity and security while expanding platform compatibility for diverse use cases.\n  Amazon DCV 2025.0 includes the following key features and improvements:\n  \n \n \nEnhanced WebAuthn redirection on Windows and standard browser-based WebAuthn support on Linux, enabling security key authentication (like Yubikeys, Windows Hello) in native Windows and SaaS applications within virtual desktop sessions\n \n \nLinux client support for ARM architecture, further broadening compatibility and performance\n \n \nWindows Server 2025 support, delivering latest security standards and enhanced performance on DCV hosts\n \n \nServer side keyboard layout support and layout alignment for Windows clients, enhancing input reliability and consistency\n \n \nScroll wheel optimizations for smoother navigation\n \n \nFor more information about the new features and enhancements in Amazon DCV 2025.0, see the release notes or visit the Amazon DCV webpage to learn more and get started.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dvc-releases-version-2025-0",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "new-feature",
-        "improvement",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-f7a499ca3343",
       "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
       "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
@@ -1739,6 +2034,28 @@
         "cloudwatch",
         "ga",
         "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e18b0e809647",
+      "title": "Amazon DCV releases version 2025.0 with enhanced keyboard handling and WebAuthn support",
+      "description": "AWS announces Amazon DCV 2025.0, the latest version of the high-performance remote display protocol that enables customers to securely access remote desktops and application sessions. This release focuses on enhancing user productivity and security while expanding platform compatibility for diverse use cases.\n  Amazon DCV 2025.0 includes the following key features and improvements:\n  \n \n \nEnhanced WebAuthn redirection on Windows and standard browser-based WebAuthn support on Linux, enabling security key authentication (like Yubikeys, Windows Hello) in native Windows and SaaS applications within virtual desktop sessions\n \n \nLinux client support for ARM architecture, further broadening compatibility and performance\n \n \nWindows Server 2025 support, delivering latest security standards and enhanced performance on DCV hosts\n \n \nServer side keyboard layout support and layout alignment for Windows clients, enhancing input reliability and consistency\n \n \nScroll wheel optimizations for smoother navigation\n \n \nFor more information about the new features and enhancements in Amazon DCV 2025.0, see the release notes or visit the Amazon DCV webpage to learn more and get started.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dvc-releases-version-2025-0",
+      "pubDate": "2025-10-22T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "new-feature",
+        "improvement",
+        "enhancement",
         "support"
       ]
     },
@@ -2132,7 +2449,7 @@
     {
       "id": "aws-news-b90b0ae9cef4",
       "title": "Amazon Corretto October 2025 Quarterly Updates",
-      "description": "On October 21, 2025 Amazon announced quarterly security and critical updates for Amazon Corretto Long-Term Supported (LTS) versions of OpenJDK. Corretto 25.0.1, 21.0.9, 17.0.17, 11.0.29, 8u472 are now available for download. Amazon Corretto is a no-cost, multi-platform, production-ready distribution of OpenJDK. \n  This release of Corretto JDK binaries for Generic Linux, Alpine and macOS will include Async-Profiler, a low overhead sampling profiler for Java supported by the Amazon Corretto team. Async-Profiler is designed to provide profiling data for CPU time, allocations in Java Heap, native memory allocations and leaks, contended locks, hardware and software performance counters like cache misses, page faults, context switches, Java method profiling, and much more.\n  Click on the Corretto home page to download Corretto 25, Corretto 21, Corretto 17, Corretto 11, or Corretto 8. You can also get the updates on your Linux system by configuring a Corretto Apt, Yum, or Apk repo.\n  Feedback is welcomed!",
+      "description": "On October 21, 2025 Amazon announced quarterly security and critical updates for Amazon Corretto Long-Term Supported (LTS) versions of OpenJDK. Corretto 25.0.1, 21.0.9, 17.0.17, 11.0.29, 8u472 are now available for download. Amazon Corretto is a no-cost, multi-platform, production-ready distribution of OpenJDK.\n  This release of Corretto JDK binaries for Generic Linux, Alpine and macOS will include Async-Profiler, a low overhead sampling profiler for Java supported by the Amazon Corretto team. Async-Profiler is designed to provide profiling data for CPU time, allocations in Java Heap, native memory allocations and leaks, contended locks, hardware and software performance counters like cache misses, page faults, context switches, Java method profiling, and much more.\n  Click on the Corretto home page to download Corretto 25, Corretto 21, Corretto 17, Corretto 11, or Corretto 8. You can also get the updates on your Linux system by configuring a Corretto Apt, Yum, or Apk repo.\n  Feedback is welcomed!",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-corretto-october-2025-quarterly-updates",
       "pubDate": "2025-10-21T14:00:00.000Z",
       "source": "whatsNew",
@@ -2352,42 +2669,6 @@
       ]
     },
     {
-      "id": "aws-news-37dcae1b25ff",
-      "title": "Beyond vibes: How to properly select the right LLM for the right task",
-      "description": "In this post, we discuss an approach that can guide you to build comprehensive and empirically driven evaluations that can help you make better decisions when selecting the right model for your task.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-vibes-how-to-properly-select-the-right-llm-for-the-right-task/",
-      "pubDate": "2025-10-17T16:09:22.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-27954996bc50",
-      "title": "Splash Music transforms music generation using AWS Trainium and Amazon SageMaker HyperPod",
-      "description": "In this post, we show how Splash Music is setting a new standard for AI-powered music creation by using its advanced HummingLM model with AWS Trainium on Amazon SageMaker HyperPod. As a selected startup in the 2024 AWS Generative AI Accelerator, Splash Music collaborated closely with AWS Startups and the AWS Generative AI Innovation Center (GenAIIC) to fast-track innovation and accelerate their music generation FM development lifecycle.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/splash-music-transforms-music-generation-using-aws-trainium-and-amazon-sagemaker-hyperpod/",
-      "pubDate": "2025-10-17T16:06:01.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "trainium"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "trainium"
-      ]
-    },
-    {
       "id": "aws-news-b3f58661ceb2",
       "title": "Announcing Amazon EC2 Capacity Manager",
       "description": "Today, AWS is announcing the general availability of Amazon EC2 Capacity Manager, a new capability that enables customers to monitor, analyze, and manage EC2 capacity across all of their accounts and regions. This new capability simplifies resource management using a single interface.\n  EC2 Capacity Manager offers customers a comprehensive view of On-Demand, Spot, and Capacity Reservation usage across their accounts and Regions. The new service features dashboards and charts that present high-level insights while allowing customers to drill down into specific details where needed. These details include historical usage trends to help customers gain a better understanding of their capacity patterns over time, as well as optimization opportunities to guide informed capacity decisions, complete with workflows for implementing these insights. In addition to the updated user interface and APIs, EC2 Capacity Manager allows customers to export data, enabling integration with their existing systems.\n  EC2 Capacity Manager is available in all commercial AWS Regions enabled by default at no additional cost.\n  To learn more, visit the EC2 Capacity Manager user guide, read the AWS News Blog, or get started using EC2 Capacity Manager in the AWS console.",
@@ -2458,71 +2739,6 @@
       ]
     },
     {
-      "id": "aws-news-c3df5c11b27b",
-      "title": "Customer managed KMS keys now available for Automated Reasoning checks",
-      "description": "AWS announces support for customer managed AWS Key Management Service (KMS) keys in Automated Reasoning checks in Amazon Bedrock Guardrails. This enhancement enables you to use your own encryption keys to protect policy content and tests, giving you full control over key management. Automated Reasoning checks in Amazon Bedrock Guardrails is the first and only generative AI safeguard that helps correct factual errors from hallucinations using logically accurate and verifiable reasoning that explains why responses are correct.\n  This feature enables organizations in regulated industries like healthcare, financial services, and government to adopt Automated Reasoning checks while meeting compliance requirements for customer-owned encryption keys. For example, a financial institution can now use Automated Reasoning checks to validate loan processing guidelines while maintaining full control over the encryption keys protecting their policy content. When creating an Automated Reasoning policy, you can now select a customer managed KMS key to encrypt your content rather than using the default key.\n  Customer managed KMS key support for Automated Reasoning checks is available in all AWS Regions where Amazon Bedrock Guardrails is offered: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), Europe (Ireland), and Europe (Paris).\n  To get started, see the following resources:\n  \n \n \nAutomated Reasoning checks user guide\n \n \nAmazon Bedrock Guardrails product page\n \n \nAWS Key Management Service developer guide\n \n \nCreate an Automated Reasoning policy in the Bedrock console",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/customer-managed-kms-keys-automated-reasoning-checks/",
-      "pubDate": "2025-10-17T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "organizations",
-        "ga",
-        "now-available",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c8d41c80e16e",
-      "title": "Amazon EC2 C8g instances now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8g instances are available in AWS Europe (Milan), and AWS Asia Pacific (Hong Kong, Osaka, Melbourne) regions. These instances are powered by AWS Graviton4 processors and deliver up to 30% better performance compared to AWS Graviton3-based instances. Amazon EC2 C8g instances are built for compute-intensive workloads, such as high performance computing (HPC), batch processing, gaming, video encoding, scientific modeling, distributed analytics, CPU-based machine learning (ML) inference, and ad serving. These instances are built on the AWS Nitro System, which oﬄoads CPU virtualization, storage, and networking functions to dedicated hardware and software to enhance the performance and security of your workloads.\n  AWS Graviton4-based Amazon EC2 instances deliver the best performance and energy efficiency for a broad range of workloads running on Amazon EC2. These instances offer larger instance sizes with up to 3x more vCPUs and memory compared to Graviton3-based Amazon C7g instances. AWS Graviton4 processors are up to 40% faster for databases, 30% faster for web applications, and 45% faster for large Java applications than AWS Graviton3 processors. C8g instances are available in 12 different instance sizes, including two bare metal sizes. They offer up to 50 Gbps enhanced networking bandwidth and up to 40 Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS).\n  To learn more, see Amazon EC2 C8g Instances. To get started, see the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ec2-c8g-instances-additional-regions/",
-      "pubDate": "2025-10-17T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "graviton",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-ad7fa072f6f9",
-      "title": "Iterative fine-tuning on Amazon Bedrock for strategic model improvement",
-      "description": "Organizations often face challenges when implementing single-shot fine-tuning approaches for their generative AI models. The single-shot fine-tuning method involves selecting training data, configuring hyperparameters, and hoping the results meet expectations without the ability to make incremental adjustments. Single-shot fine-tuning frequently leads to suboptimal results and requires starting the entire process from scratch when improvements are […]",
-      "link": "https://aws.amazon.com/blogs/machine-learning/iterative-fine-tuning-on-amazon-bedrock-for-strategic-model-improvement/",
-      "pubDate": "2025-10-16T23:11:28.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "organizations",
-        "ga",
-        "improvement"
-      ]
-    },
-    {
       "id": "aws-news-11031ecd9926",
       "title": "Zero downtime blue/green deployments with Amazon API Gateway",
       "description": "In this post, you learn how to implement blue/green deployments by using Amazon API Gateway for your APIs. For this post, we use AWS Lambda functions on the backend. However, you can follow the same strategy for other backend implementations of the APIs. All the required infrastructure is deployed by using AWS Serverless Application Model (AWS SAM).",
@@ -2565,57 +2781,6 @@
       ]
     },
     {
-      "id": "aws-news-7a86c4c249c4",
-      "title": "Voice AI-powered drive-thru ordering with Amazon Nova Sonic and dynamic menu displays",
-      "description": "In this post, we'll demonstrate how to implement a Quick Service Restaurants (QSRs) drive-thru solution using Amazon Nova Sonic and AWS services. We'll walk through building an intelligent system that combines voice AI with interactive menu displays, providing technical insights and implementation guidance to help restaurants modernize their drive-thru operations.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/voice-ai-powered-drive-thru-ordering-with-amazon-nova-sonic-and-dynamic-menu-displays/",
-      "pubDate": "2025-10-16T18:36:28.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova"
-      ]
-    },
-    {
-      "id": "aws-news-e33f594c2ad4",
-      "title": "AWS Marketplace now supports purchase order line numbers",
-      "description": "AWS Marketplace now supports purchase order line numbers for AWS Marketplace purchases, simplifying cost-allocation and payment processing. This launch makes it easier for customers to process and pay invoices.\n  AWS purchase order support allows customers to provide purchase orders per transaction, which reflect on invoices related to that purchase. Now, customers can associate transaction charges not only to purchase orders, but also to a specific PO line number for AWS Marketplace purchases. This capability is supported during procurement and, for future charges, post-procurement in the AWS Marketplace console. You can also view the purchase order and purchase order line number associated to an AWS invoice in the AWS Billing and Cost Management console. Streamline your invoice processing by accurately matching AWS invoices with your purchase order and purchase order line number.\n  This capability is available today in all AWS Regions where AWS Marketplace is supported.\n  To learn about transaction purchase orders for AWS Marketplace, view the AWS Marketplace buyer guide. For information on using blanket purchase orders with AWS, refer to the AWS Billing Documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-marketplace-po-line-numbers",
-      "pubDate": "2025-10-16T17:29:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b856f65fb676",
-      "title": "Amazon Timestream now supports InfluxDB 3",
-      "description": "Amazon Timestream for InfluxDB now offers support for InfluxDB 3. Now application developers and DevOps teams can run InfluxDB 3 databases as a managed service. InfluxDB 3 uses a new architecture for the InfluxDB database engine, built on Apache Arrow for in-memory data processing, Apache DataFusion for query execution, and columnar Parquet storage format with data persistence in Amazon S3 to deliver fast performance for high-cardinality data and large scale data processing for large analytical workloads.\n  With Amazon Timestream for InfluxDB 3, customers can leverage improved query performance and resource utilization for data-intensive use cases while benefiting from virtually unlimited storage capacity through S3-based object storage. The service is available in two editions: Core, the open source version of InfluxDB 3, for near real-time workloads focused on recent data, and Enterprise for production workloads requiring high availability, multi-node deployments, and essential compaction capabilities for long-term storage. The Enterprise edition supports multi-node cluster configurations with up to 3 nodes initially, providing enhanced availability, improved performance for concurrent queries, and greater system resilience.\n  Amazon Timestream for InfluxDB 3 is available in all Regions where Timestream for InfluxDB is available. See here for a full listing of our Regions.\n  To get started with Amazon Timestream for InfluxDB 3, visit the Amazon Timestream for InfluxDB console. For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-timestream-influxdb-3/",
-      "pubDate": "2025-10-16T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-81499b3fe296",
       "title": "Monitor, analyze, and manage capacity usage from a single interface with Amazon EC2 Capacity Manager",
       "description": "Amazon EC2 Capacity Manager is a new centralized solution that consolidates capacity monitoring and management across all AWS accounts and regions, eliminating operational overhead and providing optimization opportunities for EC2 infrastructure at scale.",
@@ -2630,66 +2795,6 @@
       ],
       "tags": [
         "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-24132007fd0e",
-      "title": "Amazon EC2 C8gn instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Asia Pacific (Malaysia, Sydney, Thailand) Region. The new instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances.\n  Take advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference.\n  For increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters.\n  C8gn instances are available in the following AWS Regions: US East (N. Virginia), US West (Oregon, N.California), Europe (Frankfurt, Stockholm), Asia Pacific (Singapore, Malaysia, Sydney, Thailand)\n  To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ec2-c8gn-instances-additional-regions",
-      "pubDate": "2025-10-16T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "graviton",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-600972ff7837",
-      "title": "Amazon DocumentDB (with MongoDB compatibility) now supports Internet Protocol Version 6 (IPv6)",
-      "description": "Amazon DocumentDB (with MongoDB compatibility) now offers customers the option to use Internet Protocol version 6 (IPv6) addresses on new and existing clusters. Customers moving to IPv6 can simplify their network stack by running their databases on a dual-stack network that supports both IPv4 and IPv6.\n  IPv6 increases the number of available addresses and customers no longer need to manage overlapping IPv4 address spaces in their VPCs (Virtual Private Cloud). Customers can standardize their applications on the new version of Internet Protocol by moving to dual-stack mode (supporting both IPv4 and IPv6) with a few clicks in the AWS Management Console or directly using the AWS CLI.\n  Amazon DocumentDB (with MongoDB compatibility) is a fully managed, native JSON database that makes it simple and cost-effective to operate critical document workloads at virtually any scale without managing infrastructure. Amazon DocumentDB support for IPv6 is generally available on version 4.0 and 5.0 in AWS Regions listed in Dual-stack mode Region and version availability. To learn more about configuring your environment for IPv6, please refer to Amazon VPC and Amazon DocumentDB.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-documentdb-ipv6-support/",
-      "pubDate": "2025-10-16T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9013bb174302",
-      "title": "AWS Security Hub CSPM now supports CIS AWS Foundations Benchmark v5.0",
-      "description": "AWS Security Hub Cloud Security Posture Management (CSPM) now supports the Center for Internet Security (CIS) AWS Foundations Benchmark v5.0. This industry-standard benchmark provides security configuration best practices for AWS with clear implementation and assessment procedures. The new standard includes 40 controls that perform automated checks against AWS resources to evaluate compliance with the latest version 5.0 requirements.\n  The standard is now available in all AWS Regions where Security Hub CSPM is currently available, including the AWS GovCloud (US) and the China Regions. To quickly enable the standard across your AWS environment, we recommend that you use Security Hub CSPM central configuration. With this approach, you can enable the standard in all or only some of your organization's accounts and across all AWS Regions that are linked to Security Hub CSPM with a single action.\n  To learn more, see CIS v5.0 in the AWS Security Hub CSPM User Guide. To receive notifications about new Security Hub CSPM features and controls, subscribe to the Security Hub CSPM SNS topic. You can also try Security Hub at no cost for 30 days with the AWS Free Tier offering.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-security-hub-cspm-cis-foundations-benchmark-v5/",
-      "pubDate": "2025-10-16T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sns"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "sns",
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -2708,50 +2813,6 @@
       "tags": [
         "redshift",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-482772d87e08",
-      "title": "Amazon WorkSpaces Core Managed Instances is now available in 5 additional AWS Regions",
-      "description": "AWS today announced Amazon WorkSpaces Core Managed Instances availability in US East (Ohio), Asia Pacific (Malaysia), Asia Pacific (Hong Kong), Middle East (UAE), and Europe (Spain), bringing Amazon WorkSpaces capabilities to these AWS Regions for the first time. WorkSpaces Core Managed Instances in these Regions is supported by partners including Citrix, Workspot, Leostream, and Dizzion.\n  Amazon WorkSpaces Core Managed Instances simplifies virtual desktop infrastructure (VDI) migrations with highly customizable instance configurations. WorkSpaces Core Managed Instances provisions resources in your AWS account, handling infrastructure lifecycle management for both persistent and non-persistent workloads. Managed Instances provide flexibility for organizations requiring specific compute, memory, or graphics configurations.\n  With WorkSpaces Core Managed Instances, you can use existing discounts, Savings Plans, and other features like On-Demand Capacity Reservations (ODCRs), with the operational simplicity of WorkSpaces - all within the security and governance boundaries of your AWS account. This solution is ideal for organizations migrating from on-premises VDI environments or existing AWS customers seeking enhanced cost optimization without sacrificing control over their infrastructure configurations. You can use a broad selection of instance types, including accelerated graphics instances, while your Core partner solution handles desktop and application provisioning and session management through familiar administrative tools.\n  Customers will incur standard compute costs along with an hourly fee for WorkSpaces Core. See the WorkSpaces Core pricing page for more information.\n  To learn more about Amazon WorkSpaces Core Managed Instances, visit the product page. For technical documentation and getting started guides, see the Amazon WorkSpaces Core Documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-workspaces-core-managed-instances-additional-regions",
-      "pubDate": "2025-10-15T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5bc447bea6ce",
-      "title": "Amazon Bedrock simplifies access with automatic enablement of serverless foundation models",
-      "description": "Amazon Bedrock now provides immediate access to all serverless foundation models by default for users in all commercial AWS regions. This update eliminates the need for manually activating model access, allowing you to instantly start using these models through the Amazon Bedrock console playground, AWS SDK, and Amazon Bedrock features including Agents, Flows, Guardrails, Knowledge Bases, Prompt Management, and Evaluations.\n  While you can quickly begin using serverless foundation models from most providers, Anthropic models, although enabled by default, still require you to submit a one-time usage form before first use. You can complete this form either through the API or through the Amazon Bedrock console by selecting an Anthropic model from the playground. When completed through the AWS organization management account, the form submission automatically enables Anthropic models across all member accounts in the organization.\n  This simplified access is available across all commercial AWS regions where Amazon Bedrock is supported. Account administrators retain full control over model access through IAM policies and Service Control Policies (SCPs) to restrict access as needed. For implementation guidance and examples on access controls, please refer to our blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-bedrock-automatic-enablement-serverless-foundation-models",
-      "pubDate": "2025-10-15T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "iam"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "iam",
-        "ga",
-        "update",
         "support"
       ]
     },
@@ -3084,24 +3145,6 @@
         "general"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-6dfa064973ba",
-      "title": "How Laravel Nightwatch handles billions of observability events in real time with Amazon MSK and ClickHouse Cloud",
-      "description": "Laravel, one of the world’s most popular web frameworks, launched its first-party observability platform, Laravel Nightwatch, to provide developers with real-time insights into application performance. Built entirely on AWS managed services and ClickHouse Cloud, the service already processes over one billion events per day while maintaining sub-second query latency, giving developers instant visibility into the health of their applications.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-laravel-nightwatch-handles-billions-of-observability-events-in-real-time-with-amazon-msk-and-clickhouse-cloud/",
-      "pubDate": "2025-10-01T16:59:49.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "msk",
-        "launch"
-      ]
     },
     {
       "id": "aws-news-1d55d1ad4c56",
