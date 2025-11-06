@@ -1,8 +1,50 @@
 {
-  "lastUpdated": "2025-11-05T06:15:36.972Z",
+  "lastUpdated": "2025-11-06T06:15:48.410Z",
   "category": "ai-safety",
-  "totalItems": 23,
+  "totalItems": 24,
   "items": [
+    {
+      "id": "aws-news-f4f5a50faf93",
+      "title": "Amazon FSx now integrates with AWS Secrets Manager for enhanced management of Active Directory credentials",
+      "description": "Amazon FSx now integrates with AWS Secrets Manager, enabling enhanced protection and management of the Active Directory domain service account credentials for your FSx for Windows File Server file systems and FSx for NetApp ONTAP Storage Virtual Machines (SVMs).\n  Previously, if you wanted to join your FSx for Windows file system or FSx for ONTAP SVM to your Active Directory domain for user authentication and access control, you needed to specify the username and password for your service account in the Amazon FSx Console, Amazon FSx API, AWS CLI, or AWS CloudFormation. With this launch, you can now specify an AWS Secrets Manager secret containing the service account credentials, enabling you to strengthen your security posture by eliminating the need to store plain text credentials in application code or configuration files, and aligning with best practices for credential management. Additionally, you can use AWS Secrets Manager to rotate your Active Directory credentials and consume them when needed in FSx workloads.\n  You can now use AWS Secrets Manager to store your domain join service credentials for all FSx for Windows file systems and FSx for ONTAP Storage Virtual Machines in all AWS Regions where they are available. For more information, see Amazon FSx for Windows File Server documentation and Amazon FSx for NetApp ONTAP documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-fsx-integrate-with-aws-secrets-manager/",
+      "pubDate": "2025-11-05T19:56:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "secrets manager"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "cloudformation",
+        "secrets manager",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-b272cf53e9f6",
+      "title": "Amazon Keyspaces (for Apache Cassandra) extends Multi-Region Replication to Bahrain and Hong Kong Region",
+      "description": "Amazon Keyspaces (for Apache Cassandra) now supports Multi-Region Replication in the Middle East (Bahrain) and Asia Pacific (Hong Kong) Regions. With this expansion, customers can now replicate their Amazon Keyspaces tables to and from these Regions, enabling lower latency access to data and improved regional resiliency.\n  Amazon Keyspaces Multi-Region Replication automatically replicates data across AWS Regions with typically less than a second of replication lag, allowing applications to read and write data to the same table in multiple Regions. This capability helps customers build globally distributed applications that can serve users with low latency regardless of their location, while also providing business continuity in the event of a regional disruption.\n  The addition of Multi-Region Replication support in Middle East (Bahrain) and Asia Pacific (Hong Kong) enables organizations operating in these regions to build highly available applications that can maintain consistent performance for users across the Middle East and Asia Pacific. Customers can now replicate their Keyspaces tables between these regions and any other supported AWS Region without managing complex replication infrastructure.\n  You pay only for the resources you use, including data storage, read/write capacity, and writes in each Region of your multi-Region keyspace. To learn more about Amazon Keyspaces Multi-Region Replication and its regional availability, visit the Amazon Keyspaces documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-keyspaces-apache-cassandra-multi-region-replication-bahrain-hong-kong-region",
+      "pubDate": "2025-11-05T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "organizations",
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-cbb99686390b",
       "title": "Enhanced search with match highlights and explanations in Amazon SageMaker",
@@ -23,9 +65,9 @@
       ]
     },
     {
-      "id": "aws-news-824cf909a039",
-      "title": "AWS Config now supports 52 new resource types",
-      "description": "AWS Config now supports 52 additional AWS resource types across key services including Amazon EC2, Amazon Bedrock, and Amazon SageMaker. This expansion provides greater coverage over your AWS environment, enabling you to more effectively discover, assess, audit, and remediate an even broader range of resources.\n  With this launch, if you have enabled recording for all resource types, then AWS Config will automatically track these new additions. The newly supported resource types are also available in Config rules and Config aggregators.\n  You can now use AWS Config to monitor the following newly supported resource types in all AWS Regions where the supported resources are available:\n  \n \n \n  \nResource Types \n     \n  \nAWS::ApiGateway::DomainName \n   AWS::IAM::GroupPolicy \n  \nAWS::ApiGateway::Method \n   AWS::IAM::RolePolicy \n  \nAWS::ApiGateway::UsagePlan \n   AWS::IAM::UserPolicy \n  \nAWS::AppConfig::Extension \n   AWS::IoTCoreDeviceAdvisor::SuiteDefinition \n  \nAWS::Bedrock::ApplicationInferenceProfile \n   AWS::MediaPackageV2::Channel \n  \nAWS::Bedrock::Prompt \n   AWS::MediaPackageV2::ChannelGroup \n  \nAWS::BedrockAgentCore::BrowserCustom \n   AWS::MediaTailor::LiveSource \n  \nAWS::BedrockAgentCore::CodeInterpreterCustom         \n   AWS::MSK::ServerlessCluster \n  \nAWS::BedrockAgentCore::Runtime \n   AWS::PaymentCryptography::Alias \n  \nAWS::CloudFormation::LambdaHook \n   AWS::PaymentCryptography::Key \n  \nAWS::CloudFormation::StackSet \n   AWS::RolesAnywhere::CRL \n  \nAWS::Comprehend::Flywheel \n   AWS::RolesAnywhere::Profile \n  \nAWS::Config::AggregationAuthorization \n   AWS::S3::AccessGrant \n  \nAWS::DataSync::Agent \n   AWS::S3::AccessGrantsInstance \n  \nAWS::Deadline::Fleet \n   AWS::S3::AccessGrantsLocation \n  \nAWS::Deadline::QueueFleetAssociation \n   AWS::SageMaker::DataQualityJobDefinition \n  \nAWS::EC2::IPAMPoolCidr \n   AWS::SageMaker::MlflowTrackingServer \n  \nAWS::EC2::SubnetNetworkAclAssociation \n   AWS::SageMaker::ModelBiasJobDefinition \n  \nAWS::EC2::VPCGatewayAttachment \n   AWS::SageMaker::ModelExplainabilityJobDefinition \n  \nAWS::ECR::RepositoryCreationTemplate \n   AWS::SageMaker::ModelQualityJobDefinition \n  \nAWS::ElasticLoadBalancingV2::TargetGroup \n   AWS::SageMaker::MonitoringSchedule \n  \nAWS::EMR::Studio \n   AWS::SageMaker::StudioLifecycleConfig \n  \nAWS::EMRContainers::VirtualCluster \n   AWS::SecretsManager::RotationSchedule \n  \nAWS::EMRServerless::Application \n   AWS::SES::DedicatedIpPool \n  \nAWS::EntityResolution::MatchingWorkflow \n   AWS::SES::MailManagerTrafficPolicy \n  \nAWS::Glue::Registry \n   AWS::SSM::ResourceDataSync \n  \n \nTo view the complete list of AWS Config supported resource types, see the supported resource types page.",
+      "id": "aws-news-d0d831929a00",
+      "title": "AWS Config now supports 49 new resource types",
+      "description": "AWS Config now supports 49 additional AWS resource types across key services including Amazon EC2, Amazon Bedrock, and Amazon SageMaker. This expansion provides greater coverage over your AWS environment, enabling you to more effectively discover, assess, audit, and remediate an even broader range of resources.\n  With this launch, if you have enabled recording for all resource types, then AWS Config will automatically track these new additions. The newly supported resource types are also available in Config rules and Config aggregators.\n  You can now use AWS Config to monitor the following newly supported resource types in all AWS Regions where the supported resources are available:\n \n \n \n  \nResource Types \n     \n  \nAWS::ApiGateway::DomainName \n   AWS::Glue::Registry \n  \nAWS::ApiGateway::Method \n   AWS::IoTCoreDeviceAdvisor::SuiteDefinition \n  \nAWS::ApiGateway::UsagePlan \n   AWS::MediaPackageV2::Channel \n  \nAWS::AppConfig::Extension \n   AWS::MediaPackageV2::ChannelGroup \n  \nAWS::Bedrock::ApplicationInferenceProfile \n   AWS::MediaTailor::LiveSource \n  \nAWS::Bedrock::Prompt \n   AWS::MSK::ServerlessCluster \n  \nAWS::BedrockAgentCore::BrowserCustom \n   AWS::PaymentCryptography::Alias \n  \nAWS::BedrockAgentCore::CodeInterpreterCustom \n   AWS::PaymentCryptography::Key \n  \nAWS::BedrockAgentCore::Runtime \n   AWS::RolesAnywhere::CRL \n  \nAWS::CloudFormation::LambdaHook \n   AWS::RolesAnywhere::Profile \n  \nAWS::CloudFormation::StackSet \n   AWS::S3::AccessGrant \n  \nAWS::Comprehend::Flywheel \n   AWS::S3::AccessGrantsInstance \n  \nAWS::Config::AggregationAuthorization \n   AWS::S3::AccessGrantsLocation \n  \nAWS::DataSync::Agent \n   AWS::SageMaker::DataQualityJobDefinition \n  \nAWS::Deadline::Fleet \n   AWS::SageMaker::MlflowTrackingServer \n  \nAWS::Deadline::QueueFleetAssociation \n   AWS::SageMaker::ModelBiasJobDefinition \n  \nAWS::EC2::IPAMPoolCidr \n   AWS::SageMaker::ModelExplainabilityJobDefinition \n  \nAWS::EC2::SubnetNetworkAclAssociation \n   AWS::SageMaker::ModelQualityJobDefinition \n  \nAWS::EC2::VPCGatewayAttachment \n   AWS::SageMaker::MonitoringSchedule \n  \nAWS::ECR::RepositoryCreationTemplate \n   AWS::SageMaker::StudioLifecycleConfig \n  \nAWS::ElasticLoadBalancingV2::TargetGroup \n   AWS::SecretsManager::RotationSchedule \n  \nAWS::EMR::Studio \n   AWS::SES::DedicatedIpPool \n  \nAWS::EMRContainers::VirtualCluster \n   AWS::SES::MailManagerTrafficPolicy \n  \nAWS::EMRServerless::Application \n   AWS::SSM::ResourceDataSync \n  \nAWS::EntityResolution::MatchingWorkflow \n  \n \nTo view the complete list of AWS Config supported resource types, see the supported resource types page.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-config-new-resource-types",
       "pubDate": "2025-11-03T16:00:00.000Z",
       "source": "whatsNew",
@@ -40,7 +82,6 @@
         "ec2",
         "emr",
         "cloudformation",
-        "iam",
         "msk",
         "glue"
       ],
@@ -58,7 +99,6 @@
         "ec2",
         "emr",
         "cloudformation",
-        "iam",
         "msk",
         "glue",
         "launch",
@@ -401,25 +441,6 @@
         "now-available",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-1da2b8897a46",
-      "title": "AWS’ Customer Carbon Footprint Tool now includes Scope 3 emissions data",
-      "description": "Today, AWS’ Customer Carbon Footprint Tool (CCFT) has been updated to include Scope 3 emissions data and Scope 1 natural gas and refrigerants, providing AWS customers more complete visibility into their cloud carbon footprint. This update expands the CCFT to cover all three industry-standard emission scopes as defined by the Greenhouse Gas Protocol.\n \nThe CCFT Scope 3 update gives AWS customers full visibility into the lifecycle carbon impact of their AWS usage, including emissions from manufacturing the servers that run their workloads, powering AWS facilities, and transporting equipment to data centers. Historical data is available back to January 2022, allowing organizations to track their progress over time and make informed decisions about their cloud strategy to meet their sustainability goals. This data is available through the CCFT dashboard and AWS Billing and Cost Management Data Exports, enabling customers to easily incorporate carbon insights into their operational workflows, sustainability planning, and reporting processes.\n \nTo learn more about the enhanced Customer Carbon Footprint Tool, visit the CCFT Website, AWS Billing and Cost Management console or read the updated methodology documentation and release notes.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-customer-carbon-footprint-tool-scope-3-emissions-data",
-      "pubDate": "2025-10-22T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "update"
       ]
     },
     {
