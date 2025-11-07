@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2025-11-06T06:15:48.410Z",
-  "totalItems": 195,
+  "lastUpdated": "2025-11-07T06:15:44.330Z",
+  "totalItems": 193,
   "sources": {
-    "whatsNew": 94,
+    "whatsNew": 92,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 19,
@@ -11,6 +11,309 @@
     "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-407d35037c42",
+      "title": "Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments",
+      "description": "AWS Capabilities by Region is a new planning tool that provides detailed visibility into AWS services, features, APIs, and CloudFormation resources across different AWS Regions, helping customers make informed decisions for global deployments and prevent costly rework through side-by-side regional comparisons and forward-looking roadmap information.",
+      "link": "https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/",
+      "pubDate": "2025-11-06T21:30:58.000Z",
+      "source": "newsBlog",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "cloudformation",
+        "roadmap"
+      ]
+    },
+    {
+      "id": "aws-news-9a9fb9e205f6",
+      "title": "Amazon SageMaker launches custom tags for project resources",
+      "description": "Today, Amazon SageMaker Unified Studio announced new capabilities allowing SageMaker projects to add custom tags to resources created through the project. This helps customers enforce tagging standards that conform to Service Control Policies (SCP) and helps enable cost tracking reporting practices on resources created across the organization.\n  As an Amazon SageMaker Unified Studio administrator, you can configure a project profile with tag configurations that will be pushed down to all projects using the project profile. Project profiles can be setup to pass Key and Value tag pairings or pass the Key of the tag with a default Value that can be modified during project creation. All tag values passed to the project will result in the resources created by that project being tagged. This provides administrators a governance mechanism that enforces project resources have the expected tags.\n  This first release of custom tags for project resources is supported only through application programming interface (API).\n  Custom tags for project resources capability is available in all AWS Regions where Amazon SageMaker Unified Studio is supported, including: Asia Pacific (Tokyo), Europe (Ireland), US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), South America (São Paulo), Asia Pacific (Seoul), Europe (London), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central), Asia Pacific (Mumbai), Europe (Paris), Europe (Stockholm)\n  To learn more, visit Amazon SageMaker then get started with the custom tag API documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-custom-tags-project-resources",
+      "pubDate": "2025-11-06T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "rds",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bde0cc69d3f1",
+      "title": "Transform your MCP architecture: Unite MCP servers through AgentCore Gateway",
+      "description": "Earlier this year, we introduced Amazon Bedrock AgentCore Gateway, a fully managed service that serves as a centralized MCP tool server, providing a unified interface where agents can discover, access, and invoke tools. Today, we're extending support for existing MCP servers as a new target type in AgentCore Gateway. With this capability, you can group multiple task-specific MCP servers aligned to agent goals behind a single, manageable MCP gateway interface. This reduces the operational complexity of maintaining separate gateways, while providing the same centralized tool and authentication management that existed for REST APIs and AWS Lambda functions.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/transform-your-mcp-architecture-unite-mcp-servers-through-agentcore-gateway/",
+      "pubDate": "2025-11-06T17:43:23.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "lambda"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "lambda",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f2e6a41b8c65",
+      "title": "AWS B2B Data Interchange is now available in AWS Europe (Ireland) Region",
+      "description": "Customers in AWS Europe (Ireland) Region can now use AWS B2B Data Interchange to build highly customizable, scalable and cost-efficient EDI workloads.\n  AWS B2B Data Interchange automates validation, transformation, and generation of EDI files such as ANSI X12 documents to and from JSON and XML data formats. With this launch, you can use AWS B2B Data Interchange to process your EDI documents in AWS Europe (Ireland) Region, which enables you to meet your compliance and data sovereignty obligations while modernizing your B2B integration workloads. As part of this launch, the AWS B2B Data Interchange generative AI mapping capability will also become available in AWS Europe (Ireland) Region, simplifying mapping code development and ultimately expediting trading partners onboarding.\n  To learn more about AWS B2B Data Interchange visit our product page, user-guide or take our self-paced workshop. See the AWS Region Table for complete regional availability.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-b2b-data-interchange-europe-ireland-region",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "now-available",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-f96966b5c806",
+      "title": "Amazon ECS announces non-root container support for managed EBS volumes",
+      "description": "Amazon Elastic Container Service (ECS) now supports mounting Amazon Elastic Block Store (EBS) volumes to containers running as non-root users. With this launch, ECS automatically configures the EBS volume’s file system permissions to allow non-root users to read and write data securely, while preserving the root-level ownership of the volume. This enhancement simplifies security-first container deployments by removing the need for manual permission management or custom entrypoint scripts.\n \nThis feature enhances container security by allowing tasks to run as non-root users, reducing the risk of privilege escalation and unauthorized access to data. Previously, for a container in a task to write to a mounted Amazon EBS volume, it had to run as the root user. ECS now automatically manages EBS volume permissions, simplifying workflows and ensuring that all containers within a task — regardless of user ID — can securely read and write to the mounted volume.\n \nThis feature is now available in all AWS Regions where Amazon ECS and Amazon EBS are supported, for EC2, AWS Fargate, and ECS Managed Instances launch types. To learn more, see Use Amazon EBS volumes with Amazon ECS in the Amazon ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecs-non-root-container-managed-ebs-volumes",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs",
+        "fargate"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "fargate",
+        "launch",
+        "ga",
+        "now-available",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cc09bbb745b2",
+      "title": "Amazon DynamoDB Streams expands AWS PrivateLink support to FIPS endpoints",
+      "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for all available Amazon DynamoDB Streams Federal Information Processing Standard (FIPS) endpoints in US and Canada commercial AWS Regions.\n  With this launch, you can establish a private connection between your virtual private cloud (VPC) and Amazon DynamoDB Streams FIPS endpoints instead of connecting over the public internet, helping you meet your organization's business, compliance, and regulatory requirements to limit public internet connectivity.\n  Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints is available with Amazon DynamoDB Streams in the US and Canada commercial AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n  To learn more about Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints, visit the Amazon DynamoDB Stream documentation. For more information about AWS PrivateLink and its benefits, visit the AWS PrivateLink product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-dynamodb-streams-aws-privatelink-fips-endpoints",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3a35bb9ae330",
+      "title": "Amazon Keyspaces (for Apache Cassandra) is now available in the Middle East (UAE) Region",
+      "description": "Amazon Keyspaces (for Apache Cassandra) is now available in the Middle East (UAE) Region, allowing customers in the Middle East to build Cassandra-compatible applications with lower latency while keeping their data within the Region to meet data residency requirements.\n  Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. Amazon Keyspaces is serverless, so you pay for only the resources that you use and you can build applications that serve thousands of requests per second with virtually unlimited throughput and storage.\n  The Middle East (UAE) Region provides the same Amazon Keyspaces features available in other AWS Regions, including point-in-time recovery, Multi-Region replication, CDC streams, and IPv6 support. This regional expansion enables organizations in the Middle East to build highly scalable, low-latency applications using familiar Cassandra Query Language (CQL) without the operational burden of managing Cassandra clusters.\n  To learn more about on Keyspaces, visit the Amazon Keyspaces documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-keyspaces-apache-cassandra-middle-east-uae/",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "now-available",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-add8affd2236",
+      "title": "AWS announces a new Regional planning tool in Builder Center",
+      "description": "Today, AWS announced a new tool called AWS Capabilities by Region in Builder Center. This tool helps you discover and compare AWS services, features, APIs, CloudFormation resources across AWS Regions. You can explore service availability through an interactive interface, compare multiple Regions side-by-side, and view forward-looking roadmap information. This detailed visibility helps you make informed decisions about global deployments and prevent project delays due to service unavailability.\n  In addition to this tool, AWS also enhanced the AWS Knowledge Model Context Protocol (MCP) Server to include information about Regional capabilities in an LLM-compatible format. MCP clients and agentic frameworks can connect to the AWS Knowledge MCP Server to get real-time insights into regional service availability and suggestions for alternative solutions when specific services or features are unavailable.\n  You can begin exploring AWS Capabilities by Region in AWS Builder Center today. The Knowledge MCP server is also publicly accessible at no cost and does not require an AWS account. Usage is subject to rate limits. Follow the getting started guide for setup instructions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-regional-planning-tool-builder-center",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "new-region",
+        "roadmap"
+      ]
+    },
+    {
+      "id": "aws-news-71ab50641fc3",
+      "title": "AWS Backup now supports AWS KMS customer managed keys with logically air-gapped vaults",
+      "description": "AWS Backup now supports encrypting backups in logically air-gapped vaults with AWS Key Management Service (KMS) customer managed keys (CMKs). This enhancement provides additional encryption options beyond the existing AWS-owned keys, helping organizations meet their regulatory and compliance requirements.\n  You can now create logically air-gapped vaults using your own customer managed keys (CMKs) in AWS KMS, giving you more control over your backup protection strategy. Whether you want to use keys from the same account or across accounts, you maintain centralized key management while preserving the security benefits of logically air-gapped vaults. This integration works seamlessly with your existing logically air-gapped vaults and other AWS Backup features, ensuring no disruption to your backup workflows.\n  AWS KMS customer managed key support with logically air-gapped vaults is available in all AWS Regions where logically air-gapped vaults are currently supported.\n  You can get started with logically air-gapped vault support for CMKs using the AWS Backup console, API, or CLI. When creating a new logically air-gapped vault, you can now choose between an AWS-owned key or your own CMK for encryption. For more information about implementing this feature, visit the AWS Backup product page, documentation, and blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-backup-kms-customer-managed-keys",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4cdb33674ab0",
+      "title": "Amazon Elastic VMware Service (Amazon EVS) is now available in additional Regions",
+      "description": "Today, we're announcing that Amazon Elastic VMware Service (Amazon EVS) is now available in all availability zones in the Asia Pacific (Mumbai), Asia Pacific (Sydney), Canada (Central) and Europe (Paris) Regions. This expansion provides more options to leverage the scale and flexibility of AWS for running your VMware workloads in the cloud.\n  Amazon EVS lets you run VMware Cloud Foundation (VCF) directly within your Amazon Virtual Private Cloud (VPC) on EC2 bare-metal instances, powered by AWS Nitro. Using either our step-by-step configuration workflow or the AWS Command Line Interface (CLI) with automated deployment capabilities, you can set up a complete VCF environment in just a few hours. This rapid deployment enables faster workload migration to AWS, helping you eliminate aging infrastructure, reduce operational risks, and meet critical timelines for exiting your data center.\n  The added availability in the Asia Pacific (Mumbai), Asia Pacific (Sydney), Canada (Central) and Europe (Paris) Regions gives your VMware workloads lower latency through closer proximity to your end users, compliance with data residency or sovereignty requirements, and additional high availability and resiliency options for your enhanced redundancy strategy.\n  To get started, visit the Amazon EVS product detail page and user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-evs-additional-regions",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "now-available",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-c2cb92ded76a",
+      "title": "AWS IoT Greengrass v2.16 introduces system log forwarder and TPM2.0 capabilities",
+      "description": "AWS announces the release of AWS IoT Greengrass v2.16, introducing new core components for nucleus and nucleus lite. AWS IoT Greengrass is an Internet of Things (IoT) edge runtime and cloud service that helps customers build, deploy, and manage device software at the edge. The latest version 2.16 release includes enhanced debugging capabilities through the system log forwarder component. This component uploads system log files to AWS Cloud Watch, making it easier for developers to troubleshoot IoT edge applications.\n  The AWS IoT Greengrass v2.16 release also features a new nucleus lite version (v2.3) with TPM2.0 specification support, enabling developers to manage edge device security for their resource constrained devices using hardware-based root of trust modules. The implementation helps developers to scale their IoT deployments with confidence while providing secure storage for secrets and streamlined device authentication.\n  AWS IoT Greengrass v2.16 is available in all AWS Regions where AWS IoT Greengrass is offered. To learn more about AWS IoT Greengrass v2.16 and its new features, visit the AWS IoT Greengrass documentation. Follow the Getting Started guide for a quick introduction to AWS IoT Greengrass.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-iot-greengrass-v2-16-system-log-forwarder-tpm-2-0-capabilities",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-abce991b3348",
+      "title": "Amazon CloudWatch Application Signals now available in AWS GovCloud (US) Regions",
+      "description": "Amazon CloudWatch Application Signals expands its availability to AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions, enabling government customers and regulated industries to automatically monitor and improve application performance in these regions. CloudWatch Application Signals provides comprehensive application monitoring capabilities by automatically collecting telemetry data from applications running on Amazon EC2, Amazon ECS, Amazon EKS and AWS Lambda, helping customers meet their compliance and monitoring requirements while maintaining workload visibility.\n  With CloudWatch Application Signals, customers in AWS GovCloud (US) regions can now monitor application health in real time, track performance against business goals, visualize service relationships and dependencies, and quickly identify and resolve performance issues. This automated observability solution eliminates the need for manual instrumentation while providing detailed insights into application behavior and performance patterns. The service automatically detects anomalies and helps correlate issues across different AWS services, enabling faster problem resolution and improved application reliability.\n  CloudWatch Application Signals will be available in AWS GovCloud (US-East) and AWS GovCloud (US-West). For pricing information, visit the Amazon CloudWatch pricing page. To get started, visit the Amazon CloudWatch Application Signals documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-application-signals-aws-govcloud-regions",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-39834281ba54",
+      "title": "Amazon S3 now supports tags on S3 Tables",
+      "description": "Amazon S3 now supports tags on S3 Tables for attribute-based access control (ABAC) and cost allocation. You can use tags for ABAC to automatically manage permissions for users and roles accessing table buckets and tables. This helps eliminate frequent AWS Identity and Access Management (IAM) or S3 Tables resource-based policy updates, simplifying how you govern access at scale. Additionally, you can add tags to individual tables to track and organize AWS costs using AWS Billing and Cost Management.\n  Amazon S3 supports tags on S3 Tables in all AWS Regions where S3 Tables is available. You can get started with tagging using the AWS Management Console, SDK, API, or CLI. To learn more about using tags on S3 Tables, visit the S3 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-s3-tags-s3-tables/",
+      "pubDate": "2025-11-06T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "iam",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-76fef5ab83cb",
+      "title": "Amazon CloudFront announces cross-account support for VPC origins",
+      "description": "Amazon CloudFront announces cross-account support for Virtual Private Cloud (VPC) origins, enabling customers to access VPC origins that reside in different AWS accounts from their CloudFront distributions. With VPC origins, customers can have their Application Load Balancers (ALB), Network Load Balancers (NLB), and EC2 Instances in a private subnet that is accessible only through their CloudFront distributions. With the support for cross-account VPC origins in CloudFront, customers can now leverage the security benefits of VPC origins while maintaining their existing multi-account architecture.\n  Customers set up multiple AWS accounts for better security isolation, cost management, and compliance. Previously, customers could access origins in private VPCs from CloudFront only if CloudFront and the origin were in the same AWS account. This meant customers who had their origins in multiple AWS accounts, had to keep their accounts in public subnets to get the scale and performance benefits of CloudFront. Customers then had to maintain additional security controls, such as access control lists (ACL), at both the edge and within regions, rather than benefiting from the inherent security of VPC origins. Now, customers can use AWS Resource Access Manager (RAM) to allow CloudFront access to origins in private VPCs in different AWS accounts, both within and outside their AWS Organizations and organizational units (OUs). This streamlines security management and reduces operational complexity, making it easy to use CloudFront as the single front door for applications.\n  VPC origins is available in AWS Commercial Regions only, and the full list of supported AWS Regions is available here. There is no additional cost for using cross-account VPC origins with CloudFront. To learn more about implementing cross-account VPC origins and best practices for multi-account architectures, visit CloudFront VPC origins.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-cross-account-vpc-origins/",
+      "pubDate": "2025-11-06T06:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "cloudfront",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "cloudfront",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-2bb659aa2d5a",
       "title": "Amazon CloudWatch Database Insights expands anomaly detection in on-demand analysis",
@@ -71,25 +374,6 @@
       ]
     },
     {
-      "id": "aws-news-c2625fede77e",
-      "title": "Announcing New EC2 R8a Memory-Optimized Instances",
-      "description": "AWS is announcing the general availability of new memory-optimized Amazon EC2 R8a instances. R8a instances, feature 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to R7a instances.\n  R8a instances deliver 45% more memory bandwidth compared to R7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 R7a instances, R8a instances provide up to 60% faster performance for GroovyJVM, allowing higher request throughput and better response times for business-critical applications.\n  Built on the AWS Nitro System using sixth generation Nitro Cards, R8a instances are ideal for high performance, memory-intensive workloads, such as SQL and NoSQL databases, distributed web scale in-memory caches, in-memory databases, real-time big data analytics, and Electronic Design Automation (EDA) applications. R8a instances offer 12 sizes including 2 bare metal sizes. Amazon EC2 R8a instances are SAP-certified, and providing 38% more SAPS compared to R7a instances.\n  R8a instances are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), and US West (Oregon) regions. To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 R8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/memory-optimized-amazon-ec2-r8a-instances/",
-      "pubDate": "2025-11-05T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds"
-      ]
-    },
-    {
       "id": "aws-news-24d72cc2b46f",
       "title": "Amazon GameLift Streams adds AWS Health notifications for aging resources",
       "description": "Amazon GameLift Streams is now integrated with AWS Health and will provide automated notifications about aging stream groups. Customers are sent regular reminders via AWS Health to re-create their stream groups starting as early as the 45th day to the 335th day from the stream group creation date. Stream groups older than 180 days are restricted from adding new applications and automatically expire after the 365th day.\n  This feature strengthens our customer’s security posture by helping customers manage the lifecycle of stream groups and prevent the use of outdated resources that might be missing updates. While the customer focuses on their game development, the service helps maintain the health of their resources.\n  AWS Health will send a reminder to the linked account on the 45th day and on the 150th day from the stream group creation day, informing customers that the stream group will be restricted from adding new applications after the 180-day. A last reminder to re-create the stream group will be sent on 335th day informing customers that the stream group will expire on the 365th day.\n  This feature is available in all AWS Regions where Amazon GameLift Streams is offered at no additional cost.\n  Maintenance warnings or the expiration date of a stream group can be viewed on the Stream group details page on the service console, or by using the ExpiresAt field in the GetStreamGroup API response.\n  To learn more about managing your stream groups and configuring notifications, visit the Amazon GameLift documentation on Stream group lifecycle.",
@@ -125,6 +409,25 @@
         "ga",
         "support",
         "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-c2625fede77e",
+      "title": "Announcing New EC2 R8a Memory-Optimized Instances",
+      "description": "AWS is announcing the general availability of new memory-optimized Amazon EC2 R8a instances. R8a instances, feature 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to R7a instances.\n  R8a instances deliver 45% more memory bandwidth compared to R7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 R7a instances, R8a instances provide up to 60% faster performance for GroovyJVM, allowing higher request throughput and better response times for business-critical applications.\n  Built on the AWS Nitro System using sixth generation Nitro Cards, R8a instances are ideal for high performance, memory-intensive workloads, such as SQL and NoSQL databases, distributed web scale in-memory caches, in-memory databases, real-time big data analytics, and Electronic Design Automation (EDA) applications. R8a instances offer 12 sizes including 2 bare metal sizes. Amazon EC2 R8a instances are SAP-certified, and providing 38% more SAPS compared to R7a instances.\n  R8a instances are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), and US West (Oregon) regions. To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 R8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/memory-optimized-amazon-ec2-r8a-instances/",
+      "pubDate": "2025-11-05T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds"
       ]
     },
     {
@@ -316,6 +619,22 @@
       ]
     },
     {
+      "id": "aws-news-02301519ef95",
+      "title": "AWS Cloud WAN is now available in three more AWS Regions",
+      "description": "Starting today, AWS Cloud WAN is available in the AWS Asia Pacific (Thailand), AWS Asia Pacific (Taipei) and AWS Asia Pacific (New Zealand) Regions.\n  With AWS Cloud WAN, you can use a central dashboard and network policies to create a global network that spans multiple locations and networks, removing the need to configure and manage different networks using different technologies. You can use network policies to specify the Amazon Virtual Private Clouds, AWS Transit Gateways, and on-premises locations you want to connect to using an AWS Site-to-Site VPN, AWS Direct Connect, or third-party software-defined WAN (SD-WAN) products. The AWS Cloud WAN central dashboard generates a comprehensive view of the network to help you monitor network health, security, and performance. In addition, AWS Cloud WAN automatically creates a global network across AWS Regions by using Border Gateway Protocol (BGP) so that you can easily exchange routes worldwide.\n  To learn more, please visit the AWS Cloud WAN product detail page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-cloud-wan-thailand-taipei-new-zealand/",
+      "pubDate": "2025-11-04T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "now-available"
+      ]
+    },
+    {
       "id": "aws-news-f8b80d2313fc",
       "title": "EC2 Auto Scaling announces warm pool support for Auto Scaling groups that have mixed instances policies",
       "description": "Starting today, you can add warm pools to Auto Scaling groups (ASGs) that have mixed instances policies. With warm pools, customers can improve the elasticity of their applications by creating a pool of pre-initialized EC2 instances that are ready to quickly serve application traffic. By combining warm pools with instance type flexibility, an ASG can rapidly scale out to its maximum size at any time, deploying applications across multiple instance types to enhance availability.\n  Warm pools are particularly beneficial for applications with lengthy initialization processes, such as writing large amounts of data to disk, running complex custom scripts, or other time-consuming setup procedures that can take several minutes or longer to serve traffic. With this new release, the warm pool feature now works seamlessly with ASGs configured for multiple On-Demand instance types, whether specified through manual instance type lists or attribute-based instance type selection. The combination of instance type flexibility and warm pools provides a powerful solution that helps customers scale out efficiently while maximizing availability.\n  The warm pool feature is available through the AWS Management Console, the AWS SDKs, and the AWS Command Line Interface (CLI). It is available in all public AWS Regions and AWS GovCloud (US) Regions. To learn more about warm pools, visit this AWS documentation.",
@@ -333,22 +652,6 @@
         "lex",
         "ec2",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-02301519ef95",
-      "title": "AWS Cloud WAN is now available in three more AWS Regions",
-      "description": "Starting today, AWS Cloud WAN is available in the AWS Asia Pacific (Thailand), AWS Asia Pacific (Taipei) and AWS Asia Pacific (New Zealand) Regions.\n  With AWS Cloud WAN, you can use a central dashboard and network policies to create a global network that spans multiple locations and networks, removing the need to configure and manage different networks using different technologies. You can use network policies to specify the Amazon Virtual Private Clouds, AWS Transit Gateways, and on-premises locations you want to connect to using an AWS Site-to-Site VPN, AWS Direct Connect, or third-party software-defined WAN (SD-WAN) products. The AWS Cloud WAN central dashboard generates a comprehensive view of the network to help you monitor network health, security, and performance. In addition, AWS Cloud WAN automatically creates a global network across AWS Regions by using Border Gateway Protocol (BGP) so that you can easily exchange routes worldwide.\n  To learn more, please visit the AWS Cloud WAN product detail page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-cloud-wan-thailand-taipei-new-zealand/",
-      "pubDate": "2025-11-04T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available"
       ]
     },
     {
@@ -899,6 +1202,30 @@
       ]
     },
     {
+      "id": "aws-news-54f3dd3a8f30",
+      "title": "Amazon VPC IPAM automates prefix list updates",
+      "description": "Today, AWS announced the ability for Amazon VPC IP Address Manager (IPAM) to automate prefix lists updates with prefix list resolver (PLR). This feature allows network administrators to automatically update prefix lists based on their business logic in IPAM improving their operational posture and reducing overhead.\n  Using IPAM PLR, you can define business rules for synchronizing prefix lists with IP address ranges from various resources, such as VPCs, subnets and IPAM pools. These prefix lists can then be referenced in resources such as route tables and security groups across your AWS environment, based on your connectivity requirements. Previously, you had to manually update your prefix lists to add or remove IP address ranges based on changes to your AWS environment. This was operationally complex and error prone. IPAM PLR automates prefix list updates requiring no manual intervention, improving your operational posture.\n  This feature is now available in all AWS Regions where Amazon Sagemaker Unified Studio is supported, including AWS China Regions, and AWS GovCloud (US) Regions.\n  To learn more about this feature, view the AWS IPAM documentation. For details on pricing, refer to the IPAM tab on the Amazon VPC Pricing Page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-vpc-ipam-prefix-list-automation/",
+      "pubDate": "2025-10-31T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-3dc939af4c74",
       "title": "AWS Marketplace now offers pricing model flexibility and simplified deployment for AI agents and tools",
       "description": "AWS Marketplace now offers flexible pricing models, simplified authentication, and streamlined deployment for AI agents and tools. The new capabilities include contract-based and usage-based pricing for Amazon Bedrock AgentCore Runtime containers, and simplified OAuth credential management through Quick Launch for API-based AI agents and tools. Customers can also use supported remote MCP servers procured through AWS Marketplace as MCP targets on AgentCore Gateway, making it easier for them to connect to AI agents and tools from AWS Partners at scale. The improvements reduce deployment complexity while offering pricing models that better align with diverse customer needs.\n  For Partners, the new capabilities for AI agents and tools streamline management and provide additional pricing options through AWS Marketplace. Partners can now manage all their AI agents and tools listings from one page in the AWS Marketplace Management Portal, reducing the complexity of managing multiple listings across different interfaces. With usage-based and contract-based pricing options for AgentCore Runtime compatible products, Partners have more flexibility to implement pricing strategies that align with their business models and customers’ needs.\n  Customers can learn more in the buyer guide and start exploring AI agent solutions in AWS Marketplace on the solutions page. For partners interested in implementing the capabilities, visit the seller guide and complete the workshop.",
@@ -920,26 +1247,6 @@
         "launch",
         "ga",
         "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-54f3dd3a8f30",
-      "title": "Amazon VPC IPAM automates prefix list updates",
-      "description": "Today, AWS announced the ability for Amazon VPC IP Address Manager (IPAM) to automate prefix lists updates with prefix list resolver (PLR). This feature allows network administrators to automatically update prefix lists based on their business logic in IPAM improving their operational posture and reducing overhead.\n  Using IPAM PLR, you can define business rules for synchronizing prefix lists with IP address ranges from various resources, such as VPCs, subnets and IPAM pools. These prefix lists can then be referenced in resources such as route tables and security groups across your AWS environment, based on your connectivity requirements. Previously, you had to manually update your prefix lists to add or remove IP address ranges based on changes to your AWS environment. This was operationally complex and error prone. IPAM PLR automates prefix list updates requiring no manual intervention, improving your operational posture.\n  This feature is now available in all AWS Regions where Amazon VPC IPAM is supported, including AWS China Regions, and AWS GovCloud (US) Regions.\n  To learn more about this feature, view the AWS IPAM documentation. For details on pricing, refer to the IPAM tab on the Amazon VPC Pricing Page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-vpc-ipam-prefix-list-automation/",
-      "pubDate": "2025-10-31T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "now-available",
-        "update",
         "support"
       ]
     },
@@ -1229,35 +1536,6 @@
       ]
     },
     {
-      "id": "aws-news-d7fcb69efc2a",
-      "title": "AWS Serverless MCP Server now supports tools for AWS Lambda event source mappings (ESM)",
-      "description": "The AWS Serverless Model Context Protocol (MCP) Server now supports specialized tools for AWS Lambda event source mappings (ESM), helping developers configure and manage ESMs more efficiently. These new tools combine the power of AI assistance with Lambda ESM expertise to streamline how developers set up, optimize, and troubleshoot event-driven serverless applications built on Lambda.\n  We previously launched the open-source Serverless MCP Server to enhance how developers build modern applications with AI-powered contextual guidance for architecture decisions, infrastructure provisioning, deployment automation, and troubleshooting of serverless applications. Starting today, we’re expanding the MCP server’s capabilities with new ESM tools that empower AI assistants, like Amazon Q Developer and Kiro, with proven knowledge of ESM patterns and best practices. The new ESM tools translate high-level throughput, latency, and reliability requirements into specific ESM configurations, generate complete AWS Serverless Application Model (AWS SAM) templates with optimized settings, validate network topology for Amazon Virtual Private Cloud (VPC)-based event sources, and diagnose common ESM issues. Thus, these tools enhance the event-driven application development experience, guiding developers through the entire ESM lifecycle, from initial setup to optimization and troubleshooting. \n  The key new ESM tools being added to the Serverless MCP Server are: the ESM guidance tool for contextual guidance across all supported event sources, the ESM optimization tool for analyzing configuration tradeoffs, and the ESM Kafka troubleshooting tool for specialized diagnostics with Amazon Managed Streaming for Apache Kafka (Amazon MSK) and self-managed Apache Kafka clusters.\n  To learn more about the Serverless MCP Server and how it can transform your AI-assisted application development, visit the launch blog post and documentation. To download and try out the open-source MCP server with your AI-enabled IDE of choice, visit the GitHub repository.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-serverless-mcp-server-tools-lambda-esm",
-      "pubDate": "2025-10-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "q developer",
-        "translate",
-        "lambda",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "q developer",
-        "translate",
-        "lambda",
-        "kafka",
-        "msk",
-        "launch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-cb5205ff99f7",
       "title": "AWS Cloud Map supports cross-account workloads in AWS GovCloud (US) Regions",
       "description": "AWS Cloud Map now supports cross-account service discovery through integration with AWS Resource Access Manager (AWS RAM) in AWS GovCloud (US) Regions. This enhancement lets you seamlessly manage and discover cloud resources—such as Amazon ECS tasks, Amazon EC2 instances, and Amazon DynamoDB tables—across AWS accounts. By sharing your AWS Cloud Map namespace via AWS RAM, workloads in other accounts can discover and manage resources registered in that namespace. This enhancement simplifies resource sharing, reduces duplication, and promotes consistent service discovery across environments for organizations with multi-account architectures.\n  You can now share your AWS Cloud Map namespaces using AWS RAM with individual AWS accounts, specific Organizational Units (OUs), or your entire AWS Organization. To get started, create a resource share in AWS RAM, add the namespaces you want to share, and specify the principals (accounts, OUs, or the organization) that should have access. This enables platform engineers to maintain a centralized service registry—or a small set of registries—and share them across multiple accounts, simplifying service discovery. Application developers can then build services that rely on a consistent, shared registry without worrying about availability or synchronization across accounts. AWS Cloud Map's cross-account service discovery support improves operational efficiency and makes it easier to scale service discovery as your organization grows by reducing duplication and streamlining access to namespaces.\n  This feature is available now in the AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions via the AWS Management Console, API, SDK, CLI, and CloudFormation. To learn more, please refer to the AWS Cloud Map documentation.",
@@ -1283,6 +1561,35 @@
         "ga",
         "enhancement",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d7fcb69efc2a",
+      "title": "AWS Serverless MCP Server now supports tools for AWS Lambda event source mappings (ESM)",
+      "description": "The AWS Serverless Model Context Protocol (MCP) Server now supports specialized tools for AWS Lambda event source mappings (ESM), helping developers configure and manage ESMs more efficiently. These new tools combine the power of AI assistance with Lambda ESM expertise to streamline how developers set up, optimize, and troubleshoot event-driven serverless applications built on Lambda.\n  We previously launched the open-source Serverless MCP Server to enhance how developers build modern applications with AI-powered contextual guidance for architecture decisions, infrastructure provisioning, deployment automation, and troubleshooting of serverless applications. Starting today, we’re expanding the MCP server’s capabilities with new ESM tools that empower AI assistants, like Amazon Q Developer and Kiro, with proven knowledge of ESM patterns and best practices. The new ESM tools translate high-level throughput, latency, and reliability requirements into specific ESM configurations, generate complete AWS Serverless Application Model (AWS SAM) templates with optimized settings, validate network topology for Amazon Virtual Private Cloud (VPC)-based event sources, and diagnose common ESM issues. Thus, these tools enhance the event-driven application development experience, guiding developers through the entire ESM lifecycle, from initial setup to optimization and troubleshooting.\n  The key new ESM tools being added to the Serverless MCP Server are: the ESM guidance tool for contextual guidance across all supported event sources, the ESM optimization tool for analyzing configuration tradeoffs, and the ESM Kafka troubleshooting tool for specialized diagnostics with Amazon Managed Streaming for Apache Kafka (Amazon MSK) and self-managed Apache Kafka clusters.\n  To learn more about the Serverless MCP Server and how it can transform your AI-assisted application development, visit the launch blog post and documentation. To download and try out the open-source MCP server with your AI-enabled IDE of choice, visit the GitHub repository.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-serverless-mcp-server-tools-lambda-esm",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "q developer",
+        "translate",
+        "lambda",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "q developer",
+        "translate",
+        "lambda",
+        "kafka",
+        "msk",
+        "launch",
         "support"
       ]
     },
@@ -1326,66 +1633,6 @@
       ]
     },
     {
-      "id": "aws-news-1f40c93d2ce3",
-      "title": "Amazon ECS Service Connect enhances observability with Envoy Access Logs",
-      "description": "Amazon Elastic Container Service (Amazon ECS) Service Connect now supports Envoy access logs, providing deeper observability into request-level traffic patterns and service interactions. This new capability captures detailed per-request telemetry for end-to-end tracing, debugging, and compliance monitoring.\n  Amazon ECS Service Connect makes it simple to build secure, resilient service-to-service communication across clusters, VPCs, and AWS accounts. It integrates service discovery and service mesh capabilities by automatically injecting AWS-managed Envoy proxies as sidecars that handle traffic routing, load balancing, and inter-service connectivity. Envoy Access logs capture detailed traffic metadata enabling request-level visibility into service communication patterns. This enables you to perform network diagnostics, troubleshoot issues efficiently, and maintain audit trails for compliance requirements.\n  You can now configure access logs within ECS Service Connect by updating the ServiceConnectConfiguration to enable access logging. Query strings are redacted by default to protect sensitive data. Envoy access logs will output to the standard output (STDOUT) stream alongside application logs and flow through the existing ECS log pipeline without requiring additional infrastructure. This configuration supports all existing application protocols (HTTP, HTTP2, GRPC and TCP). This feature is available in all regions where Amazon ECS Service Connect is supported. To learn more, visit the Amazon ECS Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ecs-service-connect-envoy-access-logs",
-      "pubDate": "2025-10-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ecs",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-9221386adf3e",
-      "title": "Amazon Managed Service for Prometheus adds anomaly detection",
-      "description": "Amazon Managed Service for Prometheus, a fully managed Prometheus-compatible monitoring service now supports anomaly detection. Anomaly detection applies machine-learning algorithms to continuously analyze time series and surfaces anomalies with minimal user intervention. You can use anomaly detection to isolate and troubleshoot unexpected changes in your metric behavior.\n \nAmazon Managed Service for Prometheus Anomaly Detection currently supports Random Cut Forest (RCF), an unsupervised algorithm for detecting anomalous data points within a time series. Once you create and configure an anomaly detector in an Amazon Managed Service for Prometheus workspace, it will create four new time series to represent resulting anomalies and confidence values along with them. Based on the resulting time series, you can create dynamic alerting rules in the Amazon Managed Service for Prometheus Alert manager, to notify you when anomalies occur, and you can also visualize the resulting time series alongside the input time series either in self-managed Grafana or Amazon Managed Grafana dashboards.\n \nThis feature is now available in all AWS regions where Amazon Managed Service for Prometheus is generally available. To configure anomaly detection use the AWS CLI, SDK, or APIs. Check out the Amazon Managed Service for Prometheus user guide for detailed documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-managed-service-anomaly-detection/",
-      "pubDate": "2025-10-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "grafana",
-        "generally-available",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b346e7e645cb",
-      "title": "Announcing an AI agent context pack for AWS IoT Greengrass developers",
-      "description": "AWS announces the release of a new AI agent context package for accelerating edge device application development using AWS IoT Greengrass. AWS IoT Greengrass is an IoT edge runtime and cloud service that helps developers build, deploy, and manage device software at the edge. The context package includes ready-to-use instructions, examples, and templates - enabling developers to leverage generative AI tools and agents for faster software creation, testing and deployment.\n  Available as an open-source GitHub repository under the Creative Commons Attribution Share Alike 4.0 license, the AWS IoT Greengrass AI agent context package helps streamline development workflows. Developers can boost productivity by cloning the repository and integrating it with modern generative AI tools like Amazon Q to help accelerate cloud-connected edge application development while simplifying fleet-wide deployment and management.\n  This new capability is available in all AWS Regions where AWS IoT Greengrass is supported. To learn more about AWS IoT Greengrass and its new AI agent context pack, visit the AWS IoT Greengrass documentation. Follow the getting started guide for a quick introduction to AWS IoT Greengrass.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/ai-agent-context-pack-iot-greengrass-developers/",
-      "pubDate": "2025-10-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
       "id": "aws-news-afcb32dc6a87",
       "title": "Amazon Bedrock AgentCore Browser now reduces CAPTCHAs with Web Bot Auth (Preview)",
       "description": "Amazon Bedrock AgentCore Browser provides a fast, secure, cloud-based browser for AI agents to interact with websites at scale. It now enables agents to establish trusted, accountable access quickly and reduce CAPTCHA interruptions in automated workflows through Web Bot Auth, a draft IETF protocol that cryptographically identifies AI agents to websites. Traditional security measures like CAPTCHAs, rate limits, and blocks often halt automated workflows because Web Application Firewalls (WAFs) treat all automated traffic as suspicious - meaning AI agents frequently need human intervention to complete their tasks.\n  By enabling Web Bot Auth, AgentCore Browser streamlines bot verification across major security providers including Akamai Technologies, Cloudflare, and HUMAN Security. It automatically generates security credentials, signs HTTP requests with private keys, and registers verified identities - getting you started immediately without the need to register with multiple WAF providers or manage verification infrastructure.\n  Web Bot Auth support for AgentCore Browser is available in preview in all nine AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), and Europe (Ireland).\n  Learn more about this feature through the blog, see the Reduce CAPTCHAs with Web Bot Auth documentation to get started with Web Bot Auth in Browser. AgentCore offers consumption-based pricing with no upfront costs.",
@@ -1407,6 +1654,66 @@
         "preview",
         "ga",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-9221386adf3e",
+      "title": "Amazon Managed Service for Prometheus adds anomaly detection",
+      "description": "Amazon Managed Service for Prometheus, a fully managed Prometheus-compatible monitoring service now supports anomaly detection. Anomaly detection applies machine-learning algorithms to continuously analyze time series and surfaces anomalies with minimal user intervention. You can use anomaly detection to isolate and troubleshoot unexpected changes in your metric behavior.\n \nAmazon Managed Service for Prometheus Anomaly Detection currently supports Random Cut Forest (RCF), an unsupervised algorithm for detecting anomalous data points within a time series. Once you create and configure an anomaly detector in an Amazon Managed Service for Prometheus workspace, it will create four new time series to represent resulting anomalies and confidence values along with them. Based on the resulting time series, you can create dynamic alerting rules in the Amazon Managed Service for Prometheus Alert manager, to notify you when anomalies occur, and you can also visualize the resulting time series alongside the input time series either in self-managed Grafana or Amazon Managed Grafana dashboards.\n \nThis feature is now available in all AWS commercial regions where Amazon Managed Service for Prometheus is generally available. To configure anomaly detection use the AWS CLI, SDK, or APIs. Check out the Amazon Managed Service for Prometheus user guide for detailed documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-managed-service-anomaly-detection/",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "grafana"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "grafana",
+        "generally-available",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1f40c93d2ce3",
+      "title": "Amazon ECS Service Connect enhances observability with Envoy Access Logs",
+      "description": "Amazon Elastic Container Service (Amazon ECS) Service Connect now supports Envoy access logs, providing deeper observability into request-level traffic patterns and service interactions. This new capability captures detailed per-request telemetry for end-to-end tracing, debugging, and compliance monitoring.\n  Amazon ECS Service Connect makes it simple to build secure, resilient service-to-service communication across clusters, VPCs, and AWS accounts. It integrates service discovery and service mesh capabilities by automatically injecting AWS-managed Envoy proxies as sidecars that handle traffic routing, load balancing, and inter-service connectivity. Envoy Access logs capture detailed traffic metadata enabling request-level visibility into service communication patterns. This enables you to perform network diagnostics, troubleshoot issues efficiently, and maintain audit trails for compliance requirements.\n  You can now configure access logs within ECS Service Connect by updating the ServiceConnectConfiguration to enable access logging. Query strings are redacted by default to protect sensitive data. Envoy access logs will output to the standard output (STDOUT) stream alongside application logs and flow through the existing ECS log pipeline without requiring additional infrastructure. This configuration supports all existing application protocols (HTTP, HTTP2, GRPC and TCP). This feature is available in all regions where Amazon ECS Service Connect is supported. To learn more, visit the Amazon ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ecs-service-connect-envoy-access-logs",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ecs",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-b346e7e645cb",
+      "title": "Announcing an AI agent context pack for AWS IoT Greengrass developers",
+      "description": "AWS announces the release of a new AI agent context package for accelerating edge device application development using AWS IoT Greengrass. AWS IoT Greengrass is an IoT edge runtime and cloud service that helps developers build, deploy, and manage device software at the edge. The context package includes ready-to-use instructions, examples, and templates - enabling developers to leverage generative AI tools and agents for faster software creation, testing and deployment.\n  Available as an open-source GitHub repository under the Creative Commons Attribution Share Alike 4.0 license, the AWS IoT Greengrass AI agent context package helps streamline development workflows. Developers can boost productivity by cloning the repository and integrating it with modern generative AI tools like Amazon Q to help accelerate cloud-connected edge application development while simplifying fleet-wide deployment and management.\n  This new capability is available in all AWS Regions where AWS IoT Greengrass is supported. To learn more about AWS IoT Greengrass and its new AI agent context pack, visit the AWS IoT Greengrass documentation. Follow the getting started guide for a quick introduction to AWS IoT Greengrass.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/ai-agent-context-pack-iot-greengrass-developers/",
+      "pubDate": "2025-10-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "support",
+        "new-capability"
       ]
     },
     {
@@ -1451,22 +1758,6 @@
         "bedrock",
         "lex",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-caa5409ed3fd",
-      "title": "AWS Elastic Beanstalk adds support for Amazon Corretto 25 and Tomcat 11",
-      "description": "AWS Elastic Beanstalk now enables customers to build and deploy Tomcat 11 applications using Amazon Corretto 25 on Amazon Linux 2023 (AL2023) platform. This latest platform support allows developers to leverage the newest Java 25 and Jakarta EE 11 features while benefiting from AL2023's enhanced security and performance capabilities.\n \nAWS Elastic Beanstalk is a service that provides the ability to deploy and manage applications in AWS without worrying about the infrastructure that runs those applications. Tomcat 11 with Corretto 25 on AL2023 allows developers to take advantage of the latest Java language features including compact object headers, ahead-of-time (AOT) caching, and structured concurrency. Developers can create Elastic Beanstalk environments running Corretto 25 with Tomcat 11 on AL2023 through the Elastic Beanstalk Console, CLI, or API.\n \nThis platform is generally available in commercial regions where Elastic Beanstalk is available including the AWS GovCloud (US) Regions. For a complete list of regions and service offerings, see AWS Regions.\n \nFor more information about Corretto 25 with Tomcat 11 and Linux Platforms, see the Elastic Beanstalk developer guide. To learn more about Elastic Beanstalk, visit the Elastic Beanstalk product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-elastic-beanstalk-amazon-corretto-25-tomcat-11",
-      "pubDate": "2025-10-29T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "generally-available",
         "support"
       ]
     },
@@ -1526,6 +1817,22 @@
       "tags": [
         "ec2",
         "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-caa5409ed3fd",
+      "title": "AWS Elastic Beanstalk adds support for Amazon Corretto 25 and Tomcat 11",
+      "description": "AWS Elastic Beanstalk now enables customers to build and deploy Tomcat 11 applications using Amazon Corretto 25 on Amazon Linux 2023 (AL2023) platform. This latest platform support allows developers to leverage the newest Java 25 and Jakarta EE 11 features while benefiting from AL2023's enhanced security and performance capabilities.\n \nAWS Elastic Beanstalk is a service that provides the ability to deploy and manage applications in AWS without worrying about the infrastructure that runs those applications. Tomcat 11 with Corretto 25 on AL2023 allows developers to take advantage of the latest Java language features including compact object headers, ahead-of-time (AOT) caching, and structured concurrency. Developers can create Elastic Beanstalk environments running Corretto 25 with Tomcat 11 on AL2023 through the Elastic Beanstalk Console, CLI, or API.\n \nThis platform is generally available in commercial regions where Elastic Beanstalk is available including the AWS GovCloud (US) Regions. For a complete list of regions and service offerings, see AWS Regions.\n \nFor more information about Corretto 25 with Tomcat 11 and Linux Platforms, see the Elastic Beanstalk developer guide. To learn more about Elastic Beanstalk, visit the Elastic Beanstalk product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-elastic-beanstalk-amazon-corretto-25-tomcat-11",
+      "pubDate": "2025-10-29T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "generally-available",
         "support"
       ]
     },
@@ -2309,130 +2616,6 @@
       ]
     },
     {
-      "id": "aws-news-e621226bcfb0",
-      "title": "AWS Outposts 2U server is now available in the AWS GovCloud (US) Regions",
-      "description": "AWS Outposts 2U server is now supported in the AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. Outposts 2U server is a fully managed service that extends AWS infrastructure, AWS services, APIs, and tools to on-premises or edge locations with limited space or smaller capacity requirements for a truly consistent hybrid experience. It is delivered in an industry-standard 2U form factor and provides up to 128 vCPUs of compute. It is ideal for applications that need to run on-premises to meet low latency and stringent compliance requirements. You can also use Outposts 2U server to manage your local data processing needs.\n \nWith the availability of Outposts 2U server in the GovCloud (US-East) and GovCloud (US-West) Regions, you can now run Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Container Service (Amazon ECS), and AWS IoT Greengrass locally on Outposts 2U servers, and connect to a broader range of AWS services available in the parent AWS GovCloud (US) Region. For AWS GovCloud (US) Regions customers, this means you can run sensitive and controlled unclassified information (CUI) data on-premises at your facilities and connect to the parent AWS GovCloud (US) Region for management and operations.\n \nTo learn more about Outposts 2U server, visit the product page and read the user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-outposts-2u-server-govcloud-regions",
-      "pubDate": "2025-10-23T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs",
-        "outposts"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "outposts",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-19d9fd03b349",
-      "title": "Amazon DynamoDB zero-ETL integration with Amazon Redshift now available in the Asia Pacific (Taipei) region",
-      "description": "Amazon DynamoDB zero-ETL integration with Amazon Redshift is now supported in the Asia Pacific (Taipei) region. This expansion enables customers to run high-performance analytics on their DynamoDB data in Amazon Redshift with no impact on production workloads running on DynamoDB. \n  Zero-ETL integrations help you derive holistic insights across many applications, break data silos in your organization, and gain significant cost savings and operational efficiencies. Now you can run enhanced analysis on your DynamoDB data with the rich capabilities of Amazon Redshift, such as high performance SQL, built-in ML and Spark integrations, materialized views with automatic and incremental refresh, and data sharing. Additionally, you can use history mode to easily run advanced analytics on historical data, build lookback reports, and build Type 2 Slowly Changing Dimension (SCD 2) tables on your historical data from DynamoDB, out-of-the-box in Amazon Redshift, without writing any code.\n  The Amazon DynamoDB zero-ETL integration with Amazon Redshift is now available in Asia Pacific (Taipei), in addition to previously supported regions. For a complete list of supported regions, please refer to the AWS Region Table where Amazon Redshift is available.\n  To learn more, visit the getting started guides for DynamoDB and Amazon Redshift. For more information on using history mode, we encourage you to visit our recent blog post here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dynamodb-zero-etl-integration-redshift-asia-pacific-taipei-region",
-      "pubDate": "2025-10-23T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "dynamodb"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "redshift",
-        "dynamodb",
-        "ga",
-        "now-available",
-        "integration",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-58c630dbdb44",
-      "title": "Amazon Quick Sight announces the general availability of a new data preparation experience",
-      "description": "Amazon Quick Sight, a capability of Amazon Quick Suite, now offers a visual data preparation experience that helps business users perform advanced data transformations without writing complex code. Users can now clean, transform, and combine data in multi-step workflows—appending tables, aggregating data, executing flexible joins, and other advanced operations that previously required custom programming or SQL commands.\n  Users can easily track data transformations step-by-step, enhancing traceability and shareability. With the ability to utilize datasets as a source expanded from 3 to 10 levels, teams can build reusable transformation logic that cascades across departments. For instance, centralized data analysts can now prepare foundational data sets that can then be further customized by regional business users, applying territory-specific calculations and business logic with simple clicks. The enhanced experience now also supports 20X larger cross-source joins, moving from a previous capacity of 1GB to 20GB today.\n  This feature is available to Quick Sight Author and Author Pro customers in the following regions: US East (N.Virginia and Ohio), US West (Oregon), Canada (Central), South America (Sao Paulo), Europe (Frankfurt, Milan, Paris, Spain, Stockholm, Ireland, London, Zurich), Africa (Cape Town), Middle East (UAE), Israel (Tel Aviv), Asia Pacific (Jakarta, Mumbai, Singapore, Tokyo, Seoul, Sydney), AWS GovCloud (US-West, US- East) and to Quick Suite Enterprise subscribers in US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), and Europe (Ireland). For more details, read our documentation here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-quick-sight-general-availability-data-preparation-experience",
-      "pubDate": "2025-10-23T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "lex",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-1892be311751",
-      "title": "Now generally available: AWS RTB Fabric for real-time bidding workloads",
-      "description": "Today, AWS announces RTB Fabric, a fully managed service that helps you connect with your AdTech partners such as Amazon Ads, GumGum, Kargo, MobileFuse, Sovrn, TripleLift, Viant, Yieldmo, and more in three steps while delivering single-digit millisecond latency through a private, high-performance network environment. RTB Fabric reduces standard cloud networking costs by up to 80% and does not require upfront commitments.\n \nThe service includes modules, a capability that helps you bring your own and partner applications securely into the compute environment for real-time bidding. Modules support containerized applications and foundation models (FMs) that can enhance transaction efficiency and bidding effectiveness. Today, AWS RTB Fabric launches with three built-in modules to help you optimize traffic, improve bid efficiency, and increase bid response rates—all running inline for consistent low-latency execution. AWS RTB Fabric helps you to optimize auction execution, maximize supply monetization, and increase publisher revenue. You can connect with AdTech companies faster to reach target audiences, increase campaign scale, and improve performance for higher return on ad spend.\n \nAWS RTB Fabric is generally available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), Europe (Frankfurt), and Europe (Ireland).. To learn more, read the Blog, Documentation, or visit the AWS RTB Fabric product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-rtb-fabric-generally-available/",
-      "pubDate": "2025-10-23T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e1aead73d5d9",
-      "title": "Amazon EC2 I8g instances now available in additional AWS regions",
-      "description": "AWS is announcing the general availability of Amazon EC2 Storage Optimized I8g instances in Europe (London), Asia Pacific (Singapore), and Asia Pacific (Tokyo) regions. I8g instances offer the best performance in Amazon EC2 for storage-intensive workloads. I8g instances are powered by AWS Graviton4 processors that deliver up to 60% better compute performance compared to previous generation I4g instances. I8g instances use the latest third generation AWS Nitro SSDs, local NVMe storage that deliver up to 65% better real-time storage performance per TB while offering up to 50% lower storage I/O latency and up to 60% lower storage I/O latency variability. These instances are built on the AWS Nitro System, which oﬄoads CPU virtualization, storage, and networking functions to dedicated hardware and software enhancing the performance and security for your workloads.\n  Amazon EC2 I8g instances are designed for I/O intensive workloads that require rapid data access and real-time latency from storage. These instances excel at handling transactional, real-time, distributed databases, including MySQL, PostgreSQL, Hbase and NoSQL solutions like Aerospike, MongoDB, ClickHouse, and Apache Druid. They're also optimized for real-time analytics platforms such as Apache Spark, data lakehouse and AI LLM pre-processing for training. I8g instances are available in 10 different sizes with up to 48xlarge including one metal size, 1.5 TiB of memory, and 45 TB local instance storage. They deliver up to 100 Gbps of network performance bandwidth, and 60 Gbps of dedicated bandwidth for Amazon Elastic Block Store (EBS).\n  To learn more, visit EC2 I8g instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-ec2-i8g-instances-available-in-additional-aws/",
-      "pubDate": "2025-10-23T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "graviton",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-a2db976a9cdf",
-      "title": "Amazon Connect now supports threaded views and includes conversation history in agent replies",
-      "description": "Amazon Connect now includes the conversation history in agent replies and introduces threaded views of email exchanges, making it easier for both agents and customers to maintain context and continuity across interactions. This enhancement provides a more natural and familiar email experience for both agents and customers.\n  Amazon Connect Email is available in the US East (N. Virginia), US West (Oregon), Africa (Cape Town), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation, pricing page, or visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-connect-threaded-views-conversation-history/",
-      "pubDate": "2025-10-23T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a68cc34788e6",
       "title": "Build scalable creative solutions for product teams with Amazon Bedrock",
       "description": "In this post, we explore how product teams can leverage Amazon Bedrock and AWS services to transform their creative workflows through generative AI, enabling rapid content iteration across multiple formats while maintaining brand consistency and compliance. The solution demonstrates how teams can deploy a scalable generative AI application that accelerates everything from product descriptions and marketing copy to visual concepts and video content, significantly reducing time to market while enhancing creative quality.",
@@ -2564,62 +2747,6 @@
       ]
     },
     {
-      "id": "aws-news-442279e3e2a5",
-      "title": "AWS Secret-West Region is now available",
-      "description": "Amazon Web Services (AWS) is excited to announce the launch of our second Secret Region - AWS Secret-West. With this launch, AWS now offers two regions capable of operating mission-critical workloads at the Secret U.S. security classification level. AWS Secret-West places cloud resources in closer proximity to users and mission in the western U.S., delivering enhanced performance for latency-sensitive workloads and improving operational efficiency. Additionally, the region provides customers with multi-region resiliency capabilities and geographic separation to best meet their U.S. Government mission requirements.\n  Architected for Security and Compliance\n Security is the highest priority at AWS. With the AWS Secret-West Region, customers benefit from data centers and network architecture designed, built, accredited, and operated for security compliance with Intelligence Community Directive (ICD) requirements. The region features multiple Availability Zones, providing the high availability, fault tolerance, and resilience that mission-critical workloads require.\n  Mission Workload Support\n The AWS Secret-West Region allows customers to:\n • Build and run mission-critical applications with enhanced geographic distribution\n • Process and analyze sensitive data across multiple regions\n • Deploy robust disaster recovery strategies\n • Leverage comprehensive compute and storage solutions located in the western U.S.\n • Utilize services authorized at ICD 503 and Department of Defense (DoD) Security Requirements Guide (SRG) Impact Level (IL6) supporting Intelligence Community and Department of Defense authority to operate mission needs.\n  To learn more about the AWS Secret-West Region and how to get started, contact us.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-secret-west-region-is-now-available",
-      "pubDate": "2025-10-22T17:04:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ff58ed620495",
-      "title": "Amazon CloudWatch introduces interactive incident reporting",
-      "description": "Amazon CloudWatch now offers interactive incident report generation, enabling customers to create comprehensive post-incident analysis reports in minutes. The new capability, available within CloudWatch investigations, automatically gathers and correlates your telemetry data, as well as your input and any actions taken during an investigation, and produces a streamlined incident report.\n  Using the new feature you can automatically capture critical operational telemetry, service configurations, and investigation findings to generate detailed reports. Reports include executive summaries, timeline of events, impact assessments, and actionable recommendations. These reports help you better identify patterns, implement preventive measures, and continuously improve your operational posture through structured post incident analysis.\n  The incident report generation feature is available in US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Hong Kong), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (Spain), and Europe (Stockholm).\n  You can create their first incident report by first creating a CloudWatch investigation and then clicking “Incident report”. To learn more about this new feature, visit the CloudWatch incident reports documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-cloudwatch-incident-report/",
-      "pubDate": "2025-10-22T16:52:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "cloudwatch",
-        "ga",
-        "new-feature",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-3d4a6ffbaa2c",
-      "title": "Amazon U7i instances now available in AWS US East (Ohio) Region",
-      "description": "Starting today, Amazon EC2 High Memory U7i instances with 6TB of memory (u7i-6tb.112xlarge) are now available in the US East (Ohio) region. U7i-6tb instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-6tb instances offer 6TB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n  U7i-6tb instances offer 448 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n  To learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-u7i-instances-available-aws-us-east-ohio-region/",
-      "pubDate": "2025-10-22T16:46:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-360e834c997a",
       "title": "BASF Digital Farming builds a STAC-based solution on Amazon EKS",
       "description": "This post was co-written with Frederic Haase and Julian Blau with BASF Digital Farming GmbH. At xarvio – BASF Digital Farming, our mission is to empower farmers around the world with cutting-edge digital agronomic decision-making tools. Central to this mission is our crop optimization platform, xarvio FIELD MANAGER, which delivers actionable insights through a range […]",
@@ -2634,116 +2761,6 @@
       ],
       "tags": [
         "eks"
-      ]
-    },
-    {
-      "id": "aws-news-f7a499ca3343",
-      "title": "Amazon S3 now generates AWS CloudTrail events for S3 Tables maintenance operations",
-      "description": "Amazon S3 adds AWS CloudTrail events for table maintenance activities in Amazon S3 Tables. You can now use AWS CloudTrail to track compaction and snapshot expiration operations performed by S3 Tables on your tables.\n  S3 Tables automatically performs maintenance to optimize query performance and lower costs of your tables stored in S3 table buckets. You can monitor and audit S3 Tables maintenance activities such as compaction and snapshot expiration as management events in AWS CloudTrail. To get started with monitoring, create a trail in the AWS CloudTrail console and filter for 'AwsServiceEvents' as the eventType and 'TablesMaintenanceEvent' as the eventName.\n  AWS CloudTrail events for S3 Tables maintenance are now available in all AWS Regions where S3 Tables are available. To learn more, visit Amazon S3 Tables product page and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-generates-aws-cloudtrail-events",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-296ede5a4ed7",
-      "title": "Amazon Redshift auto-copy is now available in 4 additional AWS regions",
-      "description": "Amazon Redshift auto-copy is now available in the AWS Asia Pacific (Malaysia), Asia Pacific (Thailand), Mexico (Central), and Asia Pacific (Taipei) regions. With Auto-Copy, you can set up continuous file ingestion from your Amazon S3 prefix and automatically load new files to tables in your Amazon Redshift data warehouse without the need for additional tools or custom solutions.\n  Previously, Amazon Redshift customers had to build their data pipelines using COPY commands to automate continuous loading of data from S3 to Amazon Redshift tables. With auto-copy, you can now setup an integration which will automatically detect and load new files in a specified S3 prefix to Redshift tables. The auto-copy jobs keep track of previously loaded files and exclude them from the ingestion process. You can monitor auto-copy jobs using system tables.\n  To learn more, see the documentation or check out the AWS Blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-redshift-auto-copy-additional-aws-regions",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "now-available",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-cde0df35d350",
-      "title": "Amazon CloudWatch Agent adds support for Windows Event Log Filters",
-      "description": "Amazon CloudWatch agent has added support for configurable Windows Event log filters. This new feature allows customers to selectively collect and send system and application events to CloudWatch from Windows hosts running on Amazon EC2 or on-premises. The addition of customizable filters helps customers to focus on events that meet specific criteria, streamlining log management and analysis.\n  Using this new functionality of the CloudWatch agent, you can define filter criteria for each Windows Event log stream in the agent configuration file. The filtering options include event levels, event IDs, and regular expressions to either \"include\" or \"exclude\" text within events. The agent evaluates each log event against your defined filter criteria to determine whether it should be sent to CloudWatch. Events that don't match your criteria are discarded. Windows event filters help you to manage your log ingestion by processing only the events you need, such as those containing specific error codes, while excluding verbose or unwanted log entries.\n  Amazon CloudWatch Agent is available in all commercial AWS Regions, and the AWS GovCloud (US) Regions.\n  To get started, see Create or Edit the CloudWatch Agent Configuration File in the Amazon CloudWatch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-cloudwatch-agent-windows-event-log-filters",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "cloudwatch",
-        "ga",
-        "new-feature",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e18b0e809647",
-      "title": "Amazon DCV releases version 2025.0 with enhanced keyboard handling and WebAuthn support",
-      "description": "AWS announces Amazon DCV 2025.0, the latest version of the high-performance remote display protocol that enables customers to securely access remote desktops and application sessions. This release focuses on enhancing user productivity and security while expanding platform compatibility for diverse use cases.\n  Amazon DCV 2025.0 includes the following key features and improvements:\n  \n \n \nEnhanced WebAuthn redirection on Windows and standard browser-based WebAuthn support on Linux, enabling security key authentication (like Yubikeys, Windows Hello) in native Windows and SaaS applications within virtual desktop sessions\n \n \nLinux client support for ARM architecture, further broadening compatibility and performance\n \n \nWindows Server 2025 support, delivering latest security standards and enhanced performance on DCV hosts\n \n \nServer side keyboard layout support and layout alignment for Windows clients, enhancing input reliability and consistency\n \n \nScroll wheel optimizations for smoother navigation\n \n \nFor more information about the new features and enhancements in Amazon DCV 2025.0, see the release notes or visit the Amazon DCV webpage to learn more and get started.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dvc-releases-version-2025-0",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "new-feature",
-        "improvement",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-91fedc222546",
-      "title": "Amazon EKS Auto Mode now available in AWS GovCloud (US-East) and (US-West)",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) Auto Mode is now available in the AWS GovCloud (US-East) and (US-West) regions. This feature fully automates compute, storage, and networking management for Kubernetes clusters. Additionally, EKS Auto Mode now supports FIPS-validated cryptographic modules through its Amazon Machine Images (AMIs) to help customers meet FedRAMP compliance requirements.\n  EKS Auto Mode enables organizations to get Kubernetes conformant managed compute, networking, and storage for any new or existing EKS cluster. Its AMIs include FIPS-compliant cryptographic modules to help meet federal security standards for regulated workloads. EKS Auto Mode manages OS patching and updates, and strengthens security posture through ephemeral compute, making it ideal for workloads that require high security standards. It also dynamically scales EC2 instances based on demand, helping optimize compute costs while maintaining application availability.\n  Amazon EKS Auto Mode is now available in AWS GovCloud (US-East) and (US-West). You can enable EKS Auto Mode in any EKS cluster running Kubernetes 1.29 and above with no upfront fees or commitments—you pay for the management of the compute resources provisioned, in addition to your regular EC2 costs.\n  To get started with EKS Auto Mode, visit the Amazon EKS product page. For additional details, see the Amazon EKS User Guide and AWS GovCloud (US) documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-eks-auto-mode-aws-govcloud-us-east-west",
-      "pubDate": "2025-10-22T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "eks",
-        "organizations",
-        "ga",
-        "now-available",
-        "update",
-        "support"
       ]
     },
     {
@@ -2846,30 +2863,6 @@
       "tags": [
         "sagemaker",
         "canvas"
-      ]
-    },
-    {
-      "id": "aws-news-4cf5d24f3814",
-      "title": "Building a multi-agent voice assistant with Amazon Nova Sonic and Amazon Bedrock AgentCore",
-      "description": "In this post, we explore how Amazon Nova Sonic's speech-to-speech capabilities can be combined with Amazon Bedrock AgentCore to create sophisticated multi-agent voice assistants that break complex tasks into specialized, manageable components. The approach demonstrates how to build modular, scalable voice applications using a banking assistant example with dedicated sub-agents for authentication, banking inquiries, and mortgage services, offering a more maintainable alternative to monolithic voice assistant designs.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-a-multi-agent-voice-assistant-with-amazon-nova-sonic-and-amazon-bedrock-agentcore/",
-      "pubDate": "2025-10-21T17:31:05.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "nova",
-        "lex"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "nova",
-        "lex",
-        "ga"
       ]
     },
     {
@@ -3326,28 +3319,6 @@
         "bedrock",
         "lex",
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-893c769634f2",
-      "title": "AWS Weekly Roundup: Amazon S3, Amazon Bedrock AgentCore, AWS X-Ray and more (September 29, 2025)",
-      "description": "Wow, can you all believe it? We’re nearing the end of the year already. Next thing you know, AWS re:Invent will be here! This is our biggest event that takes place every year in Las Vegas from December 1st to December 5th where we reveal and release many of the things that we’ve been working […]",
-      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-amazon-bedrock-agentcore-aws-x-ray-and-more-september-29-2025/",
-      "pubDate": "2025-09-29T16:42:04.000Z",
-      "source": "newsBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "s3"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "s3",
-        "ga"
       ]
     },
     {
