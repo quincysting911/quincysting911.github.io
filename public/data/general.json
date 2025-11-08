@@ -1,8 +1,112 @@
 {
-  "lastUpdated": "2025-11-07T06:15:44.330Z",
+  "lastUpdated": "2025-11-08T06:13:27.477Z",
   "category": "general",
-  "totalItems": 48,
+  "totalItems": 51,
   "items": [
+    {
+      "id": "aws-news-25fb32cc6ab1",
+      "title": "AWS Lambda networking over IPv6",
+      "description": "This post examines the benefits of transitioning Lambda functions to IPv6, provides practical guidance for implementing dual-stack support in your Lambda environment, and considerations for maintaining compatibility with existing systems during migration.",
+      "link": "https://aws.amazon.com/blogs/compute/aws-lambda-networking-over-ipv6/",
+      "pubDate": "2025-11-07T22:14:31.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e645e2fe91b2",
+      "title": "AWS Advanced .NET Data Provider Driver is Generally Available",
+      "description": "The Amazon Web Services (AWS) Advanced .NET Data Provider Driver is now generally available for Amazon RDS and Amazon Aurora PostgreSQL and MySQL-compatible databases. This advanced database driver reduces RDS Blue/Green switchover and database failover times, improving application availability. Additionally, it supports multiple authentication mechanisms for your database, including Federated Authentication, AWS Secrets Manager authentication, and token-based authentication with AWS Identity and Access Management (IAM).\n  The driver builds on top of Npgsql PostgreSQL, native MySql.Data, and MySqlConnector drivers to further enhance functionality beyond standard database connectivity. The driver is natively integrated with Aurora and RDS databases, enabling it to monitor database cluster status and quickly connect to newly promoted writers during unexpected failures that trigger database failovers. Furthermore, the driver seamlessly works with popular frameworks like NHibernate and supports Entity Framework (EF) with MySQL databases.\n  The driver is available as an open-source project under the Apache 2.0 license. Refer the instructions on the on the GitHub repository to get started.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-net-data-provider-driver/",
+      "pubDate": "2025-11-07T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam",
+        "secrets manager"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "secrets manager",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c2f924eb5a83",
+      "title": "Amazon Cognito user pools now supports private connectivity with AWS PrivateLink",
+      "description": "Amazon Cognito user pools now supports AWS PrivateLink for secure and private connectivity. With AWS PrivateLink, you can establish a private connection between your virtual private cloud (VPC) and Amazon Cognito user pools to configure, manage, and authenticate against your Cognito user pools without using the public internet. By enabling private network connectivity, this enhancement eliminates the need to use public IP addresses or relying solely on firewall rules to access Cognito. This feature supports user pool management operations (e.g., list user pools, describe user pools), administrative operations (e.g., admin-created users), and user authentication flows (sign in local users stored in Cognito). OAuth 2.0 authorization code flow (Cognito managed login, hosted UI, sign-in via social identity providers), client credentials flow (Cognito machine-to-machine authorization), and federated sign-ins via SAML and OIDC standards are not supported through VPC endpoints at this time.\n  You can use PrivateLink connections in all AWS Regions where Amazon Cognito user pools is available, except AWS GovCloud (US) Regions. Creating VPC endpoints on AWS PrivateLink will incur additional charges; refer to AWS PrivateLink pricing page for details. You can get started by creating an AWS PrivateLink interface endpoint for Amazon Cognito user pools using the AWS Management Console, AWS Command Line Interface (CLI), AWS Software Development Kits (SDKs), AWS Cloud Development Kit (CDK), or AWS CloudFormation. To learn more, refer to the documentation on creating an interface VPC endpoint and Amazon Cognito’s developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cognito-user-pools-private-connectivity-aws-privatelink",
+      "pubDate": "2025-11-07T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudformation",
+        "ga",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4eec4c1e389b",
+      "title": "AWS KMS now supports Edwards-curve Digital Signature Algorithm (EdDSA)",
+      "description": "AWS Key Management Service (KMS) announces support for the Edwards-curve Digital Signature Algorithm (EdDSA). With this new capability, you can create an elliptic curve asymmetric KMS key or data key pairs to sign and verify EdDSA signatures using the Edwards25519 curve (Ed25519). Ed25519 provides 128-bit security level equivalent to NIST P-256, faster signing performance, and small signature size (64 bytes) and public key sizes (32 bytes).\n  Ed25519 is ideal for situations that require small key and signature sizes, such as Internet of Things (IoT) devices and blockchain applications like cryptocurrency.\n  This new capability is available in all AWS Regions, including the AWS GovCloud (US) Regions and the China Regions. To learn more about this new capability, see Asymmetric key specs section in the AWS KMS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-kms-edwards-curve-digital-signature-algorithm/",
+      "pubDate": "2025-11-07T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ecs",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-cc09bbb745b2",
+      "title": "Amazon DynamoDB Streams expands AWS PrivateLink support to FIPS endpoints",
+      "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for all available Amazon DynamoDB Streams Federal Information Processing Standard (FIPS) endpoints in US and Canada commercial AWS Regions.\n  With this launch, you can establish a private connection between your virtual private cloud (VPC) and Amazon DynamoDB Streams FIPS endpoints instead of connecting over the public internet, helping you meet your organization's business, compliance, and regulatory requirements to limit public internet connectivity.\n  Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints is available with Amazon DynamoDB Streams in the US and Canada commercial AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n  To learn more about Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints, visit the Amazon DynamoDB Stream documentation. For more information about AWS PrivateLink and its benefits, visit the AWS PrivateLink product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-dynamodb-streams-aws-privatelink-fips-endpoints",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f96966b5c806",
       "title": "Amazon ECS announces non-root container support for managed EBS volumes",
@@ -26,26 +130,6 @@
         "ga",
         "now-available",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cc09bbb745b2",
-      "title": "Amazon DynamoDB Streams expands AWS PrivateLink support to FIPS endpoints",
-      "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for all available Amazon DynamoDB Streams Federal Information Processing Standard (FIPS) endpoints in US and Canada commercial AWS Regions.\n  With this launch, you can establish a private connection between your virtual private cloud (VPC) and Amazon DynamoDB Streams FIPS endpoints instead of connecting over the public internet, helping you meet your organization's business, compliance, and regulatory requirements to limit public internet connectivity.\n  Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints is available with Amazon DynamoDB Streams in the US and Canada commercial AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n  To learn more about Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints, visit the Amazon DynamoDB Stream documentation. For more information about AWS PrivateLink and its benefits, visit the AWS PrivateLink product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-dynamodb-streams-aws-privatelink-fips-endpoints",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "dynamodb"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "dynamodb",
-        "launch",
-        "ga",
         "support"
       ]
     },
@@ -131,26 +215,6 @@
       ]
     },
     {
-      "id": "aws-news-141c32c8366c",
-      "title": "Microsoft SQL Server Developer Edition now available through AWS Launch Wizard",
-      "description": "AWS Launch Wizard now offers a guided approach to sizing, configuring, and deploying Windows Server EC2 instances with Microsoft SQL Server Developer Edition installed from your own media. AWS Launch Wizard for SQL Server Developer Edition allows you to simplify launching cost-effective and full-featured SQL Server instances on Amazon EC2, making it ideal for developers building non-production and test database environments.\n  This feature is ideal for customers who also have existing non-production databases running SQL Server Enterprise Edition or SQL Server Standard Edition, as migrating the non-production databases to SQL Server Developer Edition will reduce SQL license costs while maintaining feature parity.\n  This feature is available in all supported commercial AWS Regions and the AWS GovCloud (US) Regions.\n  To learn more, see the AWS Launch Wizard for SQL Server User Guide and blog post here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/microsoft-sql-server-developer-edition-launch-wizard/",
-      "pubDate": "2025-11-05T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-ea74e7f9be5d",
       "title": "AWS Glue Schema Registry adds support for C#",
       "description": "AWS Glue Schema Registry (GSR) has now expanded the programming language support for GSR Client library to include C# support along with existing Java support. C# applications integrating with Apache Kafka or Amazon Managed Streaming for Apache Kafka (Amazon MSK), Amazon Kinesis Data Streams, and Apache Flink or Amazon Managed Service for Apache Flink can now interact with AWS Glue Schema Registry to maintain data quality and schema compatibility in streaming data applications.\n \nAWS Glue Schema Registry, a serverless feature of AWS Glue, enables you to validate and control the evolution of streaming data using registered schemas at no additional charge. Schemas define the structure and format of data records produced by applications. Using AWS Glue Schema Registry, you can centrally manage and enforce schema definitions across your data ecosystem. This ensures consistency of schemas across applications and enables seamless data integration between producers and consumers. Through centralized schema validation, teams can maintain data quality standards and evolve their schemas in a controlled manner.  \n  \nC# support is available across all AWS regions where Glue Schema Registry is available. Visit the Glue Schema Registry developer guide, and SDK to get started with C# integration.",
@@ -174,6 +238,26 @@
         "msk",
         "glue",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-141c32c8366c",
+      "title": "Microsoft SQL Server Developer Edition now available through AWS Launch Wizard",
+      "description": "AWS Launch Wizard now offers a guided approach to sizing, configuring, and deploying Windows Server EC2 instances with Microsoft SQL Server Developer Edition installed from your own media. AWS Launch Wizard for SQL Server Developer Edition allows you to simplify launching cost-effective and full-featured SQL Server instances on Amazon EC2, making it ideal for developers building non-production and test database environments.\n  This feature is ideal for customers who also have existing non-production databases running SQL Server Enterprise Edition or SQL Server Standard Edition, as migrating the non-production databases to SQL Server Developer Edition will reduce SQL license costs while maintaining feature parity.\n  This feature is available in all supported commercial AWS Regions and the AWS GovCloud (US) Regions.\n  To learn more, see the AWS Launch Wizard for SQL Server User Guide and blog post here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/microsoft-sql-server-developer-edition-launch-wizard/",
+      "pubDate": "2025-11-05T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "now-available",
         "support"
       ]
     },
@@ -591,21 +675,6 @@
         "msk",
         "glue",
         "athena"
-      ]
-    },
-    {
-      "id": "aws-news-fb17a65bd193",
-      "title": "Amazon Aurora DSQL is now available in Europe (Frankfurt)",
-      "description": "Starting today, Amazon Aurora DSQL is now available in Europe (Frankfurt). Aurora DSQL is the fastest serverless, distributed SQL database with active-active high availability and multi-Region strong consistency. Aurora DSQL enables you to build always available applications with virtually unlimited scalability, the highest availability, and zero infrastructure management. It is designed to make scaling and resilience effortless for your applications and offers the fastest distributed SQL reads and writes.\n  Aurora DSQL is now available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Osaka), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Frankfurt).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-aurora-dsql-available-in-frankfurt",
-      "pubDate": "2025-10-23T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "now-available"
       ]
     },
     {
