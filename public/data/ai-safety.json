@@ -1,29 +1,67 @@
 {
-  "lastUpdated": "2025-11-10T06:16:56.037Z",
+  "lastUpdated": "2025-11-11T06:16:06.337Z",
   "category": "ai-safety",
-  "totalItems": 28,
+  "totalItems": 25,
   "items": [
     {
-      "id": "aws-news-8e94e31badfc",
-      "title": "Connect Amazon Bedrock agents to cross-account knowledge bases",
-      "description": "Organizations need seamless access to their structured data repositories to power intelligent AI agents. However, when these resources span multiple AWS accounts integration challenges can arise. This post explores a practical solution for connecting Amazon Bedrock agents to knowledge bases in Amazon Redshift clusters residing in different AWS accounts.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agents-to-cross-account-knowledge-bases/",
-      "pubDate": "2025-11-07T23:14:33.000Z",
-      "source": "mlBlog",
+      "id": "aws-news-7b81096e79e0",
+      "title": "AWS Backup now supports Amazon EKS",
+      "description": "AWS Backup now supports Amazon Elastic Kubernetes Service (EKS), providing a fully-managed, centralized solution for backing up EKS cluster state and persistent application data. You can now use AWS Backup to help protect your entire EKS environments through a centralized, policy-driven backup service.\n  You now get comprehensive data protection capabilities through AWS Backup across your Amazon EKS Clusters, including automated scheduling, retention management, immutable vaults, cross-Region and cross-account copies. AWS Backup delivers a new an agent-free solution that works natively with AWS, replacing custom scripts or third-party tools to perform backups for each cluster. You can restore entire EKS clusters, specific namespaces, or individual persistent volumes. Use AWS Backup to protect your clusters for disaster recovery, to help meet your compliance requirements, or for additional protection before EKS cluster upgrades.\n  AWS Backup for EKS is available in all AWS Regions where both AWS Backup and Amazon EKS are available. For the most up-to-date information on Regional availability, please refer to the AWS Backup Regional availability.\n  To get started with AWS Backup for Amazon EKS, visit the AWS Backup console, refer to the AWS Backup documentation, or read the AWS News Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-backup-supports-amazon-eks",
+      "pubDate": "2025-11-10T19:00:00.000Z",
+      "source": "whatsNew",
       "services": [
-        "bedrock",
-        "redshift",
+        "eks"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-54dfb9347039",
+      "title": "AWS Control Tower supports automatic enrollment of accounts",
+      "description": "AWS Control Tower customers can now simply move their accounts to an Organizational Unit (OU) to enroll them under AWS Control Tower governance. This feature helps customers maintain consistency across their AWS environment and simplifies the account creation and enrollment processes. When enrolled, member accounts receive best practice configurations, controls, and baseline resources required for AWS Control Tower governance.\n  Customers are no longer required to manually update accounts or re-register OUs when migrating accounts or making changes to their OU structure. When an account is moved to a new OU, AWS Control Tower automatically enrolls the account, applying the baseline configurations and controls from the new OU and removing those from the original OU. With this feature, customers can further simplify their new account provisioning workflows by creating an account and then moving it into the right OU using the AWS Organizations console or the CreateAccount and MoveAccount APIs.\n  Customers on landing zone version 3.1 and higher can opt in to this feature by toggling the automatically enroll accounts flag in their Landing Zone settings or using the Create or UpdateLandingZone APIs by setting the value of the RemediationTypes parameter to Inheritance_Drift. To learn more about this functionality, review Move and enroll accounts with auto-enrollment. For a list of AWS Regions where AWS Control Tower is available, see the AWS Region Table.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-automatic-enrollment",
+      "pubDate": "2025-11-10T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
         "organizations"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "bedrock",
-        "redshift",
         "organizations",
         "ga",
-        "integration"
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-73867e5091fc",
+      "title": "Amazon S3 Express One Zone now supports Internet Protocol version 6 (IPv6)",
+      "description": "Amazon S3 Express One Zone now supports Internet Protocol version 6 (IPv6) addresses for gateway Virtual Private Cloud (VPC) endpoints. S3 Express One Zone is a high-performance storage class designed for latency-sensitive applications.\n  Organizations are adopting IPv6 networks to mitigate IPv4 address exhaustion in their private networks or to comply with regulatory requirements. You can now access your data in S3 Express One Zone over IPv6 or DualStack VPC endpoints. You don't need additional infrastructure to handle IPv6 to IPv4 address translation.\n  S3 Express One Zone support for IPv6 is available in all AWS Regions where the storage class is available at no additional cost. You can set up IPv6 for new and existing VPC endpoints using the AWS Management Console, AWS CLI, AWS SDK, or AWS CloudFormation. To get started using IPv6 on S3 Express One Zone, visit the S3 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-s3-express-one-zone-ipv6",
+      "pubDate": "2025-11-10T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudformation",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "cloudformation",
+        "organizations",
+        "ga",
+        "support"
       ]
     },
     {
@@ -359,70 +397,6 @@
       ]
     },
     {
-      "id": "aws-news-ddd0469c6cc3",
-      "title": "AWS Payment Cryptography is now available in Canada(Montreal), Africa (Cape Town) and Europe (London)",
-      "description": "AWS Payment Cryptography has expanded its global presence with availability in three new regions - Canada(Montreal), Africa (Cape Town) and Europe (London). This expansion enables customers with latency-sensitive payment applications to build, deploy or migrate into additional AWS Regions without depending on cross-region support. For customers processing payment workloads in Europe, availability in London offers additional options for multi-Region high availability.\n  AWS Payment Cryptography is a fully managed service that simplifies payment-specific cryptographic operations and key management for cloud-hosted payment applications. The service scales elastically with your business needs and is assessed as compliant with PCI PIN and PCI P2PE requirements, eliminating the need to maintain dedicated payment HSM instances. Organizations performing payment functions - including acquirers, payment facilitators, networks, switches, processors, and banks can now position their payment cryptographic operations closer to their applications while reducing dependencies on auxiliary data centers with dedicated payment HSMs.\n  AWS Payment Cryptography is available in the following AWS Regions: Canada(Montreal), US East (Ohio, N. Virginia), US West (Oregon), Europe (Ireland, Frankfurt, London), Africa(Cape Town) and Asia Pacific (Singapore, Tokyo, Osaka, Mumbai).\n  To start using the service, please download the latest AWS CLI/SDK and see the AWS Payment Cryptography user guide for more information.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-payment-cryptography-available-montreal-south-africa",
-      "pubDate": "2025-10-27T18:01:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "now-available",
-        "support",
-        "new-region",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-f3c966ea90f4",
-      "title": "Amazon Location Service introduces new API key restrictions",
-      "description": "Today, AWS announced enhanced API key restrictions for Amazon Location Service, enabling developers to secure their location-based applications more effectively. This new capability helps organizations that need to restrict API access to specific mobile applications, providing improved security controls for location services across their application portfolio.\n  Developers can now create granular security policies by restricting API keys to specific Android applications using package names and SHA-1 certificate fingerprints, or to iOS applications using Bundle IDs. For example, enterprises can ensure their API keys only work with their approved mobile applications, while development teams can create separate keys for testing and production environments.\n  Amazon Location Service API key restrictions are available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Stockholm), Europe (Spain), and South America (São Paulo). To implement these restrictions, you'll need to update your API key configurations using the Amazon Location Service console or APIs. To learn more, please visit the Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-location-service-new-api-key-security-restrictions",
-      "pubDate": "2025-10-27T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "update",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-2bf2cf1f0a1d",
-      "title": "Amazon SageMaker adds additional search context for search results",
-      "description": "Amazon SageMaker enhances search results in Amazon SageMaker Unified Studio with additional context that improves transparency and interpretability. Users can see which metadata fields matched their query and understand why each result appears, increasing clarity and trust in data discovery. The capability introduces inline highlighting for matched terms and an explanation panel that details where and how each match occurred across metadata fields such as name, description, glossary, schema, and other metadata.\n  The enhancement reduces time spent evaluating irrelevant assets by presenting match evidence directly in search results. Users can quickly validate relevance without opening individual assets.\n  This capability is now available in all AWS Regions where Amazon SageMaker is supported.\n  To learn more about Amazon SageMaker, see Amazon SageMaker documentaion.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-sagemaker-adds-search-context/",
-      "pubDate": "2025-10-27T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "now-available",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-6ab33ada19c8",
       "title": "Accelerate data governance with custom subscription workflows in Amazon SageMaker",
       "description": "Organizations need to efficiently manage data assets while maintaining governance controls in their data marketplaces. Although manual approval workflows remain important for sensitive datasets and production systems, there’s an increasing need for automated approval processes with less sensitive datasets. In this post, we show you how to automate subscription request approvals within SageMaker, accelerating data access for data consumers.",
@@ -478,25 +452,6 @@
       ]
     },
     {
-      "id": "aws-news-b969c01826bf",
-      "title": "Aurora DSQL now supports resource-based policies",
-      "description": "Amazon Aurora DSQL now supports resource-based policies, enabling you to simplify access control for your Aurora DSQL resources. With resource-based policies, you can specify Identity and Access Management (IAM) principals and the specific IAM actions they can perform against your Aurora DSQL resources. Resource-based policies also enable you to implement Block Public Access (BPA), which helps to further restrict access to your Aurora DSQL public or VPC endpoints.\n  Aurora DSQL support for resource-based policies is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Osaka), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Frankfurt). To get started, visit the Aurora DSQL resource-based policies documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aurora-dsql-resource-based-policies",
-      "pubDate": "2025-10-24T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "iam",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-c1e726155a72",
       "title": "Incorporating responsible AI into generative AI project prioritization",
       "description": "In this post, we explore how companies can systematically incorporate responsible AI practices into their generative AI project prioritization methodology to better evaluate business value against costs while addressing novel risks like hallucination and regulatory compliance. The post demonstrates through a practical example how conducting upfront responsible AI risk assessments can significantly change project rankings by revealing substantial mitigation work that affects overall project complexity and timeline.",
@@ -512,27 +467,6 @@
       "tags": [
         "lex",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-280196bc4877",
-      "title": "Build a proactive AI cost management system for Amazon Bedrock – Part 1",
-      "description": "In this post, we introduce a comprehensive solution for proactively managing Amazon Bedrock inference costs through a cost sentry mechanism designed to establish and enforce token usage limits, providing organizations with a robust framework for controlling generative AI expenses. The solution uses serverless workflows and native Amazon Bedrock integration to deliver a predictable, cost-effective approach that aligns with organizational financial constraints while preventing runaway costs through leading indicators and real-time budget enforcement.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-proactive-ai-cost-management-system-for-amazon-bedrock-part-1/",
-      "pubDate": "2025-10-22T18:58:05.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "organizations",
-        "ga",
-        "integration"
       ]
     },
     {
