@@ -1,8 +1,134 @@
 {
-  "lastUpdated": "2025-11-12T06:16:13.118Z",
+  "lastUpdated": "2025-11-13T06:16:46.503Z",
   "category": "general",
-  "totalItems": 54,
+  "totalItems": 58,
   "items": [
+    {
+      "id": "aws-news-32e40b364aee",
+      "title": "The attendee’s guide to the AWS re:Invent 2025 Compute track",
+      "description": "From December 1st to December 5th, Amazon Web Services (AWS) will hold its annual premier learning event: re:Invent. There are over 2000+ learning sessions that focus on specific topics at various skill levels, and the compute team have created 76 unique sessions for you to choose. There are many sessions you can choose from, and we are here to help you choose the sessions that best fit your needs. Even if you cannot join in person, you can catch-up with many of the sessions on-demand and even watch the keynote and innovation sessions live.",
+      "link": "https://aws.amazon.com/blogs/compute/the-attendees-guide-to-the-aws-reinvent-2025-compute-track/",
+      "pubDate": "2025-11-12T20:58:36.000Z",
+      "source": "computeBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-f91308787af2",
+      "title": "Amazon ElastiCache supports M7g and R7g Graviton3-based nodes in AWS GovCloud (US) Regions",
+      "description": "Amazon ElastiCache now supports Graviton3-based M7g and R7g node families in the AWS GovCloud (US) Regions (US-East, US-West). ElastiCache Graviton3 nodes deliver improved price-performance compared to Graviton2. As an example, when running ElastiCache for Redis OSS on an R7g.4xlarge node, you can achieve up to 28% increased throughput (read and write operations per second) and up to 21% improved P99 latency, compared to running on R6g.4xlarge. In addition, these nodes deliver up to 25% higher networking bandwidth.\n  For complete information on pricing and regional availability, please refer to the Amazon ElastiCache pricing page. To get started, create a new cluster or upgrade to Graviton3 using the AWS Management Console. For more information on supported node types, please refer to the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-elasticache-m7g-r7g-graviton3-govcloud-regions/",
+      "pubDate": "2025-11-12T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "graviton",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-90448cb00798",
+      "title": "AWS Fault Injection Service (FIS) launches new test scenarios for partial failures",
+      "description": "AWS Fault Injection Service (FIS) now offers two new scenarios that help you proactively test how your applications handle partial disruptions within and across Availability Zones (AZs). These disruptions, often called gray failures, are more common than complete outages and can be particularly challenging to detect and mitigate.\n  The FIS scenario library provides AWS-created, pre-defined experiment templates that minimize the heavy lifting of designing tests. The new scenarios expand the testing capabilities for partial disruptions. \"AZ: Application Slowdown\" lets you test for increased latency and degraded performance for resources, dependencies, and connections within a single AZ. This helps validate observability setups, tune alarm thresholds, and practice critical operational decisions like AZ evacuation. The scenario works with both single and multi-AZ applications. \"Cross-AZ: Traffic Slowdown\" enables testing of how multi-AZ applications handle traffic disruptions between AZs.\n  With both scenarios, you can target specific portions of your application traffic for more realistic testing of partial disruptions. These scenarios are particularly valuable for testing application sensitivity to these more subtle disruptions that often manifest as traffic and application slowdowns. For instance, you can test how your application responds to degraded network paths causing packet loss for some traffic flows, or misconfigured connection pools that slow down specific requests.\n  To get started, access these new scenarios through the FIS scenario library in the AWS Management Console. These new scenarios are available in all AWS Regions where AWS FIS is available, including AWS GovCloud (US) Regions. To learn more, visit the FIS scenario library user guide. For pricing information, visit the FIS pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-fis-test-scenarios-partial-failures",
+      "pubDate": "2025-11-12T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f97b5d279fb3",
+      "title": "Amazon Connect Cases adds conditional field visibility and dependent options",
+      "description": "Amazon Connect Cases now supports conditional field visibility and dependent field options, so you can simplify case layouts and ensure agents capture the right information faster. For example, you can show a Return Reason field only when the case involves a return, and limit Issue Type choices to hardware-related options when Issue Category is set to Hardware.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town) AWS regions. To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-cases-conditional-field-visibility-dependent-options",
+      "pubDate": "2025-11-12T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-dd0a9685eaef",
+      "title": "Amazon CloudWatch Logs now supports Network Load Balancer access logs",
+      "description": "Amazon CloudWatch Logs now supports Network Load Balancer (NLB) access logs as vended logs, improving observability and simplifying debugging for network traffic patterns. You can now analyze NLB access logs directly in CloudWatch to gain insights into client connections, traffic distribution, and connection status, helping you identify and troubleshoot network issues faster.\n  With this CloudWatch Logs integration, you can track detailed access patterns using CloudWatch Logs Insights queries, create metric filters for monitoring, and review traffic patterns in real time using Live Tail. NLB access logs can be configured through the integrations tab of your network load balancer in AWS Management Console, AWS CLI, or SDKs. You can also configure delivery of NLB access logs to Amazon Data Firehose or Amazon S3 with support for Apache Parquet format.\n  NLB access logs delivery to CloudWatch is available in all AWS Commercial and GovCloud regions where Network Load Balancer and CloudWatch are available. NLB access logs are charged as vended logs when delivered to CloudWatch Logs and Data Firehose, while delivery to Amazon S3 is free (Parquet conversion is charged at $0.035/GB - N. Virginia). \n \nTo learn more about configuring NLB access logs in CloudWatch Logs, please visit our documentation. For pricing information, see CloudWatch pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-supports-logs-network-load-balancer-access-logs/",
+      "pubDate": "2025-11-12T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "cloudwatch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-43f2ebcb5bcb",
+      "title": "Announcing communication preferences for Security Incident Response",
+      "description": "AWS Security Incident Response now provides customizable communication preferences so you can focus on the updates that matter most to your role.\n  You can choose from various notification types including case changes, membership updates, and organizational announcements. This granular control reduces the previous one-size-fits-all approach where every team member received every update regardless of relevance. You can easily adjust these settings as your role evolves, with smart defaults that work effectively out of the box.\n  This feature is available to all Security Incident Response customers at no additional cost.\n  To configure your communication preferences, visit the Security Incident Response console and select any team member to customize their notification settings.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/communication-preferences-aws-security-incident-response",
+      "pubDate": "2025-11-12T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-bc0a5b6fab57",
+      "title": "Amazon EC2 F2 instances are now generally available in four additional AWS regions",
+      "description": "Starting today, the FPGA-powered Amazon EC2 F2 instances are now available in the Europe (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), and Canada (Central) regions. F2 instances are the second generation of FPGA powered instances and are the first to feature an FPGA with 16 GB of high bandwidth memory (HBM). Compared to F1 instances, the F2 instances have up to 3x vCPUs (192 vCPUS), 2x system memory (2 TB), 2x SSD space (7.6 TiB), and 4x networking bandwidth (100 Gbps). Amazon EC2 F2 instances are ideal for FPGA-accelerated solutions in genomics, multimedia processing, big data, network acceleration, and more.\n \nWith these additional regions, F2 instances are now available in eight regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Asia Pacific (Seoul). These instances can be purchased as either Savings Plans or On-Demand instances. To learn more, visit the Amazon EC2 F2 Instances page and F2 FPGA development kit GitHub page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-f2-instances-four-additional-aws-regions/",
+      "pubDate": "2025-11-12T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "generally-available",
+        "ga",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-2e7951081936",
       "title": "Mountpoint for Amazon S3 is now included in Amazon Linux 2023",
@@ -653,66 +779,6 @@
         "rds",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-9221386adf3e",
-      "title": "Amazon Managed Service for Prometheus adds anomaly detection",
-      "description": "Amazon Managed Service for Prometheus, a fully managed Prometheus-compatible monitoring service now supports anomaly detection. Anomaly detection applies machine-learning algorithms to continuously analyze time series and surfaces anomalies with minimal user intervention. You can use anomaly detection to isolate and troubleshoot unexpected changes in your metric behavior.\n \nAmazon Managed Service for Prometheus Anomaly Detection currently supports Random Cut Forest (RCF), an unsupervised algorithm for detecting anomalous data points within a time series. Once you create and configure an anomaly detector in an Amazon Managed Service for Prometheus workspace, it will create four new time series to represent resulting anomalies and confidence values along with them. Based on the resulting time series, you can create dynamic alerting rules in the Amazon Managed Service for Prometheus Alert manager, to notify you when anomalies occur, and you can also visualize the resulting time series alongside the input time series either in self-managed Grafana or Amazon Managed Grafana dashboards.\n \nThis feature is now available in all AWS commercial regions where Amazon Managed Service for Prometheus is generally available. To configure anomaly detection use the AWS CLI, SDK, or APIs. Check out the Amazon Managed Service for Prometheus user guide for detailed documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-managed-service-anomaly-detection/",
-      "pubDate": "2025-10-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "grafana",
-        "generally-available",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-af7e8a97b317",
-      "title": "Amazon S3 adds conditional write functionality to copy operations",
-      "description": "Amazon S3 expands conditional write functionality to copy operations. With conditional copy, you can now verify if the object exists or has been modified in your destination S3 bucket before copying it. This helps you coordinate simultaneous writes to the same object and prevents multiple concurrent writers from unintentionally overwriting the object.\n  You can now perform conditional copy operations through S3 CopyObject by including either the HTTP if-none-match header to verify object existence or the HTTP if-match header with ETag to validate the object’s content. Additionally, you can use the s3:if-match and s3:if-none-match condition keys in your S3 bucket policies to enforce conditional copy operations. S3 then evaluates the condition against the specified object's key or ETag before executing the copy operation in the destination bucket. This eliminates the need for additional client-side coordination mechanisms or API validation requests.\n  Conditional copy is available at no additional charge in all AWS Regions in both S3 general purpose and directory buckets. You can use the AWS SDK, API, or CLI to copy data conditionally to your buckets. To learn more about conditional operations, visit the S3 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-s3-conditional-write-functionality-copy-operations",
-      "pubDate": "2025-10-29T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-f75905f6b25e",
-      "title": "AWS Control Tower is now available in AWS Asia Pacific (New Zealand) Region",
-      "description": "Starting today, customers can use AWS Control Tower in the AWS Asia Pacific (New Zealand) Region. With this launch, AWS Control Tower is available in 34 AWS Regions and the AWS GovCloud (US) Regions. AWS Control Tower offers the easiest way to set up and govern a secure, multi-account AWS environment. It simplifies AWS experiences by orchestrating multiple AWS services on your behalf while maintaining the security and compliance needs of your organization. You can set up a multi-account AWS environment within 30 minutes or less, govern new or existing account configurations, gain visibility into compliance status, and enforce controls at scale.\n  If you are new to AWS Control Tower, you can launch it today in any of the supported regions and you can use AWS Control Tower to govern your multi-account environment in all supported Regions. If you are already using AWS Control Tower and you want to extend its governance features to the newly supported regions in your accounts, you can go to the settings page in your AWS Control Tower dashboard, select your regions, and update your landing zone. Once you update all your governed accounts, your landing zone, managed accounts, and registered OUs will be under governance in the new region(s).\n  For a full list of Regions where AWS Control Tower is available, see the AWS Region Table. To learn more, visit the AWS Control Tower homepage or see the AWS Control Tower User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/aws-control-tower-asia-pacific-new-zealand-region/",
-      "pubDate": "2025-10-29T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "now-available",
-        "update",
-        "support",
-        "new-region"
       ]
     },
     {
