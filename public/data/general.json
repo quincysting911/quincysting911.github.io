@@ -1,8 +1,198 @@
 {
-  "lastUpdated": "2025-11-14T06:15:41.074Z",
+  "lastUpdated": "2025-11-15T06:14:00.563Z",
   "category": "general",
-  "totalItems": 56,
+  "totalItems": 60,
   "items": [
+    {
+      "id": "aws-news-c36d51e13ef0",
+      "title": "Building serverless applications with Rust on AWS Lambda",
+      "description": "Today, AWS Lambda is promoting Rust support from Experimental to Generally Available. This means you can now use Rust to build business-critical serverless applications, backed by AWS Support and the Lambda availability SLA.",
+      "link": "https://aws.amazon.com/blogs/compute/building-serverless-applications-with-rust-on-aws-lambda/",
+      "pubDate": "2025-11-14T21:38:15.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "experimental",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-78f167df36fd",
+      "title": "AWS Lambda now supports Java 25",
+      "description": "You can now develop AWS Lambda functions using Java 25 either as a managed runtime or using the container base image. This blog post highlights notable Java language features, Java Lambda runtime updates, and how you can use the new Java 25 runtime in your serverless applications.",
+      "link": "https://aws.amazon.com/blogs/compute/aws-lambda-now-supports-java-25/",
+      "pubDate": "2025-11-14T20:51:20.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d537ce458e60",
+      "title": "Amazon ECS improves Service Availability during Rolling deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now includes enhancements that improve service availability during rolling deployments. These enhancements help maintain availability when new application version tasks are failing, when current tasks are unexpectedly terminated, or when scale-out is triggered during deployments.\n \nPreviously, when tasks in your currently running version became unhealthy or were terminated during a rolling deployment, ECS would attempt to replace them with the new version to prioritize deployment progress. If the new version could not launch successfully—such as when new tasks fail health checks or fail to start—these replacements would fail and your service availability could drop. ECS now replaces unhealthy or terminated tasks using the same service revision they belong to. Unhealthy tasks in your currently running version are replaced with healthy tasks from that same version, independent of the new version's status. Additionally, when Application Auto Scaling triggers during a rolling deployment, ECS applies scale-out to both service revisions, ensuring your currently running version can handle increased load even if the new version is failing.\n \nThese improvements respect your service's maximumPercent and minimumHealthyPercent settings. These enhancements are enabled by default for all services using the rolling deployment strategy and are available in all AWS Regions. To learn more about rolling-update deployments, refer Link.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecs-service-availability-rolling-deployments/",
+      "pubDate": "2025-11-14T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "launch",
+        "update",
+        "improvement",
+        "enhancement"
+      ]
+    },
+    {
+      "id": "aws-news-a715d65dff85",
+      "title": "AWS Lambda announces Provisioned Mode for SQS event source mapping (ESM)",
+      "description": "AWS Lambda announces Provisioned Mode for SQS event-source-mappings (ESMs) that subscribe to Amazon SQS, a feature that allows you to optimize the throughput of your SQS ESM by provisioning event polling resources that remain ready to handle sudden spikes in traffic. SQS ESM configured with Provisioned Mode scales 3x faster (up to 1000 concurrent executions per minute) and supports 16x higher concurrency (up to 20,000 concurrent executions) than default SQS ESM capability. This allows you to build highly responsive and scalable event-driven applications with stringent performance requirements.\n  Customers use SQS as an event source for Lambda functions to build mission-critical applications using Lambda's fully-managed SQS ESM, which automatically scales polling resources in response to events. However, for applications that need to handle unpredictable bursts of traffic, lack of control over the throughput of ESM can lead to delays in event processing. Provisioned Mode for SQS ESM allows you to fine tune the throughput of the ESM by provisioning a minimum and maximum number of polling resources called event pollers that are ready to handle sudden spikes in traffic. With this feature, you can process events with lower latency, handle sudden traﬃc spikes more eﬀectively, and maintain precise control over your event processing resources.\n  This feature is generally available in all AWS Commercial Regions. You can activate Provisioned Mode for SQS ESM by configuring a minimum and maximum number of event pollers in the ESM API, AWS Console, AWS CLI, AWS SDK, AWS CloudFormation, and AWS SAM. You pay for the usage of event pollers, along a billing unit called Event Poller Unit (EPU). To learn more, read Lambda ESM documentation and AWS Lambda pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-lambda-provisioned-mode-sqs-esm",
+      "pubDate": "2025-11-14T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "sqs",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-42e8117cd1ff",
+      "title": "Announcing agreement EventBridge notifications for AWS Marketplace",
+      "description": "AWS Marketplace now delivers purchase agreement events via Amazon EventBridge, transitioning from our Amazon Simple Notification Service (SNS) notifications for Software as a Service and Professional Services product types. This enhancement simplifies event-driven workflows for both sellers and buyers by enabling seamless integration of AWS Marketplace Agreements, reducing operational overhead, and improving event monitoring and automation.\n  Marketplace sellers (Independent Software Vendors and Channel Partners) and buyers will receive notifications for all events in the lifecycle of their Marketplace Agreements, including when they are created, terminated, amended, replaced, renewed, cancelled or expired. Additionally, ISVs receive license-specific events to manage customer entitlements. With EventBridge integration, you can route these events to various AWS services such as AWS Lambda, Amazon S3, Amazon CloudWatch, AWS Step Functions, and Amazon SNS, maintaining compatibility with existing SNS-based workflows while gaining advanced routing capabilities.\n  EventBridge notifications are generally available and can be created in AWS US East (N. Virginia) Region.\n  To learn more about AWS Marketplace event notifications, see the AWS Marketplace documentation. You can start using EventBridge notifications today by visiting the Amazon EventBridge console and enabling the 'aws.agreement-marketplace' event source.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/agreement-eventbridge-notifications-aws-marketplace",
+      "pubDate": "2025-11-14T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "cloudwatch",
+        "generally-available",
+        "ga",
+        "enhancement",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-a2192835930d",
+      "title": "Amazon RDS for PostgreSQL now supports major version 18",
+      "description": "Amazon RDS for PostgreSQL now supports major version 18, starting with PostgreSQL version 18.1. PostgreSQL 18 introduces several important community updates that improve query performance and database management.\n  PostgreSQL 18.0 includes \"skip scan\" support for multicolumn B-tree indexes and improved WHERE clause handling for OR and IN conditions enhance query optimization. Parallel Generalized Inverted Index (GIN) builds and updated join operations boost overall database performance. The introduction of Universally Unique Identifiers Version 7 (UUIDv7) combines timestamp-based ordering with traditional UUID uniqueness, particularly beneficial for high-throughput distributed systems. PostgreSQL 18 also improves observability by providing buffer usage counts, index lookup statistics during query execution, and per-connection I/O utilization metrics. This release also includes support for the new pgcollection extension, and updates to existing extensions such as pgaudit 18.0, pgvector 0.8.1, pg_cron 1.6.7, pg_tle 1.5.2, mysql_fdw 2.9.3, and tds_fdw 2.0.5.\n  You can upgrade your database using several options including RDS Blue/Green deployments, upgrade in-place, restore from a snapshot. Learn more about upgrading your database instances in the Amazon RDS User Guide.\n  Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. See Amazon RDS for PostgreSQL Pricing for pricing details and regional availability. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-rds-postgresql-major-version-18/",
+      "pubDate": "2025-11-14T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d16610fcf596",
+      "title": "AWS Network Firewall is now available in the AWS New Zealand (Auckland) region",
+      "description": "Starting today, AWS Network Firewall is available in the AWS New Zealand (Auckland) Region, enabling customers to deploy essential network protections for all their Amazon Virtual Private Clouds (VPCs).\n  AWS Network Firewall is a managed firewall service that is easy to deploy. The service automatically scales with network traffic volume to provide high-availability protections without the need to set up and maintain the underlying infrastructure. It is integrated with AWS Firewall Manager to provide you with central visibility and control over your firewall policies across multiple AWS accounts.\n  To see which regions AWS Network Firewall is available in, visit the AWS Region Table. For more information, please see the AWS Network Firewall product page and the service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/network-firewall-new-zealand-auckland-region/",
+      "pubDate": "2025-11-14T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-b53bff7fe55d",
+      "title": "AWS Lambda adds support for Rust",
+      "description": "AWS Lambda now supports building serverless applications using Rust. Previously, AWS classified Rust support in Lambda as ‘experimental’ and did not recommend using Rust for production workloads. With this launch, Rust support in Lambda is now Generally Available, backed by AWS Support and the Lambda SLA.\n  Rust is a popular programming language, offering high performance, memory efficiency, compile-time code safety features, and a mature package management and tooling ecosystem. This makes Rust an ideal choice for developers building performance-sensitive serverless applications. Developers can now build business-critical serverless applications in Rust and run them in Lambda, taking advantage of Lambda’s built-in event source integrations, fast scaling from zero, automatic patching, and usage-based pricing.\n  Lambda support for Rust is available in all AWS Regions, including the AWS GovCloud (US) Regions and the China Regions.\n  For more information, see Building Lambda functions with Rust in the Lambda documentation, or our blog post Building serverless applications with Rust on AWS Lambda.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-lambda-rust/",
+      "pubDate": "2025-11-14T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "launch",
+        "experimental",
+        "generally-available",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1f0f75da14a4",
+      "title": "Amazon SQS expands IPv6 support to the AWS GovCloud (US) Regions",
+      "description": "Amazon Simple Queue Service (Amazon SQS) now allows customers to make API requests over Internet Protocol version 6 (IPv6) in the AWS GovCloud (US) Regions. The new endpoints have also been validated under the Federal Information Processing Standard (FIPS) 140-3 program.\n  Amazon SQS is a fully managed message queuing service that enables decoupling and scaling of distributed systems, microservices, and serverless applications. With this update, customers have the option of using either IPv6 or IPv4 when sending requests over dual-stack public or VPC endpoints.\n  Amazon SQS now supports IPv6 in all Regions where the service is available, including AWS Commercial, AWS GovCloud (US) and China Regions. For more information on using IPv6 with Amazon SQS, please refer to our developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sqs-ipv6-aws-govcloud-regions/",
+      "pubDate": "2025-11-14T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "sqs",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-525a7aa26225",
       "title": "Your guide to AWS Analytics at AWS re:Invent 2025",
@@ -429,9 +619,28 @@
       ]
     },
     {
+      "id": "aws-news-add8affd2236",
+      "title": "AWS announces a new Regional planning tool in Builder Center",
+      "description": "Today, AWS announced a new tool called AWS Capabilities by Region in Builder Center. This tool helps you discover and compare AWS services, features, APIs, CloudFormation resources across AWS Regions. You can explore service availability through an interactive interface, compare multiple Regions side-by-side, and view forward-looking roadmap information. This detailed visibility helps you make informed decisions about global deployments and prevent project delays due to service unavailability.\n  In addition to this tool, AWS also enhanced the AWS Knowledge Model Context Protocol (MCP) Server to include information about Regional capabilities in an LLM-compatible format. MCP clients and agentic frameworks can connect to the AWS Knowledge MCP Server to get real-time insights into regional service availability and suggestions for alternative solutions when specific services or features are unavailable.\n  You can begin exploring AWS Capabilities by Region in AWS Builder Center today. The Knowledge MCP server is also publicly accessible at no cost and does not require an AWS account. Usage is subject to rate limits. Follow the getting started guide for setup instructions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-regional-planning-tool-builder-center",
+      "pubDate": "2025-11-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "new-region",
+        "roadmap"
+      ]
+    },
+    {
       "id": "aws-news-f96966b5c806",
       "title": "Amazon ECS announces non-root container support for managed EBS volumes",
-      "description": "Amazon Elastic Container Service (ECS) now supports mounting Amazon Elastic Block Store (EBS) volumes to containers running as non-root users. With this launch, ECS automatically configures the EBS volume’s file system permissions to allow non-root users to read and write data securely, while preserving the root-level ownership of the volume. This enhancement simplifies security-first container deployments by removing the need for manual permission management or custom entrypoint scripts.\n \nThis feature enhances container security by allowing tasks to run as non-root users, reducing the risk of privilege escalation and unauthorized access to data. Previously, for a container in a task to write to a mounted Amazon EBS volume, it had to run as the root user. ECS now automatically manages EBS volume permissions, simplifying workflows and ensuring that all containers within a task — regardless of user ID — can securely read and write to the mounted volume.\n \nThis feature is now available in all AWS Regions where Amazon ECS and Amazon EBS are supported, for EC2, AWS Fargate, and ECS Managed Instances launch types. To learn more, see Use Amazon EBS volumes with Amazon ECS in the Amazon ECS Developer Guide.",
+      "description": "Amazon Elastic Container Service (ECS) now supports mounting Amazon Elastic Block Store (EBS) volumes to containers running as non-root users. With this launch, ECS automatically configures the EBS volume’s file system permissions to allow non-root users to read and write data securely, while preserving the root-level ownership of the volume. This enhancement simplifies security-first container deployments by removing the need for manual permission management or custom entrypoint scripts.\n \nThis feature enhances container security by allowing tasks to run as non-root users, reducing the risk of privilege escalation and unauthorized access to data. Previously, for a container in a task to write to a mounted Amazon EBS volume, it had to run as the root user. ECS now automatically manages EBS volume permissions, simplifying workflows and ensuring that all containers within a task — regardless of user ID — can securely read and write to the mounted volume.\n \nThis feature is now available in all AWS Regions except AWS GovCloud (US), where Amazon ECS and Amazon EBS are supported, for EC2, AWS Fargate, and ECS Managed Instances launch types. To learn more, see Use Amazon EBS volumes with Amazon ECS in the Amazon ECS Developer Guide.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecs-non-root-container-managed-ebs-volumes",
       "pubDate": "2025-11-06T15:00:00.000Z",
       "source": "whatsNew",
@@ -452,25 +661,6 @@
         "now-available",
         "enhancement",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-add8affd2236",
-      "title": "AWS announces a new Regional planning tool in Builder Center",
-      "description": "Today, AWS announced a new tool called AWS Capabilities by Region in Builder Center. This tool helps you discover and compare AWS services, features, APIs, CloudFormation resources across AWS Regions. You can explore service availability through an interactive interface, compare multiple Regions side-by-side, and view forward-looking roadmap information. This detailed visibility helps you make informed decisions about global deployments and prevent project delays due to service unavailability.\n  In addition to this tool, AWS also enhanced the AWS Knowledge Model Context Protocol (MCP) Server to include information about Regional capabilities in an LLM-compatible format. MCP clients and agentic frameworks can connect to the AWS Knowledge MCP Server to get real-time insights into regional service availability and suggestions for alternative solutions when specific services or features are unavailable.\n  You can begin exploring AWS Capabilities by Region in AWS Builder Center today. The Knowledge MCP server is also publicly accessible at no cost and does not require an AWS account. Usage is subject to rate limits. Follow the getting started guide for setup instructions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-regional-planning-tool-builder-center",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "new-region",
-        "roadmap"
       ]
     },
     {
@@ -636,85 +826,6 @@
       ]
     },
     {
-      "id": "aws-news-e9c2485e386b",
-      "title": "Amazon CloudWatch Synthetics adds multi-browser support in AWS GovCloud Regions",
-      "description": "Amazon CloudWatch Synthetics multi-browser support is now available in the AWS GovCloud (US-East, US-West) Regions. This expansion enables customers in these two regions to test and monitor their web applications using both Chrome and Firefox browsers.\n  With this launch, you can run the same canary script across Chrome and Firefox when using Playwright-based canaries or Puppeteer-based canaries. CloudWatch Synthetics automatically collects browser-specific performance metrics, success rates, and visual monitoring results while maintaining an aggregate view of overall application health. This helps development and operations teams quickly identify and resolve browser compatibility issues that could affect application reliability.\n  To learn more about configuring multi-browser canaries, see the canary docs in the Amazon CloudWatch Synthetics User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-synthetics-multi-browser-aws-govcloud-regions/",
-      "pubDate": "2025-11-03T19:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "launch",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-c400aa8b6c90",
-      "title": "Amazon Cognito removes Machine-to-Machine app client price dimension",
-      "description": "We're excited to announce a simplified pricing model for Amazon Cognito's machine-to-machine (M2M) authentication. Starting today we are removing the M2M app client pricing dimension, making it more cost-effective for customers to build and scale their M2M applications. Cognito supports applications that access API data with machine identities. Machine identities in user pools are clients that run on application servers and connect to remote APIs. Their operation happens without user interaction such as scheduled tasks, data streams, or asset updates. This change reduces the pricing of Cognito for customers using M2M authentication by removing the app client price dimension. Customers will continue to be charged based on the number of successful M2M token requests per month.\n  Previously, customers were charged for each M2M app client registered, regardless of usage amount, and each successful token request made by the app client to access a resource. With this change, customers will only pay for their successful token requests, making it more cost-effective to build and scale M2M applications using Amazon Cognito.\n  This pricing change is automatic and requires no action from customers. It is effective in all supported Amazon Cognito regions. To learn more about Amazon Cognito pricing, visit our pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cognito-removes-machine-machine-app-client-price-dimension",
-      "pubDate": "2025-11-03T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e8a0788efaa5",
-      "title": "Amazon Route 53 Resolver now supports AWS PrivateLink",
-      "description": "Amazon Route 53 Resolver now supports AWS PrivateLink. Customers can now access and manage Route 53 Resolver and all the related features (Resolver endpoints, Route 53 Resolver DNS Firewall, Resolver Query Logging, Resolver for AWS Outposts) privately, without going through the public internet. AWS PrivateLink provides private connectivity between VPCs, AWS services, and on-premises applications, securely over the Amazon network. When Route 53 Resolver and its features are accessed via AWS PrivateLink, all operations, such as creating, deleting, editing, and listing, can be handled via the Amazon private network. \n  Amazon Route 53 Resolver responds recursively to DNS queries from AWS resources for public records, Amazon VPC-specific DNS names, and Amazon Route 53 private hosted zones, and is available by default in all VPCs. Route 53 Resolver also offers features (Resolver endpoints, Route 53 Resolver DNS Firewall, Resolver Query Logging, Resolver for AWS Outposts) that you can opt-into. You can use Resolver and its features with AWS PrivateLink in regions where Route 53 Resolver and all its associated features are available today, including the AWS GovCloud (US) Regions. For more information about the AWS Regions where Resolver and its features are available, see here.\n  To learn more about Route 53 Resolver and its features, please refer to the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-route53-resolver-supports-aws-privatelink",
-      "pubDate": "2025-10-31T22:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "outposts"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "outposts",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-1361270bf235",
-      "title": "Amazon DynamoDB Accelerator now supports AWS PrivateLink",
-      "description": "Amazon DynamoDB Accelerator (DAX) now supports AWS PrivateLink, enabling you to securely access DAX management APIs such as CreateCluster, DescribeClusters, and DeleteCluster over private IP addresses within your virtual private cloud (VPC). DAX clusters already run inside your VPC, and all data plane operations like GetItem and Query are handled privately within the VPC. With this launch, you can now perform cluster management operations privately, without connecting to the public regional endpoint.\n  With AWS PrivateLink, you can simplify private network connectivity between virtual private clouds (VPCs), DAX, and your on-premises data centers using interface VPC endpoints and private IP addresses. It helps you meet compliance regulations and eliminates the need to use public IP addresses, configure firewall rules, or configure an Internet gateway to access DAX from your on-premises data centers.\n  AWS PrivateLink for DAX is available in all Regions where DAX is available today. For information about DAX Regional availability, see the “Service endpoints” section in Amazon DynamoDB endpoints and quotas. There is an additional cost to use the feature. Please see AWS PrivateLink pricing for more details. To get started with DAX and PrivateLink, see AWS PrivateLink for DAX.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-dynamodb-accelerator-privatelink/",
-      "pubDate": "2025-10-31T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "dynamodb"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "dynamodb",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-084a1116597e",
       "title": "Introducing AWS Lambda event source mapping tools in the AWS Serverless MCP Server",
       "description": "Modern serverless applications increasingly rely on event-driven architectures, where AWS Lambda functions process events from various sources like Amazon Kinesis, Amazon DynamoDB Streams, Amazon Simple Queue Service (Amazon SQS), Amazon Managed Streaming for Apache Kafka (Amazon MSK), and self-managed Apache Kafka. Although event source mappings (ESM) offer a powerful mechanism for integrating AWS Lambda with […]",
@@ -854,26 +965,6 @@
       ],
       "tags": [
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-94928335a663",
-      "title": "Accessing private Amazon API Gateway endpoints through custom Amazon CloudFront distribution using VPC Origins",
-      "description": "This post demonstrates how you can connect CloudFront with a Private REST API in Amazon REST API Gateway using a VPC origin.",
-      "link": "https://aws.amazon.com/blogs/compute/accessing-private-amazon-api-gateway-endpoints-through-custom-amazon-cloudfront-distribution-using-vpc-origins/",
-      "pubDate": "2025-09-09T17:58:21.000Z",
-      "source": "computeBlog",
-      "services": [
-        "cloudfront",
-        "api gateway"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudfront",
-        "api gateway",
-        "ga"
       ]
     },
     {
