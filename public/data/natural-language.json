@@ -1,8 +1,78 @@
 {
-  "lastUpdated": "2025-11-17T06:16:48.608Z",
+  "lastUpdated": "2025-11-18T06:16:02.100Z",
   "category": "natural-language",
-  "totalItems": 12,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-a0f48d5a8b3e",
+      "title": "Announcing EC2 Image Builder support for Lambda and Step functions",
+      "description": "EC2 Image Builder now supports invoking Lambda functions and executing Step Functions state machine through image workflows. These capabilities enable you to incorporate complex, multi-step workflows and custom validation logic into your image creation process, providing greater flexibility and control over how your images are built and validated.\n  Prior to this launch, customers had to write custom code and implement multi-step workarounds to integrate Lambda or Step Functions within image workflows. This was a cumbersome process that was time-consuming to set up, difficult to maintain, and prone to errors. With these new capabilities, you can now seamlessly invoke Lambda functions to execute custom logic or orchestrate Step Functions state machines for complex, multi-step workflows. This native integration allows you to implement use cases such as custom compliance validation, sending custom notifications, multi-stage security testing —all within your Image Builder workflow.\n  These capabilities are available to all customers at no additional costs, in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions.\n  You can get started from the EC2 Image Builder Console, CLI, API, CloudFormation, or CDK, and learn more in the EC2 Image Builder documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ec2-image-builder-lambda-step-functions",
+      "pubDate": "2025-11-17T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "lambda",
+        "ec2",
+        "cloudformation",
+        "step functions"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "lambda",
+        "ec2",
+        "cloudformation",
+        "step functions",
+        "launch",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-311cc5f59277",
+      "title": "Amazon EC2 M8i and M8i-flex instances are now available in Asia Pacific (Mumbai) Region",
+      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in Asia Pacific (Mumbai) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex page or visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-m8i-m8i-flex-instances-asia-pacific-mumbai-region",
+      "pubDate": "2025-11-17T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-043d9f2c9139",
+      "title": "Amazon MQ now supports LDAP authentication for RabbitMQ",
+      "description": "Amazon MQ now supports LDAP (Lightweight Directory Access Protocol) authentication for RabbitMQ brokers in all available AWS regions. This feature enables RabbitMQ brokers to authenticate and authorize Amazon MQ users using identity providers which support LDAP, providing enhanced security and flexibility in access management. You can now authenticate your Amazon MQ users through the credentials stored in your LDAP server. You can also add, delete, and modify Amazon MQ users and assign permissions to topics and queues. \n  You can configure LDAP authentication and authorization on your RabbitMQ broker on Amazon MQ using the AWS Console, AWS CloudFormation, AWS Command Line Interface (CLI), or the AWS Cloud Development Kit (CDK). To get started, create a new RabbitMQ broker with LDAP authentication or update your existing broker's configuration to enable LDAP support. This feature maintains compatibility with standard RabbitMQ LDAP implementations, ensuring seamless migration for existing LDAP enabled brokers. For detailed configuration options and steps, refer to the Amazon MQ documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-mq-ldap-authentication-rabbitmq/",
+      "pubDate": "2025-11-17T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudformation"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "cloudformation",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-115cc57ea2a6",
       "title": "AWS Lambda adds support for Java 25",
@@ -129,26 +199,6 @@
       ]
     },
     {
-      "id": "aws-news-f8b80d2313fc",
-      "title": "EC2 Auto Scaling announces warm pool support for Auto Scaling groups that have mixed instances policies",
-      "description": "Starting today, you can add warm pools to Auto Scaling groups (ASGs) that have mixed instances policies. With warm pools, customers can improve the elasticity of their applications by creating a pool of pre-initialized EC2 instances that are ready to quickly serve application traffic. By combining warm pools with instance type flexibility, an ASG can rapidly scale out to its maximum size at any time, deploying applications across multiple instance types to enhance availability.\n  Warm pools are particularly beneficial for applications with lengthy initialization processes, such as writing large amounts of data to disk, running complex custom scripts, or other time-consuming setup procedures that can take several minutes or longer to serve traffic. With this new release, the warm pool feature now works seamlessly with ASGs configured for multiple On-Demand instance types, whether specified through manual instance type lists or attribute-based instance type selection. The combination of instance type flexibility and warm pools provides a powerful solution that helps customers scale out efficiently while maximizing availability.\n  The warm pool feature is available through the AWS Management Console, the AWS SDKs, and the AWS Command Line Interface (CLI). It is available in all public AWS Regions and AWS GovCloud (US) Regions. To learn more about warm pools, visit this AWS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ec2-auto-scaling-warm-pool-mixed-instances-policies/",
-      "pubDate": "2025-11-04T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-6b8927b02983",
       "title": "Breaking down monolith workflows: Modularizing AWS Step Functions workflows",
       "description": "You can use AWS Step Functions to orchestrate complex business problems. However, as workflows grow and evolve, you can find yourself grappling with monolithic state machines that become increasingly difficult to maintain and update. In this post, we show you strategies for decomposing large Step Functions workflows into modular, maintainable components.",
@@ -184,28 +234,6 @@
       "tags": [
         "lex",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c83bf77ed8b8",
-      "title": "Stream mainframe data to AWS in near real time with Precisely and Amazon MSK",
-      "description": "In this post, we introduce an alternative architecture to synchronize mainframe data to the cloud using Amazon Managed Streaming for Apache Kafka (Amazon MSK) for greater flexibility and scalability. This event-driven approach provides additional possibilities for mainframe data integration and modernization strategies.",
-      "link": "https://aws.amazon.com/blogs/big-data/stream-mainframe-data-to-aws-in-near-real-time-with-precisely-and-amazon-msk/",
-      "pubDate": "2025-10-16T18:55:25.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "lex",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "kafka",
-        "msk",
-        "integration"
       ]
     },
     {
