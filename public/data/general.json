@@ -1,8 +1,126 @@
 {
-  "lastUpdated": "2025-11-18T06:16:02.100Z",
+  "lastUpdated": "2025-11-19T06:15:49.009Z",
   "category": "general",
-  "totalItems": 61,
+  "totalItems": 56,
   "items": [
+    {
+      "id": "aws-news-05b9bc2e3644",
+      "title": "Python 3.14 runtime now available in AWS Lambda",
+      "description": "AWS Lambda now supports Python 3.14 as both a managed runtime and container base image. Python is a popular language for building serverless applications. Developers can now take advantage of new features and enhancements when creating serverless applications on Lambda.",
+      "link": "https://aws.amazon.com/blogs/compute/python-3-14-runtime-now-available-in-aws-lambda/",
+      "pubDate": "2025-11-18T21:29:50.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "now-available",
+        "new-feature",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a3278978d471",
+      "title": "Amazon Redshift now supports Just-In-Time (JIT) ANALYZE for Apache Iceberg tables",
+      "description": "Amazon Redshift today announces the general availability of Just-In-Time (JIT) ANALYZE capability for Apache Iceberg tables, enabling users to run high performance read and write analytics queries on Apache Iceberg tables within the Redshift data lake. The Apache Iceberg open table format has been used by many customers to simplify data processing on rapidly expanding and evolving tables stored in data lakes.\n  Unlike traditional data warehouses, data lakes often lack comprehensive table-level and column-level statistics about the underlying data, making it challenging for query engines to choose the most optimal query execution plans without visibility into the table and column statistics. Sub-optimal query execution plans can lead to slower and less predictable performance.\n  ‘JIT ANALYZE’ is a new Amazon Redshift feature that automatically collects and utilizes statistics for Iceberg tables during query execution, eliminating manual statistics collection while giving the query engine the information it needs to generate optimal query execution plans. The system uses intelligent heuristics to identify queries that will benefit from statistics, maintains lightweight sketch data structures, and builds high quality table-level and column-level statistics. JIT ANALYZE delivers out-of-the-box performance on par with queries that have pre-calculated statistics, while providing the foundation for many other performance optimizations.\n  The Amazon Redshift JIT ANALYZE feature for Apache Iceberg tables is now available in all AWS regions where Amazon Redshift is available. Users do not need to make any changes or enable any settings to take advantage of this new data lake query optimization. To get started, visit the documentation page for Amazon Redshift Management Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-redshift-jit-analyze-apache-iceberg-tables/",
+      "pubDate": "2025-11-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e324298598f7",
+      "title": "AWS announces Supplementary Packages for Amazon Linux",
+      "description": "Today, AWS announces the general availability of Supplementary Packages for Amazon Linux (SPAL), a dedicated repository that provides developers and system administrators with streamlined access to thousands of pre-built, EPEL9 packages compatible for Amazon Linux 2023 (AL2023). Amazon Linux serves as the foundation for countless applications running on AWS, but developers often face lengthy processes when building packages from source code. SPAL addresses this challenge by offering ready-to-use packages that accelerate development workflows for teams working with AL2023 environments.\n  With SPAL, development teams can significantly reduce deployment times and focus on core application development rather than package compilation. This solution is particularly valuable for DevOps engineers, system administrators, and developers who need reliable packages for production workloads without the overhead of building from source. SPAL packages are derived from the community-maintained EPEL9 project, with AWS providing security patches as they become available upstream. AWS will continue expanding the repository based on customer feedback through the Amazon Linux 2023 GitHub repository.\n  Supplementary Packages for Amazon Linux (SPAL) is available in all AWS Commercial Regions, including the AWS GovCloud (US) Regions and China.\n  To get started, review available packages in the SPAL repository and update your package management configuration to include the SPAL repository for Amazon Linux 2023. To learn more about this feature consult the SPAL FAQs or AWS Documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/supplementary-packages-amazon-linux/",
+      "pubDate": "2025-11-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-43c9c76b43d8",
+      "title": "AWS CloudFormation accelerates dev-test cycle with early validation and simplified troubleshooting",
+      "description": "AWS CloudFormation now offers capabilities that allow customers to catch deployment errors before resource provisioning begins and resolve them more efficiently. Change set creation now provides early feedback on common deployment errors. Stack events are now grouped by an operation ID with access through the new describe-operation API to accelerate analysis of deployment errors. This empowers developers to reduce deployment cycle times and cut troubleshooting time from minutes to seconds.\n  When you create a change set, CloudFormation now validates your template against three common failure causes: invalid property syntax, resource name conflict with existing resources in your account, and S3 bucket emptiness constraint on delete operations. If validation fails, the change set status shows ‘FAILED’ with a detailed status on the validation failure. You can then view details for each failure, including the property path associated with them, to pinpoint exactly where issues occur in your template. When you execute a validated change set, the deployment can still fail because of resource-specific runtime errors, such as resource limits or service-specific constraints. For troubleshooting runtime errors, every stack operation now receives a unique ID. You can zoom into the stack events for an operation and filter down to the events that caused the deployment to fail. This allows you to quickly identify root causes, reducing your troubleshooting time.\n  Get started by creating change sets through the CloudFormation Console, CLI, or SDK. View stack events by operation ID in the CloudFormation Console Events tab or via describe-events API. To learn more, visit the validate deployment and troubleshooting User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudformation-dev-test-cycle-validation-troubleshooting/",
+      "pubDate": "2025-11-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "cloudformation",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-8fc9ffdf4659",
+      "title": "AWS Lambda adds support for Python 3.14",
+      "description": "AWS Lambda now supports creating serverless applications using Python 3.14. Developers can use Python 3.14 as both a managed runtime and a container base image, and AWS will automatically apply updates to the managed runtime and base image as they become available.\n  Python 3.14 is the latest long-term support release of Python. This release provides Lambda customers access to the latest Python 3.14 language features. You can use Python 3.14 with Lambda@Edge (in supported Regions), allowing you to customize low-latency content delivered through Amazon CloudFront. Powertools for AWS Lambda (Python), a developer toolkit to implement serverless best practices and increase developer velocity, also supports Python 3.14. You can use the full range of AWS deployment tools, including the Lambda console, AWS CLI, AWS Serverless Application Model (AWS SAM), AWS CDK, and AWS CloudFormation to deploy and manage serverless applications written in Python 3.14.\n  The Python 3.14 runtime is available in all Regions, including the AWS GovCloud (US) Regions and China Regions.\n  For more information, including guidance on upgrading existing Lambda functions, read our blog post. For more information about AWS Lambda, visit the product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-lambda-python-314/",
+      "pubDate": "2025-11-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "cloudfront"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "cloudfront",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8d8da7028d4c",
+      "title": "Safely handle configuration drift with AWS CloudFormation drift-aware change sets",
+      "description": "AWS CloudFormation launches drift-aware change sets that can compare an IaC template with the actual state of infrastructure and bring drifted resources in line with their template definitions. Configuration drift occurs when infrastructure managed by IaC is modified via the AWS Management Console, SDK, or CLI. With drift-aware change sets, you can revert drift and keep infrastructure in sync with templates. Additionally, you can preview the impact of deployments on drifted resources and prevent unexpected changes.\n  Customers can modify infrastructure outside of IaC when troubleshooting operational incidents. This creates the risk of unexpected changes in future IaC deployments, impacts the security posture of infrastructure, and hampers reproducibility for testing and disaster recovery. Standard change sets can compare a template with your last-deployed template, but do not consider drift. Drift-aware change sets provide a three-way diff between a new template, last-deployed template, and actual infrastructure state. If your diff predicts unintended overwrites of drift, you can update your template values and recreate the change set. During change set execution, CloudFormation will match resource properties with template values and recreate resources deleted outside of IaC. If a provisioning error occurs, CloudFormation will restore infrastructure to its actual state before deployment.\n  To get started, create a change set for an existing stack from the CloudFormation Console and choose “Drift-aware” as the change set type. Alternatively, pass the --deployment-mode REVERT_DRIFT parameter to the CreateChangeSet API from the AWS CLI or SDK. To learn more, visit the CloudFormation User Guide.\n  Drift-aware change sets are available in AWS Regions where CloudFormation is available. Refer to the AWS Region table to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/configuration-drift-enhanced-cloudformation-sets/",
+      "pubDate": "2025-11-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "launch",
+        "preview",
+        "update"
+      ]
+    },
     {
       "id": "aws-news-30d9bfa1e464",
       "title": "Amazon Route 53 DNS Firewall adds protection against Dictionary-based DGA attacks",
@@ -584,85 +702,6 @@
       ]
     },
     {
-      "id": "aws-news-1d1441f197d0",
-      "title": "Amazon Braket notebook instances now support CUDA-Q natively",
-      "description": "Amazon Braket notebook instances now come with native support for CUDA-Q, streamlining access to NVIDIA's quantum computing platform for hybrid quantum-classical applications. This enhancement is enabled by upgrading the underlying operating system to Amazon Linux 2023, which delivers improved performance, security, and compatibility for quantum development workflows.\n  Quantum researchers and developers can now seamlessly build and test hybrid quantum-classical algorithms using CUDA-Q's GPU-accelerated quantum circuit simulation alongside access to quantum processing units (QPUs) from IonQ, Rigetti, and IQM, all within a single managed environment. With this release, developers can now access CUDA-Q directly within the managed notebook environment, simplifying workflows that previously required local deployment or needed to be run via Hybrid Jobs.\n  CUDA-Q support in Amazon Braket notebook instances is available in all AWS Regions where Amazon Braket is available. To get started, see the Amazon Braket Developer Guide and visit the Amazon Braket product page to learn more about quantum computing on AWS.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-braket-notebook-instances-cuda-q-natively",
-      "pubDate": "2025-11-10T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-84f3980a6a7f",
-      "title": "Amazon S3 now supports IPv6 for gateway and interface VPC endpoints",
-      "description": "Amazon S3 now supports Internet Protocol version 6 (IPv6) addresses for AWS PrivateLink gateway and interface Virtual Private Cloud (VPC) endpoints. \n \nThe continued growth of the internet is exhausting available Internet Protocol version 4 (IPv4) addresses. IPv6 increases the number of available addresses by several orders of magnitude, and customers no longer need to manage overlapping address spaces in their VPCs. To get started with IPv6 connectivity on a new or existing S3 gateway or interface endpoint, configure IP address type for the endpoint to IPv6 or Dualstack. When enabled, Amazon S3 automatically updates the routing tables with IPv6 addresses for gateway endpoints and sets up an Elastic network interface (ENI) with IPv6 addresses for interface endpoints.\n  IPv6 support for VPC endpoints for Amazon S3 is now available in all AWS Commercial Regions and the AWS GovCloud (US) Regions, at no additional cost. You can set up IPv6 for new and existing VPC endpoints using the AWS Management Console, AWS CLI, AWS SDK, or AWS CloudFormation. To learn more, please refer to the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ipv6-amazon-s3-gateway-interface-vpc-endpoints/",
-      "pubDate": "2025-11-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "cloudformation",
-        "ga",
-        "now-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8a77f92b20b8",
-      "title": "Amazon CloudWatch agent adds Shared Memory Metrics",
-      "description": "Amazon CloudWatch agent now supports collection of shared memory utilization metrics from Linux hosts running on Amazon EC2 or on-premises environments. This new capability enables you to monitor total shared memory usage in CloudWatch, alongside existing memory metrics like free memory, used memory, and cached memory.\n  Enterprise applications such as SAP HANA and Oracle RDBMS make extensive use of shared memory segments that were previously not captured in standard memory metrics. By enabling shared memory metric collection in your CloudWatch agent configuration file, you can now accurately assess total memory utilization across your hosts, helping you optimize host and application configurations and make informed decisions about instance sizing.\n  Amazon CloudWatch agent is supported in all commercial AWS Regions and AWS GovCloud (US) Regions. For Amazon CloudWatch custom metrics pricing, see the CloudWatch Pricing page.\n  To get started, see Configuring the CloudWatch agent in the Amazon CloudWatch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-agent-shared-memory-metrics/",
-      "pubDate": "2025-11-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "cloudwatch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-1c8c3c02c4e9",
-      "title": "AWS Private CA now supports post-quantum digital certificates",
-      "description": "AWS Private Certificate Authority (AWS Private CA) now enables you to create certificate authorities (CAs) and issue certificates that use Module Lattice-based Digital Signature Algorithm (ML-DSA). This feature enables you to begin transitioning your public key infrastructure (PKI) towards post-quantum cryptography, allowing you to put protections in place now to protect the security of your data against future quantum computing threats. ML-DSA is a post-quantum digital signature algorithm standardized by National Institute of Standards and Technology (NIST) as Federal Information Processing Standards (FIPS) 204.\n \nWith this feature, you can now test ML-DSA in your environment for certificate issuance, identity verification, and code signing. You can create CAs, issue certificates, create certificate revocation lists (CRLs) and configure online certificate status protocol (OCSP) responders using ML-DSA. Cryptographically relevant quantum computer (CRQC) will be able to break current digital signature algorithms, like Rivest–Shamir–Adleman (RSA) or Elliptic Curve Digital Signature Algorithm (ECDSA), which are expected to be phased out over the next decade.\n \nAWS Private CA support for ML-DSA is available in all commercial AWS Regions, the AWS GovCloud (US) Regions, and the China Regions.\n \nTo learn more about AWS Private CA ML-DSA support, visit the AWS Private CA user guide.\n \nTo learn more about Post-Quantum Cryptography at AWS, visit the AWS Post-Quantum Cryptography page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-private-ca-post-quantum-digital-certificates/",
-      "pubDate": "2025-11-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-25fb32cc6ab1",
       "title": "AWS Lambda networking over IPv6",
       "description": "This post examines the benefits of transitioning Lambda functions to IPv6, provides practical guidance for implementing dual-stack support in your Lambda environment, and considerations for maintaining compatibility with existing systems during migration.",
@@ -678,164 +717,6 @@
       "tags": [
         "lambda",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-e645e2fe91b2",
-      "title": "AWS Advanced .NET Data Provider Driver is Generally Available",
-      "description": "The Amazon Web Services (AWS) Advanced .NET Data Provider Driver is now generally available for Amazon RDS and Amazon Aurora PostgreSQL and MySQL-compatible databases. This advanced database driver reduces RDS Blue/Green switchover and database failover times, improving application availability. Additionally, it supports multiple authentication mechanisms for your database, including Federated Authentication, AWS Secrets Manager authentication, and token-based authentication with AWS Identity and Access Management (IAM).\n  The driver builds on top of Npgsql PostgreSQL, native MySql.Data, and MySqlConnector drivers to further enhance functionality beyond standard database connectivity. The driver is natively integrated with Aurora and RDS databases, enabling it to monitor database cluster status and quickly connect to newly promoted writers during unexpected failures that trigger database failovers. Furthermore, the driver seamlessly works with popular frameworks like NHibernate and supports Entity Framework (EF) with MySQL databases.\n  The driver is available as an open-source project under the Apache 2.0 license. Refer the instructions on the on the GitHub repository to get started.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-net-data-provider-driver/",
-      "pubDate": "2025-11-07T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "iam",
-        "secrets manager"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "iam",
-        "secrets manager",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c2f924eb5a83",
-      "title": "Amazon Cognito user pools now supports private connectivity with AWS PrivateLink",
-      "description": "Amazon Cognito user pools now supports AWS PrivateLink for secure and private connectivity. With AWS PrivateLink, you can establish a private connection between your virtual private cloud (VPC) and Amazon Cognito user pools to configure, manage, and authenticate against your Cognito user pools without using the public internet. By enabling private network connectivity, this enhancement eliminates the need to use public IP addresses or relying solely on firewall rules to access Cognito. This feature supports user pool management operations (e.g., list user pools, describe user pools), administrative operations (e.g., admin-created users), and user authentication flows (sign in local users stored in Cognito). OAuth 2.0 authorization code flow (Cognito managed login, hosted UI, sign-in via social identity providers), client credentials flow (Cognito machine-to-machine authorization), and federated sign-ins via SAML and OIDC standards are not supported through VPC endpoints at this time.\n  You can use PrivateLink connections in all AWS Regions where Amazon Cognito user pools is available, except AWS GovCloud (US) Regions. Creating VPC endpoints on AWS PrivateLink will incur additional charges; refer to AWS PrivateLink pricing page for details. You can get started by creating an AWS PrivateLink interface endpoint for Amazon Cognito user pools using the AWS Management Console, AWS Command Line Interface (CLI), AWS Software Development Kits (SDKs), AWS Cloud Development Kit (CDK), or AWS CloudFormation. To learn more, refer to the documentation on creating an interface VPC endpoint and Amazon Cognito’s developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cognito-user-pools-private-connectivity-aws-privatelink",
-      "pubDate": "2025-11-07T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudformation",
-        "ga",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4eec4c1e389b",
-      "title": "AWS KMS now supports Edwards-curve Digital Signature Algorithm (EdDSA)",
-      "description": "AWS Key Management Service (KMS) announces support for the Edwards-curve Digital Signature Algorithm (EdDSA). With this new capability, you can create an elliptic curve asymmetric KMS key or data key pairs to sign and verify EdDSA signatures using the Edwards25519 curve (Ed25519). Ed25519 provides 128-bit security level equivalent to NIST P-256, faster signing performance, and small signature size (64 bytes) and public key sizes (32 bytes).\n  Ed25519 is ideal for situations that require small key and signature sizes, such as Internet of Things (IoT) devices and blockchain applications like cryptocurrency.\n  This new capability is available in all AWS Regions, including the AWS GovCloud (US) Regions and the China Regions. To learn more about this new capability, see Asymmetric key specs section in the AWS KMS Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-kms-edwards-curve-digital-signature-algorithm/",
-      "pubDate": "2025-11-07T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "ecs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ecs",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-cc09bbb745b2",
-      "title": "Amazon DynamoDB Streams expands AWS PrivateLink support to FIPS endpoints",
-      "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for all available Amazon DynamoDB Streams Federal Information Processing Standard (FIPS) endpoints in US and Canada commercial AWS Regions.\n  With this launch, you can establish a private connection between your virtual private cloud (VPC) and Amazon DynamoDB Streams FIPS endpoints instead of connecting over the public internet, helping you meet your organization's business, compliance, and regulatory requirements to limit public internet connectivity.\n  Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints is available with Amazon DynamoDB Streams in the US and Canada commercial AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n  To learn more about Amazon DynamoDB Streams support for AWS PrivateLink FIPs endpoints, visit the Amazon DynamoDB Stream documentation. For more information about AWS PrivateLink and its benefits, visit the AWS PrivateLink product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-dynamodb-streams-aws-privatelink-fips-endpoints",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "dynamodb"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "dynamodb",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-add8affd2236",
-      "title": "AWS announces a new Regional planning tool in Builder Center",
-      "description": "Today, AWS announced a new tool called AWS Capabilities by Region in Builder Center. This tool helps you discover and compare AWS services, features, APIs, CloudFormation resources across AWS Regions. You can explore service availability through an interactive interface, compare multiple Regions side-by-side, and view forward-looking roadmap information. This detailed visibility helps you make informed decisions about global deployments and prevent project delays due to service unavailability.\n  In addition to this tool, AWS also enhanced the AWS Knowledge Model Context Protocol (MCP) Server to include information about Regional capabilities in an LLM-compatible format. MCP clients and agentic frameworks can connect to the AWS Knowledge MCP Server to get real-time insights into regional service availability and suggestions for alternative solutions when specific services or features are unavailable.\n  You can begin exploring AWS Capabilities by Region in AWS Builder Center today. The Knowledge MCP server is also publicly accessible at no cost and does not require an AWS account. Usage is subject to rate limits. Follow the getting started guide for setup instructions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-regional-planning-tool-builder-center",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "new-region",
-        "roadmap"
-      ]
-    },
-    {
-      "id": "aws-news-f96966b5c806",
-      "title": "Amazon ECS announces non-root container support for managed EBS volumes",
-      "description": "Amazon Elastic Container Service (ECS) now supports mounting Amazon Elastic Block Store (EBS) volumes to containers running as non-root users. With this launch, ECS automatically configures the EBS volume’s file system permissions to allow non-root users to read and write data securely, while preserving the root-level ownership of the volume. This enhancement simplifies security-first container deployments by removing the need for manual permission management or custom entrypoint scripts.\n \nThis feature enhances container security by allowing tasks to run as non-root users, reducing the risk of privilege escalation and unauthorized access to data. Previously, for a container in a task to write to a mounted Amazon EBS volume, it had to run as the root user. ECS now automatically manages EBS volume permissions, simplifying workflows and ensuring that all containers within a task — regardless of user ID — can securely read and write to the mounted volume.\n \nThis feature is now available in all AWS Regions except AWS GovCloud (US), where Amazon ECS and Amazon EBS are supported, for EC2, AWS Fargate, and ECS Managed Instances launch types. To learn more, see Use Amazon EBS volumes with Amazon ECS in the Amazon ECS Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecs-non-root-container-managed-ebs-volumes",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs",
-        "fargate"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "launch",
-        "ga",
-        "now-available",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-abce991b3348",
-      "title": "Amazon CloudWatch Application Signals now available in AWS GovCloud (US) Regions",
-      "description": "Amazon CloudWatch Application Signals expands its availability to AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions, enabling government customers and regulated industries to automatically monitor and improve application performance in these regions. CloudWatch Application Signals provides comprehensive application monitoring capabilities by automatically collecting telemetry data from applications running on Amazon EC2, Amazon ECS, Amazon EKS and AWS Lambda, helping customers meet their compliance and monitoring requirements while maintaining workload visibility.\n  With CloudWatch Application Signals, customers in AWS GovCloud (US) regions can now monitor application health in real time, track performance against business goals, visualize service relationships and dependencies, and quickly identify and resolve performance issues. This automated observability solution eliminates the need for manual instrumentation while providing detailed insights into application behavior and performance patterns. The service automatically detects anomalies and helps correlate issues across different AWS services, enabling faster problem resolution and improved application reliability.\n  CloudWatch Application Signals will be available in AWS GovCloud (US-East) and AWS GovCloud (US-West). For pricing information, visit the Amazon CloudWatch pricing page. To get started, visit the Amazon CloudWatch Application Signals documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-application-signals-aws-govcloud-regions",
-      "pubDate": "2025-11-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudwatch",
-        "ga",
-        "now-available"
       ]
     },
     {
