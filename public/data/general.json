@@ -1,8 +1,194 @@
 {
-  "lastUpdated": "2025-11-20T06:15:26.439Z",
+  "lastUpdated": "2025-11-21T06:16:18.487Z",
   "category": "general",
-  "totalItems": 54,
+  "totalItems": 52,
   "items": [
+    {
+      "id": "aws-news-84643ea6bd7f",
+      "title": "Amazon RDS supports Multi-AZ for SQL Server Web Edition",
+      "description": "Amazon Relational Database Service (Amazon RDS) for SQL Server now supports Multi-AZ deployment for SQL Server Web Edition. SQL Server Web Edition is specifically designed to support public and internet-accessible web pages, websites, web applications, and web services, and is used by web hosters and web value-added providers (VAPs). These applications need high availability, and automated failover to recover from hardware and database failures. Now customers can use SQL Server Web Edition with Amazon RDS Multi-AZ deployment option, which provides a high availability solution. The new feature eliminates the need for customers to use more expensive options for high availability, such as using SQL Server Standard Edition or Enterprise Edition.\n  To use the feature, customers simply configure their Amazon RDS for SQL Server Web Edition instance with Multi-AZ deployment option. Amazon RDS automatically provisions and maintains a standby replica in a different Availability Zone (AZ), and synchronously replicates data across the two AZs. In situations where your Multi-AZ primary database becomes unavailable, Amazon RDS automatically fails over to the standby replica, so customers can resume database operations quickly and without any administrative intervention.\n  For more information about Multi-AZ deployment for RDS SQL Server Web Edition, refer to the Amazon RDS for SQL Server User Guide. See Amazon RDS for SQL Server Pricing for pricing details and regional availability.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-rds-sql-server-multi-az-web-edition/",
+      "pubDate": "2025-11-20T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-30f53d85874d",
+      "title": "Recycle Bin adds support for Amazon EBS Volumes",
+      "description": "Recycle Bin for Amazon EBS, which helps you recover accidentally deleted snapshots and EBS-backed AMIs, now supports EBS Volumes. If you accidentally delete a volume, you can now recover it directly from Recycle Bin instead of restoring from a snapshot, reducing your recovery point objective with no data loss between the last snapshot and deletion. Your recovered volume can immediately achieve the full performance without waiting for data to download from snapshots.\n  To use Recycle Bin, you can set a retention period for deleted volumes, and you can recover any volume within that period. Recovered volumes are immediately available and will retain all attributes—tags, permissions, and encryption status. Volumes not recovered are deleted permanently when the retention period expires. You create retention rules to enable Recycle Bin for all volumes or specific volumes, using tags to target which volumes to protect.\n  EBS Volumes in Recycle Bin are billed at the same price as EBS Volumes, read more on the pricing page. To get started, read the documentation. The feature is now available through the AWS Command Line Interface (CLI), AWS SDKs, or the AWS Console in all AWS commercial, China, and AWS GovCloud (US) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/recycle-bin-support-amazon-ebs-volumes",
+      "pubDate": "2025-11-20T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-df24f6f1c182",
+      "title": "Building multi-tenant SaaS applications with AWS Lambda’s new tenant isolation mode",
+      "description": "Today, AWS is announcing tenant isolation for AWS Lambda, enabling you to process function invocations in separate execution environments for each end-user or tenant invoking your Lambda function. This capability simplifies building secure multi-tenant SaaS applications by managing tenant-level compute environment isolation and request routing, allowing you to focus on core business logic rather than implementing tenant-aware compute environment isolation.",
+      "link": "https://aws.amazon.com/blogs/compute/building-multi-tenant-saas-applications-with-aws-lambdas-new-tenant-isolation-mode/",
+      "pubDate": "2025-11-20T17:47:17.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda"
+      ]
+    },
+    {
+      "id": "aws-news-b61286e46944",
+      "title": "Amazon EC2 Mac instances now support Apple macOS Tahoe",
+      "description": "Starting today, customers can run Apple macOS Tahoe (version 26) as Amazon Machine Images (AMIs) on Amazon EC2 Mac instances. Apple macOS Tahoe is the latest major macOS version, and introduces multiple new features and performance improvements over prior macOS versions including running Xcode version 26.0 or later (which includes the latest SDKs for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS).\n  Backed by Amazon Elastic Block Store (EBS), EC2 macOS AMIs are AWS-supported images that are designed to provide a stable, secure, and high-performance environment for developer workloads running on EC2 Mac instances. EC2 macOS AMIs include the AWS Command Line Interface, Command Line Tools for Xcode, Amazon SSM Agent, and Homebrew. The AWS Homebrew Tap includes the latest versions of AWS packages included in the AMIs.\n  Apple macOS Tahoe AMIs are available for Apple silicon EC2 Mac instances and are published to all AWS regions where Apple silicon EC2 Mac instances are available today. Customers can get started with macOS Tahoe AMIs via the AWS Console, Command Line Interface (CLI), or API. Learn more about EC2 Mac instances here or get started with an EC2 Mac instance here. You can also subscribe to EC2 macOS AMI release notifications here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-mac-instances-apple-macos-tahoe",
+      "pubDate": "2025-11-20T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "new-feature",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6072ca1d111e",
+      "title": "Amazon Braket adds new quantum processor from Alpine Quantum Technologies (AQT)",
+      "description": "Amazon Braket now offers access to IBEX Q1, a trapped-ion quantum processing unit (QPU) from Alpine Quantum Technologies (AQT), a new quantum hardware provider on Amazon Braket. IBEX Q1 is a 12-qubit system with all-to-all connectivity, enabling any qubit to directly interact with any other qubit without requiring intermediate SWAP gates.\n  With this launch, customers now have on-demand access to AQT's trapped-ion technology for building and testing quantum programs, and priority access via Hybrid Jobs for running variational quantum algorithms - all with pay-as-you-go pricing. Customers can also reserve dedicated capacity on this QPU for time-sensitive workloads via Braket Direct with hourly pricing and no upfront commitments.\n  At launch, IBEX Q1 is available Tuesdays and Wednesdays from 09:00 to 16:00 UTC, providing customers in European time zones convenient access during their work hours. IBEX Q1 is accessible from the Europe (Stockholm) Region.\n  Researchers at accredited institutions can apply for credits to support experiments on Amazon Braket through the AWS Cloud Credits for Research program. To get started with IBEX Q1, visit the Amazon Braket devices page in the AWS Management Console to explore device specifications and capabilities. You can also explore our example notebooks and read our launch blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-braket-alpine-quantum-technologies",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f3ceaf1f85a",
+      "title": "AWS Site-to-Site VPN now supports BGP logging for VPN tunnels",
+      "description": "AWS Site-to-Site VPN now allows customers to publish Border Gateway Protocol (BGP) logs from VPN tunnels to AWS CloudWatch, providing enhanced visibility into VPN configurations and simplifying troubleshooting of connectivity issues.\n  AWS Site-to-Site VPN is a fully managed service that enables secure connections between on-premises data centers or branch offices and AWS resources using IPSec tunnels. Until now, customers only had access to tunnel activity logs showing IKE/IPSec tunnel details. With this launch, customers can now access detailed BGP logs that provide visibility into BGP session status and transitions, routing updates, and detailed BGP error states. These logs help identify configuration mismatches between AWS VPN endpoints and customer gateway devices, providing granular visibility into BGP-related events. With both VPN tunnel logs and BGP logs now available in CloudWatch, customers can more easily monitor and analyze their VPN connections, enabling faster resolution of connectivity issues.\n  This capability is available in all AWS commercial Regions and AWS GovCloud (US) Regions where AWS Site-to-Site VPN is available. To learn more and get started, visit the AWS Site-to-Site VPN documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/site-to-site-vpn-bgp-logging-vpn-tunnels/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "launch",
+        "ga",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8e8c7182fdc4",
+      "title": "AWS Step Functions enhances Local Testing with TestState API",
+      "description": "AWS Step Functions enhances the TestState API to support local unit testing of workflows, allowing you to validate your workflow logic, including advanced patterns like Map and Parallel states, without deploying state machines to your AWS account.\n  AWS Step Functions is a visual workflow service capable of orchestrating over 14,000+ API actions from over 220 AWS services to build distributed applications and data processing workloads. The TestState API now supports testing of complete workflows including error handling patterns in your local development environment. You can now mock AWS service integrations, with optional API contract validation that verifies your mocked responses match the expected responses from actual AWS services, helping ensure your workflows work correctly in production. You can integrate TestState API calls into your preferred testing frameworks such as Jest and pytest and CI/CD pipelines, enabling automated workflow testing as part of your development process. These capabilities help accelerate development by providing instant feedback on workflow definitions, enabling validation of workflow behavior in your local environment, and catching potential issues earlier in the development cycle.\n  The enhanced TestState API is available through the AWS SDK in all AWS Regions where Step Functions is available. For a complete list of regions and service offerings, see AWS Regions.\n  To get started, you can access the TestState API through the AWS SDK, AWS CLI, or check out the AWS Step Functions Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-step-functions-local-testing-teststate-api/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "step functions"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "step functions",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ee8636ad687a",
+      "title": "AWS CloudTrail launches Insights for data events to automatically detect anomalies in data access",
+      "description": "Today, AWS extends AWS CloudTrail Insights to data events. CloudTrail Insights help you identify and respond to unusual activity associated with API call rates and API error rates in your AWS accounts. Until today, Insights worked by continuously analyzing only CloudTrail management events. Now, with today’s launch, Insights also analyzes data events, thereby strengthening your ability to quickly investigate and respond to potential security or operational issues.\n  Available on CloudTrail trails, Insights for data events automatically detects anomalies in data access activities, such as unexpected surges in delete Amazon S3 object API calls or increased error rates for AWS Lambda function invocations, enabling you to rapidly uncover potential security and operational issues, all without requiring you to build detection systems or export data to third-party tools.\n  CloudTrail Insights for data events works by establishing normal baselines for data access patterns in your AWS accounts and creates a CloudTrail event when it detects anomalies. When an unusual pattern is detected, CloudTrail provides the relevant data events from the anomaly period - helping you precisely investigate what led to the anomaly. You can configure alerts to be automatically notified when potential issues occur, enabling rapid response to potential threats or issues.\n  CloudTrail Insights for data events is available in all regions where AWS CloudTrail is available. To get started with CloudTrail Insights, see our documentation. Additional charges apply for Insights for data events. To learn more about pricing for this feature, visit the AWS CloudTrail pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudtrail-insights-data-events-detect-anomalies-access/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-b86da01773f9",
+      "title": "Amazon EC2 C7i instances are now available in the Asia Pacific (Melbourne) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in the Asia Pacific (Melbourne) Region. C7i instances are supported by custom Intel processors, available only on AWS, and offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad-serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  C7i instances support new Intel Advanced Matrix Extensions (AMX) that accelerate matrix multiplication operations for applications such as CPU-based ML. Customers can attach up to 128 EBS volumes to a C7i instance vs. up to 28 EBS volumes to a C6i instance. This allows processing of larger amounts of data, scale workloads, and improved performance over C6i instances.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-c7i-instances-asia-pacific-melbourne-region/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7b40dbf7fab4",
+      "title": "AWS Parallel Computing Service now supports Slurm REST API",
+      "description": "AWS Parallel Computing Service (AWS PCS) now supports the Slurm REST API. This new feature enables you to programmatically submit jobs, monitor cluster status, and manage resources using HTTP requests instead of relying on command-line tools.\n  AWS PCS is a managed service that makes it easier for you to run and scale your high performance computing (HPC) workloads and build scientific and engineering models on AWS using Slurm. The Slurm REST API helps you automate cluster operations and integrate HPC resources into existing systems and workflows, including web portals, CI/CD pipelines, and data processing frameworks, all without the overhead of maintaining additional REST API infrastructure.\n  This feature is available in all AWS Regions where AWS PCS is available, and there's no additional cost to use the feature. To learn more about using the Slurm REST API, see the AWS PCS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-parallel-computing-slurm-rest-api/",
+      "pubDate": "2025-11-20T06:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "new-feature",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-5044b6bc98c4",
       "title": "Announcing the updated AWS Well-Architected Machine Learning Lens",
@@ -150,30 +336,6 @@
       ]
     },
     {
-      "id": "aws-news-e90487b2907c",
-      "title": "Amazon CloudWatch now supports scheduled queries in Logs Insights",
-      "description": "Amazon CloudWatch Logs now supports automatically running Logs Insights queries on a recurring schedule for your log analysis needs. With scheduled queries, you can now automate log analysis tasks and deliver query results to Amazon S3 and Amazon EventBridge.\n \nWith today's launch, you can track trends, monitor key operational metrics, and detect anomalies without needing to manually re-run queries or maintain custom automation. This feature makes it easier to maintain continuous visibility into your applications and infrastructure, streamline operational workflows, and ensure consistent insight generation at scale. For example, you can setup scheduled queries for your weekly audit reporting. The query results can also be stored in Amazon S3 for analysis, or trigger incident response workflows through Amazon EventBridge. The feature supports all CloudWatch Logs Insights query languages and helps teams improve operational efficiency by eliminating manual query executions.\n \nScheduled queries is available in US East (Ohio), US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n \nYou can configure a scheduled query using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. For more information, visit the Amazon CloudWatch documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-scheduled-queries",
-      "pubDate": "2025-11-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "eventbridge",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "eventbridge",
-        "cloudwatch",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-848b61183c11",
       "title": "AWS Lambda announces new tenant isolation mode to simplify building tenant-aware applications",
       "description": "Today, AWS Lambda announced a new tenant isolation mode, enabling customers to isolate request processing for individual tenants or end-users invoking a Lambda function. This launch simplifies building multi-tenant applications on Lambda, such as SaaS platforms for workflow automation or code execution.\n  Customers building multi-tenant applications have strict isolation requirements when running code or processing data for individual tenants or end-users. Previously, customers met these requirements by implementing custom solutions, such as creating dedicated Lambda functions per tenant and routing requests from individual tenants to their associated functions. Today’s launch enables you to isolate request processing for each tenant invoking a Lambda function, helping you meet strict tenant isolation requirements without the need to build and operate custom solutions. This launch extends Lambda’s isolation boundary from a single function to each tenant invoking that function.\n  To use the new tenant isolation mode, customers specify a unique tenant identifier when invoking their Lambda function. Lambda uses this identifier to route invocation requests to a function’s underlying execution environments and ensures that execution environments associated with a particular tenant are never used to serve requests from other tenants invoking the function.\n  The new tenant isolation mode for AWS Lambda is available in all AWS Regions, except Asia Pacific (New Zealand), AWS GovCloud (US), and China. To learn more, visit Lambda documentation and the launch blog post. For tenant isolation mode pricing information, visit AWS Lambda Pricing.",
@@ -214,6 +376,30 @@
       ]
     },
     {
+      "id": "aws-news-e90487b2907c",
+      "title": "Amazon CloudWatch now supports scheduled queries in Logs Insights",
+      "description": "Amazon CloudWatch Logs now supports automatically running Logs Insights queries on a recurring schedule for your log analysis needs. With scheduled queries, you can now automate log analysis tasks and deliver query results to Amazon S3 and Amazon EventBridge.\n \nWith today's launch, you can track trends, monitor key operational metrics, and detect anomalies without needing to manually re-run queries or maintain custom automation. This feature makes it easier to maintain continuous visibility into your applications and infrastructure, streamline operational workflows, and ensure consistent insight generation at scale. For example, you can setup scheduled queries for your weekly audit reporting. The query results can also be stored in Amazon S3 for analysis, or trigger incident response workflows through Amazon EventBridge. The feature supports all CloudWatch Logs Insights query languages and helps teams improve operational efficiency by eliminating manual query executions.\n \nScheduled queries is available in US East (Ohio), US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n \nYou can configure a scheduled query using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. For more information, visit the Amazon CloudWatch documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-scheduled-queries",
+      "pubDate": "2025-11-19T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "eventbridge",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "eventbridge",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-34f620526e42",
       "title": "Amazon CloudWatch real user monitoring (RUM) adds support for iOS and Android applications",
       "description": "Amazon CloudWatch RUM now supports iOS and Android applications, expanding real user monitoring beyond web applications. Developers and SREs can now quickly isolate mobile application issues and improve end-user experience, with visibility into performance metrics such as screen load times, crash rates, and API latencies.\n  CloudWatch RUM for mobile uses the OpenTelemetry (OTEL) standard to send spans and events. The service captures mobile spans such as application startup time, screen load time and backend network calls. It also captures events including crashes, and ANRs/AppHangs to provide rich troubleshooting insights on the CloudWatch console.\n  You can perform impact analysis for specific errors or crashes, drill down to correlated telemetry, and filter by location, device type, operating system, and app versions to quickly identify root causes. Mobile telemetry integrates with application metrics, traces, logs, web RUM monitoring, and synthetic monitoring in CloudWatch Application Signals to speed up troubleshooting and reduce application disruption.\n  CloudWatch RUM support for iOS and Android is available in all AWS Commercial Regions where web monitoring is available. To learn more, see pricing, getting started for Android and iOS, and documentation.",
@@ -228,26 +414,6 @@
       ],
       "tags": [
         "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b598eb7f509f",
-      "title": "Amazon EC2 M7i instances are now available in the Europe (Zurich) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in the Europe (Zurich) region. These custom processors, available only on AWS, offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  M7i deliver up to 15% better price-performance compared to M6i. M7i instances are a great choice for workloads that need the largest instance sizes or continuous high CPU usage, such as gaming servers, CPU-based machine learning (ML), and video-streaming. M7i offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 M7i Instances. To get started, see the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-m7i-instances-europe-zurich-region/",
-      "pubDate": "2025-11-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available",
         "support"
       ]
     },
@@ -268,6 +434,26 @@
       "tags": [
         "s3",
         "rds",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b598eb7f509f",
+      "title": "Amazon EC2 M7i instances are now available in the Europe (Zurich) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in the Europe (Zurich) region. These custom processors, available only on AWS, offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  M7i deliver up to 15% better price-performance compared to M6i. M7i instances are a great choice for workloads that need the largest instance sizes or continuous high CPU usage, such as gaming servers, CPU-based machine learning (ML), and video-streaming. M7i offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 M7i Instances. To get started, see the AWS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-m7i-instances-europe-zurich-region/",
+      "pubDate": "2025-11-19T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ga",
+        "now-available",
         "support"
       ]
     },
@@ -350,231 +536,6 @@
         "now-available",
         "new-feature",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a3278978d471",
-      "title": "Amazon Redshift now supports Just-In-Time (JIT) ANALYZE for Apache Iceberg tables",
-      "description": "Amazon Redshift today announces the general availability of Just-In-Time (JIT) ANALYZE capability for Apache Iceberg tables, enabling users to run high performance read and write analytics queries on Apache Iceberg tables within the Redshift data lake. The Apache Iceberg open table format has been used by many customers to simplify data processing on rapidly expanding and evolving tables stored in data lakes.\n  Unlike traditional data warehouses, data lakes often lack comprehensive table-level and column-level statistics about the underlying data, making it challenging for query engines to choose the most optimal query execution plans without visibility into the table and column statistics. Sub-optimal query execution plans can lead to slower and less predictable performance.\n  ‘JIT ANALYZE’ is a new Amazon Redshift feature that automatically collects and utilizes statistics for Iceberg tables during query execution, eliminating manual statistics collection while giving the query engine the information it needs to generate optimal query execution plans. The system uses intelligent heuristics to identify queries that will benefit from statistics, maintains lightweight sketch data structures, and builds high quality table-level and column-level statistics. JIT ANALYZE delivers out-of-the-box performance on par with queries that have pre-calculated statistics, while providing the foundation for many other performance optimizations.\n  The Amazon Redshift JIT ANALYZE feature for Apache Iceberg tables is now available in all AWS regions where Amazon Redshift is available. Users do not need to make any changes or enable any settings to take advantage of this new data lake query optimization. To get started, visit the documentation page for Amazon Redshift Management Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-redshift-jit-analyze-apache-iceberg-tables/",
-      "pubDate": "2025-11-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "redshift",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e324298598f7",
-      "title": "AWS announces Supplementary Packages for Amazon Linux",
-      "description": "Today, AWS announces the general availability of Supplementary Packages for Amazon Linux (SPAL), a dedicated repository that provides developers and system administrators with streamlined access to thousands of pre-built, EPEL9 packages compatible for Amazon Linux 2023 (AL2023). Amazon Linux serves as the foundation for countless applications running on AWS, but developers often face lengthy processes when building packages from source code. SPAL addresses this challenge by offering ready-to-use packages that accelerate development workflows for teams working with AL2023 environments.\n  With SPAL, development teams can significantly reduce deployment times and focus on core application development rather than package compilation. This solution is particularly valuable for DevOps engineers, system administrators, and developers who need reliable packages for production workloads without the overhead of building from source. SPAL packages are derived from the community-maintained EPEL9 project, with AWS providing security patches as they become available upstream. AWS will continue expanding the repository based on customer feedback through the Amazon Linux 2023 GitHub repository.\n  Supplementary Packages for Amazon Linux (SPAL) is available in all AWS Commercial Regions, including the AWS GovCloud (US) Regions and China.\n  To get started, review available packages in the SPAL repository and update your package management configuration to include the SPAL repository for Amazon Linux 2023. To learn more about this feature consult the SPAL FAQs or AWS Documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/supplementary-packages-amazon-linux/",
-      "pubDate": "2025-11-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-43c9c76b43d8",
-      "title": "AWS CloudFormation accelerates dev-test cycle with early validation and simplified troubleshooting",
-      "description": "AWS CloudFormation now offers capabilities that allow customers to catch deployment errors before resource provisioning begins and resolve them more efficiently. Change set creation now provides early feedback on common deployment errors. Stack events are now grouped by an operation ID with access through the new describe-operation API to accelerate analysis of deployment errors. This empowers developers to reduce deployment cycle times and cut troubleshooting time from minutes to seconds.\n  When you create a change set, CloudFormation now validates your template against three common failure causes: invalid property syntax, resource name conflict with existing resources in your account, and S3 bucket emptiness constraint on delete operations. If validation fails, the change set status shows ‘FAILED’ with a detailed status on the validation failure. You can then view details for each failure, including the property path associated with them, to pinpoint exactly where issues occur in your template. When you execute a validated change set, the deployment can still fail because of resource-specific runtime errors, such as resource limits or service-specific constraints. For troubleshooting runtime errors, every stack operation now receives a unique ID. You can zoom into the stack events for an operation and filter down to the events that caused the deployment to fail. This allows you to quickly identify root causes, reducing your troubleshooting time.\n  Get started by creating change sets through the CloudFormation Console, CLI, or SDK. View stack events by operation ID in the CloudFormation Console Events tab or via describe-events API. To learn more, visit the validate deployment and troubleshooting User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudformation-dev-test-cycle-validation-troubleshooting/",
-      "pubDate": "2025-11-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "cloudformation",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-8fc9ffdf4659",
-      "title": "AWS Lambda adds support for Python 3.14",
-      "description": "AWS Lambda now supports creating serverless applications using Python 3.14. Developers can use Python 3.14 as both a managed runtime and a container base image, and AWS will automatically apply updates to the managed runtime and base image as they become available.\n  Python 3.14 is the latest long-term support release of Python. This release provides Lambda customers access to the latest Python 3.14 language features. You can use Python 3.14 with Lambda@Edge (in supported Regions), allowing you to customize low-latency content delivered through Amazon CloudFront. Powertools for AWS Lambda (Python), a developer toolkit to implement serverless best practices and increase developer velocity, also supports Python 3.14. You can use the full range of AWS deployment tools, including the Lambda console, AWS CLI, AWS Serverless Application Model (AWS SAM), AWS CDK, and AWS CloudFormation to deploy and manage serverless applications written in Python 3.14.\n  The Python 3.14 runtime is available in all Regions, including the AWS GovCloud (US) Regions and China Regions.\n  For more information, including guidance on upgrading existing Lambda functions, read our blog post. For more information about AWS Lambda, visit the product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-lambda-python-314/",
-      "pubDate": "2025-11-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudformation",
-        "cloudfront"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "cloudformation",
-        "cloudfront",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8d8da7028d4c",
-      "title": "Safely handle configuration drift with AWS CloudFormation drift-aware change sets",
-      "description": "AWS CloudFormation launches drift-aware change sets that can compare an IaC template with the actual state of infrastructure and bring drifted resources in line with their template definitions. Configuration drift occurs when infrastructure managed by IaC is modified via the AWS Management Console, SDK, or CLI. With drift-aware change sets, you can revert drift and keep infrastructure in sync with templates. Additionally, you can preview the impact of deployments on drifted resources and prevent unexpected changes.\n  Customers can modify infrastructure outside of IaC when troubleshooting operational incidents. This creates the risk of unexpected changes in future IaC deployments, impacts the security posture of infrastructure, and hampers reproducibility for testing and disaster recovery. Standard change sets can compare a template with your last-deployed template, but do not consider drift. Drift-aware change sets provide a three-way diff between a new template, last-deployed template, and actual infrastructure state. If your diff predicts unintended overwrites of drift, you can update your template values and recreate the change set. During change set execution, CloudFormation will match resource properties with template values and recreate resources deleted outside of IaC. If a provisioning error occurs, CloudFormation will restore infrastructure to its actual state before deployment.\n  To get started, create a change set for an existing stack from the CloudFormation Console and choose “Drift-aware” as the change set type. Alternatively, pass the --deployment-mode REVERT_DRIFT parameter to the CreateChangeSet API from the AWS CLI or SDK. To learn more, visit the CloudFormation User Guide.\n  Drift-aware change sets are available in AWS Regions where CloudFormation is available. Refer to the AWS Region table to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/configuration-drift-enhanced-cloudformation-sets/",
-      "pubDate": "2025-11-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "launch",
-        "preview",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-30d9bfa1e464",
-      "title": "Amazon Route 53 DNS Firewall adds protection against Dictionary-based DGA attacks",
-      "description": "Starting today, you can enable Route 53 Resolver DNS Firewall Advanced to monitor and block queries associated with Dictionary-based Domain Generation Algorithm (DGA) attacks, that generate domain names by pseudo-randomly concatenating words from a predefined dictionary, creating human-readable strings to evade detection.\n  Route 53 DNS Firewall Advanced is an offering on Route 53 DNS Firewall that enables you to enforce protections to monitor and block your DNS traffic in real-time based on anomalies identified in the domain names being queried from your VPCs. These include protections for DNS tunneling and DGA attacks. With this launch, you can also enforce protections for Dictionary-based DGA attacks, which is a variant of the DGA attack, where domain names are generated to mimic and blend with legitimate domain names, to resist detection. To get started, you can configure one or multiple DNS Firewall Advanced rule(s), specifying Dictionary DGA as the threat to be inspected. You can add the rule(s) to a DNS Firewall rule group, and enforce it on your VPCs by associating the rule group to each desired VPC directly or by using AWS Firewall Manager, AWS Resource Access Manager (RAM), AWS CloudFormation, or Route 53 Profiles.\n  Route 53 Resolver DNS Firewall Advanced support for Dictionary DGA is available in all AWS Regions, including the AWS GovCloud (US) Regions. To learn more about the new capabilities and the pricing, visit the Route 53 Resolver DNS Firewall webpage and the Route 53 pricing page. To get started, visit the Route 53 documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-route-53-dns-firewall-protection-dictionary-dga-attacks",
-      "pubDate": "2025-11-17T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudformation",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-006427d2053d",
-      "title": "Amazon Redshift now supports writing to Apache Iceberg tables",
-      "description": "Amazon Redshift today announces the general availability of write capability to Apache Iceberg tables, enabling users to run analytics read and write queries for append-only workloads on Apache Iceberg tables within Amazon Redshift. Amazon Redshift is a petabyte-scale, enterprise-grade cloud data warehouse service used by tens of thousands of customers. Whether your data is stored in operational data stores, data lakes, streaming engines or within your data warehouse, Amazon Redshift helps you quickly ingest, securely share data, and achieve the best performance at the best price. The Apache Iceberg open table format has been used by many customers to simplify data processing on rapidly expanding and evolving tables stored in data lakes.\n  Customers have been using Amazon Redshift to run queries on data lake tables in various file and table formats, achieving a wide range of scalability across data warehouse and data lake workloads. Data lake use cases continue to evolve and become increasingly sophisticated, and require capabilities like transactional consistency for record-level updates and deletes while having seamless schema and partition evolution support. With this milestone Amazon Redshift now supports SQL DDL (data definition language) operations to CREATE an Apache Iceberg table, SHOW the table definition SQL, DROP the table and perform DML (data manipulation language) operations such as INSERT. You can continue to use Amazon Redshift to read from your Apache Iceberg tables in AWS Glue Data Catalog and perform write operations on those Apache Iceberg tables while other users or applications can safely run DML operations on your tables.\n  Apache Iceberg support in Amazon Redshift is available in all AWS regions where Amazon Redshift is available. To get started, visit the documentation page for Amazon Redshift Management Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-redshift-iceberg-writes-m1",
-      "pubDate": "2025-11-17T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "redshift",
-        "glue",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-435b2d6c932f",
-      "title": "Amazon WorkSpaces Applications expands the regional availability to Italy, Spain, Malaysia, and Israel",
-      "description": "Amazon Web Services (AWS) has expanded the regional availability for Amazon WorkSpaces Applications. Starting today, AWS customers can deploy their applications and desktops in the AWS Europe (Milan), Europe (Spain), Asia Pacific (Malaysia), and Israel (Tel Aviv) Regions and stream them using WorkSpaces Applications. Deploying your applications in a region closer to your end users helps provide a more responsive experience. \n  Amazon WorkSpaces Applications is a fully managed, secure application streaming service that provides users with instant access to their desktop applications from anywhere. It allows users to stream applications and desktops from AWS to their devices, without requiring them to download, install, or manage any software locally. WorkSpaces Applications manages the AWS resources required to host and run your applications, scales automatically, and provides access to your users on demand.\n  To get started with Amazon WorkSpaces Applications, sign into the WorkSpaces Applications management console and select one of the AWS Region of your choice. For the full list of Regions where WorkSpaces Applications is available, see the AWS Region Table. AppStream 2.0 offers pay-as-you-go pricing. For more information, see Amazon WorkSpaces Applications Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-workspaces-applications-region-expansion",
-      "pubDate": "2025-11-17T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-aa87de19901a",
-      "title": "Amazon Route 53 Profiles now supports Resolver query logging configurations",
-      "description": "Today, AWS announced support for Resolver query logging configurations in Amazon Route 53 Profiles, allowing you to manage Resolver query logging configuration and apply it to multiple VPCs and AWS accounts within your organization. With this enhancement, Amazon Route 53 Profiles simplifies the management of Resolver query logging by streamlining the process of associating logging configurations with VPCs, and without requiring you to manually associate them with each VPC.\n  Route 53 Profiles allows you to create and share Route 53 configurations (private hosted zones, DNS Firewall rule groups, Resolver rules) across multiple VPCs and AWS accounts. Previously, Resolver query logging required you to manually set it up for each VPC in every AWS account. Now, with Route 53 Profiles you can manage your Resolver query logging configurations for your VPCs and AWS accounts, using a single Profile configuration. Profiles support for Resolver query logging configurations reduces the management overhead for network security teams and simplifies compliance auditing by providing consistent DNS query logs across all accounts and VPCs.\n  Route 53 Profiles support for Resolver query logging is now available in the AWS Regions mentioned here. To learn more about this capability and how it can benefit your organization, visit the Amazon Route 53 documentation. You can get started by accessing the Amazon Route 53 console in your AWS Management Console or through the AWS CLI. To learn more about Route 53 Profiles pricing, see here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-route-53-profiles-resolver-query-logging-configurations",
-      "pubDate": "2025-11-17T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-6384c9461e26",
-      "title": "AWS HealthImaging adds native JPEG 2000 Lossless support",
-      "description": "AWS HealthImaging now offers JPEG 2000 Lossless as a transfer syntax for storing and retrieving lossless medical images. With this launch, it is simpler than ever to integrate HealthImaging with applications that require JPEG 2000 encoded DICOM data.\n  Customers can now choose between JPEG 2000 lossless and High-throughput JPEG 2000 (HTJ2K) for storing lossless DICOM data. HealthImaging data stores enabled for JPEG 2000 Lossless compression more easily integrate with legacy applications and still deliver low latency image retrieval performance from the cloud. With this launch, customers can retrieve image frames in the JPEG 2000 Lossless (1.2.840.10008.1.2.4.90) without incurring the latency of transcoding at retreival time.\n  Support for JPEG 2000 Lossless is available in all AWS Regions where AWS HealthImaging is generally available: US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), and Europe (Ireland).\n  To learn more, visit the AWS HealthImaging Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-healthimaging-jpeg-2000-lossless/",
-      "pubDate": "2025-11-17T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-d3bf9cb1a579",
-      "title": "Amazon Aurora MySQL 3.11 (compatible with MySQL 8.0.43) is now generally available",
-      "description": "Starting today, Amazon Aurora MySQL - Compatible Edition 3 (with MySQL 8.0 compatibility) will support MySQL 8.0.43 through Aurora MySQL v3.11.\n  In addition to several security enhancements and bug fixes, MySQL 8.0.43 contains additional errors for group replication and introduces the mysql client “commands” option, which enables or disables most mysql client commands. For more details, refer to the Aurora MySQL 3.11 and MySQL 8.0.43 release notes. To upgrade to Aurora MySQL 3.11, you can initiate a minor version upgrade manually by modifying your DB cluster, or you can enable the “Auto minor version upgrade” option when creating or modifying a DB cluster. This release is available in all AWS regions where Aurora MySQL is available.\n  Amazon Aurora is designed for unparalleled high performance and availability at global scale with full MySQL and PostgreSQL compatibility. It provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication, and integrations with other Amazon Web Services services. To get started with Amazon Aurora, take a look at our getting started page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-mysql-generally-available/",
-      "pubDate": "2025-11-17T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "enhancement",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f6d483853ecf",
-      "title": "Amazon VPC IPAM automates IP assignments from Infoblox IPAM",
-      "description": "Today, AWS launched the ability for Amazon VPC IP Address Manager (IPAM) to automatically acquire non-overlapping IP address allocations from Infoblox Universal IPAM. This feature minimizes manual processes between cloud and on-premises administrators, reducing the turnaround time.\n  With this launch, you can automatically acquire non-overlapping IP addresses from your on-premises Infoblox Universal IPAM into your top-level AWS IPAM pool and organize them into regional pools based on your business requirements. When you acquire non-overlapping IPs, you reduce the risk of service disruptions because your IPs don’t conflict with on-premise IP addresses. Previously, in hybrid cloud environments, administrators had to use offline means such as tickets or emails to request and allocate IP addresses, which was often error-prone and time-consuming. This integration automates the manual process, improving operational efficiency.\n  This feature is available in all AWS Regions where Amazon VPC IPAM is supported, excluding AWS China Regions and AWS GovCloud (US) Regions.\n  To learn more about IPAM, view the IPAM documentation. For details on pricing, refer to the IPAM tab on the Amazon VPC Pricing Page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-vpc-ipam-automates-ip-from-infoblox/",
-      "pubDate": "2025-11-17T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "integration",
         "support"
       ]
     },
