@@ -1,8 +1,73 @@
 {
-  "lastUpdated": "2025-11-21T06:16:18.487Z",
+  "lastUpdated": "2025-11-22T06:13:49.166Z",
   "category": "industry-cases",
-  "totalItems": 15,
+  "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-8ac2562298da",
+      "title": "AWS introduces new VPC Encryption Controls and further raises the bar on data encryption",
+      "description": "AWS launches VPC Encryption Controls to make it easy to audit and enforce encryption in transit within and across Amazon Virtual Private Clouds (VPC), and demonstrate compliance with encryption standards. You can turn it on your existing VPCs to monitor encryption status of traffic flows and identify VPC resources that are unintentionally allowing plaintext traffic. This feature also makes it easy to enforce encryption across different network paths by automatically (and transparently) turning on hardware-based AES-256 encryption on traffic between multiple VPC resources including AWS Fargate, Network Load Balancers, and Application Load Balancers.\n  To meet stringent compliance standards like HIPAA and PCI DSS, customers rely on both application layer encryption and the hardware-based encryption that AWS offers across different network paths. AWS provides hardware-based AES-256 encryption transparently between modern EC2 Nitro instances. AWS also encrypts all network traffic between AWS data centers in and across Availability Zones, and AWS Regions before the traffic leaves our secure facilities. All inter-region traffic that uses VPC Peering, Transit Gateway Peering, or AWS Cloud WAN receives an additional layer of transparent encryption before leaving AWS data centers. Prior to this release, customers had to track and confirm encryption across all network paths. With VPC Encryption Controls, customers can now monitor, enforce and demonstrate encryption within and across Virtual Private Clouds (VPCs) in just a few clicks. Your information security team can turn it on centrally to maintain a secure and compliant environment, and generate audit logs for compliance and reporting.\n  VPC Encryption Controls is now available in the following AWS Commercial regions: US East (N. Virginia), US East (Ohio), US West (Oregon), US West (N. California), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Europe (Milan), Europe (Zurich), Europe (Stockholm), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), Asia Pacific (Melbourne), Asia Pacific (Hong Kong), Asia Pacific (Osaka), Asia Pacific (Mumbai), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Canada West (Calgary), Canada (Central), Middle East (UAE), Middle East (Bahrain), Africa (Cape Town) and South America (São Paulo). To learn more about this feature and its use cases, please see our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-vpc-encryption-controls",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "fargate"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "fargate",
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-a373609adb4b",
+      "title": "AWS License Manager introduces license asset groups for centralized software asset management",
+      "description": "AWS License Manager now provides centralized software asset management across AWS regions and accounts in an organization, reducing compliance risks and streamlines license tracking through automated license asset groups. Customers can now track license expiry dates, streamline audit responses, and make data-driven renewal decisions with a product-centric view of their commercial software portfolio.\n  With this launch, customers no longer need to manually track licenses across multiple regions and accounts in their organization. Now with license asset groups, customers can gain organization-wide visibility of their commercial software usage with customizable grouping and automated reporting. The new feature is available in all commercial regions where AWS License Manager is available.\n  To get started, visit the Licenses section of the AWS License Manager console, and the AWS License Manager User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-license-manager-license-asset-groups",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "new-feature"
+      ]
+    },
+    {
+      "id": "aws-news-7737759ca591",
+      "title": "AWS Lambda announces new capabilities to optimize costs up to 90% for Provisioned mode for Kafka ESM",
+      "description": "AWS Lambda announces new capabilities for Provisioned mode for Kafka event source mappings (ESMs) that allow you to group your Kafka ESMs and support higher density of event pollers, enabling you to optimize costs up to 90% for your Kafka ESMs. With these cost optimization capabilities, you can now use Provisioned mode for all your Kafka workloads, including those with lower throughput requirements, while benefiting from features like throughput controls, schema validation, filtering of Avro/Protobuf events, low-latency invocations, and enhanced error handling.\n  Customers use Provisioned mode for Kafka ESM to fine-tune the throughput of the ESM by provisioning and auto-scaling polling resources called event pollers. Charges are calculated using a billing unit called Event Poller Unit (EPU). Each EPU supports up to 20 MB/s of throughput capacity, and a default of 4 event pollers per EPU. With this launch, each EPU automatically supports a default of 10 event pollers for low-throughput use cases, improving utilization of your EPU capacity. Additionally, you can now group multiple Kafka ESMs within the same Amazon VPC to share EPU capacity by configuring the new PollerGroupName parameter. With these enhancements, you can reduce your EPU costs up to 90% for your low throughput workloads. These optimizations enable you to maintain the performance benefits of Provisioned mode while significantly reducing costs for applications with varying throughput requirements.\n  This feature is available in all AWS Commercial Regions where AWS Lambda’s Provisioned mode for Kafka ESM is available. \n  Starting today, existing Provisioned mode for Kafka ESMs will automatically benefit from improved packing of low-throughput event pollers. You can implement ESM grouping through the Lambda ESM API, AWS Console, CLI, SDK, CloudFormation, and SAM by configuring the PollerGroupName parameter along with minimum and maximum event poller settings. For more information about these new capabilities and pricing details, visit the Lambda ESM documentation and AWS Lambda pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-lambda-optimize-costs-provisioned-mode-kafka/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "kafka"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "kafka",
+        "launch",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c48032d4f03b",
       "title": "Amazon Connect now offers persistent agent connections for faster call handling",
@@ -35,67 +100,6 @@
       "tags": [
         "api gateway",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-e365b523f7af",
-      "title": "Savings Plans and Reserved Instances Group Sharing is now generally available",
-      "description": "AWS today announced the general availability of Reserved Instances and Savings Plans (RISP) Group Sharing, a new Billing and Cost Management feature that gives customers granular control over how AWS commitments are shared across their organization. This capability allows customers to define how Reserved Instances and Savings Plans benefits are distributed among specific groups of accounts within their AWS organization, ensuring cost savings align with their business structure and accountability requirements.\n  RISP Group Sharing addresses a common challenge faced by enterprise customers managing AWS costs across multiple business units: for example, Reserved Instances and Savings Plans don't always benefit the teams that purchased them. With this feature, customers can create groups using AWS Cost Categories that reflect their organizational hierarchy—whether by business units, projects, geographical regions, or funding sources. The feature offers two sharing options: the Prioritized Group Sharing applies commitments to defined groups first, then shares unused capacity organization-wide, while the Restricted Group Sharing keeps commitments exclusively within defined groups for complete isolation when strict boundaries are required.\n  RISP Group Sharing is available now in all AWS Regions, except AWS GovCloud (US) Regions and the China Regions.\n  To get started with RISP Group Sharing, visit the Billing preferences from the AWS Billing and Cost Management Console and follow the guided setup to create your first Cost Category and configure sharing preferences. For detailed implementation guidance, see the user guide and announcement blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/savings-plans-reserved-instances-group-sharing-generally-available",
-      "pubDate": "2025-11-19T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "generally-available",
-        "ga",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-c2a673d7ccc0",
-      "title": "Accelerate infrastructure development with AWS CloudFormation intelligent authoring in IDEs",
-      "description": "Today, AWS CloudFormation announces the launch of the AWS CloudFormation Language Server, a new capability that brings intelligent authoring, early validation, troubleshooting, and drift management directly into Integrated Development Environment (IDE) through the AWS Toolkit. This new feature empowers developers to build infrastructure faster and deploy safely.\n  With this launch, developers using Visual Studio, Kiro, and other compatible IDEs can now benefit from context-aware authoring powered by the Language Server. It offers built-in auto-complete, schema validation, policy checks using CloudFormation Guard, and deployment validation directly within the IDE. For example, it immediately flags invalid resource properties or missing IAM permission requirements, while the drift-aware deployment view highlights differences between your template and deployed infrastructure, helping you spot configuration changes made outside of CloudFormation. These capabilities help developers identify issues, such as syntax errors, missing permissions, or configuration mismatches before deployment. It also provides a drift view that highlights differences between the current template and the deployed stack configuration. By integrating validation and real-time feedback directly into the authoring experience, the CloudFormation Language Server keeps developers in their flow state, turning infrastructure coding into a seamless experience, and improves infrastructure safety. This unified experience enables developers to move from design to deployment faster while maintaining compliance and best practices, spending more time building and less time troubleshooting.\n  The AWS CloudFormation Language Server is available in all AWS Commercial Regions where AWS CloudFormation is supported. To get started, install or upgrade the AWS Toolkit. To learn more, refer to AWS CloudFormation Language Server.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-cloudformation-intelligent-authoring-ides",
-      "pubDate": "2025-11-19T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "iam"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "cloudformation",
-        "iam",
-        "launch",
-        "new-feature",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-866a094e4852",
-      "title": "AWS CloudTrail adds data event aggregation to simplify security monitoring",
-      "description": "AWS announces CloudTrail aggregated events, a new feature that simplifies how enterprises monitor and analyze their CloudTrail data events at scale. Aggregations are available for CloudTrail data events, which could generate thousands of events per minute as users access resources like Amazon S3 buckets or AWS Lambda functions. With this feature, security, compliance, and operations teams can efficiently monitor high-volume data access patterns without processing massive numbers of individual events.\n  Aggregation for data events streamlines security monitoring by consolidating high-volume AWS API activity into 5-minute summaries. These summaries highlight key trends like access frequency, error rates, and most-used actions, allowing teams to quickly identify patterns while maintaining access to detailed events when needed. Security teams can easily answer questions like \"How has this user's activity changed over the past week?\" or \"What are the top actions being performed on this critical resource?\" without having to scan through voluminous CloudTrail data events.\n  You can enable aggregation in your trails capturing data events through the AWS console or CLI, and choose from pre-built aggregation templates for API activity, resource access, and user activity summaries. For more information, see the CloudTrail trail documentation. You are charged for aggregations based on the number of CloudTrail data events that are analyzed to create the aggregation. For more information, visit the CloudTrail pricing page.\n  You can use CloudTrail aggregations for data in all commercial AWS Regions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudtrail-data-event-aggregation-security-monitoring/",
-      "pubDate": "2025-11-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "s3"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "lambda",
-        "s3",
-        "ga",
-        "new-feature"
       ]
     },
     {
@@ -202,23 +206,6 @@
         "industry-cases"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-b147351ed9fa",
-      "title": "Upgrade from Amazon Redshift DC2 node type to Amazon Redshift Serverless",
-      "description": "In this post, we show you the upgrade process from DC2 instances to Amazon Redshift Serverless. By using Amazon Redshift Serverless, you can run and scale analytics without managing data warehouse infrastructure.",
-      "link": "https://aws.amazon.com/blogs/big-data/upgrade-from-amazon-redshift-dc2-node-type-to-amazon-redshift-serverless/",
-      "pubDate": "2025-10-22T21:04:31.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "redshift"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "redshift"
-      ]
     },
     {
       "id": "aws-news-11031ecd9926",

@@ -1,8 +1,160 @@
 {
-  "lastUpdated": "2025-11-21T06:16:18.487Z",
+  "lastUpdated": "2025-11-22T06:13:49.166Z",
   "category": "natural-language",
-  "totalItems": 14,
+  "totalItems": 15,
   "items": [
+    {
+      "id": "aws-news-7d35cf5f9ae9",
+      "title": "Enhancing API security with Amazon API Gateway TLS security policies",
+      "description": "In this post, you will learn how the new Amazon API Gateway’s enhanced TLS security policies help you meet standards such as PCI DSS, Open Banking, and FIPS, while strengthening how your APIs handle TLS negotiation. This new capability increases your security posture without adding operational complexity, and provides you with a single, consistent way to standardize TLS configuration across your API Gateway infrastructure.",
+      "link": "https://aws.amazon.com/blogs/compute/enhancing-api-security-with-amazon-api-gateway-tls-security-policies/",
+      "pubDate": "2025-11-21T21:17:52.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lex",
+        "rds",
+        "api gateway"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "api gateway",
+        "ga",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-7493e15a81d7",
+      "title": "AWS announces Flexible Cost Allocation on AWS Transit Gateway",
+      "description": "AWS announces general availability of Flexible Cost Allocation on AWS Transit Gateway, enhancing how you can distribute Transit Gateway costs across your organization.\n \nPreviously, Transit Gateway only used a sender-pay model, where the source attachment account owner was responsible for all data usage related costs. The new Flexible Cost Allocation (FCA) feature provides more versatile cost allocation options through a central metering policy. Using FCA metering policy, you can choose to allocate all of your Transit Gateway data processing and data transfer usage to the source attachment account, the destination attachment account, or the central Transit Gateway account. FCA metering policies can be configured at an attachment-level or individual flow-level granularity. FCA also supports middle-box deployment models enabling you to allocate data processing usage on middle-box appliances such as AWS Network Firewall to the original source or destination attachment owners. This flexibility allows you to implement multiple cost allocation models on a single Transit Gateway, accommodating various chargeback scenarios within your AWS network infrastructure.\n  Flexible Cost Allocation is available in all commercial AWS Regions where Transit Gateway is available. You can enable these features using the AWS Management Console, AWS Command Line Interface (CLI) and the AWS Software Development Kit (SDK). There is no additional charge for using FCA on Transit Gateway. For more information, see the Transit Gateway documentation pages.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-transit-gateway-flexible-cost-allocation/",
+      "pubDate": "2025-11-21T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-95c7e4f2dbf2",
+      "title": "Amazon Athena adds cost and performance controls for Capacity Reservations",
+      "description": "Amazon Athena now gives you control over Data Processing Unit (DPU) usage for queries running on Capacity Reservations. You can now configure DPU settings at the workgroup or query level to balance cost efficiency, concurrency, and query-level performance needs.\n  Capacity Reservations provides dedicated serverless processing capacity for your Athena queries. Capacity is measured in DPUs, and queries consume DPUs based on their complexity. Now you can set explicit DPU values for each query—ensuring small queries use only what they need while guaranteeing critical queries get sufficient resources for fast execution. The Athena console and API now return per-query DPU usage, helping you understand DPU usage and determine your capacity needs. These updates help you control per-query capacity usage, control query concurrency, reduce costs by eliminating over-provisioning, and deliver consistent performance for business-critical workloads.\n  Cost and performance controls are available today in AWS Regions where Capacity Reservations is supported. To learn more, see Control capacity usage in the Athena user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-athena-capacity-reservation-controls",
+      "pubDate": "2025-11-21T16:39:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "athena"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "athena",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-393bf1df7dd1",
+      "title": "AWS Control Tower introduces a controls-dedicated experience",
+      "description": "AWS Control Tower offers the easiest way to manage and govern your environment with AWS managed controls. Starting today, customers can have direct access to these AWS managed controls without requiring a full Control Tower deployment. This new experience offers over 750 managed controls that customers can deploy within minutes while maintaining their existing account structure.\n  AWS Control Tower v4.0 introduces direct access to Control Catalog, allowing customers to review available managed controls and deploy them into their existing AWS Organization. With this release, customers now have more flexibility and autonomy over their organizational structure, as Control Tower will no longer enforce a mandatory structure. Additionally, customers will have improved operations such as cleaner resource and permissions management and cost attribution due to the separation of S3 buckets and SNS notifications for the AWS Config and AWS CloudTrail integrations.\n  This controls-focused experience is now available in all AWS Regions where AWS Control Tower is supported. For more information about this new capability see the AWS Control Tower User Guide or contact your AWS account team. For a full list of Regions where AWS Control Tower is available, see the AWS Region Table.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-controls-dedicated-experience/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "sns"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "sns",
+        "ga",
+        "now-available",
+        "integration",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-c9b4e1ce6dbf",
+      "title": "Announcing flexible AMI distribution capabilities for EC2 Image Builder",
+      "description": "Amazon EC2 Image Builder now allows you to distribute existing Amazon Machine Images(AMIs), retry distributions, and define custom distribution workflows. Distribution workflows are a new workflow type that complements existing build and test workflows, enabling you to define sequential distribution steps such as AMI copy operations, wait-for-action checkpoints, and AMI attribute modifications.\n  With enhanced distribution capabilities, you can now distribute an existing image to multiple regions and accounts without running a full Image Builder pipeline. Simply specify your AMI and distribution configuration, and Image Builder handles the copying and sharing process. Additionally, with distribution workflows, you can now customize distribution process by defining custom steps. For example, you can distribute AMIs to a test region first, add a wait-for-action step to pause for validation, and then continue distribution to production regions after approval. This provides the same step-level visibility and control you have with build and test workflows.\n  These capabilities are available to all customers at no additional costs, in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions.\n You can get started from the EC2 Image Builder Console, CLI, API, CloudFormation, or CDK, and learn more in the EC2 Image Builder documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/announcing-flexible-ami-distribution-ec2-image-builder/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "cloudformation"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "cloudformation"
+      ]
+    },
+    {
+      "id": "aws-news-c658c6a75caf",
+      "title": "Amazon API Gateway REST APIs now supports private integration with Application Load Balancer",
+      "description": "Amazon API Gateway REST APIs now support direct private integration with Application Load Balancer (ALB), enabling inter-VPC connectivity to internal ALBs. This enhancement extends API Gateways existing VPC connectivity, providing you with more flexible and efficient architecture choices for your REST API implementations.\n  This direct ALB integration delivers multiple advantages: reduced latency by eliminating the additional network hop previously required through Network Load Balancer, lower infrastructure costs through simplified architecture, and enhanced Layer 7 capabilities including HTTP/HTTPS health checks, advanced request-based routing, and native container service integration. You can still use API Gateway's integration with Network Load Balancers for layer-4 connectivity.\n  Amazon API Gateway private integration with ALB is available in all AWS GovCloud (US) regions and the following AWS commercial regions US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Milan), Europe (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Israel (Tel Aviv), Middle East (Bahrain), Middle East (UAE), South America (São Paulo). For more information, visit the Amazon API Gateway documentation and blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/api-gateway-rest-apis-integration-load-balancer/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "api gateway"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "api gateway",
+        "ga",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7a4173797a90",
+      "title": "Amazon Lex extends wait & continue feature in 10 new languages",
+      "description": "Amazon Lex now supports wait & continue functionality in 10 new languages, enabling more natural conversational experiences in Chinese, Japanese, Korean, Cantonese, Spanish, French, Italian, Portuguese, Catalan, and German. This feature allows deterministic voice and chat bots to pause while customers gather additional information, then seamlessly resume when ready. For example, when asked for payment details, customers can say \"hold on a second\" to retrieve their credit card, and the bot will wait before continuing.\n  This feature is available in all AWS Regions where Amazon Lex operates. To learn more, visit the Amazon Lex documentation or explore the Amazon Connect website to learn how Amazon Connect and Amazon Lex deliver seamless end-customer self-service experiences.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-lex-wait-continue-feature-10-languages/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a1513f336f89",
       "title": "AWS Cloud WAN adds Routing Policy for advanced traffic control and flexible network deployments",
@@ -96,139 +248,6 @@
       ],
       "tags": [
         "lex"
-      ]
-    },
-    {
-      "id": "aws-news-e8d9fd27c362",
-      "title": "Amazon DynamoDB now supports multi-attribute composite keys in global secondary indexes",
-      "description": "Amazon DynamoDB now supports primary keys composed of up to eight attributes in global secondary indexes (GSIs). While previously, partition and sort keys were limited to one attribute each, DynamoDB now supports up to four attributes each for the partition and sort keys. With multi-attribute keys, you no longer need to manually concatenate values into synthetic keys, which sometimes result in the need to backfill data before adding new indexes. Instead, you can create primary keys using up to eight existing attributes, making it easier to model diverse access patterns and adapt to new query requirements.\n  Multi-attribute partition keys improve data distribution and uniqueness. Multi-attribute sort keys enable flexible querying by letting you specify conditions on sort key attributes from left to right. For example, an index with partition key UserId and sort key attributes Country, State, and City lets you query all locations for a user, then narrow results by Country, State, or City.\n  Multi-attribute partition and sort keys are available at no additional charge in all AWS Regions where DynamoDB is available. You can create them using the AWS Management Console, AWS CLI, AWS SDKs, or DynamoDB API. To learn more, see Global Secondary Indexes in the Amazon DynamoDB Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-dynamodb-multi-attribute-composite-keys-global-secondary-indexes",
-      "pubDate": "2025-11-19T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "dynamodb"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "dynamodb",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cddc321e3f6b",
-      "title": "AWS Site-to-Site VPN announces VPN Concentrator",
-      "description": "AWS Site-to-Site VPN launches VPN Concentrator, a new feature that simplifies multi-site connectivity for distributed enterprises. VPN Concentrator is suitable for customers who need to connect 25+ remote sites to AWS, with each site needing low bandwidth (under 100 Mbps).\n  Until now, customers who needed to connect large number of low-bandwidth remote sites to AWS relied on solutions that were complex to use. These solutions create operational overhead as customers need to deploy and manage multiple virtual appliances in AWS. For example, customers are responsible for deploying appliances in multiple availability zones and network configuration to ensure high availability. AWS Site-to-Site VPN is a fully managed service that allows you to create a secure connection between your data center or branch office and your AWS resources using IP Security (IPSec) tunnels. With this launch, customers can now connect up to 100 low-bandwidth sites using a single VPN Concentrator to access their workloads in AWS. VPN Concentrator simplifies multi-site connectivity by allowing multiple remote sites to connect through a single attachment to AWS Transit Gateway, simplifying multi-site connectivity. Aggregating large number of low-bandwidth sites using a VPN Concentrator also provides efficient bandwidth utilization, and in turn, reduces VPN costs per site.\n  This capability is available in all AWS commercial Regions and AWS GovCloud (US) Regions where AWS Site-to-Site VPN is available. To learn more and get started, visit the AWS Site-to-Site VPN documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-site-to-site-vpn-concentrator",
-      "pubDate": "2025-11-19T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "ga",
-        "new-feature"
-      ]
-    },
-    {
-      "id": "aws-news-f83ce0a90483",
-      "title": "Amazon Route 53 DNS service now supports AWS PrivateLink",
-      "description": "Amazon Route 53 now supports AWS PrivateLink for API requests to the route53.amazonaws.com service endpoint, allowing your AWS workloads to make changes to critical DNS infrastructure, including hosted zones, records, and health checks, without using the public internet. With this release, you can set up private connectivity between your virtual private clouds (VPCs) and the Route 53 API, from your VPC on the AWS backbone, in any AWS Region.\n  The Route 53 API is used by customers for domain name system (DNS) operations, which are a foundational layer of their cloud infrastructure automation, user-facing applications, and internal services. This integration simplifies cloud architecture by removing the need for customers to setup and manage complex networking services that connect resources in their virtual private clouds (VPCs) privately to the Route 53 API. Now, customers can use a VPC endpoint within their VPC to establish connectivity to the Route 53 API. Customers outside the US East (N. Virginia) Region can use cross-region Interface VPC endpoints to natively connect to Route53 from other Regions, without the need to send traffic over the public internet or set up inter-region connectivity like VPC peering.\n  Route 53 support for PrivateLink is available globally, except in AWS GovCloud and Amazon Web Services in China. To learn more about this feature, or to get started, visit the AWS PrivateLink documentation. To learn about pricing, visit the PrivateLink pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-route-53-dns-service-aws-privatelink/",
-      "pubDate": "2025-11-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-88c06267b200",
-      "title": "Amazon OpenSearch Service launches Cluster Insights for improved operational visibility",
-      "description": "Amazon OpenSearch Service now includes Cluster Insights, a monitoring solution that provides comprehensive operational visibility of your clusters through a single dashboard. This eliminates the complexity of having to analyze and correlate various logs and metrics to identify potential risks to cluster availability or performance. The solution automates the consolidation of critical operational data across nodes, indices, and shards, transforming complex troubleshooting into a streamlined process.\n  When investigating performance issues like slow search queries, Cluster Insights displays relevant performance metrics, affected cluster resources, top-N query analysis, and specific remediation steps in one comprehensive view. The solution operates through OpenSearch UI's resilient architecture, maintaining monitoring capabilities even during cluster unavailability. Users gain immediate access to account-level cluster summaries, enabling efficient management of multiple deployments.\n  Cluster Insights is available at no additional cost for OpenSearch version 2.17 or later in all Regions where OpenSearch UI is available. View the complete list of supported Regions here.\n  To learn more about Cluster Insights, refer to our technical documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-opensearch-service-cluster-insights/",
-      "pubDate": "2025-11-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "opensearch",
-        "opensearch service",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "opensearch",
-        "opensearch service",
-        "rds",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b8d9e79f7af0",
-      "title": "EC2 Auto Scaling now offers a synchronous API to launch instances inside an Auto Scaling group",
-      "description": "Today, EC2 Auto Scaling is launching a new API, LaunchInstances, which gives customers more control and flexibility over how EC2 Auto Scaling provisions instances while providing instant feedback on capacity availability.\n  Customers use EC2 Auto Scaling for automated fleet management. With scaling policies, EC2 Auto Scaling can automatically add instances when demand spikes and remove them when traffic drops, ensuring customers' applications always have the right amount of compute. EC2 Auto Scaling also offers the ability to monitor and replace unhealthy instances. In certain use cases, customers may want to specify exactly where EC2 Auto Scaling should launch additional instances and need immediate feedback on capacity availability. The new LaunchInstances API allows customers to precisely control where instances are launched by specifying an override for any Availability Zone and/or subnet in an Auto Scaling group, while providing immediate feedback on capacity availability. This synchronous operation gives customers real-time insight into scaling operations, enabling them to quickly implement alternative strategies if needed. For additional flexibility, the API includes optional asynchronous retries to help reach the desired capacity.\n  This feature is now available in US East (N. Virginia), US West (Oregon), Europe (Ireland), and Asia Pacific (Singapore), at no additional cost beyond standard EC2 and EBS usage. To get started, visit the AWS Command Line Interface (CLI) and the AWS SDKs. To learn more about this feature, visit the AWS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ec2-auto-scaling-synchronous-api-launch-instances/",
-      "pubDate": "2025-11-18T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-414741abe209",
-      "title": "Amazon Polly expands Generative TTS engine with additional languages and region support",
-      "description": "Today, we are excited to announce the general availability of five highly expressive Amazon Polly Generative voices in Austrian German (Hannah), Irish English (Niamh), Brazilian Portuguese (Camila), Belgian Dutch (Lisa), and Korean (Seoyeon). This release follows our October launch of Netherlands Dutch (Laura) Generative voice, bringing our total Generative engine offering to thirty-one voices across twenty locales. Additionally, we have expanded the Generative engine to three new regions in Asia Pacific: Asia Pacific (Seoul), Asia Pacific (Singapore), and Asia Pacific (Tokyo).\n  Amazon Polly is a fully-managed service that turns text into lifelike speech, allowing developers and builders to enable their applications for conversational AI or for speech content creation.\n  All new and existing Generative voices are now available in the US East (North Virginia), Europe (Frankfurt), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), and Asia Pacific (Tokyo) regions.\n  To hear how Polly voices sound, go to Amazon Polly Features. To learn more about how to use Generative engine, go to AWS Blog. For more details on the Polly offerings and use, please read the Amazon Polly documentation and visit our pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-polly-generative-tts-engine",
-      "pubDate": "2025-11-18T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "polly",
-        "iam"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "polly",
-        "iam",
-        "launch",
-        "ga",
-        "now-available",
-        "support",
-        "new-region"
       ]
     },
     {
