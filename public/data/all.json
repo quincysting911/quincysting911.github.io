@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-23T06:14:33.767Z",
+  "lastUpdated": "2025-11-24T06:17:06.899Z",
   "totalItems": 201,
   "sources": {
     "whatsNew": 94,
@@ -355,21 +355,6 @@
       ]
     },
     {
-      "id": "aws-news-0b6f140782ce",
-      "title": "Amazon Aurora DSQL database clusters now support up to 256 TiB of storage volume",
-      "description": "Amazon Aurora DSQL now supports a maximum storage limit of 256 TiB, doubling the previous limit of 128 TiB. Now, customers can store and manage larger datasets within a single database cluster, simplifying data management for large-scale applications. With Aurora DSQL, customers only pay for the storage they use and storage automatically scales with usage, ensuring that customers do not need to provision storage upfront.\n  All Aurora DSQL clusters by default have a storage limit of 10 TiB. Customers that desire clusters with higher storage limits can request a limit increase using either the Service Quotas console or AWS CLI. Visit the Service Quotas documentation for a step-by-step guide to requesting a quota increase.\n  The increased storage limits are available in all Regions where Aurora DSQL is available. Get started with Aurora DSQL for free with the AWS Free Tier. To learn more about Aurora DSQL, visit the webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-dsql-database-clusters-up-to-256-tib",
-      "pubDate": "2025-11-21T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-098aadb29a7c",
       "title": "AWS WAF announces Web Bot Auth support",
       "description": "Today, we're excited to announce the addition of Web Bot Auth (WBA) support in AWS WAF, providing a secure and standardized way to authenticate legitimate AI agents and automated tools accessing web applications. This new capability helps distinguish trusted bot traffic from potentially harmful automated access attempts.\n \nWeb Bot Auth is an authentication method that leverages cryptographic signatures in HTTP messages to verifythat a request comes from an automated bot. Web Bot Auth is used as a verification method for verified bots and signed agents. It relies on two active IETF drafts: a directory draft allowing the crawler to share their public keys, and a protocol draft defining how these keys should be used to attach crawler's identity to HTTP requests.\n \nAWS WAF now automatically allows verified AI agent traffic Verified WBA bots will now be automatically allowed by default, previously Category AI blocked unverified bots, this behavior is now refined to respect WBA verification.\n \nTo learn more, please review the documentation.",
@@ -386,6 +371,21 @@
         "waf",
         "support",
         "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-0b6f140782ce",
+      "title": "Amazon Aurora DSQL database clusters now support up to 256 TiB of storage volume",
+      "description": "Amazon Aurora DSQL now supports a maximum storage limit of 256 TiB, doubling the previous limit of 128 TiB. Now, customers can store and manage larger datasets within a single database cluster, simplifying data management for large-scale applications. With Aurora DSQL, customers only pay for the storage they use and storage automatically scales with usage, ensuring that customers do not need to provision storage upfront.\n  All Aurora DSQL clusters by default have a storage limit of 10 TiB. Customers that desire clusters with higher storage limits can request a limit increase using either the Service Quotas console or AWS CLI. Visit the Service Quotas documentation for a step-by-step guide to requesting a quota increase.\n  The increased storage limits are available in all Regions where Aurora DSQL is available. Get started with Aurora DSQL for free with the AWS Free Tier. To learn more about Aurora DSQL, visit the webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-dsql-database-clusters-up-to-256-tib",
+      "pubDate": "2025-11-21T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "support"
       ]
     },
     {
@@ -613,29 +613,6 @@
       ]
     },
     {
-      "id": "aws-news-4b6ab9257ecf",
-      "title": "AWS CloudFormation StackSets now supports deployment ordering",
-      "description": "AWS CloudFormation StackSets offers deployment ordering for auto-deployment mode, enabling you to define the sequence in which your stack instances automatically deploy across accounts and regions. This capability allows you to coordinate complex multi-stack deployments where foundational infrastructure must be provisioned before dependent application components. Organizations managing large-scale deployments can now ensure proper deployment ordering without manual intervention.\n  When creating or updating a CloudFormation StackSet, you can specify up to 10 dependencies per stack instances using the new DependsOn parameter in the AutoDeployment configuration, allowing StackSets to automatically orchestrate deployments based on your defined relationships. For example, you can make sure that your networking and security stack instance complete deployment before your application stack instances begin, preventing deployment failures due to missing dependencies. StackSets includes built-in cycle detection to prevent circular dependencies and provides error messages to help resolve configuration issues.\n  This feature is available in all AWS Regions where CloudFormation StackSets is available at no additional cost.\n  Get started by creating or updating your StackSets auto-deployement option through the CLI, SDK or the CloudFormation Console to define dependencies using stack instances ARNs. To learn more about StackSets deployment ordering, check out the detailed feature walkthrough on the AWS DevOps Blog or visit the AWS CloudFormation User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-cloudformation-stacksets-deployment-ordering",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "cloudformation",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "cloudformation",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-8ac2562298da",
       "title": "AWS introduces new VPC Encryption Controls and further raises the bar on data encryption",
       "description": "AWS launches VPC Encryption Controls to make it easy to audit and enforce encryption in transit within and across Amazon Virtual Private Clouds (VPC), and demonstrate compliance with encryption standards. You can turn it on your existing VPCs to monitor encryption status of traffic flows and identify VPC resources that are unintentionally allowing plaintext traffic. This feature also makes it easy to enforce encryption across different network paths by automatically (and transparently) turning on hardware-based AES-256 encryption on traffic between multiple VPC resources including AWS Fargate, Network Load Balancers, and Application Load Balancers.\n  To meet stringent compliance standards like HIPAA and PCI DSS, customers rely on both application layer encryption and the hardware-based encryption that AWS offers across different network paths. AWS provides hardware-based AES-256 encryption transparently between modern EC2 Nitro instances. AWS also encrypts all network traffic between AWS data centers in and across Availability Zones, and AWS Regions before the traffic leaves our secure facilities. All inter-region traffic that uses VPC Peering, Transit Gateway Peering, or AWS Cloud WAN receives an additional layer of transparent encryption before leaving AWS data centers. Prior to this release, customers had to track and confirm encryption across all network paths. With VPC Encryption Controls, customers can now monitor, enforce and demonstrate encryption within and across Virtual Private Clouds (VPCs) in just a few clicks. Your information security team can turn it on centrally to maintain a secure and compliant environment, and generate audit logs for compliance and reporting.\n  VPC Encryption Controls is now available in the following AWS Commercial regions: US East (N. Virginia), US East (Ohio), US West (Oregon), US West (N. California), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Europe (Milan), Europe (Zurich), Europe (Stockholm), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), Asia Pacific (Melbourne), Asia Pacific (Hong Kong), Asia Pacific (Osaka), Asia Pacific (Mumbai), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Canada West (Calgary), Canada (Central), Middle East (UAE), Middle East (Bahrain), Africa (Cape Town) and South America (São Paulo). To learn more about this feature and its use cases, please see our documentation.",
@@ -677,6 +654,29 @@
       ]
     },
     {
+      "id": "aws-news-4b6ab9257ecf",
+      "title": "AWS CloudFormation StackSets now supports deployment ordering",
+      "description": "AWS CloudFormation StackSets offers deployment ordering for auto-deployment mode, enabling you to define the sequence in which your stack instances automatically deploy across accounts and regions. This capability allows you to coordinate complex multi-stack deployments where foundational infrastructure must be provisioned before dependent application components. Organizations managing large-scale deployments can now ensure proper deployment ordering without manual intervention.\n  When creating or updating a CloudFormation StackSet, you can specify up to 10 dependencies per stack instances using the new DependsOn parameter in the AutoDeployment configuration, allowing StackSets to automatically orchestrate deployments based on your defined relationships. For example, you can make sure that your networking and security stack instance complete deployment before your application stack instances begin, preventing deployment failures due to missing dependencies. StackSets includes built-in cycle detection to prevent circular dependencies and provides error messages to help resolve configuration issues.\n  This feature is available in all AWS Regions where CloudFormation StackSets is available at no additional cost.\n  Get started by creating or updating your StackSets auto-deployement option through the CLI, SDK or the CloudFormation Console to define dependencies using stack instances ARNs. To learn more about StackSets deployment ordering, check out the detailed feature walkthrough on the AWS DevOps Blog or visit the AWS CloudFormation User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-cloudformation-stacksets-deployment-ordering",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudformation",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "cloudformation",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-0539e3184387",
       "title": "Amazon EKS add-ons now supports the AWS Secrets Store CSI Driver provider",
       "description": "Today, AWS announces the general availability of the AWS Secrets Store CSI Driver provider EKS add-on. This new integration allows customers to retrieve secrets from AWS Secrets Manager and parameters from AWS Systems Manager Parameter Store and mount them as files on their Kubernetes clusters running on Amazon Elastic Kubernetes Service (Amazon EKS). The add-on installs and manages the AWS provider for the Secrets Store CSI Driver.\n  Now, with the new Amazon EKS add-on, customers can quickly and easily set up new and existing clusters using automation to leverage AWS Secrets Manager and AWS Systems Manager Parameter Store, enhancing security and simplifying secrets management. Amazon EKS add-ons are curated extensions that automate the installation, configuration, and lifecycle management of operational software for Kubernetes clusters, simplifying the process of maintaining cluster functionality and security.\n  Customers rely on AWS Secrets Manager to securely store and manage secrets such as database credentials and API keys throughout their lifecycle. To learn more about Secrets Manager, visit the documentation. For a list of regions where Secrets Manager is available, see the AWS Region table. To get started with Secrets Manager, visit the Secrets Manager home page.\n  This new Amazon EKS add-on is available in all AWS commercial and AWS GovCloud (US) Regions.\n To get started, see the following resources:\n  \n \n \nAmazon EKS add-ons user guide\n \n \nAWS Secrets Manager user guide",
@@ -694,27 +694,6 @@
         "eks",
         "secrets manager",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b7916baad19a",
-      "title": "AWS Control Tower now supports seven new compliance frameworks and 279 additional AWS Config rules",
-      "description": "Today, AWS Control Tower announces support for an additional 279 managed Config rules in Control Catalog for various use cases such as security, cost, durability, and operations. With this launch, you can now search, discover, enable and manage these additional rules directly from AWS Control Tower and govern more use cases for your multi-account environment. AWS Control Tower also supports seven new compliance frameworks in Control Catalog. In addition to existing frameworks, most controls are now mapped to ACSC-Essential-Eight-Nov-2022, ACSC-ISM-02-Mar-2023, AWS-WAF-v10, CCCS-Medium-Cloud-Control-May-2019, CIS-AWS-Benchmark-v1.2, CIS-AWS-Benchmark-v1.3, CIS-v7.1\n  To get started, go to the Control Catalog and search for controls with the implementation filter AWS Config to view all AWS Config rules in the Catalog. You can enable relevant rules directly using the AWS Control Tower console or the ListControls, GetControl and EnableControl APIs. We've also enhanced control relationship mapping, helping you understand how different controls work together. The updated ListControlMappings API now reveals important relationships between controls - showing which ones complement each other, are alternatives, or are mutually exclusive. For instance, you can now easily identify when a Config Rule (detection) and a Service Control Policy (prevention) can work together for comprehensive security coverage.\n  These new features are available in AWS Regions where AWS Control Tower is available, including AWS GovCloud (US). Reference the list of supported regions for each Config rule to see where it can be enabled. To learn more, visit the AWS Control Tower User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-new-compliance-frameworks-additional-aws-config-rules",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "waf"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "waf",
-        "launch",
-        "new-feature",
-        "update",
         "support"
       ]
     },
@@ -746,6 +725,27 @@
       ]
     },
     {
+      "id": "aws-news-b7916baad19a",
+      "title": "AWS Control Tower now supports seven new compliance frameworks and 279 additional AWS Config rules",
+      "description": "Today, AWS Control Tower announces support for an additional 279 managed Config rules in Control Catalog for various use cases such as security, cost, durability, and operations. With this launch, you can now search, discover, enable and manage these additional rules directly from AWS Control Tower and govern more use cases for your multi-account environment. AWS Control Tower also supports seven new compliance frameworks in Control Catalog. In addition to existing frameworks, most controls are now mapped to ACSC-Essential-Eight-Nov-2022, ACSC-ISM-02-Mar-2023, AWS-WAF-v10, CCCS-Medium-Cloud-Control-May-2019, CIS-AWS-Benchmark-v1.2, CIS-AWS-Benchmark-v1.3, CIS-v7.1\n  To get started, go to the Control Catalog and search for controls with the implementation filter AWS Config to view all AWS Config rules in the Catalog. You can enable relevant rules directly using the AWS Control Tower console or the ListControls, GetControl and EnableControl APIs. We've also enhanced control relationship mapping, helping you understand how different controls work together. The updated ListControlMappings API now reveals important relationships between controls - showing which ones complement each other, are alternatives, or are mutually exclusive. For instance, you can now easily identify when a Config Rule (detection) and a Service Control Policy (prevention) can work together for comprehensive security coverage.\n  These new features are available in AWS Regions where AWS Control Tower is available, including AWS GovCloud (US). Reference the list of supported regions for each Config rule to see where it can be enabled. To learn more, visit the AWS Control Tower User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-new-compliance-frameworks-additional-aws-config-rules",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "waf"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "waf",
+        "launch",
+        "new-feature",
+        "update",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-b5fe1dd88b80",
       "title": "Amazon OpenSearch Service OR2 and OM2 now available in additional Regions",
       "description": "Amazon OpenSearch Service, expands availability of OR2 and OM2, OpenSearch Optimized Instance family to 11 additional regions. The OR2 instance delivers up to 26% higher indexing throughput compared to previous OR1 instances and 70% over R7g instances. The OM2 instance delivers up to 15% higher indexing throughput compared to OR1 instances and 66% over M7g instances in internal benchmarks.\n \nThe OpenSearch Optimized instances, leveraging best-in-class cloud technologies like Amazon S3, to provide high durability, and improved price-performance for higher indexing throughput better for indexing heavy workload. Each OpenSearch Optimized instance is provisioned with compute, local instance storage for caching, and remote Amazon S3-based managed storage. OR2 and OM2 offers pay-as-you-go pricing and reserved instances, with a simple hourly rate for the instance, local instance storage, as well as the managed storage provisioned. OR2 instances come in sizes ‘medium’ through ‘16xlarge’, and offer compute, memory, and storage flexibility. OM2 instances come in sizes ‘large’ through ‘16xlarge’ Please refer to the Amazon OpenSearch Service pricing page for pricing details.\n  OR2 instance family is now available on Amazon OpenSearch Service across 11 additional regions globally: US West (N. California), Canada (Central),  Asia Pacific (Hong Kong, Jakarta , Malaysia, Melbourne, Osaka , Seoul, Singapore), Europe (London), and South America (Sao Paulo). \n  OM2 instance family is now available on Amazon OpenSearch Service across 14 additional regions globally: US West (N. California), Canada (Central), Asia Pacific (Hong Kong, Hyderabad, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokyo), Europe ( Paris, Spain), Middle East (Bahrain), South America (Sao Paulo).",
@@ -768,21 +768,6 @@
         "opensearch service",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-138216fa99de",
-      "title": "Amazon ECR now supports managed container image signing",
-      "description": "Amazon ECR now supports managed container image signing to enhance your security posture and eliminate the operational overhead of setting up signing. Container image signing allows you to verify that images are from trusted sources. With managed signing, ECR simplifies setting up container image signing to just a few clicks in the ECR Console or a single API call.\n  To get started, create a signing rule with an AWS Signer signing profile that specifies parameters such as signature validity period, and which repositories ECR should sign images for. Once configured, ECR automatically signs images as they are pushed using the identity of the entity pushing the image. ECR leverages AWS Signer for signing operations, which handles key material and certificate lifecycle management including generation, secure storage, and rotation. All signing operations are logged through CloudTrail for full auditability.\n  ECR managed signing is available in all AWS Regions where AWS Signer is available. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecr-managed-container-image-signing",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "support"
       ]
     },
     {
@@ -813,20 +798,18 @@
       ]
     },
     {
-      "id": "aws-news-d5b5e2447564",
-      "title": "Announcing AWS Compute Optimizer automation rules",
-      "description": "Today, we are introducing automation rules, a new feature in AWS Compute Optimizer that enables you to optimize Amazon Elastic Block Store (EBS) volumes at scale. With automation rules, you can streamline the process of cleaning up unattached EBS volumes and upgrading volumes to the latest-generation volume types, saving cost and improving performance across your cloud infrastructure.\n  Automation rules let you automatically apply optimization recommendations on a recurring schedule when they match your criteria. You can set criteria like AWS Region to target specific geographies and Resource Tags to distinguish between production and development workloads. Configure rules to run daily, weekly, or monthly, and AWS Compute Optimizer will continuously evaluate new recommendations against your criteria. A new dashboard allows you to summarize automation events over time, examine detailed step history, and estimate savings achieved. If you need to reverse an action, you can do so directly from the same dashboard.\n  AWS Compute Optimizer automation rules are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To get started, navigate to the new Automation section in the AWS Compute Optimizer console, visit the AWS Compute Optimizer user guide documentation, or read the announcement blog to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-automation-rules",
+      "id": "aws-news-138216fa99de",
+      "title": "Amazon ECR now supports managed container image signing",
+      "description": "Amazon ECR now supports managed container image signing to enhance your security posture and eliminate the operational overhead of setting up signing. Container image signing allows you to verify that images are from trusted sources. With managed signing, ECR simplifies setting up container image signing to just a few clicks in the ECR Console or a single API call.\n  To get started, create a signing rule with an AWS Signer signing profile that specifies parameters such as signature validity period, and which repositories ECR should sign images for. Once configured, ECR automatically signs images as they are pushed using the identity of the entity pushing the image. ECR leverages AWS Signer for signing operations, which handles key material and certificate lifecycle management including generation, secure storage, and rotation. All signing operations are logged through CloudTrail for full auditability.\n  ECR managed signing is available in all AWS Regions where AWS Signer is available. To learn more, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecr-managed-container-image-signing",
       "pubDate": "2025-11-21T15:00:00.000Z",
       "source": "whatsNew",
       "services": [],
       "categories": [
-        "ai-services"
+        "generative-ai"
       ],
       "tags": [
-        "ga",
-        "new-feature",
-        "announcement"
+        "support"
       ]
     },
     {
@@ -851,6 +834,23 @@
         "ga",
         "support",
         "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-d5b5e2447564",
+      "title": "Announcing AWS Compute Optimizer automation rules",
+      "description": "Today, we are introducing automation rules, a new feature in AWS Compute Optimizer that enables you to optimize Amazon Elastic Block Store (EBS) volumes at scale. With automation rules, you can streamline the process of cleaning up unattached EBS volumes and upgrading volumes to the latest-generation volume types, saving cost and improving performance across your cloud infrastructure.\n  Automation rules let you automatically apply optimization recommendations on a recurring schedule when they match your criteria. You can set criteria like AWS Region to target specific geographies and Resource Tags to distinguish between production and development workloads. Configure rules to run daily, weekly, or monthly, and AWS Compute Optimizer will continuously evaluate new recommendations against your criteria. A new dashboard allows you to summarize automation events over time, examine detailed step history, and estimate savings achieved. If you need to reverse an action, you can do so directly from the same dashboard.\n  AWS Compute Optimizer automation rules are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To get started, navigate to the new Automation section in the AWS Compute Optimizer console, visit the AWS Compute Optimizer user guide documentation, or read the announcement blog to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-automation-rules",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "ga",
+        "new-feature",
+        "announcement"
       ]
     },
     {
@@ -898,92 +898,69 @@
       ]
     },
     {
-      "id": "aws-news-d0209dd90f91",
-      "title": "Amazon Route 53 DNS service adds support for IPv6 API service endpoint",
-      "description": "Starting today, Amazon Route 53 supports dual stack for the Route 53 DNS service API endpoint at route53.global.api.aws, enabling you to connect from Internet Protocol Version 6 (IPv6), Internet Protocol Version 4 (IPv4), or dual stack clients. The existing Route 53 DNS service IPv4 API endpoint will remain available for backwards compatibility.\n  Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service that allows customers to register a domain, setup DNS records corresponding to your infrastructure, perform global traffic routing using Traffic Flow, and use Route 53 health checks to monitor the health and performance of your applications and resources. Due to the continued growth of the internet, IPv4 address space is being exhausted and customers are transitioning to IPv6 addresses. Now, clients can connect via IPv6 to the Route 53 DNS service API endpoint, enabling organizations to meet compliance requirements and removing the added complexity of IP address translation between IPv4 and IPv6.\n  Support for IPv6 on the Route 53 DNS service API endpoint is available in all Commercial Regions and available at no additional cost. You can get started with this feature through the AWS CLI or AWS Management Console. To learn more about which Route 53 features are accessible via the route53.amazon.aws service endpoint, visit this page and to learn more about the Route 53 DNS service, visit our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-route-53-dns-service-ipv6-api-endpoint/",
+      "id": "aws-news-ffe32c223a6e",
+      "title": "AWS Glue supports AWS CloudFormation and AWS CDK for zero-ETL integrations",
+      "description": "AWS Glue zero-ETL integrations now support AWS CloudFormation and AWS Cloud Development Kit (AWS CDK), through which you can create Zero-ETL integrations using infrastructure as code. Zero-ETL integrations are fully managed by AWS and minimize the need to build ETL data pipelines.\n  Using AWS Glue zero-ETL, you can ingest data from AWS DynamoDB or enterprise SaaS sources, including Salesforce, ServiceNow, SAP, and Zendesk, into Amazon Redshift, Amazon S3, and Amazon S3 Tables. CloudFormation and CDK support for these Glue zero-ETL integrations simplifies the way you can create, update, and manage zero-ETL integrations using infrastructure as code. With CloudFormation and CDK support, data engineering teams can now consistently deploy any zero-ETL integration across multiple AWS accounts while maintaining version control of their configurations.\n  This feature is available in all AWS Regions where AWS Glue zero-ETL is currently available.\n  To get started with the new AWS Glue zero-ETL infrastructure as code capabilities, visit the CloudFormation documentation for AWS Glue, CDK documentation, or the AWS Glue zero-ETL user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-cloudformation-cdk-zero-etl-integrations/",
       "pubDate": "2025-11-21T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "lex",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-196cf0862d39",
-      "title": "Amazon Athena launches auto-scaling solution for Capacity Reservations",
-      "description": "Amazon Athena now offers an auto-scaling solution for Capacity Reservations that dynamically adjusts your reserved capacity based on workload demand. The solution uses AWS Step Functions to monitor utilization metrics and scale your Data Processing Units (DPUs) up or down according to the thresholds and limits you configure, helping you optimize costs while maintaining query performance and eliminating the need for manual capacity adjustments.\n  You can customize scaling behavior by setting utilization thresholds, measurement frequency, and capacity limits to match your workload needs. The solution uses Step Functions to add or remove DPUs to any active Capacity Reservation based on capacity utilization metrics in Amazon CloudWatch. Capacity automatically scales up when utilization exceeds your high threshold and scales down when it falls below your low threshold - all while adhering to your defined limits. You can further customize the solution by modifying the Amazon CloudFormation template to fit your specific requirements.\n  The auto-scaling solution for Athena Capacity Reservations is available in AWS Regions where Capacity Reservations is supported. To get started, see Automatically adjust capacity in the Athena user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-athena-capacity-auto-scaling",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "athena",
-        "step functions",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "athena",
-        "step functions",
-        "cloudwatch",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fe1425322358",
-      "title": "Amazon Connect now supports multi skill agent scheduling",
-      "description": "Amazon Connect now enables you to optimize scheduling based on agent’s multiple specialized skills. You can now maximize agent utilization across multiple dimensions such as departments, languages, and customer tiers by intelligently matching agents with multiple skills to forecasted demand. You can now also preserve multi-skilled agents for high-value interactions when needed most. For example, bilingual agents can now be strategically scheduled to cover peak periods for high-value French language queues that frequently experience staffing shortages, while handling general inquiries during off-peak times.\n  This feature is available in all AWS Regions where Amazon Connect agent scheduling is available. To learn more about multi skill agent scheduling, visit the blog and admin guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-multi-skill-agent-scheduling",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "forecast"
-      ],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "forecast",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-bfa79d7ad5e5",
-      "title": "AWS Glue launches Amazon DynamoDB connector with Spark DataFrame support",
-      "description": "AWS Glue now supports a new Amazon DynamoDB connector that works natively with Apache Spark DataFrames. This enhancement allows Spark developers to work directly with Spark DataFrames, to share code easily across AWS Glue, Amazon EMR, and other Spark environments.\n  Previously, developers working with DynamoDB data in AWS Glue were required to use the Glue-specific DynamicFrame object. With this new connector, developers can now reuse their existing Spark DataFrame code with minimal modifications. This change streamlines the process of migrating jobs to AWS Glue and simplifies data pipeline development. Additionally, the connector unlocks access to the full range of Spark DataFrame operations and the latest performance optimizations.\n  The new connector is available in all AWS Commercial Regions where AWS Glue is available. To get started, visit AWS Glue documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/glue-dynamodb-connector",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "emr",
+        "s3",
+        "redshift",
         "dynamodb",
+        "cloudformation",
         "glue"
       ],
       "categories": [
         "general"
       ],
       "tags": [
-        "emr",
+        "s3",
+        "redshift",
         "dynamodb",
+        "cloudformation",
         "glue",
-        "launch",
-        "enhancement",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9a9239214a06",
+      "title": "Amazon SageMaker HyperPod now supports running IDEs and Notebooks to accelerate AI development",
+      "description": "Amazon SageMaker HyperPod now supports IDEs and Notebooks, enabling AI developers to run JupyterLab, Code Editor, or connect local IDEs to run their interactive AI workloads directly on HyperPod clusters.\n  AI developers can now run IDEs and notebooks on the same persistent HyperPod EKS clusters used for training and inference. This enables developers to leverage HyperPod's scalable GPU capacity with familiar tools like HyperPod CLI, while sharing data across IDEs and training jobs through mounted file systems such as FSx, EFS, etc..\n  Administrators can maximize CPU/GPU investments through unified governance across IDEs, training, and inference workloads using HyperPod Task Governance. HyperPod Observability provides usage metrics including CPU, GPU, and memory consumption, enabling cost-efficient cluster utilization.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is currently available, excluding China and GovCloud (US) regions. To learn more, visit our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-hyperpod-ides-notebooks-ai/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2c36a717bd9f",
+      "title": "Amazon Lightsail expands blueprint selection with updated support for Nginx Blueprint",
+      "description": "Amazon Lightsail now offers a new Nginx blueprint. This new blueprint has Instance Metadata Service Version 2 (IMDSv2) enforced by default, and supports IPv6-only instances. With just a few clicks, you can create a Lightsail virtual private server (VPS) of your preferred size that comes with Nginx preinstalled.\n  With Lightsail, you can easily get started on the cloud by choosing a blueprint and an instance bundle to build your web application. Lightsail instance bundles include instances preinstalled with your preferred operating system, storage, and monthly data transfer allowance, giving you everything you need to get up and running quickly\n  This new blueprint is now available in all AWS Regions where Lightsail is available. For more information on blueprints supported on Lightsail, see Lightsail documentation. For more information on pricing, or to get started with your free trial, click here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/announcing-nginx-blueprint-by-amazon-lightsail/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "now-available",
+        "update",
         "support"
       ]
     },
@@ -1035,68 +1012,6 @@
       ]
     },
     {
-      "id": "aws-news-2c36a717bd9f",
-      "title": "Amazon Lightsail expands blueprint selection with updated support for Nginx Blueprint",
-      "description": "Amazon Lightsail now offers a new Nginx blueprint. This new blueprint has Instance Metadata Service Version 2 (IMDSv2) enforced by default, and supports IPv6-only instances. With just a few clicks, you can create a Lightsail virtual private server (VPS) of your preferred size that comes with Nginx preinstalled.\n  With Lightsail, you can easily get started on the cloud by choosing a blueprint and an instance bundle to build your web application. Lightsail instance bundles include instances preinstalled with your preferred operating system, storage, and monthly data transfer allowance, giving you everything you need to get up and running quickly\n  This new blueprint is now available in all AWS Regions where Lightsail is available. For more information on blueprints supported on Lightsail, see Lightsail documentation. For more information on pricing, or to get started with your free trial, click here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/announcing-nginx-blueprint-by-amazon-lightsail/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "now-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8a3db6cc0a81",
-      "title": "Amazon ECR dual-stack endpoints now support AWS PrivateLink",
-      "description": "Amazon Elastic Container Registry (ECR) announces AWS PrivateLink support for its dual-stack endpoints. This makes it easier to standardize on IPv6 and enhance your security posture.\n  Previously, ECR announced IPv6 support for API and Docker/OCI requests via the new dual-stack endpoints. With these dual-stack endpoints, you can make requests from either an IPv4 or an IPv6 network. With today’s launch, you can now make requests to these dual-stack endpoints using AWS PrivateLink to limit all network traffic between your Amazon Virtual Private Cloud (VPC) and ECR to the Amazon network, thereby improving your security posture.\n  This feature is generally available in all AWS commercial and AWS GovCloud (US) regions at no additional cost. To get started, visit ECR documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ecr-dual-stack-endpoints-privatelink/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ffe32c223a6e",
-      "title": "AWS Glue supports AWS CloudFormation and AWS CDK for zero-ETL integrations",
-      "description": "AWS Glue zero-ETL integrations now support AWS CloudFormation and AWS Cloud Development Kit (AWS CDK), through which you can create Zero-ETL integrations using infrastructure as code. Zero-ETL integrations are fully managed by AWS and minimize the need to build ETL data pipelines.\n  Using AWS Glue zero-ETL, you can ingest data from AWS DynamoDB or enterprise SaaS sources, including Salesforce, ServiceNow, SAP, and Zendesk, into Amazon Redshift, Amazon S3, and Amazon S3 Tables. CloudFormation and CDK support for these Glue zero-ETL integrations simplifies the way you can create, update, and manage zero-ETL integrations using infrastructure as code. With CloudFormation and CDK support, data engineering teams can now consistently deploy any zero-ETL integration across multiple AWS accounts while maintaining version control of their configurations.\n  This feature is available in all AWS Regions where AWS Glue zero-ETL is currently available.\n  To get started with the new AWS Glue zero-ETL infrastructure as code capabilities, visit the CloudFormation documentation for AWS Glue, CDK documentation, or the AWS Glue zero-ETL user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-cloudformation-cdk-zero-etl-integrations/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift",
-        "dynamodb",
-        "cloudformation",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "dynamodb",
-        "cloudformation",
-        "glue",
-        "update",
-        "integration",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-2fff11f9fbf8",
       "title": "Amazon EC2 Fleet adds new encryption attribute for instance type selection",
       "description": "Amazon EC2 Fleet now supports a new encryption attribute for Attribute-Based Instance Type Selection (ABIS). Customers can use the RequireEncryptionInTransit parameter to specifically launch instance types that support encryption-in-transit, in addition to specifying resource requirements like vCPU cores and memory.\n  The new encryption attribute addresses critical compliance needs for customers who use VPC Encryption Controls in enforced mode and require all network traffic to be encrypted in transit. By combining encryption requirements with other instance attributes in ABIS, customers can achieve instance type diversification for better capacity fulfillment while meeting their security needs. Additionally, the GetInstanceTypesFromInstanceRequirements (GITFIR) allows you to preview which instance types you might be allocated based on your specified encryption requirements.\n  This feature is available in all AWS commercial and AWS GovCloud (US) Regions.\n  To get started, set the RequireEncryptionInTransit parameter to true in InstanceRequirements when calling the CreateFleet or GITFIR APIs. For more information, refer to the user guides for EC2 Fleet and GITFIR.",
@@ -1135,28 +1050,6 @@
         "lex",
         "ec2",
         "cloudformation"
-      ]
-    },
-    {
-      "id": "aws-news-9a9239214a06",
-      "title": "Amazon SageMaker HyperPod now supports running IDEs and Notebooks to accelerate AI development",
-      "description": "Amazon SageMaker HyperPod now supports IDEs and Notebooks, enabling AI developers to run JupyterLab, Code Editor, or connect local IDEs to run their interactive AI workloads directly on HyperPod clusters.\n  AI developers can now run IDEs and notebooks on the same persistent HyperPod EKS clusters used for training and inference. This enables developers to leverage HyperPod's scalable GPU capacity with familiar tools like HyperPod CLI, while sharing data across IDEs and training jobs through mounted file systems such as FSx, EFS, etc..\n  Administrators can maximize CPU/GPU investments through unified governance across IDEs, training, and inference workloads using HyperPod Task Governance. HyperPod Observability provides usage metrics including CPU, GPU, and memory consumption, enabling cost-efficient cluster utilization.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is currently available, excluding China and GovCloud (US) regions. To learn more, visit our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-hyperpod-ides-notebooks-ai/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "support"
       ]
     },
     {
@@ -1213,26 +1106,55 @@
       ]
     },
     {
-      "id": "aws-news-d574c6d1d540",
-      "title": "Announcing Amazon ECS Express Mode",
-      "description": "Today, AWS announces Amazon Elastic Container Service (Amazon ECS) Express Mode, a new feature that empowers developers to rapidly launch containerized applications, including web applications and APIs. ECS Express Mode makes it easy to orchestrate and manage the cloud architecture for your application, while maintaining full control over your infrastructure resources.\n  Amazon ECS Express Mode streamlines the deployment and management of containerized applications on AWS, allowing developers to focus on delivering business value through their containerized applications. Every Express Mode service automatically receives an AWS-provided domain name, making your application immediately accessible without additional configuration. Applications using ECS Express Mode incorporate AWS operational best practices, serve either public or private HTTPS requests, and scale in response to traffic patterns. Traffic is distributed through Application Load Balancer (ALB)s, and automatically consolidates up to 25 Express Mode services behind a single ALB when appropriate. ECS Express uses intelligent rule-based routing to maintain isolation between services while efficiently utilizing the ALB resource. All resources provisioned by ECS Express Mode remain fully accessible in your account, ensuring you never sacrifice control or flexibility. As your application requirements evolve, you can directly access and modify any infrastructure resource, leveraging the complete feature set of Amazon ECS and related services without disruption to your running applications.\n  To get started just provide your container image, and ECS Express Mode handles the rest by deploying your application in Amazon ECS and auto-generating a URL. Amazon ECS Express Mode is available now in all AWS Regions at no additional charge. You pay only for the AWS resources created to run your application. To deploy a new ECS Express Mode service, use the Amazon ECS Console, SDK, CLI, CloudFormation, CDK and Terraform. For more information, see the AWS News blog, or the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/announcing-amazon-ecs-express-mode",
+      "id": "aws-news-7a4173797a90",
+      "title": "Amazon Lex extends wait & continue feature in 10 new languages",
+      "description": "Amazon Lex now supports wait & continue functionality in 10 new languages, enabling more natural conversational experiences in Chinese, Japanese, Korean, Cantonese, Spanish, French, Italian, Portuguese, Catalan, and German. This feature allows deterministic voice and chat bots to pause while customers gather additional information, then seamlessly resume when ready. For example, when asked for payment details, customers can say \"hold on a second\" to retrieve their credit card, and the bot will wait before continuing.\n  This feature is available in all AWS Regions where Amazon Lex operates. To learn more, visit the Amazon Lex documentation or explore the Amazon Connect website to learn how Amazon Connect and Amazon Lex deliver seamless end-customer self-service experiences.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-lex-wait-continue-feature-10-languages/",
       "pubDate": "2025-11-21T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "lex",
-        "ecs",
-        "cloudformation"
+        "lex"
       ],
       "categories": [
-        "generative-ai"
+        "natural-language"
       ],
       "tags": [
         "lex",
-        "ecs",
-        "cloudformation",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8a3db6cc0a81",
+      "title": "Amazon ECR dual-stack endpoints now support AWS PrivateLink",
+      "description": "Amazon Elastic Container Registry (ECR) announces AWS PrivateLink support for its dual-stack endpoints. This makes it easier to standardize on IPv6 and enhance your security posture.\n  Previously, ECR announced IPv6 support for API and Docker/OCI requests via the new dual-stack endpoints. With these dual-stack endpoints, you can make requests from either an IPv4 or an IPv6 network. With today’s launch, you can now make requests to these dual-stack endpoints using AWS PrivateLink to limit all network traffic between your Amazon Virtual Private Cloud (VPC) and ECR to the Amazon network, thereby improving your security posture.\n  This feature is generally available in all AWS commercial and AWS GovCloud (US) regions at no additional cost. To get started, visit ECR documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ecr-dual-stack-endpoints-privatelink/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
         "launch",
-        "new-feature"
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8ea0dfacb966",
+      "title": "Amazon WorkSpaces Applications now supports IPv6",
+      "description": "Amazon WorkSpaces Applications now supports IPv6 for WorkSpaces Applications domains and external endpoints, allowing end users to connect to WorkSpaces Applications over IPv6 from IPv6 compatible devices (except SAML authentication). This helps you meet IPv6 compliance requirements and eliminates the need for expensive networking equipment to handle address translation between IPv4 and IPv6.\n \nThe Internet's growth is consuming IPv4 addresses quickly. WorkSpaces Applications, by supporting IPv6, assists customers in streamlining their network architecture. This support offers a much larger address space and removes the necessity to manage overlapping address spaces in their VPCs. Customers can now base their applications on IPv6, ensuring their infrastructure is future-ready and compatible with existing IPv4 systems via a fallback mechanism.\n \nThis feature is available at no additional cost in 16 AWS Regions, including US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Europe (Paris, Frankfurt, London, Ireland), Asia Pacific (Tokyo, Mumbai, Sydney, Seoul, Singapore), and South America (Sao Paulo) and AWS GovCloud (US-West, US-East). WorkSpaces Applications offers pay-as-you go pricing.\n \nTo get started with WorkSpaces Applications, see Getting Started with Amazon WorkSpaces Applications. To enable this feature for your users, you must use the latest WorkSpaces Applications client for Windows, macOS or directly through web access. To learn more about the feature, please refer to the service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-appstream-2-0-supports-ipv6/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
       ]
     },
     {
@@ -1259,22 +1181,26 @@
       ]
     },
     {
-      "id": "aws-news-7a4173797a90",
-      "title": "Amazon Lex extends wait & continue feature in 10 new languages",
-      "description": "Amazon Lex now supports wait & continue functionality in 10 new languages, enabling more natural conversational experiences in Chinese, Japanese, Korean, Cantonese, Spanish, French, Italian, Portuguese, Catalan, and German. This feature allows deterministic voice and chat bots to pause while customers gather additional information, then seamlessly resume when ready. For example, when asked for payment details, customers can say \"hold on a second\" to retrieve their credit card, and the bot will wait before continuing.\n  This feature is available in all AWS Regions where Amazon Lex operates. To learn more, visit the Amazon Lex documentation or explore the Amazon Connect website to learn how Amazon Connect and Amazon Lex deliver seamless end-customer self-service experiences.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-lex-wait-continue-feature-10-languages/",
+      "id": "aws-news-d574c6d1d540",
+      "title": "Announcing Amazon ECS Express Mode",
+      "description": "Today, AWS announces Amazon Elastic Container Service (Amazon ECS) Express Mode, a new feature that empowers developers to rapidly launch containerized applications, including web applications and APIs. ECS Express Mode makes it easy to orchestrate and manage the cloud architecture for your application, while maintaining full control over your infrastructure resources.\n  Amazon ECS Express Mode streamlines the deployment and management of containerized applications on AWS, allowing developers to focus on delivering business value through their containerized applications. Every Express Mode service automatically receives an AWS-provided domain name, making your application immediately accessible without additional configuration. Applications using ECS Express Mode incorporate AWS operational best practices, serve either public or private HTTPS requests, and scale in response to traffic patterns. Traffic is distributed through Application Load Balancer (ALB)s, and automatically consolidates up to 25 Express Mode services behind a single ALB when appropriate. ECS Express uses intelligent rule-based routing to maintain isolation between services while efficiently utilizing the ALB resource. All resources provisioned by ECS Express Mode remain fully accessible in your account, ensuring you never sacrifice control or flexibility. As your application requirements evolve, you can directly access and modify any infrastructure resource, leveraging the complete feature set of Amazon ECS and related services without disruption to your running applications.\n  To get started just provide your container image, and ECS Express Mode handles the rest by deploying your application in Amazon ECS and auto-generating a URL. Amazon ECS Express Mode is available now in all AWS Regions at no additional charge. You pay only for the AWS resources created to run your application. To deploy a new ECS Express Mode service, use the Amazon ECS Console, SDK, CLI, CloudFormation, CDK and Terraform. For more information, see the AWS News blog, or the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/announcing-amazon-ecs-express-mode",
       "pubDate": "2025-11-21T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "lex"
+        "lex",
+        "ecs",
+        "cloudformation"
       ],
       "categories": [
-        "natural-language"
+        "generative-ai"
       ],
       "tags": [
         "lex",
-        "ga",
-        "support"
+        "ecs",
+        "cloudformation",
+        "launch",
+        "new-feature"
       ]
     },
     {
@@ -1327,18 +1253,92 @@
       ]
     },
     {
-      "id": "aws-news-8ea0dfacb966",
-      "title": "Amazon WorkSpaces Applications now supports IPv6",
-      "description": "Amazon WorkSpaces Applications now supports IPv6 for WorkSpaces Applications domains and external endpoints, allowing end users to connect to WorkSpaces Applications over IPv6 from IPv6 compatible devices (except SAML authentication). This helps you meet IPv6 compliance requirements and eliminates the need for expensive networking equipment to handle address translation between IPv4 and IPv6.\n \nThe Internet's growth is consuming IPv4 addresses quickly. WorkSpaces Applications, by supporting IPv6, assists customers in streamlining their network architecture. This support offers a much larger address space and removes the necessity to manage overlapping address spaces in their VPCs. Customers can now base their applications on IPv6, ensuring their infrastructure is future-ready and compatible with existing IPv4 systems via a fallback mechanism.\n \nThis feature is available at no additional cost in 16 AWS Regions, including US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Europe (Paris, Frankfurt, London, Ireland), Asia Pacific (Tokyo, Mumbai, Sydney, Seoul, Singapore), and South America (Sao Paulo) and AWS GovCloud (US-West, US-East). WorkSpaces Applications offers pay-as-you go pricing.\n \nTo get started with WorkSpaces Applications, see Getting Started with Amazon WorkSpaces Applications. To enable this feature for your users, you must use the latest WorkSpaces Applications client for Windows, macOS or directly through web access. To learn more about the feature, please refer to the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-appstream-2-0-supports-ipv6/",
+      "id": "aws-news-d0209dd90f91",
+      "title": "Amazon Route 53 DNS service adds support for IPv6 API service endpoint",
+      "description": "Starting today, Amazon Route 53 supports dual stack for the Route 53 DNS service API endpoint at route53.global.api.aws, enabling you to connect from Internet Protocol Version 6 (IPv6), Internet Protocol Version 4 (IPv4), or dual stack clients. The existing Route 53 DNS service IPv4 API endpoint will remain available for backwards compatibility.\n  Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service that allows customers to register a domain, setup DNS records corresponding to your infrastructure, perform global traffic routing using Traffic Flow, and use Route 53 health checks to monitor the health and performance of your applications and resources. Due to the continued growth of the internet, IPv4 address space is being exhausted and customers are transitioning to IPv6 addresses. Now, clients can connect via IPv6 to the Route 53 DNS service API endpoint, enabling organizations to meet compliance requirements and removing the added complexity of IP address translation between IPv4 and IPv6.\n  Support for IPv6 on the Route 53 DNS service API endpoint is available in all Commercial Regions and available at no additional cost. You can get started with this feature through the AWS CLI or AWS Management Console. To learn more about which Route 53 features are accessible via the route53.amazon.aws service endpoint, visit this page and to learn more about the Route 53 DNS service, visit our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-route-53-dns-service-ipv6-api-endpoint/",
       "pubDate": "2025-11-21T08:00:00.000Z",
       "source": "whatsNew",
-      "services": [],
+      "services": [
+        "lex",
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fe1425322358",
+      "title": "Amazon Connect now supports multi skill agent scheduling",
+      "description": "Amazon Connect now enables you to optimize scheduling based on agent’s multiple specialized skills. You can now maximize agent utilization across multiple dimensions such as departments, languages, and customer tiers by intelligently matching agents with multiple skills to forecasted demand. You can now also preserve multi-skilled agents for high-value interactions when needed most. For example, bilingual agents can now be strategically scheduled to cover peak periods for high-value French language queues that frequently experience staffing shortages, while handling general inquiries during off-peak times.\n  This feature is available in all AWS Regions where Amazon Connect agent scheduling is available. To learn more about multi skill agent scheduling, visit the blog and admin guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-multi-skill-agent-scheduling",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "forecast"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "forecast",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-196cf0862d39",
+      "title": "Amazon Athena launches auto-scaling solution for Capacity Reservations",
+      "description": "Amazon Athena now offers an auto-scaling solution for Capacity Reservations that dynamically adjusts your reserved capacity based on workload demand. The solution uses AWS Step Functions to monitor utilization metrics and scale your Data Processing Units (DPUs) up or down according to the thresholds and limits you configure, helping you optimize costs while maintaining query performance and eliminating the need for manual capacity adjustments.\n  You can customize scaling behavior by setting utilization thresholds, measurement frequency, and capacity limits to match your workload needs. The solution uses Step Functions to add or remove DPUs to any active Capacity Reservation based on capacity utilization metrics in Amazon CloudWatch. Capacity automatically scales up when utilization exceeds your high threshold and scales down when it falls below your low threshold - all while adhering to your defined limits. You can further customize the solution by modifying the Amazon CloudFormation template to fit your specific requirements.\n  The auto-scaling solution for Athena Capacity Reservations is available in AWS Regions where Capacity Reservations is supported. To get started, see Automatically adjust capacity in the Athena user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-athena-capacity-auto-scaling",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "athena",
+        "step functions",
+        "cloudwatch"
+      ],
       "categories": [
         "general"
       ],
       "tags": [
-        "ga",
+        "cloudformation",
+        "athena",
+        "step functions",
+        "cloudwatch",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bfa79d7ad5e5",
+      "title": "AWS Glue launches Amazon DynamoDB connector with Spark DataFrame support",
+      "description": "AWS Glue now supports a new Amazon DynamoDB connector that works natively with Apache Spark DataFrames. This enhancement allows Spark developers to work directly with Spark DataFrames, to share code easily across AWS Glue, Amazon EMR, and other Spark environments.\n  Previously, developers working with DynamoDB data in AWS Glue were required to use the Glue-specific DynamicFrame object. With this new connector, developers can now reuse their existing Spark DataFrame code with minimal modifications. This change streamlines the process of migrating jobs to AWS Glue and simplifies data pipeline development. Additionally, the connector unlocks access to the full range of Spark DataFrame operations and the latest performance optimizations.\n  The new connector is available in all AWS Commercial Regions where AWS Glue is available. To get started, visit AWS Glue documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/glue-dynamodb-connector",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "emr",
+        "dynamodb",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "emr",
+        "dynamodb",
+        "glue",
+        "launch",
+        "enhancement",
         "support"
       ]
     },
@@ -1436,6 +1436,27 @@
       ]
     },
     {
+      "id": "aws-news-4d94683bb916",
+      "title": "Amazon Simple Email Service is now available in two new AWS Regions",
+      "description": "Amazon Simple Email Service (Amazon SES) is now available in the Asia Pacific (Malaysia), Canada West (Calgary) Regions. Customers can now use these new Regions to leverage Amazon SES to send emails and, if needed, to help manage data sovereignty requirements.\n  Amazon SES is a scalable, cost-effective, and flexible cloud-based email service that allows digital marketers and application developers to send marketing, notification, and transactional emails from within any application. To learn more about Amazon SES, visit this page.\n  With this launch, Amazon SES is available in 29 AWS Regions globally: US East (Virginia, Ohio), US West (N. California, Oregon), AWS GovCloud (US-West, US-East), Asia Pacific (Osaka, Mumbai, Hyderabad, Sydney, Singapore, Seoul, Tokyo, Jakarta, Malaysia), Canada (Central, Calgary), Europe (Ireland, Frankfurt, London, Paris, Stockholm, Milan, Zurich), Israel (Tel Aviv), Middle East (Bahrain, UAE), South America (São Paulo), and Africa (Cape Town).\n  For a complete list of all of the regional endpoints for Amazon SES, see AWS Service Endpoints in the AWS General Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ses-available-in-two-new-regions",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "ga",
+        "now-available",
+        "new-region"
+      ]
+    },
+    {
       "id": "aws-news-334b22c260de",
       "title": "Amazon ECS and Amazon EKS now offer enhanced AI-powered troubleshooting in the Console",
       "description": "Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS) now offer enhanced AI-powered troubleshooting experiences in the AWS Management Console through Amazon Q Developer. The new AI-powered experiences appear contextually alongside error or status messages in the console, helping customers root cause issues and view mitigation suggestions with a single click.\n  In the ECS Console, customers can use the new “Inspect with Amazon Q” button to troubleshoot issues such as failed tasks, container health check failures, or deployment rollbacks. Simply click the status reason on task details, task definition details, or deployment details page, and click “Inspect with Amazon Q” from the popover to start troubleshooting with context from the issue provided to the agent for you. Once clicked, Amazon Q automatically uses appropriate AI tools to analyze the issue, gather the relevant logs and metrics, help you understand the root cause, and recommend mitigation actions.\n  The Amazon EKS console integrates Amazon Q throughout the observability dashboard, enabling you to inspect and troubleshoot cluster, control plane, and node health issues with contextual AI assistance. Simply click \"Inspect with Amazon Q\" directly from tables that outline issues, or click on an issue to view details and then select \"Inspect with Amazon Q\" to begin your investigation. The Q-powered experience provides deeper understanding of cluster-level insights, such as upgrade insights, helping you proactively identify and mitigate potential issues. Amazon Q also streamlines workload troubleshooting by helping you investigate Kubernetes events on pods that indicate issues, accelerating root cause identification and resolution.\n  Amazon Q integration in the Amazon ECS and Amazon EKS consoles is now available in all AWS commercial regions. To learn more, visit the ECS developer guide and EKS user guide.",
@@ -1462,27 +1483,6 @@
       ]
     },
     {
-      "id": "aws-news-4d94683bb916",
-      "title": "Amazon Simple Email Service is now available in two new AWS Regions",
-      "description": "Amazon Simple Email Service (Amazon SES) is now available in the Asia Pacific (Malaysia), Canada West (Calgary) Regions. Customers can now use these new Regions to leverage Amazon SES to send emails and, if needed, to help manage data sovereignty requirements.\n  Amazon SES is a scalable, cost-effective, and flexible cloud-based email service that allows digital marketers and application developers to send marketing, notification, and transactional emails from within any application. To learn more about Amazon SES, visit this page.\n  With this launch, Amazon SES is available in 29 AWS Regions globally: US East (Virginia, Ohio), US West (N. California, Oregon), AWS GovCloud (US-West, US-East), Asia Pacific (Osaka, Mumbai, Hyderabad, Sydney, Singapore, Seoul, Tokyo, Jakarta, Malaysia), Canada (Central, Calgary), Europe (Ireland, Frankfurt, London, Paris, Stockholm, Milan, Zurich), Israel (Tel Aviv), Middle East (Bahrain, UAE), South America (São Paulo), and Africa (Cape Town).\n  For a complete list of all of the regional endpoints for Amazon SES, see AWS Service Endpoints in the AWS General Reference.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ses-available-in-two-new-regions",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "ga",
-        "now-available",
-        "new-region"
-      ]
-    },
-    {
       "id": "aws-news-77f3836159eb",
       "title": "AWS Backup now supports Amazon FSx Intelligent-Tiering",
       "description": "AWS Backup now supports Amazon FSx Intelligent-Tiering, a storage class which delivers fully elastic file storage that automatically scales up and down with your workloads.\n \nThe FSx Intelligent-Tiering storage class is available for FSx for Lustre and Amazon FSx for OpenZFS file systems and combines performance, pay-for-what-you-use elasticity, with automated cost optimization in a single solution. With this integration, you can now protect OpenZFS and Lustre file systems using FSx Intelligent-Tiering through AWS Backup's centralized backup management capabilities. Customers with existing backup plans for Amazon FSx do not need to make any changes, as all scheduled backups will continue to work as expected.\n \nAWS Backup support is available in all AWS Regons where FSx Intelligent Tiering is available. For a full list of supported Regions see region availability documentation for Amazon FSx for OpenZFS and Amazon FSx for Lustre.\n \nTo learn more about AWS Backup for Amazon FSx, visit the AWS Backup product page, technical documentation, and pricing page. For more information on the AWS Backup features available across AWS Regions, see AWS Backup documentation. To get started, visit the AWS Backup console.",
@@ -1496,37 +1496,6 @@
       "tags": [
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c81911906ddc",
-      "title": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS",
-      "description": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS, providing enhanced observability for customers running large-scale, high-performance machine learning workloads on multi-instance nodes. This new capability enables data scientists and ML engineers to efficiently monitor and troubleshoot their containerized ML applications, offering aggregated metrics and simplified management across Neuron UltraServer groups.\n \nNeuron UltraServers combine multiple EC2 instances into a single logical server unit, optimized for machine learning workloads using AWS Trainium and Inferentia accelerators. Container Insights, a monitoring and diagnostics feature in Amazon CloudWatch, automatically collects metrics from containerized applications. With this launch, Container Insights introduces a new filter specifically for UltraServers in EKS environments. You can now select an UltraServer ID to view new aggregate metrics across all instances within that server, replacing the need to monitor individual instances separately. In addition to per-instance metrics, you can now view consolidated performance data for the entire UltraServer group, streamlining the monitoring of ML workloads running on AWS Neuron.\n \nAmazon CloudWatch Container Insights is available in all commercial AWS Regions, and the AWS GovCloud (US).\n \nTo get started, see AWS Neuron metrics for AWS Trainium and AWS Inferentia in the Amazon CloudWatch User Guide",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudwatch-container-insights-neuron-ultraservers-eks/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "ec2",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "ec2",
-        "eks",
-        "cloudwatch",
-        "launch",
-        "ga",
-        "support",
-        "new-capability"
       ]
     },
     {
@@ -1567,6 +1536,37 @@
         "ecs",
         "launch",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-c81911906ddc",
+      "title": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS",
+      "description": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS, providing enhanced observability for customers running large-scale, high-performance machine learning workloads on multi-instance nodes. This new capability enables data scientists and ML engineers to efficiently monitor and troubleshoot their containerized ML applications, offering aggregated metrics and simplified management across Neuron UltraServer groups.\n \nNeuron UltraServers combine multiple EC2 instances into a single logical server unit, optimized for machine learning workloads using AWS Trainium and Inferentia accelerators. Container Insights, a monitoring and diagnostics feature in Amazon CloudWatch, automatically collects metrics from containerized applications. With this launch, Container Insights introduces a new filter specifically for UltraServers in EKS environments. You can now select an UltraServer ID to view new aggregate metrics across all instances within that server, replacing the need to monitor individual instances separately. In addition to per-instance metrics, you can now view consolidated performance data for the entire UltraServer group, streamlining the monitoring of ML workloads running on AWS Neuron.\n \nAmazon CloudWatch Container Insights is available in all commercial AWS Regions, and the AWS GovCloud (US).\n \nTo get started, see AWS Neuron metrics for AWS Trainium and AWS Inferentia in the Amazon CloudWatch User Guide",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudwatch-container-insights-neuron-ultraservers-eks/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "trainium",
+        "inferentia",
+        "neuron",
+        "ec2",
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "trainium",
+        "inferentia",
+        "neuron",
+        "ec2",
+        "eks",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "support",
+        "new-capability"
       ]
     },
     {
@@ -2092,25 +2092,6 @@
       ]
     },
     {
-      "id": "aws-news-99d98790f34c",
-      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
-      "description": "Amazon EC2 High Memory U7i instances with 16TB of memory (u7in-16tb.224xlarge) are now available in the AWS Europe (Ireland) region, U7i instances with 12TB of memory (u7i-12tb.224xlarge) are now available in the AWS Asia Pacific (Hyderabad), and U7i instances with 8TB of memory (u7i-8tb.112xlarge) are now available in the Asia Pacific (Mumbai) and AWS GovCloud (US-West) region. U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7in-16tb instances offer 16TiB of DDR5 memory, U7i-12tb instances offer 12TiB of DDR5 memory, and U7i-8tb instances offer 8TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n  U7i-8tb instances offer 448 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7i-12tb instances offer 896 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7in-16tb instances offer 896 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 200Gbps of network bandwidth, and support ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n  To learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-high-memory-u7i-additional-regions/",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-4567b43acc7e",
       "title": "Amazon Aurora DSQL now provides statement-level cost estimates in query plans",
       "description": "Amazon Aurora DSQL now provides statement-level cost estimates in query plans, giving developers immediate insight into the resources consumed by individual SQL statements. This enhancement surfaces Distributed Processing Unit (DPU) usage estimates directly within the query plan output, helping developers identify workload cost drivers, tune query performance, and better forecast resource usage.\n  With this launch, Aurora DSQL appends per-category (compute, read, write, and multi-Region write) and total estimated DPU usage at the end of the EXPLAIN ANALYZE VERBOSE plan output. The feature complements CloudWatch metrics by providing fine-grained, real-time visibility into query costs.\n  Aurora DSQL support for DPU usage in EXPLAIN ANALYZE VERBOSE plans is available in all Regions where Aurora DSQL is available. To get started, visit the Aurora DSQL Understanding DPUs in EXPLAIN ANALYZE docmentation.",
@@ -2146,6 +2127,25 @@
       "tags": [
         "launch",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-99d98790f34c",
+      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
+      "description": "Amazon EC2 High Memory U7i instances with 16TB of memory (u7in-16tb.224xlarge) are now available in the AWS Europe (Ireland) region, U7i instances with 12TB of memory (u7i-12tb.224xlarge) are now available in the AWS Asia Pacific (Hyderabad), and U7i instances with 8TB of memory (u7i-8tb.112xlarge) are now available in the Asia Pacific (Mumbai) and AWS GovCloud (US-West) region. U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7in-16tb instances offer 16TiB of DDR5 memory, U7i-12tb instances offer 12TiB of DDR5 memory, and U7i-8tb instances offer 8TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n  U7i-8tb instances offer 448 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7i-12tb instances offer 896 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 100Gbps of network bandwidth, and support ENA Express. U7in-16tb instances offer 896 vCPUs, support up to 100Gbps Elastic Block Storage (EBS) for faster data loading and backups, deliver up to 200Gbps of network bandwidth, and support ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n  To learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-high-memory-u7i-additional-regions/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
         "support"
       ]
     },
@@ -2204,43 +2204,19 @@
       ]
     },
     {
-      "id": "aws-news-e5f34da19404",
-      "title": "Amazon CloudWatch application map now supports un-instrumented services discovery",
-      "description": "Application map in Amazon CloudWatch now supports un-instrumented services discovery, cross-account views, and change history, helping SRE and DevOps teams monitor and troubleshoot their large-scale distributed applications. Application map now detects and visualizes services not instrumented with Application Signals, providing out-of-the-box observability coverage in your distributed environment. In addition, it provides a single, unified view for applications, services, and infrastructure distributed across AWS accounts, enabling end-to-end visibility. Furthermore, it provides a history of recent changes, helping teams quickly correlate when a modification occurred and how it aligns with shifts in application health or performance.\n  These enhancements help SRE and DevOps teams troubleshoot issues faster and operate with greater confidence in large-scale, distributed environments. For example, when latency or error rates spike, developers can now investigate recent configuration changes, and analyze dependencies across multiple AWS accounts, all from a single map. During post-incident reviews, teams can use historical change data to understand what shifted and when, improving long-term reliability. By unifying service discovery, dependency mapping, and change history, application map reduces mean-time-to-resolution (MTTR) and helps teams maintain application health across complex systems.\n  Starting today, the new capabilities in Application Map are available at no additional cost in all AWS commercial regions (except Taipei and New Zealand). To learn more about Application Map, please visit the Amazon CloudWatch Application Signals documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-application-map-un-instrumented-discovery/",
+      "id": "aws-news-b40187fdc965",
+      "title": "Amazon CloudFront now supports CBOR Web Tokens and Common Access Tokens",
+      "description": "Amazon CloudFront now supports CBOR Web Tokens (CWT) and Common Access Tokens (CAT), enabling secure token-based authentication and authorization with CloudFront Functions at CloudFront edge locations. CWT provides a compact, binary alternative to JSON Web Tokens (JWT) using Concise Binary Object Representation (CBOR) encoding, while CAT extends CWT with additional fine grained access control including URL patterns, IP restrictions, and HTTP method limitations. Both token types use CBOR Object Signing and Encryption (COSE) for enhanced security and allow developers to implement lightweight, high-performance authentication mechanisms directly at the edge with sub-millisecond execution times.\n  CWT and CAT are ideal for performance critical applications such as live video streaming platforms that need to validate viewer access tokens millions of times per second, or IoT applications where bandwidth efficiency is crucial. These tokens also provide a single, standardized method for content authentication across multi-CDN deployments, simplifying security management and preventing the need for unique configurations for each CDN provider. For example, a media company can use CAT to create tokens that restrict access to specific video content based on subscription tiers, geographic location, and device types, all validated consistently across CloudFront and other CDN providers without requiring application network calls. With CWT and CAT support, you can validate incoming tokens, generate new tokens, and implement token refresh logic within CloudFront Functions. The feature integrates seamlessly with CloudFront Functions KeyValueStore for secure key management.\n  CWT and CAT support for CloudFront Functions is available at no additional charge in all CloudFront edge locations. To learn more about CloudFront Functions CBOR Web Token support, see the Amazon CloudFront Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-cbor-tokens",
       "pubDate": "2025-11-20T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "lex",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "cloudwatch",
-        "ga",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-70095c032536",
-      "title": "Amazon CloudFront announces 3 new CloudFront Functions capabilities",
-      "description": "Amazon CloudFront now supports three new capabilities for CloudFront Functions: edge location and Regional Edge Cache (REC) metadata, raw query string retrieval, and advanced origin overrides. Developers can now build more sophisticated edge computing logic with greater visibility into CloudFront's infrastructure and precise, granular control over origin connections. CloudFront Functions allows you to run lightweight JavaScript code at CloudFront edge locations to customize content delivery and implement security policies with sub-millisecond execution times.\n  Edge location metadata, includes the three-letter airport code of the serving edge location and the expected REC. This enables geo-specific content routing or compliance requirements, such as directing European users to GDPR-compliant origins based on client location. The raw query string capability provides access to the complete, unprocessed query string as received from the viewer, preserving special characters and encoding that may be altered during standard parsing. Advanced origin overrides solve critical challenges for complex application infrastructures by allowing you to customize SSL/TLS handshake parameters, including Server Name Indication (SNI). For example, multi-tenant setups may override SNI where CloudFront connects through CNAME chains that resolve to servers with different certificate domains.\n  These new CloudFront Functions capabilities are available at no additional charge in all CloudFront edge location. To learn more about CloudFront Functions, see the Amazon CloudFront Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-3-functions-capabilities",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
         "cloudfront"
       ],
       "categories": [
-        "natural-language"
+        "ai-safety"
       ],
       "tags": [
-        "lex",
         "cloudfront",
         "support"
       ]
@@ -2264,6 +2240,48 @@
         "ec2",
         "ga",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-70095c032536",
+      "title": "Amazon CloudFront announces 3 new CloudFront Functions capabilities",
+      "description": "Amazon CloudFront now supports three new capabilities for CloudFront Functions: edge location and Regional Edge Cache (REC) metadata, raw query string retrieval, and advanced origin overrides. Developers can now build more sophisticated edge computing logic with greater visibility into CloudFront's infrastructure and precise, granular control over origin connections. CloudFront Functions allows you to run lightweight JavaScript code at CloudFront edge locations to customize content delivery and implement security policies with sub-millisecond execution times.\n  Edge location metadata, includes the three-letter airport code of the serving edge location and the expected REC. This enables geo-specific content routing or compliance requirements, such as directing European users to GDPR-compliant origins based on client location. The raw query string capability provides access to the complete, unprocessed query string as received from the viewer, preserving special characters and encoding that may be altered during standard parsing. Advanced origin overrides solve critical challenges for complex application infrastructures by allowing you to customize SSL/TLS handshake parameters, including Server Name Indication (SNI). For example, multi-tenant setups may override SNI where CloudFront connects through CNAME chains that resolve to servers with different certificate domains.\n  These new CloudFront Functions capabilities are available at no additional charge in all CloudFront edge location. To learn more about CloudFront Functions, see the Amazon CloudFront Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-3-functions-capabilities",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudfront"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "cloudfront",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e5f34da19404",
+      "title": "Amazon CloudWatch application map now supports un-instrumented services discovery",
+      "description": "Application map in Amazon CloudWatch now supports un-instrumented services discovery, cross-account views, and change history, helping SRE and DevOps teams monitor and troubleshoot their large-scale distributed applications. Application map now detects and visualizes services not instrumented with Application Signals, providing out-of-the-box observability coverage in your distributed environment. In addition, it provides a single, unified view for applications, services, and infrastructure distributed across AWS accounts, enabling end-to-end visibility. Furthermore, it provides a history of recent changes, helping teams quickly correlate when a modification occurred and how it aligns with shifts in application health or performance.\n  These enhancements help SRE and DevOps teams troubleshoot issues faster and operate with greater confidence in large-scale, distributed environments. For example, when latency or error rates spike, developers can now investigate recent configuration changes, and analyze dependencies across multiple AWS accounts, all from a single map. During post-incident reviews, teams can use historical change data to understand what shifted and when, improving long-term reliability. By unifying service discovery, dependency mapping, and change history, application map reduces mean-time-to-resolution (MTTR) and helps teams maintain application health across complex systems.\n  Starting today, the new capabilities in Application Map are available at no additional cost in all AWS commercial regions (except Taipei and New Zealand). To learn more about Application Map, please visit the Amazon CloudWatch Application Signals documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-application-map-un-instrumented-discovery/",
+      "pubDate": "2025-11-20T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "cloudwatch",
+        "ga",
+        "enhancement",
+        "support"
       ]
     },
     {
@@ -2300,24 +2318,6 @@
         "ga",
         "now-available",
         "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b40187fdc965",
-      "title": "Amazon CloudFront now supports CBOR Web Tokens and Common Access Tokens",
-      "description": "Amazon CloudFront now supports CBOR Web Tokens (CWT) and Common Access Tokens (CAT), enabling secure token-based authentication and authorization with CloudFront Functions at CloudFront edge locations. CWT provides a compact, binary alternative to JSON Web Tokens (JWT) using Concise Binary Object Representation (CBOR) encoding, while CAT extends CWT with additional fine grained access control including URL patterns, IP restrictions, and HTTP method limitations. Both token types use CBOR Object Signing and Encryption (COSE) for enhanced security and allow developers to implement lightweight, high-performance authentication mechanisms directly at the edge with sub-millisecond execution times.\n  CWT and CAT are ideal for performance critical applications such as live video streaming platforms that need to validate viewer access tokens millions of times per second, or IoT applications where bandwidth efficiency is crucial. These tokens also provide a single, standardized method for content authentication across multi-CDN deployments, simplifying security management and preventing the need for unique configurations for each CDN provider. For example, a media company can use CAT to create tokens that restrict access to specific video content based on subscription tiers, geographic location, and device types, all validated consistently across CloudFront and other CDN providers without requiring application network calls. With CWT and CAT support, you can validate incoming tokens, generate new tokens, and implement token refresh logic within CloudFront Functions. The feature integrates seamlessly with CloudFront Functions KeyValueStore for secure key management.\n  CWT and CAT support for CloudFront Functions is available at no additional charge in all CloudFront edge locations. To learn more about CloudFront Functions CBOR Web Token support, see the Amazon CloudFront Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-cbor-tokens",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudfront"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "cloudfront",
         "support"
       ]
     },
@@ -2365,32 +2365,20 @@
       ]
     },
     {
-      "id": "aws-news-54b31a8188a6",
-      "title": "Amazon SageMaker Unified Studio adds EMR on EKS support with SSO capabilities",
-      "description": "Amazon SageMaker Unified Studio announces support for EMR on EKS as a compute resource for interactive Apache Spark sessions. This launch enables EMR on EKS capabilities such as large-scale distributed compute with automatic scaling, cost optimization, and containerized workload isolation directly within Amazon SageMaker Unified Studio. It allows customers to transition between interactive analysis and production-level data processing jobs without moving their workload between platforms.\n  Building on this capability, EMR on EKS in Amazon SageMaker Unified Studio now supports corporate identity through AWS Identity Center's trusted identity propagation. This enables seamless single sign-on and end-to-end data access traceability for interactive analytics sessions on EMR on EKS clusters. Data practitioners can access Glue Data Catalog resources using their corporate credentials from SageMaker Unified Studio's JupyterLab environment, while administrators maintain fine-grained access controls and audit trails. This integration simplifies security governance and streamlines compliance for enterprise data workflows.\n  EMR on EKS compute support in Amazon SageMaker Unified Studio is available in all existing SageMaker Unified Studio regions. To learn more, visit the SageMaker Unified Studio documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-emr-eks-sso/",
+      "id": "aws-news-97512152226d",
+      "title": "AWS India customers can now use UPI to sign-up and automate monthly payments",
+      "description": "India customers can now sign-up for AWS using UPI (Unified Payments Interface) AutoPay as their default payment method, with automatic recurring payments set up from the start.\n \nUPI is a popular and convenient payment method in India, which facilitates instant bank to bank transfers between two parties through mobile phones with internet. Customers can make payments through UPI mobile app simply by using a Virtual Payment Address or UPI ID linked to their bank account.\n \nCustomers now have the flexibility to sign-up for AWS using UPI, where previously only card payments were accepted. This addition of UPI, India's most widely used payment method, makes it easier for customers to start their AWS journey using their preferred payment method. Customers can use UPI AutoPay to make automated recurring payments, which will avoid the need to come to console to make manual payments, reduce the risk of missed payments and any non-payment related actions.\n \nCustomers can set up automatic payments up to INR 15,000 using their UPI ID linked to their bank account. To enable this, customers can log in to the AWS console and add UPI AutoPay from the payment page. Customers will be required to provide their UPI ID, verify it, and confirm billing address. Once completed, Customers will receive a request in their UPI mobile app (such as Amazon Pay) associated with their UPI ID for verifying and authorizing automated payments. After verification, future bills up to INR 15,000 will be automatically charged starting from the next billing cycle.\n \nTo learn more, see Managing Payment Methods in India.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/india-upi-sign-up-automate-monthly-payments/",
       "pubDate": "2025-11-20T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "sagemaker",
-        "unified studio",
-        "emr",
-        "eks",
-        "glue"
+        "lex"
       ],
       "categories": [
-        "ai-safety"
+        "natural-language"
       ],
       "tags": [
-        "sagemaker",
-        "unified studio",
-        "emr",
-        "eks",
-        "glue",
-        "launch",
-        "ga",
-        "integration",
-        "support"
+        "lex"
       ]
     },
     {

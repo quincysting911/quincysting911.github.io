@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-23T06:14:33.767Z",
+  "lastUpdated": "2025-11-24T06:17:06.899Z",
   "category": "general",
   "totalItems": 54,
   "items": [
@@ -171,93 +171,6 @@
       ]
     },
     {
-      "id": "aws-news-196cf0862d39",
-      "title": "Amazon Athena launches auto-scaling solution for Capacity Reservations",
-      "description": "Amazon Athena now offers an auto-scaling solution for Capacity Reservations that dynamically adjusts your reserved capacity based on workload demand. The solution uses AWS Step Functions to monitor utilization metrics and scale your Data Processing Units (DPUs) up or down according to the thresholds and limits you configure, helping you optimize costs while maintaining query performance and eliminating the need for manual capacity adjustments.\n  You can customize scaling behavior by setting utilization thresholds, measurement frequency, and capacity limits to match your workload needs. The solution uses Step Functions to add or remove DPUs to any active Capacity Reservation based on capacity utilization metrics in Amazon CloudWatch. Capacity automatically scales up when utilization exceeds your high threshold and scales down when it falls below your low threshold - all while adhering to your defined limits. You can further customize the solution by modifying the Amazon CloudFormation template to fit your specific requirements.\n  The auto-scaling solution for Athena Capacity Reservations is available in AWS Regions where Capacity Reservations is supported. To get started, see Automatically adjust capacity in the Athena user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-athena-capacity-auto-scaling",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "athena",
-        "step functions",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "athena",
-        "step functions",
-        "cloudwatch",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-bfa79d7ad5e5",
-      "title": "AWS Glue launches Amazon DynamoDB connector with Spark DataFrame support",
-      "description": "AWS Glue now supports a new Amazon DynamoDB connector that works natively with Apache Spark DataFrames. This enhancement allows Spark developers to work directly with Spark DataFrames, to share code easily across AWS Glue, Amazon EMR, and other Spark environments.\n  Previously, developers working with DynamoDB data in AWS Glue were required to use the Glue-specific DynamicFrame object. With this new connector, developers can now reuse their existing Spark DataFrame code with minimal modifications. This change streamlines the process of migrating jobs to AWS Glue and simplifies data pipeline development. Additionally, the connector unlocks access to the full range of Spark DataFrame operations and the latest performance optimizations.\n  The new connector is available in all AWS Commercial Regions where AWS Glue is available. To get started, visit AWS Glue documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/glue-dynamodb-connector",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "emr",
-        "dynamodb",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "emr",
-        "dynamodb",
-        "glue",
-        "launch",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-73808c7d394f",
-      "title": "Amazon CloudWatch Container Insights adds Sub-Minute GPU Metrics for Amazon EKS",
-      "description": "Amazon CloudWatch Container Insights now supports collection of GPU metrics at sub-minute frequencies for AI and ML workloads running on Amazon EKS. Customers can configure the metric sample rate in seconds, enabling more granular monitoring of GPU resource utilization.\n  This enhancement enables customers to effectively monitor GPU-intensive workloads that run for less than 60 seconds, such as ML inference jobs that consume GPU resources for short durations. By increasing the sampling frequency, customers can maintain detailed visibility into short-lived GPU workloads. Sub-minute GPU metrics are sent to CloudWatch once per minute. This granular monitoring helps customers optimize their GPU resource utilization, troubleshoot performance issues, and ensure efficient operation of their containerized GPU applications.\n  Sub-Minute GPU metrics in Container Insights is available in all AWS Commercial Regions and the AWS GovCloud (US) Regions.\n  To learn more about Sub-Minute GPU metrics in Container Insights, visit the NVIDIA GPU metrics page in the Amazon CloudWatch User Guide. Sub-Minute GPU metrics in Container Insights are available for no addition cost. For Container Insights pricing, see the Amazon CloudWatch Pricing Page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudwatch-container-sub-minute-gpu-metrics-eks/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "cloudwatch",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8a3db6cc0a81",
-      "title": "Amazon ECR dual-stack endpoints now support AWS PrivateLink",
-      "description": "Amazon Elastic Container Registry (ECR) announces AWS PrivateLink support for its dual-stack endpoints. This makes it easier to standardize on IPv6 and enhance your security posture.\n  Previously, ECR announced IPv6 support for API and Docker/OCI requests via the new dual-stack endpoints. With these dual-stack endpoints, you can make requests from either an IPv4 or an IPv6 network. With today’s launch, you can now make requests to these dual-stack endpoints using AWS PrivateLink to limit all network traffic between your Amazon Virtual Private Cloud (VPC) and ECR to the Amazon network, thereby improving your security posture.\n  This feature is generally available in all AWS commercial and AWS GovCloud (US) regions at no additional cost. To get started, visit ECR documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ecr-dual-stack-endpoints-privatelink/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-ffe32c223a6e",
       "title": "AWS Glue supports AWS CloudFormation and AWS CDK for zero-ETL integrations",
       "description": "AWS Glue zero-ETL integrations now support AWS CloudFormation and AWS Cloud Development Kit (AWS CDK), through which you can create Zero-ETL integrations using infrastructure as code. Zero-ETL integrations are fully managed by AWS and minimize the need to build ETL data pipelines.\n  Using AWS Glue zero-ETL, you can ingest data from AWS DynamoDB or enterprise SaaS sources, including Salesforce, ServiceNow, SAP, and Zendesk, into Amazon Redshift, Amazon S3, and Amazon S3 Tables. CloudFormation and CDK support for these Glue zero-ETL integrations simplifies the way you can create, update, and manage zero-ETL integrations using infrastructure as code. With CloudFormation and CDK support, data engineering teams can now consistently deploy any zero-ETL integration across multiple AWS accounts while maintaining version control of their configurations.\n  This feature is available in all AWS Regions where AWS Glue zero-ETL is currently available.\n  To get started with the new AWS Glue zero-ETL infrastructure as code capabilities, visit the CloudFormation documentation for AWS Glue, CDK documentation, or the AWS Glue zero-ETL user guide.",
@@ -282,6 +195,27 @@
         "glue",
         "update",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-73808c7d394f",
+      "title": "Amazon CloudWatch Container Insights adds Sub-Minute GPU Metrics for Amazon EKS",
+      "description": "Amazon CloudWatch Container Insights now supports collection of GPU metrics at sub-minute frequencies for AI and ML workloads running on Amazon EKS. Customers can configure the metric sample rate in seconds, enabling more granular monitoring of GPU resource utilization.\n  This enhancement enables customers to effectively monitor GPU-intensive workloads that run for less than 60 seconds, such as ML inference jobs that consume GPU resources for short durations. By increasing the sampling frequency, customers can maintain detailed visibility into short-lived GPU workloads. Sub-minute GPU metrics are sent to CloudWatch once per minute. This granular monitoring helps customers optimize their GPU resource utilization, troubleshoot performance issues, and ensure efficient operation of their containerized GPU applications.\n  Sub-Minute GPU metrics in Container Insights is available in all AWS Commercial Regions and the AWS GovCloud (US) Regions.\n  To learn more about Sub-Minute GPU metrics in Container Insights, visit the NVIDIA GPU metrics page in the Amazon CloudWatch User Guide. Sub-Minute GPU metrics in Container Insights are available for no addition cost. For Container Insights pricing, see the Amazon CloudWatch Pricing Page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudwatch-container-sub-minute-gpu-metrics-eks/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "cloudwatch",
+        "enhancement",
         "support"
       ]
     },
@@ -339,6 +273,39 @@
       ]
     },
     {
+      "id": "aws-news-8a3db6cc0a81",
+      "title": "Amazon ECR dual-stack endpoints now support AWS PrivateLink",
+      "description": "Amazon Elastic Container Registry (ECR) announces AWS PrivateLink support for its dual-stack endpoints. This makes it easier to standardize on IPv6 and enhance your security posture.\n  Previously, ECR announced IPv6 support for API and Docker/OCI requests via the new dual-stack endpoints. With these dual-stack endpoints, you can make requests from either an IPv4 or an IPv6 network. With today’s launch, you can now make requests to these dual-stack endpoints using AWS PrivateLink to limit all network traffic between your Amazon Virtual Private Cloud (VPC) and ECR to the Amazon network, thereby improving your security posture.\n  This feature is generally available in all AWS commercial and AWS GovCloud (US) regions at no additional cost. To get started, visit ECR documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ecr-dual-stack-endpoints-privatelink/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8ea0dfacb966",
+      "title": "Amazon WorkSpaces Applications now supports IPv6",
+      "description": "Amazon WorkSpaces Applications now supports IPv6 for WorkSpaces Applications domains and external endpoints, allowing end users to connect to WorkSpaces Applications over IPv6 from IPv6 compatible devices (except SAML authentication). This helps you meet IPv6 compliance requirements and eliminates the need for expensive networking equipment to handle address translation between IPv4 and IPv6.\n \nThe Internet's growth is consuming IPv4 addresses quickly. WorkSpaces Applications, by supporting IPv6, assists customers in streamlining their network architecture. This support offers a much larger address space and removes the necessity to manage overlapping address spaces in their VPCs. Customers can now base their applications on IPv6, ensuring their infrastructure is future-ready and compatible with existing IPv4 systems via a fallback mechanism.\n \nThis feature is available at no additional cost in 16 AWS Regions, including US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Europe (Paris, Frankfurt, London, Ireland), Asia Pacific (Tokyo, Mumbai, Sydney, Seoul, Singapore), and South America (Sao Paulo) and AWS GovCloud (US-West, US-East). WorkSpaces Applications offers pay-as-you go pricing.\n \nTo get started with WorkSpaces Applications, see Getting Started with Amazon WorkSpaces Applications. To enable this feature for your users, you must use the latest WorkSpaces Applications client for Windows, macOS or directly through web access. To learn more about the feature, please refer to the service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-appstream-2-0-supports-ipv6/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-8f83d9fc597b",
       "title": "Announcing AWS Lambda Kafka event source mapping integration in Amazon MSK Console",
       "description": "AWS announces Lambda’s Kafka event source mapping (ESM) integration in the Amazon MSK Console, streamlining the process of connecting MSK topics to Lambda functions. This capability allows you to simply provide your topic and target function in the MSK Console while the integration handles ESM configuration automatically, enabling you to trigger Lambda functions from MSK topics without switching consoles.\n  Customers use MSK as an event source for Lambda functions to build responsive event-driven Kafka applications. Previously, configuring MSK as an event source required navigating between MSK and Lambda consoles to provide parameters like cluster details, authentication method, and network configuration. The new integrated experience brings Lambda ESM configuration directly into the MSK Console with a simplified interface requiring only target function and topic name as mandatory fields. The integration handles ESM creation with optimized defaults for authentication and event polling configurations, and can automatically generate the required Lambda execution role permissions for MSK cluster access. To optimize latency and throughput, and to remove the need for networking setup, the integration uses Provisioned Mode for ESM as the recommended default. These improvements streamline MSK integration with Lambda and reduce configuration errors, enabling you to quickly get started with your MSK and Lambda applications.\n  This feature is generally available in all AWS Commercial Regions where both Amazon MSK and AWS Lambda are available, except Asia Pacific (Thailand), Asia Pacific (Malaysia), Israel (Tel Aviv), Asia Pacific (Taipei), and Canada West (Calgary).\n  You can configure Lambda’s Kafka event source mapping from the MSK Console by navigating to your MSK cluster and providing the topic, Lambda function, and optional fields under the Lambda integration tab. Standard Lambda pricing and MSK pricing applies. To learn more, read Lambda developer guide and MSK developer guide.",
@@ -364,18 +331,51 @@
       ]
     },
     {
-      "id": "aws-news-8ea0dfacb966",
-      "title": "Amazon WorkSpaces Applications now supports IPv6",
-      "description": "Amazon WorkSpaces Applications now supports IPv6 for WorkSpaces Applications domains and external endpoints, allowing end users to connect to WorkSpaces Applications over IPv6 from IPv6 compatible devices (except SAML authentication). This helps you meet IPv6 compliance requirements and eliminates the need for expensive networking equipment to handle address translation between IPv4 and IPv6.\n \nThe Internet's growth is consuming IPv4 addresses quickly. WorkSpaces Applications, by supporting IPv6, assists customers in streamlining their network architecture. This support offers a much larger address space and removes the necessity to manage overlapping address spaces in their VPCs. Customers can now base their applications on IPv6, ensuring their infrastructure is future-ready and compatible with existing IPv4 systems via a fallback mechanism.\n \nThis feature is available at no additional cost in 16 AWS Regions, including US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Europe (Paris, Frankfurt, London, Ireland), Asia Pacific (Tokyo, Mumbai, Sydney, Seoul, Singapore), and South America (Sao Paulo) and AWS GovCloud (US-West, US-East). WorkSpaces Applications offers pay-as-you go pricing.\n \nTo get started with WorkSpaces Applications, see Getting Started with Amazon WorkSpaces Applications. To enable this feature for your users, you must use the latest WorkSpaces Applications client for Windows, macOS or directly through web access. To learn more about the feature, please refer to the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-appstream-2-0-supports-ipv6/",
+      "id": "aws-news-196cf0862d39",
+      "title": "Amazon Athena launches auto-scaling solution for Capacity Reservations",
+      "description": "Amazon Athena now offers an auto-scaling solution for Capacity Reservations that dynamically adjusts your reserved capacity based on workload demand. The solution uses AWS Step Functions to monitor utilization metrics and scale your Data Processing Units (DPUs) up or down according to the thresholds and limits you configure, helping you optimize costs while maintaining query performance and eliminating the need for manual capacity adjustments.\n  You can customize scaling behavior by setting utilization thresholds, measurement frequency, and capacity limits to match your workload needs. The solution uses Step Functions to add or remove DPUs to any active Capacity Reservation based on capacity utilization metrics in Amazon CloudWatch. Capacity automatically scales up when utilization exceeds your high threshold and scales down when it falls below your low threshold - all while adhering to your defined limits. You can further customize the solution by modifying the Amazon CloudFormation template to fit your specific requirements.\n  The auto-scaling solution for Athena Capacity Reservations is available in AWS Regions where Capacity Reservations is supported. To get started, see Automatically adjust capacity in the Athena user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-athena-capacity-auto-scaling",
       "pubDate": "2025-11-21T08:00:00.000Z",
       "source": "whatsNew",
-      "services": [],
+      "services": [
+        "cloudformation",
+        "athena",
+        "step functions",
+        "cloudwatch"
+      ],
       "categories": [
         "general"
       ],
       "tags": [
-        "ga",
+        "cloudformation",
+        "athena",
+        "step functions",
+        "cloudwatch",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bfa79d7ad5e5",
+      "title": "AWS Glue launches Amazon DynamoDB connector with Spark DataFrame support",
+      "description": "AWS Glue now supports a new Amazon DynamoDB connector that works natively with Apache Spark DataFrames. This enhancement allows Spark developers to work directly with Spark DataFrames, to share code easily across AWS Glue, Amazon EMR, and other Spark environments.\n  Previously, developers working with DynamoDB data in AWS Glue were required to use the Glue-specific DynamicFrame object. With this new connector, developers can now reuse their existing Spark DataFrame code with minimal modifications. This change streamlines the process of migrating jobs to AWS Glue and simplifies data pipeline development. Additionally, the connector unlocks access to the full range of Spark DataFrame operations and the latest performance optimizations.\n  The new connector is available in all AWS Commercial Regions where AWS Glue is available. To get started, visit AWS Glue documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/glue-dynamodb-connector",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "emr",
+        "dynamodb",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "emr",
+        "dynamodb",
+        "glue",
+        "launch",
+        "enhancement",
         "support"
       ]
     },
