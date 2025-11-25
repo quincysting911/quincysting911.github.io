@@ -1,8 +1,81 @@
 {
-  "lastUpdated": "2025-11-24T06:17:06.899Z",
+  "lastUpdated": "2025-11-25T06:16:34.846Z",
   "category": "natural-language",
-  "totalItems": 15,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-492795cde0aa",
+      "title": "Amazon EC2 announces interruptible Capacity Reservations",
+      "description": "Today, Amazon EC2 announces interruptible Capacity Reservations to help you better utilize your reserved capacity and save costs. On-Demand Capacity Reservations (ODCRs) help you reserve compute capacity in a specific Availability Zone for any duration. When ODCRs are not in use, you can now make them temporarily available as interruptible ODCRs, enabling other workloads within your organization to utilize them while preserving your ability to reclaim the capacity for critical operations.\n  By repurposing unused capacity as interruptible ODCRs, workloads suitable for flexible, fault-tolerant operations—such as batch processing, data analysis, and machine learning training can benefit from temporarily available capacity. Reservation owners can reclaim their capacity at any time, while consumers of interruptible ODCRs will receive an interruption notice before termination to allow for graceful shutdown or checkpointing before.\n  Interruptible ODCRs are now available at no additional cost to all Capacity Reservations customers. Refer to the AWS Capabilities by Region website for the feature's regional availability. CloudFormation support will be coming soon. For more details, please refer to the Capacity Reservations user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ec2-interruptible-capacity-reservations",
+      "pubDate": "2025-11-24T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "cloudformation"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "cloudformation",
+        "ga",
+        "now-available",
+        "support",
+        "coming-soon"
+      ]
+    },
+    {
+      "id": "aws-news-2c3433f02c16",
+      "title": "Amazon Redshift now supports federated permissions across multi-warehouse architectures",
+      "description": "Amazon Redshift now supports federated permissions across multi-warehouse architectures\n  Amazon Redshift now supports federated permissions, which simplify permissions management across multiple Redshift data warehouses. Customers are adopting multi-warehouse architectures to scale and isolate workloads and are looking for simplified, consistent permissions management across warehouses. With Redshift federated permissions, you define data permissions once from any Redshift warehouse and automatically enforce them across all warehouses in the account.\n  Amazon Redshift warehouses with federated permissions are auto-mounted in every Redshift warehouse, and you can use existing workforce identities with AWS IAM Identity Center or use existing IAM roles to query data across warehouses. Regardless of which warehouse is used for querying, row-level, column-level, and masking controls always apply automatically, delivering fine-grained access compliance. You can get started by registering a Redshift Serverless namespace or Redshift provisioned cluster with AWS Glue Data Catalog and start querying across warehouses using Redshift Query Editor V2, or any supported SQL client. You get horizontal scalability with multiple warehouses by allowing you to add new warehouses without increasing governance complexity, as new warehouses automatically enforce permission policies and analysts immediately see all databases from registered warehouses.\n  Amazon Redshift federated permissions is available at no additional cost in supported AWS regions. To learn more, visit the Amazon Redshift documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-redshift-federated-permissions-multi-warehouse-architectures",
+      "pubDate": "2025-11-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "glue"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "glue",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f4fc0337cbad",
+      "title": "Amazon Connect flow modules now support custom inputs, outputs, and version management",
+      "description": "Amazon Connect flow modules now support custom inputs, outputs, and branches, along with version and alias management. With this launch, you can now define flexible parameters for your reusable flow modules to math your specific business logic. For example, you can create an authentication module that accepts a phone number and PIN as inputs, then returns the customer name and authentication status as outputs with branches such as \"authenticated\" or \"not authenticated\". All parameters are customizable to meet your specific needs.\n  Additionally, advanced versioning and aliasing capabilities allow you to manage module updates more seamlessly. You can create immutable version snapshots and map aliases to specific versions. When you update an alias to point to a new version, all flows using that module automatically reference the updated version. These new features make flow modules more powerful and reusable, allowing you to build and maintain flows more efficiently.\n  To learn more about these feature, see the Amazon Connect Administrator Guide. This feature is available in all AWS regions that offers Amazon Connect. To learn more about Amazon Connect, the AWS cloud-based contact center, please visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-flow-modules-custom-inputs-outputs-version-management",
+      "pubDate": "2025-11-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "new-feature",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-7d35cf5f9ae9",
       "title": "Enhancing API security with Amazon API Gateway TLS security policies",
@@ -174,83 +247,6 @@
       ]
     },
     {
-      "id": "aws-news-e8a00e8a42aa",
-      "title": "AWS Application Load Balancer launches Target Optimizer",
-      "description": "Application Load Balancer (ALB) now offers Target Optimizer, a new feature that allows you to enforce a maximum number of concurrent requests on a target.\n  With Target Optimizer, you can fine-tune your application stack so that targets receive only the number of requests they can process, achieving higher request success rate, more target utilization, and lower latency. This is particularly useful for compute-intensive workloads. For example, if you have applications that perform complex data processing or inference, you can configure each target to receive as few as one request at a time, ensuring the number of concurrent requests is in line with the target's processing capabilities.\n  You can enable this feature by creating a new target group with a target control port. Once enabled, the feature works with the help of an agent provided by AWS that you run on your targets that tracks request concurrency. For deployments that include multiple target groups per ALB, you have the flexibility to configure this capability for each target group individually.\n  You can enable Target Optimizer through the AWS Management Console, AWS CLI, AWS SDKs, and AWS APIs. ALB Target Optimizer is available in all AWS Commercial Regions, AWS GovCloud (US) Regions, and AWS China Regions. Traffic to target groups that enable Target Optimizer generates more LCU usage than regular target groups. For more information, see the pricing page, launch blog, and ALB User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-application-load-balancer-target-optimizer",
-      "pubDate": "2025-11-20T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "new-feature"
-      ]
-    },
-    {
-      "id": "aws-news-dfde0b063169",
-      "title": "Amazon EC2 R8i and R8i-flex instances are now available in additional AWS regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i and R8i-flex instances are available in the Asia Pacific (Sydney), Canada (Central) and US West (N. California) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i and R8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.\n  R8i-flex, our first memory-optimized Flex instances, are the easiest way to get price performance benefits for a majority of memory-intensive workloads. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, the highest among all comparable machines in on-premises and cloud environments, delivering exceptional performance for mission-critical SAP workloads.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new R8i and R8i-flex instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/ec2-r8i-r8i-flex-instances-additional-regions/",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-70095c032536",
-      "title": "Amazon CloudFront announces 3 new CloudFront Functions capabilities",
-      "description": "Amazon CloudFront now supports three new capabilities for CloudFront Functions: edge location and Regional Edge Cache (REC) metadata, raw query string retrieval, and advanced origin overrides. Developers can now build more sophisticated edge computing logic with greater visibility into CloudFront's infrastructure and precise, granular control over origin connections. CloudFront Functions allows you to run lightweight JavaScript code at CloudFront edge locations to customize content delivery and implement security policies with sub-millisecond execution times.\n  Edge location metadata, includes the three-letter airport code of the serving edge location and the expected REC. This enables geo-specific content routing or compliance requirements, such as directing European users to GDPR-compliant origins based on client location. The raw query string capability provides access to the complete, unprocessed query string as received from the viewer, preserving special characters and encoding that may be altered during standard parsing. Advanced origin overrides solve critical challenges for complex application infrastructures by allowing you to customize SSL/TLS handshake parameters, including Server Name Indication (SNI). For example, multi-tenant setups may override SNI where CloudFront connects through CNAME chains that resolve to servers with different certificate domains.\n  These new CloudFront Functions capabilities are available at no additional charge in all CloudFront edge location. To learn more about CloudFront Functions, see the Amazon CloudFront Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudfront-3-functions-capabilities",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "cloudfront"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "cloudfront",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-97512152226d",
-      "title": "AWS India customers can now use UPI to sign-up and automate monthly payments",
-      "description": "India customers can now sign-up for AWS using UPI (Unified Payments Interface) AutoPay as their default payment method, with automatic recurring payments set up from the start.\n \nUPI is a popular and convenient payment method in India, which facilitates instant bank to bank transfers between two parties through mobile phones with internet. Customers can make payments through UPI mobile app simply by using a Virtual Payment Address or UPI ID linked to their bank account.\n \nCustomers now have the flexibility to sign-up for AWS using UPI, where previously only card payments were accepted. This addition of UPI, India's most widely used payment method, makes it easier for customers to start their AWS journey using their preferred payment method. Customers can use UPI AutoPay to make automated recurring payments, which will avoid the need to come to console to make manual payments, reduce the risk of missed payments and any non-payment related actions.\n \nCustomers can set up automatic payments up to INR 15,000 using their UPI ID linked to their bank account. To enable this, customers can log in to the AWS console and add UPI AutoPay from the payment page. Customers will be required to provide their UPI ID, verify it, and confirm billing address. Once completed, Customers will receive a request in their UPI mobile app (such as Amazon Pay) associated with their UPI ID for verifying and authorizing automated payments. After verification, future bills up to INR 15,000 will be automatically charged starting from the next billing cycle.\n \nTo learn more, see Managing Payment Methods in India.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/india-upi-sign-up-automate-monthly-payments/",
-      "pubDate": "2025-11-20T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex"
-      ]
-    },
-    {
       "id": "aws-news-f838bd828ecc",
       "title": "Optimizing nested JSON array processing using AWS Step Functions Distributed Map",
       "description": "In this post, we explore how to optimize processing array data embedded within complex JSON structures using AWS Step Functions Distributed Map. You’ll learn how to use ItemsPointer to reduce the complexity of your state machine definitions, create more flexible workflow designs, and streamline your data processing pipelines—all without writing additional transformation code or AWS Lambda functions.",
@@ -269,26 +265,6 @@
         "lex",
         "lambda",
         "step functions"
-      ]
-    },
-    {
-      "id": "aws-news-6b8927b02983",
-      "title": "Breaking down monolith workflows: Modularizing AWS Step Functions workflows",
-      "description": "You can use AWS Step Functions to orchestrate complex business problems. However, as workflows grow and evolve, you can find yourself grappling with monolithic state machines that become increasingly difficult to maintain and update. In this post, we show you strategies for decomposing large Step Functions workflows into modular, maintainable components.",
-      "link": "https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/",
-      "pubDate": "2025-10-22T21:02:22.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lex",
-        "step functions"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "step functions",
-        "update"
       ]
     },
     {
