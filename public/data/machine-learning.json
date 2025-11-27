@@ -1,8 +1,115 @@
 {
-  "lastUpdated": "2025-11-26T06:16:32.089Z",
+  "lastUpdated": "2025-11-27T06:16:38.549Z",
   "category": "machine-learning",
-  "totalItems": 16,
+  "totalItems": 18,
   "items": [
+    {
+      "id": "aws-news-70a75d3e1cfa",
+      "title": "Medidata’s journey to a modern lakehouse architecture on AWS",
+      "description": "In this post, we show you how Medidata created a unified, scalable, real-time data platform that serves thousands of clinical trials worldwide with AWS services, Apache Iceberg, and a modern lakehouse architecture.",
+      "link": "https://aws.amazon.com/blogs/big-data/medidatas-journey-to-a-modern-lakehouse-architecture-on-aws/",
+      "pubDate": "2025-11-27T01:00:46.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-e771ae5d8453",
+      "title": "Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod",
+      "description": "In this post, we introduce Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod, new capabilities that can reduce time to first token by up to 40% and lower compute costs by up to 25% for long context prompts and multi-turn conversations. These features automatically manage distributed KV caching infrastructure and intelligent request routing, making it easier to deploy production-scale LLM inference workloads with enterprise-grade performance while significantly reducing operational overhead.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/managed-tiered-kv-cache-and-intelligent-routing-for-amazon-sagemaker-hyperpod/",
+      "pubDate": "2025-11-27T00:50:04.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "hyperpod"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod"
+      ]
+    },
+    {
+      "id": "aws-news-3bab677a86c4",
+      "title": "Amazon SageMaker HyperPod now supports custom Kubernetes labels and taints",
+      "description": "Amazon SageMaker HyperPod now supports custom Kubernetes labels and taints, enabling customers to control pod scheduling and integrate seamlessly with existing Kubernetes infrastructure. Customers deploying AI workloads on HyperPod clusters orcehstrated with EKS need precise control over workload placement to prevent expensive GPU resources from being consumed by system pods and non-AI workloads, while ensuring compatibility with custom device plugins such as EFA and NVIDIA GPU operators. Previously, customers had to manually apply labels and taints using kubectl and reapply them after every node replacement, scaling, or patching operation, creating significant operational overhead.\n  This capability allows you to configure labels and taints at the instance group level through the CreateCluster and UpdateCluster APIs, providing a managed approach to defining and maintaining scheduling policies across the entire node lifecycle. Using the new KubernetesConfig parameter, you can specify up to 50 labels and 50 taints per instance group. Labels enable resource organization and pod targeting through node selectors, while taints repel pods without matching tolerations to protect specialized nodes. For example, you can apply NoSchedule taints to GPU instance groups to ensure only AI training jobs with explicit tolerations consume high-cost compute resources, or add custom labels that enable device plugin pods to schedule correctly. HyperPod automatically applies these configurations during node creation and maintains them across replacement, scaling, and patching operations, eliminating manual intervention and reducing operational overhead.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is available. To learn more about custom labels and taints, see the user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-hyperpod-kubernetes/",
+      "pubDate": "2025-11-26T18:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-72a635483fb7",
+      "title": "AWS announces support for Apache Iceberg V3 deletion vectors and row lineage",
+      "description": "AWS now supports deletion vectors and row lineage as defined in the Apache Iceberg Version 3 (V3) specification. These new features are available with Apache Spark on Amazon EMR 7.12, AWS Glue, Amazon SageMaker notebooks, Amazon S3 Tables, and the AWS Glue Data Catalog.\n  These Iceberg V3 capabilities help customers build petabyte-scale data lakes with improved performance for data modifications and functionality to easily track changed records. Deletion vectors write optimized delete files that speed up data pipelines and reduce data compaction costs. Row lineage provides metadata fields on each record to track changes with a simple SQL query, eliminating the computational expense of finding small changes in large tables.\n  Get started creating V3 tables by setting the table property to 'format-version = 3' in the CREATE TABLE command in Spark or a SageMaker notebook. To upgrade existing tables, simply update the table property in metadata with the new format version. When you do this, AWS query engines that support V3 will automatically begin to use deletion vectors and row lineage.\n  Iceberg V3 deletion vectors and row lineage are now available in all AWS Regions where each respective service/feature—Amazon EMR, AWS Glue, SageMaker notebooks, S3 Tables, and AWS Glue Data Catalog—is supported. To learn more about AWS support for Iceberg V3, visit Apache Iceberg V3 on AWS, and read the blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-apache-iceberg-v3-deletion-vectors-row-lineage",
+      "pubDate": "2025-11-26T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "s3",
+        "emr",
+        "rds",
+        "glue"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "s3",
+        "emr",
+        "rds",
+        "glue",
+        "now-available",
+        "new-feature",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-053ac740488c",
+      "title": "Amazon SageMaker AI now supports Flexible Training Plans capacity for Inference",
+      "description": "Amazon SageMaker AI’s Flexible Training Plans (FTP) now support inference endpoints, giving customers guaranteed GPU capacity for planned evaluations and production peaks. Now, customers can reserve the exact instance types they need and rely on SageMaker AI to bring up the inference endpoint automatically, without doing any infrastructure management themselves.\n \nAs customers plan their ML development cycles, they need confidence that the GPUs required for model evaluation and pre-production testing will be available on the exact dates they need them. FTP makes it easy for customers to access GPU capacity to run ML workloads. With FTP support for inference endpoints, you choose your preferred instance types, compute requirements, reservation length, and start date for your inference workload. When creating the endpoint, you simply reference the reservation ARN and SageMaker AI automatically provisions and runs the endpoint on that guaranteed capacity for the entire plan duration. This removes weeks of infrastructure management and scheduling effort, letting you run inference predictably while focusing your time on improving model performance.\n \nFlexible Training Plans support for SageMaker AI Inference is available in following regions: US East (N. Virginia), US West (Oregon), US East (Ohio).\n \nTo learn more about using FTP reservations for inference endpoints, visit the SageMaker AI Inference API reference here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/sagemaker-ai-flexible-training-plans-inference/",
+      "pubDate": "2025-11-26T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "lex",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "eks",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a7bab8231d01",
       "title": "Orchestrating data processing tasks with a serverless visual workflow in Amazon SageMaker Unified Studio",
@@ -96,10 +203,10 @@
       "tags": []
     },
     {
-      "id": "aws-news-6aeae45cc865",
+      "id": "aws-news-85f71202e763",
       "title": "Amazon SageMaker AI Inference now supports bidirectional streaming",
       "description": "Amazon SageMaker AI Inference now supports bidirectional streaming for real-time speech-to-text transcription, enabling continuous speech processing instead of batch input. Models can now receive audio streams and return partial transcripts simultaneously as users speak, enabling you to build voice agents that process speech with minimal latency.\n  As customers build AI voice agents, they need real-time speech transcription to minimize delays between user speech and agent responses. Data scientists and ML engineers lack managed infrastructure for bidirectional streaming, making it necessary to build custom WebSocket implementations and manage streaming protocols. Teams spend weeks developing and maintaining this infrastructure rather than focusing on model accuracy and agent capabilities. With bidirectional streaming on Amazon SageMaker AI Inference, you can deploy speech-to-text models by invoking your endpoint with the new Bidirectional Stream API. The client opens an HTTP2 connection to the SageMaker AI runtime, and SageMaker AI automatically creates a WebSocket connection to your container. This can process streaming audio frames and return partial transcripts as they are produced. Any container implementing a WebSocket handler following the SageMaker AI contract works automatically, with real-time speech models such as Deepgram running without modifications. This eliminates months of infrastructure development, enabling you to deploy voice agents with continuous transcription while focusing your time on improving model performance.\n  Bidirectional streaming is available in following AWS Regions - Canada (Central), South America (São Paulo), Africa (Cape Town), Europe (Paris), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Israel (Tel Aviv), Europe (Zurich), Asia Pacific (Tokyo), AWS GovCloud US (West), AWS GovCloud US (East), Asia Pacific (Mumbai), Middle East (Bahrain), US West (Oregon), China (Ningxia), US West (Northern California), Asia Pacific (Sydney), Europe (London), Asia Pacific (Seoul), US East (N. Virginia), Asia Pacific (Hong Kong), US East (Ohio), China (Beijing), Europe (Stockholm), Europe (Ireland), Middle East (UAE), Asia Pacific (Osaka), Asia Pacific (Melbourne), Europe (Spain), Europe (Frankfurt), Europe (Milan), Asia Pacific (Singapore).\n  To learn more, visit AWS News Blog here and SageMaker AI documentation here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/sagemaker-ai-inference-bidirectional-streaming/",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/sagemaker-ai-inference-bidirectional-streaming",
       "pubDate": "2025-11-25T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
@@ -162,7 +269,7 @@
     {
       "id": "aws-news-a827243fd875",
       "title": "Introducing Amazon SageMaker Data Agent for analytics and AI/ML development",
-      "description": "Amazon SageMaker introduces a built-in AI agent that accelerates the development of data analytics and machine learning (ML) applications. SageMaker Data Agent is available in the new notebook experience in Amazon SageMaker Unified Studio and helps data engineers, analysts, and data scientists who spend significant time on manual setup tasks and boilerplate code when building analytics and ML applications. The agent generates code and execution plans from natural language prompts and integrates with data catalogs and business metadata to streamline the development process.\n  SageMaker Data Agent works within the new notebook experience to break down complex analytics and ML tasks into manageable steps. Customers can describe objectives in natural language and the agent creates a detailed execution plan and generates the required SQL and Python code. The agent maintains awareness of the notebook context, including available data sources and catalog information, accelerating common tasks including data transformation, statistical analysis, and model development.\n  To get started, log in to Amazon SageMaker and click on “Notebooks” on the left navigation. Amazon SageMaker Data Agent is available in US East (Ohio), US East (N. Virginia), US West (Oregon), Europe (Ireland), Europe (Frankfurt), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), and Asia Pacific (Sydney). To learn more, read the AWS News Blog or visit the Amazon SageMaker documentation.",
+      "description": "Amazon SageMaker introduces a built-in AI agent that accelerates the development of data analytics and machine learning (ML) applications. SageMaker Data Agent is available in the new notebook experience in Amazon SageMaker Unified Studio and helps data engineers, analysts, and data scientists who spend significant time on manual setup tasks and boilerplate code when building analytics and ML applications. The agent generates code and execution plans from natural language prompts and integrates with data catalogs and business metadata to streamline the development process.\n  SageMaker Data Agent works within the new notebook experience to break down complex analytics and ML tasks into manageable steps. Customers can describe objectives in natural language and the agent creates a detailed execution plan and generates the required SQL and Python code. The agent maintains awareness of the notebook context, including available data sources and catalog information, accelerating common tasks including data transformation, statistical analysis, and model development.\n  To get started, log in to Amazon SageMaker and click on “Notebooks” on the left navigation. Amazon SageMaker Data Agent is available in all Regions where Amazon SageMaker Unified Studio is supported. To learn more, read the AWS News Blog or visit the Amazon SageMaker documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-data-agent-analytics-ai-ml-development",
       "pubDate": "2025-11-21T15:01:00.000Z",
       "source": "whatsNew",
@@ -178,13 +285,14 @@
         "sagemaker",
         "unified studio",
         "lex",
-        "ga"
+        "ga",
+        "support"
       ]
     },
     {
       "id": "aws-news-82f031df727e",
       "title": "Announcing notebooks with a built-in AI agent in Amazon SageMaker",
-      "description": "Amazon SageMaker introduces a new notebook experience that provides data and AI teams a high-performance, serverless programming environment for analytics and machine learning (ML) jobs. This helps customers quickly get started working with data without pre-provisioning data processing infrastructure. The new notebook gives data engineers, analysts, and data scientists one place to perform SQL queries, execute Python code, process large-scale data jobs, run ML workloads and create visualizations. A built-in AI agent accelerates development by generating code and SQL statements from natural language prompts while it guides users through their tasks. The notebook is backed by Amazon Athena for Apache Spark to deliver high-performance results, scaling from interactive SQL queries to petabyte-scale data processing. It’s available in the new one-click onboarding experience for Amazon SageMaker Unified Studio.\n \nData engineers, analysts, and data scientists can flexibly combine SQL, Python, and natural language within a single interactive workspace. This removes the need to switch between different tools based on your workload. For example, you can start with SQL queries to explore your data, use Python for advanced analytics or to build ML models, or use natural language prompts to generate code automatically using the built-in AI agent. To get started, sign in to the console, find SageMaker, open SageMaker Unified Studio, and go to \"Notebooks\" in the navigation.\n \nYou can use the SageMaker notebook feature in the following Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Europe (Ireland), Europe (Frankfurt), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), and Asia Pacific (Sydney).\n \nTo learn more, read the AWS News Blog or see SageMaker documentation.",
+      "description": "Amazon SageMaker introduces a new notebook experience that provides data and AI teams a high-performance, serverless programming environment for analytics and machine learning (ML) jobs. This helps customers quickly get started working with data without pre-provisioning data processing infrastructure. The new notebook gives data engineers, analysts, and data scientists one place to perform SQL queries, execute Python code, process large-scale data jobs, run ML workloads and create visualizations. A built-in AI agent accelerates development by generating code and SQL statements from natural language prompts while it guides users through their tasks. The notebook is backed by Amazon Athena for Apache Spark to deliver high-performance results, scaling from interactive SQL queries to petabyte-scale data processing. It’s available in the new one-click onboarding experience for Amazon SageMaker Unified Studio.\n \nData engineers, analysts, and data scientists can flexibly combine SQL, Python, and natural language within a single interactive workspace. This removes the need to switch between different tools based on your workload. For example, you can start with SQL queries to explore your data, use Python for advanced analytics or to build ML models, or use natural language prompts to generate code automatically using the built-in AI agent. To get started, sign in to the console, find SageMaker, open SageMaker Unified Studio, and go to \"Notebooks\" in the navigation.\n \nYou can use the SageMaker notebook feature in the following Regions where Amazon SageMaker Unified Studio is supported.\n \nTo learn more, read the AWS News Blog or see SageMaker documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/notebooks-built-in-ai-agent-amazon-sagemaker/",
       "pubDate": "2025-11-21T09:00:00.000Z",
       "source": "whatsNew",
@@ -202,38 +310,8 @@
         "unified studio",
         "lex",
         "athena",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-c81911906ddc",
-      "title": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS",
-      "description": "Amazon CloudWatch Container Insights now supports Neuron UltraServers on Amazon EKS, providing enhanced observability for customers running large-scale, high-performance machine learning workloads on multi-instance nodes. This new capability enables data scientists and ML engineers to efficiently monitor and troubleshoot their containerized ML applications, offering aggregated metrics and simplified management across Neuron UltraServer groups.\n \nNeuron UltraServers combine multiple EC2 instances into a single logical server unit, optimized for machine learning workloads using AWS Trainium and Inferentia accelerators. Container Insights, a monitoring and diagnostics feature in Amazon CloudWatch, automatically collects metrics from containerized applications. With this launch, Container Insights introduces a new filter specifically for UltraServers in EKS environments. You can now select an UltraServer ID to view new aggregate metrics across all instances within that server, replacing the need to monitor individual instances separately. In addition to per-instance metrics, you can now view consolidated performance data for the entire UltraServer group, streamlining the monitoring of ML workloads running on AWS Neuron.\n \nAmazon CloudWatch Container Insights is available in all commercial AWS Regions, and the AWS GovCloud (US).\n \nTo get started, see AWS Neuron metrics for AWS Trainium and AWS Inferentia in the Amazon CloudWatch User Guide",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/cloudwatch-container-insights-neuron-ultraservers-eks/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "ec2",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "ec2",
-        "eks",
-        "cloudwatch",
-        "launch",
         "ga",
-        "support",
-        "new-capability"
+        "support"
       ]
     },
     {
@@ -296,59 +374,6 @@
       ],
       "tags": [
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-d8165ac29c81",
-      "title": "Use trusted identity propagation for Apache Spark interactive sessions in Amazon SageMaker Unified Studio",
-      "description": "In this post, we provide step-by-step instructions to set up Amazon EMR on EC2, EMR Serverless, and AWS Glue within SageMaker Unified Studio, enabled with trusted identity propagation. We use the setup to illustrate how different IAM Identity Center users can run their Spark sessions, using each compute setup, within the same project in SageMaker Unified Studio. We show how each user will see only tables or part of tables that they’re granted access to in Lake Formation.",
-      "link": "https://aws.amazon.com/blogs/big-data/use-trusted-identity-propagation-for-apache-spark-interactive-sessions-in-amazon-sagemaker-unified-studio/",
-      "pubDate": "2025-10-31T20:55:40.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "ec2",
-        "emr",
-        "iam",
-        "iam identity center",
-        "glue"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "ec2",
-        "emr",
-        "iam",
-        "iam identity center",
-        "glue",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-29fb262a0808",
-      "title": "Federate access to SageMaker Unified Studio with AWS IAM Identity Center and Okta",
-      "description": "This post shows step-by-step guidance to setup workforce access to Amazon SageMaker Unified Studio using Okta as an external Identity provider with AWS IAM Identity Center.",
-      "link": "https://aws.amazon.com/blogs/big-data/federate-access-to-sagemaker-unified-studio-with-aws-iam-identity-center-and-okta/",
-      "pubDate": "2025-10-27T21:11:07.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "iam identity center"
       ]
     }
   ]
