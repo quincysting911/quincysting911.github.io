@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-27T06:16:38.549Z",
+  "lastUpdated": "2025-11-28T06:16:42.685Z",
   "totalItems": 197,
   "sources": {
     "whatsNew": 94,
@@ -503,27 +503,6 @@
       ]
     },
     {
-      "id": "aws-news-6e3f657a552f",
-      "title": "AWS Compute Optimizer now supports unused NAT Gateway recommendations",
-      "description": "Today, AWS announces that AWS Compute Optimizer now supports idle resource recommendations for NAT Gateways. With this new recommendation type, you will be able to identify NAT Gateways that are unused, resulting in cost savings.\n  With the new unused NAT Gateway recommendation, you will be able to identify NAT Gateways that show no traffic activity over a 32-day analysis period. Compute Optimizer analyzes CloudWatch metrics including active connection count, incoming packets from source, and incoming packets from destination to validate if NAT Gateways are truly unused. To avoid recommending critical backup resources, Compute Optimizer also examines if the NAT Gateway resource is associated in any AWS Route Tables. You can view the total savings potential of these unused NAT Gateways and access detailed utilization metrics to verify unused conditions before taking action.\n  This new feature is available in all AWS Regions where AWS Compute Optimizer is available except the AWS GovCloud (US) and the China Regions. To learn more about the new feature updates, please visit Compute Optimizer’s product page and user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-unused-nat-gateway-recommendations",
-      "pubDate": "2025-11-26T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "cloudwatch",
-        "ga",
-        "new-feature",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-8cc472a5e924",
       "title": "Amazon CloudWatch now supports deletion protection for logs",
       "description": "Amazon CloudWatch now offers configuring deletion protection on your CloudWatch log groups, helping customers safeguard their critical logging data from accidental or unintended deletion. This feature provides an additional layer of protection for logs maintaining audit trails, compliance records, and operational logs that must be preserved.\n  With deletion protection enabled, administrators can prevent unintended deletions of their most important log groups. Once enabled, log groups cannot be deleted until the protection is explicitly turned off, helping safeguard critical operational, security, and compliance data. This protection is particularly valuable for preserving audit logs and production application logs needed for troubleshooting and analysis.\n  Log group deletion protection is available in all AWS commercial Regions.\n  You can enable deletion protection during log group creation or on existing log groups using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. For more information, visit the Amazon CloudWatch Logs User Guide..",
@@ -562,6 +541,27 @@
         "sagemaker",
         "hyperpod",
         "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6e3f657a552f",
+      "title": "AWS Compute Optimizer now supports unused NAT Gateway recommendations",
+      "description": "Today, AWS announces that AWS Compute Optimizer now supports idle resource recommendations for NAT Gateways. With this new recommendation type, you will be able to identify NAT Gateways that are unused, resulting in cost savings.\n  With the new unused NAT Gateway recommendation, you will be able to identify NAT Gateways that show no traffic activity over a 32-day analysis period. Compute Optimizer analyzes CloudWatch metrics including active connection count, incoming packets from source, and incoming packets from destination to validate if NAT Gateways are truly unused. To avoid recommending critical backup resources, Compute Optimizer also examines if the NAT Gateway resource is associated in any AWS Route Tables. You can view the total savings potential of these unused NAT Gateways and access detailed utilization metrics to verify unused conditions before taking action.\n  This new feature is available in all AWS Regions where AWS Compute Optimizer is available except the AWS GovCloud (US) and the China Regions. To learn more about the new feature updates, please visit Compute Optimizer’s product page and user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-unused-nat-gateway-recommendations",
+      "pubDate": "2025-11-26T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga",
+        "new-feature",
+        "update",
         "support"
       ]
     },
@@ -714,45 +714,6 @@
       ]
     },
     {
-      "id": "aws-news-3df6a4025b74",
-      "title": "AWS Knowledge MCP Server now supports topic-based search",
-      "description": "Today, AWS announces enhanced search capabilities for the AWS Knowledge MCP Server, which now supports topic-based search across specialized AWS documentation domains. The AWS Knowledge MCP Server is a Model Context Protocol (MCP) server that provides AI agents and developers with programmatic access to AWS documentation and knowledge resources. This enhancement enables more precise and relevant search results by allowing MCP clients and agentic frameworks to query specific documentation domains such as Troubleshooting, AWS Amplify, AWS CDK, CDK Constructs, and AWS CloudFormation, reducing noise and improving response accuracy for domain-specific queries.\n  These topic-based searches complement existing capabilities for searching API references, What's New announcements, and general AWS documentation. Developers building AI agents can now retrieve targeted information for specific use cases—for example, searching Troubleshooting documentation for error resolution, Amplify documentation for frontend development guidance, or CDK Constructs for production-ready architectural patterns. This focused approach accelerates development workflows and improves the quality of AI-generated responses for AWS-specific queries.\n  The enhanced search capabilities are available immediately at no additional cost through the AWS Knowledge MCP Server. Usage remains subject to standard rate limits. To learn more and get started, see the AWS Knowledge MCP Server documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-knowledge-mcp-server-topic-based-search/",
-      "pubDate": "2025-11-26T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudformation",
-        "enhancement",
-        "support",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-352e788815d3",
-      "title": "Amazon Bedrock introduces Reserved Service tier",
-      "description": "Today, Amazon Bedrock introduces a new Reserved service tier designed for workloads requiring predictable performance and guaranteed tokens-per-minute capacity. The Reserved tier provides the ability to reserve prioritized compute capacity, keeping service levels predictable for your mission critical applications. It also includes the flexibility to allocate different input and output tokens-per-minute capacities to match the exact requirements of your workload and control cost. This is particularly valuable because many workloads have asymmetric token usage patterns. For instance, summarization tasks consume many input tokens but generate fewer output tokens, while content generation applications require less input and more output capacity. When your application needs more tokens-per-minute capacity than what you reserved , the service automatically overflows to the pay-as-you-go Standard tier, ensuring uninterrupted operations. The Reserved tier targets 99.5% uptime for model response and is available today for Anthropic Claude Sonnet 4.5. Customers can reserve capacity for 1 month or 3 month duration. Customers pay a fixed price per 1K tokens-per-minute and are billed monthly.\n  With the Reserved service tier, Amazon Bedrock continues to provide more choice to customers, helping them develop, scale, and deploy applications and agents that improve productivity and customer experiences while balancing performance and cost requirements.\n  For more information about the AWS Regions where Amazon Bedrock Reserved is available, refer to the Documentation. To get access to the Reserved tier, please contact your AWS account team.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-bedrock-reserved-service-tier/",
-      "pubDate": "2025-11-26T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "lex"
-      ]
-    },
-    {
       "id": "aws-news-bd7a59a25d49",
       "title": "Amazon S3 Metadata expands to 22 additional AWS Regions",
       "description": "Amazon S3 Metadata is now available in twenty-two additional AWS Regions: Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central), Canada West (Calgary), Europe (London), Europe (Milan), Europe (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Israel (Tel Aviv), Middle East (Bahrain), Middle East (UAE), South America (Sao Paulo), and US West (N. California).\n  Amazon S3 Metadata is the easiest and fastest way to help you instantly discover and understand your S3 data with automated, easily-queried metadata that updates in near real-time. This helps you to curate, identify, and use your S3 data for business analytics, real-time inference applications, and more. S3 Metadata supports object metadata, which includes system-defined details like size and source of the object, and custom metadata, which allows you to use tags to annotate your objects with information like product SKU, transaction ID, or content rating. S3 Metadata automatically populates metadata for both new and existing objects, providing you with a comprehensive, queryable view of your data.\n  With this expansion, S3 Metadata is now generally available in twenty-eight AWS Regions. For pricing details, visit the S3 pricing page. To learn more, visit the product page, documentation, and AWS Storage Blog.",
@@ -795,6 +756,45 @@
         "lex",
         "eks",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-3df6a4025b74",
+      "title": "AWS Knowledge MCP Server now supports topic-based search",
+      "description": "Today, AWS announces enhanced search capabilities for the AWS Knowledge MCP Server, which now supports topic-based search across specialized AWS documentation domains. The AWS Knowledge MCP Server is a Model Context Protocol (MCP) server that provides AI agents and developers with programmatic access to AWS documentation and knowledge resources. This enhancement enables more precise and relevant search results by allowing MCP clients and agentic frameworks to query specific documentation domains such as Troubleshooting, AWS Amplify, AWS CDK, CDK Constructs, and AWS CloudFormation, reducing noise and improving response accuracy for domain-specific queries.\n  These topic-based searches complement existing capabilities for searching API references, What's New announcements, and general AWS documentation. Developers building AI agents can now retrieve targeted information for specific use cases—for example, searching Troubleshooting documentation for error resolution, Amplify documentation for frontend development guidance, or CDK Constructs for production-ready architectural patterns. This focused approach accelerates development workflows and improves the quality of AI-generated responses for AWS-specific queries.\n  The enhanced search capabilities are available immediately at no additional cost through the AWS Knowledge MCP Server. Usage remains subject to standard rate limits. To learn more and get started, see the AWS Knowledge MCP Server documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-knowledge-mcp-server-topic-based-search/",
+      "pubDate": "2025-11-26T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudformation",
+        "enhancement",
+        "support",
+        "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-352e788815d3",
+      "title": "Amazon Bedrock introduces Reserved Service tier",
+      "description": "Today, Amazon Bedrock introduces a new Reserved service tier designed for workloads requiring predictable performance and guaranteed tokens-per-minute capacity. The Reserved tier provides the ability to reserve prioritized compute capacity, keeping service levels predictable for your mission critical applications. It also includes the flexibility to allocate different input and output tokens-per-minute capacities to match the exact requirements of your workload and control cost. This is particularly valuable because many workloads have asymmetric token usage patterns. For instance, summarization tasks consume many input tokens but generate fewer output tokens, while content generation applications require less input and more output capacity. When your application needs more tokens-per-minute capacity than what you reserved , the service automatically overflows to the pay-as-you-go Standard tier, ensuring uninterrupted operations. The Reserved tier targets 99.5% uptime for model response and is available today for Anthropic Claude Sonnet 4.5. Customers can reserve capacity for 1 month or 3 month duration. Customers pay a fixed price per 1K tokens-per-minute and are billed monthly.\n  With the Reserved service tier, Amazon Bedrock continues to provide more choice to customers, helping them develop, scale, and deploy applications and agents that improve productivity and customer experiences while balancing performance and cost requirements.\n  For more information about the AWS Regions where Amazon Bedrock Reserved is available, refer to the Documentation. To get access to the Reserved tier, please contact your AWS account team.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-bedrock-reserved-service-tier/",
+      "pubDate": "2025-11-26T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "lex"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "lex"
       ]
     },
     {
@@ -1194,6 +1194,27 @@
       ]
     },
     {
+      "id": "aws-news-6d9915f3633f",
+      "title": "Amazon SageMaker AI now supports EAGLE speculative decoding",
+      "description": "Amazon SageMaker AI now supports EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) speculative decoding to improve large language model inference throughput by up to 2.5x. This capability enables models to predict and validate multiple tokens simultaneously rather than one at a time, improving response times for AI applications.\n  As customers deploy AI applications to production, they need capabilities to serve models with low latency and high throughput to deliver responsive user experiences. Data scientists and ML engineers lack efficient methods to accelerate token generation without sacrificing output quality or requiring complex model re-architecture, making it hard to meet performance expectations under real-world traffic. Teams spend significant time optimizing infrastructure rather than improving their AI applications. With EAGLE speculative decoding, SageMaker AI enables customers to accelerate inference throughput by allowing models to generate and verify multiple tokens in parallel rather than one at a time, maintaining the same output quality while dramatically increasing throughput. SageMaker AI automatically selects between EAGLE 2 and EAGLE 3 based on your model architecture, and provides built-in optimization jobs that use either curated datasets or your own application data to train specialized prediction heads. You can then deploy optimized models through your existing SageMaker AI inference workflow without infrastructure changes, enabling you to deliver faster AI applications with predictable performance.\n  You can use EAGLE speculative decoding in the following AWS Regions: US East (N. Virginia), US West (Oregon), US East (Ohio), Asia Pacific (Tokyo), Europe (Ireland), Asia Pacific (Singapore), and Europe (Frankfurt)\n  \n To learn more about EAGLE speculative decoding, visit AWS News Blog here, and SageMaker AI documentation here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-eagle-decoding/",
+      "pubDate": "2025-11-25T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-675f93367035",
       "title": "AWS Glue Data Quality now supports rule labeling for enhanced reporting",
       "description": "Today, AWS announces the general availability of rule label, a feature of AWS Glue Data Quality, enabling you to apply custom key-value pair labels to your data quality rules for improved organization, filtering, and targeted reporting. This enhancement allows you to categorize data quality rules by business context, team ownership, compliance requirements, or any custom taxonomy that fits your data quality and governance needs.\n  Rule labels provide effective way to organize analyze data quality results. You can query results by specific labels to identify failing rules within particular categories, count rule outcomes by team or domain, and create focused reports for different stakeholders. For example, you can apply all rules that pertain to finance team with a label \"team=finance\" and generate a customized report to showcase quality metrics specific to finance team. You can label high priority rules with \"criticality=high\" to prioritize remediation efforts. Labels can be authored as part of the DQDL. You can query the labels as part of rule outcomes, row-level results, and API responses, making it easy to integrate with your existing monitoring and reporting workflows.\n  AWS Glue Data Quality rule labeling is available in all commercial AWS Regions where AWS Glue Data Quality is available. See the AWS Region Table for more details. To learn more about rule labeling, see the AWS Glue Data Quality documentation.",
@@ -1230,27 +1251,6 @@
       "tags": [
         "lex",
         "glue",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-6d9915f3633f",
-      "title": "Amazon SageMaker AI now supports EAGLE speculative decoding",
-      "description": "Amazon SageMaker AI now supports EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) speculative decoding to improve large language model inference throughput by up to 2.5x. This capability enables models to predict and validate multiple tokens simultaneously rather than one at a time, improving response times for AI applications.\n  As customers deploy AI applications to production, they need capabilities to serve models with low latency and high throughput to deliver responsive user experiences. Data scientists and ML engineers lack efficient methods to accelerate token generation without sacrificing output quality or requiring complex model re-architecture, making it hard to meet performance expectations under real-world traffic. Teams spend significant time optimizing infrastructure rather than improving their AI applications. With EAGLE speculative decoding, SageMaker AI enables customers to accelerate inference throughput by allowing models to generate and verify multiple tokens in parallel rather than one at a time, maintaining the same output quality while dramatically increasing throughput. SageMaker AI automatically selects between EAGLE 2 and EAGLE 3 based on your model architecture, and provides built-in optimization jobs that use either curated datasets or your own application data to train specialized prediction heads. You can then deploy optimized models through your existing SageMaker AI inference workflow without infrastructure changes, enabling you to deliver faster AI applications with predictable performance.\n  You can use EAGLE speculative decoding in the following AWS Regions: US East (N. Virginia), US West (Oregon), US East (Ohio), Asia Pacific (Tokyo), Europe (Ireland), Asia Pacific (Singapore), and Europe (Frankfurt)\n  \n To learn more about EAGLE speculative decoding, visit AWS News Blog here, and SageMaker AI documentation here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-eagle-decoding/",
-      "pubDate": "2025-11-25T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "lex"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "lex",
-        "ga",
         "support"
       ]
     },
@@ -1464,6 +1464,36 @@
       ]
     },
     {
+      "id": "aws-news-fd016fec1803",
+      "title": "AWS Glue announces catalog federation for remote Apache Iceberg catalogs",
+      "description": "AWS Glue announces the general availability of catalog federation for remote Iceberg catalogs. This capability provides direct and secure access to Iceberg tables stored in Amazon S3 and cataloged in remote catalogs using AWS analytics engines.\n  With catalog federation, you can federate to remote Iceberg catalogs and query remote Iceberg tables using your preferred AWS analytics engines, without moving or copying tables. It synchronizes metadata real-time across AWS Glue Data Catalog and remote catalogs when data teams query remote tables, which means that query results are always completely up-to-date. You can now choose the best price-performance for your workloads when analyzing remote Iceberg tables using your preferred AWS analytics engines, while maintaining consistent security controls when discovering or querying data. Catalog federation is supported by a wide variety of analytics engines, including Amazon Redshift, Amazon EMR, Amazon Athena, AWS Glue, third-party engines like Apache Spark, and Amazon SageMaker with the serverless notebooks.\n  Catalog federation uses AWS Lake Formation for access controls, allowing you to use fine-grained access controls, cross-account sharing, and trusted identity propagation when sharing remote catalog tables with other data consumers. Catalog federation integrates with catalog implementations that support the Iceberg REST specifications.\n  Catalog federation is available in Lake Formation console and using AWS Glue and Lake Formation SDKs and APIs. This feature is generally available in all AWS commercial regions where AWS Glue and Lake Formation are available. With just a few clicks in the console, you can federate to remote catalogs, discover its databases and tables, grant permissions to access table data, and query remote Iceberg tables using AWS analytics engines. To learn more, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-catalog-federation-remote-apache-iceberg-catalogs",
+      "pubDate": "2025-11-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "s3",
+        "emr",
+        "redshift",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "s3",
+        "emr",
+        "redshift",
+        "glue",
+        "athena",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-0dc775a80f99",
       "title": "AWS Elemental MediaTailor now supports HLS Interstitials for live streams",
       "description": "AWS Elemental MediaTailor now supports HTTP Live Streaming (HLS) Interstitials for live streams, enabling broadcasters and streaming service providers to deliver seamless, personalized ad experiences across a wide range of modern video players. This capability allows customers to insert interstitial advertisements and promotions directly into live streams using the HLS Interstitials specification (RFC 8216), which is natively supported by popular players including HLS.js, Shaka Player, Bitmovin Player, and Apple devices running iOS 16.4, iPadOS 16.4, tvOS 16.4, and later.\n  With HLS Interstitials, MediaTailor automatically generates the necessary metadata tags (Interstitial class EXT-X-DATERANGE with X-ASSET-LIST attributes) that signal to client players when and how to play interstitial content. This approach eliminates the need for custom player-side stitching logic, reducing development complexity and ensuring consistent playback behavior. The feature integrates with MediaTailor's existing server-side ad insertion (SSAI) capabilities, delivering frame-accurate transitions with no buffering between content and interstitials. Server-side beaconing continues to work with HLS Interstitials, ensuring ad tracking and measurement workflows remain intact.\n  HLS Interstitials for live streams is particularly valuable for sports broadcasts, live news, and event streaming where precise ad timing and minimal latency are critical. The feature supports pre-roll and mid-roll insertion, giving customers flexibility in how they monetize their live content. This launch complements MediaTailor's existing HLS Interstitials support for VOD, rounding out support across Linear, Live, FAST, and VOD workflows. MediaTailor makes it easy to test and deploy—customers can rapidly enable or disable HLS Interstitials with a simple query parameter on the multi-variant manifest request, providing per playback session control without changing the underlying MediaTailor configuration.\n  AWS Elemental MediaTailor HLS Interstitials for live streams is available today in all AWS Regions where MediaTailor operates. You pay only for the features you use, with no upfront commitments. To learn more and get started, visit the AWS Elemental MediaTailor documentation and the HLS Interstitials implementation guide.",
@@ -1552,33 +1582,48 @@
       ]
     },
     {
-      "id": "aws-news-fd016fec1803",
-      "title": "AWS Glue announces catalog federation for remote Apache Iceberg catalogs",
-      "description": "AWS Glue announces the general availability of catalog federation for remote Iceberg catalogs. This capability provides direct and secure access to Iceberg tables stored in Amazon S3 and cataloged in remote catalogs using AWS analytics engines.\n  With catalog federation, you can federate to remote Iceberg catalogs and query remote Iceberg tables using your preferred AWS analytics engines, without moving or copying tables. It synchronizes metadata real-time across AWS Glue Data Catalog and remote catalogs when data teams query remote tables, which means that query results are always completely up-to-date. You can now choose the best price-performance for your workloads when analyzing remote Iceberg tables using your preferred AWS analytics engines, while maintaining consistent security controls when discovering or querying data. Catalog federation is supported by a wide variety of analytics engines, including Amazon Redshift, Amazon EMR, Amazon Athena, AWS Glue, third-party engines like Apache Spark, and Amazon SageMaker with the serverless notebooks.\n  Catalog federation uses AWS Lake Formation for access controls, allowing you to use fine-grained access controls, cross-account sharing, and trusted identity propagation when sharing remote catalog tables with other data consumers. Catalog federation integrates with catalog implementations that support the Iceberg REST specifications.\n  Catalog federation is available in Lake Formation console and using AWS Glue and Lake Formation SDKs and APIs. This feature is generally available in all AWS commercial regions where AWS Glue and Lake Formation are available. With just a few clicks in the console, you can federate to remote catalogs, discover its databases and tables, grant permissions to access table data, and query remote Iceberg tables using AWS analytics engines. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-catalog-federation-remote-apache-iceberg-catalogs",
+      "id": "aws-news-5caa4bd88af7",
+      "title": "Amazon Quick Suite Embedded Chat is now available",
+      "description": "Today, AWS announces the general availability of Amazon Quick Suite Embedded Chat, enabling you to embed Quick Suite's conversational AI, which combines structured data and unstructured knowledge in a single conversation - directly into your applications, eliminating the need to build conversational interfaces, orchestration logic, or data access layers from scratch.\n \nQuick Suite Embedded Chat solves a fundamental problem: users want answers where they work, not in another tool. Whether in a CRM, support console, or analytics portal, they need instant, contextual responses. Most conversational tools excel at either structured data or documents, analytics or knowledge bases, answering questions or performing actions—rarely all of the above. Quick Suite closes this gap. Now, users can reference a KPI, pull details from a file, check customer feedback, and trigger actions in one continuous conversation without leaving the embedded chat.\n  Embedded Chat brings this unified experience into your applications with simple integration, either through 1-click embedding or through API-based iframes for registered users with your existing authentication. You can connect your Agentic Chat to your data through connectors to search SharePoint, websites, send Slack messages, or create Jira tasks and customize the Agent with your brand colors, communication style, and personalized greetings. Security always stays under your control as you choose what the agent accesses and explicitly scope all actions.\n  Quick Suite Embedded Chat is available the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), and Europe (Ireland), and we'll expand availability to additional AWS Regions over the coming months. There is no additional cost for Quick Suite Embedded Chat. Existing Quick Suite pricing is available here.\n  To learn more, see Embedding Amazon Quick Suite launch blog. To get started with Amazon Quick Suite, visit the Amazon Quick Suite product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-quick-suite-embedded-chat",
       "pubDate": "2025-11-24T15:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "sagemaker",
-        "s3",
-        "emr",
-        "redshift",
-        "glue",
-        "athena"
+        "amazon q",
+        "personalize"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "personalize",
+        "launch",
+        "ga",
+        "now-available",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ef2f09b21b66",
+      "title": "Amazon MSK Replicator is now available in five additional AWS Regions",
+      "description": "You can now use Amazon MSK Replicator to replicate streaming data across Amazon Managed Streaming for Apache Kafka (Amazon MSK) clusters in five additional AWS Regions: Asia Pacific (Thailand), Mexico (Central), Asia Pacific (Taipei), Canada West (Calgary), Europe (Spain).\n  MSK Replicator is a feature of Amazon MSK that enables you to reliably replicate data across Amazon MSK clusters in different or the same AWS Region(s) in a few clicks. With MSK Replicator, you can easily build regionally resilient streaming applications for increased availability and business continuity. MSK Replicator provides automatic asynchronous replication across MSK clusters, eliminating the need to write custom code, manage infrastructure, or setup cross-region networking. MSK Replicator automatically scales the underlying resources so that you can replicate data on-demand without having to monitor or scale capacity. MSK Replicator also replicates the necessary Kafka metadata including topic configurations, Access Control Lists (ACLs), and consumer group offsets. If an unexpected event occurs in a region, you can failover to the other AWS Region and seamlessly resume processing.\n  You can get started with MSK Replicator from the Amazon MSK console or the Amazon CLI. To learn more, visit the MSK Replicator product page, pricing page, and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-msk-replicator-additional-aws-regions",
+      "pubDate": "2025-11-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kafka",
+        "msk"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "sagemaker",
-        "s3",
-        "emr",
-        "redshift",
-        "glue",
-        "athena",
-        "generally-available",
+        "kafka",
+        "msk",
         "ga",
-        "support"
+        "now-available"
       ]
     },
     {
@@ -1612,27 +1657,6 @@
       ]
     },
     {
-      "id": "aws-news-ef2f09b21b66",
-      "title": "Amazon MSK Replicator is now available in five additional AWS Regions",
-      "description": "You can now use Amazon MSK Replicator to replicate streaming data across Amazon Managed Streaming for Apache Kafka (Amazon MSK) clusters in five additional AWS Regions: Asia Pacific (Thailand), Mexico (Central), Asia Pacific (Taipei), Canada West (Calgary), Europe (Spain).\n  MSK Replicator is a feature of Amazon MSK that enables you to reliably replicate data across Amazon MSK clusters in different or the same AWS Region(s) in a few clicks. With MSK Replicator, you can easily build regionally resilient streaming applications for increased availability and business continuity. MSK Replicator provides automatic asynchronous replication across MSK clusters, eliminating the need to write custom code, manage infrastructure, or setup cross-region networking. MSK Replicator automatically scales the underlying resources so that you can replicate data on-demand without having to monitor or scale capacity. MSK Replicator also replicates the necessary Kafka metadata including topic configurations, Access Control Lists (ACLs), and consumer group offsets. If an unexpected event occurs in a region, you can failover to the other AWS Region and seamlessly resume processing.\n  You can get started with MSK Replicator from the Amazon MSK console or the Amazon CLI. To learn more, visit the MSK Replicator product page, pricing page, and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-msk-replicator-additional-aws-regions",
-      "pubDate": "2025-11-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-5d462e79f71b",
       "title": "Claude Opus 4.5 now available in Amazon Bedrock",
       "description": "Customers can now use Claude Opus 4.5 in Amazon Bedrock, a fully managed service that offers a choice of high-performing foundation models from leading AI companies. Opus 4.5 is Anthropic's newest model, setting new standards across coding, agentic workflows, computer use, and office tasks while making Opus-level intelligence accessible at one-third the cost.\n  Opus 4.5 excels at professional software engineering tasks, achieving state-of-the-art performance on SWE-bench. The model handles ambiguity, reasons about tradeoffs and can figure out fixes for bugs that require reasoning across multiple systems. It can help transform multi-day team development projects into hours-long tasks with improved multilingual coding capabilities. This generation of Claude spans the full development lifecycle: Opus 4.5 for production code and lead agents, Sonnet 4.5 for rapid iteration and scaled user experiences, Haiku 4.5 for sub-agents and free-tier products.\n  Beyond coding, the model powers agents that produce documents, spreadsheets, and presentations with consistency, professional polish, and domain awareness, making it ideal for finance and other precision-critical verticals. As Anthropic's best vision model yet, it unlocks workflows that depend on complex visual interpretation and multi-step navigation. Through the Amazon Bedrock API, Opus 4.5 introduces two new capabilities: tool search and tool use examples. Together, these updates enable Claude to navigate large tool libraries and accurately execute complex tasks. A new effort parameter, available in beta, lets you control how much effort Claude allocates across thinking, tool calls, and responses to balance performance with latency, and cost.\n  Claude Opus 4.5 is now available in Amazon Bedrock via global cross region inference in multiple locations. For the full list of available regions, refer to the documentation. To get started with the model in Amazon Bedrock, read the launch blog or visit the Amazon Bedrock console.",
@@ -1659,26 +1683,22 @@
       ]
     },
     {
-      "id": "aws-news-5caa4bd88af7",
-      "title": "Amazon Quick Suite Embedded Chat is now available",
-      "description": "Today, AWS announces the general availability of Amazon Quick Suite Embedded Chat, enabling you to embed Quick Suite's conversational AI, which combines structured data and unstructured knowledge in a single conversation - directly into your applications, eliminating the need to build conversational interfaces, orchestration logic, or data access layers from scratch.\n \nQuick Suite Embedded Chat solves a fundamental problem: users want answers where they work, not in another tool. Whether in a CRM, support console, or analytics portal, they need instant, contextual responses. Most conversational tools excel at either structured data or documents, analytics or knowledge bases, answering questions or performing actions—rarely all of the above. Quick Suite closes this gap. Now, users can reference a KPI, pull details from a file, check customer feedback, and trigger actions in one continuous conversation without leaving the embedded chat.\n  Embedded Chat brings this unified experience into your applications with simple integration, either through 1-click embedding or through API-based iframes for registered users with your existing authentication. You can connect your Agentic Chat to your data through connectors to search SharePoint, websites, send Slack messages, or create Jira tasks and customize the Agent with your brand colors, communication style, and personalized greetings. Security always stays under your control as you choose what the agent accesses and explicitly scope all actions.\n  Quick Suite Embedded Chat is available the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), and Europe (Ireland), and we'll expand availability to additional AWS Regions over the coming months. There is no additional cost for Quick Suite Embedded Chat. Existing Quick Suite pricing is available here.\n  To learn more, see Embedding Amazon Quick Suite launch blog. To get started with Amazon Quick Suite, visit the Amazon Quick Suite product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-quick-suite-embedded-chat",
-      "pubDate": "2025-11-24T15:00:00.000Z",
+      "id": "aws-news-b33c849d838a",
+      "title": "Amazon Aurora PostgreSQL introduces dynamic data masking",
+      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports dynamic data masking through the new pg_columnmask extension, allowing you to simplify the protection of sensitive data in your database. pg_columnmask extends Aurora's security capabilities by enabling column-level protection that complements PostgreSQL's native row-level security and column level grants. Using pg_columnmask, you can control access to sensitive data through SQL-based masking policies and define how data appears to users at query time based on their roles, helping you comply with data privacy regulations like GDPR, HIPAA, and PCI DSS.\n \nWith pg_columnmask, you can create flexible masking policies using built-in or user-defined functions. You can completely hide information, replace partial values with wildcards, or define custom masking approaches. Further, you can apply multiple masking policies to a single column and control their precedence using weights. pg_columnmask helps protect data in complex queries with WHERE, JOIN, ORDER BY, or GROUP BY clauses. Data is masked at the database level during query processing, leaving stored data unmodified.\n \npg_columnmask is available for Aurora PostgreSQL version 16.10 and higher, and 17.6 and higher in all AWS Regions where Aurora PostgreSQL is available. To learn more, review our blog post and visit technical documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-postgresql-dynamic-data-masking",
+      "pubDate": "2025-11-24T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "amazon q",
-        "personalize"
+        "lex",
+        "rds"
       ],
       "categories": [
-        "generative-ai"
+        "ai-safety"
       ],
       "tags": [
-        "amazon q",
-        "personalize",
-        "launch",
-        "ga",
-        "now-available",
-        "integration",
+        "lex",
+        "rds",
         "support"
       ]
     },
@@ -1712,49 +1732,6 @@
       ]
     },
     {
-      "id": "aws-news-b33c849d838a",
-      "title": "Amazon Aurora PostgreSQL introduces dynamic data masking",
-      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports dynamic data masking through the new pg_columnmask extension, allowing you to simplify the protection of sensitive data in your database. pg_columnmask extends Aurora's security capabilities by enabling column-level protection that complements PostgreSQL's native row-level security and column level grants. Using pg_columnmask, you can control access to sensitive data through SQL-based masking policies and define how data appears to users at query time based on their roles, helping you comply with data privacy regulations like GDPR, HIPAA, and PCI DSS.\n \nWith pg_columnmask, you can create flexible masking policies using built-in or user-defined functions. You can completely hide information, replace partial values with wildcards, or define custom masking approaches. Further, you can apply multiple masking policies to a single column and control their precedence using weights. pg_columnmask helps protect data in complex queries with WHERE, JOIN, ORDER BY, or GROUP BY clauses. Data is masked at the database level during query processing, leaving stored data unmodified.\n \npg_columnmask is available for Aurora PostgreSQL version 16.10 and higher, and 17.6 and higher in all AWS Regions where Aurora PostgreSQL is available. To learn more, review our blog post and visit technical documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-postgresql-dynamic-data-masking",
-      "pubDate": "2025-11-24T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-97ea49be4b86",
-      "title": "Amazon SageMaker HyperPod now supports NVIDIA Multi-Instance GPU (MIG) for generative AI tasks",
-      "description": "Amazon SageMaker HyperPod now supports NVIDIA Multi-Instance GPU (MIG) technology, enabling administrators to partition a single GPU into multiple isolated GPUs. This capability allows administrators to maximize resource utilization by running diverse, small generative AI (GenAI) tasks simultaneously on GPU partitions while maintaining performance and task isolation.\n  Administrators can choose either the easy-to-use configuration setup on the SageMaker HyperPod console or a custom setup approach to enable fine-grained, hardware-isolated resources for specific task requirements that don't require full GPU capacity. They can also allocate compute quota to ensure fair and efficient distribution of GPU partitions across teams. With real-time performance metrics and resource utilization monitoring dashboard across GPU partitions, administrators gain visibility to optimize resource allocation. Data scientists can now accelerate time-to-market by scheduling lightweight inference tasks and running interactive notebooks in parallel on GPU partitions, eliminating wait times for full GPU availability.\n  This capability is currently available for Amazon SageMaker HyperPod clusters using the EKS orchestrator across the following AWS Regions: US West (Oregon), US East (N.Virginia), US East (Ohio), US West (N. California), Canada (Central), South America (Sao Paulo), Europe (Stockholm), Europe (Spain), Europe (Ireland), Europe (Frankfurt), Europe (London), Asia Pacific (Mumbai), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Tokyo), Asia Pacific (Sydney), Asia Pacific (Seoul), Asia Pacific (Singapore).\n  To learn more, visit SageMaker HyperPod webpage, and SageMaker HyperPod documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/sagemaker-hyperpod-nvidia-multi-instance-gpu/",
-      "pubDate": "2025-11-24T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-dcf28b462b4d",
       "title": "Amazon SageMaker HyperPod now supports Spot Instances",
       "description": "Amazon SageMaker HyperPod now supports Spot Instances, enabling customers to reduce GPU compute costs by up to 90% compared to on-demand instances on HyperPod . As AI workloads scale, optimizing infrastructure costs becomes increasingly critical. SageMaker HyperPod's Spot integration addresses this by allowing customers to automatically leverage spare EC2 capacity at significant discounts, while providing the managed AI experience customers enjoy on HyperPod. \n \nWith Spot Instances, organizations can run fault-tolerant workloads cost-effectively at scale. You can combine Spot with on-demand instances to balance cost optimization with guaranteed availability. The feature is available on HyperPod EKS clusters and integrates with Karpenter for intelligent auto-scaling, automatically discovering available Spot capacity and handling instance interruptions.\n \nYou can enable Spot Instances when creating instance groups through the CreateCluster API or AWS Console. The feature supports all instance types available on HyperPod, including CPUs and GPUs. Capacity availability depends on supply from EC2 and varies by region and instance type. Spot instance support is available in all regions where SageMaker HyperPod is currently available. To learn more, please refer to the documentation.",
@@ -1779,6 +1756,29 @@
         "organizations",
         "ga",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-97ea49be4b86",
+      "title": "Amazon SageMaker HyperPod now supports NVIDIA Multi-Instance GPU (MIG) for generative AI tasks",
+      "description": "Amazon SageMaker HyperPod now supports NVIDIA Multi-Instance GPU (MIG) technology, enabling administrators to partition a single GPU into multiple isolated GPUs. This capability allows administrators to maximize resource utilization by running diverse, small generative AI (GenAI) tasks simultaneously on GPU partitions while maintaining performance and task isolation.\n  Administrators can choose either the easy-to-use configuration setup on the SageMaker HyperPod console or a custom setup approach to enable fine-grained, hardware-isolated resources for specific task requirements that don't require full GPU capacity. They can also allocate compute quota to ensure fair and efficient distribution of GPU partitions across teams. With real-time performance metrics and resource utilization monitoring dashboard across GPU partitions, administrators gain visibility to optimize resource allocation. Data scientists can now accelerate time-to-market by scheduling lightweight inference tasks and running interactive notebooks in parallel on GPU partitions, eliminating wait times for full GPU availability.\n  This capability is currently available for Amazon SageMaker HyperPod clusters using the EKS orchestrator across the following AWS Regions: US West (Oregon), US East (N.Virginia), US East (Ohio), US West (N. California), Canada (Central), South America (Sao Paulo), Europe (Stockholm), Europe (Spain), Europe (Ireland), Europe (Frankfurt), Europe (London), Asia Pacific (Mumbai), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Tokyo), Asia Pacific (Sydney), Asia Pacific (Seoul), Asia Pacific (Singapore).\n  To learn more, visit SageMaker HyperPod webpage, and SageMaker HyperPod documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/sagemaker-hyperpod-nvidia-multi-instance-gpu/",
+      "pubDate": "2025-11-24T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "ga",
         "support"
       ]
     },
@@ -2103,6 +2103,26 @@
       ]
     },
     {
+      "id": "aws-news-098aadb29a7c",
+      "title": "AWS WAF announces Web Bot Auth support",
+      "description": "Today, we're excited to announce the addition of Web Bot Auth (WBA) support in AWS WAF, providing a secure and standardized way to authenticate legitimate AI agents and automated tools accessing web applications.\n \nWeb Bot Auth is an authentication method that leverages cryptographic signatures in HTTP messages to verify that a request comes from an automated bot. Web Bot Auth is used as a verification method for verified bots and signed agents. It relies on two active IETF drafts: a directory draft allowing the crawler to share their public keys, and a protocol draft defining how these keys should be used to attach crawler's identity to HTTP requests.\n \nAWS WAF now automatically allows verified AI agent traffic. Verified WBA bots will now be automatically allowed by default. Previously, Category AI blocked unverified bots; this behavior is now refined to respect WBA verification. To learn more, please review the documentation. There is no additional cost for using this feature, however standard AWS WAF charges still apply. For details, visit the AWS WAF Pricing page. \n \nThis feature is currently available only for AWS WAF customers protecting Amazon CloudFront distributions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-waf-web-bot-auth-support",
+      "pubDate": "2025-11-21T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudfront",
+        "waf"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudfront",
+        "waf",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-60019f8c9235",
       "title": "Second-generation AWS Outposts racks now supported in the AWS Asia Pacific (Tokyo) Region",
       "description": "Second-generation AWS Outposts racks are now supported in the AWS Asia Pacific (Tokyo) Region. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Japan can now order their Outposts racks connected to this new supported region, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
@@ -2139,26 +2159,6 @@
         "generative-ai"
       ],
       "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-098aadb29a7c",
-      "title": "AWS WAF announces Web Bot Auth support",
-      "description": "Today, we're excited to announce the addition of Web Bot Auth (WBA) support in AWS WAF, providing a secure and standardized way to authenticate legitimate AI agents and automated tools accessing web applications.\n \nWeb Bot Auth is an authentication method that leverages cryptographic signatures in HTTP messages to verify that a request comes from an automated bot. Web Bot Auth is used as a verification method for verified bots and signed agents. It relies on two active IETF drafts: a directory draft allowing the crawler to share their public keys, and a protocol draft defining how these keys should be used to attach crawler's identity to HTTP requests.\n \nAWS WAF now automatically allows verified AI agent traffic. Verified WBA bots will now be automatically allowed by default. Previously, Category AI blocked unverified bots; this behavior is now refined to respect WBA verification. To learn more, please review the documentation. There is no additional cost for using this feature, however standard AWS WAF charges still apply. For details, visit the AWS WAF Pricing page. \n \nThis feature is currently available only for AWS WAF customers protecting Amazon CloudFront distributions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-waf-web-bot-auth-support",
-      "pubDate": "2025-11-21T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudfront",
-        "waf"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudfront",
-        "waf",
         "support"
       ]
     },
@@ -2351,6 +2351,23 @@
       ]
     },
     {
+      "id": "aws-news-a373609adb4b",
+      "title": "AWS License Manager introduces license asset groups for centralized software asset management",
+      "description": "AWS License Manager now provides centralized software asset management across AWS regions and accounts in an organization, reducing compliance risks and streamlines license tracking through automated license asset groups. Customers can now track license expiry dates, streamline audit responses, and make data-driven renewal decisions with a product-centric view of their commercial software portfolio.\n  With this launch, customers no longer need to manually track licenses across multiple regions and accounts in their organization. Now with license asset groups, customers can gain organization-wide visibility of their commercial software usage with customizable grouping and automated reporting. The new feature is available in all commercial regions where AWS License Manager is available.\n  To get started, visit the Licenses section of the AWS License Manager console, and the AWS License Manager User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-license-manager-license-asset-groups",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "new-feature"
+      ]
+    },
+    {
       "id": "aws-news-8ac2562298da",
       "title": "AWS introduces new VPC Encryption Controls and further raises the bar on data encryption",
       "description": "AWS launches VPC Encryption Controls to make it easy to audit and enforce encryption in transit within and across Amazon Virtual Private Clouds (VPC), and demonstrate compliance with encryption standards. You can turn it on your existing VPCs to monitor encryption status of traffic flows and identify VPC resources that are unintentionally allowing plaintext traffic. This feature also makes it easy to enforce encryption across different network paths by automatically (and transparently) turning on hardware-based AES-256 encryption on traffic between multiple VPC resources including AWS Fargate, Network Load Balancers, and Application Load Balancers.\n  To meet stringent compliance standards like HIPAA and PCI DSS, customers rely on both application layer encryption and the hardware-based encryption that AWS offers across different network paths. AWS provides hardware-based AES-256 encryption transparently between modern EC2 Nitro instances. AWS also encrypts all network traffic between AWS data centers in and across Availability Zones, and AWS Regions before the traffic leaves our secure facilities. All inter-region traffic that uses VPC Peering, Transit Gateway Peering, or AWS Cloud WAN receives an additional layer of transparent encryption before leaving AWS data centers. Prior to this release, customers had to track and confirm encryption across all network paths. With VPC Encryption Controls, customers can now monitor, enforce and demonstrate encryption within and across Virtual Private Clouds (VPCs) in just a few clicks. Your information security team can turn it on centrally to maintain a secure and compliant environment, and generate audit logs for compliance and reporting.\n  VPC Encryption Controls is now available in the following AWS Commercial regions: US East (N. Virginia), US East (Ohio), US West (Oregon), US West (N. California), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Europe (Milan), Europe (Zurich), Europe (Stockholm), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), Asia Pacific (Melbourne), Asia Pacific (Hong Kong), Asia Pacific (Osaka), Asia Pacific (Mumbai), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Canada West (Calgary), Canada (Central), Middle East (UAE), Middle East (Bahrain), Africa (Cape Town) and South America (São Paulo). To learn more about this feature and its use cases, please see our documentation.",
@@ -2398,23 +2415,6 @@
       ]
     },
     {
-      "id": "aws-news-a373609adb4b",
-      "title": "AWS License Manager introduces license asset groups for centralized software asset management",
-      "description": "AWS License Manager now provides centralized software asset management across AWS regions and accounts in an organization, reducing compliance risks and streamlines license tracking through automated license asset groups. Customers can now track license expiry dates, streamline audit responses, and make data-driven renewal decisions with a product-centric view of their commercial software portfolio.\n  With this launch, customers no longer need to manually track licenses across multiple regions and accounts in their organization. Now with license asset groups, customers can gain organization-wide visibility of their commercial software usage with customizable grouping and automated reporting. The new feature is available in all commercial regions where AWS License Manager is available.\n  To get started, visit the Licenses section of the AWS License Manager console, and the AWS License Manager User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-license-manager-license-asset-groups",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "new-feature"
-      ]
-    },
-    {
       "id": "aws-news-0539e3184387",
       "title": "Amazon EKS add-ons now supports the AWS Secrets Store CSI Driver provider",
       "description": "Today, AWS announces the general availability of the AWS Secrets Store CSI Driver provider EKS add-on. This new integration allows customers to retrieve secrets from AWS Secrets Manager and parameters from AWS Systems Manager Parameter Store and mount them as files on their Kubernetes clusters running on Amazon Elastic Kubernetes Service (Amazon EKS). The add-on installs and manages the AWS provider for the Secrets Store CSI Driver.\n  Now, with the new Amazon EKS add-on, customers can quickly and easily set up new and existing clusters using automation to leverage AWS Secrets Manager and AWS Systems Manager Parameter Store, enhancing security and simplifying secrets management. Amazon EKS add-ons are curated extensions that automate the installation, configuration, and lifecycle management of operational software for Kubernetes clusters, simplifying the process of maintaining cluster functionality and security.\n  Customers rely on AWS Secrets Manager to securely store and manage secrets such as database credentials and API keys throughout their lifecycle. To learn more about Secrets Manager, visit the documentation. For a list of regions where Secrets Manager is available, see the AWS Region table. To get started with Secrets Manager, visit the Secrets Manager home page.\n  This new Amazon EKS add-on is available in all AWS commercial and AWS GovCloud (US) Regions.\n To get started, see the following resources:\n  \n \n \nAmazon EKS add-ons user guide\n \n \nAWS Secrets Manager user guide",
@@ -2432,6 +2432,27 @@
         "eks",
         "secrets manager",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b7916baad19a",
+      "title": "AWS Control Tower now supports seven new compliance frameworks and 279 additional AWS Config rules",
+      "description": "Today, AWS Control Tower announces support for an additional 279 managed Config rules in Control Catalog for various use cases such as security, cost, durability, and operations. With this launch, you can now search, discover, enable and manage these additional rules directly from AWS Control Tower and govern more use cases for your multi-account environment. AWS Control Tower also supports seven new compliance frameworks in Control Catalog. In addition to existing frameworks, most controls are now mapped to ACSC-Essential-Eight-Nov-2022, ACSC-ISM-02-Mar-2023, AWS-WAF-v10, CCCS-Medium-Cloud-Control-May-2019, CIS-AWS-Benchmark-v1.2, CIS-AWS-Benchmark-v1.3, CIS-v7.1\n  To get started, go to the Control Catalog and search for controls with the implementation filter AWS Config to view all AWS Config rules in the Catalog. You can enable relevant rules directly using the AWS Control Tower console or the ListControls, GetControl and EnableControl APIs. We've also enhanced control relationship mapping, helping you understand how different controls work together. The updated ListControlMappings API now reveals important relationships between controls - showing which ones complement each other, are alternatives, or are mutually exclusive. For instance, you can now easily identify when a Config Rule (detection) and a Service Control Policy (prevention) can work together for comprehensive security coverage.\n  These new features are available in AWS Regions where AWS Control Tower is available, including AWS GovCloud (US). Reference the list of supported regions for each Config rule to see where it can be enabled. To learn more, visit the AWS Control Tower User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-new-compliance-frameworks-additional-aws-config-rules",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "waf"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "waf",
+        "launch",
+        "new-feature",
+        "update",
         "support"
       ]
     },
@@ -2463,27 +2484,6 @@
       ]
     },
     {
-      "id": "aws-news-b7916baad19a",
-      "title": "AWS Control Tower now supports seven new compliance frameworks and 279 additional AWS Config rules",
-      "description": "Today, AWS Control Tower announces support for an additional 279 managed Config rules in Control Catalog for various use cases such as security, cost, durability, and operations. With this launch, you can now search, discover, enable and manage these additional rules directly from AWS Control Tower and govern more use cases for your multi-account environment. AWS Control Tower also supports seven new compliance frameworks in Control Catalog. In addition to existing frameworks, most controls are now mapped to ACSC-Essential-Eight-Nov-2022, ACSC-ISM-02-Mar-2023, AWS-WAF-v10, CCCS-Medium-Cloud-Control-May-2019, CIS-AWS-Benchmark-v1.2, CIS-AWS-Benchmark-v1.3, CIS-v7.1\n  To get started, go to the Control Catalog and search for controls with the implementation filter AWS Config to view all AWS Config rules in the Catalog. You can enable relevant rules directly using the AWS Control Tower console or the ListControls, GetControl and EnableControl APIs. We've also enhanced control relationship mapping, helping you understand how different controls work together. The updated ListControlMappings API now reveals important relationships between controls - showing which ones complement each other, are alternatives, or are mutually exclusive. For instance, you can now easily identify when a Config Rule (detection) and a Service Control Policy (prevention) can work together for comprehensive security coverage.\n  These new features are available in AWS Regions where AWS Control Tower is available, including AWS GovCloud (US). Reference the list of supported regions for each Config rule to see where it can be enabled. To learn more, visit the AWS Control Tower User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-control-tower-new-compliance-frameworks-additional-aws-config-rules",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "waf"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "waf",
-        "launch",
-        "new-feature",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b5fe1dd88b80",
       "title": "Amazon OpenSearch Service OR2 and OM2 now available in additional Regions",
       "description": "Amazon OpenSearch Service, expands availability of OR2 and OM2, OpenSearch Optimized Instance family to 11 additional regions. The OR2 instance delivers up to 26% higher indexing throughput compared to previous OR1 instances and 70% over R7g instances. The OM2 instance delivers up to 15% higher indexing throughput compared to OR1 instances and 66% over M7g instances in internal benchmarks.\n \nThe OpenSearch Optimized instances, leveraging best-in-class cloud technologies like Amazon S3, to provide high durability, and improved price-performance for higher indexing throughput better for indexing heavy workload. Each OpenSearch Optimized instance is provisioned with compute, local instance storage for caching, and remote Amazon S3-based managed storage. OR2 and OM2 offers pay-as-you-go pricing and reserved instances, with a simple hourly rate for the instance, local instance storage, as well as the managed storage provisioned. OR2 instances come in sizes ‘medium’ through ‘16xlarge’, and offer compute, memory, and storage flexibility. OM2 instances come in sizes ‘large’ through ‘16xlarge’ Please refer to the Amazon OpenSearch Service pricing page for pricing details.\n  OR2 instance family is now available on Amazon OpenSearch Service across 11 additional regions globally: US West (N. California), Canada (Central),  Asia Pacific (Hong Kong, Jakarta , Malaysia, Melbourne, Osaka , Seoul, Singapore), Europe (London), and South America (Sao Paulo). \n  OM2 instance family is now available on Amazon OpenSearch Service across 14 additional regions globally: US West (N. California), Canada (Central), Asia Pacific (Hong Kong, Hyderabad, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokyo), Europe ( Paris, Spain), Middle East (Bahrain), South America (Sao Paulo).",
@@ -2506,6 +2506,21 @@
         "opensearch service",
         "ga",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-138216fa99de",
+      "title": "Amazon ECR now supports managed container image signing",
+      "description": "Amazon ECR now supports managed container image signing to enhance your security posture and eliminate the operational overhead of setting up signing. Container image signing allows you to verify that images are from trusted sources. With managed signing, ECR simplifies setting up container image signing to just a few clicks in the ECR Console or a single API call.\n  To get started, create a signing rule with an AWS Signer signing profile that specifies parameters such as signature validity period, and which repositories ECR should sign images for. Once configured, ECR automatically signs images as they are pushed using the identity of the entity pushing the image. ECR leverages AWS Signer for signing operations, which handles key material and certificate lifecycle management including generation, secure storage, and rotation. All signing operations are logged through CloudTrail for full auditability.\n  ECR managed signing is available in all AWS Regions where AWS Signer is available. To learn more, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecr-managed-container-image-signing",
+      "pubDate": "2025-11-21T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "support"
       ]
     },
     {
@@ -2536,18 +2551,20 @@
       ]
     },
     {
-      "id": "aws-news-138216fa99de",
-      "title": "Amazon ECR now supports managed container image signing",
-      "description": "Amazon ECR now supports managed container image signing to enhance your security posture and eliminate the operational overhead of setting up signing. Container image signing allows you to verify that images are from trusted sources. With managed signing, ECR simplifies setting up container image signing to just a few clicks in the ECR Console or a single API call.\n  To get started, create a signing rule with an AWS Signer signing profile that specifies parameters such as signature validity period, and which repositories ECR should sign images for. Once configured, ECR automatically signs images as they are pushed using the identity of the entity pushing the image. ECR leverages AWS Signer for signing operations, which handles key material and certificate lifecycle management including generation, secure storage, and rotation. All signing operations are logged through CloudTrail for full auditability.\n  ECR managed signing is available in all AWS Regions where AWS Signer is available. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-ecr-managed-container-image-signing",
+      "id": "aws-news-d5b5e2447564",
+      "title": "Announcing AWS Compute Optimizer automation rules",
+      "description": "Today, we are introducing automation rules, a new feature in AWS Compute Optimizer that enables you to optimize Amazon Elastic Block Store (EBS) volumes at scale. With automation rules, you can streamline the process of cleaning up unattached EBS volumes and upgrading volumes to the latest-generation volume types, saving cost and improving performance across your cloud infrastructure.\n  Automation rules let you automatically apply optimization recommendations on a recurring schedule when they match your criteria. You can set criteria like AWS Region to target specific geographies and Resource Tags to distinguish between production and development workloads. Configure rules to run daily, weekly, or monthly, and AWS Compute Optimizer will continuously evaluate new recommendations against your criteria. A new dashboard allows you to summarize automation events over time, examine detailed step history, and estimate savings achieved. If you need to reverse an action, you can do so directly from the same dashboard.\n  AWS Compute Optimizer automation rules are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To get started, navigate to the new Automation section in the AWS Compute Optimizer console, visit the AWS Compute Optimizer user guide documentation, or read the announcement blog to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-automation-rules",
       "pubDate": "2025-11-21T15:00:00.000Z",
       "source": "whatsNew",
       "services": [],
       "categories": [
-        "generative-ai"
+        "ai-services"
       ],
       "tags": [
-        "support"
+        "ga",
+        "new-feature",
+        "announcement"
       ]
     },
     {
@@ -2572,23 +2589,6 @@
         "ga",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-d5b5e2447564",
-      "title": "Announcing AWS Compute Optimizer automation rules",
-      "description": "Today, we are introducing automation rules, a new feature in AWS Compute Optimizer that enables you to optimize Amazon Elastic Block Store (EBS) volumes at scale. With automation rules, you can streamline the process of cleaning up unattached EBS volumes and upgrading volumes to the latest-generation volume types, saving cost and improving performance across your cloud infrastructure.\n  Automation rules let you automatically apply optimization recommendations on a recurring schedule when they match your criteria. You can set criteria like AWS Region to target specific geographies and Resource Tags to distinguish between production and development workloads. Configure rules to run daily, weekly, or monthly, and AWS Compute Optimizer will continuously evaluate new recommendations against your criteria. A new dashboard allows you to summarize automation events over time, examine detailed step history, and estimate savings achieved. If you need to reverse an action, you can do so directly from the same dashboard.\n  AWS Compute Optimizer automation rules are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To get started, navigate to the new Automation section in the AWS Compute Optimizer console, visit the AWS Compute Optimizer user guide documentation, or read the announcement blog to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-compute-optimizer-automation-rules",
-      "pubDate": "2025-11-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "ga",
-        "new-feature",
-        "announcement"
       ]
     },
     {
@@ -2633,6 +2633,28 @@
         "lex",
         "athena",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9a9239214a06",
+      "title": "Amazon SageMaker HyperPod now supports running IDEs and Notebooks to accelerate AI development",
+      "description": "Amazon SageMaker HyperPod now supports IDEs and Notebooks, enabling AI developers to run JupyterLab, Code Editor, or connect local IDEs to run their interactive AI workloads directly on HyperPod clusters.\n  The release allows AI developers to run IDEs and notebooks on the same persistent HyperPod EKS clusters used for training and inference. Developers can leverage HyperPod's scalable GPU capacity with familiar tools like HyperPod CLI, while sharing data across IDEs and training jobs through mounted file systems such as FSx and EFS. The solution supports running multiple IDEs on the same GPU-instance, as well as on a single-GPU, by leveraging Multi-Instance GPU (MIG) support on HyperPod.\n  Administrators can maximize CPU/GPU investments through unified governance across IDEs, training, and inference workloads using HyperPod Task Governance. HyperPod Observability provides comprehensive usage metrics including CPU, GPU, and memory consumption, enabling administrators to optimize cluster utilization and manage costs effectively.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is currently available, excluding China and GovCloud (US) regions. To learn more, visit our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-hyperpod-ides-notebooks-ai/",
+      "pubDate": "2025-11-21T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
         "support"
       ]
     },
@@ -2871,29 +2893,6 @@
       ],
       "tags": [
         "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c658c6a75caf",
-      "title": "Amazon API Gateway REST APIs now supports private integration with Application Load Balancer",
-      "description": "Amazon API Gateway REST APIs now support direct private integration with Application Load Balancer (ALB), enabling inter-VPC connectivity to internal ALBs. This enhancement extends API Gateways existing VPC connectivity, providing you with more flexible and efficient architecture choices for your REST API implementations.\n  This direct ALB integration delivers multiple advantages: reduced latency by eliminating the additional network hop previously required through Network Load Balancer, lower infrastructure costs through simplified architecture, and enhanced Layer 7 capabilities including HTTP/HTTPS health checks, advanced request-based routing, and native container service integration. You can still use API Gateway's integration with Network Load Balancers for layer-4 connectivity.\n  Amazon API Gateway private integration with ALB is available in all AWS GovCloud (US) regions and the following AWS commercial regions US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Milan), Europe (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Israel (Tel Aviv), Middle East (Bahrain), Middle East (UAE), South America (São Paulo). For more information, visit the Amazon API Gateway documentation and blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/api-gateway-rest-apis-integration-load-balancer/",
-      "pubDate": "2025-11-21T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "api gateway"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "api gateway",
-        "ga",
-        "enhancement",
-        "integration",
         "support"
       ]
     },
