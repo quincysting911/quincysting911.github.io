@@ -1,8 +1,178 @@
 {
-  "lastUpdated": "2025-12-02T06:17:11.704Z",
+  "lastUpdated": "2025-12-03T06:16:40.775Z",
   "category": "ai-safety",
-  "totalItems": 39,
+  "totalItems": 35,
   "items": [
+    {
+      "id": "aws-news-32f783e29c54",
+      "title": "Announcing the Apache Spark upgrade agent for Amazon EMR",
+      "description": "AWS announces the Apache Spark upgrade agent, a new capability that accelerates Apache Spark version upgrades for Amazon EMR on EC2 and EMR Serverless. The agent converts complex upgrade processes that typically take months into projects spanning weeks through automated code analysis and transformation. Organizations invest substantial engineering resources analyzing API changes, resolving conflicts, and validating applications during Spark upgrades. The agent introduces conversational interfaces where engineers express upgrade requirements in natural language, while maintaining full control over code modifications.\n  The Apache Spark upgrade agent automatically identifies API changes and behavioral modifications across PySpark and Scala applications. Engineers can initiate upgrades directly from SageMaker Unified Studio, Kiro CLI or IDE of their choice with the help of MCP (Model Context Protocol) compatibility. During the upgrade process, the agent analyzes existing code and suggests specific changes, and engineers can review and approve before implementation. The agent validates functional correctness through data quality validations. The agent currently supports upgrades from Spark 2.4 to 3.5 and maintains data processing accuracy throughout the upgrade process.\n  The Apache Spark upgrade agent is now available in all AWS Regions where SageMaker Unified Studio is available. To start using the agent, visit SageMaker Unified Studio and select IDE Spaces or install the Kiro CLI. For detailed implementation guidance, reference documentation, and migration examples, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/apache-spark-upgrade-agent-amazon-emr",
+      "pubDate": "2025-12-02T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "ec2",
+        "emr",
+        "eks",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "ec2",
+        "emr",
+        "eks",
+        "organizations",
+        "ga",
+        "now-available",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-a835beefc96f",
+      "title": "Amazon S3 Storage Lens adds performance metrics, support for billions of prefixes, and export to S3 Tables",
+      "description": "Amazon S3 Storage Lens provides organization-wide visibility into your storage usage and activity to help optimize costs, improve performance, and strengthen data protection. Today, we are adding three new capabilities to S3 Storage Lens that give you deeper insights into your S3 storage usage and application performance: performance metrics that provide insights into how your applications interact with S3 data, analytics for billions of prefixes in your buckets, and metrics export directly to S3 Tables for easier querying and analysis.\n  We are adding three specific types of performance metrics. Access pattern metrics identify inefficient requests, including those that are too small and create unnecessary network overhead. Request origin metrics, such as cross-Region request counts, show when applications access data across regions, impacting latency and costs. Object access count metrics reveal when applications frequently read a small subset of objects that could be optimized through caching or moving to high-performance storage.\n  We are expanding the prefix analytics in S3 Storage Lens to enable analyzing billions of prefixes per bucket, whereas previously metrics were limited to the largest prefixes that met minimum size and depth thresholds. This gives you visibility into storage usage and activity across all your prefixes. Finally, we are making it possible to export metrics directly to managed S3 Tables, making them immediately available for querying with AWS analytics services like Amazon QuickSight and enabling you to join this data with other AWS service data for deeper insights.\n  To get started, enable performance metrics or expanded prefixes in your S3 Storage Lens advanced metrics dashboard configuration. These capabilities are available in all AWS Regions, except for AWS China Regions and AWS GovCloud (US) Regions. You can enable metrics export to managed S3 Tables in both free and advanced dashboard configurations in AWS Regions where S3 Tables are available. To learn more, visit the S3 Storage Lens overview page, documentation, S3 pricing page, and read the AWS News Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-s3-storage-lens-performance-metrics-prefixes-export-tables",
+      "pubDate": "2025-12-02T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "s3",
+        "quicksight"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "amazon q",
+        "s3",
+        "quicksight",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6a76b8d73350",
+      "title": "Amazon S3 Vectors is now generally available with 40 times the scale of preview",
+      "description": "Amazon S3 Vectors, the first cloud object storage with native support to store and query vectors, is now generally available. S3 Vectors delivers purpose-built, cost-optimized vector storage for AI agents, inference, Retrieval Augmented Generation (RAG), and semantic search at billion-vector scale. S3 Vectors is designed to provide the same elasticity, durability, and availability as Amazon S3 and reduces the total costs to upload, store, and query vectors by up to 90%. With general availability, you can store and query up to two billion vectors per index and elastically scale to 10,000 vector indexes per vector bucket. Infrequent queries continue to return results in under one second, with more frequent queries now resulting in latencies around 100 milliseconds or less. Your application can achieve write throughput of 1,000 vectors per second when streaming single-vector updates into your indexes, retrieve up to 100 search results per query, and store up to 50 metadata keys alongside each vector for fine-grained filtering in your queries.\n \nWith S3 Vectors you get a new bucket type—a vector bucket—that is optimized for durable, low-cost vector storage. Within vector buckets, you organize your vector data with vector indexes and get a dedicated set of APIs to store, access, and query vectors without provisioning any infrastructure. By default, S3 Vectors encrypts all vector data in a vector bucket with server-side encryption using S3-managed keys (SSE-S3) or optionally, you can use AWS Key Management Service (SSE-KMS) to set a default customer-managed key to encrypt all new vector indexes in the vector bucket. You can now also set a dedicated customer-managed key per vector index, helping you build scalable multi-tenant applications and meet regulatory and governance requirements. You can also tag vector buckets and indexes for attribute-based access control (ABAC) as well as to track and organize costs using AWS Billing and Cost Management.\n \nS3 Vectors integrates with Amazon Bedrock Knowledge Bases to reduce the cost of using large vector datasets for RAG. When creating a Knowledge Base in Amazon Bedrock or Amazon SageMaker Unified Studio, you can choose an existing Amazon S3 vector index or create a new one using the Quick Create workflow. With Amazon OpenSearch Service, you can optimize costs for hybrid search workloads by configuring OpenSearch to automatically manage vector storage in S3.\n \nS3 Vectors is now generally available in 14 AWS Regions, expanding from 5 Regions in preview. To learn more, visit the product page, S3 pricing page, documentation, and AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-s3-vectors-generally-available",
+      "pubDate": "2025-12-02T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "sagemaker",
+        "unified studio",
+        "s3 vectors",
+        "s3",
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker",
+        "unified studio",
+        "s3 vectors",
+        "s3",
+        "opensearch",
+        "opensearch service",
+        "preview",
+        "generally-available",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ff7335a08f36",
+      "title": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables",
+      "description": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables across AWS Regions and accounts. This new capability replicates your complete table structure, including all snapshots and metadata to reduce query latency and improve data accessibility for global analytics workloads.\n  S3 Tables replication automatically creates read-only replica tables in your destination table buckets, backfills them with the latest state of the source table, and continuously monitors for new updates to keep replicas in sync. Replica tables can be configured with independent snapshot retention policies and encryption keys from source tables to meet compliance and data protection requirements. You can query replica tables using Amazon SageMaker Unified Studio or any Iceberg-compatible engine including Amazon Athena, Amazon Redshift, Apache Spark, and DuckDB.\n  S3 Tables replication is now available in all AWS Regions where S3 Tables are supported. For pricing details, visit the Amazon S3 pricing page. To learn more about S3 Tables, visit the product page, documentation, and read the AWS News Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/s3-tables-automatic-replication-apache-iceberg-tables/",
+      "pubDate": "2025-12-02T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "athena",
+        "now-available",
+        "update",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-d3d4bf286e7d",
+      "title": "Amazon API Gateway adds MCP proxy support",
+      "description": "Amazon API Gateway now supports Model Context Protocol (MCP) proxy, allowing you to transform your existing REST APIs into MCP-compatible endpoints. This new capability enables organizations to make their APIs accessible to AI agents and MCP clients. Through integration with Amazon Bedrock AgentCore's Gateway service, you can securely convert your REST APIs into agent-compatible tools while enabling intelligent tool discovery through semantic search.\n  The MCP proxy capability, alongside Bedrock AgentCore Gateway services, delivers three key benefits. First, it enables REST APIs to communicate with AI agents and MCP clients through protocol translation, eliminating the need for application modifications or managing additional infrastructure. Second, it provides comprehensive security through dual authentication - verifying agent identities for inbound requests while managing secure connections to REST APIs for outbound calls. Finally, it enables AI agents to search and select the most relevant REST APIs that best match the prompt context.\n  To learn about pricing for this feature, please see the Amazon Bedrock AgentCore pricing page. Amazon API Gateway MCP proxy capability is available in the nine AWS Regions that Amazon Bedrock AgentCore is available in: Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Dublin), Europe (Frankfurt), US East (N. Virginia), US East (Ohio), and US West (Oregon). To get started, visit Amazon API Gateway documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/api-gateway-mcp-proxy-support/",
+      "pubDate": "2025-12-02T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "api gateway",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "api gateway",
+        "organizations",
+        "ga",
+        "integration",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-1f46b500a6a3",
+      "title": "Amazon CloudWatch GenAI observability now supports Amazon AgentCore Evaluations",
+      "description": "Amazon CloudWatch now enables automated quality assessment of AI agents through AgentCore Evaluations. This new capability helps developers continuously monitor and improve agent performance based on real-world interactions, allowing teams to identify and address quality issues before they impact customers.\n  AgentCore Evaluations comes with 13 pre-built evaluators covering essential quality dimensions like helpfulness, tool selection, and response accuracy, while also supporting custom model-based scoring systems. You can access unified quality metrics and agent telemetry in CloudWatch dashboards, with end-to-end tracing capabilities to correlate evaluation metrics with prompts and logs. The feature integrates seamlessly with CloudWatch's existing capabilities including Application Signals, Alarms, Sensitive Data Protection, and Logs Insights. This capability eliminates the need for teams to build and maintain custom evaluation infrastructure, accelerating the deployment of high-quality AI agents. Developers can monitor their entire agent fleet through the AgentCore section in the CloudWatch GenAI observability console.\n \nAgentCore Evaluations is now available in US East (N. Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney). To get started, visit the documentation and pricing details. Standard CloudWatch pricing applies for underlying telemetry data.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/cloudwatch-genai-observability-agentcore-evaluations/",
+      "pubDate": "2025-12-02T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "agentcore",
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "agentcore",
+        "rds",
+        "cloudwatch",
+        "now-available",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-839280c1af5b",
       "title": "AWS Transform for mainframe now supports application reimagining",
@@ -134,6 +304,21 @@
       ]
     },
     {
+      "id": "aws-news-32bed17198ba",
+      "title": "Amazon Connect now provides AI-powered case summaries",
+      "description": "Amazon Connect now provides AI-powered case summaries that give agents complete context into customer issues, reduce manual wrap-up work, and help resolve cases faster. With a single click, agents can generate a concise case summary even when the case spans multiple interactions, follow-up tasks, and teams, capturing key details such as issue background, actions taken, and next steps. Administrators can configure custom prompts and guardrails to ensure that summaries align with organizational style and preferences.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town) AWS regions. To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-ai-powered-case-summaries",
+      "pubDate": "2025-11-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
       "id": "aws-news-5eec8e966a0f",
       "title": "Amazon Connect Chat now supports in-flight data redaction and message processing",
       "description": "Amazon Connect now supports message processing that intercepts and processes chat messages before they reach any participant. This new capability enables automatic redaction of sensitive data and custom message processing, helping businesses maintain compliance and security standards while delivering personalized customer experiences.\n  The built-in sensitive data redaction can automatically detect and remove sensitive information like credit card numbers and social security numbers across multiple languages, including English, French, Portuguese, German, Italian, and Spanish variants. You can choose to redact selected or all sensitive data entities, with options to replace them with generic or entity-specific placeholders (e.g., [PII] or [NAME]). Businesses can also integrate custom processors for use cases such as language translation or profanity filtering, ensuring compliant and effective communications for their specific business needs.\n  These message processing capabilities are now available in the following regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt) Europe (London), Africa (South Africa). To learn more about Amazon Connect, visit the Amazon Connect documentation and pricing.",
@@ -154,21 +339,6 @@
         "now-available",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-32bed17198ba",
-      "title": "Amazon Connect now provides AI-powered case summaries",
-      "description": "Amazon Connect now provides AI-powered case summaries that give agents complete context into customer issues, reduce manual wrap-up work, and help resolve cases faster. With a single click, agents can generate a concise case summary even when the case spans multiple interactions, follow-up tasks, and teams, capturing key details such as issue background, actions taken, and next steps. Administrators can configure custom prompts and guardrails to ensure that summaries align with organizational style and preferences.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town) AWS regions. To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-ai-powered-case-summaries",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ga"
       ]
     },
     {
@@ -374,48 +544,6 @@
       ]
     },
     {
-      "id": "aws-news-d834d9c22356",
-      "title": "Improved AWS Health event triage",
-      "description": "AWS Health now includes two new properties in its event schema - actionability and persona - enabling customers to identify the most relevant events. These properties allow organizations to programmatically identify events requiring customer action and direct them to relevant teams. The enhanced event schema is accessible through both the AWS Health API and Health EventBridge communication channels, improving operational efficiency and team coordination.\n  AWS customers receive various operational notifications and scheduled changes, including Planned Lifecycle Events. With the new actionability property, teams can quickly distinguish between events requiring action and those shared for awareness. The persona property streamlines event routing and visibility to specific teams like security and billing, ensuring critical information reaches appropriate stakeholders. These structured properties streamline integration with existing operational tools, allowing teams to effectively identify and remediate affected resources while maintaining appropriate visibility across the organization.\n  This enhancement is available across all AWS Commercial and AWS GovCloud (US) Regions. To learn more about implementing these new properties, see the AWS Health User Guide and the API and EventBridge schema documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/improved-aws-health-event-triage",
-      "pubDate": "2025-11-26T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eventbridge",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eventbridge",
-        "organizations",
-        "ga",
-        "enhancement",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-8cc472a5e924",
-      "title": "Amazon CloudWatch now supports deletion protection for logs",
-      "description": "Amazon CloudWatch now offers configuring deletion protection on your CloudWatch log groups, helping customers safeguard their critical logging data from accidental or unintended deletion. This feature provides an additional layer of protection for logs maintaining audit trails, compliance records, and operational logs that must be preserved.\n  With deletion protection enabled, administrators can prevent unintended deletions of their most important log groups. Once enabled, log groups cannot be deleted until the protection is explicitly turned off, helping safeguard critical operational, security, and compliance data. This protection is particularly valuable for preserving audit logs and production application logs needed for troubleshooting and analysis.\n  Log group deletion protection is available in all AWS commercial Regions.\n  You can enable deletion protection during log group creation or on existing log groups using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. For more information, visit the Amazon CloudWatch Logs User Guide..",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-cloudwatch-deletion-protection-logs",
-      "pubDate": "2025-11-26T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-5f2db1e3d3fc",
       "title": "Amazon S3 Block Public Access now supports organization-level enforcement",
       "description": "Amazon S3 Block Public Access (BPA) now allows organization-level control through AWS Organizations, allowing you to standardize and enforce S3 public access settings across all accounts in your AWS organization through a single policy configuration.\n  S3 Block Public Access at the organization level uses a single configuration that controls all public access settings across accounts within your organization. When you attach the policy at the root or Organizational Unit (OU)-level of your organization, it propagates to all sub-accounts within that scope, and new member accounts automatically inherit the policy. Alternatively, you can choose to apply the policy to specific accounts for more granular control. To get started, navigate to the AWS Organizations console and use the \"Block all public access\" checkbox or JSON editor. Additionally, you can use AWS CloudTrail to audit or keep track of policy attachment as well as enforcement for member accounts.\n  This feature is available in the AWS Organizations console as well as AWS CLI/SDK, in all AWS Regions where AWS Organizations and Amazon S3 are supported, with no additional charges. For more information, visit the AWS Organizations User Guide and Amazon S3 Block Public Access documentation.",
@@ -437,135 +565,25 @@
       ]
     },
     {
-      "id": "aws-news-7a1d603f4977",
-      "title": "Amazon EMR and AWS Glue now support write operations with AWS Lake Formation fine-grained access controls",
-      "description": "Amazon EMR and AWS Glue now enable you to enforce fine-grained access control (FGAC) on both read and write operations for AWS Lake Formation registered tables in your Apache Spark jobs. Previously, you could only apply Lake Formation's table, column, and row-level permissions for read operations (SELECT, DESCRIBE). This simplifies data workflows by allowing both read and write tasks in a single Spark job, eliminating the need for separate clusters or applications. Organizations can now execute end-to-end data workflows with consistent security controls, streamlining operations and reducing infrastructure costs.\n  With this launch, administrators can control who is authorized to insert new data, update specific records, or merge changes through DML operations (CREATE, ALTER, INSERT, UPDATE, DELETE, MERGE INTO, DROP), ensuring that all data modifications adhere to specified security policies to mitigate the risk of unauthorized data modification, or misuse. This launch simplifies data governance and security frameworks by providing a single point for defining access rules in AWS Lake Formation and enforcing these rules in Spark for both read and write operations.\n  This feature is available in all AWS Regions where Amazon EMR (EC2, EKS and Serverless), AWS Glue and AWS Lake Formation are available. To learn more, visit the open table format support documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-emr-aws-glue-write-operations-aws-lake-formation/",
-      "pubDate": "2025-11-26T08:00:00.000Z",
+      "id": "aws-news-d834d9c22356",
+      "title": "Improved AWS Health event triage",
+      "description": "AWS Health now includes two new properties in its event schema - actionability and persona - enabling customers to identify the most relevant events. These properties allow organizations to programmatically identify events requiring customer action and direct them to relevant teams. The enhanced event schema is accessible through both the AWS Health API and Health EventBridge communication channels, improving operational efficiency and team coordination.\n  AWS customers receive various operational notifications and scheduled changes, including Planned Lifecycle Events. With the new actionability property, teams can quickly distinguish between events requiring action and those shared for awareness. The persona property streamlines event routing and visibility to specific teams like security and billing, ensuring critical information reaches appropriate stakeholders. These structured properties streamline integration with existing operational tools, allowing teams to effectively identify and remediate affected resources while maintaining appropriate visibility across the organization.\n  This enhancement is available across all AWS Commercial and AWS GovCloud (US) Regions. To learn more about implementing these new properties, see the AWS Health User Guide and the API and EventBridge schema documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/improved-aws-health-event-triage",
+      "pubDate": "2025-11-26T15:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "ec2",
-        "emr",
-        "rds",
-        "eks",
-        "glue",
+        "eventbridge",
         "organizations"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "ec2",
-        "emr",
-        "rds",
-        "eks",
-        "glue",
+        "eventbridge",
         "organizations",
-        "launch",
         "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5f0418687644",
-      "title": "Amazon EMR and AWS Glue now support audit context support with Lake Formation",
-      "description": "Amazon EMR and AWS Glue now provide comprehensive audit context support for AWS Lake Formation credential vending APIs and AWS Glue Data Catalog GetTable and GetTables API calls. This auditing capability helps you maintain compliance with regulatory frameworks, including the Digital Markets Act (DMA) and data protection regulations. The feature is enabled by default, offering seamless integration into existing workflows while strengthening security and compliance monitoring across your data lake infrastructure.\n  You can view this audit context information in AWS CloudTrail logs, enabling enhanced security auditing, regulatory compliance, and improved troubleshooting for EMR for Apache Spark native fine-grained access control (FGAC) and full table access jobs. The audit logging feature automatically records the platform type (EMR-EC2, EMR on EKS, EMR Serverless, or AWS Glue) and its corresponding identifiers like such as Cluster ID, Step ID, Job Run ID, and Virtual Cluster ID. This enables security teams to track and correlate API calls from individual Spark jobs, streamline compliance reporting, and analyze historical data access patterns. Additionally, data engineers can quickly troubleshoot access-related issues by connecting them to specific job executions, resolve FGAC permission challenges, and monitor access patterns across different compute platforms.\n  This feature is available in all AWS Regions that support Amazon EMR, AWS Glue, and AWS Lake Formation, requiring EMR version 7.12+ or AWS Glue version 5.1+.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-emr-aws-glue-audit-context-lake-formation/",
-      "pubDate": "2025-11-26T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "emr",
-        "rds",
-        "eks",
-        "glue"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ec2",
-        "emr",
-        "rds",
-        "eks",
-        "glue",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4f8be3c8b60b",
-      "title": "Introducing AWS Glue 5.1",
-      "description": "AWS Glue 5.1 is now generally available, delivering improved performance, security updates, expanded Apache Iceberg capabilities, and AWS Lake Formation write support for data integration workloads.\n \nAWS Glue is a serverless, scalable data integration service that simplifies discovering, preparing, moving, and integrating data from multiple sources. This release upgrades core engines to Apache Spark 3.5.6, Python 3.11, and Scala 2.12.18, bringing performance and security enhancements. It also updates support for open table format libraries, including Apache Hudi 1.0.2, Apache Iceberg 1.10.0, and Delta Lake 3.3.2. \n \nAWS Glue 5.1 introduces support for Apache Iceberg format version 3.0, adding default column values, deletion vectors for merge-on-read tables, multi-argument transforms, and row lineage tracking. This release also extends AWS Lake Formation fine-grained access control to write operations (both DML and DDL) for Spark DataFrames and Spark SQL. Previously, this capability was limited to read operations only. AWS Glue 5.1 also adds full-table access control in Apache Spark for Apache Hudi and Delta Lake tables, providing more comprehensive security options for your data.\n \nAWS Glue 5.1 is available in US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), Europe (Stockholm), Europe (Frankfurt), Europe (Spain), Asia Pacific (Hong Kong), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Malaysia), Asia Pacific (Thailand), Asia Pacific (Mumbai), and South America (São Paulo). Visit the AWS Glue documentation for more information.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-5-1",
-      "pubDate": "2025-11-26T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "glue"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "glue",
-        "generally-available",
-        "ga",
-        "update",
         "enhancement",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-1f4f199f9723",
-      "title": "Amazon Quick Research now includes trusted third-party industry intelligence",
-      "description": "Amazon Quick Suite, the AI-powered workspace helping organizations get answers from their enterprise data and move swiftly from insights to action, enhances Quick Research with access to specialized third-party datasets.\n  Quick Research transforms how business professionals tackle complex business problems by completing weeks of data discovery, analysis, and insight generation in minutes. Today, Quick Research launches its partner ecosystem with industry intelligence providers S&P Global, FactSet, and IDC, with more to come. Users with existing subscriptions can combine these authoritative datasets with all of their business data and real-time web search, accelerating their path to deeper insights and strategic decision-making. Additionally, all users have access to decades of US Patent and Trademark Office data along with millions of PubMed citations and abstracts in biomedical and life sciences literature.\n  Business professionals from any industry can now access and analyze multiple data sources in one unified workspace, eliminating the need to switch between platforms. For example, a financial analyst can evaluate investment opportunities using FactSet's financial data alongside real-time web search and internal market reports, while energy teams can optimize trading strategies using S&P Global's commodity data combined with insights from their strategy teams. Similarly, sales and product teams can spot emerging trends faster by leveraging IDC's industry intelligence with their customer data. By bringing critical data sources together in one place, organizations can move from insight to action with greater speed and confidence.\n  Quick Research's third-party data integration is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), and Europe (Ireland). To learn more, read our User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-quick-research-third-party-industry-intelligence/",
-      "pubDate": "2025-11-26T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "lex",
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "lex",
-        "eks",
-        "organizations",
-        "launch",
-        "ga",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-851370e8641e",
-      "title": "Introducing AWS Network Firewall Proxy in preview",
-      "description": "AWS introduces Network Firewall Proxy in public preview. You can use it to exert centralized controls against data exfiltration and malware injection. You can set up your Network Firewall Proxy in explicit mode in just a few clicks and filter the traffic going out from your applications and the response that these applications receive.\n  Network Firewall Proxy enables customers to efficiently manage and secure web and inter-network traffic. It protects your organization against atempts to spoof the domain name or the server name index (SNI) and offers flexibility to set fine-grained access controls. You can use Network Firewall Proxy to restrict access from your applications to trusted domains or IP addresses, or block unintended response from external servers. You can also turn on TLS inspection and set granular filtering controls on HTTP header attributes. Your Network Firewall Proxy offers comprehensive logs for monitoring your applications. You can enable them and send to Amazon S3 and AWS CloudWatch for detailed analyses and audit.\n  Try out AWS Network Firewall Proxy in your test environment today in US East (Ohio) region. Proxy is available for free during public preview. For more information check AWS Network Firewall proxy documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-network-firewall-proxy-preview",
-      "pubDate": "2025-11-25T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "s3",
-        "cloudwatch"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "s3",
-        "cloudwatch",
-        "preview",
-        "ga",
-        "public-preview"
       ]
     },
     {
@@ -609,105 +627,6 @@
         "ec2",
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-fd016fec1803",
-      "title": "AWS Glue announces catalog federation for remote Apache Iceberg catalogs",
-      "description": "AWS Glue announces the general availability of catalog federation for remote Iceberg catalogs. This capability provides direct and secure access to Iceberg tables stored in Amazon S3 and cataloged in remote catalogs using AWS analytics engines.\n  With catalog federation, you can federate to remote Iceberg catalogs and query remote Iceberg tables using your preferred AWS analytics engines, without moving or copying tables. It synchronizes metadata real-time across AWS Glue Data Catalog and remote catalogs when data teams query remote tables, which means that query results are always completely up-to-date. You can now choose the best price-performance for your workloads when analyzing remote Iceberg tables using your preferred AWS analytics engines, while maintaining consistent security controls when discovering or querying data. Catalog federation is supported by a wide variety of analytics engines, including Amazon Redshift, Amazon EMR, Amazon Athena, AWS Glue, third-party engines like Apache Spark, and Amazon SageMaker with the serverless notebooks.\n  Catalog federation uses AWS Lake Formation for access controls, allowing you to use fine-grained access controls, cross-account sharing, and trusted identity propagation when sharing remote catalog tables with other data consumers. Catalog federation integrates with catalog implementations that support the Iceberg REST specifications.\n  Catalog federation is available in Lake Formation console and using AWS Glue and Lake Formation SDKs and APIs. This feature is generally available in all AWS commercial regions where AWS Glue and Lake Formation are available. With just a few clicks in the console, you can federate to remote catalogs, discover its databases and tables, grant permissions to access table data, and query remote Iceberg tables using AWS analytics engines. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/aws-glue-catalog-federation-remote-apache-iceberg-catalogs",
-      "pubDate": "2025-11-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "s3",
-        "emr",
-        "redshift",
-        "glue",
-        "athena"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "s3",
-        "emr",
-        "redshift",
-        "glue",
-        "athena",
-        "generally-available",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ef2f09b21b66",
-      "title": "Amazon MSK Replicator is now available in five additional AWS Regions",
-      "description": "You can now use Amazon MSK Replicator to replicate streaming data across Amazon Managed Streaming for Apache Kafka (Amazon MSK) clusters in five additional AWS Regions: Asia Pacific (Thailand), Mexico (Central), Asia Pacific (Taipei), Canada West (Calgary), Europe (Spain).\n  MSK Replicator is a feature of Amazon MSK that enables you to reliably replicate data across Amazon MSK clusters in different or the same AWS Region(s) in a few clicks. With MSK Replicator, you can easily build regionally resilient streaming applications for increased availability and business continuity. MSK Replicator provides automatic asynchronous replication across MSK clusters, eliminating the need to write custom code, manage infrastructure, or setup cross-region networking. MSK Replicator automatically scales the underlying resources so that you can replicate data on-demand without having to monitor or scale capacity. MSK Replicator also replicates the necessary Kafka metadata including topic configurations, Access Control Lists (ACLs), and consumer group offsets. If an unexpected event occurs in a region, you can failover to the other AWS Region and seamlessly resume processing.\n  You can get started with MSK Replicator from the Amazon MSK console or the Amazon CLI. To learn more, visit the MSK Replicator product page, pricing page, and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-msk-replicator-additional-aws-regions",
-      "pubDate": "2025-11-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-b33c849d838a",
-      "title": "Amazon Aurora PostgreSQL introduces dynamic data masking",
-      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports dynamic data masking through the new pg_columnmask extension, allowing you to simplify the protection of sensitive data in your database. pg_columnmask extends Aurora's security capabilities by enabling column-level protection that complements PostgreSQL's native row-level security and column level grants. Using pg_columnmask, you can control access to sensitive data through SQL-based masking policies and define how data appears to users at query time based on their roles, helping you comply with data privacy regulations like GDPR, HIPAA, and PCI DSS.\n \nWith pg_columnmask, you can create flexible masking policies using built-in or user-defined functions. You can completely hide information, replace partial values with wildcards, or define custom masking approaches. Further, you can apply multiple masking policies to a single column and control their precedence using weights. pg_columnmask helps protect data in complex queries with WHERE, JOIN, ORDER BY, or GROUP BY clauses. Data is masked at the database level during query processing, leaving stored data unmodified.\n \npg_columnmask is available for Aurora PostgreSQL version 16.10 and higher, and 17.6 and higher in all AWS Regions where Aurora PostgreSQL is available. To learn more, review our blog post and visit technical documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-aurora-postgresql-dynamic-data-masking",
-      "pubDate": "2025-11-24T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dcf28b462b4d",
-      "title": "Amazon SageMaker HyperPod now supports Spot Instances",
-      "description": "Amazon SageMaker HyperPod now supports Spot Instances, enabling customers to reduce GPU compute costs by up to 90% compared to on-demand instances on HyperPod . As AI workloads scale, optimizing infrastructure costs becomes increasingly critical. SageMaker HyperPod's Spot integration addresses this by allowing customers to automatically leverage spare EC2 capacity at significant discounts, while providing the managed AI experience customers enjoy on HyperPod. \n \nWith Spot Instances, organizations can run fault-tolerant workloads cost-effectively at scale. You can combine Spot with on-demand instances to balance cost optimization with guaranteed availability. The feature is available on HyperPod EKS clusters and integrates with Karpenter for intelligent auto-scaling, automatically discovering available Spot capacity and handling instance interruptions.\n \nYou can enable Spot Instances when creating instance groups through the CreateCluster API or AWS Console. The feature supports all instance types available on HyperPod, including CPUs and GPUs. Capacity availability depends on supply from EC2 and varies by region and instance type. Spot instance support is available in all regions where SageMaker HyperPod is currently available. To learn more, please refer to the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-hyperpod-spot-instances",
-      "pubDate": "2025-11-24T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "ec2",
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "ec2",
-        "eks",
-        "organizations",
-        "ga",
-        "integration",
-        "support"
       ]
     },
     {
