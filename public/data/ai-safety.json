@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-04T06:16:43.867Z",
+  "lastUpdated": "2025-12-05T06:16:49.946Z",
   "category": "ai-safety",
   "totalItems": 32,
   "items": [
@@ -60,6 +60,35 @@
       ]
     },
     {
+      "id": "aws-news-ff7335a08f36",
+      "title": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables",
+      "description": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables across AWS Regions and accounts. This new capability replicates your complete table structure, including all snapshots and metadata to reduce query latency and improve data accessibility for global analytics workloads.\n  S3 Tables replication automatically creates read-only replica tables in your destination table buckets, backfills them with the latest state of the source table, and continuously monitors for new updates to keep replicas in sync. Replica tables can be configured with independent snapshot retention policies and encryption keys from source tables to meet compliance and data protection requirements. You can query replica tables using Amazon SageMaker Unified Studio or any Iceberg-compatible engine including Amazon Athena, Amazon Redshift, Apache Spark, and DuckDB.\n  S3 Tables replication is now available in all AWS Regions where S3 Tables are supported. For pricing details, visit the Amazon S3 pricing page. To learn more about S3 Tables, visit the product page, documentation, and read the AWS News Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/s3-tables-automatic-replication-apache-iceberg-tables/",
+      "pubDate": "2025-12-02T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "athena",
+        "now-available",
+        "update",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
       "id": "aws-news-6a76b8d73350",
       "title": "Amazon S3 Vectors is now generally available with 40 times the scale of preview",
       "description": "Amazon S3 Vectors, the first cloud object storage with native support to store and query vectors, is now generally available. S3 Vectors delivers purpose-built, cost-optimized vector storage for AI agents, inference, Retrieval Augmented Generation (RAG), and semantic search at billion-vector scale. S3 Vectors is designed to provide the same elasticity, durability, and availability as Amazon S3 and reduces the total costs to upload, store, and query vectors by up to 90%. With general availability, you can store and query up to two billion vectors per index and elastically scale to 10,000 vector indexes per vector bucket. Infrequent queries continue to return results in under one second, with more frequent queries now resulting in latencies around 100 milliseconds or less. Your application can achieve write throughput of 1,000 vectors per second when streaming single-vector updates into your indexes, retrieve up to 100 search results per query, and store up to 50 metadata keys alongside each vector for fine-grained filtering in your queries.\n \nWith S3 Vectors you get a new bucket type—a vector bucket—that is optimized for durable, low-cost vector storage. Within vector buckets, you organize your vector data with vector indexes and get a dedicated set of APIs to store, access, and query vectors without provisioning any infrastructure. By default, S3 Vectors encrypts all vector data in a vector bucket with server-side encryption using S3-managed keys (SSE-S3) or optionally, you can use AWS Key Management Service (SSE-KMS) to set a default customer-managed key to encrypt all new vector indexes in the vector bucket. You can now also set a dedicated customer-managed key per vector index, helping you build scalable multi-tenant applications and meet regulatory and governance requirements. You can also tag vector buckets and indexes for attribute-based access control (ABAC) as well as to track and organize costs using AWS Billing and Cost Management.\n \nS3 Vectors integrates with Amazon Bedrock Knowledge Bases to reduce the cost of using large vector datasets for RAG. When creating a Knowledge Base in Amazon Bedrock or Amazon SageMaker Unified Studio, you can choose an existing Amazon S3 vector index or create a new one using the Quick Create workflow. With Amazon OpenSearch Service, you can optimize costs for hybrid search workloads by configuring OpenSearch to automatically manage vector storage in S3.\n \nS3 Vectors is now generally available in 14 AWS Regions, expanding from 5 Regions in preview. To learn more, visit the product page, S3 pricing page, documentation, and AWS News blog.",
@@ -91,35 +120,6 @@
         "ga",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-ff7335a08f36",
-      "title": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables",
-      "description": "Amazon S3 Tables now support automatic replication of Apache Iceberg tables across AWS Regions and accounts. This new capability replicates your complete table structure, including all snapshots and metadata to reduce query latency and improve data accessibility for global analytics workloads.\n  S3 Tables replication automatically creates read-only replica tables in your destination table buckets, backfills them with the latest state of the source table, and continuously monitors for new updates to keep replicas in sync. Replica tables can be configured with independent snapshot retention policies and encryption keys from source tables to meet compliance and data protection requirements. You can query replica tables using Amazon SageMaker Unified Studio or any Iceberg-compatible engine including Amazon Athena, Amazon Redshift, Apache Spark, and DuckDB.\n  S3 Tables replication is now available in all AWS Regions where S3 Tables are supported. For pricing details, visit the Amazon S3 pricing page. To learn more about S3 Tables, visit the product page, documentation, and read the AWS News Blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/s3-tables-automatic-replication-apache-iceberg-tables/",
-      "pubDate": "2025-12-02T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "redshift",
-        "athena"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "redshift",
-        "athena",
-        "now-available",
-        "update",
-        "support",
-        "new-capability"
       ]
     },
     {
@@ -304,21 +304,6 @@
       ]
     },
     {
-      "id": "aws-news-32bed17198ba",
-      "title": "Amazon Connect now provides AI-powered case summaries",
-      "description": "Amazon Connect now provides AI-powered case summaries that give agents complete context into customer issues, reduce manual wrap-up work, and help resolve cases faster. With a single click, agents can generate a concise case summary even when the case spans multiple interactions, follow-up tasks, and teams, capturing key details such as issue background, actions taken, and next steps. Administrators can configure custom prompts and guardrails to ensure that summaries align with organizational style and preferences.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town) AWS regions. To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-ai-powered-case-summaries",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-5eec8e966a0f",
       "title": "Amazon Connect Chat now supports in-flight data redaction and message processing",
       "description": "Amazon Connect now supports message processing that intercepts and processes chat messages before they reach any participant. This new capability enables automatic redaction of sensitive data and custom message processing, helping businesses maintain compliance and security standards while delivering personalized customer experiences.\n  The built-in sensitive data redaction can automatically detect and remove sensitive information like credit card numbers and social security numbers across multiple languages, including English, French, Portuguese, German, Italian, and Spanish variants. You can choose to redact selected or all sensitive data entities, with options to replace them with generic or entity-specific placeholders (e.g., [PII] or [NAME]). Businesses can also integrate custom processors for use cases such as language translation or profanity filtering, ensuring compliant and effective communications for their specific business needs.\n  These message processing capabilities are now available in the following regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt) Europe (London), Africa (South Africa). To learn more about Amazon Connect, visit the Amazon Connect documentation and pricing.",
@@ -339,6 +324,21 @@
         "now-available",
         "support",
         "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-32bed17198ba",
+      "title": "Amazon Connect now provides AI-powered case summaries",
+      "description": "Amazon Connect now provides AI-powered case summaries that give agents complete context into customer issues, reduce manual wrap-up work, and help resolve cases faster. With a single click, agents can generate a concise case summary even when the case spans multiple interactions, follow-up tasks, and teams, capturing key details such as issue background, actions taken, and next steps. Administrators can configure custom prompts and guardrails to ensure that summaries align with organizational style and preferences.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town) AWS regions. To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-ai-powered-case-summaries",
+      "pubDate": "2025-11-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga"
       ]
     },
     {
