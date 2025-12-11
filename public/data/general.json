@@ -1,8 +1,68 @@
 {
-  "lastUpdated": "2025-12-10T06:17:36.803Z",
+  "lastUpdated": "2025-12-11T06:17:33.650Z",
   "category": "general",
-  "totalItems": 42,
+  "totalItems": 44,
   "items": [
+    {
+      "id": "aws-news-2dc96b0ea892",
+      "title": "Amazon ECS now supports custom container stop signals on AWS Fargate",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now supports custom container stop signals for Linux tasks running on AWS Fargate, honoring the stop signal configured in Open Container Initiative (OCI) images when tasks are stopped. The enhancement improves graceful shutdown behavior by aligning Fargate task termination with each container’s preferred termination signal.\n  Previously, when an Amazon ECS task running on AWS Fargate was stopped, each Linux container always received SIGTERM followed by SIGKILL after the configured timeout. With the new behavior, the Amazon ECS container agent reads the stop signal from the container image configuration and sends that signal when stopping the task. Containers that rely on signals such as SIGQUIT or SIGINT for graceful shutdown can now run on Fargate with their intended termination semantics. If no STOPSIGNAL is configured, Amazon ECS continues to send SIGTERM by default.\n  Customers can use custom stop signals on Amazon ECS with AWS Fargate by adding a STOPSIGNAL instruction (for example, STOPSIGNAL SIGQUIT) to their OCI‑compliant container images. Support for container‑defined stop signals is available in all AWS Regions. To learn more, refer to the ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ecs-custom-container-stop-signals-fargate/",
+      "pubDate": "2025-12-10T20:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "fargate"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "fargate",
+        "ga",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-5b4eef6d6997",
+      "title": "Amazon EC2 X8g instances now available in Asia Pacific (Sydney) region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8g instances are available in Asia Pacific (Sydney) region. These instances are powered by AWS Graviton4 processors and deliver up to 60% better performance than AWS Graviton2-based Amazon EC2 X2gd instances. X8g instances offer up to 3 TiB of total memory and increased memory per vCPU compared to other Graviton4-based instance. They have the best price performance among EC2 X-series instances, and are ideal for memory-intensive workloads such as electronic design automation (EDA) workloads, in-memory databases (Redis, Memcached), relational databases (MySQL, PostgreSQL), real-time big data analytics, real-time caching servers, and memory-intensive containerized applications.\n  X8g instances offer larger instance sizes with up to 3x more vCPU (up to 48xlarge) and memory (up to 3TiB) than Graviton2-based X2gd instances. They offer up to 50 Gbps enhanced networking bandwidth and up to 40 Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS). Elastic Fabric Adapter (EFA) networking support is offered on 24xlarge, 48xlarge, and bare metal sizes, and Elastic Network Adapter (ENA) Express support is available on instance sizes larger than 12xlarge.\n  To learn more, see Amazon EC2 X8g Instances. To quickly migrate your workloads to Graviton-based instances, see AWS Graviton Fast Start program. To get started, see the AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ec2-x8g-instances-asia-pacific-sydney/",
+      "pubDate": "2025-12-10T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-20fcf921c10f",
+      "title": "AWS Support Center Console now supports  screen sharing for troubleshooting support cases",
+      "description": "Today, AWS announces that AWS Support Center Console now support screen sharing for troubleshooting support cases. With this new feature, you can request a virtual meeting while in an active chat or call, join support calls with one click through a meeting bridge link. With the new virtual meetings, you will be able to share your screen during the meeting and maintain seamless access to case details for efficient troubleshooting. This enhancement simplifies your support experience by keeping all support interactions within the AWS Support Center console.\n \nTo learn more visit the AWS Support page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/support-center-console-screen-sharing/",
+      "pubDate": "2025-12-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "new-feature",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-7c4719968fc9",
       "title": "Amazon EC2 C8gn instances are now available in additional regions",
@@ -224,25 +284,6 @@
         "general"
       ],
       "tags": [
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-dfbfc3dccf33",
-      "title": "Announcing Amazon EKS Capabilities",
-      "description": "Amazon Elastic Kubernetes Service (EKS) announces the general availability of EKS Capabilities, a fully-managed extensible set of Kubernetes-native platform features for workload deployment, AWS cloud resource management, and Kubernetes resource composition and orchestration. EKS Capabilities provides out-of-the-box platform features and offloads operations to AWS, improving the performance and security of your platform components.\n  EKS Capabilities streamlines building and scaling with Kubernetes, allowing you to focus on deploying applications rather than maintaining platform infrastructure. These capabilities run in AWS-owned infrastructure separate from your clusters, with AWS handling auto scaling, patching, and upgrading. Application developers get ready-to-use platform capabilities that enable faster workload deployment and scaling across the organization, while platform teams can offload operational tasks to AWS. Three capabilities are available at launch including continuous deployment with Argo CD, AWS resource management through AWS Controllers for Kubernetes (ACK), and dynamic resource orchestration using Kube Resource Orchestrator (KRO).\n  EKS Capabilities is available today in all AWS Regions, except AWS GovCloud (US) and China Regions. To get started with EKS Capabilities, use the EKS API, CLI, eksctl, AWS Console, or your favorite infrastructure as code tooling to enable it in a new or existing EKS cluster. To learn more, visit the EKS Capabilities feature webpage, user guide, pricing webpage, and AWS News Launch blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-eks-capabilities",
-      "pubDate": "2025-11-30T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
         "ga"
       ]
     },

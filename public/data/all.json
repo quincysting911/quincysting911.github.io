@@ -1,16 +1,168 @@
 {
-  "lastUpdated": "2025-12-10T06:17:36.803Z",
-  "totalItems": 204,
+  "lastUpdated": "2025-12-11T06:17:33.650Z",
+  "totalItems": 206,
   "sources": {
-    "whatsNew": 97,
+    "whatsNew": 98,
     "mlBlog": 20,
     "newsBlog": 20,
     "bigDataBlog": 16,
-    "architectureBlog": 16,
+    "architectureBlog": 17,
     "computeBlog": 18,
     "developersAndDevOps": 17
   },
   "items": [
+    {
+      "id": "aws-news-2dc96b0ea892",
+      "title": "Amazon ECS now supports custom container stop signals on AWS Fargate",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now supports custom container stop signals for Linux tasks running on AWS Fargate, honoring the stop signal configured in Open Container Initiative (OCI) images when tasks are stopped. The enhancement improves graceful shutdown behavior by aligning Fargate task termination with each container’s preferred termination signal.\n  Previously, when an Amazon ECS task running on AWS Fargate was stopped, each Linux container always received SIGTERM followed by SIGKILL after the configured timeout. With the new behavior, the Amazon ECS container agent reads the stop signal from the container image configuration and sends that signal when stopping the task. Containers that rely on signals such as SIGQUIT or SIGINT for graceful shutdown can now run on Fargate with their intended termination semantics. If no STOPSIGNAL is configured, Amazon ECS continues to send SIGTERM by default.\n  Customers can use custom stop signals on Amazon ECS with AWS Fargate by adding a STOPSIGNAL instruction (for example, STOPSIGNAL SIGQUIT) to their OCI‑compliant container images. Support for container‑defined stop signals is available in all AWS Regions. To learn more, refer to the ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ecs-custom-container-stop-signals-fargate/",
+      "pubDate": "2025-12-10T20:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "fargate"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "fargate",
+        "ga",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8104f30c91af",
+      "title": "Implement automated smoke testing using Amazon Nova Act headless mode",
+      "description": "This post shows how to implement automated smoke testing using Amazon Nova Act headless mode in CI/CD pipelines. We use SauceDemo, a sample ecommerce application, as our target for demonstration. We demonstrate setting up Amazon Nova Act for headless browser automation in CI/CD environments and creating smoke tests that validate key user workflows. We then show how to implement parallel execution to maximize testing efficiency, configure GitLab CI/CD for automatic test execution on every deployment, and apply best practices for maintainable and scalable test automation.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/implement-automated-smoke-testing-using-amazon-nova-act-headless-mode/",
+      "pubDate": "2025-12-10T19:04:24.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-8b2e20dd7213",
+      "title": "Now generally available: Amazon EC2 C8gb instances",
+      "description": "Today, AWS announces the general availability of the new Amazon Elastic Block Storage (Amazon EBS) optimized Amazon Elastic Compute Cloud (Amazon EC2) C8gb instances. These instances are powered by AWS Graviton4 processors to deliver up to 30% better compute performance than AWS Graviton3 processors. At up to 150 Gbps of EBS bandwidth, these instances offer higher EBS performance compared to same-sized equivalent Graviton4-based instances. Take advantage of the higher block storage performance offered by these new EBS optimized EC2 instances to scale the performance and throughput of workloads such as high-performance file systems, while optimizing the cost of running your workloads.\n \nFor increased scalability, these instances offer instance sizes up to 24xlarge, including a metal-24xl size, up to 192 GiB of memory, up to 150 Gbps of EBS bandwidth, up to 200 Gbps of networking bandwidth. These instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, metal-24xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters.\n \nThe new C8gb instances are available in US East (N. Virginia) and US West (Oregon) regions. Metal sizes are only available in US East (N. Virginia) region.\n \nTo learn more, see Amazon EC2 C8gb Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/generally-available-amazon-ec2-c8gb-instances",
+      "pubDate": "2025-12-10T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-30581ecb3d79",
+      "title": "How BASF’s Agriculture Solutions drives traceability and climate action by tokenizing cotton value chains using Amazon Managed Blockchain",
+      "description": "BASF Agricultural Solutions combines innovative products and digital tools with practical farmer knowledge. This post explores how Amazon Managed Blockchain can drive a positive change in the agricultural industry by tokenizing food and cotton value chains for traceability, climate action, and circularity.",
+      "link": "https://aws.amazon.com/blogs/architecture/how-basfs-agriculture-solutions-drives-traceability-and-climate-action-by-tokenizing-cotton-value-chains-using-amazon-managed-blockchain/",
+      "pubDate": "2025-12-10T17:41:52.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-5b4eef6d6997",
+      "title": "Amazon EC2 X8g instances now available in Asia Pacific (Sydney) region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8g instances are available in Asia Pacific (Sydney) region. These instances are powered by AWS Graviton4 processors and deliver up to 60% better performance than AWS Graviton2-based Amazon EC2 X2gd instances. X8g instances offer up to 3 TiB of total memory and increased memory per vCPU compared to other Graviton4-based instance. They have the best price performance among EC2 X-series instances, and are ideal for memory-intensive workloads such as electronic design automation (EDA) workloads, in-memory databases (Redis, Memcached), relational databases (MySQL, PostgreSQL), real-time big data analytics, real-time caching servers, and memory-intensive containerized applications.\n  X8g instances offer larger instance sizes with up to 3x more vCPU (up to 48xlarge) and memory (up to 3TiB) than Graviton2-based X2gd instances. They offer up to 50 Gbps enhanced networking bandwidth and up to 40 Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS). Elastic Fabric Adapter (EFA) networking support is offered on 24xlarge, 48xlarge, and bare metal sizes, and Elastic Network Adapter (ENA) Express support is available on instance sizes larger than 12xlarge.\n  To learn more, see Amazon EC2 X8g Instances. To quickly migrate your workloads to Graviton-based instances, see AWS Graviton Fast Start program. To get started, see the AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ec2-x8g-instances-asia-pacific-sydney/",
+      "pubDate": "2025-12-10T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e072615bad94",
+      "title": "Amazon CloudWatch SDK supports optimized JSON, CBOR protocols",
+      "description": "Amazon CloudWatch announces support for both the JSON and Concise Binary Object Representation (CBOR) protocols in the CloudWatch SDK, enabling lower latency and improved performance for CloudWatch customers. The SDK will automatically use JSON or CBOR as its new default communication protocol, offering customers a lower end-to-end processing latency as well as reduced payload sizes, application client side CPU, and memory usage.\n  Customers use the CloudWatch SDK either directly or through Infrastructure as Code solutions to manage their monitoring resources. Reducing control plane operations latency and payload size helps customer optimize their operational maintenance and resources usage and costs. JSON and the CBOR data formats are standards designed to enable better performance over the traditional AWS Query protocol.\n  The CloudWatch SDK for JSON and CBOR protocols support is available in all AWS Regions where Amazon CloudWatch is available and for all generally available AWS SDK language variants.\n  To leverage the performance improvements, customers can install the latest SDK version here. To learn more about the AWS SDK, see Amazon Developer tools.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-cloudwatch-sdk-json-cbor-protocols",
+      "pubDate": "2025-12-10T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "generally-available",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3871c2986a1d",
+      "title": "Amazon Braket now supports Qiskit 2.0",
+      "description": "Amazon Braket now supports Qiskit 2.0, enabling quantum developers to use the latest version of the most popular quantum software framework with native primitives and client-side compilation capabilities.\n  With this release, Braket provides native implementations of Qiskit's Sampler and Estimator primitives that leverage Braket's program sets for optimized batching, reducing execution time and costs compared to generic wrapper approaches. The native primitives handle parameter sweeps and observable measurements service-side, eliminating the need for customers to implement this logic manually. Additionally, the bidirectional circuit conversion capability enables customers to use Qiskit's extensive compilation framework for client-side transpilation before submitting to Braket devices, providing the control and reproducibility that enterprise users and researchers require for device characterization experiments and custom compilation passes.\n  Qiskit 2.0 support is available in all AWS Regions where Amazon Braket is available. To get started, see the Qiskit-Braket provider documentation and the Amazon Braket Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-braket-qiskit-2-0/",
+      "pubDate": "2025-12-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-20fcf921c10f",
+      "title": "AWS Support Center Console now supports  screen sharing for troubleshooting support cases",
+      "description": "Today, AWS announces that AWS Support Center Console now support screen sharing for troubleshooting support cases. With this new feature, you can request a virtual meeting while in an active chat or call, join support calls with one click through a meeting bridge link. With the new virtual meetings, you will be able to share your screen during the meeting and maintain seamless access to case details for efficient troubleshooting. This enhancement simplifies your support experience by keeping all support interactions within the AWS Support Center console.\n \nTo learn more visit the AWS Support page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/support-center-console-screen-sharing/",
+      "pubDate": "2025-12-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "new-feature",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-e820691af9bb",
       "title": "Introducing Apache Iceberg materialized views in AWS Glue Data Catalog",
@@ -2445,6 +2597,24 @@
       ]
     },
     {
+      "id": "aws-news-1ffd715165b7",
+      "title": "Amazon Connect now provides native testing and simulation capabilities",
+      "description": "Amazon Connect now allows you to test and simulate contact center experiences in just a few clicks, making it easy to validate workflows, self-service voice interactions, and their outcomes. For each test, you can configure the test parameters including the caller's phone number or customer profile, the reason for the call (such as \"I need to check my order status\"), the expected responses (such as \"Your request has been processed\"), and business conditions like after-hours scenarios or full call queues. After executing tests, results show success or failure based on your defined criteria, along with the path taken by the simulated interaction and detailed logs to quickly diagnose potential issues\n  With this launch, you can run multiple tests simultaneously to validate scenarios and workflows at scale, reducing testing time. Companies can view test results and identify common failure patterns across all their tests in Connect's analytics dashboards. These capabilities enable you to rapidly validate changes to your workflows and confidently deploy new experiences to adapt to your ever-changing business needs.\n  To learn more about these features, see the Amazon Connect Administrator Guide. These features are available in all AWS regions where Amazon Connect is available. To learn more about Amazon Connect, AWS’s AI-native customer experience solution, please visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-native-testing-simulation-capabilities",
+      "pubDate": "2025-11-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "rds",
+        "launch"
+      ]
+    },
+    {
       "id": "aws-news-6ac1157bb35b",
       "title": "Amazon Connect Chat now supports agent-initiated workflows",
       "description": "Amazon Connect now supports agent-initiated workflows, enabling agents to send interactive forms to collect sensitive data or share general policies and disclosures within customer chat conversations, increasing efficiency and improving customer experience. For example, when a customer needs to update their address, agents can now send a form that customers complete without leaving the chat interface.\n  Agents can trigger these workflows at any point during a chat conversation, making interactions more dynamic and responsive to customer needs. By handling everything within the ongoing chat conversation, businesses can maintain security and compliance standards while helping customers get faster solutions.\n  These new agent capabilities are now available in the following regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (London), and Africa (Cape Town). To learn more, visit the Amazon Connect documentation.",
@@ -2463,24 +2633,6 @@
         "now-available",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-1ffd715165b7",
-      "title": "Amazon Connect now provides native testing and simulation capabilities",
-      "description": "Amazon Connect now allows you to test and simulate contact center experiences in just a few clicks, making it easy to validate workflows, self-service voice interactions, and their outcomes. For each test, you can configure the test parameters including the caller's phone number or customer profile, the reason for the call (such as \"I need to check my order status\"), the expected responses (such as \"Your request has been processed\"), and business conditions like after-hours scenarios or full call queues. After executing tests, results show success or failure based on your defined criteria, along with the path taken by the simulated interaction and detailed logs to quickly diagnose potential issues\n  With this launch, you can run multiple tests simultaneously to validate scenarios and workflows at scale, reducing testing time. Companies can view test results and identify common failure patterns across all their tests in Connect's analytics dashboards. These capabilities enable you to rapidly validate changes to your workflows and confidently deploy new experiences to adapt to your ever-changing business needs.\n  To learn more about these features, see the Amazon Connect Administrator Guide. These features are available in all AWS regions where Amazon Connect is available. To learn more about Amazon Connect, AWS’s AI-native customer experience solution, please visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-native-testing-simulation-capabilities",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "rds",
-        "launch"
       ]
     },
     {
@@ -2634,108 +2786,6 @@
         "now-available",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-1b32fbad45c0",
-      "title": "Amazon Connect now streams messages for AI-powered interactions",
-      "description": "Amazon Connect now supports message streaming for AI-powered chat interactions. This new capability shows Connect AI agent responses as they're being generated, which reduces perceived wait times and improves the customer experience.\n  When using Amazon Connect AI agents, customers see status updates like \"One moment while I review your account\" during processing, and watch responses appear progressively. This experience gives customers confidence their request is actively being worked on while AI agents reason, invoke tools, and craft comprehensive solutions.\n  Message streaming for AI-powered interactions is now available in the following regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (London) and Africa (Cape Town). To learn more, visit the Amazon Connect documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-streams-messages-ai-powered-interactions",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "update",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-7b34b11c940a",
-      "title": "Amazon Connect agent workspace now supports custom visual themes",
-      "description": "Amazon Connect now allows you to customize the visual appearance of the agent workspace. You can apply a custom theme, including a logo, font, and color palette for light and dark modes, so the agent workspace aligns with the brand identity of your company or business unit.\n  Contact center agents spend hours each day in the Amazon Connect agent workspace, which provides them with all of the customer information, applications, and step-by-step guidance they need to deliver superior customer experiences. With today’s launch, organizations can change the default Amazon Connect theme to their own branded experience, creating a more familiar and intuitive experience for agents who use the agent workspace and other company applications. The agent workspace also has a new header bar where agents can easily access their settings, including their preference of light and dark mode, contributing to greater agent satisfaction and efficiency.\n  The Amazon Connect agent workspace is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Africa (Cape Town), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (London), and AWS GovCloud (US-West).\n  To learn more and get started, see the administrator guide and developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-agent-workspace-custom-visual-themes",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2bf695171597",
-      "title": "Amazon Connect now supports creation of custom metrics for use in dashboards and APIs",
-      "description": "Amazon Connect now supports creation of custom metrics, enabling contact center supervisors to analyze tailored performance measurements without requiring technical skills. This feature provides a simple, no-code interface for performing mathematical operations (e.g., addition, subtraction, sum, average) on existing Connect data to build metrics that align with your organization's specific business requirements. Custom metrics are available to use in the dashboards and APIs.\n  With custom metrics, you can track performance in ways that matter most to your business. For example, create average handle time metrics for premium versus standard customer segments, calculate total agent time on outbound calls by product line, or measure queue performance filtered by contact type such as callbacks versus incoming calls.\n This new feature is available in all AWS regions where Amazon Connect is offered. To learn more about Amazon Connect custom metrics, see the Administrator Guide. To learn more about Amazon Connect, see the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-connect-metric-customization/",
-      "pubDate": "2025-11-30T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "new-feature",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dfbfc3dccf33",
-      "title": "Announcing Amazon EKS Capabilities",
-      "description": "Amazon Elastic Kubernetes Service (EKS) announces the general availability of EKS Capabilities, a fully-managed extensible set of Kubernetes-native platform features for workload deployment, AWS cloud resource management, and Kubernetes resource composition and orchestration. EKS Capabilities provides out-of-the-box platform features and offloads operations to AWS, improving the performance and security of your platform components.\n  EKS Capabilities streamlines building and scaling with Kubernetes, allowing you to focus on deploying applications rather than maintaining platform infrastructure. These capabilities run in AWS-owned infrastructure separate from your clusters, with AWS handling auto scaling, patching, and upgrading. Application developers get ready-to-use platform capabilities that enable faster workload deployment and scaling across the organization, while platform teams can offload operational tasks to AWS. Three capabilities are available at launch including continuous deployment with Argo CD, AWS resource management through AWS Controllers for Kubernetes (ACK), and dynamic resource orchestration using Kube Resource Orchestrator (KRO).\n  EKS Capabilities is available today in all AWS Regions, except AWS GovCloud (US) and China Regions. To get started with EKS Capabilities, use the EKS API, CLI, eksctl, AWS Console, or your favorite infrastructure as code tooling to enable it in a new or existing EKS cluster. To learn more, visit the EKS Capabilities feature webpage, user guide, pricing webpage, and AWS News Launch blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-eks-capabilities",
-      "pubDate": "2025-11-30T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-144bd9fb3a39",
-      "title": "Amazon SageMaker Catalog provides automatic data classification using AI agents",
-      "description": "Amazon SageMaker Catalog now provides automated data classification that suggests business glossary terms during data publishing, reducing manual tagging effort and improving metadata consistency across organizations.\n  This capability analyzes table metadata and schema information using Amazon Bedrock's language models to recommend relevant terms from organizational business glossaries. Data producers receive AI-generated suggestions for business terms defined within their glossaries, which include both functional terms and sensitive data classifications such as PII and PHI, making it easy to tag their datasets with standardized vocabulary. Producers can accept or modify these suggestions before publishing, ensuring consistent terminology across data assets and improving data discoverability for business users.\n  Automated data classification is available in US East (N. Virginia, Ohio), US West (Oregon), Asia Pacific (Tokyo, Seoul, Singapore, Sydney, Mumbai), and Europe (Frankfurt, Ireland, London, Paris) AWS regions where Amazon\n SageMaker operates.\n  To get started, go to SageMaker Unified Studio to configure your business glossary to generate recommendations for business glossary terms. You can also use the AWS CLI or SDKs to programmatically manage glossary term suggestions.\n For more information, see the SageMaker Catalog user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-sagemaker-catalog-automatic-data-classification-ai-agents",
-      "pubDate": "2025-11-30T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "sagemaker",
-        "unified studio",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker",
-        "unified studio",
-        "organizations",
-        "ga"
       ]
     },
     {
@@ -3187,21 +3237,6 @@
         "lambda",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f3d43f94fc40",
-      "title": "Practical implementation considerations to close the AI value gap",
-      "description": "The AWS Customer Success Center of Excellence (CS COE) helps customers get tangible value from their AWS investments. We've seen a pattern: customers who build AI strategies that address people, process, and technology together succeed more often. In this post, we share practical considerations that can help close the AI value gap.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/practical-implementation-considerations-to-close-the-ai-value-gap/",
-      "pubDate": "2025-11-25T20:19:50.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "ga"
       ]
     },
     {
