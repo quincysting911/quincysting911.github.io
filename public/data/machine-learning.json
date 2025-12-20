@@ -1,8 +1,47 @@
 {
-  "lastUpdated": "2025-12-19T06:17:11.576Z",
+  "lastUpdated": "2025-12-20T06:15:47.815Z",
   "category": "machine-learning",
-  "totalItems": 6,
+  "totalItems": 7,
   "items": [
+    {
+      "id": "aws-news-5461a4240f23",
+      "title": "Introducing SOCI indexing for Amazon SageMaker Studio: Faster container startup times for AI/ML workloads",
+      "description": "Today, we are excited to introduce a new feature for SageMaker Studio: SOCI (Seekable Open Container Initiative) indexing. SOCI supports lazy loading of container images, where only the necessary parts of an image are downloaded initially rather than the entire container.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-soci-indexing-for-amazon-sagemaker-studio-faster-container-startup-times-for-ai-ml-workloads/",
+      "pubDate": "2025-12-19T18:23:50.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ca2965bf0697",
+      "title": "Amazon SageMaker Studio now supports SOCI indexing for faster container startup times",
+      "description": "Today, AWS announces SOCI (Seekable Open Container Initiative) indexing support for Amazon SageMaker Studio, reducing container startup times by 30-50% when using custom images. Amazon SageMaker Studio is a fully integrated, browser-based environment for end-to-end machine learning development. SageMaker Studio provides pre-built container images for popular ML frameworks like TensorFlow, PyTorch, and Scikit-learn that enable quick environment setup. However, when data scientists need to tailor environments for specific use cases with additional libraries, dependencies, or configurations, they can build and register custom container images with pre-configured components to ensure consistency across projects. As ML workloads become increasingly complex, these custom container images have grown in size, leading to startup times of several minutes that create a bottlenecks in iterative ML development where quick experimentation and rapid prototyping are essential.\n  SOCI indexing addresses this challenge by enabling lazy loading of container images, downloading only the necessary components to start applications with additional files loaded on-demand as needed. Instead of waiting several minutes for complete custom image downloads, users can begin productive work in seconds while the environment completes initialization in the background. To use SOCI indexing, create a SOCI index for your custom container image using tools like Finch CLI, nerdctl, or Docker with SOCI CLI, push the indexed image to Amazon Elastic Container Registry (ECR), and reference the image index URI when creating SageMaker Image resources.\n  SOCI indexing is available in all AWS Regions where Amazon SageMaker Studio is available. To learn more about implementing SOCI indexing for your SageMaker Studio custom images, see Bring your own SageMaker image in the Amazon SageMaker Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-sagemaker-nbi-soci/",
+      "pubDate": "2025-12-19T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-13a0ca971134",
       "title": "Track machine learning experiments with MLflow on Amazon SageMaker using Snowflake integration",
@@ -101,25 +140,6 @@
         "redshift",
         "glue",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4d9478a7f155",
-      "title": "Amazon SageMaker now supports self-service migration of Notebook instances to latest platform versions",
-      "description": "Amazon SageMaker Notebook instance now supports self-service migration, allowing you to update your notebook instance platform identifier through the UpdateNotebookInstance API. This enables you to seamlessly transition from unsupported platform identifiers (notebook-al1-v1, notebook-al2-v1, notebook-al2-v2) to supported versions (notebook-al2-v3, notebook-al2023-v1).\n  With the new PlatformIdentifier parameter in the UpdateNotebookInstance API, you can update to newer versions of the Notebook instance platform while preserving your existing data and configurations. The platform identifier determines which Operating System and JupyterLab version combination your notebook instance runs. This self-service capability simplifies the migration process and helps you keep your notebook instances current.\n  This feature is supported through AWS CLI (version 2.31.27 or newer) and SDK, and is available in all AWS Regions where Amazon SageMaker Notebook instances are supported. To learn more, see Update a Notebook Instance in the Amazon SageMaker Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-sagemaker-self-service-migration-notebook-instances",
-      "pubDate": "2025-12-05T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "update",
         "support"
       ]
     }
