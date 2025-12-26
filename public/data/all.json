@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-25T06:17:37.084Z",
+  "lastUpdated": "2025-12-26T06:17:13.576Z",
   "totalItems": 201,
   "sources": {
     "whatsNew": 93,
@@ -1191,6 +1191,21 @@
       ]
     },
     {
+      "id": "aws-news-6a6ccca45535",
+      "title": "Amazon WorkSpaces now supports IPv6",
+      "description": "Amazon WorkSpaces now supports IPv6 for WorkSpaces domains and external endpoints, enabling users to connect through an IPv4/IPv6 dual-stack configuration from compatible clients (excluding SAML authentication). This helps customers meet IPv6 compliance requirements and eliminates the need for costly networking equipment to handle address translation between IPv4 and IPv6.\n  Dual-stack support for WorkSpaces addresses the Internet's growing demand for IP addresses by offering a vastly larger address space than IPv4. This eliminates the need to manage overlapping address ranges within your Virtual Private Cloud (VPC). Customers can deploy WorkSpaces through dual-stack that supports both IPv4 and IPv6 protocols while maintaining backward compatibility with existing IPv4 systems. Customers can also connect to their WorkSpaces through PrivateLink VPC endpoints over IPv6, enabling them to access the service privately without routing traffic over the public internet.\n  Connecting to Amazon WorkSpaces over IPv4/IPv6 dual-stack configuration is supported in all AWS Regions where Amazon WorkSpaces is available, including the AWS GovCloud (US East & US West) Regions. There is no additional cost for this feature.\n  To enable IPv6, you must use the latest WorkSpaces client application for Windows, macOS, Linux, PCoIP zero clients, or web access. To learn more about IPv6 support on Amazon WorkSpaces, refer to the Amazon WorkSpaces administration guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-workspaces-ipv6/",
+      "pubDate": "2025-12-18T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-ee4812f2ed35",
       "title": "Amazon MSK Connect now supports dual-stack (IPv4 and IPv6) connectivity for new connectors",
       "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) now supports dual-stack connectivity (IPv4 and IPv6) for new connectors on Amazon MSK Connect. This capability enables customers to create connectors on MSK Connect using both IPv4 and IPv6 protocols, in addition to the existing IPv4-only option. It helps customers modernize applications for IPv6 environments while maintaining IPv4 compatibility, making it easier to meet compliance requirements and prepare for future network architectures.\n  Amazon MSK Connect is a fully managed service that allows you to deploy and operate Apache Kafka Connect connectors in a fully managed environment. Previously, connectors on MSK Connect only supported IPv4 addressing for all connectivity options. With this new capability, customers can now enable dual-stack connectivity (IPv4 and IPv6) on new connectors using the Amazon MSK Console, AWS CLI, SDK, or CloudFormation by setting the Network Type parameter during connector creation. All connectors on MSK Connect will by default use IPv4-only connectivity unless explicitly opted-in for dual-stack while creating new connectors. Existing connectors will continue using IPv4 connectivity. To change that you will need to delete and recreate the connector.\n  Dual-stack connectivity for new connectors on MSK Connect is now available in all AWS Regions where Amazon MSK Connect is available, at no additional cost. To learn more about Amazon MSK dual-stack support, refer to the Amazon MSK developer guide.",
@@ -1212,21 +1227,6 @@
         "now-available",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-6a6ccca45535",
-      "title": "Amazon WorkSpaces now supports IPv6",
-      "description": "Amazon WorkSpaces now supports IPv6 for WorkSpaces domains and external endpoints, enabling users to connect through an IPv4/IPv6 dual-stack configuration from compatible clients (excluding SAML authentication). This helps customers meet IPv6 compliance requirements and eliminates the need for costly networking equipment to handle address translation between IPv4 and IPv6.\n  Dual-stack support for WorkSpaces addresses the Internet's growing demand for IP addresses by offering a vastly larger address space than IPv4. This eliminates the need to manage overlapping address ranges within your Virtual Private Cloud (VPC). Customers can deploy WorkSpaces through dual-stack that supports both IPv4 and IPv6 protocols while maintaining backward compatibility with existing IPv4 systems. Customers can also connect to their WorkSpaces through PrivateLink VPC endpoints over IPv6, enabling them to access the service privately without routing traffic over the public internet.\n  Connecting to Amazon WorkSpaces over IPv4/IPv6 dual-stack configuration is supported in all AWS Regions where Amazon WorkSpaces is available, including the AWS GovCloud (US East & US West) Regions. There is no additional cost for this feature.\n  To enable IPv6, you must use the latest WorkSpaces client application for Windows, macOS, Linux, PCoIP zero clients, or web access. To learn more about IPv6 support on Amazon WorkSpaces, refer to the Amazon WorkSpaces administration guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-workspaces-ipv6/",
-      "pubDate": "2025-12-18T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
       ]
     },
     {
@@ -1356,24 +1356,6 @@
       ]
     },
     {
-      "id": "aws-news-ca2fb047f73b",
-      "title": "Amazon Neptune Database is now available in the AWS Europe (Zurich) Region",
-      "description": "Amazon Neptune Database is now available in the Europe (Zurich) Region on engine versions 1.4.5.0 and later. You can now create Neptune clusters using R5, R5d, R6g, R6i, X2iedn, T4g, and T3 instance types in the AWS Europe (Zurich) Region.\n  Amazon Neptune Database is a fast, reliable, and fully managed graph database as a service that makes it easy to build and run applications work with highly connected datasets. You can build applications using Apache TinkerPop Gremlin or openCypher on the Property Graph model, or using the SPARQL query language on W3C Resource Description Framework (RDF). Neptune also offers enterprise features such as high availability, automated backups, and network isolation to help customers quickly deploy applications to production.\n  To get started, you can create a new Neptune cluster using the AWS Management Console, AWS CLI, or a quickstart AWS CloudFormation template. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-neptune-zurich-region",
-      "pubDate": "2025-12-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-11031fbb818c",
       "title": "Amazon SES announces email validation",
       "description": "Today, Amazon Simple Email Service (SES) announces email validation, a new capability that helps customers reduce bounce rates and protect sender reputation by validating email addresses before sending. Customers can validate individual addresses via API calls or enable automatic validation across all outbound emails.\n \nEmail validation helps customers maintain list hygiene, reduce bounces and improve delivery by identifying invalid addresses that could damage sender reputation. The API provides detailed validation insights such as syntax checks and DNS records. With Auto Validation enabled, SES automatically reviews every outbound email address with out requiring any code changes. Auto-Validation can be configured at the account level or at the configuration set level using simple toggles in the AWS console, enabling seamless integration with existing workflows.\n \nEmail validation is available in all AWS Regions where Amazon SES is available.\n \nTo learn more, see the documentation on Email Validation in the Amazon SES Developer Guide. To start using Email Validation, visit the Amazon SES console.",
@@ -1411,6 +1393,24 @@
         "msk",
         "ga",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-ca2fb047f73b",
+      "title": "Amazon Neptune Database is now available in the AWS Europe (Zurich) Region",
+      "description": "Amazon Neptune Database is now available in the Europe (Zurich) Region on engine versions 1.4.5.0 and later. You can now create Neptune clusters using R5, R5d, R6g, R6i, X2iedn, T4g, and T3 instance types in the AWS Europe (Zurich) Region.\n  Amazon Neptune Database is a fast, reliable, and fully managed graph database as a service that makes it easy to build and run applications work with highly connected datasets. You can build applications using Apache TinkerPop Gremlin or openCypher on the Property Graph model, or using the SPARQL query language on W3C Resource Description Framework (RDF). Neptune also offers enterprise features such as high availability, automated backups, and network isolation to help customers quickly deploy applications to production.\n  To get started, you can create a new Neptune cluster using the AWS Management Console, AWS CLI, or a quickstart AWS CloudFormation template. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-neptune-zurich-region",
+      "pubDate": "2025-12-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "now-available"
       ]
     },
     {
@@ -1813,6 +1813,32 @@
       ]
     },
     {
+      "id": "aws-news-f8f0c1cb093c",
+      "title": "AWS IAM Identity Center is now available in the Asia Pacific (Taipei) AWS Region",
+      "description": "You can now deploy AWS IAM Identity Center in 37 AWS Regions, including Asia Pacific (Taipei).\n  IAM Identity Center is the recommended service for managing workforce access to AWS applications. It enables you to connect your existing source of workforce identities to AWS once and offer your users single sign on experience across AWS. It powers the personalized experiences offered by AWS applications, such as Amazon Q, and the ability to define and audit user-aware access to data in AWS services, such as Amazon Redshift. It can also help you manage access to multiple AWS accounts from a central place. IAM Identity Center is available at no additional cost in these AWS Regions.\n  To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/aws-iam-identity-center-asia-pacific-taipei-region/",
+      "pubDate": "2025-12-17T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "personalize",
+        "redshift",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "personalize",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "now-available"
+      ]
+    },
+    {
       "id": "aws-news-746dbc3dd116",
       "title": "Amazon EC2 C8i and C8i-flex instances are now available in the Asia Pacific (Singapore) Region",
       "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Asia Pacific (Singapore) region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
@@ -1852,32 +1878,6 @@
         "redshift",
         "enhancement",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f8f0c1cb093c",
-      "title": "AWS IAM Identity Center is now available in the Asia Pacific (Taipei) AWS Region",
-      "description": "You can now deploy AWS IAM Identity Center in 37 AWS Regions, including Asia Pacific (Taipei).\n  IAM Identity Center is the recommended service for managing workforce access to AWS applications. It enables you to connect your existing source of workforce identities to AWS once and offer your users single sign on experience across AWS. It powers the personalized experiences offered by AWS applications, such as Amazon Q, and the ability to define and audit user-aware access to data in AWS services, such as Amazon Redshift. It can also help you manage access to multiple AWS accounts from a central place. IAM Identity Center is available at no additional cost in these AWS Regions.\n  To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/aws-iam-identity-center-asia-pacific-taipei-region/",
-      "pubDate": "2025-12-17T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "now-available"
       ]
     },
     {
