@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-04T06:16:41.327Z",
+  "lastUpdated": "2026-01-05T06:23:11.489Z",
   "totalItems": 200,
   "sources": {
     "whatsNew": 92,
@@ -1516,25 +1516,6 @@
       ]
     },
     {
-      "id": "aws-news-11031fbb818c",
-      "title": "Amazon SES announces email validation",
-      "description": "Today, Amazon Simple Email Service (SES) announces email validation, a new capability that helps customers reduce bounce rates and protect sender reputation by validating email addresses before sending. Customers can validate individual addresses via API calls or enable automatic validation across all outbound emails.\n \nEmail validation helps customers maintain list hygiene, reduce bounces and improve delivery by identifying invalid addresses that could damage sender reputation. The API provides detailed validation insights such as syntax checks and DNS records. With Auto Validation enabled, SES automatically reviews every outbound email address with out requiring any code changes. Auto-Validation can be configured at the account level or at the configuration set level using simple toggles in the AWS console, enabling seamless integration with existing workflows.\n \nEmail validation is available in all AWS Regions where Amazon SES is available.\n \nTo learn more, see the documentation on Email Validation in the Amazon SES Developer Guide. To start using Email Validation, visit the Amazon SES console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ses-email-validation/",
-      "pubDate": "2025-12-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "integration",
-        "new-capability"
-      ]
-    },
-    {
       "id": "aws-news-357e947057e4",
       "title": "Amazon MSK introduces KRaft support for Express Brokers with Apache Kafka v3.9",
       "description": "Amazon Managed Streaming for Apache Kafka (MSK) now supports Apache Kafka version 3.9 for Express Brokers. This release introduces support for KRaft (Kafka Raft), Apache Kafka's new consensus protocol that eliminates the dependency on Apache ZooKeeper for metadata management. KRaft shifts metadata management in Kafka clusters from external Apache ZooKeeper nodes to a group of controllers within Kafka. This change allows metadata to be stored and replicated as topics within Kafka brokers, resulting in faster propagation of metadata.\n \nNew Express Broker clusters created using Kafka v3.9 will automatically use KRaft as the metadata management mode, giving you the benefits of this modern architecture from the start. The ability to upgrade existing clusters to v3.9 will be available in a future release.\n \nAmazon MSK Express Brokers with Kafka v3.9 are available in all AWS regions where MSK Express is supported. To get started, create a new Express Broker cluster and select Kafka version 3.9 in the AWS Management Console or via the AWS CLI or AWS SDKs.",
@@ -1571,6 +1552,25 @@
       "tags": [
         "cloudformation",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-11031fbb818c",
+      "title": "Amazon SES announces email validation",
+      "description": "Today, Amazon Simple Email Service (SES) announces email validation, a new capability that helps customers reduce bounce rates and protect sender reputation by validating email addresses before sending. Customers can validate individual addresses via API calls or enable automatic validation across all outbound emails.\n \nEmail validation helps customers maintain list hygiene, reduce bounces and improve delivery by identifying invalid addresses that could damage sender reputation. The API provides detailed validation insights such as syntax checks and DNS records. With Auto Validation enabled, SES automatically reviews every outbound email address with out requiring any code changes. Auto-Validation can be configured at the account level or at the configuration set level using simple toggles in the AWS console, enabling seamless integration with existing workflows.\n \nEmail validation is available in all AWS Regions where Amazon SES is available.\n \nTo learn more, see the documentation on Email Validation in the Amazon SES Developer Guide. To start using Email Validation, visit the Amazon SES console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ses-email-validation/",
+      "pubDate": "2025-12-18T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "integration",
+        "new-capability"
       ]
     },
     {
@@ -2568,23 +2568,26 @@
       ]
     },
     {
-      "id": "aws-news-bf9d1270943d",
-      "title": "AWS DataSync increases scalability and performance for on-premises file transfers",
-      "description": "AWS DataSync Enhanced mode now supports data transfers between on-premises file servers and Amazon S3, enabling customers to transfer datasets that scale to virtually unlimited numbers of files at higher levels of performance than DataSync Basic mode.\n  AWS DataSync is a secure, high-speed file transfer service that optimizes data movement over a network. Enhanced mode uses parallel processing to deliver higher performance and scalability for datasets of any size, while removing file count limitations and providing detailed transfer metrics for better monitoring and management. Previously, Enhanced mode was available for data transfers between Amazon S3 locations and for multicloud transfers. This launch extends the capabilities of Enhanced mode to support transfers between on-premises NFS or SMB file servers, and Amazon S3. Using Enhanced mode, customers can accelerate generative AI workloads by rapidly moving training datasets to AWS, power data lake analytics by synchronizing on-premises data with cloud-based pipelines, and drive large-scale migrations for archival and cloud modernization.\n  This new capability is available in all AWS Regions where AWS DataSync is offered. To get started, visit the AWS DataSync console. For more information, see the AWS DataSync documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/aws-datasync-scalability-performance-on-premises-file-transfers",
+      "id": "aws-news-e86106073841",
+      "title": "AWS Shield network security director now supports multi-account analysis",
+      "description": "Today, AWS Shield announces multi-account network security management and automated network analysis for network security director, which is currently in preview. AWS Shield network security director provides visibility into the AWS resources in your AWS organization, identifies missing or misconfigured network security services, and recommends remediation steps.\n  With network security director, you can specify a delegated administrator account from which you can start continuous network analysis for multiple accounts or organizational units in your AWS Organization. You can then centrally view each account’s network topology, network security findings, and recommended remediations for missing or misconfigured network security services. You can also easily summarize and report on the network security misconfigurations identified by AWS Shield network security director from within Amazon Q Developer in the AWS Management Console and chat applications.\n  AWS Shield network security director is also now available in five additional AWS regions: Europe (Ireland), Europe (Frankfurt), Asia Pacific (Hong Kong), Asia Pacific (Singapore), and Australia (Sydney).\n  To learn more, visit the overview page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/aws-shield-network-security-director-multi-account-analysis",
       "pubDate": "2025-12-12T15:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "s3"
+        "amazon q",
+        "q developer"
       ],
       "categories": [
         "generative-ai"
       ],
       "tags": [
-        "s3",
-        "launch",
-        "support",
-        "new-capability"
+        "amazon q",
+        "q developer",
+        "preview",
+        "ga",
+        "now-available",
+        "support"
       ]
     },
     {
