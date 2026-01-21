@@ -1,8 +1,50 @@
 {
-  "lastUpdated": "2026-01-20T06:19:57.491Z",
+  "lastUpdated": "2026-01-21T06:20:01.770Z",
   "category": "ai-safety",
   "totalItems": 31,
   "items": [
+    {
+      "id": "aws-news-53f06ad01cdb",
+      "title": "Enterprise scale in-place migration to Apache Iceberg: Implementation guide",
+      "description": "Organizations managing large-scale analytical workloads increasingly face challenges with traditional Apache Parquet-based data lakes with Hive-style partitioning, including slow queries, complex file management, and limited consistency guarantees. Apache Iceberg addresses these pain points by providing ACID transactions, seamless schema evolution, and point-in-time data recovery capabilities that transform how enterprises handle their data infrastructure. In this post, we demonstrate how you can achieve migration at scale from existing Parquet tables to Apache Iceberg tables. Using Amazon DynamoDB as a central orchestration mechanism, we show how you can implement in-place migrations that are highly configurable, repeatable, and fault-tolerant.",
+      "link": "https://aws.amazon.com/blogs/big-data/enterprise-scale-in-place-migration-to-apache-iceberg-implementation-guide/",
+      "pubDate": "2026-01-20T20:24:01.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "lex",
+        "dynamodb",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "dynamodb",
+        "organizations",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-bcd72fc21d6c",
+      "title": "AWS expands managed integrations for AWS IoT Device Management service coverage to the Middle East (UAE) region",
+      "description": "AWS IoT Device Management now offers the managed integrations feature in the Middle East (UAE) region. Organizations operating in this region can now better serve their local customers, helping them build unified Internet of Things (IoT) solutions that can easily onboard and manage diverse IoT devices through a single interface, regardless of connection type - direct, hub-based, or third-party cloud-based.\n  Managed integrations provides developers with a unified interface and device SDKs supporting ZigBee, Z-Wave, Matter and Wi-Fi protocols. The feature includes partner built cloud-to-cloud connectors and 80+ device data model templates based on AWS's implementation of the Matter data model standard. These capabilities allow developers to rapidly integrate devices into end user applications, such as home security, energy management, and elderly care monitoring.\n  The managed integrations feature is available in Canada (Central), Europe (Ireland) and Middle East (UAE) regions. To learn more, refer to the developer guide and get started on the AWS IoT console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/managed-integrations-iot-device-coverage-uae/",
+      "pubDate": "2026-01-20T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-7db19ac88c01",
       "title": "Second-generation AWS Outposts racks are now supported in additional AWS Regions",
@@ -92,7 +134,7 @@
     {
       "id": "aws-news-30ae03a6eb5a",
       "title": "AWS Lambda announces cross-account access for DynamoDB Streams",
-      "description": "AWS Lambda now supports cross-account access for AWS DynamoDB Streams event-source mappings (ESMs),\n enabling you to trigger Lambda functions in one account from DynamoDB Streams in another account.\n  Customers build event-driven applications using Lambda's fully-managed DynamoDB Streams ESMs, which poll change events from DynamoDB tables and trigger your Lambda functions. Organizations implementing multi-account architectures—whether to centralize event processing or share events with partner teams—previously needed to build complex data replication solutions to share data across accounts, which added operational overhead . With this launch, you can now provide cross-account access to your DynamoDB Streams to trigger Lambda functions in another account. By setting a resource-based policy on your DynomoDB stream, you can enable a Lambda function in one account to access DynomoDB stream in another account. This capability allows you to simplify your streaming applications across accounts without the overhead of replication solutions in each account.\n  This feature is generally available in all AWS Commercial and AWS GovCloud (US) Regions. You can enable cross-account Lambda triggers by creating resource-based policies for your DynamoDB Streams using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, or AWS APIs. To learn more, read Lambda ESM documentation.",
+      "description": "AWS Lambda now supports cross-account access for AWS DynamoDB Streams event-source mappings (ESMs), enabling you to trigger Lambda functions in one account from DynamoDB Streams in another account.\n  Customers build event-driven applications using Lambda's fully-managed DynamoDB Streams ESMs, which poll change events from DynamoDB tables and trigger your Lambda functions. Organizations implementing multi-account architectures—whether to centralize event processing or share events with partner teams—previously needed to build complex data replication solutions to share data across accounts, which added operational overhead. With this launch, you can now provide cross-account access to your DynamoDB Streams to trigger Lambda functions in another account. By setting a resource-based policy on your DynamoDB stream, you can enable a Lambda function in one account to access a DynamoDB stream in another account. This capability allows you to simplify your streaming applications across accounts without the overhead of replication solutions in each account.\n  This feature is generally available in all AWS Commercial and AWS GovCloud (US) Regions. You can enable cross-account Lambda triggers by creating resource-based policies for your DynamoDB Streams using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, or AWS APIs. To learn more, read Lambda ESM documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-lambda-cross-account-access-dynamodb-streams",
       "pubDate": "2026-01-15T15:00:00.000Z",
       "source": "whatsNew",
@@ -497,50 +539,6 @@
         "ga",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-3a0b23aaaa74",
-      "title": "Announcing Cost Allocation Tags support for Account Tags",
-      "description": "AWS announces Cost Allocation tags support for account tags across AWS Cost Management products, enabling customers with multiple member accounts to utilize their existing AWS Organizations account tags directly in cost management tools. Account tags are applied at the account level in AWS Organizations and automatically apply to all metered usage within tagged accounts, eliminating the need to manually configure and maintain separate account groupings in AWS Cost Explorer, Cost and Usage Reports, AWS Budgets, and Cost Categories.\n  With account tag support, customers can analyze costs by account tag directly in Cost Explorer and Cost and Usage Reports (CUR 2.0 and FOCUS). Customers can set up AWS Budgets and AWS Cost Anomaly Detection alerts on groups of accounts without configuring lists of account IDs. Customers can also build complex cost categories on top of account tags for further categorization. Account tags enable cost allocation for untaggable resources including refunds, credits, and certain service charges that cannot be tagged at the resource level. When new accounts join the organization or existing accounts are removed, customers simply add or update relevant tags, and the changes automatically apply across all cost management products. To get started, customers apply tags to accounts in the AWS Organizations console, then activate those account tags from the Cost Allocation Tags page in the Billing and Cost Management console. This feature is generally available in all AWS Regions, excluding GovCloud (US) Regions and China (Beijing) and China (Ningxia) Regions.\n  To learn more, see organizing and tracking costs using AWS cost allocation tags.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/cost-allocation-tags/",
-      "pubDate": "2025-12-19T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "generally-available",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c694bd28e528",
-      "title": "Amazon WorkSpaces Applications announces Elastic fleets powered by Ubuntu Pro 24.04 LTS",
-      "description": "Amazon WorkSpaces Applications now offers support for Ubuntu Pro 24.04 LTS on Elastic fleets, enabling Independent Software Vendors (ISVs) and central IT organizations to stream Ubuntu desktop applications to users while leveraging the flexibility, scalability, and cost-effectiveness of the AWS Cloud.\n  Amazon WorkSpaces Applications is a fully managed, secure desktops and applications streaming service that provides users with instant access to their desktops and applications from anywhere. Within Amazon WorkSpaces Applications, Elastic fleet is a server less fleet type that lets you stream desktop applications to your end users from an AWS-managed pool of streaming instances without needing to predict usage, create and manage scaling policies, or create an image. Elastic fleet type is designed for customers that want to stream applications to users without managing any capacity or creating WorkSpaces Applications images.\n  To get started sign into the WorkSpaces Applications management console and select one of the AWS Region of your choice. For the full list of Regions where WorkSpaces Applications is available, see the AWS Region Table. Amazon WorkSpaces Applications offers pay-as-you-go pricing. For more information, see Amazon WorkSpaces Applications Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-workspaces-ubuntu-elasticfleets",
-      "pubDate": "2025-12-18T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "ga",
-        "support"
       ]
     },
     {
