@@ -1,8 +1,51 @@
 {
-  "lastUpdated": "2026-01-21T06:20:01.770Z",
+  "lastUpdated": "2026-01-22T06:18:54.913Z",
   "category": "ai-safety",
   "totalItems": 31,
   "items": [
+    {
+      "id": "aws-news-8f1bbe211d4c",
+      "title": "AWS introduces additional policy details to access denied error messages",
+      "description": "AWS now includes the AWS Identity and Access Management (IAM) and AWS Organizations policy’s Amazon Resource Name (ARN) in access denied error messages in same account and same organization scenarios. This allows you to quickly identify the exact policy responsible for the denied access and take action to troubleshoot the issue.\n  Before this launch, customers had to identify the root cause of access denied errors based only on the policy type in the error message. This launch expedites troubleshooting when you have multiple policies of the same type, as you can directly see which policy to address for explicit deny cases. The error message now includes the policy ARN for Service Control Policies (SCP), Resource Control Policies (RCP), identity-based policies, session policies, and permission boundaries.\n  This additional context will gradually become available across AWS services in all AWS regions. To learn more, refer to IAM documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/additional-policy-details-access-denied-error/",
+      "pubDate": "2026-01-21T16:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "organizations",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-5744eceba18f",
+      "title": "AWS Transfer Family Terraform module now supports web apps",
+      "description": "You can now use the AWS Transfer Family Terraform module to deploy Transfer Family web apps, which enable end users to transfer files to and from Amazon S3 over a web interface. This release streamlines centralized provisioning of web apps with federated authentication and user access controls, enabling consistent, repeatable deployments through infrastructure as code.\n  With Transfer Family web apps, you can provide your workforce with a fully managed, branded web portal to browse, upload, and download data in S3. In a single deployment, this module allows you to programmatically provision your web apps that authenticate users through AWS IAM Identity Center using your existing identity provider and Amazon S3 Access Grants for fine-grained user permissions. An included end-to-end example shows you how to assign and optionally create IAM Identity Center users and groups, configure S3 Access Grants, set up the web app, and enable security auditing through Amazon CloudTrail.\n  You can get started by downloading the new module from the Terraform Registry. To learn more about Transfer Family web apps, visit the user guide. To see all the regions where Transfer Family web apps is available, visit the AWS Region table.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-transfer-family-terraform-webapps",
+      "pubDate": "2026-01-21T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "iam",
+        "iam identity center",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-53f06ad01cdb",
       "title": "Enterprise scale in-place migration to Apache Iceberg: Implementation guide",
@@ -134,7 +177,7 @@
     {
       "id": "aws-news-30ae03a6eb5a",
       "title": "AWS Lambda announces cross-account access for DynamoDB Streams",
-      "description": "AWS Lambda now supports cross-account access for AWS DynamoDB Streams event-source mappings (ESMs), enabling you to trigger Lambda functions in one account from DynamoDB Streams in another account.\n  Customers build event-driven applications using Lambda's fully-managed DynamoDB Streams ESMs, which poll change events from DynamoDB tables and trigger your Lambda functions. Organizations implementing multi-account architectures—whether to centralize event processing or share events with partner teams—previously needed to build complex data replication solutions to share data across accounts, which added operational overhead. With this launch, you can now provide cross-account access to your DynamoDB Streams to trigger Lambda functions in another account. By setting a resource-based policy on your DynamoDB stream, you can enable a Lambda function in one account to access a DynamoDB stream in another account. This capability allows you to simplify your streaming applications across accounts without the overhead of replication solutions in each account.\n  This feature is generally available in all AWS Commercial and AWS GovCloud (US) Regions. You can enable cross-account Lambda triggers by creating resource-based policies for your DynamoDB Streams using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, or AWS APIs. To learn more, read Lambda ESM documentation.",
+      "description": "AWS Lambda now supports cross-account access for Amazon DynamoDB Streams event-source mappings (ESMs), enabling you to trigger Lambda functions in one account from DynamoDB Streams in another account.\n  Customers build event-driven applications using Lambda's fully-managed DynamoDB Streams ESMs, which poll change events from DynamoDB tables and trigger your Lambda functions. Organizations implementing multi-account architectures—whether to centralize event processing or share events with partner teams—previously needed to build complex data replication solutions to share data across accounts, which added operational overhead. With this launch, you can now provide cross-account access to your DynamoDB Streams to trigger Lambda functions in another account. By setting a resource-based policy on your DynamoDB stream, you can enable a Lambda function in one account to access a DynamoDB stream in another account. This capability allows you to simplify your streaming applications across accounts without the overhead of replication solutions in each account.\n  This feature is generally available in all AWS Commercial and AWS GovCloud (US) Regions. You can enable cross-account Lambda triggers by creating resource-based policies for your DynamoDB Streams using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, or AWS APIs. To learn more, read Lambda ESM documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-lambda-cross-account-access-dynamodb-streams",
       "pubDate": "2026-01-15T15:00:00.000Z",
       "source": "whatsNew",
@@ -376,23 +419,6 @@
       ]
     },
     {
-      "id": "aws-news-32ca39c0450f",
-      "title": "Detect and redact personally identifiable information using Amazon Bedrock Data Automation and Guardrails",
-      "description": "This post shows an automated PII detection and redaction solution using Amazon Bedrock Data Automation and Amazon Bedrock Guardrails through a use case of processing text and image content in high volumes of incoming emails and attachments. The solution features a complete email processing workflow with a React-based user interface for authorized personnel to more securely manage and review redacted email communications and attachments. We walk through the step-by-step solution implementation procedures used to deploy this solution. Finally, we discuss the solution benefits, including operational efficiency, scalability, security and compliance, and adaptability.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/detect-and-redact-personally-identifiable-information-using-amazon-bedrock-data-automation-and-guardrails/",
-      "pubDate": "2026-01-08T16:14:27.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-81bf405c0a0c",
       "title": "AWS analytics at re:Invent 2025: Unifying Data, AI, and governance at scale",
       "description": "re:Invent 2025 showcased the bold Amazon Web Services (AWS) vision for the future of analytics, one where data warehouses, data lakes, and AI development converge into a seamless, open, intelligent platform, with Apache Iceberg compatibility at its core. Across over 18 major announcements spanning three weeks, AWS demonstrated how organizations can break down data silos, […]",
@@ -512,33 +538,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-5809a9bf86f8",
-      "title": "Amazon ECS Service Connect enhances observability with Envoy access logs in AWS GovCloud (US) Regions",
-      "description": "Amazon Elastic Container Service (Amazon ECS) Service Connect now supports Envoy access logs, providing deeper observability into request-level traffic patterns and service interactions. This new capability captures detailed per-request telemetry for end-to-end tracing, debugging, and compliance monitoring.\n  Amazon ECS Service Connect makes it simple to build secure, resilient service-to-service communication across clusters, VPCs, and AWS accounts. It integrates service discovery and service mesh capabilities by automatically injecting AWS-managed Envoy proxies as sidecars that handle traffic routing, load balancing, and inter-service connectivity. Envoy Access logs capture detailed traffic metadata enabling request-level visibility into service communication patterns. This enables you to perform network diagnostics, troubleshoot issues efficiently, and maintain audit trails for compliance requirements.\n  You can now configure access logs within ECS Service Connect by updating the ServiceConnectConfiguration to enable access logging. Query strings are redacted by default to protect sensitive data. Envoy access logs will output to the standard output (STDOUT) stream alongside application logs and flow through the existing ECS log pipeline without requiring additional infrastructure. This configuration supports all existing application protocols (HTTP, HTTP2, GRPC and TCP). This feature is available with both Fargate and EC2 launch modes in AWS GovCloud (US-West) and AWS GovCloud (US-East) regions via the AWS Management Console, API, SDK, CLI, and CloudFormation. To learn more, visit the Amazon ECS Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ecs-service-connect-observability-envoy-access-logs-govcloud-regions",
-      "pubDate": "2025-12-22T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "cloudformation"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "cloudformation",
-        "launch",
-        "ga",
-        "support",
-        "new-capability"
       ]
     },
     {
