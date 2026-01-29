@@ -1,8 +1,49 @@
 {
-  "lastUpdated": "2026-01-28T06:20:13.711Z",
+  "lastUpdated": "2026-01-29T06:32:38.943Z",
   "category": "general",
   "totalItems": 56,
   "items": [
+    {
+      "id": "aws-news-591b2484673e",
+      "title": "Amazon EKS and Amazon EKS Distro now supports Kubernetes version 1.35",
+      "description": "Kubernetes version 1.35 introduced several new features and bug fixes, and AWS is excited to announce that you can now use Amazon Elastic Kubernetes Service (EKS) and Amazon EKS Distro to run Kubernetes version 1.35. Starting today, you can create new EKS clusters using version 1.35 and upgrade existing clusters to version 1.35 using the EKS console, the eksctl command line interface, or through an infrastructure-as-code tool.\n  Kubernetes version 1.35 introduces several key improvements, including In-Place Pod Resource Updates allowing CPU and memory adjustments without restarting Pods, and PreferSameNode Traffic Distribution prioritizing local endpoints before routing to remote nodes for reduced latency. The release brings Node Topology Labels via Downward API enabling Pods to access region and zone information without API server queries, alongside Image Volumes delivering data artifacts like AI models using OCI container images. To learn more about the changes in Kubernetes version 1.35, see our documentation and the Kubernetes project release notes.\n  EKS now supports Kubernetes version 1.35 in all the AWS Regions where EKS is available, including the AWS GovCloud (US) Regions.\n  You can learn more about the Kubernetes versions available on EKS and instructions to update your cluster to version 1.35 by visiting EKS documentation. You can use EKS cluster insights to check if there are any issues that can impact your Kubernetes cluster upgrades. EKS Distro builds of Kubernetes version 1.35 are available through ECR Public Gallery and GitHub. Learn more about the EKS version lifecycle policies in the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-eks-distro-kubernetes-version-1-35",
+      "pubDate": "2026-01-28T23:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "ga",
+        "new-feature",
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-37975a0c5311",
+      "title": "Amazon DynamoDB global tables with multi-Region strong consistency now supports application resiliency testing with AWS Fault Injection Service",
+      "description": "Amazon DynamoDB global tables with multi-Region strong consistency (MRSC) now supports application resiliency testing with AWS Fault Injection Service (FIS), a fully managed service for running controlled fault injection experiments to improve application performance, observability, and resilience. With this launch, you can create real-world failure scenarios to MRSC global tables, such as during regional failures, enabling you to observe how your applications respond to these disruptions and validate your resilience mechanisms.\n  MRSC global tables replicate your DynamoDB tables automatically across your choice of AWS Regions to achieve fast, strongly consistent read and write performance, providing you 99.999% availability, increased application resiliency, and improved business continuity. FIS is a fully managed service for running controlled fault injection experiments to improve an application’s performance, observability, and resilience. You can use the new FIS action to observe how your application responds to a pause in regional replication and tune monitoring and recovery processes to improve resiliency and application availability.\n  MRSC global tables support for FIS is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Tokyo), Asia Pacific (Osaka), Asia Pacific (Seoul), Europe (Ireland), Europe (London), Europe (Frankfurt), and Europe (Paris). To get started, visit the DynamoDB FIS actions documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-dynamodb-global-tables-with-mrsc-fis/",
+      "pubDate": "2026-01-28T11:38:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-5b3d440a0b45",
       "title": "AWS Deadline Cloud now supports editing job name and description",
@@ -574,48 +615,6 @@
         "now-available",
         "new-feature",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-de0711858c3c",
-      "title": "Amazon EC2 M8i instances are now available in additional AWS Regions",
-      "description": "Starting today, Amazon EC2 M8i instances are now available in Europe (Frankfurt) and Asia Pacific (Malaysia) Regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i instances, with even higher gains for specific workloads. The M8i instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i instances.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i instance page or visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-ec2-m8i-instances-additional-regions/",
-      "pubDate": "2026-01-08T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-aed286168341",
-      "title": "AWS Lambda adds support for .NET 10",
-      "description": "AWS Lambda now supports creating serverless applications using .NET 10. Developers can use .NET 10 as both a managed runtime and a container base image, and AWS will automatically apply updates to the managed runtime and base image as they become available.\n  .NET 10 is the latest long-term support release of .NET and is expected to be supported for security and bug fixes until November 2028. This release provides Lambda developers with access to the latest .NET features, including file-based apps. It also includes support for Lambda Managed Instances, enabling you to run Lambda functions on Amazon EC2 instances while maintaining serverless operational simplicity, providing cost efficiency and specialized compute options. Powertools for AWS Lambda (.NET), a developer toolkit to implement serverless best practices and increase developer velocity, also supports .NET 10. You can use the full range of AWS deployment tools, including the Lambda console, AWS CLI, AWS Serverless Application Model (AWS SAM), AWS CDK, and AWS CloudFormation to deploy and manage serverless applications written in .NET 10.\n  The .NET 10 runtime is available in all Regions, including the AWS GovCloud (US) Regions and China Regions.\n  For more information, including guidance on upgrading existing Lambda functions, see our blog post. For more information about AWS Lambda, visit our product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-lambda-dot-net-10/",
-      "pubDate": "2026-01-08T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "cloudformation",
-        "update",
         "support"
       ]
     },
