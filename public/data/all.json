@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-01-30T06:33:57.600Z",
-  "totalItems": 203,
+  "lastUpdated": "2026-01-31T06:24:00.158Z",
+  "totalItems": 202,
   "sources": {
-    "whatsNew": 92,
+    "whatsNew": 91,
     "mlBlog": 20,
     "newsBlog": 20,
     "bigDataBlog": 18,
@@ -11,6 +11,242 @@
     "developersAndDevOps": 17
   },
   "items": [
+    {
+      "id": "aws-news-99b1a7d7c5d6",
+      "title": "Evaluating generative AI models with Amazon Nova LLM-as-a-Judge on Amazon SageMaker AI",
+      "description": "Evaluating the performance of large language models (LLMs) goes beyond statistical metrics like perplexity or bilingual evaluation understudy (BLEU) scores. For most real-world generative AI scenarios, it’s crucial to understand whether a model is producing better outputs than a baseline or an earlier iteration. This is especially important for applications such as summarization, content generation, […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/evaluating-generative-ai-models-with-amazon-nova-llm-as-a-judge-on-amazon-sagemaker-ai/",
+      "pubDate": "2026-01-30T21:07:34.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova",
+        "sagemaker",
+        "lex"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "sagemaker",
+        "lex"
+      ]
+    },
+    {
+      "id": "aws-news-9d73697199bf",
+      "title": "Sovereign failover – Design for digital sovereignty using the AWS European Sovereign Cloud",
+      "description": "This post explores the architectural patterns, challenges, and best practices for building cross-partition failover, covering network connectivity, authentication, and governance. By understanding these constraints, you can design resilient cloud-native applications that balance regulatory compliance with operational continuity.",
+      "link": "https://aws.amazon.com/blogs/architecture/sovereign-failover-design-for-digital-sovereignty-using-the-aws-european-sovereign-cloud/",
+      "pubDate": "2026-01-30T19:09:35.000Z",
+      "source": "architectureBlog",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-d3a02636592d",
+      "title": "Amazon SageMaker Unified Studio now supports AWS PrivateLink",
+      "description": "Today, Amazon SageMaker announced a new capability allowing you to establish connectivity between your Amazon Virtual Private Cloud (VPC) and Amazon SageMaker Unified Studio without customer data traffic going through the public internet. Customers needing to go beyond the standard data transfer protocol (HTTPS/TLS2) can choose to configure their VPC so data transfer stays within the AWS network.\n  Through AWS PrivateLink, Network Administrators can now onboard AWS service endpoints to their VPC used by Amazon SageMaker Unified Studio. With the endpoints are onboarded, IAM policies used by Amazon SageMaker will enforce that customer data stay within the AWS network.\n  Amazon SageMaker private access using AWS PrivateLink is available in all AWS Regions where Amazon SageMaker Unified Studio is supported, including: Asia Pacific (Tokyo), Europe (Ireland), US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), South America (São Paulo), Asia Pacific (Seoul), Europe (London), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central), Asia Pacific (Mumbai), Europe (Paris), Europe (Stockholm)\n  To learn more, visit Amazon SageMaker then get started with the network isolation documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-sagemaker-unified-studio-aws-privatelink/",
+      "pubDate": "2026-01-30T19:08:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "iam"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "iam",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-de8fee3e90e2",
+      "title": "Amazon ECS now publishes container health status as a CloudWatch metric",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now publishes container health status as a new metric in CloudWatch Container Insights with enhanced observability. Customers can now track the operational health of their containers through a dedicated CloudWatch metric and create alarms to respond proactively to unhealthy containers.\n  When customers configure a container health check in the container definition of an ECS task definition, Container Insights now publishes the UnHealthyContainerHealthStatus metric in the ECS/ContainerInsights namespace. The metric reports 0 for HEALTHY and 1 for UNHEALTHY. Container health state information is also available in embedded metric format (EMF) logs, providing additional context while health checks are being evaluated during the UNKNOWN state. The metric is available across cluster, service, task, and container-level dimensions, enabling customers to monitor health at their preferred level of granularity. Customers can create CloudWatch alarms on the metric to receive notifications when containers become unhealthy, allowing teams to take immediate action and maintain application reliability.\n  To get started, enable Container Insights with enhanced observability on your ECS cluster and configure a container health check in your task definition to start collecting the metric in CloudWatch. Container health metric is available in all AWS Regions where Amazon ECS Container Insights is supported. For more information, see the Amazon ECS container health checks documentation and the CloudWatch Container Insights documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-ecs-container-health-status-metric/",
+      "pubDate": "2026-01-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e885c03017e1",
+      "title": "AWS Lambda launches enhanced observability for Kafka event source mappings",
+      "description": "AWS Lambda launches enhanced observability for Kafka event source mappings (ESM) that provides Amazon CloudWatch Logs and metrics to monitor event polling setup, scaling, and processing state of Kafka events. This capability allows customers to quickly diagnose setup issues and take timely corrective actions to operate resilient data streaming workloads. This capability is available for both Amazon Managed Streaming for Apache Kafka (Amazon MSK) and self-managed Apache Kafka (SMK) event source mappings.\n  Customers use Kafka event source mappings (ESM) with their Lambda functions to build mission-critical applications. However, the lack of visibility into event polling setup, scaling, and processing state for events slows down troubleshooting for issues resulting from faulty permissions, misconfiguration, or function errors, which increases mean time to resolution and adds operational overhead. With this launch, customers can enable CloudWatch Logs and metrics to monitor their Kafka polling setup, scaling, and event processing state. Customers can select from multiple log level options that provide logs ranging from warnings and errors to detailed information about event processing progress. Similarly, customers can enable one or more metrics groups—EventCount, ErrorCount, and KafkaMetrics—to monitor various aspects of event processing. Customers can view all their metrics and logs via a dedicated monitoring page on AWS Console for ESM. This capability allows customers to utilize their observability tooling to quickly diagnose setup issues and track performance metrics to meet their stringent business requirements.\n  This feature is available in all AWS Commercial Regions where AWS Lambda's Provisioned mode for Kafka ESM is available.\n  You can enable ESM logs and metrics for your Kafka ESM using AWS Lambda's Create and Update ESM APIs, AWS Console, AWS CLI, AWS SDK, AWS CloudFormation, and AWS SAM. To learn more about these capabilities, visit the Lambda Kafka ESM developer documentation. These logs and metrics are charged at standard CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-Lambda-observability-for-kafka-esm/",
+      "pubDate": "2026-01-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "kafka",
+        "msk",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "kafka",
+        "msk",
+        "cloudwatch",
+        "launch",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-d2c43410cffb",
+      "title": "Simplify ModelOps with Amazon SageMaker AI Projects using Amazon S3-based templates",
+      "description": "This post explores how you can use Amazon S3-based templates to simplify ModelOps workflows, walk through the key benefits compared to using Service Catalog approaches, and demonstrates how to create a custom ModelOps solution that integrates with GitHub and GitHub Actions—giving your team one-click provisioning of a fully functional ML environment.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/simplify-modelops-with-amazon-sagemaker-ai-projects-using-amazon-s3-based-templates/",
+      "pubDate": "2026-01-30T17:18:57.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "s3"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "s3"
+      ]
+    },
+    {
+      "id": "aws-news-050a26e65371",
+      "title": "Scale AI in South Africa using Amazon Bedrock global cross-Region inference with Anthropic Claude 4.5 models",
+      "description": "In this post, we walk through how global cross-Region inference routes requests and where your data resides, then show you how to configure the required AWS Identity and Access Management (IAM) permissions and invoke Claude 4.5 models using the global inference profile Amazon Resource Name (ARN). We also cover how to request quota increases for your workload. By the end, you'll have a working implementation of global cross-Region inference in af-south-1.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/scale-ai-in-south-africa-using-amazon-bedrock-global-cross-region-inference-with-anthropic-claude-4-5-models/",
+      "pubDate": "2026-01-30T17:12:02.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "iam"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "iam"
+      ]
+    },
+    {
+      "id": "aws-news-a5ee2c4193c6",
+      "title": "New Partner Revenue Measurement gives visibility into AWS service consumption",
+      "description": "Today, AWS announces the launch of Partner Revenue Measurement, a new capability that gives AWS Partners visibility into how their solutions impact AWS service consumption across partner-managed and customer-managed accounts.\n \nPartner Revenue Measurement allows Partners to better understand their AWS revenue impact and product consumption patterns. Partners can now tag AWS resources using the product code from their AWS Marketplace listing with tag key: aws-apn-id and tag value: pc:<AWS Marketplace product-code> to quantify and measure the AWS revenue impact of that solution.\n \nPartner Revenue Measurement is generally available in all commercial regions. To learn more about implementing Partner Revenue Measurement, review the onboarding guide for more information.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/new-partner-revenue-measurement",
+      "pubDate": "2026-01-30T17:05:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "generally-available",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-7d122c4fc702",
+      "title": "Amazon GameLift Streams expands streaming capability to six new regions",
+      "description": "Starting today, Amazon GameLift Streams provides streaming capabilities in six new locations - eu-west-2 (London), eu-north-1 (Stockholm), sa-east-1 (São Paulo), ap-south-1 (Mumbai), ap-northeast-2 (Seoul), and ap-southeast-2 (Sydney) for all customers.\n  New streaming locations enable customers to provide low latency streaming experiences to their players in Europe, South America, India, and Asia regions. Additionally, these locations increase overall GPU availability, enabling customers to scale their streaming services more effectively.\n  The service supports all stream classes in these new regions.\n  To get started, customers need to edit Location and capacity configurations to add new locations to their new or existing stream groups via console or CLI.\n  For more details, see Amazon GameLift Streams developer guide: AWS Regions and remote locations",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/glstreams-new-regions",
+      "pubDate": "2026-01-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support",
+        "new-region"
+      ]
+    },
+    {
+      "id": "aws-news-99ce658c7d73",
+      "title": "Amazon EC2 R8a instances are now available in Europe (Spain) and Europe (Frankfurt) Regions",
+      "description": "Starting today, Amazon EC2 R8a instances are now available in Europe (Spain) and Europe (Frankfurt) Regions. These instances, feature 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to R7a instances.\n  R8a instances deliver 45% more memory bandwidth compared to R7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 R7a instances, R8a instances provide up to 60% faster performance for GroovyJVM, allowing higher request throughput and better response times for business-critical applications.\n  Built on the AWS Nitro System using sixth generation Nitro Cards, R8a instances are ideal for high performance, memory-intensive workloads, such as SQL and NoSQL databases, distributed web scale in-memory caches, in-memory databases, real-time big data analytics, and Electronic Design Automation (EDA) applications. R8a instances offer 12 sizes including 2 bare metal sizes. Amazon EC2 R8a instances are SAP-certified, and providing 38% more SAPS compared to R7a instances.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the Amazon EC2 R8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-ec2-r8a-instances-are-available-europe",
+      "pubDate": "2026-01-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-57f8bfeb6fb5",
+      "title": "Amazon RDS for Oracle now supports cross-Region replicas with additional storage volumes",
+      "description": "Amazon RDS for Oracle now supports cross-Region replicas with additional storage volumes. With additional storage volumes, customers can add up to three storage volumes, each with up to 64 TiB, in addition to the primary storage volume for their database instance. As a result, customers get flexibility to add or remove storage with evolving workload demands, without incurring application downtime, and set up their database instance with up to 256 TiB storage. Now, with support for cross-Region replicas, customers that set up database instances with cross-Region replicas for business-critical applications also get the benefit of using additional storage volumes for storage flexibility.\n  When you create a cross-Region replica for a database instance that is set up with additional storage volumes, Amazon RDS for Oracle automatically configures the same storage layout on the replica. Subsequently, you can apply changes to additional storage volumes on the primary instance and the replica using the AWS Management Console, AWS CLI, or AWS SDK. In disaster recovery situations, you can promote a cross-Region replica to serve as the new standalone database, or execute a switchover to reverse roles between the primary database and the replica to meet low recovery point objective (RPO) and recovery time objective (RTO) for business critical applications.\n  You will need an Oracle Database Enterprise Edition (EE) license to use replicas in mounted mode, and an additional Oracle Active Data Guard license to use replicas in read-only mode. We recommend consulting your legal team or licensing expert to verify Oracle license requirements for your specific use case. Amazon RDS for Oracle cross-Region replicas with additional storage volumes is available in all AWS Regions including the AWS GovCloud (US) Regions. To learn more, see Amazon RDS for Oracle User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/rds-for-oracle-cross-region-replicas-additional-storage-volumes",
+      "pubDate": "2026-01-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-294ebadd8ed1",
+      "title": "Serverless ICYMI Q4 2025",
+      "description": "Stay current with the latest serverless innovations that can transform your applications. In this 31st quarterly recap, discover the most impactful AWS serverless launches, features, and resources from Q4 2025 that you might have missed.",
+      "link": "https://aws.amazon.com/blogs/compute/serverless-icymi-q4-2025/",
+      "pubDate": "2026-01-30T15:23:57.000Z",
+      "source": "computeBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "nova",
+        "launch"
+      ]
+    },
     {
       "id": "aws-news-2a19d23bfcf0",
       "title": "Announcing the AWS Digital Sovereignty Well-Architected Lens",
@@ -2100,26 +2336,6 @@
       ]
     },
     {
-      "id": "aws-news-dafc81891e3c",
-      "title": "Deploy AI agents on Amazon Bedrock AgentCore using GitHub Actions",
-      "description": "In this post, we demonstrate how to use a GitHub Actions workflow to automate the deployment of AI agents on AgentCore Runtime. This approach delivers a scalable solution with enterprise-level security controls, providing complete continuous integration and delivery (CI/CD) automation.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/deploy-ai-agents-on-amazon-bedrock-agentcore-using-github-actions/",
-      "pubDate": "2026-01-16T15:37:37.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-7db19ac88c01",
       "title": "Second-generation AWS Outposts racks are now supported in additional AWS Regions",
       "description": "Second-generation AWS Outposts racks are now supported in the South America (Sao Paulo) and Europe (Stockholm) Regions. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Europe and South America can now order their Outposts racks connected to these new supported regions, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
@@ -2294,38 +2510,6 @@
         "amazon q",
         "forecast",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-8a1ede3e0418",
-      "title": "How the Amazon AMET Payments team accelerates test case generation with Strands Agents",
-      "description": "In this post, we explain how we overcame the limitations of single-agent AI systems through a human-centric approach, implemented structured outputs to significantly reduce hallucinations and built a scalable solution now positioned for expansion across the AMET QA team and later across other QA teams in International Emerging Stores and Payments (IESP) Org.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-the-amazon-amet-payments-team-accelerates-test-case-generation-with-strands-agents/",
-      "pubDate": "2026-01-15T15:55:35.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-067620c2a122",
-      "title": "Build a generative AI-powered business reporting solution with Amazon Bedrock",
-      "description": "This post introduces generative AI guided business reporting—with a focus on writing achievements & challenges about your business—providing a smart, practical solution that helps simplify and accelerate internal communication and reporting.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-generative-ai-powered-business-reporting-solution-with-amazon-bedrock/",
-      "pubDate": "2026-01-15T15:53:15.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2633,67 +2817,6 @@
       ]
     },
     {
-      "id": "aws-news-c307564321e4",
-      "title": "Amazon Connect Cases now supports AWS CloudFormation",
-      "description": "Amazon Connect Cases now supports AWS CloudFormation, enabling you to model, provision, and manage case resources as infrastructure as code. With this launch, administrators can create CloudFormation templates to programmatically deploy and update their Cases configuration—such as templates, fields, and layouts—across Amazon Connect instances, reducing manual setup time and minimizing configuration errors.\n  Amazon Connect Cases is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town). To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-connect-cases-aws-cloudformation/",
-      "pubDate": "2026-01-13T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "launch",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-72b2396676ac",
-      "title": "Amazon MSK Connect is now available in three additional AWS Regions",
-      "description": "Amazon MSK Connect is now available in three additional AWS Regions: Asia Pacific (New Zealand), AWS GovCloud (US-East), and AWS GovCloud (US-West).\n  MSK Connect enables you to run fully managed Kafka Connect clusters with Amazon Managed Streaming for Apache Kafka (Amazon MSK). With a few clicks, MSK Connect allows you to easily deploy, monitor, and scale connectors that move data in and out of Apache Kafka and Amazon MSK clusters from external systems such as databases, file systems, and search indices. MSK Connect eliminates the need to provision and maintain cluster infrastructure. Connectors scale automatically in response to increases in usage and you pay only for the resources you use. With full compatibility with Kafka Connect, it is easy to migrate workloads without code changes. MSK Connect will support both Amazon MSK-managed and self-managed Apache Kafka clusters.\n  You can get started with MSK Connect from the Amazon MSK console or the Amazon CLI. With this launch, MSK Connect is now available in thirty eight AWS Regions. To get started visit, the MSK Connect product page, pricing page, and the Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-msk-connect-additional-aws-regions",
-      "pubDate": "2026-01-13T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-576b2199ce20",
-      "title": "Amazon Lex launches improved speech recognition models for English",
-      "description": "Amazon Lex now offers a neural automatic speech recognition (ASR) model for English that delivers improved recognition accuracy for your voice bots. Trained on data from multiple English locales, the model excels at recognizing conversational speech patterns across diverse speaking styles, including non-native English speakers and regional accents. This reduces the need for end-customers to repeat themselves and improves self-service success rates. To enable this feature, select \"Neural\" as the speech recognition option in your bot's locale settings.\n  This feature is available in all AWS commercial regions where Amazon Connect and Lex operate. To learn more, visit the Amazon Lex documentation or explore the Amazon Connect website to learn how Amazon Connect and Amazon Lex deliver seamless end-customer self-service experiences.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-lex-improved-speech-recognition-models-english",
-      "pubDate": "2026-01-13T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch"
-      ]
-    },
-    {
       "id": "aws-news-b534fc68b2dc",
       "title": "How Salesforce migrated from Cluster Autoscaler to Karpenter across their fleet of 1,000 EKS clusters",
       "description": "This blog post examines how Salesforce, operating one of the world's largest Kubernetes deployments, successfully migrated from Cluster Autoscaler to Karpenter across their fleet of 1,000 plus Amazon Elastic Kubernetes Service (Amazon EKS) clusters.",
@@ -2711,45 +2834,6 @@
       ]
     },
     {
-      "id": "aws-news-7a070b83b1b0",
-      "title": "Amazon SageMaker HyperPod now validates service quotas before creating clusters on console",
-      "description": "Amazon SageMaker HyperPod console now validates service quotas for your AWS account before initiating cluster creation, enabling you to confirm sufficient quota availability before provisioning begins. SageMaker HyperPod helps you provision resilient clusters for running AI/ML workloads and developing state-of-the-art models such as large language models (LLMs), diffusion models, and foundation models (FMs).\n  When creating large-scale AI/ML clusters, you need to ensure your account has sufficient quotas for instances, storage, and networking resources, but quota validation previously required manual checks across multiple AWS services, often resulting in failed cluster creation attempts and wasted time if you miss requesting quota limit increases. The new quota validation capability in the SageMaker HyperPod console automatically checks your account-level quotas against your cluster configuration, including instance type limits, EBS volume sizes, and VPC-related quotas when creating new resources. The validation displays a clear table showing expected utilization, applied quota values, and compliance status for each quota. When quotas may be exceeded, you receive a warning alert with direct links to the Service Quotas console to request increases.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. For a complete list of service quota validation checks performed, refer to the Amazon SageMaker HyperPod User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-sagemaker-hyperpod-validates-service-quotas/",
-      "pubDate": "2026-01-12T18:10:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dfe386ee3ced",
-      "title": "Amazon Lex launches configurable voice activity detection sensitivity",
-      "description": "Amazon Lex now provides three VAD sensitivity levels that can be configured for each bot locale: Default, High, and Maximum. The Default setting is suitable for most environments with typical background noise levels. High is designed for environments with consistent but moderate noise levels, such as busy offices or retail spaces. Maximum provides the highest tolerance for very noisy environments such as manufacturing floors, construction sites, or outdoor locations with significant ambient noise. You can configure VAD sensitivity when creating or updating a bot locale in the Amazon Connect's Conversational AI designer.\n \nThis feature is available in all AWS commercial regions where Amazon Connect and Lex operate. To learn more, visit the Amazon Lex documentation or explore the Amazon Connect website to learn how Amazon Connect and Amazon Lex deliver seamless end-customer self-service experiences.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-lex-configurable-voice-activity-detection-sensitivity/",
-      "pubDate": "2026-01-12T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch"
-      ]
-    },
-    {
       "id": "aws-news-a998df60ab8a",
       "title": "AWS Weekly Roundup: AWS Lambda for .NET 10, AWS Client VPN quickstart, Best of AWS re:Invent, and more (January 12, 2026)",
       "description": "At the beginning of January, I tend to set my top resolutions for the year, a way to focus on what I want to achieve. If AI and cloud computing are on your resolution list, consider creating an AWS Free Tier account to receive up to $200 in credits and have 6 months of risk-free […]",
@@ -2764,70 +2848,6 @@
       ],
       "tags": [
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-1c50b7748deb",
-      "title": "Amazon Connect now provides agent screen recording status tracking",
-      "description": "Amazon Connect now offers customers the ability to view status of agent screen recordings in near real time in CloudWatch using Amazon EventBridge. With screen recording, supervisors can identify areas for agent coaching (e.g., non-compliance with business processes) by not only listening to customer calls or reviewing chat transcripts, but also watching agents’ actions while handling a contact (i.e., a voice call, chat and task). Using Amazon EventBridge, customers can see status of each agent screen recording including success/failure, failure codes with description, installed client version, agent web browser version, agent operating system, screen recording start and end times from CloudWatch.\n  Customers can start using Amazon Connect screen recording status tracking by subscribing to Screen Recording Status Changed event type in Amazon EventBridge event bus.\n  Screen recording status tracking is available in all the AWS Regions where Amazon Connect is already available. To learn more about screen recording, please visit the documentation and webpage. For information about screen recording pricing, visit the Amazon Connect pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-connect-agent-screen-recording-status-tracking",
-      "pubDate": "2026-01-12T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eventbridge",
-        "cloudwatch"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "eventbridge",
-        "cloudwatch"
-      ]
-    },
-    {
-      "id": "aws-news-9896a7386d6b",
-      "title": "Amazon Redshift Serverless is now available in the AWS Asia Pacific (New Zealand) region",
-      "description": "Amazon Redshift Serverless, which allows you to run and scale analytics without having to provision and manage data warehouse clusters, is now generally available in the AWS Asia Pacific (New Zealand) region. With Amazon Redshift Serverless, all users, including data analysts, developers, and data scientists, can use Amazon Redshift to get insights from data in seconds. Amazon Redshift Serverless automatically provisions and intelligently scales data warehouse capacity to deliver high performance for all your analytics. You only pay for the compute used for the duration of the workloads on a per-second basis. You can benefit from this simplicity without making any changes to your existing analytics and business intelligence applications.\n  With a few clicks in the AWS Management Console, you can get started with querying data using the Query Editor V2 or your tool of choice with Amazon Redshift Serverless. There is no need to choose node types, node count, workload management, scaling, and other manual configurations. You can create databases, schemas, and tables, and load your own data from Amazon S3, access data using Amazon Redshift data shares, or restore an existing Amazon Redshift provisioned cluster snapshot. With Amazon Redshift Serverless, you can directly query data in open formats, such as Apache Parquet, Apache Iceberg in Amazon S3 data lakes. Amazon Redshift Serverless provides unified billing for queries on any of these data sources, helping you efficiently monitor and manage costs.\n  To get started, see the Amazon Redshift Serverless feature page, user documentation, and API Reference.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-redshift-serverless-aws-asia-pacific-new-zealand-region",
-      "pubDate": "2026-01-12T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "generally-available",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-5f58f81f0cbf",
-      "title": "Amazon Inspector adds Java Gradle support and expands ecosystem coverage",
-      "description": "Amazon Inspector scanning for Lambda functions and Elastic Container Registry (ECR) images now supports Java Gradle inventory and vulnerability scanning. This release also adds coverage for MySQL, MariaDB, PHP, Jenkins-core, 7zip (on Windows), Elasticsearch, and Curl/LibCurl. This update enhances Amazon Inspector's ability to detect vulnerabilities and misconfigurations across a broader range of applications and environments. Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure, helping organizations improve their security posture and meet compliance requirements.\n  The new Java Gradle support allows Inspector to scan Java dependencies based on gradle.lockfile content, providing comprehensive vulnerability assessments for Java applications. When you use Inspector to scan Lambda functions and ECR images, you will now see findings for MySQL, MariaDB, PHP, Jenkins-core, 7zip (on Windows), Elasticsearch, and Curl/LibCurl installations. These enhancements enable more accurate detection of vulnerabilities in packages installed outside of package managers, improving overall security coverage for AWS customers using these technologies.\n  To learn more about Amazon Inspector and how it can help secure your AWS workloads, visit the Amazon Inspector page. For a full list of Amazon Inspector supported operating systems and programming languages, see the user guide. You can start using these new features today in all AWS Regions where Amazon Inspector is available.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-inspector-java-gradle-ecosystem/",
-      "pubDate": "2026-01-12T13:51:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lambda",
-        "organizations",
-        "ga",
-        "new-feature",
-        "update",
-        "enhancement",
-        "support"
       ]
     },
     {
@@ -3557,27 +3577,6 @@
       ]
     },
     {
-      "id": "aws-news-05b9bc2e3644",
-      "title": "Python 3.14 runtime now available in AWS Lambda",
-      "description": "AWS Lambda now supports Python 3.14 as both a managed runtime and container base image. Python is a popular language for building serverless applications. Developers can now take advantage of new features and enhancements when creating serverless applications on Lambda.",
-      "link": "https://aws.amazon.com/blogs/compute/python-3-14-runtime-now-available-in-aws-lambda/",
-      "pubDate": "2025-11-18T21:29:50.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "now-available",
-        "new-feature",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-360e834c997a",
       "title": "BASF Digital Farming builds a STAC-based solution on Amazon EKS",
       "description": "This post was co-written with Frederic Haase and Julian Blau with BASF Digital Farming GmbH. At xarvio – BASF Digital Farming, our mission is to empower farmers around the world with cutting-edge digital agronomic decision-making tools. Central to this mission is our crop optimization platform, xarvio FIELD MANAGER, which delivers actionable insights through a range […]",
@@ -3690,21 +3689,6 @@
         "lex",
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-d1d1f77f887e",
-      "title": "How Karrot built a feature platform on AWS, Part 1: Motivation and feature serving",
-      "description": "This two-part series shows how Karrot developed a new feature platform, which consists of three main components: feature serving, a stream ingestion pipeline, and a batch ingestion pipeline. This post starts by presenting our motivation, our requirements, and the solution architecture, focusing on feature serving.",
-      "link": "https://aws.amazon.com/blogs/architecture/how-karrot-built-a-feature-platform-on-aws-part-1-motivation-and-feature-serving/",
-      "pubDate": "2025-08-14T15:16:29.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "new-feature"
       ]
     },
     {
