@@ -1,8 +1,94 @@
 {
-  "lastUpdated": "2026-02-02T06:49:41.859Z",
+  "lastUpdated": "2026-02-03T06:36:21.107Z",
   "category": "ai-safety",
-  "totalItems": 31,
+  "totalItems": 32,
   "items": [
+    {
+      "id": "aws-news-9087a4267b52",
+      "title": "AWS STS now supports validation of select identity provider specific claims from Google, GitHub, CircleCI and OCI",
+      "description": "AWS Security Token Service (STS) now supports validation of select identity provider specific claims from Google, GitHub, CircleCI and Oracle Cloud Infrastructure in IAM role trust policies and resource control policies for OpenID Connect (OIDC) federation into AWS via the AssumeRoleWithWebIdentity API. \n  With this new capability, you can reference these custom claims as condition keys in IAM role trust policies and resource control policies, expanding your ability to implement fine-grained access control for federated identities and help you establish your data perimeters. This enhancement builds upon IAM's existing OIDC federation capabilities, which allow you to grant temporary AWS credentials to users authenticated through external OIDC-compatible identity providers.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-sts-supports-validation-identity-provider-claims",
+      "pubDate": "2026-02-02T20:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "enhancement",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-0d95209fba55",
+      "title": "Amazon CloudFront announces mutual TLS support for origins",
+      "description": "Amazon CloudFront announces support for mutual TLS authentication (mTLS) for origins, a security protocol that enables customers to verify that requests to their origin servers come only from their authorized CloudFront distributions using TLS certificates. This certificate-based authentication provides cryptographic verification of CloudFront's identity, eliminating the need for customers to manage custom security controls.\n  Previously, verifying that requests came from CloudFront distributions required customers to build and maintain custom authentication solutions like shared secret headers or IP allow-lists, particularly for public or externally hosted origins. These approaches required ongoing operational overhead to rotate secrets, update allow-lists, and maintain custom code. Now with origin mTLS support, customers can implement a standardized, certificate-based authentication approach that eliminates this operational burden. This enables organizations to enforce strict authentication for their proprietary content, ensuring that only verified CloudFront distributions can establish connections to backend infrastructure ranging from AWS origins and on-premises servers to third-party cloud providers and external CDNs. Customers can leverage client certificates issued by AWS Private Certificate Authority or third-party private Certificate Authorities, which they import through AWS Certificate Manager.\n  Customers can configure origin mTLS using the AWS Management Console, CLI, SDK, CDK, or CloudFormation. Origin mTLS is supported for all origins that support mutual TLS on AWS such as Application Load Balancer and API Gateway, as well as on-premises and custom origins. There is no additional charge for origin mTLS. Origin mTLS is also available in the Business and Premium flat-rate pricing plans. For detailed implementation guidance and best practices, visit the CloudFront origin mutual TLS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-cloudfront-mutual-tls-for-origins/",
+      "pubDate": "2026-02-02T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "cloudfront",
+        "api gateway",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "cloudformation",
+        "cloudfront",
+        "api gateway",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-dc8deec80cd2",
+      "title": "AWS announces Flexible Cost Allocation in AWS GovCloud (US)",
+      "description": "AWS Network Firewall now supports flexible cost allocation through AWS Transit Gateway native attachments in AWS GovCloud (US) Regions, enabling you to automatically distribute data processing costs across different AWS accounts. Customers can create metering policies to apply data processing charges based on their organization's chargeback requirements instead of consolidating all expenses in the firewall owner account.\n  This capability helps security and network teams better manage centralized firewall costs by distributing charges to application teams based on actual usage. Organizations can now maintain centralized security controls while automatically allocating inspection costs to the appropriate business units or application owners, eliminating the need for custom cost management solutions.\n  Flexible cost allocation is available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. You can enable these features using the AWS Management Console, AWS Command Line Interface (CLI) and the AWS Software Development Kit (SDK).\n  There are no additional charges for using this attachment or flexible cost allocation beyond standard pricing of AWS Network Firewall and AWS Transit Gateway. To get started, visit the Flexible Cost Allocation on AWS Transit Gateway service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-flexible-cost-allocation-govcloud/",
+      "pubDate": "2026-02-02T17:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-35e897f61587",
+      "title": "Amazon Connect launches improved wait time estimates",
+      "description": "Amazon Connect now delivers improved estimated wait time metrics for queues and enqueued contacts, empowering organizations. This allows contact centers to set accurate customer expectations, provide convenient options such as callbacks when hold times are extended, and balance workloads effectively across multiple queues. By leveraging the improved estimated wait time metrics, contact centers can make more strategic routing choices across queues while gaining enhanced visibility for better resource planning. For example, a customer calling about billing during peak hours with a 15-minute wait is seamlessly transferred to a cross-trained team with 2-minute availability, getting help faster without repeating their issue. The metric works seamlessly with routing criteria and agent proficiency configurations.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-connect-launches-improved-wait-time/",
+      "pubDate": "2026-01-30T19:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "launch",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-9d73697199bf",
       "title": "Sovereign failover – Design for digital sovereignty using the AWS European Sovereign Cloud",
@@ -301,28 +387,6 @@
       ]
     },
     {
-      "id": "aws-news-53f06ad01cdb",
-      "title": "Enterprise scale in-place migration to Apache Iceberg: Implementation guide",
-      "description": "Organizations managing large-scale analytical workloads increasingly face challenges with traditional Apache Parquet-based data lakes with Hive-style partitioning, including slow queries, complex file management, and limited consistency guarantees. Apache Iceberg addresses these pain points by providing ACID transactions, seamless schema evolution, and point-in-time data recovery capabilities that transform how enterprises handle their data infrastructure. In this post, we demonstrate how you can achieve migration at scale from existing Parquet tables to Apache Iceberg tables. Using Amazon DynamoDB as a central orchestration mechanism, we show how you can implement in-place migrations that are highly configurable, repeatable, and fault-tolerant.",
-      "link": "https://aws.amazon.com/blogs/big-data/enterprise-scale-in-place-migration-to-apache-iceberg-implementation-guide/",
-      "pubDate": "2026-01-20T20:24:01.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "lex",
-        "dynamodb",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "dynamodb",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-bcd72fc21d6c",
       "title": "AWS expands managed integrations for AWS IoT Device Management service coverage to the Middle East (UAE) region",
       "description": "AWS IoT Device Management now offers the managed integrations feature in the Middle East (UAE) region. Organizations operating in this region can now better serve their local customers, helping them build unified Internet of Things (IoT) solutions that can easily onboard and manage diverse IoT devices through a single interface, regardless of connection type - direct, hub-based, or third-party cloud-based.\n  Managed integrations provides developers with a unified interface and device SDKs supporting ZigBee, Z-Wave, Matter and Wi-Fi protocols. The feature includes partner built cloud-to-cloud connectors and 80+ device data model templates based on AWS's implementation of the Matter data model standard. These capabilities allow developers to rapidly integrate devices into end user applications, such as home security, energy management, and elderly care monitoring.\n  The managed integrations feature is available in Canada (Central), Europe (Ireland) and Middle East (UAE) regions. To learn more, refer to the developer guide and get started on the AWS IoT console.",
@@ -454,48 +518,6 @@
         "rds",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-b520484d2035",
-      "title": "AWS Transform custom adds AWS PrivateLink support and expands to Europe (Frankfurt) Region",
-      "description": "AWS Transform custom now supports AWS PrivateLink and is available in a new AWS Region, Europe (Frankfurt), in addition to the US East (N. Virginia) Region. AWS Transform custom helps organizations reduce technical debt by automating repetitive transformation tasks such as language version upgrades, API migrations, and framework updates. The agent is designed for enterprise development teams and consulting partners who need to execute consistent, repeatable code transformations across large codebases.\n  With AWS Transform custom, teams can create custom transformation definitions using natural language, documentation, and code samples, or use AWS-managed transformations for common scenarios including Java, Python, and Node.js version upgrades. Through continual learning, the service improves transformation quality with every execution over time. With AWS PrivateLink support, customers can now access AWS Transform custom from their Amazon VPC without routing traffic over the public internet, helping meet security and compliance requirements.\n  To learn more about AWS Transform custom, visit the product page and user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-transform-custom-privatelink-europe-frankfurt-region/",
-      "pubDate": "2026-01-14T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-62a858ea1c26",
-      "title": "Enhanced Transactions view now available in AWS Billing Console",
-      "description": "AWS announces significant improvements to the Transactions view in the AWS Billing and Cost Management Console’s Payments page, delivering faster performance, simplified payment reconciliation, and improved data accuracy. The enhanced view provides customers with a unified interface to manage all their financial transactions, improving visibility and reducing the time spent on payment tracking.\n  The enhanced view delivers improved performance, with pages loading in mili seconds instead of minutes. Even customers with tens of thousands of transactions can now access their complete transaction history without timeouts. The enhanced view introduces new capabilities including comprehensive balance tracking, clear transaction status indicators, and advanced filtering options. Key improvements include consolidated visibility into invoice statuses, clear +/- indicators for amounts owed versus funds available, and the ability to view records in a single view without performance impact. For organizations using Billing Transfer, the new \"Usage Consolidation Account\" column makes it easier to track transactions across multiple accounts.\n  This feature was made available to all customers on January 12, 2026, in all AWS commercial regions.\n  To learn more about managing your transactions, visit the AWS Billing and Cost Management documentation. For additional information about managing your AWS payments and billing, see the AWS Billing Console User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/enhanced-transactions-view-aws-billing-console",
-      "pubDate": "2026-01-14T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga",
-        "now-available",
-        "improvement"
       ]
     },
     {
