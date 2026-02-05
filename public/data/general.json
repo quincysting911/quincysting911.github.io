@@ -1,8 +1,55 @@
 {
-  "lastUpdated": "2026-02-04T06:36:14.908Z",
+  "lastUpdated": "2026-02-05T06:42:41.036Z",
   "category": "general",
-  "totalItems": 51,
+  "totalItems": 49,
   "items": [
+    {
+      "id": "aws-news-1a266f7162f6",
+      "title": "Amazon ECS adds Network Load Balancer support for Linear and Canary deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) announces native support for linear and canary deployment strategies for ECS services using Network Load Balancers (NLB). Now, applications that commonly use NLB, such as those requiring TCP/UDP-based connections, low latency, long-lived connections, or static IP addresses, can take advantage of managed, incremental traffic shifting natively from ECS when rolling out updates.\n \nWith this launch, ECS customers using NLB can shift traffic in a controlled manner during deployments, such as moving traffic in increments or starting with a small percentage to validate changes before completing a rollout. These deployment strategies provide additional confidence during updates by allowing teams to observe application behavior at each traffic-shift step, and integrate with Amazon CloudWatch alarms to automatically stop or roll back deployments if issues are detected. This is especially valuable for workloads running behind an NLB, such as online gaming backends, financial transaction systems, and real-time messaging services.\n \nTo get started, select your NLB target groups, listener, and preferred deployment strategy in the ECS service configuration using the AWS Management Console, AWS CLI, or Infrastructure-as-Code tools. This can be enabled for both new and existing ECS services in all AWS commercial and AWS GovCloud (US) Regions. For more information, see the documentation for Amazon ECS linear deployments and Amazon ECS canary deployments.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ecs-nlb-linear-canary-deployments",
+      "pubDate": "2026-02-04T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-beef4a3ab9fb",
+      "title": "Amazon EKS simplifies providing IAM permissions to EKS add-ons in AWS GovCloud (US) Regions",
+      "description": "Amazon Elastic Kubernetes Service (EKS) now offers a direct integration between EKS add-ons and EKS Pod Identity in AWS GovCloud (US) Regions, streamlining the lifecycle management process for critical cluster operational software that needs to interact with AWS services outside the cluster.\n  EKS add-ons that enable integration with underlying AWS resources need IAM permissions to interact with AWS services. EKS Pod Identities simplify how Kubernetes applications obtain AWS IAM permissions. With today's launch, you can directly manage EKS Pod Identities using EKS add-ons operations through the EKS console, CLI, API, eksctl, and IAC tools like AWS CloudFormation, simplifying usage of Pod Identities for EKS add-ons. This integration expands the selection of Pod Identity compatible EKS add-ons available for installation through the EKS console during cluster creation.\n  EKS add-ons integration with Pod Identities is generally available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. To get started, see the EKS user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-eks-simplifies-iam-permissions-eks-addons",
+      "pubDate": "2026-02-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "cloudformation",
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "cloudformation",
+        "iam",
+        "launch",
+        "generally-available",
+        "integration"
+      ]
+    },
     {
       "id": "aws-news-f78f98456849",
       "title": "AWS IAM Identity Center enables account access and application use in multiple AWS Regions",
@@ -466,50 +513,6 @@
       ]
     },
     {
-      "id": "aws-news-e73000fb98fd",
-      "title": "Amazon Aurora and RDS for PostgreSQL, MySQL and MariaDB now support r8g, r7g, and r7i database instances in additional AWS Regions",
-      "description": "AWS Graviton4-based R8g database instances are now generally available for Amazon Aurora (MySQL and PostgreSQL compatibility) and Amazon RDS for PostgreSQL, MySQL, and MariaDB in additional Asia Pacific regions (Hong Kong, Osaka, and Jakarta). R8G instances are now supported for Amazon Aurora with MySQL compatibility and Amazon RDS for PostgreSQL, MySQL, and MariaDB in Asia Pacific (Seoul and Singapore), and Canada (Central) regions, expanding on the previous launch of R8g support for Amazon Aurora with PostgreSQL compatibility in these three regions. Additionally, Amazon Aurora with MySQL and PostgreSQL compatibility now also supports R7i database instances in Asia Pacific (Hyderabad) and R7g database instances in Africa (Cape Town).\n  AWS Graviton4-based instances provide up to 40% performance improvement and up to 29% price/performance improvement for on-demand pricing over Graviton3-based instances of equivalent sizes on Amazon Aurora and Amazon RDS databases, depending on database engine, version, and workload. Built on the AWS Nitro System, the new R8g database instances introduce 24xlarge and 48xlarge sizes, delivering up to 192 vCPUs, an 8:1 ratio of memory to vCPU with the latest DDR5 memory, up to 50Gbps enhanced networking bandwidth, and up to 40Gbps of bandwidth to Amazon Elastic Block Store (Amazon EBS).\n  You can easily launch R8g, R7g, or R7i database instances through the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI). For detailed information about specific engine versions that support these database instance types, please refer to the Aurora and RDS documentation. For complete information on pricing and regional availability, please refer to the Amazon RDS pricing page.",
-      "link": "https://aws.amazon.comabout-aws/whats-new/2026/01/amazon-aurora-rds-r8g-r7g-r7i-instances-additional-regions/",
-      "pubDate": "2026-01-20T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "graviton",
-        "launch",
-        "generally-available",
-        "ga",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fb8e6602fd6c",
-      "title": "Amazon RDS Blue/Green Deployments reduces downtime to under five seconds",
-      "description": "Amazon Relational Database Service (Amazon RDS) now supports faster Blue/Green Deployments switchover, reducing your primary database, or writer node, upgrade downtime to typically five seconds or lower for single-Region configurations. Blue/Green Deployment creates a staging environment (Green) to test changes while keeping production (Blue) safe, enabling seamless switchover that requires no application endpoint changes.\n  Your database writer instance downtime during switchover varies based on your connection method. For single-Region configurations, applications connecting directly to the database endpoint experience typically five seconds or lower downtime, while those using the AWS Advanced JDBC Driver typically see two seconds or lower due to eliminated DNS propagation delays. You can use Amazon RDS Blue/Green Deployments for deploying changes to production, such as major version database engine upgrades, maintenance updates, and scaling instances.\n  Support for faster RDS Blue/Green Deployments switchover for single-Region configurations is available for Amazon Aurora and Amazon RDS database engines including PostgreSQL, MySQL, and MariaDB in all AWS regions.\n  In a few clicks, update your databases using RDS Blue/Green Deployments via the Amazon RDS Console or Amazon RDS CLI. Learn more about RDS Blue/Green Deployments and the supported engine versions here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-rds-blue-green-deployments-reduces-downtime",
-      "pubDate": "2026-01-20T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-480e3eb14bac",
       "title": "Simplify network segmentation for AWS Outposts racks with multiple local gateway routing domains",
       "description": "AWS now supports multiple local gateway (LGW) routing domains on AWS Outposts racks to simplify network segmentation. Network segmentation is the practice of splitting a computer network into isolated subnetworks, or network segments. This reduces the attack surface so that if a host on one network segment is compromised, the hosts on the other network segments are not affected. Many customers in regulated industries such as manufacturing, health care and life sciences, banking, and others implement network segmentation as part of their on-premises network security standards to reduce the impact of a breach and help address compliance requirements.",
@@ -525,40 +528,6 @@
       ],
       "tags": [
         "rds",
-        "outposts",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c3967861f923",
-      "title": "Amazon MWAA now available in additional Region",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) is now available in AWS Region Asia Pacific (Thailand).\n  Amazon MWAA is a managed service for Apache Airflow that lets you use the same familiar Apache Airflow platform as you do today to orchestrate your workflows and enjoy improved scalability, availability, and security without the operational burden of having to manage the underlying infrastructure. Learn more about using Amazon MWAA on the product page.\n Please visit the AWS region table for more information on AWS regions and services. To learn more about Amazon MWAA visit the Amazon MWAA documentation.\n  Apache, Apache Airflow, and Airflow are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-mwaa-additional-region",
-      "pubDate": "2026-01-16T18:01:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-5a88f7fdee58",
-      "title": "AWS Outposts racks support multiple LGW routing domains",
-      "description": "AWS Outposts racks now support multiple local gateway (LGW) routing domains, enabling you to create up to 10 isolated routing domains per Outpost, each with independent route tables and BGP sessions to your on-premises network. This feature provides traffic separation between routing domains and enables both customer-owned IP (CoIP) and direct VPC routing (DVR) modes on the same Outpost.\n  With multiple LGW routing domains, you can segment on-premises network connectivity for different departments or business units sharing an Outpost. Each routing domain maintains its own LGW VIF Group, LGW Route Table, and VPC associations, preventing traffic from crossing between domains. You can configure multiple LGW routing domains through the AWS Management Console or AWS CLI.\n  Multiple LGW routing domains is available on second-generation Outposts racks at no additional charge. See the FAQs for Outposts racks for the latest list of supported AWS Regions.\n  To learn more about implementation details and best practices, check out this blog post or visit our technical documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-outposts-multiple-lgw-routing-domain",
-      "pubDate": "2026-01-16T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "outposts"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
         "outposts",
         "ga",
         "support"

@@ -1,8 +1,73 @@
 {
-  "lastUpdated": "2026-02-04T06:36:14.908Z",
+  "lastUpdated": "2026-02-05T06:42:41.036Z",
   "category": "ai-safety",
-  "totalItems": 33,
+  "totalItems": 34,
   "items": [
+    {
+      "id": "aws-news-c64424ec98ad",
+      "title": "Amazon EC2 and VPC now display related resources for security groups",
+      "description": "Amazon Web Services (AWS) is announcing the general availability of the \"Related resources\" tab for security groups in the Amazon EC2 and VPC consoles. This new feature provides customers with a consolidated view of all resources that depend on a specific security group, eliminating the need to manually check multiple services before making configuration changes. Security groups act as virtual firewalls that control inbound and outbound traffic for AWS resources, and understanding their dependencies is critical for maintaining secure and stable infrastructure.\n  Previously, customers managing complex security group configurations had to navigate through multiple AWS services individually to identify dependencies before modifying or deleting security groups. This manual process required checking EC2 instances, Elastic Network Interfaces, ElastiCache clusters, RDS databases, and other services one by one, making it time-consuming and error-prone. The \"Related resources\" tab streamlines this workflow by displaying all dependent resources in a single location, enabling customers to quickly assess the impact of proposed changes and make informed decisions with confidence. This enhancement is beneficial for organizations managing large-scale deployments where security groups may be attached to dozens or hundreds of resources across different services.\n  This feature is now available in all AWS commercial regions at no additional cost.\n  To learn more about managing security groups and viewing the \"Related resources\" tab in the Amazon EC2 and VPC consoles, see the Amazon EC2 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-console-related-resources-generally-available",
+      "pubDate": "2026-02-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "rds",
+        "organizations",
+        "ga",
+        "now-available",
+        "new-feature",
+        "enhancement"
+      ]
+    },
+    {
+      "id": "aws-news-aead7f5f943e",
+      "title": "Amazon Redshift now supports autonomics for multi-cluster environments",
+      "description": "Amazon Redshift now supports autonomics—automatic optimization features—for multi-cluster environments. Database administrators managing distributed Amazon Redshift workloads can now benefit from autonomics that work intelligently across multiple warehouses, eliminating manual performance tuning across consumer clusters.\n  This launch extends Amazon Redshift's autonomics capabilities, including Automatic Table Optimization (ATO), Automatic Table Sorting (ATS), Auto Vacuum, and Auto Analyze, to consider query patterns from all consumer clusters when managing table layouts and maintenance operations. Organizations where multiple business units access shared data can benefit from holistic optimization that considers all workload patterns, reducing manual optimization processes. This launch also includes a denylist feature, allowing you to exclude specific endpoints or AWS accounts from influencing optimization decisions—particularly useful for cross-organizational data sharing scenarios. These enhanced autonomics features are available at no additional cost for Amazon Redshift customers.\n  This feature is available in all AWS Regions that support Amazon Redshift. To learn more, see the Amazon Redshift Management Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-redshift-autonomics-for-multi-cluster",
+      "pubDate": "2026-02-04T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "redshift",
+        "organizations",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b99ec838c4f5",
+      "title": "AWS Batch now provides Array Job Status Summary in ListJobs API",
+      "description": "AWS Batch now includes a status summary for Array Jobs in the ListJobs API response, giving you immediate visibility into the distribution of child job statuses without additional API calls. This enhancement helps you monitor large-scale workloads more efficiently.\n  When you call the ListJobs API for Array Jobs, the response now includes a statusSummary field that shows the count of child jobs in each state: SUBMITTED, PENDING, RUNNABLE, STARTING, RUNNING, SUCCEEDED, and FAILED. Previously, statusSummary field was only available in the response of DescribeJobs API call. Using the new field you can now monitor the progress of multiple array jobs in your queue with a single API call.. The response also includes a statusSummaryLastUpdatedAt timestamp, allowing you to assess the freshness of the status information. This transparency helps you make informed decisions about your workload management and troubleshooting.\n  This feature is particularly valuable for high-scale batch processing workloads in financial services, automotive, and other industries where monitoring thousands of parallel jobs is critical for operational visibility. Available today in all AWS Regions where AWS Batch is available. For more information, see the ListJobs API page in AWS Batch API Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-batch-array-job-status-summary/",
+      "pubDate": "2026-02-03T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "update",
+        "enhancement"
+      ]
+    },
     {
       "id": "aws-news-2d2cff21bbac",
       "title": "Amazon DynamoDB global tables now support replication across multiple AWS accounts",
@@ -488,50 +553,6 @@
         "ga",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-7db19ac88c01",
-      "title": "Second-generation AWS Outposts racks are now supported in additional AWS Regions",
-      "description": "Second-generation AWS Outposts racks are now supported in the South America (Sao Paulo) and Europe (Stockholm) Regions. Outposts racks extend AWS infrastructure, AWS services, APIs, and tools to virtually any on-premises data center or colocation space for a truly consistent hybrid experience.\n  Organizations from startups to enterprises and the public sector in and outside of Europe and South America can now order their Outposts racks connected to these new supported regions, optimizing for their latency and data residency needs. Outposts allows customers to run workloads that need low latency access to on-premises systems locally while connecting back to their home Region for application management. Customers can also use Outposts and AWS services to manage and process data that needs to remain on-premises to meet data residency requirements. This regional expansion provides additional flexibility in the AWS Regions that customers’ Outposts can connect to.\n  To learn more about second-generation Outposts racks, read this blog post and user guide. For the most updated list of countries and territories and the AWS Regions where second-generation Outposts racks are supported, check out the Outposts rack FAQs page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/second-generation-aws-outposts-racks-additional-aws-regions",
-      "pubDate": "2026-01-16T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations",
-        "outposts"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "outposts",
-        "ga",
-        "update",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-ea45111d9de9",
-      "title": "Amazon S3 Storage Lens is now available in AWS GovCloud (US) Regions",
-      "description": "Amazon S3 Storage Lens provides organization-wide visibility into your storage usage and activity. S3 Storage Lens is now available in AWS GovCloud (US) Regions, bringing metrics to help you optimize storage costs, identify data protection opportunities, and improve application performance.\n  S3 Storage Lens provides a single view of object storage usage and activity across thousands of accounts in an organization, with drill-downs to generate insights at multiple aggregation levels. You can optimize storage costs by identifying prefixes with incomplete multipart uploads or buckets accumulating non-current object versions. You can identify buckets that don’t follow your data protection best practices, such as using S3 Cross-Region Replication to replicate data across AWS Regions or S3 Versioning to keep multiple versions of an object. With the newly added performance metrics, you can identify application performance constraints—for example, using request and object size distribution metrics to detect inefficient access patterns or tracking cross-Region data transfer to reduce latency and costs.\n  Amazon S3 Storage Lens is available in all AWS Regions. S3 Storage Lens is pre-configured to receive free metrics by default for all customers and 14 days of historical data. For more detailed visibility with up to 15 months data retention, you can upgrade to S3 Storage Lens advanced metrics. To learn more about S3 Storage Lens metrics, including free and advanced metrics, refer to the documentation. For S3 Storage Lens Advanced pricing details, visit the Amazon S3 pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/s3-storage-lens-aws-govcloud-us-regions/",
-      "pubDate": "2026-01-16T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "ga",
-        "now-available"
       ]
     },
     {
