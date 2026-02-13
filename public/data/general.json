@@ -1,8 +1,46 @@
 {
-  "lastUpdated": "2026-02-12T06:48:04.396Z",
+  "lastUpdated": "2026-02-13T06:44:27.111Z",
   "category": "general",
-  "totalItems": 52,
+  "totalItems": 53,
   "items": [
+    {
+      "id": "aws-news-5602fd73e43a",
+      "title": "Amazon S3 Tables add partition and sort order definition in the CreateTable API",
+      "description": "Amazon S3 Tables announce partition and sort order definition support for the CreateTable API. This enhancement simplifies setting these properties programmatically, making it easier to manage and optimize data in tables when they are created.\n  To use this feature, you can specify fields for partition transforms and sort order in the CreateTable API call. You can also define these properties when you create tables using the AWS CLI or the AWS SDK.\n  To create tables with partition and sort order, upgrade to the latest version of the AWS CLI and AWS SDKs. This support is available in all AWS Regions where S3 Tables are available. To learn more, visit the Amazon S3 Tables overview page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/s3-tables-partition-and-sort-order-createtable-api/",
+      "pubDate": "2026-02-12T11:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-231b224caaba",
+      "title": "AWS Backup adds cross-Region database snapshot copy to logically air-gapped vaults",
+      "description": "AWS Backup now supports single-action database snapshot copies to logically air-gapped vaults across AWS Regions. This capability is available for Amazon Aurora, Amazon Neptune, and Amazon DocumentDB snapshots, eliminating the need for an intermediate copying step in target Regions.\n \nYou can perform cross-Region and cross-account snapshot copies to protect against incidents like ransomware events and Region outages that might affect your production accounts or primary Regions. Previously, this required a two-step process—first copying snapshots to the target Region in a backup vault, then copying them to the logically air-gapped vault in the same Region. Now, you can complete this in one step, achieving faster recovery point objectives (RPOs) while eliminating costs associated with intermediate copies. This streamlined process also removes the need for custom scripts or AWS Lambda functions to monitor intermediate copy status.\n \nThis feature is available for Amazon Aurora, Amazon Neptune and Amazon DocumentDB, in all Regions where AWS Backup supports these databases and logically air-gapped vaults. You can start using this feature today through the AWS Management Console, AWS Command Line Interface (CLI), or AWS SDKs. To get started, refer to the AWS Backup documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-backup-adds-cross-region-database-snapshot-logically-air-gapped-vaults/",
+      "pubDate": "2026-02-12T11:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d53fbf6dc1eb",
       "title": "Amazon Connect launches after contact work timeout configuration for tasks, chats, and emails",
@@ -99,6 +137,32 @@
         "update",
         "integration",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-6cf8e8c43707",
+      "title": "MSK simplifies Kafka topic management with new APIs and console integration",
+      "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) now offers three new APIs (CreateTopic, UpdateTopic, and DeleteTopic), making it easier to manage your Kafka topics for your MSK provisioned clusters without the need to set up and maintain Kafka admin clients. You can programmatically create, update, and delete Kafka topics using your familiar interfaces including AWS CLI, AWS SDKs, and AWS CloudFormation. With these APIs, you can define topic properties such as replication factor and partition count, along with configuration settings like retention and cleanup policies. The new APIs together with the ListTopics and DescribeTopic APIs are integrated into the Amazon MSK console, bringing all topic operstions to one place. You can now create or update topics with just a few clicks using guided defaults while gaining comprehensive visibility into topic configurations, partition-level information, and metrics.\n  These MSK topic management capabilities are available at no additional cost for all Amazon MSK provisioned clusters using Kafka version 3.6 and above across AWS regions where Amazon MSK is offered. To start using these features, you'll need to set up the appropriate IAM permissions. To learn more on how to get started, see the Amazon MSK Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-msk-kafka-topics-public-apis/",
+      "pubDate": "2026-02-11T17:46:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "iam",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "iam",
+        "kafka",
+        "msk",
+        "ga",
+        "update",
+        "integration"
       ]
     },
     {
@@ -535,42 +599,6 @@
       "tags": [
         "dynamodb",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5b3d440a0b45",
-      "title": "AWS Deadline Cloud now supports editing job name and description",
-      "description": "AWS Deadline Cloud now supports editing job names and descriptions after submission. This new feature makes it easier to organize and identify jobs after submission by updating names or adding useful tracking details in the description field.\n  Job names and descriptions are critical metadata for organizing and understanding between users and projects, often tracking things like shot and sequence number across systems. Previously they could only be set at job creation during submission, being able to edit them after submission allows you to fix issues in naming as well as add key tracking information to the job description for other users.\n  You can edit job names and descriptions using the AWS SDK, Deadline client, and Deadline Monitor. To learn more see the AWS Deadline Cloud documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-deadline-cloud-editing-job-name-description/",
-      "pubDate": "2026-01-27T19:21:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "new-feature",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c429facc1fb1",
-      "title": "Amazon Managed Grafana now available in the AWS GovCloud (US) Regions",
-      "description": "Amazon Managed Grafana is now available in both AWS GovCloud (US-West) and AWS GovCloud (US-East) Regions, enabling government customers and regulated industries to securely visualize and analyze their operational data while meeting stringent compliance requirements. Amazon Managed Grafana is a fully managed service based on open-source Grafana that makes it easier for you to visualize and analyze your operational data at scale.\n  All Amazon Managed Grafana features are supported in AWS GovCloud (US) Regions except for Enterprise plugins. To get started with Amazon Managed Grafana, visit the AWS Console and Amazon Managed Grafana user guide. To learn more about Amazon Managed Grafana, visit the product page and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-managed-grafana-aws-govcloud-us-regions",
-      "pubDate": "2026-01-26T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "grafana",
-        "now-available",
         "support"
       ]
     },
