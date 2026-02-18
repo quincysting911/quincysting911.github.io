@@ -1,8 +1,65 @@
 {
-  "lastUpdated": "2026-02-17T06:43:22.543Z",
+  "lastUpdated": "2026-02-18T06:48:00.697Z",
   "category": "general",
-  "totalItems": 52,
+  "totalItems": 53,
   "items": [
+    {
+      "id": "aws-news-892f4e62054e",
+      "title": "Introducing Agent Plugins for AWS",
+      "description": "Deploying applications to AWS typically involves researching service options, estimating costs, and writing infrastructure-as-code tasks that can slow down development workflows. Agent plugins extend coding agents with specialized skills, enabling them to handle these AWS-specific tasks directly within your development environment. Today, we’re announcing Agent Plugins for AWS (Agent Plugins), an open source repository of […]",
+      "link": "https://aws.amazon.com/blogs/developer/introducing-agent-plugins-for-aws/",
+      "pubDate": "2026-02-17T19:13:25.000Z",
+      "source": "developersAndDevOps",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-383e9c5a8202",
+      "title": "Amazon EC2 C8a instances now available in the Europe (Frankfurt) and Europe (Ireland) region",
+      "description": "Starting today, the compute-optimized Amazon EC2 C8a instances are available in the Europe (Frankfurt) and Europe (Ireland) regions. C8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, delivering up to 30% higher performance and up to 19% better price-performance compared to C7a instances.\n  C8a instances deliver 33% more memory bandwidth compared to C7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 C7a instances, they are up to 57% faster for GroovyJVM allowing better response times for Java-based applications. C8a instances offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements.\n  C8a instances are built on AWS Nitro System and are ideal for high performance, compute-intensive workloads such as batch processing, distributed analytics, high performance computing (HPC), ad serving, highly-scalable multiplayer gaming, and video encoding.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 C8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8a-instances-europe-frankfurt-europe-ireland-regions",
+      "pubDate": "2026-02-17T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-2fec70e32e81",
+      "title": "Amazon MSK now supports dual-stack (IPv4 and IPv6) connectivity for existing clusters",
+      "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) now supports dual-stack connectivity (IPv4 and IPv6) for existing MSK Provisioned and MSK Serverless clusters. This capability enables customers to connect to Amazon MSK using both IPv4 and IPv6 protocols, in addition to the existing IPv4-only option. It helps customers modernize applications for IPv6 environments while maintaining IPv4 compatibility, making it easier to meet compliance requirements and prepare for future network architectures.\n  Amazon MSK is a fully managed service for Apache Kafka that makes it easier for customers to build and run applications that use Apache Kafka as a data store. Previously, MSK Provisioned and Serverless clusters exclusively utilized IPv4 addressing for all connectivity options. With this new capability, customers can now enable dual-stack connectivity (IPv4 and IPv6) on existing MSK clusters using Amazon MSK Console, AWS CLI, SDK, or CloudFormation by modifying the Network Type parameter for a cluster from IPv4 to dual-stack. Upon successful update, MSK provisions IPv6-enabled network interfaces while maintaining existing IPv4 connectivity, ensuring uninterrupted service. To retrieve new IPv6 bootstrap broker strings for MSK Provisioned clusters, customers can use the GetBootstrapBrokers API to obtain the necessary connection information. All MSK Provisioned and Serverless clusters will retain IPv4-only connectivity unless explicitly updated.\n  Dual-stack connectivity for existing MSK Provisioned and Serverless clusters is now available in all AWS Regions where Amazon MSK is available, at no additional cost. To learn more about Amazon MSK dual-stack support, refer to the Amazon MSK developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-msk-dual-stack-ipv4-and-ipv6",
+      "pubDate": "2026-02-17T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "kafka",
+        "msk",
+        "now-available",
+        "update",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-aa80f8ab4dc6",
       "title": "AWS Tools Installer V2 Preview",
@@ -57,7 +114,7 @@
     {
       "id": "aws-news-d8aeb689a1ea",
       "title": "Common streaming data enrichment patterns in Amazon Managed Service for Apache Flink",
-      "description": "Stream data processing allows you to act on data in real time. Real-time data analytics can help you have on-time and optimized responses while improving overall customer experience. Apache Flink is a distributed computation framework that allows for stateful real-time data processing. It provides a single set of APIs for building batch and streaming jobs, making […]",
+      "description": "This post was originally published in March 2024 and updated in February 2026. Stream data processing allows you to act on data in real time. Real-time data analytics can help you have on-time and optimized responses while improving overall customer experience. Apache Flink is a distributed computation framework that allows for stateful real-time data processing. It […]",
       "link": "https://aws.amazon.com/blogs/big-data/common-streaming-data-enrichment-patterns-in-amazon-managed-service-for-apache-flink/",
       "pubDate": "2026-02-13T19:46:16.000Z",
       "source": "bigDataBlog",
@@ -65,7 +122,9 @@
       "categories": [
         "general"
       ],
-      "tags": []
+      "tags": [
+        "update"
+      ]
     },
     {
       "id": "aws-news-6f3849266f26",
@@ -545,25 +604,6 @@
       ]
     },
     {
-      "id": "aws-news-5c22e7d77495",
-      "title": "AWS Multi-party approval now requires one-time password verification for voting",
-      "description": "AWS Multi-Party Approval now requires approvers to verify their voting actions with a one-time password (OTP) sent to their registered AWS Identity Center email address. This additional security layer prevents AWS IAM Identity Center administrators from bypassing multi-party approval controls by impersonating approvers through credential resets or authentication endpoint modifications. When approvers access the Approval Portal and attempt to cast their vote on protected operations, the system generates a six-digit verification code and sends it to their email. Approvers enter this code within 10 minutes to complete their vote, with up to three attempts allowed.\n  The OTP verification process activates only when approvers submit their vote decision, they can review all approval request details before verification is required. If approvers don't receive the email or the code expires, they can request a new code through the interface.\n  AWS Multi-party approval with OTP verification for voting is available in all AWS Regions where Mulit-party approval is offered at no additional charge. To learn more, visit the AWS Multi-party approval documentation",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-multi-party-approval-requires-one-time-password-verification-for-voting",
-      "pubDate": "2026-02-02T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center"
-      ]
-    },
-    {
       "id": "aws-news-294ebadd8ed1",
       "title": "Serverless ICYMI Q4 2025",
       "description": "Stay current with the latest serverless innovations that can transform your applications. In this 31st quarterly recap, discover the most impactful AWS serverless launches, features, and resources from Q4 2025 that you might have missed.",
@@ -946,29 +986,6 @@
       ],
       "tags": [
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-4185fb6b40aa",
-      "title": "Building and Debugging .NET Lambda applications with .NET Aspire (Part 1)",
-      "description": "In a recent post we gave some background on .NET Aspire and introduced our AWS integrations with .NET Aspire that integrate AWS into the .NET dev inner loop for building applications. The integrations included how to provision application resources with AWS CloudFormation or AWS Cloud Development Kit (AWS CDK) and using Amazon DynamoDB local for […]",
-      "link": "https://aws.amazon.com/blogs/developer/building-lambda-with-aspire-part-1/",
-      "pubDate": "2025-03-03T21:16:42.000Z",
-      "source": "developersAndDevOps",
-      "services": [
-        "lambda",
-        "dynamodb",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "dynamodb",
-        "cloudformation",
-        "ga",
-        "integration"
       ]
     }
   ]
