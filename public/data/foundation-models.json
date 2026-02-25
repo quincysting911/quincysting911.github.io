@@ -1,8 +1,92 @@
 {
-  "lastUpdated": "2026-02-24T06:45:42.906Z",
+  "lastUpdated": "2026-02-25T06:49:06.082Z",
   "category": "foundation-models",
-  "totalItems": 9,
+  "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-f0718cc08f27",
+      "title": "Amazon Bedrock now supports server-side tool execution with AgentCore Gateway",
+      "description": "Amazon Bedrock now enables server-side tool execution through Amazon Bedrock AgentCore Gateway integration with the Responses API. Customers can connect their AgentCore Gateway tools to Amazon Bedrock models, enabling server-side tool execution without client-side orchestration.\n \nWith this launch, customers can specify an AgentCore Gateway ARN as a tool connector in Responses API requests. Amazon Bedrock automatically discovers available tools from the gateway, presents them to the model during inference, and executes tool calls server-side when the model selects them, all within a single API call. This eliminates the need for customers to build and maintain client-side tool orchestration loops, reducing application complexity and latency for agentic workflows. Customers retain full control over tool access through their existing AgentCore Gateway configurations and AWS IAM permissions.\n \nServer-side tool execution with AgentCore Gateway supports all models available through the Amazon Bedrock Responses API. Customers define tools using the MCP server connector type with their gateway ARN, and Amazon Bedrock handles tool discovery, model-driven tool selection, execution, and result injection automatically. Multiple tool calls within a single conversation turn are supported, and tool results are streamed back to the client in real time.\n \nThis capability is generally available in all AWS Regions where both Amazon Bedrock's Responses API and Amazon Bedrock AgentCore Gateway are available. To get started, visit the Amazon Bedrock documentation or the Amazon Bedrock console. For more information about Amazon Bedrock AgentCore Gateway, see the AgentCore documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-bedrock-server-side-tool-execution-agentcore-gateway/",
+      "pubDate": "2026-02-24T23:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "iam"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "iam",
+        "launch",
+        "generally-available",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-619dad8ee7ba",
+      "title": "Global cross-Region inference for latest Anthropic Claude Opus, Sonnet and Haiku models on Amazon Bedrock in Thailand, Malaysia, Singapore, Indonesia, and Taiwan",
+      "description": "In this post, we are exciting to announce availability of Global CRIS for customers in Thailand, Malaysia, Singapore, Indonesia, and Taiwan and give a walkthrough of technical implementation steps, and cover quota management best practices to maximize the value of your AI Inference deployments. We also provide guidance on best practices for production deployments.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/global-cross-region-inference-for-latest-anthropic-claude-opus-sonnet-and-haiku-models-on-amazon-bedrock-in-thailand-malaysia-singapore-indonesia-and-taiwan/",
+      "pubDate": "2026-02-24T15:38:22.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-1bb88f3ec954",
+      "title": "Introducing Amazon Bedrock global cross-Region inference for Anthropic’s Claude models in the Middle East Regions (UAE and Bahrain)",
+      "description": "We’re excited to announce the availability of Anthropic’s Claude Opus 4.6, Claude Sonnet 4.6, Claude Opus 4.5, Claude Sonnet 4.5, and Claude Haiku 4.5 through Amazon Bedrock global cross-Region inference for customers operating in the Middle East. In this post, we guide you through the capabilities of each Anthropic Claude model variant, the key advantages of global cross-Region inference including improved resilience, real-world use cases you can implement, and a code example to help you start building generative AI applications immediately.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-global-cross-region-inference-for-anthropics-claude-models-in-the-middle-east-regions/",
+      "pubDate": "2026-02-24T15:33:51.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-2b26ca718db6",
+      "title": "Automated Reasoning policies now include references to the source document",
+      "description": "AWS announces the launch of source document references for Automated Reasoning policies, simplifying the task of reviewing and refining an Automated Reasoning policy. Automated Reasoning checks uses formal verification techniques to validate that content generated by foundation models is compliant with an Automated Reasoning policy. Automated Reasoning checks deliver up to 99% accuracy at detecting correct responses from LLMs, giving you provable assurance in detecting AI hallucinations while also assisting with ambiguity detection in model responses.\n  To create Automated Reasoning policies, users upload documents that describe the rules in a knowledge domain like HR policies or financial transaction approval guidelines. These documents are translated into a collection of formal logic rules and variables called an Automated Reasoning policy. With source document references, users can now review the generated policy rules and variables using references to content they are familiar with from the original document,\n  Test generation for Automated Reasoning checks is now available in the US (N. Virginia), US (Ohio), US (Oregon), Europe (Frankfurt), Europe (Ireland), and Europe (Paris) Regions. Customers can access the service through the Amazon Bedrock console, as well as the Amazon Bedrock Python SDK.\n  To learn more about Automated Reasoning checks and how you can integrate it into your generative AI workflows, please read the Amazon Bedrock documentation, review the tutorials on the AWS AI blog, and visit the Bedrock Guardrails webpage.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/automated-reasoning-policies-include-references/",
+      "pubDate": "2026-02-23T09:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "translate"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "translate",
+        "launch",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-4e0d4aa0a42c",
       "title": "Amazon SageMaker AI in 2025, a year in review part 1: Flexible Training Plans and improvements to price performance for inference workloads",
@@ -151,42 +235,6 @@
       "tags": [
         "bedrock",
         "lex"
-      ]
-    },
-    {
-      "id": "aws-news-0d02aec495a3",
-      "title": "How Amazon uses Amazon Nova models to automate operational readiness testing for new fulfillment centers",
-      "description": "In this post, we discuss how Amazon Nova in Amazon Bedrock can be used to implement an AI-powered image recognition solution that automates the detection and validation of module components, significantly reducing manual verification efforts and improving accuracy.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-amazon-uses-amazon-nova-models-to-automate-operational-readiness-testing-for-new-fulfillment-centers/",
-      "pubDate": "2026-02-10T18:34:09.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "nova"
-      ]
-    },
-    {
-      "id": "aws-news-8115f2327170",
-      "title": "Building real-time voice assistants with Amazon Nova Sonic compared to cascading architectures",
-      "description": "Amazon Nova Sonic delivers real-time, human-like voice conversations through the bidirectional streaming interface. In this post, you learn how Amazon Nova Sonic can solve some of the challenges faced by cascaded approaches, simplify building voice AI agents, and provide natural conversational capabilities. We also provide guidance on when to choose each approach to help you make informed decisions for your voice AI projects.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-real-time-voice-assistants-with-amazon-nova-sonic-compared-to-cascading-architectures/",
-      "pubDate": "2026-02-10T18:29:05.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova"
       ]
     }
   ]
