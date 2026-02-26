@@ -1,16 +1,292 @@
 {
-  "lastUpdated": "2026-02-25T06:49:06.082Z",
+  "lastUpdated": "2026-02-26T06:44:26.507Z",
   "totalItems": 204,
   "sources": {
-    "whatsNew": 94,
+    "whatsNew": 93,
     "mlBlog": 20,
     "newsBlog": 19,
-    "bigDataBlog": 18,
+    "bigDataBlog": 19,
     "architectureBlog": 17,
     "computeBlog": 19,
     "developersAndDevOps": 17
   },
   "items": [
+    {
+      "id": "aws-news-0364b1e81693",
+      "title": "AWS Outposts racks now support additional Amazon CloudWatch metrics in AWS GovCloud (US) Regions",
+      "description": "AWS Outposts racks now support VifConnectionStatus and VifBgpSessionState Amazon CloudWatch metrics in AWS GovCloud (US) Regions. These metrics provide visibility into the connectivity status of your Outposts racks' Local Gateway (LGW) and Service Link Virtual Interfaces (VIFs) with your on-premises devices.\n  These metrics provide you with the ability to monitor Outposts VIF connectivity status directly within the CloudWatch console, without having to rely on external networking tools or coordination with other teams. You can use these metrics to set alarms, troubleshoot connectivity issues, and ensure your Outposts racks are properly integrated with your on-premises infrastructure. The VifConnectionStatus metric indicates whether an Outposts VIF is successfully connected, configured, and ready to forward traffic. A value of \"1\" means that the VIF is operational, while \"0\" means that it is not ready. The VifBgpSessionState metric shows the current state of the BGP session between the Outposts VIF and the on-premises device, with values ranging from 1 (IDLE) to 6 (ESTABLISHED).\n  The VifConnectionStatus and VifBgpSessionState metrics are now available for all Outposts VIFs in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions where Outposts racks are available.\n  To get started, read this blog post and access the metrics in the CloudWatch console. To learn more, check out the CloudWatch metrics for Outposts documentation for first-generation Outposts racks.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-outposts-racks-cloudwatch-metrics-govcloud-regions/",
+      "pubDate": "2026-02-25T21:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch",
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "outposts",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b0fe595ae633",
+      "title": "Efficiently serve dozens of fine-tuned models with vLLM on Amazon SageMaker AI and Amazon Bedrock",
+      "description": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/efficiently-serve-dozens-of-fine-tuned-models-with-vllm-on-amazon-sagemaker-ai-and-amazon-bedrock/",
+      "pubDate": "2026-02-25T20:56:13.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "sagemaker"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker"
+      ]
+    },
+    {
+      "id": "aws-news-5843e95608c2",
+      "title": "How Swiss Life Germany automated data governance and collaboration with Amazon SageMaker",
+      "description": "Swiss Life Germany, a leading provider of customized pension products with over 100 years of experience, recently transitioned from legacy on-premises infrastructure to a modern cloud architecture. To enable secure data sharing and cross-departmental collaboration in this regulated environment, they implemented Amazon SageMaker with a custom Terraform pattern. This post demonstrates how Swiss Life Germany aligned SageMaker's agility with their rigorous infrastructure as code standards, providing a blueprint for platform engineers and data architects in highly regulated enterprises.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-swiss-life-germany-automated-data-governance-and-collaboration-with-amazon-sagemaker/",
+      "pubDate": "2026-02-25T20:28:06.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "rds"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "rds",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-d18ac32e65d5",
+      "title": "Building intelligent event agents using Amazon Bedrock AgentCore and Amazon Bedrock Knowledge Bases",
+      "description": "This post demonstrates how to quickly deploy a production-ready event assistant using the components of Amazon Bedrock AgentCore. We'll build an intelligent companion that remembers attendee preferences and builds personalized experiences over time, while Amazon Bedrock AgentCore handles the heavy lifting of production deployment: Amazon Bedrock AgentCore Memory for maintaining both conversation context and long-term preferences without custom storage solutions, Amazon Bedrock AgentCore Identity for secure multi-IDP authentication, and Amazon Bedrock AgentCore Runtime for serverless scaling and session isolation. We will also use Amazon Bedrock Knowledge Bases for managed RAG and event data retrieval.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/building-intelligent-event-agents-using-amazon-bedrock-agentcore-and-amazon-bedrock-knowledge-bases/",
+      "pubDate": "2026-02-25T19:51:08.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "personalize"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "personalize"
+      ]
+    },
+    {
+      "id": "aws-news-daed5df4319f",
+      "title": "6,000 AWS accounts, three people, one platform: Lessons learned",
+      "description": "This post describes why ProGlove chose a account-per-tenant approach for our serverless SaaS architecture and how it changes the operational model. It covers the challenges you need to anticipate around automation, observability and cost. We will also discuss how the approach can affect other operational models in different environments like an enterprise context.",
+      "link": "https://aws.amazon.com/blogs/architecture/6000-aws-accounts-three-people-one-platform-lessons-learned/",
+      "pubDate": "2026-02-25T19:47:07.000Z",
+      "source": "architectureBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-61302f27e7eb",
+      "title": "AWS Security Agent adds support for penetration tests on shared VPCs across AWS accounts",
+      "description": "AWS Security Agent now enables customers to run penetration tests against Virtual Private Cloud (VPC) resources shared from other AWS accounts within the same organization. This new capability allows security teams to perform comprehensive security assessments across their multi-account environments using AWS Security Agent. By leveraging AWS Resource Access Manager (RAM), customers can securely share VPC resources from sub-accounts to a central AWS account where penetration testing is conducted.\n  This feature addresses the challenge of testing distributed architectures spanning multiple AWS accounts. Security professionals can now create an Agent Space in a central account and use RAM to access VPC resources from connected sub-accounts for testing. This streamlines security assessments for organizations with complex multi-account setups. The ability to comprehensively test shared VPC resources enhances an organization's overall security posture.\n  To get started, ensure your accounts are part of the same AWS Organization and configure resource sharing using RAM. Then launch AWS Security Agent in your central account to begin penetration testing across the shared VPC resources. For more information on AWS Security Agent and its penetration testing capabilities, visit the AWS Security Agent documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-security-agent-adds-penetration-tests-shared/",
+      "pubDate": "2026-02-25T19:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "organizations",
+        "launch",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-42607d75578a",
+      "title": "Aurora DSQL launches new integrations for Visual Studio Code SQLTools and DBeaver",
+      "description": "Today we are announcing the release of the Aurora DSQL Driver for SQLTools and the Aurora DSQL Plugin for DBeaver Community Edition. These integrations allow customers to leverage popular database tools to run queries against Aurora DSQL clusters, explore database schemas, and manage their data. Both integrations simplify database connectivity by automatically handling IAM authentication and transparently managing access tokens, eliminating the need to write token generation code or manually supply IAM tokens.\n  The SQLTools driver integrates Aurora DSQL with Visual Studio Code and is also available on Open VSX Registry for use with VS Code-compatible editors such as Cursor and Kiro. The DBeaver plugin is built on top of the Aurora DSQL Connector for JDBC. Both integrations eliminate security risks associated with traditional user-generated passwords by using AWS IAM credentials for secure, password-free authentication.\n  To get started, visit the Aurora DSQL documentation page for VSCode and DBeaver. Get started with Aurora DSQL for free with the AWS Free Tier. To learn more about Aurora DSQL, visit the webpage.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aurora-dsql-visual-studio-code-sqltools-dbeaver/",
+      "pubDate": "2026-02-25T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "launch",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-8f093e89c902",
+      "title": "Amazon EC2 R8a instances now available in the Europe (Ireland) region",
+      "description": "Starting today, Amazon EC2 R8a instances are now available in Europe (Ireland) region. These instances, feature 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to R7a instances.\n  R8a instances deliver 45% more memory bandwidth compared to R7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 R7a instances, R8a instances provide up to 60% faster performance for GroovyJVM, allowing higher request throughput and better response times for business-critical applications.\n  Built on the AWS Nitro System using sixth generation Nitro Cards, R8a instances are ideal for high performance, memory-intensive workloads, such as SQL and NoSQL databases, distributed web scale in-memory caches, in-memory databases, real-time big data analytics, and Electronic Design Automation (EDA) applications. R8a instances offer 12 sizes including 2 bare metal sizes. Amazon EC2 R8a instances are SAP-certified, and providing 38% more SAPS compared to R7a instances.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the Amazon EC2 R8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-r8a-instances-europe-ireland-regions/",
+      "pubDate": "2026-02-25T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-166ea20ef357",
+      "title": "Amazon EC2 M8i and M8i-flex instances are now available in Africa (Cape Town) region",
+      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in Africa (Cape Town) region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex page or visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-m8i-m8i-flex-instances-africa-cape-town-regions/",
+      "pubDate": "2026-02-25T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-bd956e1f4d01",
+      "title": "Amazon Location Service introduces LLM Context as a Kiro power and Claude Code plugin to improve AI performance",
+      "description": "Today, Amazon Location launched curated AI Agent context as a Kiro power, Claude Code plugin, and agent skill in the open Agent Skills format, usable by any compatible agent. Developers can use this context with generative AI tools such as Kiro, Claude Code, and Cursor to improve code accuracy, accelerate feature implementation, and reduce iteration time when adding Amazon Location-enabled capabilities to their applications. Amazon Location Service is a mapping service that offers geospatial data and location functionality such as maps, places search and geocoding, route planning, device tracking, and geofencing.\n \nOnce loaded by AI development tools, the curated Amazon Location context accelerates development of common location-based solutions such as address entry forms for delivery applications, map display, nearest-store lookup, and route visualization. The context includes pre-validated implementation patterns and step-by-step instructions for these use cases, allowing developers to focus on application-specific logic rather than API integration details.\n \nAmazon Location Service is available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Malaysia), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), South America (São Paulo), and AWS GovCloud (US-West).\n \nTo get started, download and install the context to your agent of choice from the amazon-location-agent-context repository on GitHub, or learn more about using AI and LLMs to accelerate development with Amazon Location Service.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-location-service-introduces-kiro-power-claude-skill-llm-context/",
+      "pubDate": "2026-02-25T16:26:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-53d8099405e2",
+      "title": "Amazon WorkSpaces Applications extends support for 4K resolution",
+      "description": "Amazon WorkSpaces Applications now supports up to 4K (4096 x 2160) resolution on non-accelerated instance types and across all client connection modes. Previously, higher resolution monitors were limited to graphics-accelerated instances in WorkSpaces Applications classic mode. This update allows you to choose the appropriate instance type and provide a better end-user experience that aligns with your hardware investments.\n  This new feature benefits customers by providing a consistent and high-quality streaming experience across instances regardless of hardware acceleration capabilities. Whether using native application mode, classic application mode, or desktop view, your end users can now enjoy up to 4K resolution if their display device supports it. This enhancement is particularly valuable for users with ultra-wide monitors (21:9 aspect ratio) at 4K resolution, ensuring applications display with optimal clarity and detail at the maximum supported resolution of 4K.\n  These features are available at no additional cost in all the AWS Regions where WorkSpaces Applications is available. WorkSpaces Applications offers pay-as-you-go pricing. To get started with WorkSpaces Applications, see Amazon WorkSpaces applications: Getting started. \n  \nTo enable these features for your users, you must use a WorkSpaces Applications image that uses a WorkSpaces Applications agent released on or after February 4, 2026, or an image that uses Managed WorkSpaces Applications image updates released on or after February 18, 2026.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-workspaces-applications-4K-resolution/",
+      "pubDate": "2026-02-25T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "new-feature",
+        "update",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-69cd6abb00ad",
+      "title": "Announcing new metal sizes for Amazon EC2 M8gn and M8gb instances",
+      "description": "Today, AWS announces the general availability of metal-24xl and metal-48xl sizes for Amazon Elastic Compute Cloud (Amazon EC2) M8gn and M8gb instances. These instances are powered by AWS Graviton4 processors to deliver up to 30% better compute performance than AWS Graviton3 processors. M8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. M8gb offers up to 300 Gbps of EBS bandwidth to provide higher EBS performance compared to same-sized equivalent Graviton4-based instances.\n \nM8gn and M8gb instances offer instance sizes up to 48xlarge and metal-48xl, with up to 768 GiB of memory. M8gn instances offer up to 600 Gbps of networking bandwidth, up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS), and are ideal for network-intensive workloads such as high-performance file systems, distributed web scale in-memory caches, caching fleets, real-time big data analytics, Telco applications such as 5G User Plane Function (UPF). M8gb instances offer up to 300 Gbps of EBS bandwidth, up to 400 Gbps of networking bandwidth, and are ideal for workloads requiring high block storage performance such as high-performance databases and NoSQL databases.\n \nM8gn and M8gb instances support Elastic Fabric Adapter (EFA) networking on 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes. EFA networking enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters.\n \nThe new metal-24xl and metal-48xl sizes are available in the AWS US East (N. Virginia) region. \n \nTo begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-m8gn-m8gb-new-metal-sizes/",
+      "pubDate": "2026-02-25T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "graviton",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-960056cfe065",
+      "title": "AWS Backup extends support for Amazon Neptune to five additional AWS Regions",
+      "description": "AWS Backup now supports Amazon Neptune in five additional AWS Regions: Europe (Zurich), Asia Pacific (Melbourne), Canada West (Calgary), Asia Pacific (Malaysia), and Europe (Spain).\n \nThis expansion brings policy-based data protection and recovery to your Amazon Neptune clusters in these newly supported Regions.\n \nTo start protecting your Amazon Neptune clusters with AWS Backup, add your Amazon Neptune clusters to your existing backup plans or create a new backup plan, and attach your Neptune clusters to the newly created backup plan. To learn more about AWS Backup for Amazon Neptune clusters, visit the product page, pricing page, and documentation. To get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-backup-extends-amazon-neptune-five-additional-regions/",
+      "pubDate": "2026-02-25T15:55:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-6ce97356e6c3",
+      "title": "Optimizing Compute-Intensive Serverless Workloads with Multi-threaded Rust on AWS Lambda",
+      "description": "Customers use \nAWS Lambda to build Serverless applications for a wide variety of use cases, from simple API backends to complex data processing pipelines. Lambda's flexibility makes it an excellent choice for many workloads, and with support for up to 10,240 MB of memory, you can now tackle compute-intensive tasks that were previously challenging in a Serverless environment. When you configure a Lambda function's memory size, you allocate RAM and Lambda automatically provides proportional CPU power. When you configure 10,240 MB, your Lambda function has access to up to 6 vCPUs.",
+      "link": "https://aws.amazon.com/blogs/compute/optimizing-compute-intensive-serverless-workloads-with-multi-threaded-rust-on-aws-lambda/",
+      "pubDate": "2026-02-25T12:49:44.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lex",
+        "lambda"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "lambda",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f0718cc08f27",
       "title": "Amazon Bedrock now supports server-side tool execution with AgentCore Gateway",
@@ -249,6 +525,29 @@
       ]
     },
     {
+      "id": "aws-news-5b6ae9d26d7e",
+      "title": "Amazon EC2 C7i and C7i-flex instances are now available in the Africa (Cape Town) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i-flex and C7i instances are available in the Africa (Cape Town) region. These instances are powered by powered by custom 4th Generation Intel Xeon Scalable processors (code-named Sapphire Rapids) custom processors, available only on AWS, and offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i-flex instances expand the EC2 Flex instances portfolio to provide the easiest way for you to get price performance benefits for a majority of compute intensive workloads, and deliver up to 19% better price-performance compared to C6i. C7i-flex instances offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources. With C7i-flex instances, you can seamlessly run web and application servers, databases, caches, Apache Kafka, and Elasticsearch, and more.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c7i-c7i-flex-instances-africa-cape-town-regions/",
+      "pubDate": "2026-02-24T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "kafka"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "kafka",
+        "now-available",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-fbb9867889ae",
       "title": "AWS AppConfig integrates with New Relic for automated rollbacks",
       "description": "AWS AppConfig today launched a new integration that enables automated, intelligent rollbacks during feature flag and dynamic configuration deployments using New Relic Workflow Automation. Building on AWS AppConfig's third-party alert capability, this integration provides teams using New Relic with a solution to automatically detect degraded application health and trigger rollbacks in seconds, eliminating manual intervention.\n  When you deploy feature flags using AWS AppConfig's gradual deployment strategy, the AWS AppConfig New Relic Extension continuously monitors your application health against configured alert conditions. If issues are detected during a feature flag update and deployment, such as increased error rates or elevated latency, the New Relic Workflow automatically sends a notification to trigger an immediate rollback, reverting the feature flag to its previous state. This closed-loop automation reduces the time between detection and remediation from minutes to seconds, minimizing customer impact during failed deployments.",
@@ -395,6 +694,26 @@
       ]
     },
     {
+      "id": "aws-news-6286c051a194",
+      "title": "AWS WAF announces AI activity dashboard for visibility into AI bot and agent traffic",
+      "description": "Today, AWS WAF announced a new AI activity dashboard that provides centralized visibility into AI bot and agent traffic reaching your applications. With this launch, AWS WAF Bot Control expands its detection coverage to track more than 650 unique bots and agents, offering one of the most comprehensive AI bot detection catalogs available.\n  AI-powered bots and autonomous agents are rapidly reshaping web traffic patterns. AI search crawlers index content, retrieval-augmented generation (RAG) systems fetch data in real time, and autonomous agents execute multi-step tasks across APIs and web applications. Without clear visibility, this traffic can increase infrastructure costs, affect application performance, and access content in ways that may not align with your organization’s security or business policies.\n  \n The AI traffic analysis dashboard provides a centralized view of AI bot and agent traffic across your protected resources. You can visualize AI traffic trends over time, identify the most active bots and frequently accessed paths, analyze request volumes by bot category and verification status, and take action directly using AWS WAF Bot Control rules, such as allowing verified AI search crawlers while rate-limiting or blocking unverified agents.\n  AWS WAF Bot Control's detection catalog now covers more than 650 unique bots and agents spanning categories including AI search engine crawlers, AI data collectors, AI assistants, and large language model training crawlers. The catalog is continuously updated, enabling customers to identify newly emerging AI bots as they appear.\n  For customers on flat-rate pricing plans, the dashboard is included with all paid plans. For WAF customers not subscribed to flat-rate plans, the AI traffic analysis dashboard is available at no additional cost. Refer to WAF pricing for details.\n  The new dashboard and expanded detection capabilities are available in all AWS Regions where AWS WAF is available.\n  To get started, visit the AWS WAF console or explore the AWS WAF Bot Control documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-waf-ai-activity-dashboard/",
+      "pubDate": "2026-02-24T06:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "waf"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "waf",
+        "launch",
+        "ga",
+        "update"
+      ]
+    },
+    {
       "id": "aws-news-d88b2a0982a9",
       "title": "MediaConvert Introduces new video probe API and UI",
       "description": "Introducing Probe API, a powerful and free metadata analysis tool for AWS Elemental MediaConvert. Optimized for efficiency, Probe API reads header metadata to quickly return essential information about your media files, including codec specifications, pixel formats, color space details, and container information - all without waiting to process the actual video content. This analysis capability makes it an invaluable tool for content creators, developers, and media professionals who need to quickly validate files, automate workflows, or utilize Elementals' Step Functions to make encoding decisions based on source material characteristics.\n  For complete implementation details and usage examples, please visit the MediaConvert API Reference documentation. The Probe API can be utilized in any region where AWS Elemental MediaConvert is available, making it a versatile tool for streamlining your media workflow analysis.\n  To get started with Probe API and explore its capabilities, visit the AWS Elemental MediaConvert product page or consult the User Guide for comprehensive documentation.",
@@ -428,6 +747,25 @@
       "tags": [
         "bedrock",
         "nova"
+      ]
+    },
+    {
+      "id": "aws-news-aaadb31eff9f",
+      "title": "Amazon S3 now provides AWS source region information in server access logs",
+      "description": "Amazon S3 server access logs now include source region information, specifying which AWS Region requests to your data originate from. This identifies applications that are making cross-region requests, helping you to optimize cost and performance.\n \nSource region information automatically appears at the end of each server access log entry with no additional configuration. For example, if your application requests data from your us-east-1 bucket from us-west-2, the log entry shows \"us-west-2\" as the source region.\n \nThis feature will be available in all AWS Regions in the coming weeks at no additional cost. To learn more about S3 server access log format and best practices, visit the S3 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-s3-source-region-information/",
+      "pubDate": "2026-02-23T23:14:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "eks"
       ]
     },
     {
@@ -1867,28 +2205,6 @@
       ]
     },
     {
-      "id": "aws-news-5dc8f40dd93f",
-      "title": "Build long-running MCP servers on Amazon Bedrock AgentCore with Strands Agents integration",
-      "description": "In this post, we provide you with a comprehensive approach to achieve this. First, we introduce a context message strategy that maintains continuous communication between servers and clients during extended operations. Next, we develop an asynchronous task management framework that allows your AI agents to initiate long-running processes without blocking other operations. Finally, we demonstrate how to bring these strategies together with Amazon Bedrock AgentCore and Strands Agents to build production-ready AI agents that can handle complex, time-intensive operations reliably.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-long-running-mcp-servers-on-amazon-bedrock-agentcore-with-strands-agents-integration/",
-      "pubDate": "2026-02-12T20:16:20.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "lex",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-48e777b8ef81",
       "title": "AWS expands Resource Control Policies support to Amazon DynamoDB",
       "description": "AWS Resource Control Policies (RCPs) now support Amazon DynamoDB. RCPs are a type of organization policy that you can use to manage permissions in your organization. RCPs offer central control over the maximum available permissions for resources in your organization.\n \nWith this expansion, you can now use RCPs to manage permissions for Amazon DynamoDB. For example, you can create policies that prevent identities outside your organization from accessing DynamoDB, helping you build a data perimeter and enforce baseline security standards across your AWS environment.  \n \nRCPs are available in all AWS commercial Regions and AWS GovCloud (US) Regions. To learn more about RCPs and view the full list of supported AWS services, visit the Resource control policies (RCPs) documentation in the AWS Organizations User Guide.",
@@ -2139,31 +2455,6 @@
       ]
     },
     {
-      "id": "aws-news-95cd2d9f146e",
-      "title": "NVIDIA Nemotron 3 Nano 30B MoE model is now available in Amazon SageMaker JumpStart",
-      "description": "Today we’re excited to announce that the NVIDIA Nemotron 3 Nano 30B model with  3B active parameters is now generally available in the Amazon SageMaker JumpStart model catalog. You can accelerate innovation and deliver tangible business value with Nemotron 3 Nano on Amazon Web Services (AWS) without having to manage model deployment complexities. You can power your generative AI applications with Nemotron capabilities using the managed deployment capabilities offered by SageMaker JumpStart.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-nano-30b-is-now-available-in-amazon-sagemaker-jumpstart/",
-      "pubDate": "2026-02-11T19:38:47.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "sagemaker",
-        "jumpstart",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "nova",
-        "sagemaker",
-        "jumpstart",
-        "lex",
-        "generally-available",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-35989e7c7eae",
       "title": "Amazon Aurora DSQL is now available in additional AWS Regions",
       "description": "Amazon Aurora DSQL is now available with single-Region clusters in Asia Pacific (Melbourne), Asia Pacific (Sydney), Canada (Central), and Canada West (Calgary). Aurora DSQL is the fastest serverless, distributed SQL database that enables you to build always available applications with virtually unlimited scalability, the highest availability, and zero infrastructure management. It is designed to make scaling and resilience effortless for your applications and offers the fastest distributed SQL reads and writes.\n  With this launch, Aurora DSQL is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Canada West (Calgary), Asia Pacific (Melbourne), Asia Pacific (Sydney), Asia Pacific (Osaka), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (Ireland), Europe (London), Europe (Frankfurt), and Europe (Paris).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
@@ -2388,69 +2679,6 @@
       ]
     },
     {
-      "id": "aws-news-3537a41f10b9",
-      "title": "Amazon DocumentDB (with MongoDB compatibility) is Now Available in the Europe (Zurich) Region",
-      "description": "Amazon DocumentDB (with MongoDB compatibility) is now available in the Europe (Zurich) region adding to the list of available regions where you can use Amazon DocumentDB.\n \nAmazon DocumentDB is a fully managed, native JSON database that makes it simple and cost-effective to operate critical document workloads at virtually any scale without managing infrastructure. Amazon DocumentDB is designed to give you the scalability and durability you need when operating mission-critical MongoDB workloads. Storage scales automatically up to 128TiB without any impact to your application. In addition, Amazon DocumentDB natively integrates with AWS Database Migration Service (DMS), Amazon CloudWatch, AWS CloudTrail, AWS Lambda, AWS Backup and more. Amazon DocumentDB supports millions of requests per second and can be scaled out to 15 low latency read replicas in minutes with no application downtime.\n \nTo learn more about Amazon DocumentDB, please visit the Amazon DocumentDB product page and pricing page.\n \nYou can create a Amazon DocumentDB cluster from the AWS Management console, AWS Command Line Interface (CLI), or SDK.",
-      "link": "https://aws.amazon.comabout-aws/whats-new/2026/02/amazon-documentdb-mongodb-compatibility-europe-zurich-region",
-      "pubDate": "2026-02-11T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lambda",
-        "cloudwatch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4e118507f390",
-      "title": "Amazon Connect introduces audio enhancements for noisy environments",
-      "description": "Today, AWS announces the release of Audio Enhancement for Amazon Connect, helping improve audio quality and reliability for voice calls in noisy contact center environments. With this launch, you can enable Audio Enhancement for your agents so that end customers can hear them more clearly, even in the presence of background noise within the contact center environment.\n  The Audio Enhancement capability suppresses agent-side background noises and isolates agent voices, removing the effect of background noise and chatter in busy contact center environments. Audio Enhancement offers two specialized modes to match different agent setups. The \"Voice Isolation\" mode suppresses noises as well as background speech within the contact center, while the \"Noise Suppression\" mode only suppresses background noises. Contact center administrators can enable these capabilities for agents through the User Management page and select the appropriate mode based on their equipment and setup. Agents with proper permissions can also adjust their settings directly from the Contact Control Panel to optimize for their current environment.\n  The Audio Enhancement capability is available in all commercial AWS Regions where Amazon Connect is offered.\n  To learn more about Amazon Connect Audio Enhancement, please see the Amazon Connect website and the Amazon Connect Administrator Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-connect-audio-enhancements",
-      "pubDate": "2026-02-11T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-39b93afa34c1",
-      "title": "Amazon Bedrock AgentCore Browser now supports proxy configuration",
-      "description": "Amazon Bedrock AgentCore Browser now supports customer-provided proxy configuration, enabling customers to route browser sessions through their own proxy infrastructure for geo-targeting, regional content access, and compliance requirements. Organizations can access geo-restricted content, verify region-specific pricing, and validate localized application behavior across markets. Customers in regulated industries such as healthcare and financial services can route traffic through corporate proxy infrastructure to meet security policies while automating critical business processes.\n  Browser proxies help eliminate re-authentication cycles due to rotating IPs, while providing stable, controllable egress addresses for IP allowlisting requirements. The feature currently supports both HTTP and HTTPS protocols with secure credential management through AWS Secrets Manager. This enhancement is particularly valuable for healthcare organizations accessing portals with strict IP allowlisting, financial services companies with rigorous egress policies, and enterprises routing traffic through corporate proxy infrastructure that provides auditing and security policy enforcement.\n  This feature is available in all fourteen AWS Regions where Amazon Bedrock AgentCore Browser is available: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Seoul), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n  To learn more, visit the Browser Proxies documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/bedrock-agentcore-browser-proxy",
-      "pubDate": "2026-02-11T06:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "secrets manager",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "secrets manager",
-        "organizations",
-        "ga",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-4cbce46f295e",
       "title": "How Zalando innovates their Fast-Serving layer by migrating to Amazon Redshift",
       "description": "In this post, we show how Zalando migrated their fast-serving layer data warehouse to Amazon Redshift to achieve better price-performance and scalability.",
@@ -2467,174 +2695,6 @@
       "tags": [
         "nova",
         "redshift"
-      ]
-    },
-    {
-      "id": "aws-news-79a047a8ae20",
-      "title": "Amazon SageMaker HyperPod now supports node actions from the console",
-      "description": "Amazon SageMaker HyperPod now enables you to manage individual cluster nodes directly from the AWS Console. HyperPod cluster operators managing large-scale AI/ML workloads often need to connect to nodes for troubleshooting, reboot unresponsive instances, or replace degraded nodes. Connecting to a node previously required manually constructing SSM connection strings, while node recovery actions such as reboot and replace required CLI commands — the console now provides a single interface for all node actions.\n  With node actions in the console, you can now connect to any node via AWS Systems Manager (SSM). The console provides pre-populated SSM CLI commands with copy-to-clipboard support, and direct SSM session launch in the console. While SageMaker HyperPod clusters already support automatic replacement and reboot of unhealthy instances, there are scenarios such as memory overruns or undetectable hardware degradation that may require manual intervention. Now, node actions in the console provide a consistent approach to manually reboot nodes to recover from transient issues, delete unhealthy nodes, and replace nodes, with batch operations supporting multiple node actions simultaneously, enabling you to resolve node issues in minutes. This capability is especially valuable when running time-sensitive AI training and inference workloads where minimizing downtime is essential.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. You can perform all these node actions in the HyperPod Cluster management page on console. Click on the respective links to learn more about replace/reboot and connecting to a node.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-sagemaker-hyperpod-node-actions/",
-      "pubDate": "2026-02-10T19:15:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-814a29034488",
-      "title": "Amazon EC2 C8id, M8id, and R8id instances are available in additional regions",
-      "description": "Amazon Elastic Compute Cloud (EC2) C8id, M8id, and R8id instances powered by custom Intel Xeon 6 processors feature up to 384 vCPUs, 3TiB of memory, and 22.8TB of NVMe SSD storage and deliver up to 43% higher performance and 3.3x more memory bandwidth compared to previous generation C6id, M6id, and R6id instances. Starting today, C8id and M8id instances are available in Europe (Frankfurt) and Asia Pacific (Tokyo) regions, with M8id also available in Europe (Spain) region. Additionally, R8id instances are now available in Europe (Spain) and Asia Pacific (Tokyo) regions.\n  These instances deliver up to 46% higher performance for I/O intensive database workloads, and up to 30% faster query results for I/O intensive real-time data analytics than previous sixth-generation instances. Additionally, these instances support Instance Bandwidth Configuration, allowing 25% flexible allocation between network and EBS bandwidth, allocating resources optimally for each workload.\n  C8id instances are ideal for compute-intensive workloads such as high-performance web servers, batch processing, distributed analytics, ad serving, video encoding, and gaming servers. M8id instances are well-suited for balanced workloads including application servers, microservices, enterprise applications, and small to medium databases. R8id instances are ideal for memory-intensive workloads such as in-memory databases, real-time big data analytics, large in-memory caches, and scientific computing applications.\n  C8id, M8id and R8id instances are available in US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Tokyo) regions. M8id and R8id instances are additionally available in Europe (Spain) region. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 instance type page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/c8id-m8id-and-r8id-in-additional-regions/",
-      "pubDate": "2026-02-10T18:21:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-df2c20ddea76",
-      "title": "Amazon Athena now supports 1-minute reservations and 4 DPU minimum capacity",
-      "description": "Amazon Athena now supports 1-minute Capacity Reservations and a lower minimum capacity of 4 Data Processing Units (DPUs) for all reservations. Now, you can get started with less capacity and make more frequent, fine-grained adjustments to match your workload patterns—with no long-term commitments and cost savings up to 95% for short-duration query workloads.\n  Capacity Reservations provides dedicated serverless compute and is ideal for workloads requiring query prioritization and concurrency controls. You pay only for capacity that you reserve and there are no data scanned charges. Reserved capacity works seamlessly with existing Athena queries and workgroups—simply attach workgroups to a reservation and submit queries with no changes in your SQL queries or application code required.\n  To learn more, see the Athena User Guide and Athena pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-athena-one-minute-capacity-reservations/",
-      "pubDate": "2026-02-10T16:52:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "athena"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "athena",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-47906801ca88",
-      "title": "Amazon Bedrock adds support for six fully-managed open weights models",
-      "description": "Amazon Bedrock now supports six new models spanning frontier reasoning and agentic coding: DeepSeek V3.2, MiniMax M2.1, GLM 4.7, GLM 4.7 Flash, Kimi K2.5, and Qwen3 Coder Next. These six models bring customers access to the most capable open weights models available today, delivering frontier-class performance at significantly lower inference costs. They collectively cover the full spectrum of enterprise AI workloads: DeepSeek V3.2 and Kimi K2.5 push the frontier on reasoning and agentic intelligence, GLM 4.7 and Minimax 2.1 set new standards for autonomous coding with massive output windows, and Qwen3 Coder Next and GLM 4.7 Flash offer lightweight, cost-efficient alternatives purpose-built for production deployment.\n \nThese models on Amazon Bedrock are powered by Project Mantle, a new distributed inference engine for large-scale machine learning model serving on Amazon Bedrock. Project Mantle simplifies and expedites onboarding of new models onto Amazon Bedrock, provides highly performant and reliable serverless inference with sophisticated quality of service controls, unlocks higher default customer quotas with automated capacity management and unified pools, and provides out-of-the-box compatibility with OpenAI API specifications.\n \nTo learn more and get started, visit Amazon Bedrock console or the service documentation here. To get started with Amazon Bedrock OpenAI API-compatible service endpoints, visit documentation here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-bedrock-adds-support-six-open-weights-models",
-      "pubDate": "2026-02-10T16:02:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "support",
-        "new-model"
-      ]
-    },
-    {
-      "id": "aws-news-2baacc65d7a9",
-      "title": "Amazon OpenSearch Serverless now supports Collection Groups",
-      "description": "Amazon OpenSearch Serverless now supports Collection Groups, a new capability that enables you to share OpenSearch Compute Units (OCUs) across collections with different AWS KMS keys. This new capability delivers enhanced cost optimization through a shared compute model that reduces overall OCU expenses while maintaining collection-level security and access controls. Additionally, Collection Groups introduce the ability to specify minimum OCU allocations alongside maximum OCU limits, allowing you to provision compute capacity upfront at startup for more predictable performance.\n  Collection Groups are particularly valuable for multi-tenant workloads where different tenants require data encryption with separate KMS keys while still benefiting from shared compute resources. By grouping collections together, you can optimize OCU utilization across workloads, reduce costs through resource sharing, and maintain the security isolation required by different encryption keys. The minimum OCU setting ensures your collections have guaranteed baseline capacity from the moment they start, eliminating cold start delays and providing consistent performance for latency-sensitive applications.\n  Collection groups are available in all regions where Amazon OpenSearch Serverless is currently available. To learn more about configuring and managing collection groups, visit the Amazon OpenSearch Serverless documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-opensearch-serverless-supports-collection-groups/",
-      "pubDate": "2026-02-10T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "opensearch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-cf2d10da92a8",
-      "title": "Amazon EKS Auto Mode Announces Enhanced Logging for its Managed Kubernetes Capabilities",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) Auto Mode’s managed capabilities can now be configured as log delivery sources using Amazon CloudWatch Vended Logs. This integration enables customers to monitor and troubleshoot their EKS Auto Mode clusters more effectively by automatically collecting logs from Auto Mode’s managed Kubernetes capabilities for compute autoscaling, block storage, load balancing, and pod networking.\n  Customers can configure log delivery for Auto Mode capabilities using CloudWatch APIs or the AWS Console. Each Auto Mode capability can be configured as a CloudWatch Vended Logs delivery source, enabling reliable, secure log delivery with built-in AWS authentication and authorization at a reduced price compared to standard CloudWatch Logs. Customers can deliver these logs to CloudWatch Logs, Amazon S3, or Amazon Kinesis Data Firehose destinations.\n  This feature is available today in all regions where EKS Auto Mode is available. Standard CloudWatch Logs, S3, or Kinesis charges apply depending on the chosen destination.\n  To learn more about EKS Auto Mode logging capabilities, visit the Amazon EKS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-eks-auto-mode-enhanced-logging",
-      "pubDate": "2026-02-10T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "eks",
-        "kinesis",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "eks",
-        "kinesis",
-        "cloudwatch",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-dd23c1677fba",
-      "title": "AWS CloudWatch Alarm Mute Rules eliminate alert fatigue",
-      "description": "Amazon CloudWatch now supports Alarm Mute Rules, enabling customers to temporarily mute alarm notifications during planned deployments, maintenance windows, and off-hours without compromising monitoring visibility. This new capability helps eliminate alert fatigue while maintaining complete situational awareness across their infrastructure.\n  Alarm Mute Rules transform operational workflows by allowing teams to create one-time or recurring rules that silence notifications for up to 100 individual alarms around deployment calendars, scheduled maintenance activities, or predictable off-hours periods when non-critical alerts become disruptive. Customers can configure actions for OK, ALARM, and INSUFFICIENT_DATA states, and when mute rules expire, any previously muted actions are automatically triggered as long as the alarm remains in the same state it was in when the actions were muted, ensuring critical issues are never overlooked while preventing unnecessary alert fatigue.\n  This eliminates the operational risk of forgotten script-based workarounds and reduces alert noise during planned activities, enabling engineering teams to focus on core business initiatives rather than managing notification fatigue.\n \n\n CloudWatch Alarm Mute Rules is available today in all AWS Regions supporting alarm-level muting.\n \nTo get started, see CloudWatch User Guide for Alarm Mute Rules. You can create mute rules through the Amazon CloudWatch Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-cloudwatch-alarm-muting-rules",
-      "pubDate": "2026-02-10T09:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-9d4e4d6f3cb9",
-      "title": "Amazon EC2 C8gn instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Region Asia Pacific (Seoul, Melbourne), Canada (Central), Europe (Spain), and AWS GovCloud (US-East, US-West). The new instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. \n  \n Take advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference. \n  \n For increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters. \n  \n C8gn instances are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon, N.California), Europe (Frankfurt, Stockholm, Ireland, London, Spain), Asia Pacific (Singapore, Malaysia, Sydney, Thailand, Mumbai, Seoul, Melbourne), Middle East (UAE), Africa (Cape Town), Canada West (Calgary, Central), AWS GovCloud (US-East, US-West).\n  \n To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8gn-instances-additional-regions",
-      "pubDate": "2026-02-09T23:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "graviton",
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -2682,40 +2742,6 @@
         "redshift",
         "glue"
       ]
-    },
-    {
-      "id": "aws-news-9164d1ec8b97",
-      "title": "Amazon Neptune Analytics is now available in 7 additional regions",
-      "description": "Amazon Neptune Analytics is now available in Middle East (Bahrain), Middle East (UAE), Israel (Tel Aviv), Africa (Cape Town), Canada (Calgary), Asia Pacific (Malaysia), and Europe (Zurich) regions. You can now create and manage Neptune Analytics graphs in these new regions and run advanced graph analytics.\n  Amazon Neptune is a serverless graph database for connected data, improves the accuracy of AI applications, and lowers operational burden and costs. Neptune instantly scales graph workloads removing the need to manage capacity. By modeling data as a graph, Neptune captures context that improves accuracy and explainability of generative AI applications. To make AI application development easier, Neptune offers fully managed GraphRAG with Amazon Bedrock Knowledge Bases, and integrations with Strands AI Agents SDK and popular agentic memory tools. It also easily analyzes tens of billions of relationships across structured and unstructured data within seconds delivering strategic insights. Neptune is the only database and analytics engine that gives you the power of connected data with the enterprise capabilities and value of AWS.\n  To get started, you can create a new Neptune Analytics graphs using the AWS Management Console, or AWS CLI. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-neptune-analytics-in-seven-additional-regions",
-      "pubDate": "2026-02-09T21:45:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "ga",
-        "now-available",
-        "integration",
-        "new-region"
-      ]
-    },
-    {
-      "id": "aws-news-f4c0e3221bd7",
-      "title": "AWS HealthOmics introduces a Kiro Power and Kiro IDE extension for bioinformatics workflow development",
-      "description": "AWS HealthOmics announces a Kiro Power and Kiro IDE extension to create, run, debug, and optimize HealthOmics workflows faster with AI agent-assisted development. With the HealthOmics extension for Kiro IDE, customers can create, modify, and analyze workflows in domain-specific languages including Nextflow and WDL directly in the Kiro interface. AWS HealthOmics is a HIPAA-eligible service that helps accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n  Kiro Powers is a repository of curated and pre-packaged Model Context Protocol (MCP) servers, steering files, and agent hooks to accelerate specialized software development and deployment use cases. The Kiro Power for HealthOmics packages the HealthOmics MCP server with guidance, giving the Kiro agent expertise in HealthOmics workflow creation and optimization. The HealthOmics Kiro IDE extension provides syntax highlighting, code completion, and troubleshooting guidance, along with HealthOmics engine compatibility checking, performance optimization recommendations, automated run analysis with failure diagnostics, and workflow import/export capabilities.\n  To get started, download and install the HealthOmics Kiro Power from https://kiro.dev/powers/ and HealthOmics Kiro IDE extension from Open VSX Registry.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/aws-healthomics-introduces-kiro-plugin-for-bioinformatics-workflow-development/",
-      "pubDate": "2026-02-09T21:03:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-608b6b9419e6",
@@ -3626,24 +3652,6 @@
       ]
     },
     {
-      "id": "aws-news-b04be71f4d69",
-      "title": "Improve API discoverability with the new Amazon API Gateway Portal",
-      "description": "In this post, we will show how you can use the new portal feature to create customizable portals with enhanced security features in minutes, with APIs from multiple accounts, without managing any infrastructure.",
-      "link": "https://aws.amazon.com/blogs/compute/improve-api-discoverability-with-the-new-amazon-api-gateway-portal/",
-      "pubDate": "2025-11-20T00:41:25.000Z",
-      "source": "computeBlog",
-      "services": [
-        "api gateway"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "api gateway",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-9150859a247c",
       "title": "Building an AI gateway to Amazon Bedrock with Amazon API Gateway",
       "description": "In this post, we'll explore a reference architecture that helps enterprises govern their Amazon Bedrock implementations using Amazon API Gateway. This pattern enables key capabilities like authorization controls, usage quotas, and real-time response streaming. We'll examine the architecture, provide deployment steps, and discuss potential enhancements to help you implement AI governance at scale.",
@@ -3809,26 +3817,6 @@
         "lambda",
         "s3",
         "step functions"
-      ]
-    },
-    {
-      "id": "aws-news-7e2f23dd38ac",
-      "title": "Simplify multi-tenant encryption with a cost-conscious AWS KMS key strategy",
-      "description": "In this post, we explore an efficient approach to managing encryption keys in a multi-tenant SaaS environment through centralization, addressing challenges like key proliferation, rising costs, and operational complexity across multiple AWS accounts and services. We demonstrate how implementing a centralized key management strategy using a single AWS KMS key per tenant can maintain security and compliance while reducing operational overhead as organizations scale.",
-      "link": "https://aws.amazon.com/blogs/architecture/simplify-multi-tenant-encryption-with-a-cost-conscious-aws-kms-key-strategy/",
-      "pubDate": "2025-08-21T21:54:51.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "ga"
       ]
     },
     {
