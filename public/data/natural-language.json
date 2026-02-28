@@ -1,11 +1,35 @@
 {
-  "lastUpdated": "2026-02-27T06:37:56.286Z",
+  "lastUpdated": "2026-02-28T06:22:29.481Z",
   "category": "natural-language",
-  "totalItems": 17,
+  "totalItems": 18,
   "items": [
     {
-      "id": "aws-news-66e18258a1c1",
-      "title": "AWS Marketplace now supports multiple purchases of SaaS and Professional Services products",
+      "id": "aws-news-a76de02eb3c0",
+      "title": "ARC Region switch adds three new capabilities: post-recovery workflows, RDS orchestration and AWS provider support for Terraform",
+      "description": "Amazon Application Recovery Controller (ARC) Region switch helps customers orchestrate the failover of their multi-Region applications to achieve a bounded recovery time in the event of a Regional impairment. It automates multi-Region disaster recovery, reducing engineering effort and eliminating operational overhead when recovering applications across multiple AWS accounts and Regions. Region switch now includes three new capabilities: post-recovery workflows, native RDS execution blocks, and AWS provider for Terraform support.\n  Post-recovery workflows. Disaster recovery doesn't end when customers failover to a standby Region. After orchestrating a failover or failback, customers must prepare the other Region for the next recovery event. Today, this requires manual coordination of scaling, recreating read replicas, and validating configurations. Post-recovery workflows help customers automate these preparation steps. With this launch, post-recovery workflows support the custom action Lambda execution block, Amazon RDS create read replica execution block, ARC Region switch plan execution block, and the manual approval execution block. Customers can create read replicas, run custom logic via Lambda functions, add manual approval gates, and embed child plans for complex orchestration as part of post-recovery. Post-recovery workflows are available for active/passive deployments and can be triggered manually.\n  RDS execution blocks. Coordinating Amazon RDS database recovery during Regional failover requires manual steps to promote read replicas and recreate replication, introducing delays and errors. Region switch now natively supports two Amazon RDS execution blocks that automate RDS recovery orchestration. The RDS promote read replica execution block orchestrates promotion of a read replica to a standalone instance during failover. The RDS create read replica execution block orchestrates replica creation as part of post-recovery workflows.\n  AWS provider for Terraform support. Region switch is now supported by the AWS provider for Terraform, enabling customers to manage disaster recovery plans as Infrastructure-as-Code and integrate them into CI/CD pipelines alongside application deployments.\n \n\n To learn more, about AWS provider support for Terraform, visit Terraform provider documentation. To learn about post-recovery workflows in action, read the post-recovery workflow tutorial. To get started with Region switch, read our launch blog or documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/arc-region-switch-post-recovery-rdsblock/",
+      "pubDate": "2026-02-27T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "lambda",
+        "rds"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "lambda",
+        "rds",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6d989aab43fa",
+      "title": "AWS Marketplace now supports multiple purchases of SaaS & Professional Services products from the same account",
       "description": "AWS Marketplace now supports Concurrent Agreements for SaaS and Professional Services products, enabling buyers to make multiple purchases for the same product within a single AWS account. Previously, buyers could only maintain one active agreement per product per AWS account, requiring sellers to use workarounds to support expansion deals. Concurrent Agreements removes this constraint, allowing different business units to procure independently with their own negotiated terms and pricing.\n \nBoth buyers and sellers benefit from the flexibility Concurrent Agreements provides. Buyers can accept multiple offers for the same product without disrupting existing agreements, supporting multi-team procurement within centralized AWS accounts, mid-term expansions, and repeat purchases. Sellers can close multi-business unit deals that couldn't happen before, transact expansions immediately instead of waiting for renewal cycles, and eliminate the operational overhead of managing workarounds. \n \nConcurrent Agreements is enabled by default for all Professional Services listings starting today, with no seller action required. For SaaS listings, sellers must update their AWS Marketplace integration to handle multiple active subscriptions, including updating subscription notifications to use EventBridge and updating entitlement and metering APIs. Starting June 1, 2026, support for Concurrent Agreements will be required for new SaaS products. Sellers who have completed the integration work can opt in to enable Concurrent Agreements for their SaaS products now. \n \nThis capability is available in all AWS Regions where AWS Marketplace is supported. Concurrent Agreements purchasing is available on SaaS products where sellers have completed the integration, and is enabled by default for all Professional Services listings. To learn more about enabling Concurrent Agreements as a seller of SaaS products, review the Concurrent Agreements integration lab.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/concurrent-agreements-february/",
       "pubDate": "2026-02-26T21:00:00.000Z",
@@ -152,29 +176,6 @@
       ]
     },
     {
-      "id": "aws-news-187f15159320",
-      "title": "Amazon EC2 C8i and C8i-flex instances are now available in Asia Pacific (Malaysia) and South America (Sao Paulo) regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Asia Pacific (Malaysia) and South America (Sao Paulo) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8i-c8i-flex-instances-asia-pacific-malaysia-south-america-sao--paulo-regions/",
-      "pubDate": "2026-02-24T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "kafka"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "kafka",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-5b6ae9d26d7e",
       "title": "Amazon EC2 C7i and C7i-flex instances are now available in the Africa (Cape Town) Region",
       "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i-flex and C7i instances are available in the Africa (Cape Town) region. These instances are powered by powered by custom 4th Generation Intel Xeon Scalable processors (code-named Sapphire Rapids) custom processors, available only on AWS, and offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i-flex instances expand the EC2 Flex instances portfolio to provide the easiest way for you to get price performance benefits for a majority of compute intensive workloads, and deliver up to 19% better price-performance compared to C6i. C7i-flex instances offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources. With C7i-flex instances, you can seamlessly run web and application servers, databases, caches, Apache Kafka, and Elasticsearch, and more.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
@@ -195,6 +196,29 @@
         "kafka",
         "now-available",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-187f15159320",
+      "title": "Amazon EC2 C8i and C8i-flex instances are now available in Asia Pacific (Malaysia) and South America (Sao Paulo) regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Asia Pacific (Malaysia) and South America (Sao Paulo) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8i-c8i-flex-instances-asia-pacific-malaysia-south-america-sao--paulo-regions/",
+      "pubDate": "2026-02-24T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "kafka"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "kafka",
+        "ga",
+        "now-available"
       ]
     },
     {

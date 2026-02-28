@@ -1,8 +1,70 @@
 {
-  "lastUpdated": "2026-02-27T06:37:56.286Z",
+  "lastUpdated": "2026-02-28T06:22:29.481Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 21,
   "items": [
+    {
+      "id": "aws-news-5ee3965f68b0",
+      "title": "Amazon CloudWatch logs centralization rules now support customizable destination log group structure",
+      "description": "Amazon CloudWatch now supports customizing destination log group names when creating CloudWatch log centralization rules. Organizations managing logs across multiple accounts can now use attributes to organize centralized logs into meaningful hierarchies — by account ID, region, organizational unit, or other AWS Organizations metadata — that match how their organization operates and what their compliance requirements demand.\n \nYou can define a destination log group name structure using attributes that CloudWatch Logs automatically replaces with actual values when logs are copied. For example, using the pattern ${source.accountId}/${source.region}/${source.logGroup} creates destination log groups like 123456789012/us-east-1/cloudtrail/managementevent, making it easy to identify which account and region logs originated from. You can use attributes, including source account ID, region, log group name, organization ID, organizational unit ID, root ID, and the full organizational path.\n \nCustomizable destination log group names are available in all centralization rules supported regions.\n \nCustomers can use centralization rules to centralize one copy of logs for free (ingestion). Additional copies are charged at $0.05/GB of logs centralized (the backup region feature is considered an additional copy). Storage charges apply. To learn more, visit the CloudWatch Logs Centralization documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/cloudwatch-centralization-custom-groups/",
+      "pubDate": "2026-02-27T18:50:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "cloudwatch",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8ca8de5854ac",
+      "title": "AWS Resource Access Manager now supports maintaining shares when accounts change organizations",
+      "description": "AWS Resource Access Manager (RAM) now supports a resource share configuration that allows you to maintain resource sharing continuity when accounts move between AWS Organizations. With the new RetainSharingOnAccountLeaveOrganization parameter and corresponding ram:RetainSharingOnAccountLeaveOrganization condition key, security administrators can configure resource shares to retain access when accounts leave the organization and enforce consistent policies across their organization using Service Control Policies (SCPs).\n  This capability helps organizations undergoing mergers, acquisitions, or restructuring maintain access to shared resources like Route53 Resolver Rules, Transit Gateways, and IPAM pools without disruption. Security teams can use SCPs to enforce the RetainSharingOnAccountLeaveOrganization configuration organization-wide. When enabled, RAM treats organization accounts as external accounts, requiring explicit invitation acceptance and preserving resource access during account transitions between organizations.\n  This feature is available in all AWS commercial Regions at no additional cost. To learn more about resource share configurations, see the AWS RAM documentation or visit the AWS RAM product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-resource-access-manager/",
+      "pubDate": "2026-02-27T17:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e17def97955c",
+      "title": "Amazon RDS for PostgreSQL supports minor versions 18.3, 17.9, 16.13, 15.17, and 14.22",
+      "description": "Amazon Relational Database Service (RDS) for PostgreSQL now supports the latest minor versions 18.3, 17.9, 16.13, 15.17, and 14.22. These versions address the regression from the February 12, 2026 PostgreSQL community release. We recommend that you upgrade to the latest minor versions to fix known security vulnerabilities in prior versions of PostgreSQL, and to benefit from the bug fixes added by the PostgreSQL community.\n  You can upgrade your databases during scheduled maintenance windows using automatic minor version upgrades. To simplify operations at scale, enable automatic minor version upgrades and use the AWS Organizations Upgrade Rollout Policy to orchestrate thousands of upgrades in phases, first to development environments before upgrading production systems. You can also use Amazon RDS Blue/Green deployments with physical replication to minimize downtime for minor version upgrades.\n  Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. See Amazon RDS for PostgreSQL Pricing for pricing details and regional availability. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI).",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/rds-minor-version-18-3-17-9-16-13-15-17-14-22/",
+      "pubDate": "2026-02-27T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-e318070b2011",
       "title": "Amazon Cognito enhances client secret management with secret rotation and custom secrets",
@@ -220,89 +282,6 @@
         "ga",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-48e777b8ef81",
-      "title": "AWS expands Resource Control Policies support to Amazon DynamoDB",
-      "description": "AWS Resource Control Policies (RCPs) now support Amazon DynamoDB. RCPs are a type of organization policy that you can use to manage permissions in your organization. RCPs offer central control over the maximum available permissions for resources in your organization.\n \nWith this expansion, you can now use RCPs to manage permissions for Amazon DynamoDB. For example, you can create policies that prevent identities outside your organization from accessing DynamoDB, helping you build a data perimeter and enforce baseline security standards across your AWS environment.  \n \nRCPs are available in all AWS commercial Regions and AWS GovCloud (US) Regions. To learn more about RCPs and view the full list of supported AWS services, visit the Resource control policies (RCPs) documentation in the AWS Organizations User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-expands-resource-control-policies-amazon",
-      "pubDate": "2026-02-12T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "dynamodb",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "dynamodb",
-        "rds",
-        "organizations",
-        "ga",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-fc86dccc391a",
-      "title": "Amazon RDS for PostgreSQL supports minor versions  18.2, 17.8, 16.12, 15.16 and 14.21",
-      "description": "Amazon Relational Database Service (RDS) for PostgreSQL now supports the latest minor versions 18.2, 17.8, 16.12, 15.16, and 14.21. We recommend that you upgrade to the latest minor versions to fix known security vulnerabilities in prior versions of PostgreSQL, and to benefit from the bug fixes added by the PostgreSQL community. This release also includes new extension pg_stat_monitor that enables you to collect performance metrics and evaluate query performance insights in a unified view.\n  You can upgrade your databases during scheduled maintenance windows using automatic minor version upgrades. To simplify operations at scale, enable automatic minor version upgrades and use the AWS Organizations Upgrade Rollout Policy to orchestrate thousands of upgrades in phases, first to development environments before upgrading production systems. You can also use Amazon RDS Blue/Green deployments with physical replication to minimize downtime for minor version upgrades.\n  Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. See Amazon RDS for PostgreSQL Pricing for pricing details and regional availability. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI).",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/rds-minor-version-18-2-17-8-16-12-15-16-14-21",
-      "pubDate": "2026-02-12T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-6a19d601fcb1",
-      "title": "Amazon Connect  launches granular access controls for analytics dashboards",
-      "description": "Amazon Connect dashboards now provides granular access controls for analytics dashboards. This enables you to apply resource tags that control who is able to see metrics for specific resources such as agents, queues, and routing profiles. You can now filter metrics using tags to view aggregate metrics for agents or queues that share the same tags. For example, you can tag agents with Department:Customer Service to restrict dashboard metrics visibility to Customer Service team managers.\n \n\n Amazon Connect dashboards are available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect is offered. To learn more about dashboards, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, the AWS cloud-based contact center, please visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-connect-launches-granular-access",
-      "pubDate": "2026-02-12T07:26:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-f20129c0b05f",
-      "title": "AWS Payment Cryptography Achieves Cartes Bancaires Approval",
-      "description": "Today, AWS Payment Cryptography has become one of the first cloud-based payment cryptography services to obtain approval from Groupement des Cartes Bancaires (CB), France's national card payment network. This CB approval, combined with existing compliance credentials, enables customers to run payment workloads in AWS while helping customers maintain CB compliance.\n  Organizations such as acquirers, payment facilitators, networks, switches, processors, and issuing banks that are moving workloads to the cloud can rely on AWS Payment Cryptography’s CB approval as part of their compliance frameworks. Organizations processing card payments typically require Hardware Security Modules (HSM) to perform cryptography in a compliant manner. AWS Payment Cryptography provides equivalent functionality in an elastic, scalable service, eliminating the operational burden of procuring and manage standalone payment HSMs. Customers can leverage the service’s shared responsibility model with PCI PIN, PCI P2PE, PCI 3DS, PCI DSS, SOC-2, CSA STAR and ISO27001 certifications as well as the additional CB approval.\n  AWS Payment Cryptography is available in the following AWS Regions: Canada (Montreal), US East (Ohio, N. Virginia), US West (Oregon), Europe (Ireland, Frankfurt, London, Paris), Africa (Cape Town) and Asia Pacific (Singapore, Tokyo, Osaka, Mumbai, Hyderabad, Sydney).\n  To start using the service, please download the latest AWS CLI/SDK and see the AWS Payment Cryptography user guide for more information including further compliance details.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/payment-cryptography-cartes-bancaires",
-      "pubDate": "2026-02-11T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga"
       ]
     },
     {
