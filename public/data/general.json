@@ -1,8 +1,28 @@
 {
-  "lastUpdated": "2026-03-05T06:36:25.473Z",
+  "lastUpdated": "2026-03-06T06:33:13.487Z",
   "category": "general",
-  "totalItems": 52,
+  "totalItems": 49,
   "items": [
+    {
+      "id": "aws-news-ff026065f739",
+      "title": "Amazon OpenSearch Service introduces capacity optimized blue/green deployments",
+      "description": "Amazon OpenSearch Service now offers a Capacity Optimized option for blue/green deployments, ensuring domain updates can complete even when available instance capacity is less than required. Updates are performed in incremental batches, reducing the number of additional instances needed during the process.\n  Amazon OpenSearch Service uses a blue/green deployment process when updating domains — creating an idle copy of the original environment, applying updates, and routing traffic to the new environment once complete. This minimizes downtime and preserves the original environment as a fallback. Until now, blue/green deployments required 100% instance capacity upfront. For example, for a cluster with 100 data nodes, another 100 nodes were needed to proceed. If sufficient capacity was unavailable, customers had to wait and retry later.\n  Now, customers can choose between two deployment strategies. The default Full Swap option maintains current behavior, requiring full capacity upfront for the fastest deployment. The new Capacity Optimized option attempts a full capacity deployment first, but automatically falls back to batch deployment if capacity is insufficient. OpenSearch Service determines the appropriate batch size based on cluster size and available instances. Because updates are applied in batches, this option may take longer than a full-swap deployment. Customers can select their preferred option in the deployment configuration settings via the OpenSearch Service console or API. We recommend choosing the Capacity Optimized deployment option for clusters with 30 or more nodes.\n  The Capacity Optimized option is available for all OpenSearch and Elasticsearch versions, across all AWS Commercial Regions where OpenSearch Service is available. See here for a full listing of our Regions. To learn more, visit the documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-bg/",
+      "pubDate": "2026-03-05T09:54:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "update"
+      ]
+    },
     {
       "id": "aws-news-fdf4200e0759",
       "title": "AWS simplifies IAM role creation and setup in service workflows",
@@ -324,24 +344,6 @@
       ]
     },
     {
-      "id": "aws-news-fbb9867889ae",
-      "title": "AWS AppConfig integrates with New Relic for automated rollbacks",
-      "description": "AWS AppConfig today launched a new integration that enables automated, intelligent rollbacks during feature flag and dynamic configuration deployments using New Relic Workflow Automation. Building on AWS AppConfig's third-party alert capability, this integration provides teams using New Relic with a solution to automatically detect degraded application health and trigger rollbacks in seconds, eliminating manual intervention.\n  When you deploy feature flags using AWS AppConfig's gradual deployment strategy, the AWS AppConfig New Relic Extension continuously monitors your application health against configured alert conditions. If issues are detected during a feature flag update and deployment, such as increased error rates or elevated latency, the New Relic Workflow automatically sends a notification to trigger an immediate rollback, reverting the feature flag to its previous state. This closed-loop automation reduces the time between detection and remediation from minutes to seconds, minimizing customer impact during failed deployments.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-appconfig-new-relic-for-automated-rollback/",
-      "pubDate": "2026-02-24T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "update",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-d9cab529e40d",
       "title": "Amazon EC2 M8a instances now available in AWS Europe (Frankfurt) region",
       "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Europe (Frankfurt) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements. \n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
@@ -360,6 +362,24 @@
         "rds",
         "ga",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-fbb9867889ae",
+      "title": "AWS AppConfig integrates with New Relic for automated rollbacks",
+      "description": "AWS AppConfig today launched a new integration that enables automated, intelligent rollbacks during feature flag and dynamic configuration deployments using New Relic Workflow Automation. Building on AWS AppConfig's third-party alert capability, this integration provides teams using New Relic with a solution to automatically detect degraded application health and trigger rollbacks in seconds, eliminating manual intervention.\n  When you deploy feature flags using AWS AppConfig's gradual deployment strategy, the AWS AppConfig New Relic Extension continuously monitors your application health against configured alert conditions. If issues are detected during a feature flag update and deployment, such as increased error rates or elevated latency, the New Relic Workflow automatically sends a notification to trigger an immediate rollback, reverting the feature flag to its previous state. This closed-loop automation reduces the time between detection and remediation from minutes to seconds, minimizing customer impact during failed deployments.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-appconfig-new-relic-for-automated-rollback/",
+      "pubDate": "2026-02-24T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "update",
+        "integration"
       ]
     },
     {
@@ -521,25 +541,6 @@
       ]
     },
     {
-      "id": "aws-news-0741cca3886c",
-      "title": "Amazon Aurora MySQL 3.12 (compatible with MySQL 8.0.44) is now generally available",
-      "description": "Starting today, Amazon Aurora MySQL - Compatible Edition 3 (with MySQL 8.0 compatibility) will support MySQL 8.0.44 through Aurora MySQL v3.12.\n  In addition to many security enhancements and bug fixes, Aurora MySQL v3.12 contains several availability improvements. For more details, refer to the Aurora MySQL 3.12 and MySQL 8.0.44 release notes. To upgrade to Aurora MySQL 3.12, you can initiate a minor version upgrade manually by modifying your DB cluster, or you can enable the “Auto minor version upgrade” option when creating or modifying a DB cluster. This release is available in all AWS regions where Aurora MySQL is available.\n  Amazon Aurora is designed for unparalleled high performance and availability at global scale with full MySQL and PostgreSQL compatibility. It provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication, and integrations with other Amazon Web Services services. To get started with Amazon Aurora, take a look at our getting started page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-aurora-mysql-312-available/",
-      "pubDate": "2026-02-17T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "improvement",
-        "enhancement",
-        "integration",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-892f4e62054e",
       "title": "Introducing Agent Plugins for AWS",
       "description": "Deploying applications to AWS typically involves researching service options, estimating costs, and writing infrastructure-as-code tasks that can slow down development workflows. Agent plugins extend coding agents with specialized skills, enabling them to handle these AWS-specific tasks directly within your development environment. Today, we’re announcing Agent Plugins for AWS (Agent Plugins), an open source repository of […]",
@@ -551,70 +552,6 @@
         "general"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-9f9b25873f51",
-      "title": "Amazon EventBridge Scheduler adds resource count metrics for quota monitoring",
-      "description": "Amazon EventBridge Scheduler now emits resource count metrics to Amazon CloudWatch, enabling you to monitor the approximate number of schedules and schedule groups in your account. These new metrics help you identify when you're approaching your service quota limits so you can request increases before running out of capacity. You can increase the schedules quota, for instance, from the default of 10 million to billions.\n \nWith Amazon EventBridge Scheduler, you can create billions of scheduled events and tasks that run across more than 270 AWS services, without provisioning or managing infrastructure. You can set up one-time or recurring schedules using cron expressions, rate expressions, or specific times, with support for time zones and daylight savings. Today's addition of resource count metrics enhances your ability to manage capacity planning and scale your scheduled workloads with confidence.\n \nThese metrics are available at no additional cost in all AWS Regions, including the AWS GovCloud (US) Regions.\n \nTo learn more, see the Monitoring EventBridge Scheduler documentation or view the metrics in the CloudWatch console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-eventbridge-scheduler-resource-metrics/",
-      "pubDate": "2026-02-17T17:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eventbridge",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eventbridge",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-383e9c5a8202",
-      "title": "Amazon EC2 C8a instances now available in the Europe (Frankfurt) and Europe (Ireland) region",
-      "description": "Starting today, the compute-optimized Amazon EC2 C8a instances are available in the Europe (Frankfurt) and Europe (Ireland) regions. C8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, delivering up to 30% higher performance and up to 19% better price-performance compared to C7a instances.\n  C8a instances deliver 33% more memory bandwidth compared to C7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 C7a instances, they are up to 57% faster for GroovyJVM allowing better response times for Java-based applications. C8a instances offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements.\n  C8a instances are built on AWS Nitro System and are ideal for high performance, compute-intensive workloads such as batch processing, distributed analytics, high performance computing (HPC), ad serving, highly-scalable multiplayer gaming, and video encoding.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 C8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8a-instances-europe-frankfurt-europe-ireland-regions",
-      "pubDate": "2026-02-17T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-2fec70e32e81",
-      "title": "Amazon MSK now supports dual-stack (IPv4 and IPv6) connectivity for existing clusters",
-      "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) now supports dual-stack connectivity (IPv4 and IPv6) for existing MSK Provisioned and MSK Serverless clusters. This capability enables customers to connect to Amazon MSK using both IPv4 and IPv6 protocols, in addition to the existing IPv4-only option. It helps customers modernize applications for IPv6 environments while maintaining IPv4 compatibility, making it easier to meet compliance requirements and prepare for future network architectures.\n  Amazon MSK is a fully managed service for Apache Kafka that makes it easier for customers to build and run applications that use Apache Kafka as a data store. Previously, MSK Provisioned and Serverless clusters exclusively utilized IPv4 addressing for all connectivity options. With this new capability, customers can now enable dual-stack connectivity (IPv4 and IPv6) on existing MSK clusters using Amazon MSK Console, AWS CLI, SDK, or CloudFormation by modifying the Network Type parameter for a cluster from IPv4 to dual-stack. Upon successful update, MSK provisions IPv6-enabled network interfaces while maintaining existing IPv4 connectivity, ensuring uninterrupted service. To retrieve new IPv6 bootstrap broker strings for MSK clusters, customers can use the GetBootstrapBrokers API to obtain the necessary connection information. All MSK Provisioned and Serverless clusters will retain IPv4-only connectivity unless explicitly updated.\n  Dual-stack connectivity for existing MSK Provisioned and Serverless clusters is now available in all AWS Regions where Amazon MSK is available, at no additional cost. To learn more about Amazon MSK dual-stack support, refer to the Amazon MSK developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-msk-dual-stack-ipv4-and-ipv6",
-      "pubDate": "2026-02-17T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "kafka",
-        "msk",
-        "now-available",
-        "update",
-        "support",
-        "new-capability"
-      ]
     },
     {
       "id": "aws-news-aa80f8ab4dc6",
