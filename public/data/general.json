@@ -1,8 +1,49 @@
 {
-  "lastUpdated": "2026-03-06T06:33:13.487Z",
+  "lastUpdated": "2026-03-07T06:24:18.395Z",
   "category": "general",
-  "totalItems": 49,
+  "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-c17c9a94480c",
+      "title": "Amazon Redshift introduces reusable templates for COPY operations",
+      "description": "Amazon Redshift now supports templates for the COPY command, allowing you to store and reuse frequently used COPY parameters. This new feature enables you to create reusable templates that contain commonly utilized formatting parameters, eliminating the need to manually specify parameters for each COPY operation.\n  Templates help maintain consistency across data ingestion operations that use the COPY command. They also reduce the time and effort required to execute COPY commands. You can create standardized configurations for different file types and data sources, ensuring consistent parameter usage across your teams and reducing the likelihood of errors caused by manual input. When parameters need to be updated, changes to the template automatically apply to all future uses, simplifying maintenance and improving operational efficiency.\n  Support for templates for the COPY command is available in all AWS Regions, including the AWS GovCloud (US) Regions, where Amazon Redshift is available. To get started with templates, see the documentation or check out the AWS Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-redshift-reusable-templates-copy/",
+      "pubDate": "2026-03-06T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "new-feature",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f42e723b644a",
+      "title": "Amazon Redshift Serverless now maintains datashare permissions during restore",
+      "description": "Amazon Redshift Serverless now preserves datashare permissions when you restore a snapshot to the same namespace, simplifying data sharing workflows and reducing administrative overhead. Previously, restoring a serverless namespace from a snapshot required administrators to manually re-grant datashare permissions to consumer clusters and recreate consumer databases, even when restoring to the same namespace.\n \n\n With this enhancement, datashare permissions are automatically maintained when you restore a snapshot to the same producer namespace, provided the datashare permission existed both when the snapshot was taken and on the current namespace. For consumer namespaces, datashare access remains unchanged after restore, eliminating the need for producer administrators to re-grant permissions. This streamlines disaster recovery and testing workflows by reducing manual configuration steps and potential errors. Amazon Redshift also provides EventBridge notifications to alert you when datashares are dropped, consumer access is revoked, or public accessibility changes during restore operations.\n  This feature is available in all AWS Regions that support Amazon Redshift. To learn more, see the Amazon Redshift Management Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-redshift-serverless-maintains-datashare-permissions-on-restore/",
+      "pubDate": "2026-03-05T22:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "eventbridge",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ff026065f739",
       "title": "Amazon OpenSearch Service introduces capacity optimized blue/green deployments",
@@ -54,6 +95,26 @@
         "secrets manager",
         "launch",
         "ga"
+      ]
+    },
+    {
+      "id": "aws-news-236d8e8c8bd7",
+      "title": "Amazon EventBridge Scheduler now provides a higher default quota for the CreateSchedule API",
+      "description": "Amazon EventBridge Scheduler now has a higher default service quota for the CreateSchedule API action. The default CreateSchedule request rate quota is now 5,000 requests per second in 11 AWS Regions. Quotas can be further increased to tens of thousands of requests per second by making a request through the Service Quotas console.\n  EventBridge Scheduler is a serverless scheduler that allows you to create, run, and manage billions of scheduled events and tasks, across more than 270 AWS services, without provisioning or managing the underlying infrastructure. EventBridge Scheduler supports one-time and recurring schedules that can be created using cron expressions, rate expressions, or specific times with support for time zones and daylight savings. With today's increase to the default CreateSchedule quota, customers with high-throughput schedule creation workloads can operate at increased scale without needing to request a quota increase, reducing friction when onboarding new workloads or scaling existing ones.\n  Scheduler will scale to the new quota automatically. You can request increases beyond the new default service quota in the Service Quotas console. View EventBridge Scheduler service quotas for each Region in the service endpoints and quotas documentation or learn more about the EventBridge Scheduler service in the EventBridge Scheduler documentation. The increased quota is now available in the US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), South America (São Paulo), Asia Pacific (Mumbai), Europe (Frankfurt), Europe (London), Asia Pacific (Tokyo), Asia Pacific (Singapore), and Asia Pacific (Sydney) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/2/eventbridge-default-quota-increase/",
+      "pubDate": "2026-03-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eventbridge",
+        "ga",
+        "now-available",
+        "support"
       ]
     },
     {
@@ -478,69 +539,6 @@
       ]
     },
     {
-      "id": "aws-news-a46279b99abf",
-      "title": "Amazon Connect Cases now supports AWS Service Quotas",
-      "description": "Amazon Connect Cases now supports AWS Service Quotas, giving administrators a centralized way to view applied limits, monitor utilization, and scale case workloads without hitting unexpected service constraints. You can request quota increases directly from the Service Quotas console, and eligible requests are automatically approved without manual intervention.\n  Amazon Connect Cases is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town). To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-connect-cases-aws-service-quotas",
-      "pubDate": "2026-02-18T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-276cd7d4064e",
-      "title": "Amazon Managed Grafana now supports AWS KMS customer managed keys",
-      "description": "Amazon Managed Grafana now supports customer-managed keys (CMK) through AWS Key Management Service (KMS), enabling you to encrypt data stored in in your Amazon Managed Grafana workspaces with your own encryption keys. Amazon Managed Grafana is a fully managed service based on open-source Grafana that makes it easier for you to visualize and analyze your operational data at scale.\n \nAmazon Managed Grafana provides encryption at rest using AWS owned keys by default. With this launch, you now have an option to use a customer-managed key when creating an Amazon Managed Grafana workspace. This allows you to add a self-managed security layer, helping you meet your organization’s compliance and regulatory requirements.\n \nThis feature is now available in all regions where Amazon Managed Grafana is generally available, except in AWS GovCloud (US) Regions. To get started with Amazon Managed Grafana, refer Amazon Managed Grafana user guide. To learn more about Amazon Managed Grafana, visit the product page and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-managed-grafana-customer-managed-keys",
-      "pubDate": "2026-02-18T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "grafana",
-        "launch",
-        "generally-available",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-21f037077d83",
-      "title": "Amazon OpenSearch Service expands support for Graviton4 (c8g,m8g & r8g ) instances",
-      "description": "Amazon OpenSearch Service expands support for the latest generation Graviton4-based Amazon EC2 instance families. These new instance types are compute optimized (c8g), general purpose (m8g), and memory optimized (r8g, r8gd) instances.\n  AWS Graviton4 processors provide up to 30% better performance than AWS Graviton3 processors with c8g, m8g and r8g & r8gd offering the best price performance for compute-intensive, general purpose, and memory-intensive workloads respectively. To learn more about Graviton4 improvements, please see the blog on r8g instances and the blog on c8g & m8g instances.\n  Amazon OpenSearch Service Graviton4 instances are supported for all OpenSearch versions, and Elasticsearch (open source) versions 7.9 and 7.10.\n  Apart from the regions already supported, one or more than one Graviton4 instance types are now also available in following region: Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Osaka), Asia Pacific (Thailand), Europe (Milan), Europe (Paris), Europe (Zurich), Middle East (UAE), AWS GovCloud (US-West) and AWS GovCloud (US-East).\n  For region specific availability & pricing, visit our pricing page. To learn more about Amazon OpenSearch Service and its capabilities, visit our product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-opensearch-service-expands-support-graviton4-based-instances",
-      "pubDate": "2026-02-18T05:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "opensearch",
-        "opensearch service",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "opensearch",
-        "opensearch service",
-        "graviton",
-        "improvement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-892f4e62054e",
       "title": "Introducing Agent Plugins for AWS",
       "description": "Deploying applications to AWS typically involves researching service options, estimating costs, and writing infrastructure-as-code tasks that can slow down development workflows. Agent plugins extend coding agents with specialized skills, enabling them to handle these AWS-specific tasks directly within your development environment. Today, we’re announcing Agent Plugins for AWS (Agent Plugins), an open source repository of […]",
@@ -753,23 +751,6 @@
         "integration",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-df24f6f1c182",
-      "title": "Building multi-tenant SaaS applications with AWS Lambda’s new tenant isolation mode",
-      "description": "Today, AWS is announcing tenant isolation for AWS Lambda, enabling you to process function invocations in separate execution environments for each end-user or tenant invoking your Lambda function. This capability simplifies building secure multi-tenant SaaS applications by managing tenant-level compute environment isolation and request routing, allowing you to focus on core business logic rather than implementing tenant-aware compute environment isolation.",
-      "link": "https://aws.amazon.com/blogs/compute/building-multi-tenant-saas-applications-with-aws-lambdas-new-tenant-isolation-mode/",
-      "pubDate": "2025-11-20T17:47:17.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda"
       ]
     },
     {
