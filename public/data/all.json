@@ -1,16 +1,219 @@
 {
-  "lastUpdated": "2026-03-10T06:34:25.537Z",
-  "totalItems": 203,
+  "lastUpdated": "2026-03-11T06:37:29.509Z",
+  "totalItems": 202,
   "sources": {
     "whatsNew": 94,
     "mlBlog": 20,
     "newsBlog": 18,
-    "bigDataBlog": 19,
+    "bigDataBlog": 18,
     "architectureBlog": 17,
     "computeBlog": 19,
     "developersAndDevOps": 16
   },
   "items": [
+    {
+      "id": "aws-news-329220918785",
+      "title": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features",
+      "description": "Amazon Bedrock AgentCore Runtime now supports stateful Model Context Protocol (MCP) server features, enabling developers to build MCP servers that leverage elicitation, sampling, and progress notifications alongside existing support for resources, prompts, and tools. These capabilities allow MCP servers deployed to AgentCore Runtime to collect user input interactively during tool execution, request LLM-generated content from clients, and provide real-time progress updates for long-running operations.\n  With stateful MCP sessions, each user session runs in a dedicated microVM with isolated resources, and the server maintains session context across multiple interactions using an Mcp-Session-Id header. Elicitation enables server-initiated, multi-turn conversations to gather information such as user preferences. Sampling allows servers to request AI-powered text generation from the client for tasks like personalized recommendations. Progress notifications keep clients informed during operations such as searching for flights or processing bookings. These features work together to support complex, interactive agent workflows that go beyond simple request-response patterns.\n \nStateful MCP server features are supported in AgentCore Runtime across fourteen AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n \nTo learn more, see Stateful MCP server features in the Amazon Bedrock AgentCore documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
+      "pubDate": "2026-03-10T23:53:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "personalize"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "personalize",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0694a02b264c",
+      "title": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption",
+      "description": "Amazon Bedrock is a fully managed service for building generative AI applications using high-performing foundation models from leading AI providers. It now supports two new CloudWatch metrics, TimeToFirstToken and EstimatedTPMQuotaUsage, giving you deeper visibility into inference performance and quota consumption.\n \nTimeToFirstToken measures the latency from when a request is sent to when the first token is received, for streaming APIs (ConverseStream and InvokeModelWithResponseStream). You can use this metric to set CloudWatch alarms which monitor latency degradation and establish SLA baselines, without any client-side instrumentation. EstimatedTPMQuotaUsage tracks your estimated Tokens Per Minute (TPM) quota consumption, including cache write tokens and output burndown multipliers, across all inference APIs (Converse, InvokeModel, ConverseStream, and InvokeModelWithResponseStream). You can use this metric to set proactive alarms before reaching your quota limit, track your quota consumption across your models, and request further quota increases before usage is rate limited.\n \nBoth metrics are supported in all commercial Bedrock regions for models available via cross-region inference profiles and in-region inference, updated every minute for successfully completed requests. These are available in your CloudWatch out of the box; you pay only for the underlying model inference you consume, with no API changes or opt-in required.\n \nTo learn more about TimeToFirstToken and EstimatedTPMQuotaUsage, see our documentation page on Monitoring Amazon Bedrock.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+      "pubDate": "2026-03-10T22:21:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "cloudwatch"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "cloudwatch",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2d7632959c7c",
+      "title": "Reducing costs for shuffle-heavy Apache Spark workloads with serverless storage for Amazon EMR Serverless",
+      "description": "In this post, we explore the cost improvements we observed when benchmarking Apache Spark jobs with serverless storage on EMR Serverless. We take a deeper look at how serverless storage helps reduce costs for shuffle-heavy Spark workloads, and we outline practical guidance on identifying the types of queries that can benefit most from enabling serverless storage in your EMR Serverless Spark jobs.",
+      "link": "https://aws.amazon.com/blogs/big-data/reducing-costs-for-shuffle-heavy-apache-spark-workloads-with-serverless-storage-for-amazon-emr-serverless/",
+      "pubDate": "2026-03-10T18:23:48.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "emr"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "emr",
+        "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-f9b736ab92bb",
+      "title": "AWS Builder ID now supports Sign in with GitHub and Amazon",
+      "description": "AWS Builder ID, your profile for accessing AWS applications including AWS Builder Center, AWS Training and Certification and Kiro, now supports two new social logins: GitHub and Amazon. This expansion of sign-in options builds on the existing Google Apple social sign-in capabilities, providing GitHub and Amazon users with a streamlined way to access AWS resources without managing separate credentials on AWS.\n \nWith Sign in with Github and Amazon integration, developers and builders can now enjoy access to their AWS Builder ID profile using their GitHub or Amazon Account credentials. This enhancement eliminates password management complexity, reduces forgotten password issues, and provides a frictionless experience for both new user registration and returning user sign-ins. Whether you're accessing development resources in AWS Builder Center, enrolling in certification programs or using Kiro to code your next app, your GitHub and Amazon Accounts can now serve as a secure gateway to your builder AWS journey.\n \nTo learn more about AWS Builder ID and get started with Sign in with GitHub and Amazon, visit the AWS Builder ID documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+      "pubDate": "2026-03-10T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "enhancement",
+        "integration",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-6aff5fcddc92",
+      "title": "Amazon Connect enhances AI-powered predictive insights",
+      "description": "Today, Amazon Connect is announcing enhancements to AI-powered predictive insights that make it easier for businesses to deliver proactive, personalized customer experiences at scale. Building on the five recommendation algorithms launched at re:Invent 2025, AI-powered predictive insights now support up to 40 million product catalog items (8X increase), are available in message templates for trigger-based campaigns, and deliver up to 14% improved model accuracy. These enhancements enable businesses to automatically engage customers with the right message at the right time, while reducing the time required to deploy AI-powered personalization.\n \nBusinesses can now deliver trigger-based campaigns to initiate personalized outreach based on customer behavior and predictive signals – such as sending product recommendations when a customer abandons their cart or offering complementary services after a purchase. Businesses can now deliver targeted campaigns for specific customer cohorts based on predicted preferences and behaviors. Improved model accuracy and reduced training time mean businesses can deploy personalized experiences faster with greater confidence in the recommendations provided to customers.\n \nWith Amazon Connect Customer Profiles, you only pay-as-you-go for utilized profiles. Public preview for AI-powered predictive insights enhancements is available in Europe (Frankfurt), US East (N. Virginia), Asia Pacific (Seoul), Asia Pacific (Tokyo), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central).\n \nTo learn more, visit our webpages for Customer Profiles and explore the AI-powered predictive insights documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+      "pubDate": "2026-03-10T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "personalize"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "personalize",
+        "launch",
+        "preview",
+        "ga",
+        "enhancement",
+        "support",
+        "public-preview"
+      ]
+    },
+    {
+      "id": "aws-news-9843d830f0f8",
+      "title": "Amazon Connect now supports conversational analytics for email",
+      "description": "Amazon Connect now supports conversational analytics for email contacts, enabling contact center managers to automatically categorize emails, redact personally identifiable information (PII), and generate contact summaries. This allows you to quickly identify emerging trends, better maintain compliance by protecting sensitive information, and reduce the time spent reviewing agent performance. For example, when customers email about account issues, Amazon Connect automatically categorizes the email, redacts sensitive information, and generates a summary for supervisor review.\n  To enable this feature, add the Set recording, analytics and processing behavior block to your flows before an email contact is assigned to your agent or sent to your end customer. You can customize which PII types to redact, choose whether redacted content shows specific PII type indicators e.g., [SSN] or generic markings ([PII]), opt to store both original and redacted versions in separate storage, as well as enable contact summaries. Using these analytics, you can quickly create rules to automatically trigger actions such as assigning categories, creating tasks, or updating cases.\n  Amazon Connect conversational analytics is available in the US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation or visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+      "pubDate": "2026-03-10T15:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-22e65ce56a67",
+      "title": "Amazon Connect introduces AI-powered manager assistance (Preview)",
+      "description": "Today, Amazon Connect announces the preview of an AI-powered assistant that enables contact center managers to get instant answers to operational questions using natural language. You can query across 150+ Amazon Connect metrics, including agent scheduling, self-service experience, and performance evaluations, with historical data for all of these, and receive results in seconds—eliminating hours of manual data gathering. The assistant can also diagnose underlying issues, such as identifying which queues are at risk of missing service level targets and recommending specific recovery actions.\n \nThis feature is available as a preview. To request access, contact your AWS account team or an AWS Representative. To learn more about Amazon Connect, the AWS cloud-based contact center, visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-ai-powered-manager-assistance/",
+      "pubDate": "2026-03-10T15:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "preview",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6bd0e9ccd484",
+      "title": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
+      "description": "Amazon OpenSearch Service now extends in-place cluster volume size increases to volumes exceeding 3 TiB. With this enhancement, you can scale storage capacity across all volume sizes without requiring a blue/green deployment.\n  Previously, you could perform volume increases up to 3 TiB on your clusters without a blue/green deployment. This release removes that limitation, making it easier for you to scale up quickly even beyond 3 TiB when required. Domains that already have a volume size above 3 TiB will require a blue/green deployment the first time a volume increase is made; subsequent volume increases will not require a blue/green deployment.\n  Decreasing storage volume size, or making volume increases within short intervals, will still require a blue/green deployment. You can use the dry-run option to check whether your change requires a blue/green deployment.\n  This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon OpenSearch Service is available. See here for a full list of our Regions. To learn more about Amazon OpenSearch Service configurations, visit the documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+      "pubDate": "2026-03-10T15:44:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2973c876df44",
+      "title": "Accelerate custom LLM deployment: Fine-tune with Oumi and deploy to Amazon Bedrock",
+      "description": "In this post, we show how to fine-tune a Llama model using Oumi on Amazon EC2 (with the option to create synthetic data using Oumi), store artifacts in Amazon S3, and deploy to Amazon Bedrock using Custom Model Import for managed inference.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-custom-llm-deployment-fine-tune-with-oumi-and-deploy-to-amazon-bedrock/",
+      "pubDate": "2026-03-10T15:42:16.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "s3",
+        "ec2"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "s3",
+        "ec2"
+      ]
+    },
+    {
+      "id": "aws-news-436c083d8606",
+      "title": "Amazon Route 53 Global Resolver is now generally available",
+      "description": "Today, AWS announced the general availability of Amazon Route 53 Global Resolver, an internet-reachable anycast DNS resolver that delivers easy, secure, and reliable DNS resolution for authorized clients from anywhere. Global Resolver is now available across 30 AWS Regions, with support for both IPv4 and IPv6 DNS query traffic.\n  Previewed at re:Invent 2025 in 11 AWS Regions, Global Resolver gives authorized clients in your organization anycast DNS resolution of public internet domains and private domains associated with Route 53 private hosted zones — from any location. It also provides DNS query filtering to block potentially malicious domains, not-safe-for-work domains, and domains associated with advanced DNS threats such as DNS tunneling and Domain Generation Algorithms (DGA), along with centralized query logging. With general availability, Global Resolver adds protection against Dictionary DGA threats.\n  New customers can explore Global Resolver with a 30-day free trial. For pricing and feature details, visit the service page. To see supported AWS Regions, see the region table. To get started, see the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-route-53-global-resolver/",
+      "pubDate": "2026-03-09T22:04:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "preview",
+        "generally-available",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-9fec29b98e7b",
       "title": "Run NVIDIA Nemotron 3 Nano as a fully managed serverless model on Amazon Bedrock",
@@ -127,6 +330,36 @@
       ]
     },
     {
+      "id": "aws-news-cc41d03fc8e8",
+      "title": "Amazon SageMaker Unified Studio now supports faster data preview in Visual ETL",
+      "description": "Amazon SageMaker Unified Studio introduces data preview v2.0 for Visual ETL, a new data preview mode that delivers near-instant results when building and iterating on visual ETL jobs. With data preview v2.0, data engineers and analysts can see the output of each transform in about one second, with no session startup required and at no additional compute cost.\n \nData preview v2.0 uses an in-browser query engine to load and process data locally, removing the dependency on server-side Spark sessions for preview operations. Source data is fetched once and cached in the browser, so subsequent transforms apply instantly without re-querying the underlying data source. For Amazon Redshift users, this means you can iterate on transforms without additional queries against your Redshift cluster, keeping your preview workflow fast and your cluster resources focused on production workloads. Data preview v2.0 supports CSV, Parquet, and JSON files from Amazon S3, in addition to data from Amazon Redshift, Amazon S3 Tables, AWS Glue Data Catalog, and third-party sources including Snowflake, MySQL, PostgreSQL, SQL Server, Oracle, Google BigQuery, Amazon DynamoDB, and Amazon DocumentDB. A toggle in the Visual ETL editor gives you the option to switch between data preview v2.0 and the original Spark-based preview at any time.\n \nData preview v2.0 in Visual ETL is available in all AWS Regions where Amazon SageMaker Unified Studio is supported. To learn more, visit the Amazon SageMaker Unified Studio documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-unified-studio-faster-data-preview/",
+      "pubDate": "2026-03-09T18:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "dynamodb",
+        "glue"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "redshift",
+        "dynamodb",
+        "glue",
+        "preview",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-ac7b4bc3ee99",
       "title": "Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions",
       "description": "Starting today, Amazon EC2 G7e instances accelerated by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs are now available in  Asia Pacific (Seoul) and Europe (Spain) regions. G7e instances offer up to 2.3x inference performance compared to G6e.\n \nCustomers can use G7e instances to deploy large language models (LLMs), agentic AI models, multimodal generative AI models, and physical AI models. G7e instances offer the highest performance for spatial computing workloads as well as workloads that require both graphics and AI processing capabilities. G7e instances feature up to 8 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, with 96 GB of memory per GPU, and 5th Generation Intel Xeon processors. They support up to 192 virtual CPUs (vCPUs) and up to 1600 Gbps of networking bandwidth. G7e instances support NVIDIA GPUDirect Peer to Peer (P2P) that boosts performance for multi-GPU workloads. Multi-GPU G7e instances also support NVIDIA GPUDirect Remote Direct Memory Access (RDMA) with EFA in EC2 UltraClusters, reducing latency for small-scale multi-node workloads.\n \nYou can use G7e instances for Amazon EC2 in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio), Europe (Spain) and Asia Pacific (Tokyo, Seoul). You can purchase G7e instances as On-Demand Instances, Spot Instances, or as part of Savings Plans.\n \nTo get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit G7e instances.",
@@ -143,6 +376,25 @@
         "ec2",
         "now-available",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-6f0513a11600",
+      "title": "Kinesis On-demand Advantage saves 60%+ on streaming costs",
+      "description": "On November 4, 2025, Amazon Kinesis Data Streams introduced On-demand Advantage mode, a capability that enables on-demand streams to handle instant throughput increases at scale and cost optimization for consistent streaming workloads. Historically, you had to choose between provisioned mode, which required managing stream capacity, and on-demand mode, which automatically scaled capacity, but this new offering removes the need to think about stream type at all. In this post, we show three real-world scenarios comparing different usage patterns and demonstrate how On-demand Advantage mode can optimize your streaming costs while maintaining performance and flexibility.",
+      "link": "https://aws.amazon.com/blogs/big-data/kinesis-on-demand-advantage-saves-60-on-streaming-costs/",
+      "pubDate": "2026-03-09T16:42:28.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "lex",
+        "kinesis"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "kinesis"
       ]
     },
     {
@@ -746,6 +998,28 @@
       ]
     },
     {
+      "id": "aws-news-67511eeab4c4",
+      "title": "Amazon OpenSearch Ingestion now supports unified ingestion endpoint for OpenTelemetry data",
+      "description": "Amazon OpenSearch Ingestion now supports a unified ingestion endpoint that can accept all three OpenTelemetry observability signals — logs, metrics, and traces — through a single pipeline. Previously, customers who wanted to ingest all three OpenTelemetry data types had to create and manage three separate pipelines, one for each signal type. With this launch, a single pipeline can now receive any combination of OpenTelemetry signals, simplifying pipeline architecture and reducing operational overhead.\n  Customers can now build centralized observability pipelines that consolidate logs, metrics, and traces in one place, making it easier to correlate signals and gain a holistic view of application health. Teams operating at scale can reduce the number of pipelines they manage, lowering infrastructure costs and simplifying access control, monitoring, and lifecycle management. This also makes it easier to adopt OpenTelemetry incrementally as teams can begin with one signal type and add others over time without any pipeline reconfiguration.\n  The unified ingestion endpoint for OpenTelemetry data is supported in all regions that Amazon OpenSearch Ingestion is currently available. Customers can get started by using the new unified OpenTelemetry source in their pipeline configuration via the AWS Management console or using the AWS CLI and point their OpenTelemetry clients to the new unified endpoint.\n  To learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-ingestion-unified-ingestion-endpoint-opentelemetry",
+      "pubDate": "2026-03-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch ingestion"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch ingestion",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-74c6774304cc",
       "title": "Amazon OpenSearch Ingestion now supports Amazon Managed Service for Prometheus as a sink",
       "description": "Amazon OpenSearch Ingestion now supports Amazon Managed Service for Prometheus  as a sink, making it possible to build fully managed, end-to-end metrics ingestion pipelines without any custom forwarding infrastructure. With this launch, customers can now manage their entire metrics ingestion workflow using the same pipeline infrastructure they already use for logs and traces.\n \nCustomers can now choose the right destination for each observability signal — sending logs and traces to Amazon OpenSearch Service for powerful full-text search, log analytics, and trace correlation, while routing metrics to Amazon Managed Service for Prometheus for time-series storage and analysis. This flexibility allows teams to build purpose-fit observability pipelines that leverage the strengths of each service without compromising on data fidelity or analytical capability. Amazon OpenSearch Ingestion's built-in data transformation and enrichment capabilities allow customers to prepare and refine metrics before they land in Amazon Managed Service for Prometheus, improving data quality and consistency. Once metrics are in Amazon Managed Service for Prometheus, customers can query them using Prometheus Query Language to analyze trends, configure alerting rules to get notified when metrics cross defined thresholds, and visualize their data using Amazon Managed Grafana for rich, customizable views of infrastructure and application health.\n \nThe feature is supported in all regions that Amazon OpenSearch Ingestion and  is currently available. Customers can get started by using the new sink for Amazon Managed Service for Prometheus in their pipeline configuration via the AWS Management console or using the AWS CLI and start ingesting metrics into their Amazon Managed Service for Prometheus workspace.\n \nTo learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
@@ -769,28 +1043,6 @@
         "opensearch ingestion",
         "grafana",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-67511eeab4c4",
-      "title": "Amazon OpenSearch Ingestion now supports unified ingestion endpoint for OpenTelemetry data",
-      "description": "Amazon OpenSearch Ingestion now supports a unified ingestion endpoint that can accept all three OpenTelemetry observability signals — logs, metrics, and traces — through a single pipeline. Previously, customers who wanted to ingest all three OpenTelemetry data types had to create and manage three separate pipelines, one for each signal type. With this launch, a single pipeline can now receive any combination of OpenTelemetry signals, simplifying pipeline architecture and reducing operational overhead.\n  Customers can now build centralized observability pipelines that consolidate logs, metrics, and traces in one place, making it easier to correlate signals and gain a holistic view of application health. Teams operating at scale can reduce the number of pipelines they manage, lowering infrastructure costs and simplifying access control, monitoring, and lifecycle management. This also makes it easier to adopt OpenTelemetry incrementally as teams can begin with one signal type and add others over time without any pipeline reconfiguration.\n  The unified ingestion endpoint for OpenTelemetry data is supported in all regions that Amazon OpenSearch Ingestion is currently available. Customers can get started by using the new unified OpenTelemetry source in their pipeline configuration via the AWS Management console or using the AWS CLI and point their OpenTelemetry clients to the new unified endpoint.\n  To learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-ingestion-unified-ingestion-endpoint-opentelemetry",
-      "pubDate": "2026-03-04T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch ingestion"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch ingestion",
-        "launch",
-        "ga",
         "support"
       ]
     },
@@ -2354,21 +2606,26 @@
       ]
     },
     {
-      "id": "aws-news-f190d636c5b8",
-      "title": "Amazon EC2 R7a instances are now available in the Asia Pacific (Hyderabad) Region",
-      "description": "Starting today, the general-purpose Amazon EC2 R7a instances are now available in AWS Asia Pacific (Hyderabad) Region. R7a instances, powered by 4th Gen AMD EPYC processors (code-named Genoa) with a maximum frequency of 3.7 GHz, deliver up to 50% higher performance compared to R6a instances.\n  These instances can be purchased as Savings Plans, Reserved, On-Demand, and Spot instances. To get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit the R7a instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-r7a-instances-asia-pacific-hyderabad-regions/",
+      "id": "aws-news-5b6ae9d26d7e",
+      "title": "Amazon EC2 C7i and C7i-flex instances are now available in the Africa (Cape Town) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i-flex and C7i instances are available in the Africa (Cape Town) region. These instances are powered by powered by custom 4th Generation Intel Xeon Scalable processors (code-named Sapphire Rapids) custom processors, available only on AWS, and offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i-flex instances expand the EC2 Flex instances portfolio to provide the easiest way for you to get price performance benefits for a majority of compute intensive workloads, and deliver up to 19% better price-performance compared to C6i. C7i-flex instances offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources. With C7i-flex instances, you can seamlessly run web and application servers, databases, caches, Apache Kafka, and Elasticsearch, and more.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c7i-c7i-flex-instances-africa-cape-town-regions/",
       "pubDate": "2026-02-24T17:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "ec2"
+        "lex",
+        "ec2",
+        "kafka"
       ],
       "categories": [
-        "general"
+        "natural-language"
       ],
       "tags": [
+        "lex",
         "ec2",
-        "now-available"
+        "kafka",
+        "now-available",
+        "support"
       ]
     },
     {
@@ -2395,26 +2652,21 @@
       ]
     },
     {
-      "id": "aws-news-5b6ae9d26d7e",
-      "title": "Amazon EC2 C7i and C7i-flex instances are now available in the Africa (Cape Town) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i-flex and C7i instances are available in the Africa (Cape Town) region. These instances are powered by powered by custom 4th Generation Intel Xeon Scalable processors (code-named Sapphire Rapids) custom processors, available only on AWS, and offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i-flex instances expand the EC2 Flex instances portfolio to provide the easiest way for you to get price performance benefits for a majority of compute intensive workloads, and deliver up to 19% better price-performance compared to C6i. C7i-flex instances offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources. With C7i-flex instances, you can seamlessly run web and application servers, databases, caches, Apache Kafka, and Elasticsearch, and more.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c7i-c7i-flex-instances-africa-cape-town-regions/",
+      "id": "aws-news-f190d636c5b8",
+      "title": "Amazon EC2 R7a instances are now available in the Asia Pacific (Hyderabad) Region",
+      "description": "Starting today, the general-purpose Amazon EC2 R7a instances are now available in AWS Asia Pacific (Hyderabad) Region. R7a instances, powered by 4th Gen AMD EPYC processors (code-named Genoa) with a maximum frequency of 3.7 GHz, deliver up to 50% higher performance compared to R6a instances.\n  These instances can be purchased as Savings Plans, Reserved, On-Demand, and Spot instances. To get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit the R7a instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-r7a-instances-asia-pacific-hyderabad-regions/",
       "pubDate": "2026-02-24T17:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "lex",
-        "ec2",
-        "kafka"
+        "ec2"
       ],
       "categories": [
-        "natural-language"
+        "general"
       ],
       "tags": [
-        "lex",
         "ec2",
-        "kafka",
-        "now-available",
-        "support"
+        "now-available"
       ]
     },
     {
@@ -2472,26 +2724,6 @@
       "tags": [
         "ec2",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-874631d95433",
-      "title": "Train CodeFu-7B with veRL and Ray on Amazon SageMaker Training jobs",
-      "description": "In this post, we demonstrate how to train CodeFu-7B, a specialized 7-billion parameter model for competitive programming, using Group Relative Policy Optimization (GRPO) with veRL, a flexible and efficient training library for large language models (LLMs) that enables straightforward extension of diverse RL algorithms and seamless integration with existing LLM infrastructure, within a distributed Ray cluster managed by SageMaker training jobs. We walk through the complete implementation, covering data preparation, distributed training setup, and comprehensive observability, showcasing how this unified approach delivers both computational scale and developer experience for sophisticated RL training workloads.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/train-codefu-7b-with-verl-and-ray-on-amazon-sagemaker-training-jobs/",
-      "pubDate": "2026-02-24T15:46:50.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "lex"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "lex",
-        "integration"
       ]
     },
     {
@@ -2633,61 +2865,6 @@
       ]
     },
     {
-      "id": "aws-news-3bd8333d6c76",
-      "title": "AWS Elemental Media Services Now Available in Asia Pacific (Malaysia) Region",
-      "description": "AWS Elemental Media Services are now available in the Asia Pacific (Malaysia) Region, expanding your ability to build cloud-based video workflows closer to your audiences in Southeast Asia. AWS Elemental MediaConnect, MediaLive, MediaPackage, MediaConvert, and MediaTailor form a comprehensive suite of services that enable you to ingest, transport, transcode, package, and deliver high-quality video content with lower latency and improved performance for viewers across Malaysia and the broader Southeast Asia region.\n  With this regional expansion, broadcasters, content providers, and streaming platforms in the region can now process video workloads closer to the edge reducing latency and improving video quality for regional audiences. For example, you can use MediaLive or MediaConvert to encode live sports events or VOD assets, respectively, in Kuala Lumpur, package the streams with MediaPackage for multi-device delivery, and monetize content using MediaTailor's server-side ad insertion, all while keeping your video processing infrastructure within the Asia Pacific (Malaysia) Region.\n  AWS Elemental Media Services are a family of services that form the foundation of cloud-based workflows to transport, transcode, package, and deliver video.\n  Visit the AWS region table for a full list of AWS Regions where Elemental Media Services are available.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/elemental-Malaysia/",
-      "pubDate": "2026-02-23T18:49:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "now-available",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-e7afb80d6308",
-      "title": "AWS IAM Policy Autopilot is now available as a Kiro Power",
-      "description": "AWS IAM Policy Autopilot, the open source static code analysis tool launched at re:Invent 2025, is now available as a Kiro power to bring policy expertise to agentic AI development. This tool helps developers quickly create baseline AWS IAM policies that can be refined as applications evolve, eliminating the need for manual IAM policy creation.\n \nThe Kiro power delivers significant benefits through one-click installation directly from the Kiro IDE and web interface, removing the need for manual MCP server configuration. This streamlined workflow enables faster policy creation and integrates seamlessly into AI-assisted development environments. Key use cases include rapid prototyping of AWS applications requiring IAM policies, baseline policy creation for new AWS projects, and enhanced productivity within IDE environments where developers can generate policies without leaving their coding workflow.\n \nTo learn more about AWS IAM Policy Autopilot and access the integration, visit the AWS IAM Policy Autopilot GitHub repository. To learn more about Kiro powers, visit the Kiro powers page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-iam-policy-autopilot-kiro-power/",
-      "pubDate": "2026-02-23T18:49:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "iam",
-        "launch",
-        "now-available",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-904b314d0eda",
-      "title": "Amazon Redshift Serverless introduces 3-year Serverless Reservations",
-      "description": "Amazon Redshift now offers 3-year Serverless Reservations for Amazon Redshift Serverless, a new discounted pricing option that provides up to 45% savings and improved cost predictability for your analytics workloads. With Serverless Reservations, you commit to a specific number of Redshift Processing Units (RPUs) for a 3-year term with a no-upfront payment option.\n  Amazon Redshift Serverless allows you to run and scale analytics without having to provision and manage clusters with a pay-as-you-go pricing model. Serverless Reservations help you further optimize compute costs and improve cost predictability of existing and new workloads on Amazon Redshift Serverless. Managed at the AWS payer account level, Serverless Reservations can be shared between multiple AWS accounts, reducing your compute costs by up to 45% on all Amazon Redshift Serverless workloads in your AWS account. Serverless Reservations are billed hourly and metered per second, offering a consistent billing model (24 hours a day, seven days a week) while maintaining the flexibility offered by Amazon Redshift Serverless. Any usage exceeding the specified RPU level is charged at standard on-demand rates. You can purchase Serverless Reservations via the Amazon Redshift console or by invoking the Serverless Reservations API “create-reservation”.\n  Serverless Reservations are available in all regions where Amazon Redshift Serverless is currently available. To learn more about Amazon Redshift Serverless pricing options, see the Redshift Serverless feature page, Redshift Pricing Page, or the Amazon Redshift Management Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-redshift-serverless-three-year-reservations/",
-      "pubDate": "2026-02-23T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift"
-      ]
-    },
-    {
       "id": "aws-news-689cb9b54e9a",
       "title": "AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)",
       "description": "Last week, my team met many developers at Developer Week in San Jose. My colleague, Vinicius Senger delivered a great keynote about renascent software—a new way of building and evolving applications where humans and AI collaborate as co-developers using Kiro. Other colleagues, Du’An Lightfoot, Elizabeth Fuentes, Laura Salinas, and Sandhya Subramani spoke about building and […]",
@@ -2702,135 +2879,6 @@
       ],
       "tags": [
         "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-2b26ca718db6",
-      "title": "Automated Reasoning policies now include references to the source document",
-      "description": "AWS announces the launch of source document references for Automated Reasoning policies, simplifying the task of reviewing and refining an Automated Reasoning policy. Automated Reasoning checks uses formal verification techniques to validate that content generated by foundation models is compliant with an Automated Reasoning policy. Automated Reasoning checks deliver up to 99% accuracy at detecting correct responses from LLMs, giving you provable assurance in detecting AI hallucinations while also assisting with ambiguity detection in model responses.\n  To create Automated Reasoning policies, users upload documents that describe the rules in a knowledge domain like HR policies or financial transaction approval guidelines. These documents are translated into a collection of formal logic rules and variables called an Automated Reasoning policy. With source document references, users can now review the generated policy rules and variables using references to content they are familiar with from the original document,\n  Test generation for Automated Reasoning checks is now available in the US (N. Virginia), US (Ohio), US (Oregon), Europe (Frankfurt), Europe (Ireland), and Europe (Paris) Regions. Customers can access the service through the Amazon Bedrock console, as well as the Amazon Bedrock Python SDK.\n  To learn more about Automated Reasoning checks and how you can integrate it into your generative AI workflows, please read the Amazon Bedrock documentation, review the tutorials on the AWS AI blog, and visit the Bedrock Guardrails webpage.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/automated-reasoning-policies-include-references/",
-      "pubDate": "2026-02-23T09:35:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "translate"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "translate",
-        "launch",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-52a7204c3925",
-      "title": "Amazon S3 Tables are now available in AWS GovCloud (US) Regions",
-      "description": "Amazon S3 Tables are now available in AWS GovCloud (US-East) and AWS GovCloud (US-West).\n  Amazon S3 Tables deliver the first cloud object store with built-in Apache Iceberg support, offering optimized tabular data storage at scale. S3 Tables are designed to perform continual table maintenance to automatically optimize query efficiency and storage cost over time, even as your data lake scales and evolves. With S3 Tables support for the Apache Iceberg standard, your tabular data can be easily queried by popular AWS and third-party query engines. Additionally, with the Intelligent-Tiering storage class, S3 Tables automatically manage costs based on access patterns, without performance impact or operational overhead.\n \nFor a full list of AWS Regions where S3 Tables are available, see S3 Tables AWS Regions and endpoints. To learn more, visit the product page, documentation, and the Amazon S3 pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-s3-tables-aws-govcloud-us/",
-      "pubDate": "2026-02-23T05:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5782985cda68",
-      "title": "Amazon MSK Serverless expands to three new AWS regions",
-      "description": "You can now connect your Apache Kafka applications to Amazon MSK Serverless in the Africa (Cape Town), Asia Pacific (Taipei), and Canada West (Calgary) AWS Regions.\n  Amazon MSK is a fully managed service that makes it easier for you to build and run applications that use Apache Kafka as a data store. Amazon MSK Serverless is a cluster type for Amazon MSK that allows you to run Apache Kafka without having to manage and scale cluster capacity. MSK Serverless automatically provisions and scales compute and storage resources, so you can use Apache Kafka on demand.\n  With these launches, Amazon MSK Serverless is now generally available in Africa (Cape Town), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Taipei), Asia Pacific (Tokyo), Asia Pacific (Seoul), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (Stockholm), Europe (Paris), Europe (London), South America (Sao Paulo), US East (N. Virginia), US East (Ohio), and US West (Oregon) AWS regions. To learn more and get started, see our developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
-      "pubDate": "2026-02-20T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-68cfb6f99faa",
-      "title": "Amazon RDS for Oracle now supports January 2026 Release Update and Spatial Patch Bundle",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports the Oracle January 2026 Release Update (RU) for Oracle Database versions 19c and 21c, and the corresponding Spatial Patch Bundle for Oracle Database version 19c. We recommend upgrading to the January 2026 RU as it includes security updates for Oracle database products. The Spatial Patch Bundle update delivers important fixes for Oracle Spatial and Graph functionality to provide reliable and optimal performance for spatial operations. \n  You can apply the January 2026 RU from the Amazon RDS Management Console, or by using the AWS SDK or CLI. To automatically apply updates to your database instance during your maintenance window, enable Automatic Minor Version Upgrade. You can apply the Spatial Patch Bundle update for new database instances, or upgrade existing instances to engine version '19.0.0.0.ru-2026-01.spb-1.r1' by selecting the \"Spatial Patch Bundle Engine Versions\" checkbox in the AWS Console. \n  You can use AWS Organizations upgrade rollout policy to stagger automatic minor version upgrades for your Amazon RDS database instances such that automatic minor version upgrades are first applied to non-production environments, allowing you time to validate before the upgrades are applied to production environments. For additional details, refer to Amazon RDS for Oracle documentation on using AWS Organizations upgrade rollout policy for automatic minor version upgrades.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-rd-for-oracle-jan-release-update-spatial-patch-bundle/",
-      "pubDate": "2026-02-20T08:38:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-86cc833a7d39",
-      "title": "AWS IAM Identity Center is now available in the Asia Pacific (New Zealand) AWS Region",
-      "description": "You can now deploy AWS IAM Identity Center in 38 AWS Regions, including Asia Pacific (New Zealand).\n  IAM Identity Center is the recommended service for managing workforce access to AWS applications. It enables you to connect your existing source of workforce identities to AWS once and offer your users single sign on experience across AWS. It powers the personalized experiences offered by AWS applications, such as Amazon Q, and the ability to define and audit user-aware access to data in AWS services, such as Amazon Redshift. It can also help you manage access to multiple AWS accounts from a central place. IAM Identity Center is available at no additional cost in these AWS Regions.\n  To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-iam-identity-center-asia-pacific-new-zealand-region/",
-      "pubDate": "2026-02-19T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-e40d7347f41b",
-      "title": "Amazon EC2 G7e instances now available in Asia Pacific (Tokyo) region",
-      "description": "Starting today, Amazon EC2 G7e instances accelerated by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs are now available in  Asia Pacific (Tokyo) region. G7e instances offer up to 2.3x inference performance compared to G6e.\n \nCustomers can use G7e instances to deploy large language models (LLMs), agentic AI models, multimodal generative AI models, and physical AI models. G7e instances offer the highest performance for spatial computing workloads as well as workloads that require both graphics and AI processing capabilities. G7e instances feature up to 8 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, with 96 GB of memory per GPU, and 5th Generation Intel Xeon processors. They support up to 192 virtual CPUs (vCPUs) and up to 1600 Gbps of networking bandwidth. G7e instances support NVIDIA GPUDirect Peer to Peer (P2P) that boosts performance for multi-GPU workloads. Multi-GPU G7e instances also support NVIDIA GPUDirect Remote Direct Memory Access (RDMA) with EFA in EC2 UltraClusters, reducing latency for small-scale multi-node workloads.\n \nYou can use G7e instances for Amazon EC2 in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio) and Asia Pacific (Tokyo). You can purchase G7e instances as On-Demand Instances, Spot Instances, or as part of Savings Plans.\n \nTo get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit G7e instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-g7e-instances-tokyo-region/",
-      "pubDate": "2026-02-19T19:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -3032,59 +3080,6 @@
         "bedrock",
         "ec2",
         "graviton"
-      ]
-    },
-    {
-      "id": "aws-news-d8aeb689a1ea",
-      "title": "Common streaming data enrichment patterns in Amazon Managed Service for Apache Flink",
-      "description": "This post was originally published in March 2024 and updated in February 2026. Stream data processing allows you to act on data in real time. Real-time data analytics can help you have on-time and optimized responses while improving overall customer experience. Apache Flink is a distributed computation framework that allows for stateful real-time data processing. It […]",
-      "link": "https://aws.amazon.com/blogs/big-data/common-streaming-data-enrichment-patterns-in-amazon-managed-service-for-apache-flink/",
-      "pubDate": "2026-02-13T19:46:16.000Z",
-      "source": "bigDataBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-22def9800bc5",
-      "title": "Amazon Athena adds 1-minute reservations and new capacity control features",
-      "description": "Amazon Athena is a serverless interactive query service that makes it easy to analyze data using SQL. With Athena, there’s no infrastructure to manage, you simply submit queries and get results. Capacity Reservations is a feature of Athena that addresses the need to run critical workloads by providing dedicated serverless capacity for workloads you specify. In this post, we highlight three new capabilities that make Capacity Reservations more flexible and easier to manage: reduced minimums for fine-grained capacity adjustments, an autoscaling solution for dynamic workloads, and capacity cost and performance controls.",
-      "link": "https://aws.amazon.com/blogs/big-data/amazon-athena-adds-1-minute-reservations-and-new-capacity-control-features/",
-      "pubDate": "2026-02-11T22:16:01.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "lex",
-        "athena"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "athena"
-      ]
-    },
-    {
-      "id": "aws-news-4cbce46f295e",
-      "title": "How Zalando innovates their Fast-Serving layer by migrating to Amazon Redshift",
-      "description": "In this post, we show how Zalando migrated their fast-serving layer data warehouse to Amazon Redshift to achieve better price-performance and scalability.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-zalando-innovates-their-fast-serving-layer-by-migrating-to-amazon-redshift/",
-      "pubDate": "2026-02-10T23:37:35.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "nova",
-        "redshift"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "nova",
-        "redshift"
       ]
     },
     {

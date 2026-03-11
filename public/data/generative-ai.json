@@ -1,8 +1,89 @@
 {
-  "lastUpdated": "2026-03-10T06:34:25.537Z",
+  "lastUpdated": "2026-03-11T06:37:29.509Z",
   "category": "generative-ai",
   "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-329220918785",
+      "title": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features",
+      "description": "Amazon Bedrock AgentCore Runtime now supports stateful Model Context Protocol (MCP) server features, enabling developers to build MCP servers that leverage elicitation, sampling, and progress notifications alongside existing support for resources, prompts, and tools. These capabilities allow MCP servers deployed to AgentCore Runtime to collect user input interactively during tool execution, request LLM-generated content from clients, and provide real-time progress updates for long-running operations.\n  With stateful MCP sessions, each user session runs in a dedicated microVM with isolated resources, and the server maintains session context across multiple interactions using an Mcp-Session-Id header. Elicitation enables server-initiated, multi-turn conversations to gather information such as user preferences. Sampling allows servers to request AI-powered text generation from the client for tasks like personalized recommendations. Progress notifications keep clients informed during operations such as searching for flights or processing bookings. These features work together to support complex, interactive agent workflows that go beyond simple request-response patterns.\n \nStateful MCP server features are supported in AgentCore Runtime across fourteen AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n \nTo learn more, see Stateful MCP server features in the Amazon Bedrock AgentCore documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
+      "pubDate": "2026-03-10T23:53:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "personalize"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "personalize",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2d7632959c7c",
+      "title": "Reducing costs for shuffle-heavy Apache Spark workloads with serverless storage for Amazon EMR Serverless",
+      "description": "In this post, we explore the cost improvements we observed when benchmarking Apache Spark jobs with serverless storage on EMR Serverless. We take a deeper look at how serverless storage helps reduce costs for shuffle-heavy Spark workloads, and we outline practical guidance on identifying the types of queries that can benefit most from enabling serverless storage in your EMR Serverless Spark jobs.",
+      "link": "https://aws.amazon.com/blogs/big-data/reducing-costs-for-shuffle-heavy-apache-spark-workloads-with-serverless-storage-for-amazon-emr-serverless/",
+      "pubDate": "2026-03-10T18:23:48.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "emr"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "emr",
+        "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-9843d830f0f8",
+      "title": "Amazon Connect now supports conversational analytics for email",
+      "description": "Amazon Connect now supports conversational analytics for email contacts, enabling contact center managers to automatically categorize emails, redact personally identifiable information (PII), and generate contact summaries. This allows you to quickly identify emerging trends, better maintain compliance by protecting sensitive information, and reduce the time spent reviewing agent performance. For example, when customers email about account issues, Amazon Connect automatically categorizes the email, redacts sensitive information, and generates a summary for supervisor review.\n  To enable this feature, add the Set recording, analytics and processing behavior block to your flows before an email contact is assigned to your agent or sent to your end customer. You can customize which PII types to redact, choose whether redacted content shows specific PII type indicators e.g., [SSN] or generic markings ([PII]), opt to store both original and redacted versions in separate storage, as well as enable contact summaries. Using these analytics, you can quickly create rules to automatically trigger actions such as assigning categories, creating tasks, or updating cases.\n  Amazon Connect conversational analytics is available in the US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation or visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+      "pubDate": "2026-03-10T15:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6bd0e9ccd484",
+      "title": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
+      "description": "Amazon OpenSearch Service now extends in-place cluster volume size increases to volumes exceeding 3 TiB. With this enhancement, you can scale storage capacity across all volume sizes without requiring a blue/green deployment.\n  Previously, you could perform volume increases up to 3 TiB on your clusters without a blue/green deployment. This release removes that limitation, making it easier for you to scale up quickly even beyond 3 TiB when required. Domains that already have a volume size above 3 TiB will require a blue/green deployment the first time a volume increase is made; subsequent volume increases will not require a blue/green deployment.\n  Decreasing storage volume size, or making volume increases within short intervals, will still require a blue/green deployment. You can use the dry-run option to check whether your change requires a blue/green deployment.\n  This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon OpenSearch Service is available. See here for a full list of our Regions. To learn more about Amazon OpenSearch Service configurations, visit the documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+      "pubDate": "2026-03-10T15:44:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-9fec29b98e7b",
       "title": "Run NVIDIA Nemotron 3 Nano as a fully managed serverless model on Amazon Bedrock",
@@ -699,92 +780,6 @@
         "rds",
         "launch",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-52a7204c3925",
-      "title": "Amazon S3 Tables are now available in AWS GovCloud (US) Regions",
-      "description": "Amazon S3 Tables are now available in AWS GovCloud (US-East) and AWS GovCloud (US-West).\n  Amazon S3 Tables deliver the first cloud object store with built-in Apache Iceberg support, offering optimized tabular data storage at scale. S3 Tables are designed to perform continual table maintenance to automatically optimize query efficiency and storage cost over time, even as your data lake scales and evolves. With S3 Tables support for the Apache Iceberg standard, your tabular data can be easily queried by popular AWS and third-party query engines. Additionally, with the Intelligent-Tiering storage class, S3 Tables automatically manage costs based on access patterns, without performance impact or operational overhead.\n \nFor a full list of AWS Regions where S3 Tables are available, see S3 Tables AWS Regions and endpoints. To learn more, visit the product page, documentation, and the Amazon S3 pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-s3-tables-aws-govcloud-us/",
-      "pubDate": "2026-02-23T05:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5782985cda68",
-      "title": "Amazon MSK Serverless expands to three new AWS regions",
-      "description": "You can now connect your Apache Kafka applications to Amazon MSK Serverless in the Africa (Cape Town), Asia Pacific (Taipei), and Canada West (Calgary) AWS Regions.\n  Amazon MSK is a fully managed service that makes it easier for you to build and run applications that use Apache Kafka as a data store. Amazon MSK Serverless is a cluster type for Amazon MSK that allows you to run Apache Kafka without having to manage and scale cluster capacity. MSK Serverless automatically provisions and scales compute and storage resources, so you can use Apache Kafka on demand.\n  With these launches, Amazon MSK Serverless is now generally available in Africa (Cape Town), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Taipei), Asia Pacific (Tokyo), Asia Pacific (Seoul), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (Stockholm), Europe (Paris), Europe (London), South America (Sao Paulo), US East (N. Virginia), US East (Ohio), and US West (Oregon) AWS regions. To learn more and get started, see our developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
-      "pubDate": "2026-02-20T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-86cc833a7d39",
-      "title": "AWS IAM Identity Center is now available in the Asia Pacific (New Zealand) AWS Region",
-      "description": "You can now deploy AWS IAM Identity Center in 38 AWS Regions, including Asia Pacific (New Zealand).\n  IAM Identity Center is the recommended service for managing workforce access to AWS applications. It enables you to connect your existing source of workforce identities to AWS once and offer your users single sign on experience across AWS. It powers the personalized experiences offered by AWS applications, such as Amazon Q, and the ability to define and audit user-aware access to data in AWS services, such as Amazon Redshift. It can also help you manage access to multiple AWS accounts from a central place. IAM Identity Center is available at no additional cost in these AWS Regions.\n  To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-iam-identity-center-asia-pacific-new-zealand-region/",
-      "pubDate": "2026-02-19T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "personalize",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-e40d7347f41b",
-      "title": "Amazon EC2 G7e instances now available in Asia Pacific (Tokyo) region",
-      "description": "Starting today, Amazon EC2 G7e instances accelerated by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs are now available in  Asia Pacific (Tokyo) region. G7e instances offer up to 2.3x inference performance compared to G6e.\n \nCustomers can use G7e instances to deploy large language models (LLMs), agentic AI models, multimodal generative AI models, and physical AI models. G7e instances offer the highest performance for spatial computing workloads as well as workloads that require both graphics and AI processing capabilities. G7e instances feature up to 8 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, with 96 GB of memory per GPU, and 5th Generation Intel Xeon processors. They support up to 192 virtual CPUs (vCPUs) and up to 1600 Gbps of networking bandwidth. G7e instances support NVIDIA GPUDirect Peer to Peer (P2P) that boosts performance for multi-GPU workloads. Multi-GPU G7e instances also support NVIDIA GPUDirect Remote Direct Memory Access (RDMA) with EFA in EC2 UltraClusters, reducing latency for small-scale multi-node workloads.\n \nYou can use G7e instances for Amazon EC2 in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio) and Asia Pacific (Tokyo). You can purchase G7e instances as On-Demand Instances, Spot Instances, or as part of Savings Plans.\n \nTo get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit G7e instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-g7e-instances-tokyo-region/",
-      "pubDate": "2026-02-19T19:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
       ]
     },
     {
