@@ -1,8 +1,92 @@
 {
-  "lastUpdated": "2026-03-12T06:39:05.677Z",
+  "lastUpdated": "2026-03-13T06:36:56.957Z",
   "category": "generative-ai",
   "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-593cbdc963c6",
+      "title": "Improve operational visibility for inference workloads on Amazon Bedrock with new CloudWatch metrics for TTFT and Estimated Quota Consumption",
+      "description": "Today, we’re announcing two new Amazon CloudWatch metrics for Amazon Bedrock, TimeToFirstToken and EstimatedTPMQuotaUsage. In this post, we cover how these work and how to set alarms, establish baselines, and proactively manage capacity using them.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/improve-operational-visibility-for-inference-workloads-on-amazon-bedrock-with-new-cloudwatch-metrics-for-ttft-and-estimated-quota-consumption/",
+      "pubDate": "2026-03-12T21:20:17.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "cloudwatch"
+      ]
+    },
+    {
+      "id": "aws-news-7353c21dab8a",
+      "title": "Secure AI agents with Policy in Amazon Bedrock AgentCore",
+      "description": "In this post, you will understand how Policy in Amazon Bedrock AgentCore creates a deterministic enforcement layer that operates independently of the agent's own reasoning. You will learn how to turn natural language descriptions of your business rules into Cedar policies, then use those policies to enforce fine-grained, identity-aware controls so that agents only access the tools and data that their users are authorized to use. You will also see how to apply Policy through AgentCore Gateway, intercepting and evaluating every agent-to-tool request at runtime.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-in-amazon-bedrock-agentcore/",
+      "pubDate": "2026-03-12T21:16:50.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-e85944959b2a",
+      "title": "Amazon Bedrock AgentCore Memory announces streaming notifications for long-term memory",
+      "description": "Amazon Bedrock AgentCore Memory now supports streaming notifications for long-term memory, eliminating the need to poll for changes. Long-term memory extracts insights from agent interactions to deliver personalized experiences in future interactions. Developers now receive push notifications whenever memory records are created or modified.\n  Updates stream directly to Amazon Kinesis each time a memory record is created or modified. This enables developers to trigger downstream workflows, refresh application state, and audit memory updates automatically without writing polling logic or managing refresh intervals.\n \nThis feature is available in 15 AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Seoul), Canada (Central), and South America (São Paulo). \n \nTo learn more about implementing streaming notifications in AgentCore Memory, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-memory-streaming-ltm/",
+      "pubDate": "2026-03-12T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "personalize",
+        "rds",
+        "kinesis"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "personalize",
+        "rds",
+        "kinesis",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-189cefe1be14",
+      "title": "Fine-tuning NVIDIA Nemotron Speech ASR on Amazon EC2 for domain adaptation",
+      "description": "In this post, we explore how to fine-tune a leaderboard-topping, NVIDIA Nemotron Speech Automatic Speech Recognition (ASR) model; Parakeet TDT 0.6B V2. Using synthetic speech data to achieve superior transcription results for specialised applications, we'll walk through an end-to-end workflow that combines AWS infrastructure with the following popular open-source frameworks.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/fine-tuning-nvidia-nemotron-speech-asr-on-amazon-ec2-for-domain-adaptation/",
+      "pubDate": "2026-03-12T15:57:22.000Z",
+      "source": "mlBlog",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2"
+      ]
+    },
     {
       "id": "aws-news-b6847dad2e70",
       "title": "Operationalizing Agentic AI Part 1: A Stakeholder’s Guide",
@@ -686,46 +770,6 @@
       ]
     },
     {
-      "id": "aws-news-b0fe595ae633",
-      "title": "Efficiently serve dozens of fine-tuned models with vLLM on Amazon SageMaker AI and Amazon Bedrock",
-      "description": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/efficiently-serve-dozens-of-fine-tuned-models-with-vllm-on-amazon-sagemaker-ai-and-amazon-bedrock/",
-      "pubDate": "2026-02-25T20:56:13.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "sagemaker"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker"
-      ]
-    },
-    {
-      "id": "aws-news-d18ac32e65d5",
-      "title": "Building intelligent event agents using Amazon Bedrock AgentCore and Amazon Bedrock Knowledge Bases",
-      "description": "This post demonstrates how to quickly deploy a production-ready event assistant using the components of Amazon Bedrock AgentCore. We'll build an intelligent companion that remembers attendee preferences and builds personalized experiences over time, while Amazon Bedrock AgentCore handles the heavy lifting of production deployment: Amazon Bedrock AgentCore Memory for maintaining both conversation context and long-term preferences without custom storage solutions, Amazon Bedrock AgentCore Identity for secure multi-IDP authentication, and Amazon Bedrock AgentCore Runtime for serverless scaling and session isolation. We will also use Amazon Bedrock Knowledge Bases for managed RAG and event data retrieval.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-intelligent-event-agents-using-amazon-bedrock-agentcore-and-amazon-bedrock-knowledge-bases/",
-      "pubDate": "2026-02-25T19:51:08.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "personalize"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "personalize"
-      ]
-    },
-    {
       "id": "aws-news-42607d75578a",
       "title": "Aurora DSQL launches new integrations for Visual Studio Code SQLTools and DBeaver",
       "description": "Today we are announcing the release of the Aurora DSQL Driver for SQLTools and the Aurora DSQL Plugin for DBeaver Community Edition. These integrations allow customers to leverage popular database tools to run queries against Aurora DSQL clusters, explore database schemas, and manage their data. Both integrations simplify database connectivity by automatically handling IAM authentication and transparently managing access tokens, eliminating the need to write token generation code or manually supply IAM tokens.\n  The SQLTools driver integrates Aurora DSQL with Visual Studio Code and is also available on Open VSX Registry for use with VS Code-compatible editors such as Cursor and Kiro. The DBeaver plugin is built on top of the Aurora DSQL Connector for JDBC. Both integrations eliminate security risks associated with traditional user-generated passwords by using AWS IAM credentials for secure, password-free authentication.\n  To get started, visit the Aurora DSQL documentation page for VSCode and DBeaver. Get started with Aurora DSQL for free with the AWS Free Tier. To learn more about Aurora DSQL, visit the webpage.",
@@ -762,46 +806,6 @@
         "launch",
         "ga",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-69cd6abb00ad",
-      "title": "Announcing new metal sizes for Amazon EC2 M8gn and M8gb instances",
-      "description": "Today, AWS announces the general availability of metal-24xl and metal-48xl sizes for Amazon Elastic Compute Cloud (Amazon EC2) M8gn and M8gb instances. These instances are powered by AWS Graviton4 processors to deliver up to 30% better compute performance than AWS Graviton3 processors. M8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. M8gb offers up to 300 Gbps of EBS bandwidth to provide higher EBS performance compared to same-sized equivalent Graviton4-based instances.\n \nM8gn and M8gb instances offer instance sizes up to 48xlarge and metal-48xl, with up to 768 GiB of memory. M8gn instances offer up to 600 Gbps of networking bandwidth, up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS), and are ideal for network-intensive workloads such as high-performance file systems, distributed web scale in-memory caches, caching fleets, real-time big data analytics, Telco applications such as 5G User Plane Function (UPF). M8gb instances offer up to 300 Gbps of EBS bandwidth, up to 400 Gbps of networking bandwidth, and are ideal for workloads requiring high block storage performance such as high-performance databases and NoSQL databases.\n \nM8gn and M8gb instances support Elastic Fabric Adapter (EFA) networking on 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes. EFA networking enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters.\n \nThe new metal-24xl and metal-48xl sizes are available in the AWS US East (N. Virginia) region. \n \nTo begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-m8gn-m8gb-new-metal-sizes/",
-      "pubDate": "2026-02-25T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "graviton",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-935a38e00480",
-      "title": "Announcing AWS Elemental Inference",
-      "description": "AWS Elemental Inference, a fully managed Artificial Intelligence (AI) service that enables broadcasters and streamers to automatically generate vertical content and highlight clips for mobile and social platforms in real time, is now generally available. The service applies AI capabilities to live and on-demand video in parallel with encoding and helps companies and creators to reach audiences in any format without requiring AI expertise or dedicated production teams.\n \nWith Elemental Inference you can process video once and optimize it everywhere—creating main broadcasts while simultaneously generating vertical versions for TikTok, Instagram Reels, YouTube Shorts, Snapchat, and other mobile platforms in parallel with live video. For example, sports broadcasters can automatically generate vertical highlight clips during live games and distribute them to social platforms in real-time, capturing viral moments as they happen rather than hours later. \n \nThe service launches with two AI features: vertical video cropping that transforms live and on-demand landscape broadcasts into mobile-optimized formats, and advanced metadata analysis that identifies key moments to generate highlight clips from live content. Using an agentic AI application that requires no prompts or human-in-the-loop intervention, broadcasters can scale content production without adding manual workflows or production staff—the system automatically adapts content for each platform. In beta testing, large media companies achieved 34% or more savings on AI-powered live video workflows compared to using multiple point solutions.\n \nAWS Elemental Inference is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), and Europe (Ireland).\n \nFor more information, visit the AWS News Blog or explore the AWS Elemental Inference documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-elemental-inference-generally-avail/",
-      "pubDate": "2026-02-24T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "launch",
-        "beta",
-        "generally-available",
-        "ga"
       ]
     },
     {

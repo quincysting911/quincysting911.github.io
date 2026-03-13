@@ -1,12 +1,52 @@
 {
-  "lastUpdated": "2026-03-12T06:39:05.677Z",
+  "lastUpdated": "2026-03-13T06:36:56.957Z",
   "category": "general",
   "totalItems": 46,
   "items": [
     {
+      "id": "aws-news-11f0926691b3",
+      "title": "AWS Private CA Connector for SCEP now supports AWS PrivateLink",
+      "description": "AWS Private CA Connector for SCEP now supports AWS PrivateLink, allowing your clients to request certificates from within your Amazon Virtual Private Cloud (VPC) without traversing the public internet. With this launch, you can create VPC endpoints to connect to your SCEP connector privately, keeping all traffic within the AWS network.\n  AWS Private CA Connector for SCEP is a managed connector that enables you to use the Simple Certificate Enrollment Protocol (SCEP) to issue certificates from AWS Private Certificate Authority (CA). SCEP is widely used for automated certificate enrollment and renewal for mobile devices, network equipment, and IoT devices. AWS PrivateLink support simplifies network connectivity by eliminating the need for internet gateways, NAT devices, or VPN connections to access your SCEP connector endpoints, while helping you meet compliance requirements that mandate private connectivity for certificate management.\n  AWS PrivateLink support for AWS Private CA Connector for SCEP is available in all AWS Regions where the connector is available. For more information about Regional availability, see the AWS Region Table.\n  To learn more and get started, visit the AWS Private CA Connector for SCEP documentation. For more information, please refer to the AWS PrivateLink documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-private-ca-connector-scep-privatelink/",
+      "pubDate": "2026-03-12T17:10:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a92de2b26c25",
+      "title": "AWS Glue zero-ETL integrations with Amazon DynamoDB as the source support new configurations",
+      "description": "AWS Glue zero-ETL now supports configurable change data capture (CDC) refresh intervals and on-demand data ingestion for integrations with Amazon DynamoDB as the source. This enhancement can help you to customize how frequently data changes are captured from your Amazon DynamoDB tables, with refresh intervals ranging from 15 minutes to 6 days, and trigger immediate data ingestion when needed. These capabilities bring zero-ETL integrations from Amazon DynamoDB sources to feature parity with zero-ETL integrations from SaaS sources, like Salesforce, SAP, and ServiceNow, ensuring consistent functionality across different source types.\n  With configurable CDC refresh intervals, you can optimize your data pipeline performance by adjusting the frequency of change capture to match your specific business requirements—whether you need near real-time updates every 15 minutes or can work with longer intervals up to 6 days to reduce costs. The on-demand ingestion capability allows you to immediately capture critical data changes without waiting for the next scheduled CDC interval. This functionality is ideal for scenarios that require data to be immediately available for analytics, reporting, or downstream applications and helps strike a balance between data freshness requirements and operational efficiency.\n  These features are available today in all AWS regions where AWS Glue zero-ETL is supported.\n \n\n To get started with configuring CDC refresh intervals and on-demand ingestion for your Amazon DynamoDB integrations, see the AWS Glue User Guide. To learn more about AWS Glue zero-ETL integrations, visit the AWS Glue documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-glue-zetl-dynamodb-configurations/",
+      "pubDate": "2026-03-12T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "glue",
+        "update",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-758ecf6f9de5",
       "title": "Amazon Neptune Database is now available in Asia Pacific (Hyderabad) region",
-      "description": "Amazon Neptune Database is now available in the AWS Asia Pacific (Hyderabad) region. You can now create Neptune clusters using R5, R5d, R6g, R6i, X2iedn, T4g, and T3 instance types in the AWS Asia Pacific (Hyderabad) region.\n \nAmazon Neptune Database is a fast, reliable, and fully managed graph database as a service that makes it easy to build and run applications work with highly connected datasets. You can build applications using Apache TinkerPop Gremlin or openCypher on the Property Graph model, or using the SPARQL query language on W3C Resource Description Framework (RDF). Neptune also offers enterprise features such as high availability, automated backups, and network isolation to help customers quickly deploy applications to production. Amazon Neptune supports Neptune Global Database designed for globally distributed applications, allowing a single Neptune database to span multiple AWS Regions.\n  To get started, you can create a new Neptune cluster using the AWS Management Console, AWS CLI, or a quickstart AWS CloudFormation template. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
+      "description": "Amazon Neptune Database is now available in the AWS Asia Pacific (Hyderabad) region. You can now create Neptune clusters using R5, R5d, R6g, R6i, X2iedn, T4g, and T3 instance types in the AWS Asia Pacific (Hyderabad) region.\n \nAmazon Neptune Database is a fast, reliable, and fully managed graph database as a service that makes it easy to build and run applications work with highly connected datasets. You can build applications using Apache TinkerPop Gremlin or openCypher on the Property Graph model, or using the SPARQL query language on W3C Resource Description Framework (RDF). Neptune also offers enterprise features such as high availability, automated backups, and network isolation to help customers quickly deploy applications to production. \n  To get started, you can create a new Neptune cluster using the AWS Management Console, AWS CLI, or a quickstart AWS CloudFormation template. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-neptune-hyderabad/",
       "pubDate": "2026-03-11T20:00:00.000Z",
       "source": "whatsNew",
@@ -18,8 +58,7 @@
       ],
       "tags": [
         "cloudformation",
-        "now-available",
-        "support"
+        "now-available"
       ]
     },
     {
@@ -485,38 +524,6 @@
         "new-feature",
         "update",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-31d73d06290c",
-      "title": "AWS Compute Optimizer now applies AWS-generated tags to EBS snapshots created during automation",
-      "description": "AWS Compute Optimizer makes it easier to identify snapshots that are created when snapshotting and deleting unattached Amazon Elastic Block Store (EBS) volumes by automatically applying an AWS-generated tag during creation. This enhancement improves visibility and tracking of EBS snapshots created through Compute Optimizer Automation.\n \nWhen Compute Optimizer creates a snapshot before deleting an unattached EBS volume—whether initiated through manual actions or automation rules—the snapshot now receives the tag aws:compute-optimizer:automation-event-id with a tag value that links the snapshot to the unique identifier of the automation event that created it. This allows you to easily identify, track, and manage snapshots created through the automated optimization process, helping you maintain better governance over your backup resources and understand the source of snapshots in your environment.\n \nThis is available in all AWS Regions where AWS Compute Optimizer Automation is available. To get started with automated optimization, go to the AWS Compute Optimizer console or visit the user guide documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-compute-optimizer-applies-tags-ebs-snapshots/",
-      "pubDate": "2026-02-24T19:58:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-fd5ba5c93b06",
-      "title": "AWS Deadline Cloud now supports running tasks together in chunks",
-      "description": "Today, AWS Deadline Cloud announces support for grouping tasks into chunks to efficiently execute multiple tasks together. AWS Deadline Cloud is a fully managed service that simplifies render management for computer-generated 2D/3D graphics and visual effects for films, TV shows, commercials, games, and industrial design.\n  When your job has short tasks, or tasks that need to run in an environment with a long startup time, chunking them together for execution reduces the time and cost for completing the job. When creating a job, you can now manually specify a chunk size for the number tasks to group together for execution, or alternately specify a target run time for the execution of a chunk of tasks. The target run time will be used to dynamically change the number of tasks grouped together as the job completes to improve execution efficiency and achieve the target run time.\n  Running tasks together in chunks is now available in all AWS Regions where AWS Deadline Cloud is supported. To get started, visit the Deadline Cloud developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-deadline-cloud-running-tasks-together-in/",
-      "pubDate": "2026-02-24T18:13:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
         "support"
       ]
     },
