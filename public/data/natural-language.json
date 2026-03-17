@@ -1,8 +1,28 @@
 {
-  "lastUpdated": "2026-03-16T07:03:05.033Z",
+  "lastUpdated": "2026-03-17T06:50:15.244Z",
   "category": "natural-language",
-  "totalItems": 15,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-58b6ca1c2418",
+      "title": "Amazon SimpleDB now supports exporting domain data to Amazon S3",
+      "description": "Amazon SimpleDB now supports exporting domain data directly to Amazon S3 buckets in standard JSON format. Exports run in the background with no impact on database performance, making it simple to migrate data to other systems or meet data archival requirements.\n \nThe export tool offers features including cross-region and cross-account support, multiple encryption options, and flexible S3 bucket configuration. Key use cases include migrating data for long-term archival or compliance purposes. The tool provides three new APIs (StartDomainExport, GetExport, and ListExports) with built-in rate limiting of 5 exports per domain and 25 per account within 24 hours. There is no charge to use this tool. However, standard data transfer charges apply. \n \n The export tool is available in all regions where Amazon SimpleDB is available. You can get started with the export tool by using the AWS API or CLI. For more information, see the Amazon SimpleDB documentation or the AWS Database Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-simpledb-domain-export-to-amazon-s3/",
+      "pubDate": "2026-03-16T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-90f3121eb1b7",
       "title": "AWS Lambda Managed Instances now supports Rust",
@@ -64,6 +84,29 @@
       "tags": [
         "lex",
         "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-7de5a0fb44f0",
+      "title": "Amazon EC2 C8i and C8i-flex instances are now available in Africa (Cape Town) and Asia Pacific (Hyderabad) regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Africa (Cape Town) and Asia Pacific (Hyderabad) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-c8i-c8i-flex-instances-africa-cape-town-asia-pacific-hyderabad-regions/",
+      "pubDate": "2026-03-10T04:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "kafka"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "kafka",
         "ga",
         "now-available"
       ]
@@ -190,91 +233,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-6d989aab43fa",
-      "title": "AWS Marketplace now supports multiple purchases of SaaS & Professional Services products from the same account",
-      "description": "AWS Marketplace now supports Concurrent Agreements for SaaS and Professional Services products, enabling buyers to make multiple purchases for the same product within a single AWS account. Previously, buyers could only maintain one active agreement per product per AWS account, requiring sellers to use workarounds to support expansion deals. Concurrent Agreements removes this constraint, allowing different business units to procure independently with their own negotiated terms and pricing.\n \nBoth buyers and sellers benefit from the flexibility Concurrent Agreements provides. Buyers can accept multiple offers for the same product without disrupting existing agreements, supporting multi-team procurement within centralized AWS accounts, mid-term expansions, and repeat purchases. Sellers can close multi-business unit deals that couldn't happen before, transact expansions immediately instead of waiting for renewal cycles, and eliminate the operational overhead of managing workarounds. \n \nConcurrent Agreements is enabled by default for all Professional Services listings starting today, with no seller action required. For SaaS listings, sellers must update their AWS Marketplace integration to handle multiple active subscriptions, including updating subscription notifications to use EventBridge and updating entitlement and metering APIs. Starting June 1, 2026, support for Concurrent Agreements will be required for new SaaS products. Sellers who have completed the integration work can opt in to enable Concurrent Agreements for their SaaS products now. \n \nThis capability is available in all AWS Regions where AWS Marketplace is supported. Concurrent Agreements purchasing is available on SaaS products where sellers have completed the integration, and is enabled by default for all Professional Services listings. To learn more about enabling Concurrent Agreements as a seller of SaaS products, review the Concurrent Agreements integration lab.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/concurrent-agreements-february/",
-      "pubDate": "2026-02-26T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "eventbridge"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "eventbridge",
-        "update",
-        "integration",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-b03b2851081c",
-      "title": "Amazon Connect now supports dynamic dialing mode switching for outbound campaigns",
-      "description": "Today, AWS announces the general availability of dynamic dialing mode switching for Amazon Connect Outbound Campaigns, which allows contact center administrators to change between preview and non-preview dialing modes during active campaign execution. Previously, campaigns were locked into their initial dialing mode once started, requiring administrators to stop and restart campaigns to adjust strategies. This launch solves the problem of inflexible dialing strategies that couldn't adapt to real-time business needs and agent availability changes.\n \nDynamic dialing mode switching enables contact centers to optimize agent productivity and campaign efficiency in real-time without campaign interruptions. For example, you can automatically switch from progressive dialing to preview mode when handling high-priority contacts that require additional context, then revert back when traffic returns to normal patterns. This flexibility is particularly valuable for campaigns with varying contact priorities or fluctuating agent availability throughout the day.\n \nDynamic dialing mode switching is available at no additional cost in all AWS Regions where Amazon Connect Outbound Campaigns is supported: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town).\n \nTo learn more, see the Amazon Connect Administrator Guide or visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/connect-dynamic-dialing-modes/",
-      "pubDate": "2026-02-26T19:32:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "preview",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c498824e3f42",
-      "title": "AWS Security Hub launches Extended plan for pay-as-you-go partner solutions",
-      "description": "Today, we're announcing the general availability of AWS Security Hub Extended, a new plan that extends unified security operations across your enterprise through a single-vendor experience. This plan helps address the complexity of managing multiple vendor relationships and lengthy procurement cycles by bringing together the best of AWS detection services and curated partner security solutions.\n  The Security Hub Extended plan delivers three critical advantages. First, it helps streamline procurement by consolidating solution usage into one bill—thereby reducing procurement complexity while preserving direct access to each provider's domain expertise. AWS Enterprise Support Customers also benefit from unified Level 1 support from AWS. Second, it enables you to establish more comprehensive protection by bringing together the best of AWS detection services with curated partner solutions across endpoint, identity, email, network, data, browser, cloud, AI, and security operations. Third, it helps enhance operational efficiency by streamlining security findings in a standard format, providing centralized visibility across your security environment while reducing the burden of manual integration work.\n  You can access and review partner solutions across security categories through the Security Hub console, selecting only the solutions you need with flexible pay-as-you-go or flat-rate pricing—no upfront investments or long-term commitments required. With AWS as the seller of record, the Extended plan may be eligible for AWS Private Pricing opportunities. This gives you the flexibility to add or remove security categories as your business needs evolve, while enabling you to streamline vendor contract negotiations and consolidate billing. For a list of AWS commercial Regions where Security Hub is available, see the AWS Region table. For more information about pricing, visit the AWS Security Hub pricing page. To get started, visit the AWS Security Hub console or product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/sec-hub-extended/",
-      "pubDate": "2026-02-26T17:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-550cd544707a",
-      "title": "Amazon EC2 M8i and M8i-flex instances are available in additional regions",
-      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in US West (N. California), Europe (Paris), Asia Pacific (Hyderabad), and South America (Sao Paulo) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex page or visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-m8i-m8i-flex-instances-additional-regions/",
-      "pubDate": "2026-02-26T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available"
       ]
     },
     {

@@ -1,8 +1,60 @@
 {
-  "lastUpdated": "2026-03-16T07:03:05.033Z",
+  "lastUpdated": "2026-03-17T06:50:15.244Z",
   "category": "general",
   "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-00dd2444b068",
+      "title": "Amazon CloudWatch introduces organization-wide EC2 detailed monitoring enablement",
+      "description": "Amazon CloudWatch now allows customers to automatically enable Amazon Elastic Compute Cloud (EC2) detailed monitoring across their AWS Organization. Customers can create enablement rules in CloudWatch Ingestion that automatically enable detailed monitoring for both existing and newly launched EC2 instances matching the rule scope, ensuring consistent metrics collection at 1-minute intervals across their EC2 instances.\n \nEC2 detailed monitoring enablement rules can be scoped to the whole organization, specific accounts, or specific resources based on resource tags to standardize the configuration across EC2 instances. For example, the central DevOps team can create an enablement rule to automatically turn on detailed monitoring for EC2 instances with specific tags, e.g., env:production, and ensure Auto Scaling policies respond quickly to changes in instance utilization.\n \nCloudWatch's auto-enablement capability is available in all AWS commercial regions. Detailed monitoring metrics will be billed according to CloudWatch Pricing.\n \nTo learn more about org-wide EC2 detailed monitoring enablement, visit the Amazon CloudWatch documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-org-enablement-ec2-metrics/",
+      "pubDate": "2026-03-16T23:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "cloudwatch",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-566e70694255",
+      "title": "AWS and NVIDIA deepen strategic collaboration to accelerate AI from pilot to production",
+      "description": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-deepen-strategic-collaboration-to-accelerate-ai-from-pilot-to-production/",
+      "pubDate": "2026-03-16T20:51:16.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c891f1e3b242",
+      "title": "Amazon Connect now enables agents to forward email contacts to external email addresses",
+      "description": "Amazon Connect now enables agents to forward email contacts to external email addresses and distribution lists directly from the Agent workspace and Contact Center Panel. When an email is forwarded, agents still retain ownership and complete communication trail of the original contact. This makes it easy for your agents to seamlessly loop in back-office teams, subject matter experts, partners, and other stakeholders, while remaining a single consistent point of contact for your customers.\n  Amazon Connect email is available in the US East (N. Virginia), US West (Oregon), Africa (Cape Town), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation or visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-forward-email-contacts/",
+      "pubDate": "2026-03-16T15:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-c603e993d458",
       "title": "Amazon EC2 R8a instances are now available in Asia Pacific (Tokyo) Region",
@@ -465,73 +517,6 @@
         "cloudwatch",
         "now-available",
         "integration",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-560f26980308",
-      "title": "Amazon CloudWatch now provides lock contention diagnostics for Amazon RDS for PostgreSQL",
-      "description": "Amazon CloudWatch Database Insights now provides lock contention diagnostics for Amazon RDS for PostgreSQL instances. This feature helps you identify the root cause behind both ongoing and historical lock contention issues within minutes. The lock contention diagnostics feature is available exclusively in the Advanced mode of CloudWatch Database Insights.\n  With this launch, you can visualize a locking condition in the Database Insights console, which shows the relationship between blocking and waiting sessions. The visualization helps you quickly identify the dominating sessions, queries, or objects causing lock contention. Additionally, this feature persists historical locking data for 15 months, allowing you to analyze and investigate historical locking conditions. You no longer need to manually run custom queries or rely on application logs to diagnose lock contention issues, streamlining the troubleshooting process.\n  You can get started with this feature by enabling the Advanced mode of CloudWatch Database Insights on your Amazon RDS for PostgreSQL clusters using the RDS console, AWS APIs, or the AWS SDK. CloudWatch Database Insights delivers database health monitoring aggregated at the fleet level, as well as instance-level dashboards for detailed database and SQL query analysis.\n  CloudWatch Database Insights is available in all public AWS Regions and offers vCPU-based pricing – see the pricing page for details. For further information, visit the Database Insights documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-cloudwatch-lock-contention-diagnostics-rds-postgresql/",
-      "pubDate": "2026-02-26T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-943c4c11f1e9",
-      "title": "Application Performance Monitoring Enabled by Default in CloudWatch Observability EKS Add-on",
-      "description": "Today, Amazon CloudWatch Observability EKS add-on version 5.0.0 automatically enables CloudWatch Application Signals — Amazon's application performance monitoring (APM) capability — for all new installations and upgrades, eliminating the previous manual opt-in step. Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that simplifies running containerized applications at scale. The CloudWatch Observability add-on for EKS extends native Kubernetes observability by integrating Enhanced Container Insights, Container Logs, and now Application Signals directly into your clusters. The Observability add-on automatically instruments your services to collect traces, metrics, and logs for a unified, application-centric view. For DevOps engineers, platform teams, and developers who needed application-level visibility into their EKS-hosted services — such as service latency, error rates, and request traces — this change closes that gap by making those capabilities available out of the box, so teams can focus on building and operating applications rather than configuring observability tooling.azon EKS.\n \nWith Application Signals now enabled by default, customers immediately benefit from automatic service instrumentation — no manual configuration or Kubernetes workload annotations required — along with pre-built dashboards that surface application performance metrics and a rich troubleshooting experience that goes beyond infrastructure-level data to help teams quickly identify and resolve issues. For example, a platform team managing a microservices application on EKS can now detect latency spikes or error rate increases at the service level without any additional setup, accelerating root cause analysis during incidents.\n \nThis feature is available in all commercial AWS regions where Amazon CloudWatch Application Signals is available; to get started, you can refer to the Amazon CloudWatch Application Signals documentation and upgrade to version 5.0.0 of the add-on.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/application-performance-monitoring-cloudwatch-eks/",
-      "pubDate": "2026-02-26T16:43:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "eks",
-        "cloudwatch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-14fba2759f20",
-      "title": "Amazon SNS now supports push notifications in the Europe (Spain) Region",
-      "description": "Amazon Simple Notification Service (Amazon SNS) now supports sending push notifications in the AWS Europe (Spain) Region. \n \nAmazon SNS is a fully managed pub/sub service that provides message delivery to multiple endpoints, including AWS Lambda, Amazon SQS, Amazon Data Firehose, HTTP, SMS (via AWS End User Messaging), push notifications, and email. With this launch, customers in the Europe (Spain) Region can use Amazon SNS to send push notifications to the following supported push notification services: Amazon Device Messaging (ADM), Apple Push Notification Service (APNs), Baidu Cloud Push (Baidu), Firebase Cloud Messaging (FCM), Microsoft Push Notification Service for Windows Phone (MPNS), and Windows Push Notification Services (WNS). \n \nWith this expansion, Amazon SNS now supports sending push notifications from 25 regions. For the full list of regions from which you can send push notifications, see Supported Regions and Countries in the Amazon SNS Developer Guide.\n \nFor more information, see the Amazon SNS push notifications documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-sns-push-expansion-spain/",
-      "pubDate": "2026-02-26T15:32:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "sns",
-        "sqs",
-        "launch",
-        "support",
         "expansion"
       ]
     },

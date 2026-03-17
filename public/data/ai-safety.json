@@ -1,8 +1,56 @@
 {
-  "lastUpdated": "2026-03-16T07:03:05.033Z",
+  "lastUpdated": "2026-03-17T06:50:15.244Z",
   "category": "ai-safety",
-  "totalItems": 33,
+  "totalItems": 32,
   "items": [
+    {
+      "id": "aws-news-e3bedbe8d906",
+      "title": "Amazon CloudWatch Logs now supports log ingestion using HTTP-based protocol",
+      "description": "Amazon CloudWatch Logs now supports HTTP Log Collector (HLC), ND-JSON, Structured JSON and OTEL for sending logs using HTTP-based protocol with bearer token. With this launch, customers can ingest logs where AWS SDK integration is not feasible, such as with third-party or packaged software. The new endpoints are:\n \n \n \nHTTP Log Collector (HLC) Logs (https://logs .<region>.amazonaws.com/services/collector/event) — for JSON events, ideal for migrating existing log pipelines. \n  \n \n \n \nND-JSON Logs (https://logs.<region>.amazonaws.com/ingest/bulk) — for newline-delimited JSON, where each line is an independent log event. Perfect for high-volume streaming and bulk log ingestion. \n  \n \n \n \nStructured JSON Logs (https://logs .<region>.amazonaws.com/ingest/json) — Send a single JSON object or a JSON array of objects.\n  \n \n \n \nOpenTelemetry Logs (https://logs .<region>.amazonaws.com/v1/logs) — for OTLP-formatted logs in JSON or Protobuf encoding to CloudWatch.\n  \n \nTo enable the HLC endpoint, navigate to CloudWatch Settings in the AWS Console and generate an API key. CloudWatch creates the necessary IAM user with service-specific credentials and permissions. API keys can be configured with expiration periods of 1, 5, 30, 90, or 365 days. Customers must enable bearer token authentication on each log group before it can accept logs, which protects from unintended ingestion. Customers can use service control policies to block the creation of service-specific credentials.\n \nThese endpoints are available in the following AWS Regions: US East (N. Virginia), US West (N. California), US West (Oregon), and US East (Ohio). To learn more about the HLC endpoint and security best practices, refer to the CloudWatch Logs Documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-http-log-collector/",
+      "pubDate": "2026-03-16T22:04:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7f7505e7053d",
+      "title": "Amazon Neptune now supports reading S3 data using openCyper",
+      "description": "Amazon Neptune now supports reading data from Amazon S3 within openCypher queries. Through the new `neptune.read()` procedure, customers now have an additional option of federating with external data stored in S3 versus needing to load data into Neptune. Organizations using Neptune for graph analytics can now dynamically incorporate S3-stored data without the traditional multi-step workflow requirements.\n \nKey use cases include real-time graph analytics that combine S3 data with existing graph structures, dynamic node and edge creation from external datasets, and complex graph queries requiring external reference data. The procedure supports comprehensive data types including standard and Neptune-specific formats such as geometry and datetime, while maintaining security through the caller's IAM credentials.\n \nRead from S3 is available in all regions where Amazon Neptune Database is currently offered. To learn more, check out the Neptune Database documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/neptune-read-s3-opencypher/",
+      "pubDate": "2026-03-16T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "iam",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-4f08dcc96096",
       "title": "AWS Network Firewall Launch in the AWS European Sovereign Cloud",
@@ -398,28 +446,6 @@
       ]
     },
     {
-      "id": "aws-news-181b036b8a6b",
-      "title": "How Lendi revamped the refinance journey for its customers using agentic AI in 16 weeks using Amazon Bedrock",
-      "description": "This post details how Lendi Group built their AI-powered Home Loan Guardian using Amazon Bedrock, the challenges they faced, the architecture they implemented, and the significant business outcomes they’ve achieved. Their journey offers valuable insights for organizations that want to use generative AI to transform customer experiences while maintaining the human touch that builds trust and loyalty.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-lendi-revamped-the-refinance-journey-for-its-customers-using-agentic-ai-in-12-weeks-using-amazon-bedrock/",
-      "pubDate": "2026-03-03T16:18:30.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "eks",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-f8f715fd06f9",
       "title": "The Hidden Price Tag: Uncovering Hidden Costs in Cloud Architectures with the AWS Well-Architected Framework",
       "description": "In this post, we discuss how following the AWS Cloud Adoption Framework (AWS CAF) and AWS Well-Architected Framework can help reduce these risks through proper implementation of AWS guidance and best practices while taking into consideration the practical challenges organizations face in implementing these best practices, including resource constraints, evaluating trade-offs and competing business priorities.",
@@ -435,23 +461,6 @@
       "tags": [
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-58c3da176295",
-      "title": "Build safe generative AI applications like a Pro: Best Practices with Amazon Bedrock Guardrails",
-      "description": "In this post, we will show you how to configure Amazon Bedrock Guardrails for efficient performance, implement best practices to protect your applications, and monitor your deployment effectively to maintain the right balance between safety and user experience.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-safe-generative-ai-applications-like-a-pro-best-practices-with-amazon-bedrock-guardrails/",
-      "pubDate": "2026-03-02T18:48:25.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -531,28 +540,6 @@
         "organizations",
         "ga",
         "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e318070b2011",
-      "title": "Amazon Cognito enhances client secret management with secret rotation and custom secrets",
-      "description": "Amazon Cognito enhances client secret lifecycle management for app clients of Cognito user pools by adding client secret rotation and support for custom client secrets. Cognito helps you implement secure sign-in and access control for users, AI agents, and microservices in minutes, and a Cognito app client is a configuration that interacts with one mobile or web application that authenticates with Cognito. Previously, Cognito automatically generated all app client secrets. With this launch, in addition to the automatically generated secrets, you have the option to bring your own custom client secrets for new or existing app clients. Additionally, you can now rotate client secrets on-demand and maintain up to two active client secrets per app client.\n \nThe new client secret lifecycle management capabilities address needs for organizations with periodic credential rotation requirements, companies improving security posture, and enterprises migrating from other authentication systems to Cognito. Maintaining two active secrets per app client allows gradual transition to the new secret without application downtime.\n \nClient secret rotation and custom client secrets are available in all AWS Regions where Amazon Cognito user pools are available. To learn more, see the Amazon Cognito Developer Guide. You can get started using the new capabilities through the AWS Management Console, AWS Command Line Interface (CLI), AWS Software Development Kits (SDKs), or AWS CloudFormation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-cognito-client-secret-lifecycle/",
-      "pubDate": "2026-02-26T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "cloudformation",
-        "organizations",
-        "launch",
-        "ga",
         "support"
       ]
     },

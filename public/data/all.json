@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T07:03:05.033Z",
+  "lastUpdated": "2026-03-17T06:50:15.244Z",
   "totalItems": 202,
   "sources": {
     "whatsNew": 94,
@@ -11,6 +11,311 @@
     "developersAndDevOps": 16
   },
   "items": [
+    {
+      "id": "aws-news-00dd2444b068",
+      "title": "Amazon CloudWatch introduces organization-wide EC2 detailed monitoring enablement",
+      "description": "Amazon CloudWatch now allows customers to automatically enable Amazon Elastic Compute Cloud (EC2) detailed monitoring across their AWS Organization. Customers can create enablement rules in CloudWatch Ingestion that automatically enable detailed monitoring for both existing and newly launched EC2 instances matching the rule scope, ensuring consistent metrics collection at 1-minute intervals across their EC2 instances.\n \nEC2 detailed monitoring enablement rules can be scoped to the whole organization, specific accounts, or specific resources based on resource tags to standardize the configuration across EC2 instances. For example, the central DevOps team can create an enablement rule to automatically turn on detailed monitoring for EC2 instances with specific tags, e.g., env:production, and ensure Auto Scaling policies respond quickly to changes in instance utilization.\n \nCloudWatch's auto-enablement capability is available in all AWS commercial regions. Detailed monitoring metrics will be billed according to CloudWatch Pricing.\n \nTo learn more about org-wide EC2 detailed monitoring enablement, visit the Amazon CloudWatch documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-org-enablement-ec2-metrics/",
+      "pubDate": "2026-03-16T23:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "cloudwatch",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-e3bedbe8d906",
+      "title": "Amazon CloudWatch Logs now supports log ingestion using HTTP-based protocol",
+      "description": "Amazon CloudWatch Logs now supports HTTP Log Collector (HLC), ND-JSON, Structured JSON and OTEL for sending logs using HTTP-based protocol with bearer token. With this launch, customers can ingest logs where AWS SDK integration is not feasible, such as with third-party or packaged software. The new endpoints are:\n \n \n \nHTTP Log Collector (HLC) Logs (https://logs .<region>.amazonaws.com/services/collector/event) — for JSON events, ideal for migrating existing log pipelines. \n  \n \n \n \nND-JSON Logs (https://logs.<region>.amazonaws.com/ingest/bulk) — for newline-delimited JSON, where each line is an independent log event. Perfect for high-volume streaming and bulk log ingestion. \n  \n \n \n \nStructured JSON Logs (https://logs .<region>.amazonaws.com/ingest/json) — Send a single JSON object or a JSON array of objects.\n  \n \n \n \nOpenTelemetry Logs (https://logs .<region>.amazonaws.com/v1/logs) — for OTLP-formatted logs in JSON or Protobuf encoding to CloudWatch.\n  \n \nTo enable the HLC endpoint, navigate to CloudWatch Settings in the AWS Console and generate an API key. CloudWatch creates the necessary IAM user with service-specific credentials and permissions. API keys can be configured with expiration periods of 1, 5, 30, 90, or 365 days. Customers must enable bearer token authentication on each log group before it can accept logs, which protects from unintended ingestion. Customers can use service control policies to block the creation of service-specific credentials.\n \nThese endpoints are available in the following AWS Regions: US East (N. Virginia), US West (N. California), US West (Oregon), and US East (Ohio). To learn more about the HLC endpoint and security best practices, refer to the CloudWatch Logs Documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-http-log-collector/",
+      "pubDate": "2026-03-16T22:04:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-566e70694255",
+      "title": "AWS and NVIDIA deepen strategic collaboration to accelerate AI from pilot to production",
+      "description": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-deepen-strategic-collaboration-to-accelerate-ai-from-pilot-to-production/",
+      "pubDate": "2026-03-16T20:51:16.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a944eb456cb4",
+      "title": "SageMaker HyperPod now supports idle resource sharing for dynamic cluster utilization",
+      "description": "Amazon SageMaker HyperPod task governance now supports dynamic resource sharing, allowing teams to borrow unallocated compute capacity in HyperPod clusters beyond their guaranteed quotas. Administrators can also configure borrow limits for specific resource types, such as accelerators, vCPU, or memory, to ensure fair distribution across teams.\n  Administrators running shared compute clusters for generative AI workloads often face underutilization challenges. When data scientists do not fully consume their allocated quotas, expensive compute instances remain idle. Idle resource sharing solves this by automatically identifying unallocated cluster capacity and making it available for teams to borrow on a best-effort basis. HyperPod task governance monitors your cluster state and automatically recalculates borrowable resources when instances and compute quota policies change, eliminating manual configuration. Eligible instances that are in a ready and schedulable state, including instances with partitioned GPU configurations, contribute to the borrowable pool of unallocated compute capacity. Administrators can also define absolute borrow limits in addition to percentage-based borrow limits of idle compute. This helps administrators maximize compute utilization and maintain fine-grained control over how idle capacity is distributed across teams, while ensuring guaranteed compute quota isolation for each team.\n  This capability is currently available for Amazon SageMaker HyperPod clusters using the EKS orchestrator across the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo), Asia Pacific (Jakarta), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Stockholm), Europe (Spain), and South America (São Paulo).\n  To learn more, visit SageMaker HyperPod webpage, and HyperPod task governance documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sagemaker-hyperpod-idle-resource-sharing/",
+      "pubDate": "2026-03-16T19:38:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7f7505e7053d",
+      "title": "Amazon Neptune now supports reading S3 data using openCyper",
+      "description": "Amazon Neptune now supports reading data from Amazon S3 within openCypher queries. Through the new `neptune.read()` procedure, customers now have an additional option of federating with external data stored in S3 versus needing to load data into Neptune. Organizations using Neptune for graph analytics can now dynamically incorporate S3-stored data without the traditional multi-step workflow requirements.\n \nKey use cases include real-time graph analytics that combine S3 data with existing graph structures, dynamic node and edge creation from external datasets, and complex graph queries requiring external reference data. The procedure supports comprehensive data types including standard and Neptune-specific formats such as geometry and datetime, while maintaining security through the caller's IAM credentials.\n \nRead from S3 is available in all regions where Amazon Neptune Database is currently offered. To learn more, check out the Neptune Database documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/neptune-read-s3-opencypher/",
+      "pubDate": "2026-03-16T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "iam",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4f3775d733cb",
+      "title": "Amazon Timestream for InfluxDB 3 Now Supports Expanded Multi-Node Cluster Configurations",
+      "description": "Amazon Timestream for InfluxDB now supports expanded multi-node cluster configurations for InfluxDB 3 Enterprise edition, enabling you to scale clusters up to 15 nodes for demanding production workloads requiring high read throughput and high availability.\n  With this launch, you can now configure clusters with up to 15 nodes total, with one to four writer/reader nodes for data ingestion and queries, zero to 13 dedicated reader-only nodes for scaling query performance, plus a dedicated compactor node. This enables you to optimize for specific workload patterns. For example, you can create a dedicated reader-only nodes to handle read-heavy workloads such as dashboards, reporting, and analytical queries without impacting write performance. All Multi-node deployments distribute workloads across multiple nodes in different Availability Zones for enhanced fault tolerance and high availability\n  With this release, you can now add and remove nodes from all Enterprise clusters, providing greater flexibility for managing your time series database infrastructure. You can also upgrade from Core edition to Enterprise edition to access multi-node deployment capabilities and compaction features essential for long-term storage.\n  You can create expanded multi-node clusters using the Amazon Timestream for InfluxDB console. AWS CLI, or AWS SDKs by configuring custom parameter groups with your desired node topology. Amazon Timestream for InfluxDB 3 is available in all Regions where Timestream for InfluxDB is available.\n  For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-timestream-for-influxdb-3-multi-node-cluster/",
+      "pubDate": "2026-03-16T18:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e0c8772cda08",
+      "title": "Agentic AI in the Enterprise Part 2: Guidance by Persona",
+      "description": "This is Part II of a two-part series from the AWS Generative AI Innovation Center. In Part II, we speak directly to the leaders who must turn that shared foundation into action. Each role carries a distinct set of responsibilities, risks, and leverage points. Whether you own a P&L, run enterprise architecture, lead security, govern data, or manage compliance, this section is written in the language of your job—because that's where agentic AI either succeeds or quietly dies.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/agentic-ai-in-the-enterprise-part-2-guidance-by-persona/",
+      "pubDate": "2026-03-16T17:55:54.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-3c633ff47d1d",
+      "title": "Announcing AWS Partner Central agents to accelerate co-sell",
+      "description": "Today, AWS announces the general availability of AWS Partner Central agents, new AI-powered capabilities designed to accelerate partner co-selling with AWS. Built on Amazon Bedrock AgentCore, these agentic capabilities work alongside partner sales teams to shorten sales cycles and simplify funding access. AWS Partners can engage with these agentic capabilities directly in the console or programmatically through Model Context Protocol (MCP), enabling sales teams to access from within their own customer relationship management (CRM) systems.\n \nWith AWS Partner Central agents, partner teams get pipeline insights, tailored sales plays, and next-step recommendations on demand, so they know where to focus and what to do next. Partner sales teams can share meeting transcripts, notes, or emails with agents that automatically populate fields and advance deals, so they stay focused on selling, not data entry. Agents recommend funding at the opportunity level, highlight eligibility gaps, and create pre-populated fund requests, so partners capture available funding faster.\n \nAWS Partner Central agents are available today in all commercial AWS Regions. To learn more about agentic capabilities in AWS Partner Central, review this blog. Partners can start using agents by visiting AWS Partner Central in the AWS console and accessing opportunities, after reviewing the agents guide, and to integrate agents into your own CRM, visit the Partner Central agents MCP server guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-partner-central-agents-accelerate-co-sell/",
+      "pubDate": "2026-03-16T17:04:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-58b6ca1c2418",
+      "title": "Amazon SimpleDB now supports exporting domain data to Amazon S3",
+      "description": "Amazon SimpleDB now supports exporting domain data directly to Amazon S3 buckets in standard JSON format. Exports run in the background with no impact on database performance, making it simple to migrate data to other systems or meet data archival requirements.\n \nThe export tool offers features including cross-region and cross-account support, multiple encryption options, and flexible S3 bucket configuration. Key use cases include migrating data for long-term archival or compliance purposes. The tool provides three new APIs (StartDomainExport, GetExport, and ListExports) with built-in rate limiting of 5 exports per domain and 25 per account within 24 hours. There is no charge to use this tool. However, standard data transfer charges apply. \n \n The export tool is available in all regions where Amazon SimpleDB is available. You can get started with the export tool by using the AWS API or CLI. For more information, see the Amazon SimpleDB documentation or the AWS Database Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-simpledb-domain-export-to-amazon-s3/",
+      "pubDate": "2026-03-16T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1855721547df",
+      "title": "Introducing Disaggregated Inference on AWS powered by llm-d",
+      "description": "In this blog post, we introduce the concepts behind next-generation inference capabilities, including disaggregated serving, intelligent request scheduling, and expert parallelism. We discuss their benefits and walk through how you can implement them on Amazon SageMaker HyperPod EKS to achieve significant improvements in inference performance, resource utilization, and operational efficiency.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-disaggregated-inference-on-aws-powered-by-llm-d/",
+      "pubDate": "2026-03-16T16:55:53.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "ga",
+        "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-eba8d4236428",
+      "title": "AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)",
+      "description": "Twenty years ago this past week, Amazon S3 launched publicly on March 14, 2006. While Amazon Simple Storage Service is often considered the foundational storage service that defined cloud infrastructure, what began as a simple object storage service has grown into something far larger in scope and scale. As of March 2026, S3 stores more […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/",
+      "pubDate": "2026-03-16T16:02:17.000Z",
+      "source": "newsBlog",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "s3",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-c891f1e3b242",
+      "title": "Amazon Connect now enables agents to forward email contacts to external email addresses",
+      "description": "Amazon Connect now enables agents to forward email contacts to external email addresses and distribution lists directly from the Agent workspace and Contact Center Panel. When an email is forwarded, agents still retain ownership and complete communication trail of the original contact. This makes it easy for your agents to seamlessly loop in back-office teams, subject matter experts, partners, and other stakeholders, while remaining a single consistent point of contact for your customers.\n  Amazon Connect email is available in the US East (N. Virginia), US West (Oregon), Africa (Cape Town), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation or visit the Amazon Connect website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-forward-email-contacts/",
+      "pubDate": "2026-03-16T15:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f6fe1fa43d17",
+      "title": "How Workhuman built multi-tenant self-service reporting using Amazon Quick Sight embedded dashboards",
+      "description": "This post explores how Workhuman transformed their analytics delivery model and the key lessons learned from their implementation. We go through their architecture approach, implementation strategy, and the business outcomes they achieved—providing you with a practical blueprint for adding embedded analytics to your own software as a service (SaaS) applications.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-workhuman-built-multi-tenant-self-service-reporting-using-amazon-quick-sight-embedded-dashboards/",
+      "pubDate": "2026-03-16T14:48:16.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-60f69761b60d",
+      "title": "Build an offline feature store using Amazon SageMaker Unified Studio and SageMaker Catalog",
+      "description": "This blog post provides step-by-step guidance on implementing an offline feature store using SageMaker Catalog within a SageMaker Unified Studio domain. By adopting a publish-subscribe pattern, data producers can use this solution to publish curated, versioned feature tables—while data consumers can securely discover, subscribe to, and reuse them for model development.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-an-offline-feature-store-using-amazon-sagemaker-unified-studio-and-sagemaker-catalog/",
+      "pubDate": "2026-03-16T14:42:46.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
+      "id": "aws-news-b91a9cf9c7a0",
+      "title": "Amazon Bedrock AgentCore Runtime now supports the AG-UI protocol",
+      "description": "Amazon Bedrock AgentCore Runtime now supports the Agent-User Interaction (AG-UI) protocol, enabling developers to deploy AG-UI servers that deliver responsive, real-time agent experiences to user-facing applications. With AG-UI support, AgentCore Runtime handles authentication, session isolation, and scaling for AG-UI workloads, allowing developers to focus on building interactive frontends for their agents.\n \nAG-UI is an open, event-based protocol that standardizes how AI agents communicate with user interfaces. It complements the existing Model Context Protocol (MCP) and Agent-to-Agent (A2A) protocol support in AgentCore Runtime. Where MCP provides agents with tools and A2A enables agent-to-agent communication, AG-UI brings agents into user-facing applications. Key capabilities include streaming text chunks, reasoning steps, and tool results to frontends as they happen; real-time state synchronization that can update UI elements such as progress bars and dashboards; structured tool call visualization that enables UIs to render agent actions transparently; and support for both Server-Sent Events (SSE) and WebSocket transport for bidirectional communication.\n \nAG-UI servers in AgentCore Runtime are supported across fourteen AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n \nTo learn more, see Deploy AG-UI servers in AgentCore Runtime.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-ag-ui-protocol/",
+      "pubDate": "2026-03-13T21:51:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "rds",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-10c24a1159d1",
       "title": "Amazon CloudWatch Application Signals adds new SLO capabilities",
@@ -970,6 +1275,29 @@
       ]
     },
     {
+      "id": "aws-news-7de5a0fb44f0",
+      "title": "Amazon EC2 C8i and C8i-flex instances are now available in Africa (Cape Town) and Asia Pacific (Hyderabad) regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Africa (Cape Town) and Asia Pacific (Hyderabad) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-c8i-c8i-flex-instances-africa-cape-town-asia-pacific-hyderabad-regions/",
+      "pubDate": "2026-03-10T04:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "kafka"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "kafka",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
       "id": "aws-news-436c083d8606",
       "title": "Amazon Route 53 Global Resolver is now generally available",
       "description": "Today, AWS announced the general availability of Amazon Route 53 Global Resolver, an internet-reachable anycast DNS resolver that delivers easy, secure, and reliable DNS resolution for authorized clients from anywhere. Global Resolver is now available across 30 AWS Regions, with support for both IPv4 and IPv6 DNS query traffic.\n  Previewed at re:Invent 2025 in 11 AWS Regions, Global Resolver gives authorized clients in your organization anycast DNS resolution of public internet domains and private domains associated with Route 53 private hosted zones — from any location. It also provides DNS query filtering to block potentially malicious domains, not-safe-for-work domains, and domains associated with advanced DNS threats such as DNS tunneling and Domain Generation Algorithms (DGA), along with centralized query logging. With general availability, Global Resolver adds protection against Dictionary DGA threats.\n  New customers can explore Global Resolver with a 30-day free trial. For pricing and feature details, visit the service page. To see supported AWS Regions, see the region table. To get started, see the documentation.",
@@ -1772,6 +2100,28 @@
       ]
     },
     {
+      "id": "aws-news-67511eeab4c4",
+      "title": "Amazon OpenSearch Ingestion now supports unified ingestion endpoint for OpenTelemetry data",
+      "description": "Amazon OpenSearch Ingestion now supports a unified ingestion endpoint that can accept all three OpenTelemetry observability signals — logs, metrics, and traces — through a single pipeline. Previously, customers who wanted to ingest all three OpenTelemetry data types had to create and manage three separate pipelines, one for each signal type. With this launch, a single pipeline can now receive any combination of OpenTelemetry signals, simplifying pipeline architecture and reducing operational overhead.\n  Customers can now build centralized observability pipelines that consolidate logs, metrics, and traces in one place, making it easier to correlate signals and gain a holistic view of application health. Teams operating at scale can reduce the number of pipelines they manage, lowering infrastructure costs and simplifying access control, monitoring, and lifecycle management. This also makes it easier to adopt OpenTelemetry incrementally as teams can begin with one signal type and add others over time without any pipeline reconfiguration.\n  The unified ingestion endpoint for OpenTelemetry data is supported in all regions that Amazon OpenSearch Ingestion is currently available. Customers can get started by using the new unified OpenTelemetry source in their pipeline configuration via the AWS Management console or using the AWS CLI and point their OpenTelemetry clients to the new unified endpoint.\n  To learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-ingestion-unified-ingestion-endpoint-opentelemetry",
+      "pubDate": "2026-03-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch ingestion"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch ingestion",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-74c6774304cc",
       "title": "Amazon OpenSearch Ingestion now supports Amazon Managed Service for Prometheus as a sink",
       "description": "Amazon OpenSearch Ingestion now supports Amazon Managed Service for Prometheus  as a sink, making it possible to build fully managed, end-to-end metrics ingestion pipelines without any custom forwarding infrastructure. With this launch, customers can now manage their entire metrics ingestion workflow using the same pipeline infrastructure they already use for logs and traces.\n \nCustomers can now choose the right destination for each observability signal — sending logs and traces to Amazon OpenSearch Service for powerful full-text search, log analytics, and trace correlation, while routing metrics to Amazon Managed Service for Prometheus for time-series storage and analysis. This flexibility allows teams to build purpose-fit observability pipelines that leverage the strengths of each service without compromising on data fidelity or analytical capability. Amazon OpenSearch Ingestion's built-in data transformation and enrichment capabilities allow customers to prepare and refine metrics before they land in Amazon Managed Service for Prometheus, improving data quality and consistency. Once metrics are in Amazon Managed Service for Prometheus, customers can query them using Prometheus Query Language to analyze trends, configure alerting rules to get notified when metrics cross defined thresholds, and visualize their data using Amazon Managed Grafana for rich, customizable views of infrastructure and application health.\n \nThe feature is supported in all regions that Amazon OpenSearch Ingestion and  is currently available. Customers can get started by using the new sink for Amazon Managed Service for Prometheus in their pipeline configuration via the AWS Management console or using the AWS CLI and start ingesting metrics into their Amazon Managed Service for Prometheus workspace.\n \nTo learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
@@ -1795,28 +2145,6 @@
         "opensearch ingestion",
         "grafana",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-67511eeab4c4",
-      "title": "Amazon OpenSearch Ingestion now supports unified ingestion endpoint for OpenTelemetry data",
-      "description": "Amazon OpenSearch Ingestion now supports a unified ingestion endpoint that can accept all three OpenTelemetry observability signals — logs, metrics, and traces — through a single pipeline. Previously, customers who wanted to ingest all three OpenTelemetry data types had to create and manage three separate pipelines, one for each signal type. With this launch, a single pipeline can now receive any combination of OpenTelemetry signals, simplifying pipeline architecture and reducing operational overhead.\n  Customers can now build centralized observability pipelines that consolidate logs, metrics, and traces in one place, making it easier to correlate signals and gain a holistic view of application health. Teams operating at scale can reduce the number of pipelines they manage, lowering infrastructure costs and simplifying access control, monitoring, and lifecycle management. This also makes it easier to adopt OpenTelemetry incrementally as teams can begin with one signal type and add others over time without any pipeline reconfiguration.\n  The unified ingestion endpoint for OpenTelemetry data is supported in all regions that Amazon OpenSearch Ingestion is currently available. Customers can get started by using the new unified OpenTelemetry source in their pipeline configuration via the AWS Management console or using the AWS CLI and point their OpenTelemetry clients to the new unified endpoint.\n  To learn more and get started, visit the Amazon OpenSearch Ingestion documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-ingestion-unified-ingestion-endpoint-opentelemetry",
-      "pubDate": "2026-03-04T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch ingestion"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch ingestion",
-        "launch",
-        "ga",
         "support"
       ]
     },
@@ -2023,45 +2351,6 @@
       ]
     },
     {
-      "id": "aws-news-181b036b8a6b",
-      "title": "How Lendi revamped the refinance journey for its customers using agentic AI in 16 weeks using Amazon Bedrock",
-      "description": "This post details how Lendi Group built their AI-powered Home Loan Guardian using Amazon Bedrock, the challenges they faced, the architecture they implemented, and the significant business outcomes they’ve achieved. Their journey offers valuable insights for organizations that want to use generative AI to transform customer experiences while maintaining the human touch that builds trust and loyalty.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-lendi-revamped-the-refinance-journey-for-its-customers-using-agentic-ai-in-12-weeks-using-amazon-bedrock/",
-      "pubDate": "2026-03-03T16:18:30.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "eks",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-3765e200b283",
-      "title": "How Tines enhances security analysis with Amazon Quick Suite",
-      "description": "In this post, we show you how to connect Quick Suite with Tines to securely retrieve, analyze, and visualize enterprise data from any security or IT system. We walk through an example that uses a MCP server in Tines to retrieve data from various tools, such as AWS CloudTrail, Okta, and VirusTotal, to remediate security events using Quick Suite.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-tines-enhances-security-analysis-with-amazon-quick-suite/",
-      "pubDate": "2026-03-03T16:15:06.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q"
-      ]
-    },
-    {
       "id": "aws-news-f8f715fd06f9",
       "title": "The Hidden Price Tag: Uncovering Hidden Costs in Cloud Architectures with the AWS Well-Architected Framework",
       "description": "In this post, we discuss how following the AWS Cloud Adoption Framework (AWS CAF) and AWS Well-Architected Framework can help reduce these risks through proper implementation of AWS guidance and best practices while taking into consideration the practical challenges organizations face in implementing these best practices, including resource constraints, evaluating trade-offs and competing business priorities.",
@@ -2101,24 +2390,6 @@
         "opensearch",
         "opensearch service",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-a4e4e3ce48af",
-      "title": "Building specialized AI without sacrificing intelligence: Nova Forge data mixing in action",
-      "description": "In this post, we share results from the AWS China Applied Science team's comprehensive evaluation of Nova Forge using a challenging Voice of Customer (VOC) classification task, benchmarked against open-source models.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-specialized-ai-without-sacrificing-intelligence-nova-forge-data-mixing-in-action/",
-      "pubDate": "2026-03-02T19:32:47.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "nova",
-        "ga"
       ]
     },
     {
@@ -2169,42 +2440,6 @@
       "tags": [
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-9078b89e094c",
-      "title": "Build a serverless conversational AI agent using Claude with LangGraph and managed MLflow on Amazon SageMaker AI",
-      "description": "This post explores how to build an intelligent conversational agent using Amazon Bedrock, LangGraph, and managed MLflow on Amazon SageMaker AI.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-serverless-conversational-ai-agent-using-claude-with-langgraph-and-managed-mlflow-on-amazon-sagemaker-ai/",
-      "pubDate": "2026-03-02T18:51:43.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "sagemaker"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker"
-      ]
-    },
-    {
-      "id": "aws-news-58c3da176295",
-      "title": "Build safe generative AI applications like a Pro: Best Practices with Amazon Bedrock Guardrails",
-      "description": "In this post, we will show you how to configure Amazon Bedrock Guardrails for efficient performance, implement best practices to protect your applications, and monitor your deployment effectively to maintain the right balance between safety and user experience.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-safe-generative-ai-applications-like-a-pro-best-practices-with-amazon-bedrock-guardrails/",
-      "pubDate": "2026-03-02T18:48:25.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2551,97 +2786,6 @@
       ]
     },
     {
-      "id": "aws-news-a0ffbb4ed638",
-      "title": "Amazon ECS Managed Instances now integrates with Amazon EC2 Capacity Reservations",
-      "description": "Amazon Elastic Container Service (Amazon ECS) Managed Instances now integrates with Amazon EC2 Capacity Reservations, enabling you to leverage your reserved capacity for predictable workload availability, while ECS handles all infrastructure management. This integration helps you balance reliable capacity scaling with cost efficiency, helping achieve high availability for mission‑critical workloads.\n  Amazon ECS Managed Instances is a fully managed compute option designed to eliminate infrastructure management overhead, dynamically scale EC2 instances to match your workload requirements, and continuously optimize task placement to reduce infrastructure costs. With today’s launch, you can configure your ECS Managed Instances capacity providers to use capacity reservations by setting the capacityOptionType parameter to reserved, in addition to the existing spot and on-demand options. You can also specify reservation preferences to optimize cost and availability: use reservations-only to launch EC2 instances exclusively in reserved capacity for maximum predictability, reservations-first to prefer reservations while maintaining flexibility to fall back to on-demand capacity when needed, or reservations-excluded to prevent your capacity provider from using reservations altogether.\n  To get started, you can use the AWS Management Console, AWS CLI, AWS CloudFormation, or AWS SDKs to configure your ECS Managed Instances capacity provider by choosing capacityOptionType=reserved and providing a capacity reservation group and reservation strategy. This feature is now available in all AWS Regions. For more details, refer to the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/ecs-mi-ec2-capacity-reservations/",
-      "pubDate": "2026-02-26T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "ecs",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ecs",
-        "cloudformation",
-        "launch",
-        "now-available",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-6d989aab43fa",
-      "title": "AWS Marketplace now supports multiple purchases of SaaS & Professional Services products from the same account",
-      "description": "AWS Marketplace now supports Concurrent Agreements for SaaS and Professional Services products, enabling buyers to make multiple purchases for the same product within a single AWS account. Previously, buyers could only maintain one active agreement per product per AWS account, requiring sellers to use workarounds to support expansion deals. Concurrent Agreements removes this constraint, allowing different business units to procure independently with their own negotiated terms and pricing.\n \nBoth buyers and sellers benefit from the flexibility Concurrent Agreements provides. Buyers can accept multiple offers for the same product without disrupting existing agreements, supporting multi-team procurement within centralized AWS accounts, mid-term expansions, and repeat purchases. Sellers can close multi-business unit deals that couldn't happen before, transact expansions immediately instead of waiting for renewal cycles, and eliminate the operational overhead of managing workarounds. \n \nConcurrent Agreements is enabled by default for all Professional Services listings starting today, with no seller action required. For SaaS listings, sellers must update their AWS Marketplace integration to handle multiple active subscriptions, including updating subscription notifications to use EventBridge and updating entitlement and metering APIs. Starting June 1, 2026, support for Concurrent Agreements will be required for new SaaS products. Sellers who have completed the integration work can opt in to enable Concurrent Agreements for their SaaS products now. \n \nThis capability is available in all AWS Regions where AWS Marketplace is supported. Concurrent Agreements purchasing is available on SaaS products where sellers have completed the integration, and is enabled by default for all Professional Services listings. To learn more about enabling Concurrent Agreements as a seller of SaaS products, review the Concurrent Agreements integration lab.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/concurrent-agreements-february/",
-      "pubDate": "2026-02-26T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "eventbridge"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "eventbridge",
-        "update",
-        "integration",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-b03b2851081c",
-      "title": "Amazon Connect now supports dynamic dialing mode switching for outbound campaigns",
-      "description": "Today, AWS announces the general availability of dynamic dialing mode switching for Amazon Connect Outbound Campaigns, which allows contact center administrators to change between preview and non-preview dialing modes during active campaign execution. Previously, campaigns were locked into their initial dialing mode once started, requiring administrators to stop and restart campaigns to adjust strategies. This launch solves the problem of inflexible dialing strategies that couldn't adapt to real-time business needs and agent availability changes.\n \nDynamic dialing mode switching enables contact centers to optimize agent productivity and campaign efficiency in real-time without campaign interruptions. For example, you can automatically switch from progressive dialing to preview mode when handling high-priority contacts that require additional context, then revert back when traffic returns to normal patterns. This flexibility is particularly valuable for campaigns with varying contact priorities or fluctuating agent availability throughout the day.\n \nDynamic dialing mode switching is available at no additional cost in all AWS Regions where Amazon Connect Outbound Campaigns is supported: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town).\n \nTo learn more, see the Amazon Connect Administrator Guide or visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/connect-dynamic-dialing-modes/",
-      "pubDate": "2026-02-26T19:32:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "preview",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-560f26980308",
-      "title": "Amazon CloudWatch now provides lock contention diagnostics for Amazon RDS for PostgreSQL",
-      "description": "Amazon CloudWatch Database Insights now provides lock contention diagnostics for Amazon RDS for PostgreSQL instances. This feature helps you identify the root cause behind both ongoing and historical lock contention issues within minutes. The lock contention diagnostics feature is available exclusively in the Advanced mode of CloudWatch Database Insights.\n  With this launch, you can visualize a locking condition in the Database Insights console, which shows the relationship between blocking and waiting sessions. The visualization helps you quickly identify the dominating sessions, queries, or objects causing lock contention. Additionally, this feature persists historical locking data for 15 months, allowing you to analyze and investigate historical locking conditions. You no longer need to manually run custom queries or rely on application logs to diagnose lock contention issues, streamlining the troubleshooting process.\n  You can get started with this feature by enabling the Advanced mode of CloudWatch Database Insights on your Amazon RDS for PostgreSQL clusters using the RDS console, AWS APIs, or the AWS SDK. CloudWatch Database Insights delivers database health monitoring aggregated at the fleet level, as well as instance-level dashboards for detailed database and SQL query analysis.\n  CloudWatch Database Insights is available in all public AWS Regions and offers vCPU-based pricing – see the pricing page for details. For further information, visit the Database Insights documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-cloudwatch-lock-contention-diagnostics-rds-postgresql/",
-      "pubDate": "2026-02-26T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "launch",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-3658a3d7e83a",
       "title": "Digital Transformation at Santander: How Platform Engineering is Revolutionizing Cloud Infrastructure",
       "description": "Santander faced a significant technical challenge in managing an infrastructure that processes billions of daily transactions across more than 200 critical systems. The solution emerged through an innovative platform engineering initiative called Catalyst, which transformed the bank's cloud infrastructure and development management. This post analyzes the main cases, benefits, and results obtained with this initiative.",
@@ -2656,70 +2800,6 @@
       ],
       "tags": [
         "nova"
-      ]
-    },
-    {
-      "id": "aws-news-c498824e3f42",
-      "title": "AWS Security Hub launches Extended plan for pay-as-you-go partner solutions",
-      "description": "Today, we're announcing the general availability of AWS Security Hub Extended, a new plan that extends unified security operations across your enterprise through a single-vendor experience. This plan helps address the complexity of managing multiple vendor relationships and lengthy procurement cycles by bringing together the best of AWS detection services and curated partner security solutions.\n  The Security Hub Extended plan delivers three critical advantages. First, it helps streamline procurement by consolidating solution usage into one bill—thereby reducing procurement complexity while preserving direct access to each provider's domain expertise. AWS Enterprise Support Customers also benefit from unified Level 1 support from AWS. Second, it enables you to establish more comprehensive protection by bringing together the best of AWS detection services with curated partner solutions across endpoint, identity, email, network, data, browser, cloud, AI, and security operations. Third, it helps enhance operational efficiency by streamlining security findings in a standard format, providing centralized visibility across your security environment while reducing the burden of manual integration work.\n  You can access and review partner solutions across security categories through the Security Hub console, selecting only the solutions you need with flexible pay-as-you-go or flat-rate pricing—no upfront investments or long-term commitments required. With AWS as the seller of record, the Extended plan may be eligible for AWS Private Pricing opportunities. This gives you the flexibility to add or remove security categories as your business needs evolve, while enabling you to streamline vendor contract negotiations and consolidate billing. For a list of AWS commercial Regions where Security Hub is available, see the AWS Region table. For more information about pricing, visit the AWS Security Hub pricing page. To get started, visit the AWS Security Hub console or product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/sec-hub-extended/",
-      "pubDate": "2026-02-26T17:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "launch",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e318070b2011",
-      "title": "Amazon Cognito enhances client secret management with secret rotation and custom secrets",
-      "description": "Amazon Cognito enhances client secret lifecycle management for app clients of Cognito user pools by adding client secret rotation and support for custom client secrets. Cognito helps you implement secure sign-in and access control for users, AI agents, and microservices in minutes, and a Cognito app client is a configuration that interacts with one mobile or web application that authenticates with Cognito. Previously, Cognito automatically generated all app client secrets. With this launch, in addition to the automatically generated secrets, you have the option to bring your own custom client secrets for new or existing app clients. Additionally, you can now rotate client secrets on-demand and maintain up to two active client secrets per app client.\n \nThe new client secret lifecycle management capabilities address needs for organizations with periodic credential rotation requirements, companies improving security posture, and enterprises migrating from other authentication systems to Cognito. Maintaining two active secrets per app client allows gradual transition to the new secret without application downtime.\n \nClient secret rotation and custom client secrets are available in all AWS Regions where Amazon Cognito user pools are available. To learn more, see the Amazon Cognito Developer Guide. You can get started using the new capabilities through the AWS Management Console, AWS Command Line Interface (CLI), AWS Software Development Kits (SDKs), or AWS CloudFormation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-cognito-client-secret-lifecycle/",
-      "pubDate": "2026-02-26T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "cloudformation",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-943c4c11f1e9",
-      "title": "Application Performance Monitoring Enabled by Default in CloudWatch Observability EKS Add-on",
-      "description": "Today, Amazon CloudWatch Observability EKS add-on version 5.0.0 automatically enables CloudWatch Application Signals — Amazon's application performance monitoring (APM) capability — for all new installations and upgrades, eliminating the previous manual opt-in step. Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that simplifies running containerized applications at scale. The CloudWatch Observability add-on for EKS extends native Kubernetes observability by integrating Enhanced Container Insights, Container Logs, and now Application Signals directly into your clusters. The Observability add-on automatically instruments your services to collect traces, metrics, and logs for a unified, application-centric view. For DevOps engineers, platform teams, and developers who needed application-level visibility into their EKS-hosted services — such as service latency, error rates, and request traces — this change closes that gap by making those capabilities available out of the box, so teams can focus on building and operating applications rather than configuring observability tooling.azon EKS.\n \nWith Application Signals now enabled by default, customers immediately benefit from automatic service instrumentation — no manual configuration or Kubernetes workload annotations required — along with pre-built dashboards that surface application performance metrics and a rich troubleshooting experience that goes beyond infrastructure-level data to help teams quickly identify and resolve issues. For example, a platform team managing a microservices application on EKS can now detect latency spikes or error rate increases at the service level without any additional setup, accelerating root cause analysis during incidents.\n \nThis feature is available in all commercial AWS regions where Amazon CloudWatch Application Signals is available; to get started, you can refer to the Amazon CloudWatch Application Signals documentation and upgrade to version 5.0.0 of the add-on.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/application-performance-monitoring-cloudwatch-eks/",
-      "pubDate": "2026-02-26T16:43:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "eks",
-        "cloudwatch",
-        "ga"
       ]
     },
     {
@@ -2764,70 +2844,6 @@
         "opensearch",
         "opensearch service",
         "rds"
-      ]
-    },
-    {
-      "id": "aws-news-550cd544707a",
-      "title": "Amazon EC2 M8i and M8i-flex instances are available in additional regions",
-      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in US West (N. California), Europe (Paris), Asia Pacific (Hyderabad), and South America (Sao Paulo) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex page or visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-m8i-m8i-flex-instances-additional-regions/",
-      "pubDate": "2026-02-26T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-8af6040e1a59",
-      "title": "Introducing Amazon EC2 I8g.metal-48xl instances",
-      "description": "AWS is announcing the general availability of Amazon EC2 Storage Optimized I8g.metal-48xl instances. I8g instances are powered by AWS Graviton4 processors that deliver up to 60% better compute performance compared to previous generation I4g instances. I8g instances use the latest third generation AWS Nitro SSDs, local NVMe storage that deliver up to 65% better real-time storage performance per TB while offering up to 50% lower storage I/O latency and up to 60% lower storage I/O latency variability. These instances are built on the AWS Nitro System, which offloads CPU virtualization, storage, and networking functions to dedicated hardware and software enhancing the performance and security for your workloads.\n  Amazon EC2 I8g instances are designed for I/O intensive workloads that require rapid data access and real-time latency from storage. These instances excel at handling transactional and real-time databases, including MySQL, PostgreSQL, and NoSQL solutions like ClickHouse, Apache Druid, and MongoDB. They're also optimized for real-time analytics platforms such as Apache Spark. I8g instances are available in 11 different sizes with up to 48xlarge (including 2 metal sizes), 1,536 GiB of memory, and 45 TB local instance storage. They deliver up to 100 Gbps of network performance bandwidth, and 60 Gbps of dedicated bandwidth for Amazon Elastic Block Store (EBS).\n  To learn more, visit EC2 I8g instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/ec2-i8g-metal-48xl-generally-available/",
-      "pubDate": "2026-02-26T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "graviton"
-      ]
-    },
-    {
-      "id": "aws-news-14fba2759f20",
-      "title": "Amazon SNS now supports push notifications in the Europe (Spain) Region",
-      "description": "Amazon Simple Notification Service (Amazon SNS) now supports sending push notifications in the AWS Europe (Spain) Region. \n \nAmazon SNS is a fully managed pub/sub service that provides message delivery to multiple endpoints, including AWS Lambda, Amazon SQS, Amazon Data Firehose, HTTP, SMS (via AWS End User Messaging), push notifications, and email. With this launch, customers in the Europe (Spain) Region can use Amazon SNS to send push notifications to the following supported push notification services: Amazon Device Messaging (ADM), Apple Push Notification Service (APNs), Baidu Cloud Push (Baidu), Firebase Cloud Messaging (FCM), Microsoft Push Notification Service for Windows Phone (MPNS), and Windows Push Notification Services (WNS). \n \nWith this expansion, Amazon SNS now supports sending push notifications from 25 regions. For the full list of regions from which you can send push notifications, see Supported Regions and Countries in the Amazon SNS Developer Guide.\n \nFor more information, see the Amazon SNS push notifications documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-sns-push-expansion-spain/",
-      "pubDate": "2026-02-26T15:32:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "sns",
-        "sqs",
-        "launch",
-        "support",
-        "expansion"
       ]
     },
     {
@@ -3427,22 +3443,6 @@
       "tags": [
         "ec2",
         "generally-available"
-      ]
-    },
-    {
-      "id": "aws-news-298dd0715dfd",
-      "title": "Opening the AWS European Sovereign Cloud",
-      "description": "Deutsch | English | Español | Français | Italiano As a European citizen, I understand first-hand the importance of digital sovereignty, especially for our public sector organisations and highly regulated industries. Today, I’m delighted to share that the AWS European Sovereign Cloud is now generally available to all customers. We first announced our plans to […]",
-      "link": "https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/",
-      "pubDate": "2026-01-15T07:12:54.000Z",
-      "source": "newsBlog",
-      "services": [],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "generally-available",
-        "ga"
       ]
     },
     {
