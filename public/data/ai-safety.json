@@ -1,8 +1,56 @@
 {
-  "lastUpdated": "2026-03-17T06:50:15.244Z",
+  "lastUpdated": "2026-03-18T06:48:44.774Z",
   "category": "ai-safety",
-  "totalItems": 32,
+  "totalItems": 31,
   "items": [
+    {
+      "id": "aws-news-3cd3ea26326c",
+      "title": "AWS Blu Insights is now AWS Transform for mainframe refactor",
+      "description": "AWS Blu Insights capabilities are now available as part of AWS Transform, enabling customers to launch mainframe refactoring projects from the AWS Transform console. This launch unifies all three mainframe modernization patterns — refactor, replatform, and reimagine — within AWS Transform for mainframe. Code transformation is now offered at no cost, replacing the previous lines-of-code based pricing model.\n  With this launch, you can access AWS Transform for mainframe refactor directly from the AWS Transform console using your existing AWS credentials. The mandatory three-level certification requirement to access the Transformation Center has been removed, lowering the friction to exploring refactor projects. Self-paced training content remains available within the application for those who want to build deeper knowledge.\n  AWS Transform for mainframe refactor is available in 18 AWS Regions. In regions where AWS Transform for mainframe is not yet available, you can continue to access the service through the AWS Mainframe Modernization console.\n  To get started, visit the AWS Transform for mainframe refactor user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-transform-mainframe-refactor/",
+      "pubDate": "2026-03-17T18:30:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "launch",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-b338059f590a",
+      "title": "Simplified permissions for Amazon S3 Tables and Iceberg materialized views",
+      "description": "AWS Glue Data Catalog now supports AWS IAM-based authorization for Amazon S3 Tables and Apache Iceberg materialized views. With IAM-based authorization, you can define all necessary permissions across storage, catalog, and query engines in a single IAM policy.\n  This capability simplifies the integration of S3 Tables or materialized views with any AWS Analytics service, including Amazon Athena, Amazon EMR, Amazon Redshift, and AWS Glue. You can also opt in to AWS Lake Formation at any time to manage fine-grained access controls using the AWS Management Console, AWS CLI, API, and AWS CloudFormation.\n  This feature is now available in select AWS Regions. To learn more, visit the S3 Tables documentation and the AWS Glue Data Catalog documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/gdc-simplified-permissions-s3tables-iceberg-views/",
+      "pubDate": "2026-03-17T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "emr",
+        "redshift",
+        "cloudformation",
+        "iam",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "emr",
+        "redshift",
+        "cloudformation",
+        "iam",
+        "glue",
+        "athena",
+        "now-available",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-e3bedbe8d906",
       "title": "Amazon CloudWatch Logs now supports log ingestion using HTTP-based protocol",
@@ -479,68 +527,6 @@
       "tags": [
         "athena",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-5ee3965f68b0",
-      "title": "Amazon CloudWatch logs centralization rules now support customizable destination log group structure",
-      "description": "Amazon CloudWatch now supports customizing destination log group names when creating CloudWatch log centralization rules. Organizations managing logs across multiple accounts can now use attributes to organize centralized logs into meaningful hierarchies — by account ID, region, organizational unit, or other AWS Organizations metadata — that match how their organization operates and what their compliance requirements demand.\n \nYou can define a destination log group name structure using attributes that CloudWatch Logs automatically replaces with actual values when logs are copied. For example, using the pattern ${source.accountId}/${source.region}/${source.logGroup} creates destination log groups like 123456789012/us-east-1/cloudtrail/managementevent, making it easy to identify which account and region logs originated from. You can use attributes, including source account ID, region, log group name, organization ID, organizational unit ID, root ID, and the full organizational path.\n \nCustomizable destination log group names are available in all centralization rules supported regions.\n \nCustomers can use centralization rules to centralize one copy of logs for free (ingestion). Additional copies are charged at $0.05/GB of logs centralized (the backup region feature is considered an additional copy). Storage charges apply. To learn more, visit the CloudWatch Logs Centralization documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/cloudwatch-centralization-custom-groups/",
-      "pubDate": "2026-02-27T18:50:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "cloudwatch",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8ca8de5854ac",
-      "title": "AWS Resource Access Manager now supports maintaining shares when accounts change organizations",
-      "description": "AWS Resource Access Manager (RAM) now supports a resource share configuration that allows you to maintain resource sharing continuity when accounts move between AWS Organizations. With the new RetainSharingOnAccountLeaveOrganization parameter and corresponding ram:RetainSharingOnAccountLeaveOrganization condition key, security administrators can configure resource shares to retain access when accounts leave the organization and enforce consistent policies across their organization using Service Control Policies (SCPs).\n  This capability helps organizations undergoing mergers, acquisitions, or restructuring maintain access to shared resources like Route53 Resolver Rules, Transit Gateways, and IPAM pools without disruption. Security teams can use SCPs to enforce the RetainSharingOnAccountLeaveOrganization configuration organization-wide. When enabled, RAM treats organization accounts as external accounts, requiring explicit invitation acceptance and preserving resource access during account transitions between organizations.\n  This feature is available in all AWS commercial Regions at no additional cost. To learn more about resource share configurations, see the AWS RAM documentation or visit the AWS RAM product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/aws-resource-access-manager/",
-      "pubDate": "2026-02-27T17:35:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e17def97955c",
-      "title": "Amazon RDS for PostgreSQL supports minor versions 18.3, 17.9, 16.13, 15.17, and 14.22",
-      "description": "Amazon Relational Database Service (RDS) for PostgreSQL now supports the latest minor versions 18.3, 17.9, 16.13, 15.17, and 14.22. These versions address the regression from the February 12, 2026 PostgreSQL community release. We recommend that you upgrade to the latest minor versions to fix known security vulnerabilities in prior versions of PostgreSQL, and to benefit from the bug fixes added by the PostgreSQL community.\n  You can upgrade your databases during scheduled maintenance windows using automatic minor version upgrades. To simplify operations at scale, enable automatic minor version upgrades and use the AWS Organizations Upgrade Rollout Policy to orchestrate thousands of upgrades in phases, first to development environments before upgrading production systems. You can also use Amazon RDS Blue/Green deployments with physical replication to minimize downtime for minor version upgrades.\n  Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. See Amazon RDS for PostgreSQL Pricing for pricing details and regional availability. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI).",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/rds-minor-version-18-3-17-9-16-13-15-17-14-22/",
-      "pubDate": "2026-02-27T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga",
-        "update",
-        "support"
       ]
     },
     {
