@@ -1,8 +1,73 @@
 {
-  "lastUpdated": "2026-03-19T06:42:53.646Z",
+  "lastUpdated": "2026-03-20T06:39:34.956Z",
   "category": "general",
-  "totalItems": 47,
+  "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-a507b5661f44",
+      "title": "Amazon EC2 Fleet now supports interruptible Capacity Reservations",
+      "description": "Amazon EC2 Fleet now supports interruptible Capacity Reservations. EC2 Fleet allows you to launch instances across multiple instance types and Availability Zones. Starting today, you can specify interruptible Capacity Reservation IDs across your Launch Templates to provision instances in a single EC2 Fleet call.\n \nWhen On-Demand Capacity Reservations are not in use, customers can make them temporarily available as interruptible reservations within their AWS Organization to improve utilization and save costs. When these interruptible reservations are available to your account, you can now use EC2 Fleet to easily consume them.\n \nThis feature is available in all AWS commercial regions. To get started, refer to the EC2 Fleet documentation. To learn more about interruptible Capacity Reservations, visit the EC2 Capacity Reservations user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-fleet-interruptible-capacity-reservations/",
+      "pubDate": "2026-03-19T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4d56386350c5",
+      "title": "Amazon EC2 C8gn instances are now available in additional regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Region Asia Pacific (Jakarta, Hyderabad, Tokyo), South America (Sao Paulo), and Europe (Zurich). The new instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. \n \n \n Take advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference. \n  \n For increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters. \n  \n C8gn instances are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon, N.California), Europe (Frankfurt, Stockholm, Ireland, London, Spain, Zurich), Asia Pacific (Singapore, Malaysia, Sydney, Thailand, Mumbai, Seoul, Melbourne, Jakarta, Hyderabad, Tokyo), Middle East (UAE), Africa (Cape Town), Canada West (Calgary, Central), South America (Sao Paulo), AWS GovCloud (US-East, US-West).\n  \n To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-c8gn-instances-additional-regions/",
+      "pubDate": "2026-03-19T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "graviton",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b555ba2a75e9",
+      "title": "AWS Lambda now supports Availability Zone metadata",
+      "description": "AWS Lambda now provides Availability Zone (AZ) metadata through a new metadata endpoint in the Lambda execution environment. With this capability, developers can determine the AZ ID (e.g., use1-az1) of the AZ their Lambda function is running in, enabling them to build functions that make AZ-aware routing decisions, such as preferring same-AZ endpoints for downstream services to reduce cross-AZ latency. This capability also enables operators to implement AZ-aware resilience patterns like AZ-specific fault injection testing.\n \nLambda automatically provisions and maintains execution environments ready to serve function invocations across multiple AZs within an AWS Region to provide high availability and fault tolerance without any additional configuration or management overhead for customers.  As development teams scale their serverless applications, their functions often need to interact with other AWS services like Amazon ElastiCache and Amazon RDS that provide endpoints specific to each AZ. Until now, Lambda did not provide a way for functions to determine which AZ they were running in. With the new metadata endpoint, functions can now retrieve their AZ ID with a simple HTTP request, making it easy to implement AZ-aware logic without building and maintaining custom solutions.\n \nTo get started, use the Powertools for AWS Lambda metadata utility or call the metadata endpoint directly using the environment variables that Lambda automatically sets in the execution environment. This capability is supported for all Lambda runtimes, including custom runtimes and functions packaged as container images, and integrates seamlessly with Lambda capabilities like SnapStart and provisioned concurrency, regardless of whether your functions are VPC-enabled. \n \nAZ metadata support is available at no additional cost in all commercial AWS Regions where Lambda is available. To learn more, visit Lambda documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/lambda-availability-zone-metadata/",
+      "pubDate": "2026-03-19T16:36:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-037241a0292b",
       "title": "Amazon EC2 High Memory U7i-6TB instances now available in Asia Pacific (Malaysia)",
@@ -480,39 +545,6 @@
       ]
     },
     {
-      "id": "aws-news-fdf4200e0759",
-      "title": "AWS simplifies IAM role creation and setup in service workflows",
-      "description": "AWS Identity and Access Management (IAM) now makes it easier to create and configure IAM roles directly within service workflows, allowing you to customize role permissions without switching between browser tabs. Now, when you are performing console tasks that involve role configuration, a new panel will appear to set the permissions required.\n  IAM roles enable secure AWS cross-service connections using temporary credentials, eliminating the need for hardcoded access keys. This launch integrates role creation capabilities with custom permissions directly into service workflows, allowing you to configure roles and permissions without navigating to the IAM console. You can use default policies or the simplified statement builder to customize your permissions, streamlining your resource setup while maintaining the full functionality of IAM role management.\n  This feature is available when working with Amazon EC2, AWS Lambda, Amazon EKS, Amazon ECS, AWS Glue, AWS CloudFormation, AWS Database Migration Service, AWS Systems Manager, AWS Secrets Manager, Amazon Relational Database Service, and AWS IoT Core in the US East (N. Virginia) Region. The feature will gradually become available across additional AWS services and regions.\n  To learn more, refer to individual service User Guide or IAM documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-simplifies-iam-role-creation-and-setup/",
-      "pubDate": "2026-03-04T20:50:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudformation",
-        "iam",
-        "glue",
-        "secrets manager"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudformation",
-        "iam",
-        "glue",
-        "secrets manager",
-        "launch",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-7ccb09747da6",
       "title": "Announcing new output formats in AWS CLI v2",
       "description": "Amazon Web Services (AWS) is announcing two new features for the AWS Command Line Interface (AWS CLI) v2: structured error output and the “off” output format.",
@@ -852,24 +884,6 @@
         "new-feature",
         "update",
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-27b43a8f9a42",
-      "title": "Deploy to ARM-Based Compute with AWS Deploy Tool for .NET",
-      "description": "We’re excited to announce that the AWS Deploy Tool for .NET now supports deploying .NET applications to select ARM-based compute platforms on AWS! Whether you’re deploying from Visual Studio or using the .NET CLI, you can now target cost-effective ARM infrastructure like AWS Graviton with the same streamlined experience you’re used to. Why deploy to […]",
-      "link": "https://aws.amazon.com/blogs/developer/deploy-to-arm-based-compute-with-aws-deploy-tool-for-net/",
-      "pubDate": "2025-05-08T20:16:40.000Z",
-      "source": "developersAndDevOps",
-      "services": [
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "graviton",
-        "support"
       ]
     }
   ]

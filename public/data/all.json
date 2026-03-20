@@ -1,16 +1,234 @@
 {
-  "lastUpdated": "2026-03-19T06:42:53.646Z",
-  "totalItems": 204,
+  "lastUpdated": "2026-03-20T06:39:34.956Z",
+  "totalItems": 201,
   "sources": {
-    "whatsNew": 97,
+    "whatsNew": 95,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 18,
     "architectureBlog": 17,
     "computeBlog": 19,
-    "developersAndDevOps": 16
+    "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-a507b5661f44",
+      "title": "Amazon EC2 Fleet now supports interruptible Capacity Reservations",
+      "description": "Amazon EC2 Fleet now supports interruptible Capacity Reservations. EC2 Fleet allows you to launch instances across multiple instance types and Availability Zones. Starting today, you can specify interruptible Capacity Reservation IDs across your Launch Templates to provision instances in a single EC2 Fleet call.\n \nWhen On-Demand Capacity Reservations are not in use, customers can make them temporarily available as interruptible reservations within their AWS Organization to improve utilization and save costs. When these interruptible reservations are available to your account, you can now use EC2 Fleet to easily consume them.\n \nThis feature is available in all AWS commercial regions. To get started, refer to the EC2 Fleet documentation. To learn more about interruptible Capacity Reservations, visit the EC2 Capacity Reservations user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-fleet-interruptible-capacity-reservations/",
+      "pubDate": "2026-03-19T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c8d9aaaf4f68",
+      "title": "AWS adds support for NIXL with EFA to accelerate LLM inference at scale",
+      "description": "AWS announces support for NVIDIA Inference Xfer Library (NIXL) with Elastic Fabric Adapter (EFA) to accelerate disaggregated large language model (LLM) inference on Amazon EC2. This integration enhances disaggregated inference serving through three key improvements: increased KV-cache throughput, reduced inter-token latency, and optimized KV-cache memory utilization.\n  NIXL with EFA enables high throughput, low-latency KV-cache transfer between prefill and decode nodes, and it enables efficient KV-cache movement between various storage layers. NIXL is interoperable with all EFA-enabled EC2 instances and integrates natively with frameworks including NVIDIA Dynamo, SGLang, and vLLM. Combined, NIXL with EFA enables flexible integration with your EC2 instance and framework of choice, providing performant disaggregated inference at scale.\n  AWS supports NIXL version 1.0.0 or higher with EFA installer version 1.47.0 or higher on all EFA-enabled EC2 instance types in all AWS regions at no additional cost. For more information, visit the EFA documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-support-nixl-with-efa/",
+      "pubDate": "2026-03-19T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ga",
+        "improvement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-300c69598a6f",
+      "title": "Run NVIDIA Nemotron 3 Super on Amazon Bedrock",
+      "description": "This post explores the technical characteristics of the Nemotron 3 Super model and discusses potential application use cases. It also provides technical guidance to get started using this model for your generative AI applications within the Amazon Bedrock environment.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/run-nvidia-nemotron-3-super-on-amazon-bedrock/",
+      "pubDate": "2026-03-19T17:25:44.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-386977bb0d6e",
+      "title": "Amazon Redshift supports federated permissions with IAM Identity Center in multiple AWS Regions",
+      "description": "Amazon Redshift federated permissions are now supported with AWS IAM Identity Center (IdC) in multiple AWS Regions. You can extend IdC from your primary AWS Region to additional Regions for improved performance through proximity to users and reliability. In the additional regions, you now have simplified administration of Redshift fine-grained access controls at the table and column level using existing workforce identities with IdC.\n  When a new Region is added in IdC, you can create Redshift and Lake Formation Identity Center applications in the new Region without replicating identities from the primary Region. This enables you to use existing workforce identities to query data across warehouses in the new Region. Regardless of which warehouse is used for querying, row-level, column-level, and masking controls always apply automatically, delivering fine-grained access compliance. You can also access Amazon Redshift with single sign-on in these new Regions from Amazon QuickSight, Amazon Redshift Query Editor, or third-party SQL tools.\n  To get started with Redshift federated permissions using IdC, read the blog and documentation. To extend IdC support in multiple regions, read IdC documentation, Redshift documentation, Lake Formation documentation, and see the region availability.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/redshift-federated-permissions-idc-mrr/",
+      "pubDate": "2026-03-19T17:13:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "quicksight"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "amazon q",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "quicksight",
+        "ga",
+        "support",
+        "new-region"
+      ]
+    },
+    {
+      "id": "aws-news-4d56386350c5",
+      "title": "Amazon EC2 C8gn instances are now available in additional regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Region Asia Pacific (Jakarta, Hyderabad, Tokyo), South America (Sao Paulo), and Europe (Zurich). The new instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. \n \n \n Take advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference. \n  \n For increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters. \n  \n C8gn instances are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon, N.California), Europe (Frankfurt, Stockholm, Ireland, London, Spain, Zurich), Asia Pacific (Singapore, Malaysia, Sydney, Thailand, Mumbai, Seoul, Melbourne, Jakarta, Hyderabad, Tokyo), Middle East (UAE), Africa (Cape Town), Canada West (Calgary, Central), South America (Sao Paulo), AWS GovCloud (US-East, US-West).\n  \n To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-c8gn-instances-additional-regions/",
+      "pubDate": "2026-03-19T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "graviton",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-aa5595f51398",
+      "title": "Use RAG for video generation using Amazon Bedrock and Amazon Nova Reel",
+      "description": "In this post, we explore our approach to video generation through VRAG, transforming natural language text prompts and images into grounded, high-quality videos. Through this fully automated solution, you can generate realistic, AI-powered video sequences from structured text and image inputs, streamlining the video creation process.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/use-rag-for-video-generation-using-amazon-bedrock-and-amazon-nova-reel/",
+      "pubDate": "2026-03-19T16:45:50.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-64be06359eb3",
+      "title": "Introducing V-RAG: revolutionizing AI-powered video production with Retrieval Augmented Generation",
+      "description": "This post introduces Video Retrieval-Augmented Generation (V-RAG), an approach to help improve video content creation. By combining retrieval augmented generation with advanced video AI models, V-RAG offers an efficient, and reliable solution for generating AI videos.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-v-rag-revolutionizing-ai-powered-video-production-with-retrieval-augmented-generation/",
+      "pubDate": "2026-03-19T16:45:42.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-b555ba2a75e9",
+      "title": "AWS Lambda now supports Availability Zone metadata",
+      "description": "AWS Lambda now provides Availability Zone (AZ) metadata through a new metadata endpoint in the Lambda execution environment. With this capability, developers can determine the AZ ID (e.g., use1-az1) of the AZ their Lambda function is running in, enabling them to build functions that make AZ-aware routing decisions, such as preferring same-AZ endpoints for downstream services to reduce cross-AZ latency. This capability also enables operators to implement AZ-aware resilience patterns like AZ-specific fault injection testing.\n \nLambda automatically provisions and maintains execution environments ready to serve function invocations across multiple AZs within an AWS Region to provide high availability and fault tolerance without any additional configuration or management overhead for customers.  As development teams scale their serverless applications, their functions often need to interact with other AWS services like Amazon ElastiCache and Amazon RDS that provide endpoints specific to each AZ. Until now, Lambda did not provide a way for functions to determine which AZ they were running in. With the new metadata endpoint, functions can now retrieve their AZ ID with a simple HTTP request, making it easy to implement AZ-aware logic without building and maintaining custom solutions.\n \nTo get started, use the Powertools for AWS Lambda metadata utility or call the metadata endpoint directly using the environment variables that Lambda automatically sets in the execution environment. This capability is supported for all Lambda runtimes, including custom runtimes and functions packaged as container images, and integrates seamlessly with Lambda capabilities like SnapStart and provisioned concurrency, regardless of whether your functions are VPC-enabled. \n \nAZ metadata support is available at no additional cost in all commercial AWS Regions where Lambda is available. To learn more, visit Lambda documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/lambda-availability-zone-metadata/",
+      "pubDate": "2026-03-19T16:36:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2df0925d7e14",
+      "title": "Enhanced metrics for Amazon SageMaker AI endpoints: deeper visibility for better performance",
+      "description": "SageMaker AI endpoints now support enhanced metrics with configurable publishing frequency. This launch provides the granular visibility needed to monitor, troubleshoot, and improve your production endpoints.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/enhanced-metrics-for-amazon-sagemaker-ai-endpoints-deeper-visibility-for-better-performance/",
+      "pubDate": "2026-03-19T14:32:11.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ff42bac89ff8",
+      "title": "Enforce data residency with Amazon Quick extensions for Microsoft Teams",
+      "description": "In this post, we will show you how to enforce data residency when deploying Amazon Quick Microsoft Teams extensions across multiple AWS Regions. You will learn how to configure multi-Region Amazon Quick extensions that automatically route users to AWS Region-appropriate resources, helping keep compliance with GDPR and other data sovereignty requirements.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/enforce-data-residency-with-amazon-quick-extensions-for-microsoft-teams/",
+      "pubDate": "2026-03-19T14:20:04.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q"
+      ]
+    },
+    {
+      "id": "aws-news-90c98b4e5353",
+      "title": "20 years in the AWS Cloud – how time flies!",
+      "description": "Celebrating twenty years of innovation in ML and AI technology at AWS. Countless developers—myself included—have embraced cloud computing and actively used its capabilities to accomplish what was previously impossible.",
+      "link": "https://aws.amazon.com/blogs/aws/20-years-in-the-aws-cloud-how-time-flies/",
+      "pubDate": "2026-03-19T13:35:54.000Z",
+      "source": "newsBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
     {
       "id": "aws-news-a60ce8d8a454",
       "title": "Filter catalog assets using custom metadata search filters in Amazon SageMaker Unified Studio",
@@ -298,7 +516,7 @@
     {
       "id": "aws-news-ef34154360fe",
       "title": "Amazon Inspector expands agentless EC2 scanning and introduces Windows KB-based findings",
-      "description": "Amazon Inspector now offers expanded agentless EC2 scanning with enhanced detection coverage, including new support for Windows operating system vulnerability scanning without requiring an agent. Security teams and IT administrators can now detect vulnerabilities across a broader range of software and applications on their EC2 instances — including WordPress, Apache HTTP Server, Python packages, and Ruby gems — as well as Windows OS vulnerabilities, all through agentless scanning. Customers automatically receive findings for newly supported software and applications with no configuration changes required.\n \nAmazon Inspector is also introducing Windows Knowledge Base (KB)-based findings for Windows OS vulnerabilities. Rather than receiving a separate finding for each CVE addressed by a single Microsoft patch, customers now receive a single consolidated KB finding that groups all related CVEs together. Each KB finding surfaces the highest CVSS score, EPSS score, and exploit availability from its constituent CVEs, and includes a direct link to the relevant Microsoft KB article — making it straightforward to understand exactly which patch to apply and why. All existing CVE-based Windows OS findings will automatically transition to KB-based findings. All existing CVE-based Windows OS findings will automatically transition to KB-based findings, and customers do not need to take any additional action.\n \nBoth capabilities are available in all AWS Regions where Amazon Inspector is available. To learn more, visit the Amazon Inspector product page and the Amazon Inspector documentation.",
+      "description": "Amazon Inspector now offers expanded agentless EC2 scanning with enhanced detection coverage, including new support for Windows operating system vulnerability scanning without requiring an agent. Security teams and IT administrators can now detect vulnerabilities across a broader range of software and applications on their EC2 instances — including WordPress, Apache HTTP Server, Python packages, and Ruby gems — as well as Windows OS vulnerabilities, all through agentless scanning. Customers automatically receive findings for newly supported software and applications with no configuration changes required.\n \nAmazon Inspector is also introducing Windows Knowledge Base (KB)-based findings for Windows OS vulnerabilities. Rather than receiving a separate finding for each CVE addressed by a single Microsoft patch, customers now receive a single consolidated KB finding that groups all related CVEs together. Each KB finding surfaces the highest CVSS score, EPSS score, and exploit availability from its constituent CVEs, and includes a direct link to the relevant Microsoft KB article — making it straightforward to understand exactly which patch to apply and why.  All existing CVE-based Windows OS findings will automatically transition to KB-based findings, and customers do not need to take any additional action.\n \nBoth capabilities are available in all AWS Regions where Amazon Inspector is available. To learn more, visit the Amazon Inspector product page and the Amazon Inspector documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-inspector-agentless-ec2-scanning-windows/",
       "pubDate": "2026-03-18T15:44:00.000Z",
       "source": "whatsNew",
@@ -1592,44 +1810,6 @@
       ]
     },
     {
-      "id": "aws-news-00afb6153e7c",
-      "title": "Multimodal embeddings at scale: AI data lake for media and entertainment workloads",
-      "description": "This post shows you how to build a scalable multimodal video search system that enables natural language search across large video datasets using Amazon Nova models and Amazon OpenSearch Service. You will learn how to move beyond manual tagging and keyword-based searches to enable semantic search that captures the full richness of video content.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/multimodal-embeddings-at-scale-ai-data-lake-for-media-and-entertainment-workloads/",
-      "pubDate": "2026-03-12T15:59:35.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "opensearch",
-        "opensearch service"
-      ]
-    },
-    {
-      "id": "aws-news-189cefe1be14",
-      "title": "Fine-tuning NVIDIA Nemotron Speech ASR on Amazon EC2 for domain adaptation",
-      "description": "In this post, we explore how to fine-tune a leaderboard-topping, NVIDIA Nemotron Speech Automatic Speech Recognition (ASR) model; Parakeet TDT 0.6B V2. Using synthetic speech data to achieve superior transcription results for specialised applications, we'll walk through an end-to-end workflow that combines AWS infrastructure with the following popular open-source frameworks.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/fine-tuning-nvidia-nemotron-speech-asr-on-amazon-ec2-for-domain-adaptation/",
-      "pubDate": "2026-03-12T15:57:22.000Z",
-      "source": "mlBlog",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2"
-      ]
-    },
-    {
       "id": "aws-news-d6af34f565ef",
       "title": "Amazon S3 introduces account regional namespaces for general purpose buckets",
       "description": "You can now create Amazon S3 general purpose buckets in your own reserved namespace, eliminating the need to find globally unique bucket names and making it easier to build workloads that utilize a bucket per customer, team, or dataset. With account regional namespaces, you can create predictable bucket names across multiple AWS Regions with assurance that the names you want will always be available for you to use.\n  Account regional namespaces help simplify bucket creation and management as your data storage needs grow in size and scope. To get started, add the new bucket namespace request header when creating buckets through the CreateBucket API or by updating your AWS CloudFormation templates to include your unique account regional suffix in the requested name. Additionally, cloud security teams can use service control policies (SCP) and IAM policies to enforce that users only create buckets in their account regional namespace, helping teams enforce consistent bucket naming practices across their enterprise.\n  Account regional namespaces for S3 general purpose buckets are now available in 37 AWS Regions including the AWS China and AWS GovCloud (US) Regions at no additional cost through the AWS Management Console, S3 REST API, AWS CLI, AWS SDK, and AWS CloudFormation. To learn more, read the AWS News Blog or visit the S3 user guide.",
@@ -1670,24 +1850,6 @@
         "organizations",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-b6847dad2e70",
-      "title": "Operationalizing Agentic AI Part 1: A Stakeholder’s Guide",
-      "description": "The AWS Generative AI Innovation Center has helped 1,000+ customers move AI into production, delivering millions in documented productivity gains. In this post, we share guidance for leaders across the C-suite: CTOs, CISOs, CDOs, and Chief Data Science/AI officers, as well as business owners and compliance leads.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/operationalizing-agentic-ai-part-1-a-stakeholders-guide/",
-      "pubDate": "2026-03-11T20:52:23.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "nova",
-        "ga"
       ]
     },
     {
@@ -2094,27 +2256,6 @@
       ]
     },
     {
-      "id": "aws-news-2973c876df44",
-      "title": "Accelerate custom LLM deployment: Fine-tune with Oumi and deploy to Amazon Bedrock",
-      "description": "In this post, we show how to fine-tune a Llama model using Oumi on Amazon EC2 (with the option to create synthetic data using Oumi), store artifacts in Amazon S3, and deploy to Amazon Bedrock using Custom Model Import for managed inference.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-custom-llm-deployment-fine-tune-with-oumi-and-deploy-to-amazon-bedrock/",
-      "pubDate": "2026-03-10T15:42:16.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "s3",
-        "ec2"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "s3",
-        "ec2"
-      ]
-    },
-    {
       "id": "aws-news-7de5a0fb44f0",
       "title": "Amazon EC2 C8i and C8i-flex instances are now available in Africa (Cape Town) and Asia Pacific (Hyderabad) regions",
       "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i and C8i-flex instances are available in the Africa (Cape Town) and Asia Pacific (Hyderabad) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i and C8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i and C7i-flex instances, with even higher gains for specific workloads. The C8i and C8i-flex are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i-flex are the easiest way to get price performance benefits for a majority of compute intensive workloads like web and application servers, databases, caches, Apache Kafka, Elasticsearch, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i and C8i-flex instances visit the AWS News blog.",
@@ -2154,26 +2295,6 @@
         "ga",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-9fec29b98e7b",
-      "title": "Run NVIDIA Nemotron 3 Nano as a fully managed serverless model on Amazon Bedrock",
-      "description": "We are excited to announce that NVIDIA’s Nemotron 3 Nano is now available as a fully managed and serverless model in Amazon Bedrock. This follows our earlier announcement at AWS re:Invent supporting NVIDIA Nemotron 2 Nano 9B and NVIDIA Nemotron 2 Nano VL 12B models. This post explores the technical characteristics of the NVIDIA Nemotron 3 Nano model and discusses potential application use cases. Additionally, it provides technical guidance to help you get started using this model for your generative AI applications within the Amazon Bedrock environment.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/run-nvidia-nemotron-3-nano-as-a-fully-managed-serverless-model-on-amazon-bedrock/",
-      "pubDate": "2026-03-09T20:48:46.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "now-available",
-        "support",
-        "announcement"
       ]
     },
     {
@@ -2589,126 +2710,6 @@
       ]
     },
     {
-      "id": "aws-news-093b2a7e0640",
-      "title": "Introducing Amazon Connect Health, Agentic AI Built for Healthcare",
-      "description": "Amazon Connect Health is now generally available, bringing purpose-built agentic AI to healthcare organizations to streamline patient engagement and point-of-care workflows. Amazon Connect Health delivers five AI agents designed to reduce administrative burden across the care continuum — enabling patients faster access to care and freeing clinicians from paperwork and administrative burden to focus on what matters most: their patients. These agents are ready to deploy within existing patient, clinician, and healthcare workflows — such as patient access centers (i.e., contact centers), Electronic Health Records (EHR) applications, and telehealth solutions — in days, not months. All the features follow responsible AI best practices, implement safety guardrails, are HIPAA-eligible, and deliver the same security and reliability standards as any AWS service.\n \nAgents available at launch:\n \n \n \nPatient verification (GA) – Confirms patient identity in real time against EHR records with appointment lookup, reducing inbound call-handling time.\n  \n \n \n \nAppointment management (Preview) – Books appointments via natural language voice interaction, 24/7, with real-time insurance eligibility checks, enabling after-hours scheduling, and relieving burden on human staff. \n  \n \n \n \nPatient insights (Preview) – Surfaces relevant patient history and clinical context before the visit, so clinicians walk in prepared. Reduces the time clinicians spend piecing together information before a patient’s visit.\n  \n \n \n \nAmbient documentation (GA) – Captures patient-clinician conversations during the visit and generates clinical notes in real time.\n  \n \n \n \nMedical coding (Preview) – Automatically generates ICD-10 and CPT codes from clinical notes post-visit, with full audit trails.\n  \n \nAmazon Connect Health patient engagement capabilities are natively integrated with Amazon Connect, a complete AI-powered contact center solution delivering personalized customer experiences at scale. Clinical and administrative staff can configure and customize these AI capabilities in minutes using the Amazon Connect Health application, enabling rapid testing and seamless deployment into contact center workflows. The point-of-care capabilities — ambient listening, patient insight, and medical coding — are available via Amazon Connect Health unified SDK (SDK documentation), enabling developers to integrate the features directly into existing EHR and clinician-facing applications. \n \n \n \nAmazon Connect Health is available in US East (N. Virginia) and US West (Oregon). To get started, visit the Amazon Connect Health product page. For technical details, see the Amazon Connect Health documentation",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-health-agentic-ai-healthcare/",
-      "pubDate": "2026-03-05T08:42:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "personalize",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "personalize",
-        "rds",
-        "organizations",
-        "launch",
-        "preview",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-cb9092538bd5",
-      "title": "AWS HealthLake announces data transformation agent for automated CCDA-to-FHIR data conversion (Preview)",
-      "description": "Starting today, healthcare organizations can now transform legacy clinical documents into queryable FHIR resources in AWS HealthLake in days instead of months, unlocking use cases such as longitudinal patient record generation, population health analytics, and clinical data exchange. AWS HealthLake data transformation agent (preview) is an AI-powered capability that converts Consolidated Clinical Document Architecture (CCDA) files into Fast Health Interoperability Resources Release 4 (FHIR R4)-compliant resources without requiring specialized FHIR expertise, through an integrated experience that combines real-time conversion testing, AI-assisted template customization, and scalable bulk import.\n  The data transformation agent includes ready-to-use templates for CCDA 2.1 to FHIR R4 data conversion. Developers can submit individual CCDA files through a synchronous conversion API or console workflow and receive transformed FHIR Bundles in seconds. They can preview results, interactively validate conversion quality, and sign off on templates before production use. An enhanced import workflow automatically detects uploaded CCDA files, applies the active template, matches and reconciles patients based on identifiers, and ingests the resulting FHIR resources into the target AWS HealthLake datastore with detailed logs. All capabilities are available both on the AWS console and programmatically via API for seamless integration into existing workflows.\n  When default templates need adjustment, the data transformation agent offers an AI-powered experience to customize them directly in the console. Users can describe changes such as \"skip medications with status entered-in-error\" or \"map procedure dates to performedDateTime instead of performedPeriod\" in natural language, and the AI agent modifies the underlying template automatically. Manual curation is also available for power users who wish to make targeted template edits. Users can then immediately test against sample files, iterate conversationally, and publish once satisfied.\n  AWS HealthLake is available in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Europe West (London), Europe (Ireland), and Asia Pacific SouthEast (Sydney) Regions. Visit the AWS Region Table to see all the regions.\n  To learn more, see the AWS HealthLake product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-healthlake-data-transformation-agent/",
-      "pubDate": "2026-03-05T08:23:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "healthlake",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "healthlake",
-        "organizations",
-        "preview",
-        "ga",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-c7ee2c906f1f",
-      "title": "Accelerate Lambda durable functions development with new Kiro power",
-      "description": "Today, AWS announces the Lambda durable functions Kiro power, bringing Lambda durable function development expertise to agentic AI development in Kiro. With this power, you can build resilient, long-running multi-step applications and AI workflows faster with AI agent-assisted development directly in your local development environment.\n \nWhen you work with durable functions, the AI agent dynamically loads relevant guidance and development expertise. This includes replay model best practices, step and wait operations, concurrent execution with map and parallel patterns, error handling with retry strategies and compensating transactions, testing patterns, and deployment with AWS CloudFormation, AWS Cloud Development Kit (AWS CDK), and AWS Serverless Application Model (AWS SAM). With this guidance, you can go from idea to a working durable function quickly, whether you are building order processing pipelines, AI agent orchestration with human-in-the-loop approvals, or payment coordination workflows.\n \nThe Lambda durable functions power is available today with one-click installation from the Kiro IDE and the Kiro powers page. Explore the power on GitHub. To get started with Lambda durable functions, see the developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/lambda-durable-kiro-power/",
-      "pubDate": "2026-03-05T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lambda",
-        "cloudformation"
-      ]
-    },
-    {
-      "id": "aws-news-527fcb994bec",
-      "title": "Amazon EC2 M8g instances now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M8g instances are available in Africa (Cape Town), Asia Pacific (Malaysia), Europe (Milan, Zurich), and Canada West (Calgary) regions. These instances are powered by AWS Graviton4 processors and deliver up to 30% better performance compared to AWS Graviton3-based instances. Amazon EC2 M8g instances are built for general-purpose workloads, such as application servers, microservices, gaming servers, midsize data stores, and caching fleets. These instances are built on the AWS Nitro System, which offloads CPU virtualization, storage, and networking functions to dedicated hardware and software to enhance the performance and security of your workloads.\n  AWS Graviton4-based Amazon EC2 instances deliver the best performance and energy efficiency for a broad range of workloads running on Amazon EC2. These instances offer larger instance sizes with up to 3x more vCPUs and memory compared to Graviton3-based Amazon M7g instances. AWS Graviton4 processors are up to 40% faster for databases, 30% faster for web applications, and 45% faster for large Java applications than AWS Graviton3 processors. M8g instances are available in 12 different instance sizes, including two bare metal sizes. They offer up to 50 Gbps enhanced networking bandwidth and up to 40 Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS).\n  To learn more, see Amazon EC2 M8g Instances. To explore how to migrate your workloads to Graviton-based instances, see AWS Graviton Fast Start program and Porting Advisor for Graviton. To get started, see the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8g-instances-africa-cape-town-asia-pacific-malaysia-europe-milan-zurich-canada-west-calgary-regions",
-      "pubDate": "2026-03-04T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "graviton",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-fdf4200e0759",
-      "title": "AWS simplifies IAM role creation and setup in service workflows",
-      "description": "AWS Identity and Access Management (IAM) now makes it easier to create and configure IAM roles directly within service workflows, allowing you to customize role permissions without switching between browser tabs. Now, when you are performing console tasks that involve role configuration, a new panel will appear to set the permissions required.\n  IAM roles enable secure AWS cross-service connections using temporary credentials, eliminating the need for hardcoded access keys. This launch integrates role creation capabilities with custom permissions directly into service workflows, allowing you to configure roles and permissions without navigating to the IAM console. You can use default policies or the simplified statement builder to customize your permissions, streamlining your resource setup while maintaining the full functionality of IAM role management.\n  This feature is available when working with Amazon EC2, AWS Lambda, Amazon EKS, Amazon ECS, AWS Glue, AWS CloudFormation, AWS Database Migration Service, AWS Systems Manager, AWS Secrets Manager, Amazon Relational Database Service, and AWS IoT Core in the US East (N. Virginia) Region. The feature will gradually become available across additional AWS services and regions.\n  To learn more, refer to individual service User Guide or IAM documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-simplifies-iam-role-creation-and-setup/",
-      "pubDate": "2026-03-04T20:50:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudformation",
-        "iam",
-        "glue",
-        "secrets manager"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudformation",
-        "iam",
-        "glue",
-        "secrets manager",
-        "launch",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-795d2ba053c7",
       "title": "How Amplitude implemented natural language-powered analytics using Amazon OpenSearch Service as a vector database",
       "description": "Amplitude is a product and customer journey analytics platform. Our customers wanted to ask deep questions about their product usage. Ask Amplitude is an AI assistant that uses large language models (LLMs). It combines schema search and content search to provide a customized, accurate, low latency, natural language-based visualization experience to end customers. Amplitude’s search architecture evolved to scale, simplify, and cost-optimize for our customers, by implementing semantic search and Retrieval Augmented Generation (RAG) powered by Amazon OpenSearch Service. In this post, we walk you through Amplitude’s iterative architectural journey and explore how we address several critical challenges in building a scalable semantic search and analytics platform.",
@@ -2785,51 +2786,6 @@
         "update",
         "support",
         "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-74ae94cabaf9",
-      "title": "Amazon SageMaker HyperPod now provides comprehensive observability for Restricted Instance Groups",
-      "description": "Amazon SageMaker HyperPod now offers comprehensive observability for Restricted Instance Groups (RIG), enabling teams training foundation models with Nova Forge to gain deep visibility into their compute resources and training workloads. This new capability eliminates the manual effort of collecting and correlating metrics across the infrastructure stack, providing a unified view of GPU performance, system health, network throughput, and Kubernetes cluster state through a pre-configured Amazon Managed Grafana dashboard backed by Amazon Managed Service for Prometheus.\n \nYou can now monitor GPU utilization, NVLink bandwidth, CPU pressure, FSx for Lustre usage, and pod lifecycle from a single Grafana dashboard, with metrics collected across four exporters covering GPU performance, host-level system health, network fabric, and Kubernetes object state. In addition, curated logs are automatically made available in these dashboards, covering epoch progress, step-level training logs, pipeline errors, and Python tracebacks, so you can quickly diagnose training failures. HyperPod Observability for Restricted Instance Group is automatically enabled when you create a new cluster using RIGs, or can be enabled for existing clusters in a few clicks in the HyperPod cluster management console.\n \nAmazon SageMaker HyperPod RIG observability is available in all AWS Regions where SageMaker HyperPod RIG is supported. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-hyperpod-observability-rig/",
-      "pubDate": "2026-03-04T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "rds",
-        "grafana"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "rds",
-        "grafana",
-        "ga",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-6aa68d2e1a8e",
-      "title": "Amazon Lightsail now offers OpenClaw, a private self-hosted AI assistant",
-      "description": "Amazon Lightsail now lets you deploy OpenClaw, a private self-hosted AI assistant, on your own cloud infrastructure in a simple and secure manner.\n  Every Lightsail OpenClaw instance ships with built-in security controls, pre-configured and ready to use. Sandboxing isolates each agent session for improved security posture. One-click HTTPS access puts the OpenClaw dashboard in your browser securely, without requiring manual TLS configuration. Device pairing authentication ensures only your authorized devices can connect to your assistant. Automatic snapshots back up your configuration continuously, so you never lose your setup. Amazon Bedrock serves as the default model provider for Lightsail OpenClaw, and you can swap models or connect to Slack, Telegram, WhatsApp, and Discord as per your requirements.\n  Amazon Lightsail is available in 15 AWS Regions including US East (N. Virginia), US West (Oregon), Europe (Frankfurt), Europe (London), Asia Pacific (Tokyo), and Asia Pacific (Jakarta). To get started, visit the Lightsail console. For pricing and other details, visit the Amazon Lightsail pricing and quick start documentation pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-lightsail-openclaw/",
-      "pubDate": "2026-03-04T17:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -3465,23 +3421,6 @@
       ]
     },
     {
-      "id": "aws-news-4de7cccc6dd0",
-      "title": "AWS Weekly Roundup: Kiro CLI latest features, AWS European Sovereign Cloud, EC2 X8i instances, and more (January 19, 2026)",
-      "description": "At the end of 2025 I was happy to take a long break to enjoy the incredible summers that the southern hemisphere provides. I’m back and writing my first post in 2026 which also happens to be my last post for the AWS News Blog (more on this later). The AWS community is starting the […]",
-      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/",
-      "pubDate": "2026-01-20T00:24:38.000Z",
-      "source": "newsBlog",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "ec2"
-      ]
-    },
-    {
       "id": "aws-news-480e3eb14bac",
       "title": "Simplify network segmentation for AWS Outposts racks with multiple local gateway routing domains",
       "description": "AWS now supports multiple local gateway (LGW) routing domains on AWS Outposts racks to simplify network segmentation. Network segmentation is the practice of splitting a computer network into isolated subnetworks, or network segments. This reduces the attack surface so that if a host on one network segment is compromised, the hosts on the other network segments are not affected. Many customers in regulated industries such as manufacturing, health care and life sciences, banking, and others implement network segmentation as part of their on-premises network security standards to reduce the impact of a breach and help address compliance requirements.",
@@ -4050,24 +3989,6 @@
       "tags": [
         "amazon q",
         "q developer"
-      ]
-    },
-    {
-      "id": "aws-news-27b43a8f9a42",
-      "title": "Deploy to ARM-Based Compute with AWS Deploy Tool for .NET",
-      "description": "We’re excited to announce that the AWS Deploy Tool for .NET now supports deploying .NET applications to select ARM-based compute platforms on AWS! Whether you’re deploying from Visual Studio or using the .NET CLI, you can now target cost-effective ARM infrastructure like AWS Graviton with the same streamlined experience you’re used to. Why deploy to […]",
-      "link": "https://aws.amazon.com/blogs/developer/deploy-to-arm-based-compute-with-aws-deploy-tool-for-net/",
-      "pubDate": "2025-05-08T20:16:40.000Z",
-      "source": "developersAndDevOps",
-      "services": [
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "graviton",
-        "support"
       ]
     }
   ]

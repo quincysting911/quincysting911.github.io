@@ -1,8 +1,27 @@
 {
-  "lastUpdated": "2026-03-19T06:42:53.646Z",
+  "lastUpdated": "2026-03-20T06:39:34.956Z",
   "category": "foundation-models",
-  "totalItems": 9,
+  "totalItems": 7,
   "items": [
+    {
+      "id": "aws-news-aa5595f51398",
+      "title": "Use RAG for video generation using Amazon Bedrock and Amazon Nova Reel",
+      "description": "In this post, we explore our approach to video generation through VRAG, transforming natural language text prompts and images into grounded, high-quality videos. Through this fully automated solution, you can generate realistic, AI-powered video sequences from structured text and image inputs, streamlining the video creation process.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/use-rag-for-video-generation-using-amazon-bedrock-and-amazon-nova-reel/",
+      "pubDate": "2026-03-19T16:45:50.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova"
+      ]
+    },
     {
       "id": "aws-news-13ce8cfd0fca",
       "title": "Minimax M2.5 and GLM 5 models now available on Amazon Bedrock",
@@ -108,27 +127,6 @@
       ]
     },
     {
-      "id": "aws-news-00afb6153e7c",
-      "title": "Multimodal embeddings at scale: AI data lake for media and entertainment workloads",
-      "description": "This post shows you how to build a scalable multimodal video search system that enables natural language search across large video datasets using Amazon Nova models and Amazon OpenSearch Service. You will learn how to move beyond manual tagging and keyword-based searches to enable semantic search that captures the full richness of video content.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/multimodal-embeddings-at-scale-ai-data-lake-for-media-and-entertainment-workloads/",
-      "pubDate": "2026-03-12T15:59:35.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "opensearch",
-        "opensearch service"
-      ]
-    },
-    {
       "id": "aws-news-0694a02b264c",
       "title": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption",
       "description": "Amazon Bedrock is a fully managed service for building generative AI applications using high-performing foundation models from leading AI providers. It now supports two new CloudWatch metrics, TimeToFirstToken and EstimatedTPMQuotaUsage, giving you deeper visibility into inference performance and quota consumption.\n \nTimeToFirstToken measures the latency from when a request is sent to when the first token is received, for streaming APIs (ConverseStream and InvokeModelWithResponseStream). You can use this metric to set CloudWatch alarms which monitor latency degradation and establish SLA baselines, without any client-side instrumentation. EstimatedTPMQuotaUsage tracks your estimated Tokens Per Minute (TPM) quota consumption, including cache write tokens and output burndown multipliers, across all inference APIs (Converse, InvokeModel, ConverseStream, and InvokeModelWithResponseStream). You can use this metric to set proactive alarms before reaching your quota limit, track your quota consumption across your models, and request further quota increases before usage is rate limited.\n \nBoth metrics are supported in all commercial Bedrock regions for models available via cross-region inference profiles and in-region inference, updated every minute for successfully completed requests. These are available in your CloudWatch out of the box; you pay only for the underlying model inference you consume, with no API changes or opt-in required.\n \nTo learn more about TimeToFirstToken and EstimatedTPMQuotaUsage, see our documentation page on Monitoring Amazon Bedrock.",
@@ -147,55 +145,6 @@
         "cloudwatch",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-2973c876df44",
-      "title": "Accelerate custom LLM deployment: Fine-tune with Oumi and deploy to Amazon Bedrock",
-      "description": "In this post, we show how to fine-tune a Llama model using Oumi on Amazon EC2 (with the option to create synthetic data using Oumi), store artifacts in Amazon S3, and deploy to Amazon Bedrock using Custom Model Import for managed inference.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-custom-llm-deployment-fine-tune-with-oumi-and-deploy-to-amazon-bedrock/",
-      "pubDate": "2026-03-10T15:42:16.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "s3",
-        "ec2"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "s3",
-        "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-74ae94cabaf9",
-      "title": "Amazon SageMaker HyperPod now provides comprehensive observability for Restricted Instance Groups",
-      "description": "Amazon SageMaker HyperPod now offers comprehensive observability for Restricted Instance Groups (RIG), enabling teams training foundation models with Nova Forge to gain deep visibility into their compute resources and training workloads. This new capability eliminates the manual effort of collecting and correlating metrics across the infrastructure stack, providing a unified view of GPU performance, system health, network throughput, and Kubernetes cluster state through a pre-configured Amazon Managed Grafana dashboard backed by Amazon Managed Service for Prometheus.\n \nYou can now monitor GPU utilization, NVLink bandwidth, CPU pressure, FSx for Lustre usage, and pod lifecycle from a single Grafana dashboard, with metrics collected across four exporters covering GPU performance, host-level system health, network fabric, and Kubernetes object state. In addition, curated logs are automatically made available in these dashboards, covering epoch progress, step-level training logs, pipeline errors, and Python tracebacks, so you can quickly diagnose training failures. HyperPod Observability for Restricted Instance Group is automatically enabled when you create a new cluster using RIGs, or can be enabled for existing clusters in a few clicks in the HyperPod cluster management console.\n \nAmazon SageMaker HyperPod RIG observability is available in all AWS Regions where SageMaker HyperPod RIG is supported. To learn more, visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-hyperpod-observability-rig/",
-      "pubDate": "2026-03-04T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "rds",
-        "grafana"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "sagemaker",
-        "hyperpod",
-        "rds",
-        "grafana",
-        "ga",
-        "support",
-        "new-capability"
       ]
     }
   ]
