@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T06:39:34.956Z",
+  "lastUpdated": "2026-03-21T06:29:17.417Z",
   "totalItems": 201,
   "sources": {
     "whatsNew": 95,
@@ -11,6 +11,118 @@
     "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-5bbeb43f099c",
+      "title": "Amazon Bedrock AgentCore Runtime adds WebRTC support for real-time bidirectional streaming",
+      "description": "Amazon Bedrock AgentCore Runtime now supports WebRTC for real-time bidirectional streaming between clients and agents, adding to the existing WebSocket protocol support. With WebRTC, developers can build voice agents for browser and mobile applications that stream audio and video bidirectionally with low latency using peer-to-peer, UDP-based transport, enabling natural, real-time conversational experiences.\n \nWebRTC joins WebSocket as the second bidirectional streaming protocol supported by AgentCore Runtime. While WebSocket provides persistent, full-duplex connections for text and audio streaming over TCP, WebRTC is optimized for real-time media delivery where low latency is critical, such as voice agents in browser and mobile applications. WebRTC requires a TURN relay for media traffic, and AgentCore Runtime gives you flexibility in how you set that up: Amazon Kinesis Video Streams managed TURN for a fully managed experience with native AWS IAM integration, a third-party provider, or your own self-hosted TURN infrastructure. Both protocols benefit from AgentCore Runtime session isolation, observability, and scaling.\n \nWebRTC is supported in AgentCore Runtime across fourteen AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n \nTo get started, see Bidirectional streaming in the Amazon Bedrock AgentCore documentation, which includes ready-to-deploy examples for both protocols: an Amazon Nova Sonic voice agent with KVS TURN server, Pipecat voice agents with WebSocket, WebRTC, and Daily transport, a LiveKit voice agent, and a Strands Agents SDK voice agent.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-webrtc/",
+      "pubDate": "2026-03-20T21:54:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "nova",
+        "lex",
+        "iam",
+        "kinesis"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "nova",
+        "lex",
+        "iam",
+        "kinesis",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6649ef619b44",
+      "title": "Amazon EKS announces 99.99% Service Level Agreement and new 8XL scaling tier for Provisioned Control Plane clusters",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now offers a 99.99% Service Level Agreement (SLA) for clusters running on Provisioned Control Plane, up from the 99.95% SLA offered on standard control plane. Amazon EKS is also introducing the 8XL scaling tier, the largest available Provisioned Control Plane tier.\n  Provisioned Control Plane gives you the ability to select your cluster's control plane capacity from a set of well-defined scaling tiers, ensuring the control plane is pre-provisioned and ready to handle traffic spikes or unpredictable bursts. The higher 99.99% SLA is measured in 1-minute intervals, providing a more granular and stringent availability commitment for mission-critical workloads. The new 8XL tier offers double the Kubernetes API server request processing capacity of the next lower 4XL tier, enabling workloads such as ultra-scale AI/ML training, high-performance computing (HPC), and large-scale data processing.\n  Both the 99.99% SLA and the 8XL tier are available today in all AWS regions where Amazon EKS Provisioned Control Plane is offered. To learn more about the SLA, see the Amazon EKS Service Level Agreement. For 8XL pricing and capabilities, see the EKS pricing and EKS Provisioned Control Plane documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-eks-announces-sla-8xl-scaling-tier/",
+      "pubDate": "2026-03-20T20:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-ba1651743d90",
+      "title": "AWS Neuron announces support for Dynamic Resource Allocation with Amazon EKS",
+      "description": "AWS announces the Neuron Dynamic Resource Allocation (DRA) driver for Amazon Elastic Kubernetes Service (EKS), bringing Kubernetes-native hardware-aware scheduling to AWS Trainium-based instances. The Neuron DRA driver publishes rich device attributes directly to the Kubernetes scheduler, enabling topology-aware placement decisions without custom scheduler extensions.\n  Deploying AI workloads on Kubernetes requires ML engineers to make infrastructure decisions that are not directly related to model development, such as determining device counts, understanding hardware and network topologies, and writing accelerator-specific manifests. This creates friction, slows iteration, and tightly couples workloads to underlying infrastructure. As use cases expand to distributed training, long-context inference, and disaggregated architectures, this complexity becomes a scaling bottleneck.\n  The Neuron DRA driver removes this burden by separating infrastructure concerns from ML workflows. Infrastructure teams define reusable ResourceClaimTemplates that capture device topology, allocation, and networking policies. ML engineers can simply reference these templates in their manifests, without needing to reason about hardware details. This enables consistent deployment across workload types while allowing per-workload configuration so multiple workloads can efficiently share the same nodes.\n  The Neuron DRA driver supports all AWS Trainium instance types  and is available in all AWS Regions where AWS Trainium is available.\n \nFor documentation, sample templates, and implementation guides, visit the Neuron DRA documentation.\n \nLearn more:\n  \n \n \nNeuron EKS DRA templates\n \n \nNeuron EKS documentation\n \n \nAmazon EKS documentation",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/neuron-eks-dra-support/",
+      "pubDate": "2026-03-20T18:38:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "trainium",
+        "neuron",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "lex",
+        "trainium",
+        "neuron",
+        "eks",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e6b6fef4da23",
+      "title": "AWS DataSync now supports AWS Secrets Manager for all location types",
+      "description": "AWS DataSync now supports AWS Secrets Manager for credential management across all location types, including Hadoop Distributed File System (HDFS), Amazon FSx for Windows File Server, and Amazon FSx for NetApp ONTAP. Previously, Secrets Manager integration was limited to a subset of location types, requiring you to provide credentials directly through the DataSync API or console.\n \nYou can centralize credential management for all DataSync locations in Secrets Manager, providing a single, consistent approach across all your data transfers. You can also encrypt credentials with your own AWS KMS key instead of the default AWS-owned key, helping you meet your organization's security requirements and governance policies. All secrets are stored in your account, allowing you to update credentials as needed, independent of the DataSync service.\n \nDataSync supports two approaches for credential management. You can provide a secret ARN referencing credentials you manage in Secrets Manager for full control over rotation, auditing, and access policies. Alternatively, DataSync can automatically create and manage secrets on your behalf.\n \nThis capability is available is available in the majority of AWS regions where AWS DataSync is offered. For the full list of supported regions, visit the AWS Capabilities tool in Builder Center. To get started, visit the AWS DataSync console. For more information, see Managing credentials with AWS Secrets Manager in the AWS DataSync documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-datasync-secrets-manager/",
+      "pubDate": "2026-03-20T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "secrets manager"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "secrets manager",
+        "ga",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bd664761ee2d",
+      "title": "AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region",
+      "description": "AWS Firewall Manager announces that it is now available in AWS Asia Pacific (New Zealand) Region. AWS Firewall Manager helps cloud security administrators and site reliability engineers protect applications while reducing the operational overhead of manually configuring and managing rules.\n  Working with AWS Firewall Manager, customers can provide defense in depth policies to address the full range of AWS security services for customers hosting their applications and workloads in AWS Taipei. Customers wishing to establish secured assets using AWS WAF can create and maintain security policies with AWS Firewall Manager.\n  To learn more about how AWS Firewall Manager works, see the AWS Firewall Manager documentation for more details and the AWS Region Table for the list of regions where AWS Firewall Manager is currently available. To learn more about AWS Firewall Manager, its features, and its pricing, visit the AWS Firewall Manager website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-firewall-manager-launches-ap-nz/",
+      "pubDate": "2026-03-20T05:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "waf"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "waf",
+        "launch",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-a507b5661f44",
       "title": "Amazon EC2 Fleet now supports interruptible Capacity Reservations",
@@ -1871,25 +1983,6 @@
       ]
     },
     {
-      "id": "aws-news-7af72380b128",
-      "title": "AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region",
-      "description": "AWS Firewall Manager announces that it is now available in AWS Asia Pacific (New Zealand) Region. AWS Firewall Manager helps cloud security administrators and site reliability engineers protect applications while reducing the operational overhead of manually configuring and managing rules.\n  Working with AWS Firewall Manager, customers can provide defense in depth policies to address the full range of AWS security services for customers hosting their applications and workloads in AWS Taipei. Customers wishing to establish secured assets using AWS WAF can create and maintain security policies with AWS Firewall Manager.\n  To learn more about how AWS Firewall Manager works, see the AWS Firewall Manager documentation for more details and the AWS Region Table for the list of regions where AWS Firewall Manager is currently available. To learn more about AWS Firewall Manager, its features, and its pricing, visit the AWS Firewall Manager website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-firewall-manager-launches-asia-pacific-new-zealand/",
-      "pubDate": "2026-03-11T18:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "waf"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "waf",
-        "launch",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-e8b4d307dbf7",
       "title": "Amazon EC2 C8id instances are now available in Europe (Spain)",
       "description": "Amazon Elastic Compute Cloud (EC2) C8id instances powered by custom Intel Xeon 6 processors feature up to 384 vCPUs, 768GiB of memory, and 22.8TB of NVMe SSD storage and deliver up to 43% higher performance and 3.3x more memory bandwidth compared to previous generation C6id instances. Starting today, C8id instances are available in Europe (Spain) region.\n  These instances deliver up to 46% higher performance for I/O intensive database workloads, and up to 30% faster query results for I/O intensive real-time data analytics than previous sixth-generation instances. Additionally, these instances support Instance Bandwidth Configuration, allowing 25% flexible allocation between network and EBS bandwidth, allocating resources optimally for each workload.\n  C8id instances are ideal for compute-intensive workloads such as high-performance web servers, batch processing, distributed analytics, ad serving, video encoding, and gaming servers.\n  C8id instances are available in US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Spain), and Asia Pacific (Tokyo) regions. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 instance type page.",
@@ -2627,86 +2720,6 @@
         "opensearch service",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f1c3e4bba3a8",
-      "title": "AWS Elastic Beanstalk now offers AI-powered environment analysis",
-      "description": "AWS Elastic Beanstalk now offers AI-powered environment analysis to help you quickly identify root causes and get recommended solutions for environment health issues. When your environment experiences problems, Elastic Beanstalk collects recent events, instance health, and logs from your environment and sends them to Amazon Bedrock for analysis. This feature is designed for developers and operations teams who need to diagnose and resolve environment issues faster without manually reviewing logs and events.\n  You can request an AI analysis directly from the Elastic Beanstalk console using the AI Analysis button when your environment's health status is Warning, Degraded, or Severe. You can also use the AWS CLI with the RequestEnvironmentInfo and RetrieveEnvironmentInfo API operations. The analysis provides step-by-step troubleshooting recommendations tailored to your environment's current state, helping you reduce mean time to resolution.\n \nAI-powered environment analysis is available in all AWS Regions where both AWS Elastic Beanstalk and Amazon Bedrock are available. \n \nFor more information about the AI-powered environment analysis and for a full list of supported platform versions, see the Elastic Beanstalk developer guide. To learn more about Elastic Beanstalk, visit the Elastic Beanstalk product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/elastic-beanstalk-ai-analysis/",
-      "pubDate": "2026-03-05T16:55:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ce4409dd21ca",
-      "title": "AWS Shield network security director findings are now available in AWS Security Hub",
-      "description": "Today, AWS Shield announces findings from network security director, currently in preview, are now available in AWS Security Hub. AWS Shield network security director identifies missing or misconfigured network security services like AWS WAF, VPC security groups, and VPC network access control lists (ACLs) in your AWS Organization and provides remediation recommendations.\n  Network security director findings now also appear in the Inventory section of the Security Hub console. With network security director, you can continuously analyze your network across accounts or organizational units in your AWS Organization, and receive findings highlighting missing or misconfigured network security services per AWS best practices. The severity of each finding is determined based on a combination of the misconfiguration identified and the network topology of the resource the finding is associated with.\n  To learn more, visit the overview page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/network-security-director-findings/",
-      "pubDate": "2026-03-05T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "waf"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "waf",
-        "preview",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-bf90e669c77e",
-      "title": "Amazon EC2 I8ge instances now generally available in Europe (Ireland) AWS region.",
-      "description": "Amazon Web Services (AWS) announces the availability of Amazon EC2 I8ge instances in Europe (Ireland) AWS region. \n \nI8ge instances are powered by AWS Graviton4 processors to deliver up to 60% better compute performance compared to previous generation Graviton2-based storage optimized Amazon EC2 instances. I8ge instances use the latest third generation AWS Nitro SSDs, local NVMe storage that deliver up to 55% better real-time storage performance per TB while offering up to 60% lower storage I/O latency and up to 75% lower storage I/O latency variability compared to previous generation Im4gn instances.\n \nI8ge instances are high-density storage-optimized instances, for workloads that demand rapid local storage with high random read/write performance and consistently low latency for accessing large data sets. These versatile instances are offered in eleven different sizes including 2 metal sizes, providing flexibility to match customers computational needs. They deliver up to 180 Gbps of network performance bandwidth, and 60 Gbps of dedicated bandwidth for Amazon Elastic Block Store (EBS), ensuring fast and efficient data transfer for the most demanding applications.\n \nTo begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs. To learn more, visit the I8ge instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-I8ge-expansion-ireland/",
-      "pubDate": "2026-03-05T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "graviton",
-        "generally-available"
-      ]
-    },
-    {
-      "id": "aws-news-ff026065f739",
-      "title": "Amazon OpenSearch Service introduces capacity optimized blue/green deployments",
-      "description": "Amazon OpenSearch Service now offers a Capacity Optimized option for blue/green deployments, ensuring domain updates can complete even when available instance capacity is less than required. Updates are performed in incremental batches, reducing the number of additional instances needed during the process.\n  Amazon OpenSearch Service uses a blue/green deployment process when updating domains — creating an idle copy of the original environment, applying updates, and routing traffic to the new environment once complete. This minimizes downtime and preserves the original environment as a fallback. Until now, blue/green deployments required 100% instance capacity upfront. For example, for a cluster with 100 data nodes, another 100 nodes were needed to proceed. If sufficient capacity was unavailable, customers had to wait and retry later.\n  Now, customers can choose between two deployment strategies. The default Full Swap option maintains current behavior, requiring full capacity upfront for the fastest deployment. The new Capacity Optimized option attempts a full capacity deployment first, but automatically falls back to batch deployment if capacity is insufficient. OpenSearch Service determines the appropriate batch size based on cluster size and available instances. Because updates are applied in batches, this option may take longer than a full-swap deployment. Customers can select their preferred option in the deployment configuration settings via the OpenSearch Service console or API. We recommend choosing the Capacity Optimized deployment option for clusters with 30 or more nodes.\n  The Capacity Optimized option is available for all OpenSearch and Elasticsearch versions, across all AWS Commercial Regions where OpenSearch Service is available. See here for a full listing of our Regions. To learn more, visit the documentation page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-bg/",
-      "pubDate": "2026-03-05T09:54:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "update"
       ]
     },
     {
