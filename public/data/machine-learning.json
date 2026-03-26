@@ -1,8 +1,52 @@
 {
-  "lastUpdated": "2026-03-25T06:49:00.277Z",
+  "lastUpdated": "2026-03-26T06:54:47.582Z",
   "category": "machine-learning",
   "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-e46f1476cc1b",
+      "title": "AWS Batch now supports quota management and preemption for SageMaker Training jobs",
+      "description": "AWS Batch now supports quota management with job preemption for SageMaker Training jobs, enabling you to efficiently allocate and share compute resources across your teams and projects. If you're using GPU capacity in SageMaker Training jobs, you can now intelligently allocate compute resources, prioritize your business-critical training jobs, and automatically preempt lower-priority workloads when your urgent experiments arrive.\n  With quota management, you can create up to 20 quota shares per job queue that function as virtual queues with dedicated capacity limits and configurable resource sharing strategies. The service automatically uses cross-share preemption to restore borrowed capacity when the original owner submits jobs, and supports in-share preemption to allow high-priority jobs to preempt lower-priority jobs within the same quota share. You can monitor capacity utilization at the queue, quota share, and job-level granularity, update job priorities after submission to influence preemption decisions, and configure preemption retry limits to control behavior. The feature integrates directly with the SageMaker Python SDK via the aws_batch module.\n  Quota management with job preemption for SageMaker Training jobs is available today in all AWS Regions where AWS Batch is available. For more information, see our Quota Management example notebook on GitHub and the AWS Batch User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-quota-management-preemption-sagemaker/",
+      "pubDate": "2026-03-25T18:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ea9e1b1e4ca9",
+      "title": "Amazon SageMaker HyperPod now supports continuous provisioning for Slurm-orchestrated clusters",
+      "description": "Amazon SageMaker HyperPod now extends continuous provisioning support to clusters using the Slurm orchestrator, enabling greater flexibility and efficiency for enterprise customers running large-scale AI/ML training workloads. AI/ML customers running Slurm-based clusters need to start training quickly, scale seamlessly, perform maintenance without disrupting operations, and have granular visibility into cluster operations. Previously, if any instance group could not be fully provisioned, the entire cluster creation or scaling operation failed and rolled back, causing delays and requiring manual intervention.\n  With continuous provisioning for Slurm, SageMaker HyperPod automatically provisions remaining capacity in the background while training jobs can begin immediately on available instances. The system uses priority-based provisioning to bring up the Slurm controller node first, followed by login and worker nodes in parallel, so your cluster reaches an operational state as quickly as possible. HyperPod retries failed node launches asynchronously and adds nodes to the Slurm cluster automatically as they become available, ensuring clusters reliably reach their desired scale without requiring manual intervention. You can now perform concurrent, non-blocking scaling operations across multiple instance groups simultaneously — a capacity shortage in one instance group no longer blocks scaling in others. These capabilities help customers reduce time-to-training, maximize resource utilization, and focus on innovation rather than infrastructure management.\n  This feature is available for new SageMaker HyperPod clusters using the Slurm orchestrator. You can enable continuous provisioning by setting the NodeProvisioningMode parameter to \"Continuous\" when creating new HyperPod clusters using the CreateCluster API. Continuous provisioning can also be enabled when creating new clusters through the AWS CLI and the SageMaker AI console.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more about continuous provisioning for Slurm clusters, see the Amazon SageMaker HyperPod User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-hyperpod-continuous-provisioning/",
+      "pubDate": "2026-03-25T04:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "nova",
+        "sagemaker",
+        "hyperpod",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "nova",
+        "sagemaker",
+        "hyperpod",
+        "lex",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-25f9b0573998",
       "title": "Deploy SageMaker AI inference endpoints with set GPU capacity using training plans",
@@ -25,7 +69,7 @@
       "title": "AWS Neuron announces support for Dynamic Resource Allocation with Amazon EKS",
       "description": "AWS announces the Neuron Dynamic Resource Allocation (DRA) driver for Amazon Elastic Kubernetes Service (EKS), bringing Kubernetes-native hardware-aware scheduling to AWS Trainium-based instances. The Neuron DRA driver publishes rich device attributes directly to the Kubernetes scheduler, enabling topology-aware placement decisions without custom scheduler extensions.\n  Deploying AI workloads on Kubernetes requires ML engineers to make infrastructure decisions that are not directly related to model development, such as determining device counts, understanding hardware and network topologies, and writing accelerator-specific manifests. This creates friction, slows iteration, and tightly couples workloads to underlying infrastructure. As use cases expand to distributed training, long-context inference, and disaggregated architectures, this complexity becomes a scaling bottleneck.\n  The Neuron DRA driver removes this burden by separating infrastructure concerns from ML workflows. Infrastructure teams define reusable ResourceClaimTemplates that capture device topology, allocation, and networking policies. ML engineers can simply reference these templates in their manifests, without needing to reason about hardware details. This enables consistent deployment across workload types while allowing per-workload configuration so multiple workloads can efficiently share the same nodes.\n  The Neuron DRA driver supports all AWS Trainium instance types  and is available in all AWS Regions where AWS Trainium is available.\n \nFor documentation, sample templates, and implementation guides, visit the Neuron DRA documentation.\n \nLearn more:\n  \n \n \nNeuron EKS DRA templates\n \n \nNeuron EKS documentation\n \n \nAmazon EKS documentation",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/neuron-eks-dra-support/",
-      "pubDate": "2026-03-20T18:38:00.000Z",
+      "pubDate": "2026-03-20T22:53:00.000Z",
       "source": "whatsNew",
       "services": [
         "lex",
@@ -145,59 +189,6 @@
       "tags": [
         "sagemaker",
         "eks"
-      ]
-    },
-    {
-      "id": "aws-news-1855721547df",
-      "title": "Introducing Disaggregated Inference on AWS powered by llm-d",
-      "description": "In this blog post, we introduce the concepts behind next-generation inference capabilities, including disaggregated serving, intelligent request scheduling, and expert parallelism. We discuss their benefits and walk through how you can implement them on Amazon SageMaker HyperPod EKS to achieve significant improvements in inference performance, resource utilization, and operational efficiency.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-disaggregated-inference-on-aws-powered-by-llm-d/",
-      "pubDate": "2026-03-16T16:55:53.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "ga",
-        "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-cc41d03fc8e8",
-      "title": "Amazon SageMaker Unified Studio now supports faster data preview in Visual ETL",
-      "description": "Amazon SageMaker Unified Studio introduces data preview v2.0 for Visual ETL, a new data preview mode that delivers near-instant results when building and iterating on visual ETL jobs. With data preview v2.0, data engineers and analysts can see the output of each transform in about one second, with no session startup required and at no additional compute cost.\n \nData preview v2.0 uses an in-browser query engine to load and process data locally, removing the dependency on server-side Spark sessions for preview operations. Source data is fetched once and cached in the browser, so subsequent transforms apply instantly without re-querying the underlying data source. For Amazon Redshift users, this means you can iterate on transforms without additional queries against your Redshift cluster, keeping your preview workflow fast and your cluster resources focused on production workloads. Data preview v2.0 supports CSV, Parquet, and JSON files from Amazon S3, in addition to data from Amazon Redshift, Amazon S3 Tables, AWS Glue Data Catalog, and third-party sources including Snowflake, MySQL, PostgreSQL, SQL Server, Oracle, Google BigQuery, Amazon DynamoDB, and Amazon DocumentDB. A toggle in the Visual ETL editor gives you the option to switch between data preview v2.0 and the original Spark-based preview at any time.\n \nData preview v2.0 in Visual ETL is available in all AWS Regions where Amazon SageMaker Unified Studio is supported. To learn more, visit the Amazon SageMaker Unified Studio documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-unified-studio-faster-data-preview/",
-      "pubDate": "2026-03-09T18:55:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "redshift",
-        "dynamodb",
-        "glue"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "redshift",
-        "dynamodb",
-        "glue",
-        "preview",
-        "ga",
-        "support"
       ]
     },
     {
