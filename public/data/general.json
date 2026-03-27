@@ -1,8 +1,117 @@
 {
-  "lastUpdated": "2026-03-26T06:54:47.582Z",
+  "lastUpdated": "2026-03-27T06:54:50.624Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-f6e9d63b9dbc",
+      "title": "Amazon EC2 High Memory U7i instances now available in Europe (Milan)",
+      "description": "Amazon EC2 High Memory U7i-8TB instances (u7i-8tb.112xlarge) and U7i-12TB instances (u7i-12tb.224xlarge) are now available in AWS Europe (Milan). U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-8tb instances offer 8TiB of DDR5 memory, and U7i-12tb instances offer 12TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7i-8tb instances deliver 448 vCPUs; U7i-12tb instances deliver 896 vCPUs. Both instances support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 100 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/ec2-u7i-europe-milan/",
+      "pubDate": "2026-03-26T22:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e94e168a15aa",
+      "title": "Amazon ECS Managed Instances now supports FIPS-certified workloads on Graviton and GPU accelerated instances in AWS GovCloud (US) Regions",
+      "description": "Starting today, customers can deploy their Graviton-based and GPU-accelerated workloads on Amazon Elastic Container Service (Amazon ECS) Managed Instances in a Federal Information Processing Standard (FIPS) compliant mode in the AWS GovCloud (US) Regions. FIPS is a U.S. and Canadian government standard that specifies the security requirements for cryptographic modules that protect sensitive information.\n \nIn the AWS GovCloud (US) Regions, Amazon ECS Managed Instances automatically enable FIPS compliance by default. ECS Managed Instances communicate through FIPS-compliant endpoints, use appropriately configured cryptographic modules, and boot the underlying kernel in FIPS mode. Customers with federal compliance requirements can run workloads with FIPS-validated cryptographic modules across a broad range of instance types, including Graviton-based, GPU-accelerated, network-optimized, and burstable performance instances.\n \nTo learn more about FIPS, refer to FIPS on AWS and AWS Fargate Federal Information Processing Standard (FIPS-140). To get started with ECS Managed Instances, use the AWS Console, Amazon ECS MCP Server, ECS Express Mode, or your favorite infrastructure-as-code tooling to enable it in a new or existing Amazon ECS cluster. You will be charged for the management of compute provisioned, in addition to your regular Amazon EC2 costs. To learn more about ECS Managed Instances, visit the feature page, documentation, and AWS News launch blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ecs-mi-supports-fips-graviron-gpu/",
+      "pubDate": "2026-03-26T19:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs",
+        "fargate",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "fargate",
+        "graviton",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7bab82cf391f",
+      "title": "AWS Lambda increases the file descriptor limit to 4,096 for functions running on Lambda Managed Instances",
+      "description": "AWS Lambda increases the file descriptor limit from 1,024 to 4,096, a 4x increase, for functions running on Lambda Managed Instances (LMI). This capability enables customers to run I/O intensive workloads such as high-concurrency web services, and file-heavy data processing pipelines, without running into file descriptor limits. LMI enables you to run Lambda functions on managed Amazon EC2 instances with built-in routing, load-balancing, and auto-scaling, giving you access to specialized compute configurations including the latest-generation processors and high-bandwidth networking, with no operational overhead.\n  Customers use Lambda functions to build a wide range of serverless applications such as event-driven workloads, web applications, and AI-driven workflows. These applications rely on file descriptors for operations such as opening files, establishing network socket connections to external services and databases, and managing concurrent I/O streams for data processing. Each open file, network socket, or internal resource consumes one file descriptor. Today, Lambda supports a maximum of 1,024 file descriptors. However, LMI allows multiple requests to be processed simultaneously, which often requires higher number of file descriptors. With this launch, AWS Lambda is increasing the file descriptor limit to 4,096, allowing customers to run I/O intensive workloads, maintain larger connection pools, and effectively utilize multi-concurrency for functions running on LMI.\n  This feature is available in all AWS Regions where AWS Lambda Managed Instances is generally available. To get started, visit the AWS Lambda Managed Instances documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-Lambda-file-descriptors-increase-4096/",
+      "pubDate": "2026-03-26T16:15:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "launch",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a27e83c4f60c",
+      "title": "Amazon EC2 M8a instances now available in AWS Europe (Ireland) region",
+      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Europe (Ireland) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements. \n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-europe-ireland-region/",
+      "pubDate": "2026-03-26T15:00:12.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-fbd1decbbf02",
+      "title": "Amazon EC2 M8a instances now available in AWS GovCloud (US-West) region",
+      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS GovCloud (US-West) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements. \n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-govcloud-us-west-region/",
+      "pubDate": "2026-03-26T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "ga",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-bd664761ee2d",
       "title": "AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region",
@@ -90,6 +199,42 @@
         "rds",
         "now-available",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-0fa6b67e7f1d",
+      "title": "AWS ParallelCluster 3.15 with support for P6-B300 and Slurm 25.11",
+      "description": "AWS ParallelCluster 3.15 is now generally available. This release adds support for P6-B300 instance types and upgrades Slurm to version 25.11 with expedited job requeue.\n  With P6-B300 support, you can run demanding AI/ML and high-performance computing workloads on the latest NVIDIA Blackwell GPU infrastructure. This release includes improved EFA network configuration defaults and support for network interface customization. To learn how to customize network interfaces, see Customize compute node network interfaces with launch template overrides. Other improvements include more reliable cluster updates, improved performance for tightly-coupled workloads in large clusters, and support for updating cluster tags without disruption. For more details, review the AWS ParallelCluster 3.15.0 release notes.\n  AWS ParallelCluster is an open-source cluster management tool that makes it possible for R&D customers and IT administrators to operate high-performance computing (HPC) clusters on AWS. ParallelCluster is designed to automatically and securely provision cloud resources into elastically-scaling HPC clusters capable of running scientific and engineering workloads at scale on AWS. ParallelCluster is available at no additional charge in the AWS Regions listed here, and you pay only for the AWS resources needed to run your applications.\n  To learn more about launching HPC clusters on AWS, visit the ParallelCluster User Guide. To start using ParallelCluster, see the installation instructions for ParallelCluster UI and CLI.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-parallelcluster-p6-b300-slurm/",
+      "pubDate": "2026-03-25T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "generally-available",
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8161179fd525",
+      "title": "AWS HealthOmics introduces batch run operations",
+      "description": "AWS HealthOmics announces batch run submission, allowing customers to submit up to 100,000 runs of any given workflow in a single request. With this launch, customers can now submit large-scale genomics experiments with thousands of samples without the overhead of submitting and tracking individual runs one by one, reducing overhead and simplifying orchestration. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs with fully managed bioinformatics workflows.\n \nBatch run submission enables customers to initiate multiple workflow runs with similar parameters simultaneously. All runs in a batch share a common configuration, with the option to override specific parameters for individual runs based on different sample inputs or parameter values. The batch run APIs provide full lifecycle management of batch processing workflows. Customers can use the new batch ID resource to track each submission, easily cancel or delete in bulk, and monitor batch progress. Batch resources enable customers to troubleshoot issues and maintain optimal resource utilization across large-scale automation pipelines.\n \nBatch run operations are now available in all regions where AWS HealthOmics is available: US East (N. Virginia), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), Asia Pacific (Singapore), and Asia Pacific (Seoul). To get started with run batches in HealthOmics workflows, see the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-healthomics-introduces-batch-run/",
+      "pubDate": "2026-03-24T04:17:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "now-available"
       ]
     },
     {
@@ -439,83 +584,6 @@
         "update",
         "enhancement",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-758ecf6f9de5",
-      "title": "Amazon Neptune Database is now available in Asia Pacific (Hyderabad) region",
-      "description": "Amazon Neptune Database is now available in the AWS Asia Pacific (Hyderabad) region. You can now create Neptune clusters using R5, R5d, R6g, R6i, X2iedn, T4g, and T3 instance types in the AWS Asia Pacific (Hyderabad) region.\n \nAmazon Neptune Database is a fast, reliable, and fully managed graph database as a service that makes it easy to build and run applications work with highly connected datasets. You can build applications using Apache TinkerPop Gremlin or openCypher on the Property Graph model, or using the SPARQL query language on W3C Resource Description Framework (RDF). Neptune also offers enterprise features such as high availability, automated backups, and network isolation to help customers quickly deploy applications to production. \n  To get started, you can create a new Neptune cluster using the AWS Management Console, AWS CLI, or a quickstart AWS CloudFormation template. For more information on pricing and region availability, refer to the Neptune pricing page and AWS Region Table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-neptune-hyderabad/",
-      "pubDate": "2026-03-11T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-c35d10130a50",
-      "title": "Amazon CloudWatch Database Insights on-demand analysis now available in AWS Govcloud (US) Regions",
-      "description": "Amazon CloudWatch Database Insights expands the availability of its on-demand analysis experience to AWS GovCloud (US-East) and AWS GovCloud (US-West). CloudWatch Database Insights is a monitoring and diagnostics solution that helps database administrators and developers optimize database performance by providing comprehensive visibility into database metrics, query analysis, and resource utilization patterns. This feature uses machine learning models to help identify performance bottlenecks during the selected time period, and gives advice on what to do next.\n  Previously, database administrators had to manually analyze performance data, correlate metrics, and investigate root cause. This process is time-consuming and requires deep database expertise. With this launch, you can now analyze database performance monitoring data for any time period with automated intelligence. The feature automatically compares your selected time period against normal baseline performance, identifies anomalies, and provides specific remediation advice. Through intuitive visualizations and clear explanations, you can quickly identify performance issues and receive step-by-step guidance for resolution. This automated analysis and recommendation system reduces mean-time-to-diagnosis from hours to minutes.\n  You can get started with this feature by enabling the Advanced mode of CloudWatch Database Insights on your Amazon Aurora and Amazon RDS databases using the RDS service console, AWS APIs, the AWS SDK, or AWS CloudFormation. Please refer to Aurora documentation or RDS documentation to get started.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-database-insights-on-demand-analysis-in-govcloud/",
-      "pubDate": "2026-03-11T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudformation",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudformation",
-        "cloudwatch",
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-39884baccade",
-      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
-      "description": "Amazon EC2 High Memory U7i instances with 8TB of memory (u7i-8tb.112xlarge) are now available in AWS Asia Pacific (Hyderabad), and U7i instances with 12TB of memory (u7i-12tb.224xlarge) are now available in AWS Europe (Spain). U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-8tb instances offer 8TiB of DDR5 memory, U7i-12tb instances offer 12TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7i-8tb instances offer 448 vCPUs and U7i-12tb instances offer 896 vCPUs. Both instance types support up to 100 Gbps of Amazon Elastic Block Store (Amazon EBS) bandwidth for faster data loading and backups, up to 100 Gbps of network bandwidth, and ENA Express. \n \nU7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \n\n To learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-high-memory-u7i-instances/",
-      "pubDate": "2026-03-11T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-010792321eba",
-      "title": "Amazon Connect now lets you select different From email addresses when sending emails",
-      "description": "Amazon Connect now enables you to choose the \"From\" email address when replying to inbound emails or sending new outbound messages, helping contact centers ensure the correct brand or business identity is used for every customer interaction. Administrators can configure multiple sender addresses per queue, allowing agents to search and select the appropriate email address based on the queue they are working in. This capability is especially useful for contact centers that support multiple brands or lines of business from a single Amazon Connect instance.\n  Amazon Connect email is available in the US East (N. Virginia), US West (Oregon), Africa (Cape Town), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) regions. To learn more and get started, please refer to the help documentation or visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-agents-select-from-email/",
-      "pubDate": "2026-03-11T15:45:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
         "support"
       ]
     },
