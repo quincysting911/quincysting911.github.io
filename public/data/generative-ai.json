@@ -1,8 +1,239 @@
 {
-  "lastUpdated": "2026-03-31T06:59:42.181Z",
+  "lastUpdated": "2026-04-01T07:06:49.586Z",
   "category": "generative-ai",
-  "totalItems": 44,
+  "totalItems": 39,
   "items": [
+    {
+      "id": "aws-news-5d7682c406b2",
+      "title": "Amazon CloudWatch now supports ingesting Security Hub CSPM findings with organization-wide enablement",
+      "description": "Amazon CloudWatch now supports ingesting AWS Security Hub CSPM findings, enabling customers to centrally analyze and monitor security findings directly in CloudWatch Logs. Security Hub CSPM findings are supported in AWS Security Finding Format (ASFF) and Open Cybersecurity Schema Framework (OCSF) format using CloudWatch Pipelines, providing standardized security data ingestion. Customers can now use CloudWatch Logs Insights to query findings, create metric filters for monitoring, and leverage Amazon S3 Tables integration for advanced analytics, helping security teams identify and respond to threats faster across their AWS environment.\n \nWith today's launch, customers can automatically enable Security Hub findings delivery to CloudWatch Logs using CloudWatch enablement rules that apply to the entire organization or specific accounts, to standardize security monitoring coverage. For example, a security team can create an enablement rule to automatically send Security Hub findings to CloudWatch Logs for all production accounts, ensuring consistent visibility into security posture.\n \nSecurity Hub findings to CloudWatch logs are available in all AWS commercial regions.\n \nSecurity Hub findings are charged as tiered pricing when delivered to CloudWatch Logs. For pricing information, see the CloudWatch pricing page. To learn more about Security Hub findings in CloudWatch Logs and organization-level enablement, visit the Amazon CloudWatch documentation..",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-securityhub-findings/",
+      "pubDate": "2026-03-31T23:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b42d40878b00",
+      "title": "Build reliable AI agents with Amazon Bedrock AgentCore Evaluations",
+      "description": "In this post, we introduce Amazon Bedrock AgentCore Evaluations, a fully managed service for assessing AI agent performance across the development lifecycle. We walk through how the service measures agent accuracy across multiple quality dimensions. We explain the two evaluation approaches for development and production and share practical guidance for building agents you can deploy with confidence.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-reliable-ai-agents-with-amazon-bedrock-agentcore-evaluations/",
+      "pubDate": "2026-03-31T22:11:23.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-3b6f3140dfe5",
+      "title": "Build a FinOps agent using Amazon Bedrock AgentCore",
+      "description": "In this post, you learn how to build a FinOps agent using Amazon Bedrock AgentCore that helps your finance team manage AWS costs across multiple accounts. This conversational agent consolidates data from AWS Cost Explorer, AWS Budgets, and AWS Compute Optimizer into a single interface, so your team can ask questions like \"What are my top cost drivers this month?\" and receive immediate answers.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-finops-agent-using-amazon-bedrock-agentcore/",
+      "pubDate": "2026-03-31T17:57:16.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-b2b43a22e348",
+      "title": "Amazon S3 Vectors expands to 17 additional AWS Regions",
+      "description": "Amazon S3 Vectors is now available in 17 additional AWS Regions: Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Asia Pacific (New Zealand), Asia Pacific (Osaka), Asia Pacific (Taipei), Asia Pacific (Thailand), Canada West (Calgary), Europe (Milan), Europe (Spain), Europe (Zurich), Mexico (Central), South America (Sao Paulo), and US West (N. California).\n \nAmazon S3 Vectors is the first cloud object storage with native support for storing and querying vectors. It delivers purpose-built, cost-optimized vector storage for AI agents, inference, Retrieval Augmented Generation (RAG), and semantic search at billion-vector scale. S3 Vectors is designed to provide the same elasticity, durability, and availability as Amazon S3. With a dedicated set of APIs, you can store and query up to two billion vectors per vector index and elastically scale to 10,000 vector indexes per vector bucket without provisioning any infrastructure. Infrequent queries return results in under one second, with frequent queries resulting in latencies as low as 100 milliseconds. S3 Vectors is natively integrated with Amazon Bedrock Knowledge Bases so you can reduce the cost of using large vector datasets for RAG.\n \nWith this expansion, S3 Vectors is now available in 31 AWS Regions. For pricing details, visit the S3 pricing page. To learn more, visit the product page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/s3-vectors-expands-17-regions/",
+      "pubDate": "2026-03-31T17:28:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "s3 vectors",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "s3 vectors",
+        "s3",
+        "ga",
+        "now-available",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-946864bd13c2",
+      "title": "Amazon ECS Managed Instances now supports Amazon EC2 instance store",
+      "description": "Amazon ECS Managed Instances now supports Amazon EC2 instance store volumes as a data volume option for container workloads. You can now leverage instance store volumes on your ECS container instances instead of provisioning an Amazon EBS data volume, reducing storage costs and accelerating I/O performance for latency-sensitive workloads.\n  Amazon ECS Managed Instances is a fully managed compute option designed to eliminate infrastructure management overhead, dynamically scale EC2 instances to match your workload requirements, and continuously optimize task placement to reduce infrastructure costs. With today’s launch, you can enable local storage by configuring a custom ECS Managed Instances capacity provider and selecting the desired Amazon EC2 instance types that include instance store volumes. When an instance lacks instance store volumes or when local storage is disabled, Amazon ECS automatically provisions an Amazon EBS data volume.\n  Support for instance store is available in all commercial AWS Regions where Amazon ECS Managed Instances is available. To learn more about local storage support, visit the documentation. To learn more about Amazon ECS Managed Instances, visit the feature page, documentation, and AWS News launch blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ecs-mi-local-storage/",
+      "pubDate": "2026-03-31T16:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bb588826843b",
+      "title": "Amazon Bedrock AgentCore Evaluations is now generally available",
+      "description": "Amazon Bedrock AgentCore Evaluations is now generally available, providing automated quality assessment for AI agents. Evaluations enables developers to monitor agent quality through continuous evaluation of production traffic, validate changes through testing workflows, and measure agent performance against defined expectations. AgentCore Evaluations offers two evaluation types. Online evaluation continuously monitors agent performance in production by sampling and scoring live traces. On-demand evaluation enables teams to test agents programmatically, supporting regression testing in CI/CD pipelines and interactive development workflows.\n  Teams can evaluate agents using 13 built-in evaluators for response quality, safety, task completion, and tool usage. Developers can also use Ground Truth to measure agent performance against expectations, including reference answers for response validation, behavioral assertions for session-level goals, and expected tool execution sequences. For domain-specific requirements, teams can configure custom evaluators using their choice of prompts and model for LLM-based evaluation, or implement custom logic in Python or JavaScript through Lambda-hosted functions for code-based evaluation. Evaluations integrates with AgentCore Observability for unified monitoring and real-time alerts.\n  AgentCore Evaluations is available in nine AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland).\n Learn more about Amazon Bedrock AgentCore Evaluations through the documentation, and get started with the AgentCore Starter Toolkit",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-evaluations-generally-available/",
+      "pubDate": "2026-03-31T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lambda"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lambda",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-5b0c8a355b09",
+      "title": "AWS End User Messaging now supports RCS for Business",
+      "description": "Today, AWS End User Messaging announces support for Rich Communication Services (RCS) for Business. Traditional SMS arrives from a generic phone number that customers may not recognize, making it harder for businesses to build trust. RCS solves this by delivering messages through the same messaging app your customers already use, with a verified business identity that displays your name and logo. AWS End User Messaging provides a scalable, cost-effective way to integrate RCS into your applications. Beyond common use cases like one-time passcodes, appointment reminders, and delivery notifications, RCS enables rich conversational experiences that can transform how customers interact with your brand.\n \nWith RCS for Business, you can create and manage RCS agents (the resources used for RCS messaging) directly in the AWS End User Messaging console or through APIs. RCS includes automated SMS fallback, ensuring messages are delivered as SMS when a recipient's device doesn't support RCS with no additional logic required in your application.\n \nRCS integrates with AWS services the same way SMS does today. Events route to Amazon EventBridge, Amazon CloudWatch, or Amazon Data Firehose, and inbound messages are delivered via Amazon SNS to destinations like AWS Lambda or AI agents powered by Amazon Bedrock. This enables you to build bidirectional, AI-powered conversational experiences directly in your applications, transforming text messaging from a notification channel into an interactive experience.\n \nRCS for Business is available in all AWS Regions where AWS End User Messaging is available.\n \nTo learn more, visit the AWS End User Messaging RCS User Guide. To get started, see the RCS quickstart guide to send and receive your first RCS test message in 5 minutes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/rcs-business-messaging/",
+      "pubDate": "2026-03-31T15:57:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "lambda",
+        "eventbridge",
+        "sns",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "lambda",
+        "eventbridge",
+        "sns",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c190c2b851f7",
+      "title": "Can your governance keep pace with your AI ambitions? AI risk intelligence in the agentic era",
+      "description": "Traditional frameworks designed for static deployments cannot address the dynamic interactions that define agentic workloads. AI Risk Intelligence (AIRI), from AWS Generative AI Innovation Center, provides the automated rigor required to govern agents at enterprise scale—a fundamental reimagining of how security, operations, and governance work together systemically.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/can-your-governance-keep-pace-with-your-ai-ambitions-ai-risk-intelligence-in-the-agentic-era/",
+      "pubDate": "2026-03-31T15:36:17.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-46da7118b08e",
+      "title": "AWS Security Agent on-demand penetration testing is now generally available",
+      "description": "Today, AWS announced the general availability of AWS Security Agent for on-demand penetration testing in six AWS Regions. AWS Security Agent delivers autonomous penetration testing that operates 24/7 at a fraction of the cost than manual penetration tests. This milestone transforms penetration testing from a periodic bottleneck into an on-demand capability that scales with your development velocity across AWS, Azure, GCP, other cloud-providers, and on-premises. With multicloud support, AWS Security Agent allows you to consolidate penetration testing across your entire infrastructure. \n \nPreviewed at re:Invent 2025, AWS Security Agent represents a new class of frontier agents that are autonomous systems that work independently to achieve goals, scale to tackle concurrent tasks, and run persistently without constant human oversight. It deploys specialized AI agents to help discover, validate, and report security vulnerabilities through sophisticated multi-step attack scenarios customized for each application. It provides detailed findings with CVSS risk scores, application-specific severity ratings, reproduction steps, and remediation suggestions. \n \nAWS Security Agent is now available in US East (N. Virginia), US West (Oregon), Europe (Ireland), Europe (Frankfurt), Asia Pacific (Sydney), and Asia Pacific (Tokyo) regions. \n \nNew customers can explore AWS Security Agent with a 2-month free trial. For pricing and feature details, visit the AWS Security Agent pricing page. To learn more about AWS Security Agent, visit the product page and read the launch announcement. For technical details and to get started, see the AWS Security Agent documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-security-agent-ondemand-penetration/",
+      "pubDate": "2026-03-31T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "launch",
+        "preview",
+        "generally-available",
+        "now-available",
+        "support",
+        "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-ba083c8f235d",
+      "title": "Amazon Location Service now supports GrabMaps with enhanced APIs for Southeast Asia",
+      "description": "Amazon Location Service now supports GrabMaps with simplified APIs that eliminate upfront resource creation, making it faster to build maps, places, and routing applications with high-quality Southeast Asian data. GrabMaps provides detailed, region-specific mapping data built for Southeast Asia's unique geography, road networks, and local navigation patterns. The data is continuously refreshed using Grab's extensive regional operations to maintain current coverage of road conditions, address changes, and points of interest.\n  The new APIs follow industry-standard patterns that let you make calls without creating resources upfront, reducing setup friction and accelerating time to integration. Whether you are building delivery logistics, ride-hailing, or consumer applications, GrabMaps provides trusted local data for Southeast Asian customers.\n  GrabMaps-powered location services are available in the Asia Pacific (Singapore) (ap-southeast-1) and Asia Pacific (Malaysia) (ap-southeast-5) regions. GrabMaps provides geospatial data coverage across eight Southeast Asian countries: Malaysia, Philippines, Thailand, Singapore, Vietnam, Indonesia, Myanmar, and Cambodia.\n \nLearn more about GrabMaps for Amazon Location Service.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-location-service-grabmaps/",
+      "pubDate": "2026-03-31T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-5712b2d48635",
+      "title": "Amazon S3 Express One Zone now supports request metrics in Amazon CloudWatch",
+      "description": "Amazon S3 Express One Zone, a high performance S3 storage class for latency-sensitive applications, now supports request metrics in Amazon CloudWatch. You can use request metrics to track performance and monitor the operational health of applications that use S3 Express One Zone.\n \nIn addition to existing storage metrics, you can now use request metrics to monitor request counts, data transfer volumes, error rates, and latency measurements at minute-level granularity. These request metrics are available through the CloudWatch console, S3 console, S3 API, and AWS CLI. \n \nCloudWatch request metrics for S3 Express One Zone are available in all AWS Regions where the storage class is available. For pricing information, visit the CloudWatch pricing page. To learn more, visit the S3 Express One Zone overview page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/s3-express-one-zone-cloudwatch-request-metrics/",
+      "pubDate": "2026-03-31T06:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "cloudwatch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c65dc08963a7",
       "title": "Amazon CloudWatch now supports multi-account and region log centralization based on data source",
@@ -387,28 +618,6 @@
       ]
     },
     {
-      "id": "aws-news-00b6edafeb6b",
-      "title": "Integrating Amazon Bedrock AgentCore with Slack",
-      "description": "In this post, we demonstrate how to build a Slack integration using AWS Cloud Development Kit (AWS CDK). You will learn how to deploy the infrastructure with three specialized AWS Lambda functions, configure event subscriptions properly to handle Slack's security requirements, and implement conversation management patterns that work for many agent use cases.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/integrating-amazon-bedrock-agentcore-with-slack/",
-      "pubDate": "2026-03-23T16:38:56.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "lambda"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "lambda",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-c8d9aaaf4f68",
       "title": "AWS adds support for NIXL with EFA to accelerate LLM inference at scale",
       "description": "AWS announces support for NVIDIA Inference Xfer Library (NIXL) with Elastic Fabric Adapter (EFA) to accelerate disaggregated large language model (LLM) inference on Amazon EC2. This integration enhances disaggregated inference serving through three key improvements: increased KV-cache throughput, reduced inter-token latency, and optimized KV-cache memory utilization.\n  NIXL with EFA enables high throughput, low-latency KV-cache transfer between prefill and decode nodes, and it enables efficient KV-cache movement between various storage layers. NIXL is interoperable with all EFA-enabled EC2 instances and integrates natively with frameworks including NVIDIA Dynamo, SGLang, and vLLM. Combined, NIXL with EFA enables flexible integration with your EC2 instance and framework of choice, providing performant disaggregated inference at scale.\n  AWS supports NIXL version 1.0.0 or higher with EFA installer version 1.47.0 or higher on all EFA-enabled EC2 instance types in all AWS regions at no additional cost. For more information, visit the EFA documentation.",
@@ -429,287 +638,6 @@
         "improvement",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-300c69598a6f",
-      "title": "Run NVIDIA Nemotron 3 Super on Amazon Bedrock",
-      "description": "This post explores the technical characteristics of the Nemotron 3 Super model and discusses potential application use cases. It also provides technical guidance to get started using this model for your generative AI applications within the Amazon Bedrock environment.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/run-nvidia-nemotron-3-super-on-amazon-bedrock/",
-      "pubDate": "2026-03-19T17:25:44.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-64be06359eb3",
-      "title": "Introducing V-RAG: revolutionizing AI-powered video production with Retrieval Augmented Generation",
-      "description": "This post introduces Video Retrieval-Augmented Generation (V-RAG), an approach to help improve video content creation. By combining retrieval augmented generation with advanced video AI models, V-RAG offers an efficient, and reliable solution for generating AI videos.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-v-rag-revolutionizing-ai-powered-video-production-with-retrieval-augmented-generation/",
-      "pubDate": "2026-03-19T16:45:42.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-ff10f2f7d44e",
-      "title": "Amazon EC2 M6in and M6idn instances are now available in Europe (London) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M6in and M6idn instances are available in AWS London Region. These sixth-generation network optimized instances, powered by 3rd Generation Intel Xeon Scalable processors and built on the AWS Nitro System, deliver up to 200Gbps network bandwidth, for 2x more network bandwidth over comparable fifth-generation instances. Customers can use M6in and M6idn instances to scale their performance and throughput of network-intensive workloads such as high-performance file systems, distributed web scale in-memory caches, caching fleets, real-time big data analytics, and Telco applications such as 5G User Plane Function.\n \nM6in and M6idn instances are available in 10 different instance sizes including metal, offering up to 128 vCPUs and 512 GiB of memory. They deliver up to 100Gbps of Amazon Elastic Block Store (EBS) bandwidth, and up to 400K IOPS. M6in and M6idn instances offer Elastic Fabric Adapter (EFA) networking support on 32xlarge and metal sizes. M6idn instances offer up to 7.6 TB of high-speed, low-latency instance storage.\n \nWith this regional expansion, M6in and M6idn instances are available in the following AWS Regions: US East (Ohio, N. Virginia), US West (N. California, Oregon), Europe (Ireland, Frankfurt, Spain, Stockholm, Zurich, London), Asia Pacific (Mumbai, Singapore, Tokyo, Sydney, Seoul), Canada (Central), and AWS GovCloud (US-West). Customers can purchase the new instances through Savings Plans, On-Demand, and Spot instances. To learn more, see M6in and M6idn instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m6in-m6idn-instances-london/",
-      "pubDate": "2026-03-18T16:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-ef34154360fe",
-      "title": "Amazon Inspector expands agentless EC2 scanning and introduces Windows KB-based findings",
-      "description": "Amazon Inspector now offers expanded agentless EC2 scanning with enhanced detection coverage, including new support for Windows operating system vulnerability scanning without requiring an agent. Security teams and IT administrators can now detect vulnerabilities across a broader range of software and applications on their EC2 instances — including WordPress, Apache HTTP Server, Python packages, and Ruby gems — as well as Windows OS vulnerabilities, all through agentless scanning. Customers automatically receive findings for newly supported software and applications with no configuration changes required.\n \nAmazon Inspector is also introducing Windows Knowledge Base (KB)-based findings for Windows OS vulnerabilities. Rather than receiving a separate finding for each CVE addressed by a single Microsoft patch, customers now receive a single consolidated KB finding that groups all related CVEs together. Each KB finding surfaces the highest CVSS score, EPSS score, and exploit availability from its constituent CVEs, and includes a direct link to the relevant Microsoft KB article — making it straightforward to understand exactly which patch to apply and why.  All existing CVE-based Windows OS findings will automatically transition to KB-based findings, and customers do not need to take any additional action.\n \nBoth capabilities are available in all AWS Regions where Amazon Inspector is available. To learn more, visit the Amazon Inspector product page and the Amazon Inspector documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-inspector-agentless-ec2-scanning-windows/",
-      "pubDate": "2026-03-18T15:44:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f91edd8317a1",
-      "title": "Amazon Redshift increases performance for new queries in dashboards and ETL workloads by up to 7x",
-      "description": "Amazon Redshift improves the performance of BI dashboards and ETL workloads by speeding up new queries by up to 7x. This significantly improves the response times of low-latency SQL queries, such as those used in near real-time analytics applications, BI dashboards, ETL pipelines, and autonomous, goal-seeking AI agents. Customers experience substantially faster query response times as Redshift accelerates the process of preparing the SQL query for execution. Queries start faster and return results quicker. This improvement is automatically enabled at no additional cost.\n  To deliver this major improvement, Redshift added a new optimization to query compilation where new queries are processed immediately using composition. Composition is a technique that generates a lightweight arrangement of pre-existing logic while simultaneously creating highly optimized, query-specific code that is compiled and executed across available compute resources to further boost performance. Composition removes compilation from the critical path of query execution and provides immediate execution while compilation proceeds in the background. With this optimization, new queries processed by Redshift start faster and deliver performance consistent with subsequent runs.\n  This optimization is enabled by default for any SQL query across all provisioned clusters and serverless workgroups, in all commercial AWS Regions where Amazon Redshift operates. It is available on the Redshift current track with other tracks following in upcoming patch releases. No action is required from customers to benefit from this enhancement, and it is free of charge.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-redshift-increases-performance-for-new-queries/",
-      "pubDate": "2026-03-18T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "redshift",
-        "rds",
-        "improvement",
-        "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-527f93b02d81",
-      "title": "Amazon OpenSearch Service now supports OpenSearch version 3.5",
-      "description": "You can now run OpenSearch version 3.5 on Amazon OpenSearch Service. OpenSearch 3.5 introduces significant improvements in agentic AI capabilities, search relevance tooling, and observability features to help you build powerful agentic applications.\n \nWith this launch, agentic conversation memory captures conversation context and tool reasoning in persistent storage, enabling your agents to provide coherent, accurate responses across multi-turn conversations. In addition to this, context management optimizes what you send to large language models (LLMs) through automatic truncation and summarization, reducing your token costs while maintaining response quality. Finally a redesigned no-code agent interface supports Model Context Protocol (MCP) integration, search templates, conversational memory, and single model configurations, allowing you to build sophisticated agents without writing code.\n \nYou can now tune search quality faster with expanded search relevance workbench capabilities. LLM-powered evaluation automatically assesses search results with customizable prompts, letting you scale relevance testing beyond manual judgments and accelerate quality improvements. Scheduled experiments run tests nightly, weekly, or monthly, helping you track search quality trends over time and catch regressions early. Enhanced single query comparison displays agentic search queries alongside agent summaries, making it easier to validate and optimize agent-driven search experiences.\n \nFor information on upgrading to OpenSearch 3.5, please see the documentation. OpenSearch 3.5 is now available in all AWS Regions where Amazon OpenSearch Service is available.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-version-3-5/",
-      "pubDate": "2026-03-18T03:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "launch",
-        "now-available",
-        "improvement",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-beec8d7d29e5",
-      "title": "Amazon Connect expands agentic speech-to-speech voice experiences to the London (Europe) region and adds three new voices",
-      "description": "Amazon Connect now offers agentic speech-to-speech voice experiences in an additional AWS Region: Europe (London). Amazon Connect also adds three new speech-to-speech voices across US Spanish and UK English: Pedro (es-US), Amy (en-GB), and Brian (en-GB).\n \nAmazon Connect's agentic self-service capabilities enable AI agents to understand, reason, and take action across voice and messaging channels to automate routine and complex customer service tasks. Connect's agentic speech-to-speech voice AI agents understand not only what customers say but how they say it, adapting voice responses to match customer tone and sentiment while maintaining natural conversational pace. With these updates, you can deliver agentic speech-to-speech voice experiences to customers across a new region with a wider selection of voices.\n \nTo learn more about this feature, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, a complete AI-powered contact center solution delivering personalized customer experiences at scale, visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-london-europe-region/",
-      "pubDate": "2026-03-18T00:42:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "personalize"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "personalize",
-        "update",
-        "new-region"
-      ]
-    },
-    {
-      "id": "aws-news-5b95b52aed02",
-      "title": "Amazon Connect voice AI agents now supports 13 new languages",
-      "description": "Amazon Connect now supports 13 new languages for voice AI agents, bringing the total to 40 language locales.  New languages include Arabic (Saudi Arabia), Czech, Danish, Dutch (Belgium), English (Ireland), English (New Zealand), English (Wales), German (Switzerland), Icelandic, Romanian, Spanish (Mexico), Turkish, and Welsh.\n \nAmazon Connect's agentic self-service capabilities enable AI agents to understand, reason, and take action across voice and digital channels to automate routine and complex customer service tasks across multiple languages.  \n \nTo learn more about this feature, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, a complete AI-powered contact center solution delivering personalized customer experiences at scale, visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-voice-ai-agents-13-languages/",
-      "pubDate": "2026-03-17T21:52:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "personalize"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "personalize",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c62f262a87dc",
-      "title": "Amazon Connect adds new generative text-to-speech voices and expands to new regions",
-      "description": "Amazon Connect now offers generative text-to-speech voices in three additional AWS Regions: Europe (London), Asia Pacific (Seoul), and Asia Pacific (Sydney). Amazon Connect also expands support for nine new generative text-to-speech voices across US English, UK English, European French, German, and Italian: Tiffany (en-US), Amy (en-GB), Brian (en-GB), Ambre (fr-FR), Florian (fr-FR), Tina (de-DE), Lennart (de-DE), Beatrice (it-IT), and Lorenzo (it-IT).\n \nAmazon Connect's agentic self-service capabilities enable AI agents to understand, reason, and take action across voice and messaging channels to automate routine and complex customer service tasks. Connect's voice AI agents understand not only what customers say but how they say it, adapting voice responses to match customer tone and sentiment while maintaining natural conversational pace. With these updates, you can deliver natural, human-like voice AI experiences to a broader range of customers across more regions and languages.\n \nTo learn more about this feature, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, a complete AI-powered contact center solution delivering personalized customer experiences at scale, visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-adds-generative-text-to-speech-voices/",
-      "pubDate": "2026-03-17T21:44:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "personalize"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "personalize",
-        "update",
-        "support",
-        "new-region"
-      ]
-    },
-    {
-      "id": "aws-news-4f08ee90558b",
-      "title": "Amazon Bedrock AgentCore Runtime now supports shell command execution",
-      "description": "Amazon Bedrock AgentCore Runtime now supports InvokeAgentRuntimeCommand, a new API that lets you execute shell commands directly inside a running AgentCore Runtime session. Developers can send a command, stream the output in real time over HTTP/2, and receive the exit code — without building custom command execution logic in their containers.\n \nAI agents often operate in workflows where deterministic operations such as running tests, installing dependencies, or executing git commands need to run alongside LLM-powered reasoning. Previously, developers had to build custom logic inside their containers to distinguish agent invocations from shell commands, spawn child processes, capture stdout and stderr, and handle timeouts. InvokeAgentRuntimeCommand eliminates this undifferentiated work by providing a platform-level API for command execution. Commands run inside the same container, filesystem, and environment as the agent session, and can execute concurrently with agent invocations without blocking.\n \nExecuting shell commands in AgentCore Runtime is supported across fourteen AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm).\n \nTo learn more, see Execute shell commands in AgentCore Runtime.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/bedrock-agentcore-runtime-shell-command/",
-      "pubDate": "2026-03-17T16:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ac120d56ee64",
-      "title": "Amazon RDS enhancements for SQL Server Developer Edition",
-      "description": "Amazon Relational Database Service (Amazon RDS) for SQL Server now supports Additional Storage Volumes, Resource Governor, and SQL Server 2019 with SQL Server Developer Edition. SQL Server Developer Edition is an ideal choice to build and test applications because it includes all the functionality of Enterprise edition, and is free of license charges for use as a development and test system, not as production server. \n  You can use Additional Storage Volumes to your Amazon RDS for SQL Server Developer Edition instances, which provide you up to 256 TiB, 4X more storage. You can also use SQL Server Resource Governor, which lets you manage workload and resource consumption by defining resource pools and workload groups to control CPU and memory usage, enabling more realistic performance testing. Amazon RDS for SQL Server Developer Edition now also supports SQL Server 2019 (CU32 GDR - 15.0.4455.2), so you can match the SQL Server version used in your development and testing environments with what you use for your production environment.\n  For more information about these features and region availability, see Working with SQL Server Developer Edition on RDS for SQL Server. For pricing details, see Amazon RDS for SQL Server Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-rds-enhancements-for-sql-server-developer-edition/",
-      "pubDate": "2026-03-17T07:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a944eb456cb4",
-      "title": "SageMaker HyperPod now supports idle resource sharing for dynamic cluster utilization",
-      "description": "Amazon SageMaker HyperPod task governance now supports dynamic resource sharing, allowing teams to borrow unallocated compute capacity in HyperPod clusters beyond their guaranteed quotas. Administrators can also configure borrow limits for specific resource types, such as accelerators, vCPU, or memory, to ensure fair distribution across teams.\n  Administrators running shared compute clusters for generative AI workloads often face underutilization challenges. When data scientists do not fully consume their allocated quotas, expensive compute instances remain idle. Idle resource sharing solves this by automatically identifying unallocated cluster capacity and making it available for teams to borrow on a best-effort basis. HyperPod task governance monitors your cluster state and automatically recalculates borrowable resources when instances and compute quota policies change, eliminating manual configuration. Eligible instances that are in a ready and schedulable state, including instances with partitioned GPU configurations, contribute to the borrowable pool of unallocated compute capacity. Administrators can also define absolute borrow limits in addition to percentage-based borrow limits of idle compute. This helps administrators maximize compute utilization and maintain fine-grained control over how idle capacity is distributed across teams, while ensuring guaranteed compute quota isolation for each team.\n  This capability is currently available for Amazon SageMaker HyperPod clusters using the EKS orchestrator across the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo), Asia Pacific (Jakarta), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Stockholm), Europe (Spain), and South America (São Paulo).\n  To learn more, visit SageMaker HyperPod webpage, and HyperPod task governance documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sagemaker-hyperpod-idle-resource-sharing/",
-      "pubDate": "2026-03-16T19:38:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4f3775d733cb",
-      "title": "Amazon Timestream for InfluxDB 3 Now Supports Expanded Multi-Node Cluster Configurations",
-      "description": "Amazon Timestream for InfluxDB now supports expanded multi-node cluster configurations for InfluxDB 3 Enterprise edition, enabling you to scale clusters up to 15 nodes for demanding production workloads requiring high read throughput and high availability.\n  With this launch, you can now configure clusters with up to 15 nodes total, with one to four writer/reader nodes for data ingestion and queries, zero to 13 dedicated reader-only nodes for scaling query performance, plus a dedicated compactor node. This enables you to optimize for specific workload patterns. For example, you can create a dedicated reader-only nodes to handle read-heavy workloads such as dashboards, reporting, and analytical queries without impacting write performance. All Multi-node deployments distribute workloads across multiple nodes in different Availability Zones for enhanced fault tolerance and high availability\n  With this release, you can now add and remove nodes from all Enterprise clusters, providing greater flexibility for managing your time series database infrastructure. You can also upgrade from Core edition to Enterprise edition to access multi-node deployment capabilities and compaction features essential for long-term storage.\n  You can create expanded multi-node clusters using the Amazon Timestream for InfluxDB console. AWS CLI, or AWS SDKs by configuring custom parameter groups with your desired node topology. Amazon Timestream for InfluxDB 3 is available in all Regions where Timestream for InfluxDB is available.\n  For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-timestream-for-influxdb-3-multi-node-cluster/",
-      "pubDate": "2026-03-16T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3c633ff47d1d",
-      "title": "Announcing AWS Partner Central agents to accelerate co-sell",
-      "description": "Today, AWS announces the general availability of AWS Partner Central agents, new AI-powered capabilities designed to accelerate partner co-selling with AWS. Built on Amazon Bedrock AgentCore, these agentic capabilities work alongside partner sales teams to shorten sales cycles and simplify funding access. AWS Partners can engage with these agentic capabilities directly in the console or programmatically through Model Context Protocol (MCP), enabling sales teams to access from within their own customer relationship management (CRM) systems.\n \nWith AWS Partner Central agents, partner teams get pipeline insights, tailored sales plays, and next-step recommendations on demand, so they know where to focus and what to do next. Partner sales teams can share meeting transcripts, notes, or emails with agents that automatically populate fields and advance deals, so they stay focused on selling, not data entry. Agents recommend funding at the opportunity level, highlight eligibility gaps, and create pre-populated fund requests, so partners capture available funding faster.\n \nAWS Partner Central agents are available today in all commercial AWS Regions. To learn more about agentic capabilities in AWS Partner Central, review this blog. Partners can start using agents by visiting AWS Partner Central in the AWS console and accessing opportunities, after reviewing the agents guide, and to integrate agents into your own CRM, visit the Partner Central agents MCP server guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-partner-central-agents-accelerate-co-sell/",
-      "pubDate": "2026-03-16T17:04:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga"
       ]
     },
     {
@@ -765,25 +693,6 @@
         "ec2",
         "outposts",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-795d2ba053c7",
-      "title": "How Amplitude implemented natural language-powered analytics using Amazon OpenSearch Service as a vector database",
-      "description": "Amplitude is a product and customer journey analytics platform. Our customers wanted to ask deep questions about their product usage. Ask Amplitude is an AI assistant that uses large language models (LLMs). It combines schema search and content search to provide a customized, accurate, low latency, natural language-based visualization experience to end customers. Amplitude’s search architecture evolved to scale, simplify, and cost-optimize for our customers, by implementing semantic search and Retrieval Augmented Generation (RAG) powered by Amazon OpenSearch Service. In this post, we walk you through Amplitude’s iterative architectural journey and explore how we address several critical challenges in building a scalable semantic search and analytics platform.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-amplitude-implemented-natural-language-powered-analytics-using-amazon-opensearch-service-as-a-vector-database/",
-      "pubDate": "2026-03-04T20:06:46.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service"
       ]
     },
     {
