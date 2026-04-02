@@ -1,8 +1,70 @@
 {
-  "lastUpdated": "2026-04-01T07:06:49.586Z",
+  "lastUpdated": "2026-04-02T06:58:24.989Z",
   "category": "generative-ai",
-  "totalItems": 39,
+  "totalItems": 40,
   "items": [
+    {
+      "id": "aws-news-920bb31927cb",
+      "title": "Amazon SageMaker Data Agent now supports geo-specific inference for Japan and Australia",
+      "description": "Amazon SageMaker Data Agent now supports cross-region inference profiles for Japan and Australia through Amazon Bedrock. With this update, inference requests from Data Agent in the Asia Pacific (Tokyo) and Asia Pacific (Sydney) regions are processed within their respective geographies, supporting data sovereignty requirements for customers in Japan and Australia.\n \nData Agent provides an AI-powered conversational experience for data exploration, Python and SQL code generation, troubleshooting, and analytics directly within Amazon SageMaker Unified Studio Notebook and Query Editor. With geo-specific inference through JP-CRIS (Japan Cross-Region Inference) and AU-CRIS (Australia Cross-Region Inference), you can use Data Agent with confidence that your inference requests are routed exclusively within your geography over the AWS Global Network. Customers in regulated industries such as financial services, healthcare, and the public sector can meet data residency requirements while using the full set of Data Agent capabilities.\n \nTo get started, open a project in SageMaker Unified Studio in a supported region and use Data Agent in notebooks or Query Editor. For more information, see SageMaker Data Agent in the Amazon SageMaker Unified Studio User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sage-maker-da-infr-jp-au/",
+      "pubDate": "2026-04-01T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker",
+        "unified studio",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8eddb73163e9",
+      "title": "Automate safety monitoring with computer vision and generative AI",
+      "description": "This post describes a solution that uses fixed camera networks to monitor operational environments in near real-time, detecting potential safety hazards while capturing object floor projections and their relationships to floor markings. While we illustrate the approach through distribution center deployment examples, the underlying architecture applies broadly across industries. We explore the architectural decisions, strategies for scaling to hundreds of sites, reducing site onboarding time, synthetic data generation using generative AI tools like GLIGEN, and other critical technical hurdles we overcame.",
+      "link": "https://aws.amazon.com/blogs/architecture/automate-safety-monitoring-with-computer-vision-and-generative-ai/",
+      "pubDate": "2026-04-01T18:59:02.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-198bee259b0e",
+      "title": "Amazon RDS for Oracle now supports cross-account snapshot sharing with additional storage volumes",
+      "description": "Amazon RDS for Oracle now supports cross-account snapshot sharing for database instances with additional storage volumes. Additional storage volumes allow customers to scale database storage up to 256 TiB by adding up to three storage volumes, each with up to 64 TiB, in addition to the primary storage volume. With this launch, customers can create, share, and copy a database snapshot across AWS accounts for database instances set up with additional storage volumes. Cross account snapshots enable customers to set up isolated backup environments in separate accounts for compliance requirements and to perform diagnostics, such as investigating production issues by restoring database snapshots in a separate account for development and testing.\n  Cross account snapshots for database instances with additional storage volumes preserve the storage layout of the original database instance, including the configuration of additional storage volumes. When a snapshot is shared to a target AWS account, authorized users in the target account can restore it to another database instance, copy the snapshot within the same or different AWS Region, or create independent backups under different AWS Identity and Access Management (IAM) access permissions for backup and disaster recovery.\n  Cross-account snapshot sharing with additional storage volumes is available in all AWS commercial Regions. Customers can start using this feature today through the AWS Management Console, AWS CLI, or AWS SDKs. To learn more, see Sharing a DB snapshot for Amazon RDS, Copying a DB snapshot for Amazon RDS, and Working with storage in RDS for Oracle in the Amazon RDS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/rds-oracle-cross-account-snapshot-sharing-additional-storage-volume/",
+      "pubDate": "2026-04-01T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-5d7682c406b2",
       "title": "Amazon CloudWatch now supports ingesting Security Hub CSPM findings with organization-wide enablement",
@@ -597,47 +659,6 @@
       ],
       "tags": [
         "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-75adb412b947",
-      "title": "How Reco transforms security alerts using Amazon Bedrock",
-      "description": "In this blog post, we show you how Reco implemented Amazon Bedrock to help transform security alerts and achieve significant improvements in incident response times.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-reco-transforms-security-alerts-using-amazon-bedrock/",
-      "pubDate": "2026-03-23T16:46:54.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-c8d9aaaf4f68",
-      "title": "AWS adds support for NIXL with EFA to accelerate LLM inference at scale",
-      "description": "AWS announces support for NVIDIA Inference Xfer Library (NIXL) with Elastic Fabric Adapter (EFA) to accelerate disaggregated large language model (LLM) inference on Amazon EC2. This integration enhances disaggregated inference serving through three key improvements: increased KV-cache throughput, reduced inter-token latency, and optimized KV-cache memory utilization.\n  NIXL with EFA enables high throughput, low-latency KV-cache transfer between prefill and decode nodes, and it enables efficient KV-cache movement between various storage layers. NIXL is interoperable with all EFA-enabled EC2 instances and integrates natively with frameworks including NVIDIA Dynamo, SGLang, and vLLM. Combined, NIXL with EFA enables flexible integration with your EC2 instance and framework of choice, providing performant disaggregated inference at scale.\n  AWS supports NIXL version 1.0.0 or higher with EFA installer version 1.47.0 or higher on all EFA-enabled EC2 instance types in all AWS regions at no additional cost. For more information, visit the EFA documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-support-nixl-with-efa/",
-      "pubDate": "2026-03-19T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "improvement",
-        "integration",
-        "support"
       ]
     },
     {

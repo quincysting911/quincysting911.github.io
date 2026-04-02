@@ -1,16 +1,265 @@
 {
-  "lastUpdated": "2026-04-01T07:06:49.586Z",
-  "totalItems": 197,
+  "lastUpdated": "2026-04-02T06:58:24.989Z",
+  "totalItems": 198,
   "sources": {
     "whatsNew": 93,
     "mlBlog": 20,
     "newsBlog": 16,
-    "bigDataBlog": 17,
+    "bigDataBlog": 18,
     "architectureBlog": 19,
     "computeBlog": 17,
     "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-35d8ae95fbe5",
+      "title": "Announcing managed daemon support for Amazon ECS Managed Instances",
+      "description": "Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and comprehensive host-level observability at scale.",
+      "link": "https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/",
+      "pubDate": "2026-04-01T23:31:24.000Z",
+      "source": "newsBlog",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "ecs",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-efd0ebff4f9b",
+      "title": "Amazon SES Mail Manager adds new features for enhanced security and email processing",
+      "description": "Amazon Simple Email Service (SES) Mail Manager now offers enhancements to email security and processing while simplifying email infrastructure migrations. These enhancements include optional TLS and certificate-based authentication (mTLS) support in Ingress Endpoint, and two new rule actions: Invoke Lambda function and Bounce.\n  These enhancements benefit organizations seeking to maintain compatibility with legacy systems while implementing stronger security controls, and advanced email routing capabilities. For example customers can now configure STARTTLS as an optional TLS configuration, enabling legacy systems that don't support STARTTLS to connect to Mail Manager. With Mutual TLS (mTLS) in Ingress Endpoint customers can now used certificate-based authentication for enhanced security. The Invoke Lambda function rule action allows direct invocation of AWS Lambda functions from rule sets, enabling custom email processing workflows and the Bounce rule action provides RFC-compliant SMTP responses to sending servers.\n \nThese new enhancements are available today in all AWS Regions where Amazon SES Mail Manager is offered, except for the Middle East (UAE) and Middle East (Bahrain) regions. To learn more about Amazon SES Mail Manager and how these features can help streamline your email operations, visit https://aws.amazon.com/ses/.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ses-mail-manager-introduces-new-features/",
+      "pubDate": "2026-04-01T21:13:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lambda",
+        "organizations",
+        "ga",
+        "new-feature",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e3bf6e6b6ff4",
+      "title": "Amazon ECS announces Managed Daemons for ECS Managed Instances",
+      "description": "Amazon ECS announces Managed Daemons for ECS Managed Instances, enabling organizations to centrally deploy and manage software agents such as security, observability, and networking across their container infrastructure independent of application deployments. By decoupling daemon lifecycle management from application operations, Managed Daemons helps guarantee reliable agent coverage across all workloads, simplifies deployments and version updates, and improves resource utilization by running a single daemon task per managed instance.\n  With Managed Daemons, you can create a daemon for one or more Managed Instances capacity providers in your cluster. ECS places exactly one daemon task per managed instance and guarantees that daemons are running before any application tasks are placed, so cross-cutting functions such as logging, tracing, and metrics collection are always available. ECS orchestrates daemons as independent processes bound to the instance lifecycle rather than individual application tasks, allowing platform administrators to manage them independently from application teams. When you update daemon versions, ECS drains existing instances and provisions new instances with the updated daemon, automatically replacing service tasks with circuit breaker protection and rollback capabilities for reliable coverage across all your workloads.\n  To get started, you can use AWS Console, CLI, CloudFormation, or AWS SDKs to register a daemon task definition specifying your container image, then create a daemon with associated capacity providers in your clusters. This feature is now available in all AWS Regions. For more details, refer to our documentation and launch blog post. There is no additional cost - you pay only for the standard compute resources consumed by your daemon tasks.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ecs-managed-daemons/",
+      "pubDate": "2026-04-01T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudformation",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ecs",
+        "cloudformation",
+        "organizations",
+        "launch",
+        "ga",
+        "now-available",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-920bb31927cb",
+      "title": "Amazon SageMaker Data Agent now supports geo-specific inference for Japan and Australia",
+      "description": "Amazon SageMaker Data Agent now supports cross-region inference profiles for Japan and Australia through Amazon Bedrock. With this update, inference requests from Data Agent in the Asia Pacific (Tokyo) and Asia Pacific (Sydney) regions are processed within their respective geographies, supporting data sovereignty requirements for customers in Japan and Australia.\n \nData Agent provides an AI-powered conversational experience for data exploration, Python and SQL code generation, troubleshooting, and analytics directly within Amazon SageMaker Unified Studio Notebook and Query Editor. With geo-specific inference through JP-CRIS (Japan Cross-Region Inference) and AU-CRIS (Australia Cross-Region Inference), you can use Data Agent with confidence that your inference requests are routed exclusively within your geography over the AWS Global Network. Customers in regulated industries such as financial services, healthcare, and the public sector can meet data residency requirements while using the full set of Data Agent capabilities.\n \nTo get started, open a project in SageMaker Unified Studio in a supported region and use Data Agent in notebooks or Query Editor. For more information, see SageMaker Data Agent in the Amazon SageMaker Unified Studio User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sage-maker-da-infr-jp-au/",
+      "pubDate": "2026-04-01T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker",
+        "unified studio",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fce2a502b9e0",
+      "title": "Navigating multi-account deployments in Amazon SageMaker Unified Studio: a governance-first approach",
+      "description": "In this post, we explore SageMaker Unified Studio multi-account deployments in depth: what they entail, why they matter, and how to implement them effectively. We examine architecture patterns, evaluate trade-offs across security boundaries, operational overhead, and team autonomy. We also provide practical guidance to help you design a deployment that balances centralized control with distributed ownership across your organization.",
+      "link": "https://aws.amazon.com/blogs/big-data/navigating-multi-account-deployments-in-amazon-sagemaker-unified-studio-a-governance-first-approach/",
+      "pubDate": "2026-04-01T19:12:46.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-a06e47a178ab",
+      "title": "Improve the discoverability of your unstructured data in Amazon SageMaker Catalog using generative AI",
+      "description": "This is a two-part series post. In the first part, we walk you through how to set up the automated processing for unstructured documents, extract and enrich metadata using AI, and make your data discoverable through SageMaker Catalog. The second part is currently in the works and will show you how to discover and access the enriched unstructured data assets as a data consumer. By the end of this post, you will understand how to combine Amazon Textract and Anthropic Claude through Amazon Bedrock to extract key business terms and enrich metadata using Amazon SageMaker Catalog to transform unstructured data into a governed, discoverable asset.",
+      "link": "https://aws.amazon.com/blogs/big-data/improve-the-discoverability-of-your-unstructured-data-in-amazon-sagemaker-catalog-using-generative-ai/",
+      "pubDate": "2026-04-01T19:09:48.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "bedrock",
+        "sagemaker",
+        "textract"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker",
+        "textract"
+      ]
+    },
+    {
+      "id": "aws-news-8eddb73163e9",
+      "title": "Automate safety monitoring with computer vision and generative AI",
+      "description": "This post describes a solution that uses fixed camera networks to monitor operational environments in near real-time, detecting potential safety hazards while capturing object floor projections and their relationships to floor markings. While we illustrate the approach through distribution center deployment examples, the underlying architecture applies broadly across industries. We explore the architectural decisions, strategies for scaling to hundreds of sites, reducing site onboarding time, synthetic data generation using generative AI tools like GLIGEN, and other critical technical hurdles we overcame.",
+      "link": "https://aws.amazon.com/blogs/architecture/automate-safety-monitoring-with-computer-vision-and-generative-ai/",
+      "pubDate": "2026-04-01T18:59:02.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-e2d1f2898378",
+      "title": "Automating competitive price intelligence with Amazon Nova Act",
+      "description": "This post demonstrates how to build an automated competitive price intelligence system that streamlines manual workflows, supporting teams to make data-driven pricing decisions with real-time market insights.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/automating-competitive-price-intelligence-with-amazon-nova-act/",
+      "pubDate": "2026-04-01T18:57:01.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3b27f79ec751",
+      "title": "AWS VPC Encryption Controls now available in AWS GovCloud (US) Regions",
+      "description": "AWS launches VPC Encryption Controls in AWS GovCloud (US) Regions to make it easy to audit and enforce encryption in transit within and across Amazon Virtual Private Clouds (VPC), and demonstrate compliance with encryption standards. You can turn it on your existing VPCs to monitor encryption status of traffic flows and identify VPC resources that are unintentionally allowing plaintext traffic. This feature also makes it easy to enforce encryption across different network paths by automatically (and transparently) turning on hardware-based AES-256 encryption on traffic between multiple VPC resources including AWS Fargate, Network Load Balancers, and Application Load Balancers.\n \nTo meet stringent compliance standards like HIPAA, PCI DSS, FedRAMP, and FIPS 140-2, government customers rely on both application layer encryption and the hardware-based encryption that AWS offers across different network paths. AWS provides hardware-based AES-256 encryption transparently between modern EC2 Nitro instances. AWS also encrypts all network traffic between AWS data centers in and across Availability Zones, and AWS Regions before the traffic leaves our secure facilities. All inter-region traffic that uses VPC Peering, Transit Gateway Peering, or AWS Cloud WAN receives an additional layer of transparent encryption before leaving AWS data centers. Prior to this release, customers had to track and confirm encryption across all network paths. With VPC Encryption Controls, customers can now monitor, enforce and demonstrate encryption within and across Virtual Private Clouds (VPCs) in just a few clicks. Your information security team can turn it on centrally to maintain a secure and compliant environment, and generate audit logs for compliance and reporting.\n \nWith this launch, VPC Encryption Controls is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. To learn more about this feature and its use cases, please see our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-vpc-encryption-controls/",
+      "pubDate": "2026-04-01T18:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "fargate"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "fargate",
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-198bee259b0e",
+      "title": "Amazon RDS for Oracle now supports cross-account snapshot sharing with additional storage volumes",
+      "description": "Amazon RDS for Oracle now supports cross-account snapshot sharing for database instances with additional storage volumes. Additional storage volumes allow customers to scale database storage up to 256 TiB by adding up to three storage volumes, each with up to 64 TiB, in addition to the primary storage volume. With this launch, customers can create, share, and copy a database snapshot across AWS accounts for database instances set up with additional storage volumes. Cross account snapshots enable customers to set up isolated backup environments in separate accounts for compliance requirements and to perform diagnostics, such as investigating production issues by restoring database snapshots in a separate account for development and testing.\n  Cross account snapshots for database instances with additional storage volumes preserve the storage layout of the original database instance, including the configuration of additional storage volumes. When a snapshot is shared to a target AWS account, authorized users in the target account can restore it to another database instance, copy the snapshot within the same or different AWS Region, or create independent backups under different AWS Identity and Access Management (IAM) access permissions for backup and disaster recovery.\n  Cross-account snapshot sharing with additional storage volumes is available in all AWS commercial Regions. Customers can start using this feature today through the AWS Management Console, AWS CLI, or AWS SDKs. To learn more, see Sharing a DB snapshot for Amazon RDS, Copying a DB snapshot for Amazon RDS, and Working with storage in RDS for Oracle in the Amazon RDS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/rds-oracle-cross-account-snapshot-sharing-additional-storage-volume/",
+      "pubDate": "2026-04-01T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-71b27bf0272d",
+      "title": "Amazon Bedrock now supports structured outputs to AWS GovCloud (US) Regions",
+      "description": "Amazon Bedrock is a fully managed service that provides access to a wide selection of high-performing foundation models from leading AI companies through a single API. Today, Amazon Bedrock expands structured outputs support to AWS GovCloud (US) Regions. Structured outputs enables foundation models to return consistent, schema-compliant, machine-readable responses—making it well-suited for government and regulated workloads that must meet strict compliance and data handling requirements.\n \nStructured outputs helps with common production tasks, such as extracting key fields and powering workflows that use APIs or tools, where even minor formatting errors can break downstream systems. By ensuring schema compliance, it reduces the need for custom validation logic and lowers operational overhead by minimizing failed requests and retries—so you can confidently deploy AI applications that require predictable, machine-readable outputs. You can use structured outputs either by defining a JSON schema that describes your desired response format or by using strict tool definitions to ensure a model's tool calls match your specifications.\n \nStructured outputs is now generally available in all commercial AWS and AWS GovCloud (US) Regions where Amazon Bedrock is supported. To learn more about structured outputs and the supported models, visit the Amazon Bedrock documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-structured-outputs-govcloud/",
+      "pubDate": "2026-04-01T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3837c8861644",
+      "title": "Oracle Database@AWS launches sub-millisecond network latency for high performance applications",
+      "description": "Today, Oracle Database@AWS (ODB@AWS) announced high performance networking that provides customers consistent sub-millisecond roundtrip latency from their AWS applications to the database. Many applications such as payment processing, securities trading, and high volume transaction processing require predictable and consistent low-latency network connectivity to the application database. Customers who run such latency-sensitive applications on Oracle Exadata systems on-premises optimize their infrastructure to obtain the performance that these applications require. With high performance networking for ODB@AWS, customers can now seamlessly migrate these applications to an equivalent optimized environment on AWS.\n  ODB@AWS automatically provides consistent and predictable low-latency network connectivity from Amazon EC2 instances to ODB@AWS databases through optimized placement of compute instances. When customers create an ODB@AWS network for their databases, they can now launch placement optimized Amazon EC2 instances with consistent, sub-millisecond latency network connectivity to their databases using existing Amazon EC2 APIs and workflows, such as launching new EC2 instances, or reserving compute capacity with EC2 On-Demand Capacity Reservations. There is no additional charge for EC2 instances using optimized placement for connectivity to ODB@AWS databases.\n  The feature is available in the US-East-2 (Ohio), CA-Central-1 (Canada Central), EU-Central-1 (Frankfurt), EU-West-1 (Dublin), AP-Northeast-1 (Tokyo), and AP-Southeast-2 (Sydney) AWS Regions, with more Regions coming soon. For more information, see High performance networking for Oracle Database@AWS.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/oracle-database-aws-launches-high-performance-networking/",
+      "pubDate": "2026-04-01T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "coming-soon"
+      ]
+    },
     {
       "id": "aws-news-5d7682c406b2",
       "title": "Amazon CloudWatch now supports ingesting Security Hub CSPM findings with organization-wide enablement",
@@ -342,7 +591,7 @@
     {
       "id": "aws-news-b25bfc95c606",
       "title": "AWS Service Availability Updates",
-      "description": "We’re announcing availability changes to the following AWS services and features.\n  Services moving to Maintenance\n \nServices moving to maintenance will no longer be accessible to new customers starting April 30, 2026. Customers already using these services and features can continue to do so. AWS will continue to operate and support these services and features. We recommend that customers learn about the changes in the product pages and documentation.\n \n \n \nAmazon Application Recovery Controller (ARC) - Readiness Check Feature\n \n \nAmazon Comprehend - Topic Modeling, Event Detection, and Prompt Safety Classification Features\n \n \nAmazon Rekognition - Streaming Events and Batch Image Content Moderation Features\n \n \nAmazon Simple Notification Service (SNS) - Message Data Protection (MDP) Feature\n \n \nAWS App Runner\n \n \nAWS Audit Manager\n \n \nAWS CloudTrail Lake\n \n \nAWS Glue - Ray Jobs Feature\n \n \nAWS IoT FleetWise\n \n \nServices entering Sunset\n \nThe following services are entering sunset, and we are announcing the date upon which we will end operations and support of the service. Customers using these services should click on the links below to understand the sunset timeline and begin planning migration to alternatives as recommended in the updated service web pages and documentation.\n \n \n \nAmazon RDS Custom for Oracle\n \n \nAmazon WorkMail\n \n \nAmazon WorkSpaces Thin Client\n \n \nAWS Service Management Connector\n \n \nServices reaching End of Support\n \nThe following feature has reached end of support and is no longer available as of March 31, 2026.\n  \n \n \nAmazon Chime SDK – Proxy Sessions\n \n \nFor customers affected by these changes, we've prepared comprehensive migration guides, and our support teams are ready to assist with your transition. Visit AWS Product Lifecycle Page to learn more, and subscribe to the RSS feed for future updates.",
+      "description": "We’re announcing availability changes to the following AWS services and features.\n  Services moving to Maintenance\n \nServices moving to maintenance will no longer be accessible to new customers starting April 30, 2026. Customers already using these services and features can continue to do so. AWS will continue to operate and support these services and features. We recommend that customers learn about the changes in the product pages and documentation.\n \n \n \nAmazon Application Recovery Controller (ARC) - Readiness Check Feature\n \n \nAmazon Comprehend - Topic Modeling, Event Detection, and Prompt Safety Classification Features\n \n \nAmazon Rekognition - Streaming Events and Batch Image Content Moderation Features\n \n \nAmazon Simple Notification Service (SNS) - Message Data Protection (MDP) Feature\n \n \nAWS App Runner\n \n \nAWS Audit Manager\n \n \nAWS CloudTrail Lake (CloudTrail Lake will stop accepting new customers on May 31, 2026)\n \n \nAWS Glue - Ray Jobs Feature\n \n \nAWS IoT FleetWise\n \n \nServices entering Sunset\n \nThe following services are entering sunset, and we are announcing the date upon which we will end operations and support of the service. Customers using these services should click on the links below to understand the sunset timeline and begin planning migration to alternatives as recommended in the updated service web pages and documentation.\n \n \n \nAmazon RDS Custom for Oracle\n \n \nAmazon WorkMail\n \n \nAmazon WorkSpaces Thin Client\n \n \nAWS Service Management Connector\n \n \nServices reaching End of Support\n \nThe following feature has reached end of support and is no longer available as of March 31, 2026.\n  \n \n \nAmazon Chime SDK – Proxy Sessions\n \n \nFor customers affected by these changes, we've prepared comprehensive migration guides, and our support teams are ready to assist with your transition. Visit AWS Product Lifecycle Page to learn more, and subscribe to the RSS feed for future updates.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-service-availability/",
       "pubDate": "2026-03-31T17:00:00.000Z",
       "source": "whatsNew",
@@ -512,6 +761,26 @@
       "tags": [
         "rds",
         "launch"
+      ]
+    },
+    {
+      "id": "aws-news-ec639a783fb9",
+      "title": "AWS Direct Connect now supports AWS CloudFormation",
+      "description": "AWS Direct Connect now supports AWS CloudFormation, enabling infrastructure-as-code provisioning of Direct Connect resources. This integration allows you to define your entire Direct Connect topology in CloudFormation templates alongside other AWS resources, enabling repeatable, version-controlled deployments with drift detection and change management capabilities. You can now automate creation and management of connections, virtual interfaces, Direct Connect gateways, Link Aggregation Groups (LAGs), and BGP peering configurations.\n \nCloudFormation support for Direct Connect is available in all AWS Regions globally.\n \nTo get started, visit the AWS CloudFormation and AWS Direct Connect documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-direct-connect-supports-aws-cloudformation/",
+      "pubDate": "2026-03-31T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "ga",
+        "integration",
+        "support"
       ]
     },
     {
@@ -2356,24 +2625,6 @@
       ]
     },
     {
-      "id": "aws-news-75adb412b947",
-      "title": "How Reco transforms security alerts using Amazon Bedrock",
-      "description": "In this blog post, we show you how Reco implemented Amazon Bedrock to help transform security alerts and achieve significant improvements in incident response times.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-reco-transforms-security-alerts-using-amazon-bedrock/",
-      "pubDate": "2026-03-23T16:46:54.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "improvement"
-      ]
-    },
-    {
       "id": "aws-news-c38afbc63142",
       "title": "AWS Weekly Roundup: NVIDIA Nemotron 3 Super on Amazon Bedrock, Nova Forge SDK, Amazon Corretto 26, and more (March 23, 2026)",
       "description": "Hello! I’m Daniel Abib, and this is my first AWS Weekly Roundup. I’m a Senior Specialist Solutions Architect at AWS, focused on the generative AI and Amazon Bedrock. With over 28 years of experience in solution architecture, software development, and cloud architecture, I help Startups & Enterprises harness the power of generative AI with Amazon […]",
@@ -2574,122 +2825,6 @@
       ]
     },
     {
-      "id": "aws-news-a507b5661f44",
-      "title": "Amazon EC2 Fleet now supports interruptible Capacity Reservations",
-      "description": "Amazon EC2 Fleet now supports interruptible Capacity Reservations. EC2 Fleet allows you to launch instances across multiple instance types and Availability Zones. Starting today, you can specify interruptible Capacity Reservation IDs across your Launch Templates to provision instances in a single EC2 Fleet call.\n \nWhen On-Demand Capacity Reservations are not in use, customers can make them temporarily available as interruptible reservations within their AWS Organization to improve utilization and save costs. When these interruptible reservations are available to your account, you can now use EC2 Fleet to easily consume them.\n \nThis feature is available in all AWS commercial regions. To get started, refer to the EC2 Fleet documentation. To learn more about interruptible Capacity Reservations, visit the EC2 Capacity Reservations user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-fleet-interruptible-capacity-reservations/",
-      "pubDate": "2026-03-19T20:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c8d9aaaf4f68",
-      "title": "AWS adds support for NIXL with EFA to accelerate LLM inference at scale",
-      "description": "AWS announces support for NVIDIA Inference Xfer Library (NIXL) with Elastic Fabric Adapter (EFA) to accelerate disaggregated large language model (LLM) inference on Amazon EC2. This integration enhances disaggregated inference serving through three key improvements: increased KV-cache throughput, reduced inter-token latency, and optimized KV-cache memory utilization.\n  NIXL with EFA enables high throughput, low-latency KV-cache transfer between prefill and decode nodes, and it enables efficient KV-cache movement between various storage layers. NIXL is interoperable with all EFA-enabled EC2 instances and integrates natively with frameworks including NVIDIA Dynamo, SGLang, and vLLM. Combined, NIXL with EFA enables flexible integration with your EC2 instance and framework of choice, providing performant disaggregated inference at scale.\n  AWS supports NIXL version 1.0.0 or higher with EFA installer version 1.47.0 or higher on all EFA-enabled EC2 instance types in all AWS regions at no additional cost. For more information, visit the EFA documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-support-nixl-with-efa/",
-      "pubDate": "2026-03-19T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "improvement",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-386977bb0d6e",
-      "title": "Amazon Redshift supports federated permissions with IAM Identity Center in multiple AWS Regions",
-      "description": "Amazon Redshift federated permissions are now supported with AWS IAM Identity Center (IdC) in multiple AWS Regions. You can extend IdC from your primary AWS Region to additional Regions for improved performance through proximity to users and reliability. In the additional regions, you now have simplified administration of Redshift fine-grained access controls at the table and column level using existing workforce identities with IdC.\n  When a new Region is added in IdC, you can create Redshift and Lake Formation Identity Center applications in the new Region without replicating identities from the primary Region. This enables you to use existing workforce identities to query data across warehouses in the new Region. Regardless of which warehouse is used for querying, row-level, column-level, and masking controls always apply automatically, delivering fine-grained access compliance. You can also access Amazon Redshift with single sign-on in these new Regions from Amazon QuickSight, Amazon Redshift Query Editor, or third-party SQL tools.\n  To get started with Redshift federated permissions using IdC, read the blog and documentation. To extend IdC support in multiple regions, read IdC documentation, Redshift documentation, Lake Formation documentation, and see the region availability.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/redshift-federated-permissions-idc-mrr/",
-      "pubDate": "2026-03-19T17:13:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "quicksight"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "quicksight",
-        "ga",
-        "support",
-        "new-region"
-      ]
-    },
-    {
-      "id": "aws-news-4d56386350c5",
-      "title": "Amazon EC2 C8gn instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Region Asia Pacific (Jakarta, Hyderabad, Tokyo), South America (Sao Paulo), and Europe (Zurich). The new instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. \n \n \n Take advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference. \n  \n For increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 60 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters. \n  \n C8gn instances are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon, N.California), Europe (Frankfurt, Stockholm, Ireland, London, Spain, Zurich), Asia Pacific (Singapore, Malaysia, Sydney, Thailand, Mumbai, Seoul, Melbourne, Jakarta, Hyderabad, Tokyo), Middle East (UAE), Africa (Cape Town), Canada West (Calgary, Central), South America (Sao Paulo), AWS GovCloud (US-East, US-West).\n  \n To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-c8gn-instances-additional-regions/",
-      "pubDate": "2026-03-19T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "graviton",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b555ba2a75e9",
-      "title": "AWS Lambda now supports Availability Zone metadata",
-      "description": "AWS Lambda now provides Availability Zone (AZ) metadata through a new metadata endpoint in the Lambda execution environment. With this capability, developers can determine the AZ ID (e.g., use1-az1) of the AZ their Lambda function is running in, enabling them to build functions that make AZ-aware routing decisions, such as preferring same-AZ endpoints for downstream services to reduce cross-AZ latency. This capability also enables operators to implement AZ-aware resilience patterns like AZ-specific fault injection testing.\n \nLambda automatically provisions and maintains execution environments ready to serve function invocations across multiple AZs within an AWS Region to provide high availability and fault tolerance without any additional configuration or management overhead for customers.  As development teams scale their serverless applications, their functions often need to interact with other AWS services like Amazon ElastiCache and Amazon RDS that provide endpoints specific to each AZ. Until now, Lambda did not provide a way for functions to determine which AZ they were running in. With the new metadata endpoint, functions can now retrieve their AZ ID with a simple HTTP request, making it easy to implement AZ-aware logic without building and maintaining custom solutions.\n \nTo get started, use the Powertools for AWS Lambda metadata utility or call the metadata endpoint directly using the environment variables that Lambda automatically sets in the execution environment. This capability is supported for all Lambda runtimes, including custom runtimes and functions packaged as container images, and integrates seamlessly with Lambda capabilities like SnapStart and provisioned concurrency, regardless of whether your functions are VPC-enabled. \n \nAZ metadata support is available at no additional cost in all commercial AWS Regions where Lambda is available. To learn more, visit Lambda documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/lambda-availability-zone-metadata/",
-      "pubDate": "2026-03-19T16:36:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "rds",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-90c98b4e5353",
       "title": "20 years in the AWS Cloud – how time flies!",
       "description": "Celebrating twenty years of innovation in ML and AI technology at AWS. Countless developers—myself included—have embraced cloud computing and actively used its capabilities to accomplish what was previously impossible.",
@@ -2725,45 +2860,6 @@
         "unified studio",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-13ce8cfd0fca",
-      "title": "Minimax M2.5 and GLM 5 models now available on Amazon Bedrock",
-      "description": "Amazon Bedrock expands model selection for customers by adding support for GLM 5 and Minimax M2.5. GLM 5 is a frontier‑class, general‑purpose large language model optimized for complex systems engineering and long‑horizon agentic tasks. It builds on the GLM 4.5 agent‑centric lineage and is designed to support multi‑step reasoning, math (including AIME‑style benchmarks), advanced coding, and tool‑augmented workflows, with long context support suitable for sophisticated agents and enterprise applications. MiniMax M2.5 is an agent‑native frontier model trained explicitly to reason efficiently, decompose tasks optimally, and complete complex workflows under real‑world time and cost constraints. It achieves task completion speeds comparable to or faster than leading proprietary frontier models by combining high inference throughput with reinforcement learning focused on token‑efficient reasoning and better decision‑making in agentic scaffolds.\n \nMiniMax M2.5 and GLM 5 are now available in Amazon Bedrock across select AWS Regions. For the full list of available AWS Regions, refer to the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-minimax-glm/",
-      "pubDate": "2026-03-18T21:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "lex",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-037241a0292b",
-      "title": "Amazon EC2 High Memory U7i-6TB instances now available in Asia Pacific (Malaysia)",
-      "description": "Amazon EC2 High Memory U7i instances with 6TB of memory (u7i-6tb.112xlarge) are now available in AWS Asia Pacific (Malaysia). U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-6tb instances offer 6TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7i-6tb instances deliver 448 vCPUs with up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 100 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/ec2-high-memory-u7i-6tb-asia-pacific/",
-      "pubDate": "2026-03-18T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available"
       ]
     },
     {
@@ -2840,27 +2936,6 @@
         "redshift",
         "iam",
         "iam identity center"
-      ]
-    },
-    {
-      "id": "aws-news-c8c36ad32218",
-      "title": "NVIDIA Nemotron 3 Super now available on Amazon Bedrock",
-      "description": "Amazon Bedrock now supports NVIDIA Nemotron 3 Super, an open hybrid Mixture-of-Experts (MoE) model designed for complex multi-agent applications. Built for agentic workloads, Nemotron 3 Super delivers fast, and cost-efficient inference enabling AI agents to maintain focus and accuracy across long, multi-step tasks without losing context. Fully open with weights, datasets, and recipes, the model supports easy customization and secure deployment, making it well-suited for enterprises, startups, and individual developers building multi-agent workflows, and advanced reasoning applications.\n \nAmazon Bedrock gives customers access to Nemotron 3 Super through a single, fully managed API — with no infrastructure to provision or models to host. Bedrock's serverless inference, built-in security controls, and compatibility with OpenAI API specifications make it easy to integrate Nemotron 3 Super into existing workflows and deploy at production scale with confidence.\n \nNVIDIA Nemotron 3 Super is now available in Amazon Bedrock across select AWS Regions. For the full list of available AWS Regions, refer to the documentation. To learn more and get started, visit the Amazon Bedrock console or the service documentation here. To get started with Amazon Bedrock OpenAI API-compatible service endpoints, visit documentation here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-nemotron-3-super/",
-      "pubDate": "2026-03-18T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "lex",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -2993,25 +3068,6 @@
       "tags": [
         "emr",
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-6f0513a11600",
-      "title": "Kinesis On-demand Advantage saves 60%+ on streaming costs",
-      "description": "On November 4, 2025, Amazon Kinesis Data Streams introduced On-demand Advantage mode, a capability that enables on-demand streams to handle instant throughput increases at scale and cost optimization for consistent streaming workloads. Historically, you had to choose between provisioned mode, which required managing stream capacity, and on-demand mode, which automatically scaled capacity, but this new offering removes the need to think about stream type at all. In this post, we show three real-world scenarios comparing different usage patterns and demonstrate how On-demand Advantage mode can optimize your streaming costs while maintaining performance and flexibility.",
-      "link": "https://aws.amazon.com/blogs/big-data/kinesis-on-demand-advantage-saves-60-on-streaming-costs/",
-      "pubDate": "2026-03-09T16:42:28.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "lex",
-        "kinesis"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "kinesis"
       ]
     },
     {
@@ -3359,29 +3415,6 @@
         "bedrock",
         "ec2",
         "graviton"
-      ]
-    },
-    {
-      "id": "aws-news-608b6b9419e6",
-      "title": "AWS Weekly Roundup: Claude Opus 4.6 in Amazon Bedrock, AWS Builder ID Sign in with Apple, and more (February 9, 2026)",
-      "description": "Here are the notable launches and updates from last week that can help you build, scale, and innovate on AWS. Last week’s launches Here are the launches that got my attention this week. Let’s start with news related to compute and networking infrastructure: Introducing Amazon EC2 C8id, M8id, and R8id instances: These new Amazon EC2 […]",
-      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/",
-      "pubDate": "2026-02-09T20:42:04.000Z",
-      "source": "newsBlog",
-      "services": [
-        "bedrock",
-        "nova",
-        "ec2"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "bedrock",
-        "nova",
-        "ec2",
-        "launch",
-        "update"
       ]
     },
     {
@@ -3829,21 +3862,6 @@
         "organizations",
         "launch",
         "ga",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-61647c9310e0",
-      "title": "Announcing the updated AWS Well-Architected Generative AI Lens",
-      "description": "We are delighted to announce an update to the AWS Well-Architected Generative AI Lens. This update features several new sections of the Well-Architected Generative AI Lens, including new best practices, advanced scenario guidance, and improved preambles on responsible AI, data architecture, and agentic workflows.",
-      "link": "https://aws.amazon.com/blogs/architecture/announcing-the-updated-aws-well-architected-generative-ai-lens/",
-      "pubDate": "2025-11-19T19:36:28.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
         "update"
       ]
     },
