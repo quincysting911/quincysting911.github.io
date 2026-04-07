@@ -1,8 +1,62 @@
 {
-  "lastUpdated": "2026-04-06T07:15:15.042Z",
+  "lastUpdated": "2026-04-07T07:02:16.634Z",
   "category": "general",
   "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-c82c260acbe2",
+      "title": "Amazon WorkSpaces Personal now supports unique DNS names for PrivateLink",
+      "description": "Amazon WorkSpaces Personal now provides unique, publicly resolvable Domain Name System (DNS) names for each AWS PrivateLink Virtual Private Cloud (VPC) endpoint, enabling enterprise customers to deploy WorkSpaces across multiple AWS VPCs and accounts without DNS resolution conflicts. Each interface VPC endpoint now receives a globally unique AWS-managed DNS name in addition to the previous generic DNS name that was shared across all endpoints.\n  This enhancement enables customers to route traffic appropriately in multi-account environments with centralized DNS infrastructure. Customers can now deploy WorkSpaces Personal directories across different VPCs and AWS accounts while maintaining proper security isolation, eliminating the DNS name collision that previously prevented customers from using separate interface VPC endpoints across accounts. The publicly resolvable DNS names simplify configuration while maintaining security, as they resolve to private IP addresses accessible only from within the respective VPC. The unique DNS names are automatically managed by AWS throughout their lifecycle, requiring no additional Route 53 configuration or custom DNS management.\n  This feature is available in all AWS regions where PrivateLink is available in Amazon WorkSpaces Personal.\n  To learn more, see Amazon WorkSpaces PrivateLink documentation. For configuration details, refer to the WorkSpaces Administration Guide. Existing customers will automatically benefit from this enhancement, as the system maintains backward compatibility with previous DNS configurations.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-workspaces-personal-privatelink/",
+      "pubDate": "2026-04-06T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4acb5be0f80a",
+      "title": "Amazon S3 starts rolling out new security best practice to new and existing buckets by default",
+      "description": "As announced on November 19, 2025, Amazon S3 is now deploying a new default bucket security setting which will automatically disable server-side encryption with customer-provided keys (SSE-C) for all new general purpose buckets. For existing buckets in AWS accounts with no SSE-C encrypted objects, S3 will also disable SSE-C for all new write requests. For AWS accounts with SSE-C usage, S3 will not change the bucket encryption configuration on any of the existing buckets in those accounts. To learn more about this change, visit the S3 User Guide.\n  Amazon S3 will deploy this new default to both new and existing general purpose buckets in 37 AWS Regions including the AWS China and AWS GovCloud (US) Regions over the next few weeks.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/s3-default-bucket-security-setting/",
+      "pubDate": "2026-04-06T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-504ae6bcd466",
+      "title": "Amazon RDS for Oracle now supports Oracle Management Agent version 24.1.0.0.v1 for Oracle Enterprise Manager Cloud Control 24aiR1",
+      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports Oracle Management Agent (OMA) version 24.1.0.0.v1 for Oracle Enterprise Manager (OEM) Cloud Control 24ai Release 1. OEM 24ai offers web-based tools to monitor and manage your Oracle databases. Amazon RDS for Oracle installs OMA, which communicates with your Oracle Management Service (OMS) to provide monitoring information. Customers running OMS version 24.1 Release 1 or later can now manage databases by installing OMA 24.1.0.0.v1\n  To enable the version 24.1.0.0.v1 of OMA for OEM 24aiR1 or later, navigate to \"Option Groups\" in the AWS Management Console and add the \"OEM_AGENT\" option to a new or existing option group and set AGENT_VERSION to “24.1.0.0.v1”. You will also need to configure option settings including OMS hostname (or IP), port, agent registration password, and minimum TLS version of TLSv1.2 to allow OMA on your Amazon RDS for Oracle database instances to communicate with your existing Oracle Management Service (OMS) stack. To learn more, please refer to Amazon RDS for Oracle documentation.\n  For more information on enabling and configuring OEM agents, refer to the Amazon RDS for Oracle documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-rds-oracle-supports-oracle-management-agent-version-for-oracle-enterprise-manager=cloud-control/",
+      "pubDate": "2026-04-06T07:50:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-7746c24a4020",
       "title": "AWS Glue Schema Registry is now available in three more AWS regions",
@@ -300,7 +354,7 @@
     {
       "id": "aws-news-671b606276d4",
       "title": "Announcing Amazon RDS for Oracle on AWS Outposts",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle is now available on AWS Outposts. AWS Outposts is a fully managed service that extends AWS infrastructure, AWS services, APIs, and tools to virtually any data center, co-location space, or on-premises facility for a consistent hybrid experience. As a result, customers can run applications using AWS features and services in their on-premises environment for applications that require data residency, regulatory, or other business constraints. With Amazon RDS for Oracle on AWS Outposts, customers can now use a managed Oracle database service on premises, just as they do in the cloud.\n  Amazon RDS for Oracle on AWS Outposts offers fully managed database management experience such as automated backups, automated patching, point-in-time recovery, monitoring with Amazon CloudWatch, and data encryption at rest with AWS KMS. Amazon RDS for Oracle on AWS Outposts supports multi-AZ deployments across two different Outposts racks for high availability, providing automatic failover to ensure business continuity. For disaster recovery, customer can either restore the database instance in the parent AWS Region using a snapshot taken from the database instance running on AWS Outposts or set up a replica instance in a different Outpost rack or in a different AWS Region.\n  Customers can deploy Oracle Database 19c and 21c Enterprise Edition (EE) and Standard Edition 2 (SE2) using the Bring Your Own License (BYOL) model in Amazon RDS for Oracle on AWS Outposts. To get started with RDS for Oracle on Outposts, visit the Amazon RDS on AWS Outposts User Guide. Amazon RDS for Oracle on AWS Outposts is available in all AWS Regions where Amazon RDS on AWS Outposts is available. For pricing information, visit the Amazon RDS on AWS Outposts pricing page.",
+      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle is now available on AWS Outposts. AWS Outposts is a fully managed service that extends AWS infrastructure, AWS services, APIs, and tools to virtually any data center, co-location space, or on-premises facility for a consistent hybrid experience. As a result, customers can run applications using AWS features and services in their on-premises environment for applications that require data residency, regulatory, or other business constraints. With Amazon RDS for Oracle on AWS Outposts, customers can now use a managed Oracle database service on premises, just as they do in the cloud.\n  Amazon RDS for Oracle on AWS Outposts offers fully managed database management experience such as automated backups, automated patching, point-in-time recovery, monitoring with Amazon CloudWatch, and data encryption at rest with AWS KMS. Amazon RDS for Oracle on AWS Outposts supports multi-AZ deployments across two different Outposts racks for high availability, providing automatic failover to ensure business continuity. For disaster recovery, customer can either restore the database instance in the parent AWS Region using a snapshot taken from the database instance running on AWS Outposts or set up a replica instance in a different Outpost rack.\n  Customers can deploy Oracle Database 19c and 21c Enterprise Edition (EE) and Standard Edition 2 (SE2) using the Bring Your Own License (BYOL) model in Amazon RDS for Oracle on AWS Outposts. To get started with RDS for Oracle on Outposts, visit the Amazon RDS on AWS Outposts User Guide. Amazon RDS for Oracle on AWS Outposts is available in all AWS Regions where Amazon RDS on AWS Outposts is available. For pricing information, visit the Amazon RDS on AWS Outposts pricing page.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-rds-oracle-aws-outposts/",
       "pubDate": "2026-03-31T08:00:00.000Z",
       "source": "whatsNew",
@@ -353,6 +407,25 @@
       "tags": [
         "ga",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-adfac23af63b",
+      "title": "Amazon Kinesis Video Streams (KVS) now supports WebRTC in AWS GovCloud (US) Regions",
+      "description": "Amazon Kinesis Video Streams (KVS) now supports WebRTC (Real-Time Communication) in AWS GovCloud (US) Regions, bringing real-time, low-latency media and data streaming to security-sensitive workloads in the cloud. Amazon Kinesis Video Streams makes it easy to securely ingest, store, and process video from connected devices at scale. WebRTC support extends this capability to real-time, two-way media streaming, enabling sub-second latency for mission-critical applications.\n \nWith this update, AWS customers and AWS Partners who operate in the AWS GovCloud (US) Regions can now build and deploy real-time video streaming applications without compromising on compliance. For example, the update enables developers within these agencies to support critical use cases including live surveillance feeds for border security and military installations, real-time body camera streaming for law enforcement with data residency compliance, remote drone and UAV video monitoring for defense operations, and Internet of Things (IoT) smart infrastructure monitoring for state and local governments, all while meeting Federal Risk and Authorization Management Program (FedRAMP) High and other regulatory requirements.\n \nThis feature is available today in AWS GovCloud (US-East) and AWS GovCloud (US-West). To get started, visit the Amazon Kinesis Video Streams WebRTC product page and see the AWS Region table for complete regional availability.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-kinesis-video-streams-webrtc-govcloud-regions/",
+      "pubDate": "2026-03-30T22:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kinesis"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "kinesis",
+        "update",
+        "support"
       ]
     },
     {
@@ -585,76 +658,6 @@
       ]
     },
     {
-      "id": "aws-news-f8eb5bc6143b",
-      "title": "Accelerate AI-assisted development with Agent Plugin for AWS Serverless",
-      "description": "AWS announces the Agent Plugin for AWS Serverless, enabling developers to easily build, deploy, troubleshoot, and manage serverless applications using AI coding assistants like Kiro, Claude Code, and Cursor.\n \nAgent plugins extend AI coding assistants with structured, reusable capabilities by packaging skills, sub-agents, hooks, and Model Context Protocol (MCP) servers into a single modular unit. The Agent Plugin for AWS Serverless dynamically loads relevant guidance and expertise required throughout the development lifecycle for building production-ready serverless applications on AWS. You can create AWS Lambda functions that integrate with popular event sources like Amazon EventBridge, Amazon Kinesis, and AWS Step Functions, while following built-in best practices for observability, performance optimization, and troubleshooting. As you adopt Infrastructure as Code (IaC), you can streamline project setup with AWS Serverless Application Model (SAM) and AWS Cloud Development Kit (CDK), with reusable constructs, proven architectural patterns, automated CI/CD pipelines, and local testing workflows. For long-running, stateful workflows, you can build with confidence using Lambda durable functions, which provides checkpoint-replay model, advanced orchestration patterns, and error handling capabilities. Lastly, you can design and manage APIs as part of your application using Amazon API Gateway, with guidance across REST APIs, HTTP APIs, and WebSocket APIs. These capabilities are packaged as agent skills in the open Agent Skills format, making them usable across compatible AI tools such as Kiro, Claude Code, and Cursor.\n \nThe Agent Plugin for AWS Serverless is available in any AI coding assistant tools that support agent plugins such as Claude Code and Cursor. In Claude Code, you can install it from the official Claude Marketplace using a simple command ‘/plugin install aws-serverless@claude-plugins-official’. You can also install agent skills from the plugin individually in any AI coding assistant tools that support agent skills. To learn more about the plugin and its capabilities, visit GitHub.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agent-plugin-aws-serverless/",
-      "pubDate": "2026-03-25T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "kinesis",
-        "api gateway",
-        "eventbridge",
-        "step functions"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "kinesis",
-        "api gateway",
-        "eventbridge",
-        "step functions",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cf68fc90324b",
-      "title": "Amazon Route 53 Profiles now supports granular IAM permissions for resource and VPC associations",
-      "description": "Amazon Route 53 Profiles now supports granular AWS Identity and Access Management (IAM) permissions, allowing you to control which users can manage specific resource types and VPC associations within your Profiles. With this launch, you can create IAM policies that restrict users to specific operations (associate, disassociate, or update) on individual resource types such as private hosted zones, Resolver rules, or DNS Firewall rule groups. You can also define permissions based on resource ARNs, hosted zone names, Resolver rule domain names, DNS Firewall rule group priority ranges, or specific VPC associations.\n  Route 53 Profiles enable you to define a standard DNS configuration that includes private hosted zone associations, Resolver rules, and DNS Firewall rule groups, and apply this configuration to multiple VPCs in your account or share with AWS accounts using AWS Resource Access Manager (RAM). This new capability provides administrators with fine-grained control over Profile management, enabling you to delegate specific responsibilities while maintaining security and governance standards across your organization.\n  This feature is available at no additional charge in all AWS Regions where Route 53 Profiles is available, except in Middle East (Bahrain) and Middle East (UAE). To learn more, see the Amazon Route 53 Profiles documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-route-53-profiles-granular-iam/",
-      "pubDate": "2026-03-25T18:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "iam",
-        "launch",
-        "ga",
-        "update",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-1e5ae93d5aaa",
-      "title": "Amazon Aurora PostgreSQL now available with the AWS Free Tier",
-      "description": "Amazon Aurora PostgreSQL is now available on the AWS Free Tier, which offers new customers $100 in AWS credits upon sign-up and the ability to earn an additional $100 in credits by using services including Amazon RDS.\n  With a Free Plan account, you can create an Aurora PostgreSQL serverless cluster from the Amazon RDS Console, AWS CLI, or AWS SDKs using express configuration, which enables you to create and query an Aurora PostgreSQL database in seconds. To get started, select the Free Plan during new AWS account sign-up.\n \nAWS Free Tier is available in all AWS Regions where Aurora PostgreSQL serverless is supported. For more details, see the Aurora & RDS Free Tier and AWS Free Tier pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-aurora-postgresql-aws-free-tier/",
-      "pubDate": "2026-03-25T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-7ccb09747da6",
       "title": "Announcing new output formats in AWS CLI v2",
       "description": "Amazon Web Services (AWS) is announcing two new features for the AWS Command Line Interface (AWS CLI) v2: structured error output and the “off” output format.",
@@ -883,24 +886,6 @@
       "tags": [
         "dynamodb",
         "generally-available"
-      ]
-    },
-    {
-      "id": "aws-news-ae25b45e1a62",
-      "title": "AWS Tools for PowerShell V5 now Generally Available",
-      "description": "This blog was co-authored by Afroz Mohammed and Jonathan Nunn, Software Developers on the AWS PowerShell team. We’re excited to announce the general availability of the AWS Tools for PowerShell version 5, a major update that brings new features and improvements in security, along with a few breaking changes. New Features You can now cancel […]",
-      "link": "https://aws.amazon.com/blogs/developer/aws-tools-for-powershell-v5-now-generally-available/",
-      "pubDate": "2025-06-23T22:59:33.000Z",
-      "source": "developersAndDevOps",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "new-feature",
-        "update",
-        "improvement"
       ]
     }
   ]
