@@ -1,8 +1,83 @@
 {
-  "lastUpdated": "2026-04-07T07:02:16.634Z",
+  "lastUpdated": "2026-04-08T07:04:40.463Z",
   "category": "general",
   "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-0645040f6f60",
+      "title": "AWS Lambda expands response streaming support to all commercial AWS Regions",
+      "description": "AWS Lambda response streaming is now available in all commercial AWS Regions, bringing full regional parity for this capability. Customers in newly supported Regions can use the InvokeWithResponseStream API to progressively stream response payloads back to clients as data becomes available.\n \nResponse streaming enables functions to send partial responses to clients incrementally rather than buffering the entire response before transmission. This reduces time-to-first-byte (TTFB) latency and is well suited for latency-sensitive workloads such as LLM-based applications as well as web and mobile applications where users benefit from seeing responses appear incrementally. Response streaming supports payloads up to a default maximum of 200 MB.\n \nWith this expansion, customers in all commercial Regions can stream responses using the InvokeWithResponseStream API through a supported AWS SDK, or through Amazon API Gateway REST APIs with response streaming enabled. Response streaming supports Node.js managed runtimes as well as custom runtimes.\n \nStreaming responses incur an additional cost for network transfer of the response payload. You are billed based on the number of bytes generated and streamed out of your Lambda function over the first 6 MB. To get started with Lambda response streaming, visit the AWS Lambda documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-lambda-response-streaming/",
+      "pubDate": "2026-04-07T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "api gateway"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "api gateway",
+        "ga",
+        "now-available",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-55a19a5b3cfe",
+      "title": "Amazon Lightsail is now available in the Asia Pacific (Malaysia) Region",
+      "description": "Starting today, Amazon Lightsail is available in the Asia Pacific (Malaysia) Region. This expansion brings the power and simplicity of Lightsail to customers in Malaysia and surrounding regions.\n  With this launch, customers in Malaysia and nearby countries can now enjoy lower latency and better performance for their applications while meeting local data residency requirements. The new Region provides access to Lightsail's full range of features including instances that meet your compute needs—from general purpose to compute-optimized and memory-optimized bundles—as well as managed databases, containers, load balancers and more, all with the same simple, predictable pricing that Lightsail customers love.\n  Lightsail is available in these AWS Regions: US East (Ohio, N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt, Ireland, London, Paris, Stockholm), Asia Pacific (Malaysia, Jakarta, Mumbai, Seoul, Singapore, Sydney, Tokyo). To learn more about Regions and Availability Zones for Lightsail, please refer to the documentation.\n  You can use this Region through the Lightsail Console, AWS Command Line Interface (CLI) and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-lightsail-malaysia/",
+      "pubDate": "2026-04-07T17:30:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "now-available",
+        "new-region",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-701e3ae806d2",
+      "title": "Amazon Braket adds support for Rigetti's 108-qubit Cepheus QPU",
+      "description": "Amazon Braket, the quantum computing service from AWS, now offers access to Rigetti's Cepheus-1-108Q device, the first 100+ qubit superconducting quantum processing unit (QPU) available on Amazon Braket. Cepheus-1-108Q uses Rigetti's modular multi-chip architecture, consisting of a 3x4 array of twelve 9-qubit chiplets with tunable couplers and intermodule couplers between chiplets.\n \nCepheus-1-108Q introduces CZ (controlled phase) gates, replacing the iSWAP gates used on previous Rigetti QPUs. CZ gates provide higher resilience to phase errors common in superconducting systems, and Rigetti's adiabatic CZ implementation further reduces leakage errors. These improvements enable customers to run deeper circuits for use cases such as chemical simulation, combinatorial optimization, and machine learning. Customers can build and run quantum programs using the Braket SDK or other frameworks such as Qiskit, CUDA-Q, and Pennylane. Pulse-level control is also available for researchers who need low-level hardware access to study noise, develop gates, or devise error mitigation schemes.\n \nCepheus-1-108Q is available in the US West (N. California) Region. Get started by viewing the device on the Amazon Braket Management Console, reading our Amazon Braket documentation, or applying for AWS credits to support experiments on Amazon Braket through the AWS Cloud Credits for Research program.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-braket-rigetti-cepheus/",
+      "pubDate": "2026-04-07T09:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a3189824ddaf",
+      "title": "AWS Certificate Manager now supports native certificate search",
+      "description": "AWS Certificate Manager (ACM) now provides a search bar in the console that customers can use to find certificates using one or more certificate parameters such as domain name, certificate ARN, and/or certificate validity. For example, ACM users who manages multiple certificates can search for certificates with specific domains that are due to expire soon.\n  To get started, use the new SearchCertificates API, or navigate to the ACM console and use the search bar to search by one or more certificate parameters.\n  This feature is available in all Public AWS, AWS China, and AWS GovCloud regions. To learn more about this feature, please refer to Search Certificates. You can learn more about ACM and get started here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-certificate-manager-search/",
+      "pubDate": "2026-04-07T04:01:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c82c260acbe2",
       "title": "Amazon WorkSpaces Personal now supports unique DNS names for PrivateLink",
@@ -572,89 +647,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-7bab82cf391f",
-      "title": "AWS Lambda increases the file descriptor limit to 4,096 for functions running on Lambda Managed Instances",
-      "description": "AWS Lambda increases the file descriptor limit from 1,024 to 4,096, a 4x increase, for functions running on Lambda Managed Instances (LMI). This capability enables customers to run I/O intensive workloads such as high-concurrency web services, and file-heavy data processing pipelines, without running into file descriptor limits. LMI enables you to run Lambda functions on managed Amazon EC2 instances with built-in routing, load-balancing, and auto-scaling, giving you access to specialized compute configurations including the latest-generation processors and high-bandwidth networking, with no operational overhead.\n  Customers use Lambda functions to build a wide range of serverless applications such as event-driven workloads, web applications, and AI-driven workflows. These applications rely on file descriptors for operations such as opening files, establishing network socket connections to external services and databases, and managing concurrent I/O streams for data processing. Each open file, network socket, or internal resource consumes one file descriptor. Today, Lambda supports a maximum of 1,024 file descriptors. However, LMI allows multiple requests to be processed simultaneously, which often requires higher number of file descriptors. With this launch, AWS Lambda is increasing the file descriptor limit to 4,096, allowing customers to run I/O intensive workloads, maintain larger connection pools, and effectively utilize multi-concurrency for functions running on LMI.\n  This feature is available in all AWS Regions where AWS Lambda Managed Instances is generally available. To get started, visit the AWS Lambda Managed Instances documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-Lambda-file-descriptors-increase-4096/",
-      "pubDate": "2026-03-26T16:15:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "launch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a27e83c4f60c",
-      "title": "Amazon EC2 M8a instances now available in AWS Europe (Ireland) region",
-      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Europe (Ireland) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements. \n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-europe-ireland-region/",
-      "pubDate": "2026-03-26T15:00:12.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-fbd1decbbf02",
-      "title": "Amazon EC2 M8a instances now available in AWS GovCloud (US-West) region",
-      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS GovCloud (US-West) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements. \n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-govcloud-us-west-region/",
-      "pubDate": "2026-03-26T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-bd664761ee2d",
-      "title": "AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region",
-      "description": "AWS Firewall Manager announces that it is now available in AWS Asia Pacific (New Zealand) Region. AWS Firewall Manager helps cloud security administrators and site reliability engineers protect applications while reducing the operational overhead of manually configuring and managing rules.\n  Working with AWS Firewall Manager, customers can provide defense in depth policies to address the full range of AWS security services for customers hosting their applications and workloads in AWS Taipei. Customers wishing to establish secured assets using AWS WAF can create and maintain security policies with AWS Firewall Manager.\n  To learn more about how AWS Firewall Manager works, see the AWS Firewall Manager documentation for more details and the AWS Region Table for the list of regions where AWS Firewall Manager is currently available. To learn more about AWS Firewall Manager, its features, and its pricing, visit the AWS Firewall Manager website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-firewall-manager-launches-ap-nz/",
-      "pubDate": "2026-03-25T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "waf"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "waf",
-        "launch",
-        "now-available"
       ]
     },
     {
