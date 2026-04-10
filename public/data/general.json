@@ -1,8 +1,69 @@
 {
-  "lastUpdated": "2026-04-09T07:08:26.424Z",
+  "lastUpdated": "2026-04-10T07:13:13.272Z",
   "category": "general",
   "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-842f308514a4",
+      "title": "Amazon S3 Lifecycle pauses actions on objects that are unable to replicate",
+      "description": "Amazon S3 Lifecycle now prevents expiration and transition actions on objects that failed replication, helping you to coordinate replication configuration or permissions changes with actions defined in your lifecycle rules.\n \nIncorrect permissions or replication configuration can prevent objects from being replicated. With this change, S3 Lifecycle no longer expires or transitions objects that have failed replication, even if they match one of the lifecycle rules that you have defined. Once you have corrected your replication configuration or permissions, you can use S3 Batch Replication to replicate objects that previously failed. After successful replication, S3 Lifecycle will automatically process these objects according to your configured rules.\n \nThis change applies automatically to all existing and new S3 Lifecycle configurations, across 37 AWS Regions, including the AWS China and AWS GovCloud (US) Regions. We are in the process of deploying this change and plan to complete the deployment in the coming days. To learn more, visit S3 Lifecycle documentation and S3 Replication troubleshooting documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/s3-lifecycle-pauses-actions-on-objects/",
+      "pubDate": "2026-04-09T17:33:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3"
+      ]
+    },
+    {
+      "id": "aws-news-9326cca5daf0",
+      "title": "Amazon RDS Blue/Green Deployments now supports Amazon RDS Proxy",
+      "description": "Amazon RDS Blue/Green Deployments now supports Amazon RDS Proxy, enabling faster application recovery during switchover by eliminating DNS propagation delays. Blue/Green Deployments create a fully managed staging environment (Green) that allows you to deploy and test production changes, keeping your current production database (Blue) safe. When ready, you can switchover to the new production environment and your applications begin accessing it immediately without any configuration changes.\n  During a Blue/Green Deployment switchover for single-Region configurations, RDS Proxy actively monitors database instances and detects when the Green environment becomes the new production environment. This allows RDS Proxy to quickly redirect connections to the Green environment, enabling faster application recovery. You don't need to modify your drivers or change your existing application setup.\n  Amazon RDS Blue/Green Deployments with Amazon RDS Proxy is available for Amazon Aurora with MySQL compatibility, Amazon Aurora with PostgreSQL compatibility, Amazon RDS for MySQL, Amazon RDS for PostgreSQL, and Amazon RDS for MariaDB in all commercial AWS Regions where RDS Proxy is available.\n  In a few clicks, update your databases using RDS Blue/Green Deployments via the Amazon RDS Console or Amazon CLI. To learn more, see Blue/Green Deployments overview in the Amazon RDS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/rds-proxy-blue-green/",
+      "pubDate": "2026-04-09T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-5873d263a9d0",
+      "title": "Amazon EC2 Capacity Manager now supports tag-based dimensions",
+      "description": "Starting today, Amazon EC2 Capacity Manager supports tag-based dimensions, enabling you to use tags from your EC2 resources to group and filter capacity metrics. EC2 Capacity Manager helps you monitor and optimize capacity usage across On-Demand Instances, Spot Instances, and Capacity Reservations. This launch also introduces Account Name as a new built-in dimension.\n \nYou can activate up to five custom tag keys — such as environment, team, or cost-center — and use them alongside built-in dimensions like Region, Instance Type, and Availability Zone to group and filter capacity metrics by tag values in the console and APIs, and include tag data as additional columns in newly created S3 data exports. Capacity Manager also includes four Capacity Manager-provided tags by default: EC2 Auto Scaling group name, EKS cluster name, EKS Kubernetes node pool, and Karpenter node pool. The new Account Name dimension makes it easier to identify accounts when analyzing cross-account capacity data across your organization.\n \nThis feature is available in all AWS Regions where EC2 Capacity Manager is available. To get started, navigate to the Settings tab in Capacity Manager and choose Manage tag keys, or use the AWS CLI. To learn more, see Managing monitored tag keys in the Amazon EC2 User Guide. For more information about Amazon EC2 Capacity Manager, visit the EC2 Capacity Manager documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-capacity-manager-tag-based-dimensions/",
+      "pubDate": "2026-04-09T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "ec2",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "ec2",
+        "eks",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-3cd23d1b3e33",
       "title": "Amazon IVS Real-Time Streaming now supports redundant ingest",
@@ -552,70 +613,6 @@
       ],
       "tags": [
         "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-6c9e24625d79",
-      "title": "AWS Direct Connect adds CloudWatch metrics for BGP monitoring",
-      "description": "AWS Direct Connect now publishes three new Amazon CloudWatch metrics for virtual interfaces (VIFs) that provide visibility into Border Gateway Protocol (BGP) session health and route counts. Network engineers and operations teams managing hybrid cloud connectivity can now monitor BGP sessions natively through CloudWatch without building custom solutions or polling APIs.\n \nThese metrics solve critical monitoring gaps that previously required custom Lambda functions or on-premises network management tools. VirtualInterfaceBgpStatus reports BGP session state, enabling detection when sessions fail. VirtualInterfaceBgpPrefixesAccepted tracks prefixes from your on-premises network, allowing proactive alarms before reaching prefix limits that would cause BGP sessions to enter idle state. VirtualInterfaceBgpPrefixesAdvertised monitors routes AWS advertises to your network, helping validate configuration changes and detect silent route withdrawals that impact traffic even when BGP sessions remain up.\n \nThese metrics are available for private, public, and transit virtual interfaces in all commercial AWS Regions. You can integrate them with CloudWatch alarms, dashboards, and Amazon SNS for comprehensive BGP monitoring, reducing mean time to detect network issues and simplifying operations for multi-region and disaster recovery architectures. To learn more about AWS Direct Connect, visit https://aws.amazon.com/directconnect/.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-direct-connect-cloudwatch-bgp-monitoring/",
-      "pubDate": "2026-03-30T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "rds",
-        "sns",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "rds",
-        "sns",
-        "cloudwatch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-dc12452678ea",
-      "title": "Amazon Timestream for InfluxDB Now Supports Advanced Metrics",
-      "description": "Amazon Timestream for InfluxDB now offers Advanced Metrics, providing comprehensive visibility into your database performance and health. This new capability automatically publishes detailed operational metrics from your Timestream for InfluxDB 2 instances directly to Amazon CloudWatch, enabling real-time monitoring and alerting without requiring additional configuration or instrumentation for both Single-AZ and Multi-AZ Timestream for InfluxDB 2 databases.\n  With Advanced Metrics, customers can track critical database performance indicators, set up custom dashboards, and configure automated alerts based on predefined thresholds. This enhanced observability helps DevOps teams quickly identify potential issues, optimize database performance, and ensure high availability for time-series applications by providing deeper insights into resource utilization, query performance, and system health across their InfluxDB 2 environments.\n  Amazon Timestream for InfluxDB Advanced Metrics is available in all Regions where Timestream for InfluxDB is offered.\n  To get started with Amazon Timestream for InfluxDB, visit the Amazon Timestream for InfluxDB console. For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-timestream-for-influxdb-advanced-metrics/",
-      "pubDate": "2026-03-27T22:48:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-555c8ed0f9d7",
-      "title": "AWS Management Console now supports settings to control service and Region visibility",
-      "description": "Today, AWS announces the general availability of Visible services and Visible Regions account settings in the AWS Management Console. These settings allow you to customize which services and regions appear in the Management Console for authorized users in your account, helping your users easily identify what is available to them and simplifying navigation.\n  You can configure these settings in the AWS Management Console under Unified Settings in the Account Settings tab. You can also configure these setting programmatically via User Experience Customization (UXC) in AWS Command Line Interface (CLI), AWS Software Development Kits (SDKs), AWS Cloud Development Kit (CDK), or AWS CloudFormation. The Visible services and Visible Regions settings are available in AWS Commercial Regions at no additional cost.\n  Visit the AWS User Experience Customization documentation page and API guide to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/account-customizations-console/",
-      "pubDate": "2026-03-27T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "ga",
-        "support"
       ]
     },
     {
