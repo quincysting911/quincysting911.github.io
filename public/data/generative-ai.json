@@ -1,8 +1,48 @@
 {
-  "lastUpdated": "2026-04-10T07:13:13.272Z",
+  "lastUpdated": "2026-04-11T06:46:00.678Z",
   "category": "generative-ai",
   "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-8ea5fc03051c",
+      "title": "Amazon CloudWatch pipelines now supports drop and conditional processing",
+      "description": "Amazon CloudWatch pipelines now supports conditional processing and a new drop events processor, giving you more control over how your log data is transformed. CloudWatch pipelines is a fully managed service that ingests, transforms, and routes log data to CloudWatch without requiring you to manage infrastructure. Until now, processors applied to all log entries uniformly. With conditional processing, you can define rules that determine when a processor runs and which individual log entries it acts on, so you only transform the data that matters.\n \nConditional processing is available across 21 processors including Add Entries, Delete Entries, Copy Values, Grok, Rename Key, and more. For each processor, you can set a \"run when\" condition to skip the entire processor if the condition is not met, or an entry-level condition to control whether each individual action within the processor is applied. The new Drop Events processor lets you filter out unwanted log entries from third-party pipeline connectors based on conditions you define, helping reduce noise and lower costs.\n \nConditional processing and the Drop Events processor are available at no additional cost in all AWS Regions where CloudWatch pipelines is generally available. Standard CloudWatch Logs ingestion and storage rates still apply.\n \nTo get started, visit the CloudWatch pipelines page in the Amazon CloudWatch console. To learn more, see the CloudWatch pipelines documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-cloudwatch-pipelines-conditional/",
+      "pubDate": "2026-04-10T20:53:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudwatch",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b7ab2b34ee19",
+      "title": "Second-generation Amazon FSx for NetApp ONTAP is now available in four additional AWS commercial and AWS GovCloud (US) Regions",
+      "description": "Amazon FSx for NetApp ONTAP second-generation file systems are now available in 4 additional AWS Regions: Europe (London), Asia Pacific (Hyderabad), South America (Sao Paulo), and AWS GovCloud (US-West). \n  Amazon FSx makes it easier and more cost effective to launch, run, and scale feature-rich, high-performance file systems in the cloud. Second-generation FSx for ONTAP file systems give you more performance scalability and flexibility over first-generation file systems by allowing you to create or expand file systems with up to 12 highly-available (HA) pairs of file servers, providing your workloads with up to 72 GBps of throughput and 1 PiB of provisioned SSD storage.\n  With this regional expansion, second-generation FSx for ONTAP file systems are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (N. California, Oregon), Canada (Central), Europe (Frankfurt, Ireland, London, Spain, Stockholm, Zurich), South America (Sao Paulo), Asia Pacific (Hyderabad, Mumbai, Seoul, Singapore, Sydney, Tokyo), and AWS GovCloud (US-West). You can create second-generation Multi-AZ file systems with a single HA pair, and Single-AZ file systems with up to 12 HA pairs. To learn more, visit the FSx for ONTAP user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/second-gen-amazon-fsx-ontap-regions/",
+      "pubDate": "2026-04-10T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "ga",
+        "now-available",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-ef398151d2fb",
       "title": "Amazon OpenSearch Service supports Managed Prometheus and agent tracing",
@@ -725,48 +765,6 @@
       "tags": [
         "ga",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5712b2d48635",
-      "title": "Amazon S3 Express One Zone now supports request metrics in Amazon CloudWatch",
-      "description": "Amazon S3 Express One Zone, a high performance S3 storage class for latency-sensitive applications, now supports request metrics in Amazon CloudWatch. You can use request metrics to track performance and monitor the operational health of applications that use S3 Express One Zone.\n \nIn addition to existing storage metrics, you can now use request metrics to monitor request counts, data transfer volumes, error rates, and latency measurements at minute-level granularity. These request metrics are available through the CloudWatch console, S3 console, S3 API, and AWS CLI. \n \nCloudWatch request metrics for S3 Express One Zone are available in all AWS Regions where the storage class is available. For pricing information, visit the CloudWatch pricing page. To learn more, visit the S3 Express One Zone overview page and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/s3-express-one-zone-cloudwatch-request-metrics/",
-      "pubDate": "2026-03-31T06:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c65dc08963a7",
-      "title": "Amazon CloudWatch now supports multi-account and region log centralization based on data source",
-      "description": "Amazon CloudWatch centralization now supports centralizing logs based on data source name and type. CloudWatch allows customers to copy log data from multiple AWS accounts and regions into a single destination account using centralization rules. With today's launch, customers can now define rules that target data sources by name and type, such as VPC Flow Logs, EKS Audit Logs, and CloudTrail Logs, in addition to the existing log group name-based selection.\n \nData source name and type are discovered automatically by CloudWatch for AWS service logs and are based on log group tags for application logs.  Now, customers can specifically target which logs they want to centralize using these parameters. For example, a central security team can create a rule that centralizes all logs from CloudTrail and VPC data sources across their entire organization without needing to know or maintain a list of individual log group names.\n \nTo get started, create or modify a centralization rule in the Amazon CloudWatch console or through the AWS CLI and AWS SDKs, and specify your data source selection criteria in the centralization rule configuration.\n \nData source selection criteria is available in all AWS commercial regions where CloudWatch log centralization is available. Standard CloudWatch Logs pricing applies for log ingestion, storage, and data transfer. For more information, see the CloudWatch Logs Centralization documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-centralization-datasource/",
-      "pubDate": "2026-03-30T23:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "eks",
-        "cloudwatch",
-        "launch",
-        "ga",
         "support"
       ]
     },
