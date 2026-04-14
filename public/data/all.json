@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-13T07:45:20.834Z",
-  "totalItems": 197,
+  "lastUpdated": "2026-04-14T07:15:07.571Z",
+  "totalItems": 196,
   "sources": {
-    "whatsNew": 91,
+    "whatsNew": 90,
     "mlBlog": 20,
     "newsBlog": 16,
     "bigDataBlog": 19,
@@ -11,6 +11,247 @@
     "developersAndDevOps": 15
   },
   "items": [
+    {
+      "id": "aws-news-5a1388f2586a",
+      "title": "Amazon OpenSearch Serverless now supports Derived Source for storage optimization",
+      "description": "Amazon OpenSearch Serverless introduces support for Derived Source, a new feature that can help reduce the amount of storage required for your OpenSearch Service collections. With derived source support, you can skip storing source fields and dynamically derive them when required. \n \nWith Derived Source, OpenSearch Serverless reconstructs the _source field on the fly using the values already stored in the index, eliminating the need to maintain a separate copy of the original document. This can significantly reduce storage consumption, particularly for time-series and log analytics collections where documents contain many indexed fields. You can enable derived source at the index level when creating or updating index mappings.\n \nDerived Source support is available today in all AWS Regions where Amazon OpenSearch Serverless is supported. For more information, see the Amazon OpenSearch Serverless documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-serverless-supports-derived-source/",
+      "pubDate": "2026-04-13T20:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f4628351694",
+      "title": "Amazon Redshift introduces key  performance  optimization for Top-K queries",
+      "description": "Amazon Redshift further optimizes the processing of top-k queries (queries with ORDER BY and LIMIT clauses) by intelligently skipping irrelevant data blocks to return results faster, dramatically reducing the amount of data processed. This optimization reorders and efficiently adjusts the data blocks to be read based on the ORDER BY column's min/max values, maintaining only the K most qualifying rows in memory. When the ORDER BY column is sorted or partially sorted, Amazon Redshift now processes only the minimal data blocks needed rather than scanning entire tables, eliminating unnecessary I/O and compute overhead.\n \nThis enhancement particularly benefits top-k queries when the data permanently stores in descending order (ORDER BY ... DESC LIMIT K) on large tables where qualifying rows are appended at the end of the data storage. Common examples include:\n  \n \n \nFinding the k most recent orders from millions or billions of transactions\n \n \nRetrieving top-k best performing products or k worst performing products (top-k in descending order) from your sales catalog containing hundreds of thousands stock keeping units (SKUs) and millions or billions of sales transactions associated with all product SKUs in your sales catalog\n \n \nFinding the top-k most recent or top-k oldest (top k in descending order) prompts inferred by a foundational large language model (LLM) out of billions of prompts.\n \n \nWith this new optimization, top-k query performance improves dramatically. This optimization for top-k queries is now available in Amazon Redshift at no additional cost starting with patch release P199 across all AWS regions where Amazon Redshift is available. This optimization automatically applies to eligible queries without requiring any query rewrites or configuration changes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-redshift-topk-optimization/",
+      "pubDate": "2026-04-13T18:58:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "redshift",
+        "now-available",
+        "enhancement"
+      ]
+    },
+    {
+      "id": "aws-news-2bbbbcf842fe",
+      "title": "Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-West) Region",
+      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-West) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex instance page or visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-m8i-flex-govcloud-us-west/",
+      "pubDate": "2026-04-13T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-e9eda9f3eb29",
+      "title": "Amazon CloudWatch Logs Insights now supports saved queries with parameters",
+      "description": "Amazon CloudWatch Logs Insights saved queries now support parameters, allowing you to pass values to reusable query templates with placeholders. This eliminates the need to maintain multiple copies of nearly identical queries that differ only in specific values such as log levels, service names, or time intervals.\n  You can define up to 20 parameters in a query, with each parameter supporting optional default values. For example, you can create a single template to query logs by severity level (such as ERROR or WARN) and pass different service names each time you run it. To execute a query with parameters, invoke it using the query name prefixed with $ and pass your parameter values, such as $ErrorsByService(logLevel=\"ERROR\", serviceName=\"OrderEntry\"). You can also use multiple saved queries with parameters together for complex log analysis, significantly reducing query maintenance overhead while improving reusability.\n  Saved queries with parameters are available in all commercial AWS regions. You can create and use saved queries with parameters using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. To learn more, see the Amazon CloudWatch Logs documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-logs-insights-query-params/",
+      "pubDate": "2026-04-13T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudwatch"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-babcc52a3fc1",
+      "title": "Amazon EC2 R8i and R8i-flex instances are now available in AWS GovCloud (US-West) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i and R8i-flex instances are available in the AWS GovCloud (US-West) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i and R8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.\n  R8i-flex, our first memory-optimized Flex instances, are the easiest way to get price performance benefits for a majority of memory-intensive workloads. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, delivering exceptional performance for mission-critical SAP workloads.\n  To get started, sign in to the AWS Management Console. For more information about the R8i and R8i-flex instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-r8i-instances-govcloud-us-west/",
+      "pubDate": "2026-04-13T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-4897a7a1d758",
+      "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
+      "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/",
+      "pubDate": "2026-04-13T16:16:20.000Z",
+      "source": "newsBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "bedrock",
+        "preview"
+      ]
+    },
+    {
+      "id": "aws-news-4ab560106e65",
+      "title": "AWS IoT is now available in Israel (Tel Aviv) and Europe (Milan) AWS Regions",
+      "description": "AWS IoT Core and AWS IoT Device Management services are now available in the Israel (Tel Aviv) and Europe (Milan) AWS Regions. With this expansion, organizations operating in these regions can better serve their local customers and unlock multiple benefits, including faster response times, stronger data residency controls, and reduced data transfer expenses.\n  AWS IoT Core is a managed cloud service that lets you securely connect billions of Internet of Things (IoT) devices to the cloud and manage them at scale. It routes trillions of messages to IoT devices and AWS endpoints, through bi-directional industry standard protocols, such as MQTT, HTTPS, LoRaWAN (select regions). AWS IoT Device Management allows customers to search, organize, monitor and remotely manage connected devices at scale.\n  With the expansion to these regions, AWS IoT is now available in 27 AWS Regions worldwide. To get started and to learn more, refer to the technical documentation for AWS IoT Core and AWS IoT Device Management.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-iot-israel-tel-aviv-europe-milan/",
+      "pubDate": "2026-04-13T16:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "now-available",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-4f04f86ebf67",
+      "title": "How to build effective reward functions with AWS Lambda for Amazon Nova model customization",
+      "description": "This post demonstrates how Lambda enables scalable, cost-effective reward functions for Amazon Nova customization. You'll learn to choose between Reinforcement Learning via Verifiable Rewards (RLVR) for objectively verifiable tasks and Reinforcement Learning via AI Feedback (RLAIF) for subjective evaluation, design multi-dimensional reward systems that help you prevent reward hacking, optimize Lambda functions for training scale, and monitor reward distributions with Amazon CloudWatch. Working code examples and deployment guidance are included to help you start experimenting.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-to-build-effective-reward-functions-with-aws-lambda-for-amazon-nova-model-customization/",
+      "pubDate": "2026-04-13T16:01:18.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova",
+        "lambda",
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "lambda",
+        "rds",
+        "cloudwatch"
+      ]
+    },
+    {
+      "id": "aws-news-56e6626fcb4b",
+      "title": "Amazon FSx now supports copying file system backups across AWS opt-in Regions",
+      "description": "Amazon FSx now supports copying file system backups across opt-in Regions (AWS Regions that are disabled by default) for Amazon FSx for Windows File Server, Amazon FSx for Lustre, and Amazon FSx for OpenZFS. This launch makes it easier for customers to meet business continuity, disaster recovery, and compliance requirements by extending cross-Region, cross-account backup and recovery capabilities beyond AWS Regions that are enabled by default.\n \nAmazon FSx is a fully managed service that makes it easy and cost-effective to launch, run, and scale feature-rich, high-performance file systems in the AWS Cloud. Opt-in Regions are AWS Regions that are disabled by default, in contrast to regions that are enabled by default. Previously, customers could copy Amazon FSx file system backups across regions enabled by default, within the same AWS account or across AWS accounts in the same AWS Organization. Starting today, you can copy backups into and out of opt-in Regions within the same AWS account using the Amazon FSx console, API, or CLI, or across AWS accounts in the same AWS Organization using AWS Backup. This allows you to design resilient, multi-account, cross-Region backup and recovery architectures across a broader set of AWS Regions.\n \nTo get started, visit the Amazon FSx console or the AWS Backup console. For more details, see the Amazon FSx product page and the AWS Backup product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-fsx-copying-backups-opt-in-regions/",
+      "pubDate": "2026-04-13T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8ec3a34d7e24",
+      "title": "How to use Parquet Column Indexes with Amazon Athena",
+      "description": "In this blog post, we use Athena and Amazon SageMaker Unified Studio to explore Parquet Column Indexes and demonstrate how they can improve Iceberg query performance. We explain what Parquet Column Indexes are, demonstrate their performance benefits, and show you how to use them in your applications.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-to-use-parquet-column-indexes-with-amazon-athena/",
+      "pubDate": "2026-04-13T15:57:18.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "athena"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "athena"
+      ]
+    },
+    {
+      "id": "aws-news-b63aa1ce1c41",
+      "title": "Implementing Kerberos authentication for Apache Spark jobs on Amazon EMR on EKS to access a Kerberos-enabled Hive Metastore",
+      "description": "In this post, we show how to configure Kerberos authentication for Spark jobs on Amazon EMR on EKS, authenticating against a Kerberos-enabled HMS so you can run both Amazon EMR on EC2 and Amazon EMR on EKS workloads against a single, secure HMS deployment.",
+      "link": "https://aws.amazon.com/blogs/big-data/implementing-kerberos-authentication-for-apache-spark-jobs-on-amazon-emr-on-eks-to-access-a-kerberos-enabled-hive-metastore/",
+      "pubDate": "2026-04-13T15:51:31.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "ec2",
+        "emr",
+        "eks"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "ec2",
+        "emr",
+        "eks",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-4af3625a94cd",
+      "title": "AWS Elastic Disaster Recovery now supports IPv6",
+      "description": "AWS Elastic Disaster Recovery (AWS DRS) now supports IPv6 for both data replication and control plane connections. Customers operating in IPv6-only or dual-stack network environments can now configure AWS DRS to replicate using IPv6, eliminating the need for IPv4 addresses in their disaster recovery setup.\n  AWS DRS minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications using affordable storage, minimal compute, and point-in-time recovery. Previously, AWS DRS required IPv4 connectivity for all replication and service communication. Now, customers can set the internet protocol to IPv6 in their replication configuration to use dual-stack endpoints for agent-to-service communication and data replication. This helps customers meet network modernization requirements and enables disaster recovery in environments where IPv4 addresses are unavailable or restricted. Existing replication configurations are not affected and continue to use IPv4 by default.\n  This capability is available in all AWS Regions where AWS DRS is available and where Amazon EC2 supports IPv6. See the AWS Regional Services List for the latest availability information.\n  To learn more about AWS DRS, visit our product page or documentation. To get started, sign in to the AWS Elastic Disaster Recovery Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-elastic-disaster-recovery-ipv6/",
+      "pubDate": "2026-04-13T15:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-6eeb3d8e6c44",
       "title": "Amazon EC2 X8i instances are now available in Europe (Paris)",
@@ -1878,28 +2119,6 @@
       ]
     },
     {
-      "id": "aws-news-c23b68949d74",
-      "title": "Rocket Close transforms mortgage document processing with Amazon Bedrock and Amazon Textract",
-      "description": "Through a strategic partnership with the AWS Generative AI Innovation Center (GenAIIC), Rocket Close developed an intelligent document processing solution that has significantly reduced processing time, making the process 15 times faster. The solution, which uses Amazon Textract for OCR processing and Amazon Bedrock for foundation models (FMs), achieves a strong 90% overall accuracy in document segmentation, classification, and field extraction.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/rocket-close-transforms-mortgage-document-processing-with-amazon-bedrock-and-amazon-textract/",
-      "pubDate": "2026-04-02T12:59:31.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "nova",
-        "textract"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "nova",
-        "textract",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-35d8ae95fbe5",
       "title": "Announcing managed daemon support for Amazon ECS Managed Instances",
       "description": "Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and comprehensive host-level observability at scale.",
@@ -2508,180 +2727,6 @@
       ]
     },
     {
-      "id": "aws-news-f175bbe3774e",
-      "title": "Amazon Connect now expands testing and simulation capabilities to chats",
-      "description": "Amazon Connect now allows you to test and simulate chat experiences in just a few clicks, making it easy to validate self-service chat interactions, customer service workflows, and their outcomes. For each test, you can configure the test parameters including the channel as chat, customer attributes, the reason for the chat (such as \"I need to check my order status\"), the expected responses (such as \"Your request has been processed\"), and business conditions like after-hours scenarios or full queues. After executing tests, results show success or failure based on your defined criteria, along with the path taken by the simulated interaction and detailed logs to quickly diagnose potential issues.\n  With this launch, you can run multiple tests simultaneously to validate your chat workflows at scale, reducing testing time. Companies can view test results and identify common failure patterns across all their tests in Connect's analytics dashboards. These capabilities enable you to confidently deploy new experiences and quickly adapt to your ever-changing business needs.\n  To learn more about these features, see the Amazon Connect Administrator Guide. These features are available in all AWS regions where Amazon Connect is available. To learn more about Amazon Connect, AWS’s AI-native customer experience solution, please visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-expands-simulation-chat/",
-      "pubDate": "2026-03-31T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-ec639a783fb9",
-      "title": "AWS Direct Connect now supports AWS CloudFormation",
-      "description": "AWS Direct Connect now supports AWS CloudFormation, enabling infrastructure-as-code provisioning of Direct Connect resources. This integration allows you to define your entire Direct Connect topology in CloudFormation templates alongside other AWS resources, enabling repeatable, version-controlled deployments with drift detection and change management capabilities. You can now automate creation and management of connections, virtual interfaces, Direct Connect gateways, Link Aggregation Groups (LAGs), and BGP peering configurations.\n \nCloudFormation support for Direct Connect is available in all AWS Regions globally.\n \nTo get started, visit the AWS CloudFormation and AWS Direct Connect documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-direct-connect-supports-aws-cloudformation/",
-      "pubDate": "2026-03-31T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-46da7118b08e",
-      "title": "AWS Security Agent on-demand penetration testing is now generally available",
-      "description": "Today, AWS announced the general availability of AWS Security Agent for on-demand penetration testing in six AWS Regions. AWS Security Agent delivers autonomous penetration testing that operates 24/7 at a fraction of the cost than manual penetration tests. This milestone transforms penetration testing from a periodic bottleneck into an on-demand capability that scales with your development velocity across AWS, Azure, GCP, other cloud-providers, and on-premises. With multicloud support, AWS Security Agent allows you to consolidate penetration testing across your entire infrastructure. \n \nPreviewed at re:Invent 2025, AWS Security Agent represents a new class of frontier agents that are autonomous systems that work independently to achieve goals, scale to tackle concurrent tasks, and run persistently without constant human oversight. It deploys specialized AI agents to help discover, validate, and report security vulnerabilities through sophisticated multi-step attack scenarios customized for each application. It provides detailed findings with CVSS risk scores, application-specific severity ratings, reproduction steps, and remediation suggestions. \n \nAWS Security Agent is now available in US East (N. Virginia), US West (Oregon), Europe (Ireland), Europe (Frankfurt), Asia Pacific (Sydney), and Asia Pacific (Tokyo) regions. \n \nNew customers can explore AWS Security Agent with a 2-month free trial. For pricing and feature details, visit the AWS Security Agent pricing page. To learn more about AWS Security Agent, visit the product page and read the launch announcement. For technical details and to get started, see the AWS Security Agent documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-security-agent-ondemand-penetration/",
-      "pubDate": "2026-03-31T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "launch",
-        "preview",
-        "generally-available",
-        "now-available",
-        "support",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-bd9af6475a92",
-      "title": "AWS Private CA now publishes utilization metrics to Amazon CloudWatch",
-      "description": "AWS Private Certificate Authority (AWS Private CA) now publishes certificate authority (CA) utilization metrics to Amazon CloudWatch, providing visibility into your CA usage. AWS Private CA enforces service quota limits on the number of certificates a CA can issue and the number of CAs you can create per Region. The new metrics track the number of certificates issued by each CA and the total number of CAs in each Region, enabling you to monitor usage against these quotas and proactively manage CA lifecycle to maintain high availability.\n  With these metrics, you can configure CloudWatch alarms to prevent quota-related service disruptions. For example, you can set alarms to trigger automation that replaces a CA approaching its certificate issuance quota and transitions certificate issuance to a new CA. This is particularly important when using AWS services that rely on AWS Private CA certificates, such as Amazon EKS, Amazon ECS Service Connect, and Amazon WorkSpaces.\n \nThe utilization metrics are available in all AWS Regions where AWS Private CA is available. To learn more about AWS Private CA metrics, see the AWS Private CA User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-private-ca-publishes-metrics/",
-      "pubDate": "2026-03-31T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ecs",
-        "eks",
-        "cloudwatch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-ba083c8f235d",
-      "title": "Amazon Location Service now supports GrabMaps with enhanced APIs for Southeast Asia",
-      "description": "Amazon Location Service now supports GrabMaps with simplified APIs that eliminate upfront resource creation, making it faster to build maps, places, and routing applications with high-quality Southeast Asian data. GrabMaps provides detailed, region-specific mapping data built for Southeast Asia's unique geography, road networks, and local navigation patterns. The data is continuously refreshed using Grab's extensive regional operations to maintain current coverage of road conditions, address changes, and points of interest.\n  The new APIs follow industry-standard patterns that let you make calls without creating resources upfront, reducing setup friction and accelerating time to integration. Whether you are building delivery logistics, ride-hailing, or consumer applications, GrabMaps provides trusted local data for Southeast Asian customers.\n  GrabMaps-powered location services are available in the Asia Pacific (Singapore) (ap-southeast-1) and Asia Pacific (Malaysia) (ap-southeast-5) regions. GrabMaps provides geospatial data coverage across eight Southeast Asian countries: Malaysia, Philippines, Thailand, Singapore, Vietnam, Indonesia, Myanmar, and Cambodia.\n \nLearn more about GrabMaps for Amazon Location Service.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-location-service-grabmaps/",
-      "pubDate": "2026-03-31T12:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-45e63624055b",
-      "title": "Amazon CloudWatch Logs introduces lookup query command",
-      "description": "Amazon CloudWatch Logs Insights now supports a new lookup command that enables customers to enrich log query results with data from reference tables. Developers, DevOps engineers, and SREs working with complex distributed systems often encounter logs containing opaque identifiers such as GUIDs, IP addresses, or internal resource IDs that are difficult to interpret without additional context.\n \nWith the lookup command, you can join log data against a lookup table at query time, automatically enriching your results with meaningful values. For example, you can translate a customer ID into a customer name or map an internal IP address to the team that owns it. The new command makes log analysis faster and more intuitive without requiring pre-processing pipelines. \n \nThe lookup command is available today in all commercial AWS Regions. \n \nTo get started, upload a CSV file by navigating to CloudWatch → Settings → Logs.  Next, use the lookup command in your Logs Insights queries by specifying a log field, a lookup table name, and one or more columns.  CSV data does not count toward CloudWatch Logs Insights per GB of data scanned query charges.  To learn more, see the CloudWatch Logs Insights documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-lookup-query-command/",
-      "pubDate": "2026-03-31T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "translate",
-        "lex",
-        "cloudwatch"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "translate",
-        "lex",
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c97d72546c9d",
-      "title": "AWS Backup expands support for Amazon Redshift Serverless to seven Regions",
-      "description": "AWS Backup support for Amazon Redshift Serverless is now available in seven additional AWS Regions: Asia Pacific (Osaka, Hyderabad, Taipei, Kuala Lumpur, Auckland), Europe (Milan), and Africa (Cape Town).\n \nThis expansion brings policy-based data protection and recovery to your Amazon Redshift Serverless data warehouses in these newly supported Regions.\n \nTo start protecting your Redshift Serverless resources with AWS Backup, add them to your existing backup plans, or create a new backup plan and attach your Redshift Serverless resouces to it. To learn more about AWS Backup for Amazon Redshift Serverless, visit the product page, pricing page, and documentation. To get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-backup-redshift-serverless-seven-regions/",
-      "pubDate": "2026-03-31T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "redshift",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-1a4e50b7af7a",
-      "title": "AWS Transform custom announces general availability of automated codebase analysis",
-      "description": "AWS Transform custom announces the general availability of the comprehensive codebase analysis transformation. This up-front analysis reduces documentation maintenance burden and preserves critical institutional knowledge. This enables you to better understand the current state of your codebase before starting a modernization effort, reducing the time and guesswork involved in planning large-scale upgrades. It performs deep static analysis and generates structured documentation covering architecture, technical debt, code metrics, reference documentation, migration planning, and diagrams. Behavior analysis is available in early access.\n The transformation analyzes codebases in any language, including Python, Java (Maven and Gradle), Node.js, .NET, and applications exceeding one million lines of code. It produces a technical debt report that identifies outdated components and end-of-life dependencies, and recommends specific AWS-managed transformations to address them — helping you prioritize modernization efforts based on actual codebase conditions rather than manual assessment.\n \nTo get started, install the AWS Transform CLI and run atx custom def exec -n AWS/comprehensive-codebase-analysis -p. To run codebase analysis across multiple repositories at organizational scale, see Building a scalable code modernization solution with AWS Transform custom. For more information, see AWS-Managed Transformations.\n AWS Transform custom is available in US East (N. Virginia) and Europe (Frankfurt ).",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/transform-custom-new-codebase-analysis/",
-      "pubDate": "2026-03-31T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "early-access",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-babbffacc656",
-      "title": "AWS Transform custom introduces new AWS-managed transformations to modernize code at scale",
-      "description": "AWS Transform custom now offers seven new AWS-managed transformations to help you modernize code at scale. These transformations address common modernization scenarios across multiple languages and frameworks.\n  Generally available transformations includes comprehensive codebase analysis transformation, enabling you to generate hierarchical, cross-referenced documentation covering architecture, business logic, and technical debt, with actionable insights on outdated components and maintenance concerns. The Node.js version upgrade transformation is now generally available and includes comprehensive library upgrade support, enabling you to upgrade Node.js applications from any source version to any target version with full dependency modernization.\n  Those transformations available in early access include Java performance optimization transformation helps you analyze Java Flight Recorder (JFR) profiling data to detect CPU and memory hotspots and anti- patterns, then applies targeted code fixes to reduce resource usage and improve efficiency. The Log4j to SLF4J migration transformation allows you to remediate Log4j logging dependencies by migrating to the SLF4J logging framework. Also available in early access is the Angular to React migration transformation transforms Angular applications to React. The Angular version upgrade transformation enables you to upgrade Angular applications to the latest version. Finally, the Vue version upgrade transformation upgrades your Vue.js applications to the latest version.\n  AWS-managed transformations are validated by AWS and can be customized to meet your organization's specific requirements. All transformations benefit from continual learning, automatically improving quality from every execution.\n \nTo get started, install the AWS Transform CLI and run atx custom def list to see all available transformations. For more information, see AWS-Managed Transformations.\n AWS Transform custom is available in US East (N. Virginia) and Europe (Frankfurt).",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/transform-custom-new-transformations/",
-      "pubDate": "2026-03-31T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "early-access",
-        "generally-available",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-fa628d5be46f",
       "title": "Secure multi-warehouse Amazon Redshift access behind a Network Load Balancer using Microsoft Entra ID",
       "description": "In this post, we show you how to configure a native identity provider (IdP) federation for Amazon Redshift Serverless using Network Load Balancer. You will learn how to enable secure connections from tools like DBeaver and Power BI while maintaining your enterprise security standards.",
@@ -3007,27 +3052,6 @@
       ]
     },
     {
-      "id": "aws-news-a60ce8d8a454",
-      "title": "Filter catalog assets using custom metadata search filters in Amazon SageMaker Unified Studio",
-      "description": "Finding the right data assets in large enterprise catalogs can be challenging, especially when thousands of datasets are cataloged with organization-specific metadata. Amazon SageMaker Unified Studio now supports custom metadata search filters. In this post, you learn how to create custom metadata forms, publish assets with metadata values, and use structured filters to discover those assets.",
-      "link": "https://aws.amazon.com/blogs/big-data/filter-catalog-assets-using-custom-metadata-search-filters-in-amazon-sagemaker-unified-studio/",
-      "pubDate": "2026-03-18T23:18:11.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b186dca822f0",
       "title": "AI-powered event response for Amazon EKS",
       "description": "In this post, you'll learn how AWS DevOps Agent integrates with your existing observability stack to provide intelligent, automated responses to system events.",
@@ -3042,25 +3066,6 @@
       ],
       "tags": [
         "eks"
-      ]
-    },
-    {
-      "id": "aws-news-84c66fe56eab",
-      "title": "Best practices for Amazon Redshift Lambda User-Defined Functions",
-      "description": "While working with Lambda User-Defined Functions (UDFs) in Amazon Redshift, knowing best practices may help you streamline the respective feature development and reduce common performance bottlenecks and unnecessary costs. You wonder what programming language could improve your UDF performance, how else can you use batch processing benefits, what concurrency management considerations might be applicable in your case? In this post, we answer these and other questions by providing a consolidated view of practices to improve your Lambda UDF efficiency. We explain how to choose a programming language, use existing libraries effectively, minimize payload sizes, manage return data, and batch processing. We discuss scalability and concurrency considerations at both the account and per-function levels. Finally, we examine the benefits and nuances of using external services with your Lambda UDFs.",
-      "link": "https://aws.amazon.com/blogs/big-data/best-practices-for-amazon-redshift-lambda-user-defined-functions/",
-      "pubDate": "2026-03-18T18:09:14.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "lambda",
-        "redshift"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "lambda",
-        "redshift"
       ]
     },
     {
@@ -3363,23 +3368,6 @@
         "sagemaker",
         "jumpstart",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-689cb9b54e9a",
-      "title": "AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)",
-      "description": "Last week, my team met many developers at Developer Week in San Jose. My colleague, Vinicius Senger delivered a great keynote about renascent software—a new way of building and evolving applications where humans and AI collaborate as co-developers using Kiro. Other colleagues, Du’An Lightfoot, Elizabeth Fuentes, Laura Salinas, and Sandhya Subramani spoke about building and […]",
-      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/",
-      "pubDate": "2026-02-23T16:56:24.000Z",
-      "source": "newsBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {

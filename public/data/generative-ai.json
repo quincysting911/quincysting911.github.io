@@ -1,8 +1,66 @@
 {
-  "lastUpdated": "2026-04-13T07:45:20.834Z",
+  "lastUpdated": "2026-04-14T07:15:07.571Z",
   "category": "generative-ai",
-  "totalItems": 46,
+  "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-5a1388f2586a",
+      "title": "Amazon OpenSearch Serverless now supports Derived Source for storage optimization",
+      "description": "Amazon OpenSearch Serverless introduces support for Derived Source, a new feature that can help reduce the amount of storage required for your OpenSearch Service collections. With derived source support, you can skip storing source fields and dynamically derive them when required. \n \nWith Derived Source, OpenSearch Serverless reconstructs the _source field on the fly using the values already stored in the index, eliminating the need to maintain a separate copy of the original document. This can significantly reduce storage consumption, particularly for time-series and log analytics collections where documents contain many indexed fields. You can enable derived source at the index level when creating or updating index mappings.\n \nDerived Source support is available today in all AWS Regions where Amazon OpenSearch Serverless is supported. For more information, see the Amazon OpenSearch Serverless documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-serverless-supports-derived-source/",
+      "pubDate": "2026-04-13T20:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f4628351694",
+      "title": "Amazon Redshift introduces key  performance  optimization for Top-K queries",
+      "description": "Amazon Redshift further optimizes the processing of top-k queries (queries with ORDER BY and LIMIT clauses) by intelligently skipping irrelevant data blocks to return results faster, dramatically reducing the amount of data processed. This optimization reorders and efficiently adjusts the data blocks to be read based on the ORDER BY column's min/max values, maintaining only the K most qualifying rows in memory. When the ORDER BY column is sorted or partially sorted, Amazon Redshift now processes only the minimal data blocks needed rather than scanning entire tables, eliminating unnecessary I/O and compute overhead.\n \nThis enhancement particularly benefits top-k queries when the data permanently stores in descending order (ORDER BY ... DESC LIMIT K) on large tables where qualifying rows are appended at the end of the data storage. Common examples include:\n  \n \n \nFinding the k most recent orders from millions or billions of transactions\n \n \nRetrieving top-k best performing products or k worst performing products (top-k in descending order) from your sales catalog containing hundreds of thousands stock keeping units (SKUs) and millions or billions of sales transactions associated with all product SKUs in your sales catalog\n \n \nFinding the top-k most recent or top-k oldest (top k in descending order) prompts inferred by a foundational large language model (LLM) out of billions of prompts.\n \n \nWith this new optimization, top-k query performance improves dramatically. This optimization for top-k queries is now available in Amazon Redshift at no additional cost starting with patch release P199 across all AWS regions where Amazon Redshift is available. This optimization automatically applies to eligible queries without requiring any query rewrites or configuration changes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-redshift-topk-optimization/",
+      "pubDate": "2026-04-13T18:58:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "redshift",
+        "now-available",
+        "enhancement"
+      ]
+    },
+    {
+      "id": "aws-news-4af3625a94cd",
+      "title": "AWS Elastic Disaster Recovery now supports IPv6",
+      "description": "AWS Elastic Disaster Recovery (AWS DRS) now supports IPv6 for both data replication and control plane connections. Customers operating in IPv6-only or dual-stack network environments can now configure AWS DRS to replicate using IPv6, eliminating the need for IPv4 addresses in their disaster recovery setup.\n  AWS DRS minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications using affordable storage, minimal compute, and point-in-time recovery. Previously, AWS DRS required IPv4 connectivity for all replication and service communication. Now, customers can set the internet protocol to IPv6 in their replication configuration to use dual-stack endpoints for agent-to-service communication and data replication. This helps customers meet network modernization requirements and enables disaster recovery in environments where IPv4 addresses are unavailable or restricted. Existing replication configurations are not affected and continue to use IPv4 by default.\n  This capability is available in all AWS Regions where AWS DRS is available and where Amazon EC2 supports IPv6. See the AWS Regional Services List for the latest availability information.\n  To learn more about AWS DRS, visit our product page or documentation. To get started, sign in to the AWS Elastic Disaster Recovery Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-elastic-disaster-recovery-ipv6/",
+      "pubDate": "2026-04-13T15:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-8ea5fc03051c",
       "title": "Amazon CloudWatch pipelines now supports drop and conditional processing",
@@ -728,43 +786,6 @@
         "eventbridge",
         "sns",
         "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-46da7118b08e",
-      "title": "AWS Security Agent on-demand penetration testing is now generally available",
-      "description": "Today, AWS announced the general availability of AWS Security Agent for on-demand penetration testing in six AWS Regions. AWS Security Agent delivers autonomous penetration testing that operates 24/7 at a fraction of the cost than manual penetration tests. This milestone transforms penetration testing from a periodic bottleneck into an on-demand capability that scales with your development velocity across AWS, Azure, GCP, other cloud-providers, and on-premises. With multicloud support, AWS Security Agent allows you to consolidate penetration testing across your entire infrastructure. \n \nPreviewed at re:Invent 2025, AWS Security Agent represents a new class of frontier agents that are autonomous systems that work independently to achieve goals, scale to tackle concurrent tasks, and run persistently without constant human oversight. It deploys specialized AI agents to help discover, validate, and report security vulnerabilities through sophisticated multi-step attack scenarios customized for each application. It provides detailed findings with CVSS risk scores, application-specific severity ratings, reproduction steps, and remediation suggestions. \n \nAWS Security Agent is now available in US East (N. Virginia), US West (Oregon), Europe (Ireland), Europe (Frankfurt), Asia Pacific (Sydney), and Asia Pacific (Tokyo) regions. \n \nNew customers can explore AWS Security Agent with a 2-month free trial. For pricing and feature details, visit the AWS Security Agent pricing page. To learn more about AWS Security Agent, visit the product page and read the launch announcement. For technical details and to get started, see the AWS Security Agent documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-security-agent-ondemand-penetration/",
-      "pubDate": "2026-03-31T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "launch",
-        "preview",
-        "generally-available",
-        "now-available",
-        "support",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-ba083c8f235d",
-      "title": "Amazon Location Service now supports GrabMaps with enhanced APIs for Southeast Asia",
-      "description": "Amazon Location Service now supports GrabMaps with simplified APIs that eliminate upfront resource creation, making it faster to build maps, places, and routing applications with high-quality Southeast Asian data. GrabMaps provides detailed, region-specific mapping data built for Southeast Asia's unique geography, road networks, and local navigation patterns. The data is continuously refreshed using Grab's extensive regional operations to maintain current coverage of road conditions, address changes, and points of interest.\n  The new APIs follow industry-standard patterns that let you make calls without creating resources upfront, reducing setup friction and accelerating time to integration. Whether you are building delivery logistics, ride-hailing, or consumer applications, GrabMaps provides trusted local data for Southeast Asian customers.\n  GrabMaps-powered location services are available in the Asia Pacific (Singapore) (ap-southeast-1) and Asia Pacific (Malaysia) (ap-southeast-5) regions. GrabMaps provides geospatial data coverage across eight Southeast Asian countries: Malaysia, Philippines, Thailand, Singapore, Vietnam, Indonesia, Myanmar, and Cambodia.\n \nLearn more about GrabMaps for Amazon Location Service.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-location-service-grabmaps/",
-      "pubDate": "2026-03-31T12:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ga",
-        "integration",
         "support"
       ]
     },
