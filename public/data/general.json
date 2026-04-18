@@ -1,8 +1,71 @@
 {
-  "lastUpdated": "2026-04-17T07:16:49.067Z",
+  "lastUpdated": "2026-04-18T06:54:39.418Z",
   "category": "general",
-  "totalItems": 45,
+  "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-0af0bc4cd3de",
+      "title": "Amazon EC2 High Memory U7i instances now available in AWS Asia Pacific (Singapore) region",
+      "description": "Amazon EC2 High Memory U7i-8TB instances (u7i-8tb.112xlarge) and U7i-12TB instances (u7i-12tb.224xlarge) are now available in AWS Asia Pacific (Singapore) region. U7i instances are part of AWS 7th generation and are powered by custom fourth generation Intel Xeon Scalable Processors (Sapphire Rapids). U7i-8tb instances offer 8TiB of DDR5 memory, and U7i-12tb instances offer 12TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7i-8tb instances deliver 448 vCPUs; U7i-12tb instances deliver 896 vCPUs. Both instances support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 100 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers using mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-high-memory-u7i-asia-pacific/",
+      "pubDate": "2026-04-17T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-54e59e874964",
+      "title": "Amazon ECR Pull Through Cache Now Supports Referrer Discovery and Sync",
+      "description": "Amazon Elastic Container Registry (Amazon ECR) now automatically discovers and syncs OCI referrers, such as image signatures, SBOMs, and attestations, from upstream registries into your Amazon ECR private repositories with its pull through cache feature.\n  Previously, when you listed referrers on a repository with a matching pull through cache rule, Amazon ECR would not return or sync referrers from the upstream repository. This meant that you had to manually list and fetch the upstream referrers.\n  With today's launch, Amazon ECR's pull through cache will now reach upstream during referrers API requests and automatically cache related referrer artifacts in your private repository. This enables end-to-end image signature verification, SBOM discovery, and attestation retrieval workflows to work seamlessly with pull through cache repositories without requiring any client-side workarounds.\n  This feature is available today in all AWS Regions where Amazon ECR pull through cache is supported. To learn more, visit the Amazon ECR documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ecr-pull-through-cache-referrers/",
+      "pubDate": "2026-04-17T18:29:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ff245ffebc3e",
+      "title": "Amazon Managed Grafana now supports creating Grafana 12.4 workspaces",
+      "description": "Amazon Managed Grafana now supports creating new workspaces with Grafana version 12.4.  This release includes features that were launched as a part of open source Grafana versions 11.0 to 12.4, including Drilldown apps, scenes powered dashboards, variables in transformations, visualization enhancements, and new features with the Amazon CloudWatch plugin.\n \nQueryless Drilldown apps enable customers to perform point-and-click exploration of Prometheus metrics, Loki logs, Tempo traces, and Pyroscope profiles. The Scenes-powered rendering engine boosts dashboard performance. Amazon CloudWatch Logs adds support for PPL and SQL queries, cross-account Metrics Insights, and log anomaly detection. The rebuilt table visualization improves performance with CSS cell styling and interactive Actions buttons, while trendline transformations and navigation bookmarks enhance data exploration. Grafana 12.4 is supported in all AWS regions where Amazon Managed Grafana is generally available.\n \nYou can create a new Amazon Managed Grafana workspace from the AWS Console, SDK, or CLI. To explore the complete list of new features, please refer to the user documentation. Follow the instructions here to create workspaces with version 12.4. To learn more about Amazon Managed Grafana features and its pricing, visit the product page and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-managed-grafana-v12-create/",
+      "pubDate": "2026-04-17T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch",
+        "grafana"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "grafana",
+        "launch",
+        "generally-available",
+        "ga",
+        "new-feature",
+        "enhancement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d57eb8c2a3be",
       "title": "Amazon CloudWatch now supports cross-region telemetry auditing and enablement rules",
@@ -556,30 +619,6 @@
         "ga",
         "support",
         "public-preview"
-      ]
-    },
-    {
-      "id": "aws-news-3b27f79ec751",
-      "title": "AWS VPC Encryption Controls now available in AWS GovCloud (US) Regions",
-      "description": "AWS launches VPC Encryption Controls in AWS GovCloud (US) Regions to make it easy to audit and enforce encryption in transit within and across Amazon Virtual Private Clouds (VPC), and demonstrate compliance with encryption standards. You can turn it on your existing VPCs to monitor encryption status of traffic flows and identify VPC resources that are unintentionally allowing plaintext traffic. This feature also makes it easy to enforce encryption across different network paths by automatically (and transparently) turning on hardware-based AES-256 encryption on traffic between multiple VPC resources including AWS Fargate, Network Load Balancers, and Application Load Balancers.\n \nTo meet stringent compliance standards like HIPAA, PCI DSS, FedRAMP, and FIPS 140-2, government customers rely on both application layer encryption and the hardware-based encryption that AWS offers across different network paths. AWS provides hardware-based AES-256 encryption transparently between modern EC2 Nitro instances. AWS also encrypts all network traffic between AWS data centers in and across Availability Zones, and AWS Regions before the traffic leaves our secure facilities. All inter-region traffic that uses VPC Peering, Transit Gateway Peering, or AWS Cloud WAN receives an additional layer of transparent encryption before leaving AWS data centers. Prior to this release, customers had to track and confirm encryption across all network paths. With VPC Encryption Controls, customers can now monitor, enforce and demonstrate encryption within and across Virtual Private Clouds (VPCs) in just a few clicks. Your information security team can turn it on centrally to maintain a secure and compliant environment, and generate audit logs for compliance and reporting.\n \nWith this launch, VPC Encryption Controls is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. To learn more about this feature and its use cases, please see our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-vpc-encryption-controls/",
-      "pubDate": "2026-04-01T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "fargate"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "fargate",
-        "launch",
-        "ga",
-        "now-available"
       ]
     },
     {
