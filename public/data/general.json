@@ -1,8 +1,29 @@
 {
-  "lastUpdated": "2026-04-21T07:19:23.061Z",
+  "lastUpdated": "2026-04-22T07:17:52.911Z",
   "category": "general",
-  "totalItems": 48,
+  "totalItems": 43,
   "items": [
+    {
+      "id": "aws-news-f24a01a993b5",
+      "title": "Amazon Athena Spark adds support for AWS PrivateLink",
+      "description": "Amazon Athena Spark now supports AWS PrivateLink so that you can access APIs and endpoints from your Amazon Virtual Private Cloud (VPC) without traversing the public internet. This feature can help you meet compliance requirements by allowing you to access and use Athena Spark APIs and endpoints entirely within the AWS network.\n  You can now create AWS PrivateLink interface endpoints to connect from clients in your VPC. The Athena VPC endpoint supports all Athena Spark APIs and endpoints, including the Spark Connect, Spark Live UI and Spark History Server endpoints. Communication between your VPC and Athena Spark APIs and endpoints is then conducted entirely within the AWS network, providing a secure pathway for your data.\n  To get started, you can create an interface VPC endpoint to connect to Amazon Athena Spark using the AWS Management Console or AWS Command Line Interface (AWS CLI) commands or AWS CloudFormation. This new feature is available in all AWS Regions where Amazon Athena Spark and AWS PrivateLink are available. For more information, refer to the AWS PrivateLink documentation and Athena Spark documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-athena-spark-aws-privatelink/",
+      "pubDate": "2026-04-21T18:09:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "athena"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "athena",
+        "new-feature",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-205901761e11",
       "title": "Amazon Connect Outbound Campaigns now supports contact priority ordering",
@@ -537,117 +558,6 @@
         "now-available",
         "new-region",
         "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-701e3ae806d2",
-      "title": "Amazon Braket adds support for Rigetti's 108-qubit Cepheus QPU",
-      "description": "Amazon Braket, the quantum computing service from AWS, now offers access to Rigetti's Cepheus-1-108Q device, the first 100+ qubit superconducting quantum processing unit (QPU) available on Amazon Braket. Cepheus-1-108Q uses Rigetti's modular multi-chip architecture, consisting of a 3x4 array of twelve 9-qubit chiplets with tunable couplers and intermodule couplers between chiplets.\n \nCepheus-1-108Q introduces CZ (controlled phase) gates, replacing the iSWAP gates used on previous Rigetti QPUs. CZ gates provide higher resilience to phase errors common in superconducting systems, and Rigetti's adiabatic CZ implementation further reduces leakage errors. These improvements enable customers to run deeper circuits for use cases such as chemical simulation, combinatorial optimization, and machine learning. Customers can build and run quantum programs using the Braket SDK or other frameworks such as Qiskit, CUDA-Q, and Pennylane. Pulse-level control is also available for researchers who need low-level hardware access to study noise, develop gates, or devise error mitigation schemes.\n \nCepheus-1-108Q is available in the US West (N. California) Region. Get started by viewing the device on the Amazon Braket Management Console, reading our Amazon Braket documentation, or applying for AWS credits to support experiments on Amazon Braket through the AWS Cloud Credits for Research program.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-braket-rigetti-cepheus/",
-      "pubDate": "2026-04-07T09:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a3189824ddaf",
-      "title": "AWS Certificate Manager now supports native certificate search",
-      "description": "AWS Certificate Manager (ACM) now provides a search bar in the console that customers can use to find certificates using one or more certificate parameters such as domain name, certificate ARN, and/or certificate validity. For example, ACM users who manages multiple certificates can search for certificates with specific domains that are due to expire soon.\n  To get started, use the new SearchCertificates API, or navigate to the ACM console and use the search bar to search by one or more certificate parameters.\n  This feature is available in all Public AWS, AWS China, and AWS GovCloud regions. To learn more about this feature, please refer to Search Certificates. You can learn more about ACM and get started here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-certificate-manager-search/",
-      "pubDate": "2026-04-07T04:01:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c82c260acbe2",
-      "title": "Amazon WorkSpaces Personal now supports unique DNS names for PrivateLink",
-      "description": "Amazon WorkSpaces Personal now provides unique, publicly resolvable Domain Name System (DNS) names for each AWS PrivateLink Virtual Private Cloud (VPC) endpoint, enabling enterprise customers to deploy WorkSpaces across multiple AWS VPCs and accounts without DNS resolution conflicts. Each interface VPC endpoint now receives a globally unique AWS-managed DNS name in addition to the previous generic DNS name that was shared across all endpoints.\n  This enhancement enables customers to route traffic appropriately in multi-account environments with centralized DNS infrastructure. Customers can now deploy WorkSpaces Personal directories across different VPCs and AWS accounts while maintaining proper security isolation, eliminating the DNS name collision that previously prevented customers from using separate interface VPC endpoints across accounts. The publicly resolvable DNS names simplify configuration while maintaining security, as they resolve to private IP addresses accessible only from within the respective VPC. The unique DNS names are automatically managed by AWS throughout their lifecycle, requiring no additional Route 53 configuration or custom DNS management.\n  This feature is available in all AWS regions where PrivateLink is available in Amazon WorkSpaces Personal.\n  To learn more, see Amazon WorkSpaces PrivateLink documentation. For configuration details, refer to the WorkSpaces Administration Guide. Existing customers will automatically benefit from this enhancement, as the system maintains backward compatibility with previous DNS configurations.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-workspaces-personal-privatelink/",
-      "pubDate": "2026-04-06T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4acb5be0f80a",
-      "title": "Amazon S3 starts rolling out new security best practice to new and existing buckets by default",
-      "description": "As announced on November 19, 2025, Amazon S3 is now deploying a new default bucket security setting which will automatically disable server-side encryption with customer-provided keys (SSE-C) for all new general purpose buckets. For existing buckets in AWS accounts with no SSE-C encrypted objects, S3 will also disable SSE-C for all new write requests. For AWS accounts with SSE-C usage, S3 will not change the bucket encryption configuration on any of the existing buckets in those accounts. To learn more about this change, visit the S3 User Guide.\n  Amazon S3 will deploy this new default to both new and existing general purpose buckets in 37 AWS Regions including the AWS China and AWS GovCloud (US) Regions over the next few weeks.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/s3-default-bucket-security-setting/",
-      "pubDate": "2026-04-06T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "eks"
-      ]
-    },
-    {
-      "id": "aws-news-504ae6bcd466",
-      "title": "Amazon RDS for Oracle now supports Oracle Management Agent version 24.1.0.0.v1 for Oracle Enterprise Manager Cloud Control 24aiR1",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports Oracle Management Agent (OMA) version 24.1.0.0.v1 for Oracle Enterprise Manager (OEM) Cloud Control 24ai Release 1. OEM 24ai offers web-based tools to monitor and manage your Oracle databases. Amazon RDS for Oracle installs OMA, which communicates with your Oracle Management Service (OMS) to provide monitoring information. Customers running OMS version 24.1 Release 1 or later can now manage databases by installing OMA 24.1.0.0.v1\n  To enable the version 24.1.0.0.v1 of OMA for OEM 24aiR1 or later, navigate to \"Option Groups\" in the AWS Management Console and add the \"OEM_AGENT\" option to a new or existing option group and set AGENT_VERSION to “24.1.0.0.v1”. You will also need to configure option settings including OMS hostname (or IP), port, agent registration password, and minimum TLS version of TLSv1.2 to allow OMA on your Amazon RDS for Oracle database instances to communicate with your existing Oracle Management Service (OMS) stack. To learn more, please refer to Amazon RDS for Oracle documentation.\n  For more information on enabling and configuring OEM agents, refer to the Amazon RDS for Oracle documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-rds-oracle-supports-oracle-management-agent-version-for-oracle-enterprise-manager=cloud-control/",
-      "pubDate": "2026-04-06T07:50:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-7746c24a4020",
-      "title": "AWS Glue Schema Registry is now available in three more AWS regions",
-      "description": "You can now use the AWS Glue Schema Registry, a serverless and free feature of AWS Glue, in the Asia Pacific (Jakarta), Europe (Spain), and Europe (Zurich) regions to validate and control the evolution of streaming data using registered Apache Avro, JSON, and Protobuf schema formats.\n \nThe Schema Registry acts as a centralized repository for managing data format and structure between decoupled applications in data streaming systems. By using it, you can eliminate data validation logic and cross-team coordination, improve streaming data quality, and reduce downstream application failures. Through Apache-licensed serializers and deserializers, the Schema Registry integrates with C# and Java applications developed for Apache Kafka/Amazon Managed Streaming for Apache Kafka, Amazon Kinesis Data Streams, Apache Flink/Amazon Kinesis Data Analytics for Apache Flink, and AWS Lambda. \n \nTo get started, visit the AWS Glue Schema Registry documentation. For a full list of AWS Regions where AWS Glue Schema Registry is available, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-gsr-3-more-regions/",
-      "pubDate": "2026-04-03T21:04:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "kinesis",
-        "kafka",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "kinesis",
-        "kafka",
-        "glue",
-        "now-available"
       ]
     },
     {
