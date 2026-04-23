@@ -1,8 +1,159 @@
 {
-  "lastUpdated": "2026-04-22T07:17:52.911Z",
+  "lastUpdated": "2026-04-23T07:19:50.875Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 42,
   "items": [
+    {
+      "id": "aws-news-0a363befb1b3",
+      "title": "Amazon EC2 C8i instances are now available in Europe (Ireland) and Asia Pacific (New Zealand) regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i instances are available in the Europe (Ireland) and Asia Pacific (New Zealand) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. C8i instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i instances, with even higher gains for specific workloads. The C8i instances deliver up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8i-instances-europe-ireland-asia-pacific-new-zealand-regions/",
+      "pubDate": "2026-04-22T19:31:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-2adf0c9af2cf",
+      "title": "Amazon EC2 announces Managed resource visibility settings",
+      "description": "Amazon EC2 now lets you control whether resources provisioned by managed instance offerings appear in your Amazon EC2 console views and API list operations.\n \nAmazon EC2 Managed Instances are instances provisioned and managed by a designated service provider, such as Amazon EKS, Amazon ECS, AWS Lambda or Amazon Workspaces. AWS is responsible for the configuration, patching, and health of managed EC2 instances as well as other associated resources like EBS volumes, snapshots and Network Interfaces. Until today, by default these managed resources appeared alongside self-managed ones in API responses and respective resource consoles even though AWS is responsible for managing these resources. Now, with Managed resource visibility settings, any new managed resources are hidden by default from your resource console views and describe API responses such as EC2 console and describe-instances API responses, to align better with the shared responsibility model of these resources.  \n \nYou can configure managed resource visibility through the Amazon EC2 console or by using the AWS CLI. To learn more, see Managed resource visibility settings the Amazon EC2 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-managed-resource-visibility/",
+      "pubDate": "2026-04-22T17:53:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-8f75abe6514d",
+      "title": "Introducing GPU Health Monitoring and Auto Repair for Amazon ECS Managed Instances",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now offers NVIDIA GPU health monitoring and auto repair functionality for Amazon ECS Managed Instances. The new capability automatically detects critical NVIDIA GPU hardware failures and replaces impaired instances, helping customers improve the availability and reliability of their GPU-accelerated containerized workloads.\n  Running GPU-accelerated workloads, such as GenAI inference, requires specialized hardware management to mitigate failures and minimize disruption. Amazon ECS Managed Instances now continuously monitor GPU health using NVIDIA Data Center GPU Manager (DCGM) and proactively replace impaired capacity when critical failures occur. You can monitor GPU health through the DescribeContainerInstances API and receive notifications through Amazon EventBridge when instances become impaired. For workloads where you prefer to manage instance lifecycle manually, you can opt out of auto repair at the capacity provider level and handle GPU error events with your own remediation logic.\n  GPU health auto repair is enabled by default on all Amazon ECS Managed Instances running on supported NVIDIA GPU instance types at no additional cost. The capability is available in all AWS Commercial Regions. To learn more, visit the Amazon ECS Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ecs-gpu-auto-repair/",
+      "pubDate": "2026-04-22T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "eventbridge",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-543b417d1994",
+      "title": "AWS Secrets Manager extends managed external secrets to MongoDB Atlas and Confluent Cloud",
+      "description": "AWS Secrets Manager now supports managed external secrets for MongoDB Atlas and Confluent Cloud.\n \nAWS Secrets Manager now supports managed external secrets for MongoDB Atlas and Confluent Cloud, enabling you to centrally manage and automatically rotate secrets for these third-party services directly from AWS Secrets Manager — without building or maintaining custom Lambda rotation functions.\n \nThe MongoDB Atlas integration supports two secret types: database user secrets (username-password authentication via SCRAM) and service account secrets (OAuth client ID and secret). The Confluent Cloud integration supports API key rotation for service accounts, with support for both cluster-scoped and cloud resource management keys. All integrations include automatic rotation enabled by default, eliminating hardcoded secrets and reducing the operational overhead of managing secrets across multiple platforms.\n \nWith managed external secrets, secret rotation is fully managed by AWS Secrets Manager using partner-provided rotation logic — no Lambda functions are deployed in your account. For example, a data pipeline using MongoDB Atlas and Confluent Kafka can now centralize secret management in AWS Secrets Manager, automatically rotating database and streaming platform secrets without modifying application code or managing separate rotation logic for each service.\n \nMongoDB Atlas and Confluent Cloud integrations for managed external secrets are available in all AWS Regions where managed external secrets is supported, joining existing integrations with Salesforce, Snowflake, and BigID. To learn more, visit the AWS Secrets Manager managed external secrets documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/secrets-manager-managed-external-secrets-mongodb-confluent/",
+      "pubDate": "2026-04-22T16:21:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "kafka",
+        "secrets manager"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "kafka",
+        "secrets manager",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-100c2ea93af4",
+      "title": "Amazon IVS Low-Latency Streaming now supports server-side ad insertion",
+      "description": "Amazon Interactive Video Service (Amazon IVS) Low-Latency Streaming now supports server-side ad insertion (SSAI), enabling you to monetize your live streams with video ads. IVS SSAI integrates with AWS Elemental MediaTailor to stitch ads directly into the video stream on the server, delivering a seamless viewing experience while providing access to ad decisioning, audience targeting, and personalization capabilities. \n \nIVS provides an API operation to insert ad breaks into your live stream, giving creators or operators control over when ads run. Ads are stitched into the stream on the server, reducing the impact of ad blockers and simplifying client-side integration. When a live stream is recorded to Amazon S3, IVS includes ad markers in the recording, enabling you to monetize on-demand content as well. \n \nAmazon IVS is a managed live streaming solution designed to make low-latency or real-time video available to viewers around the world. Visit the AWS region table for a full list of AWS Regions where the Amazon IVS console and APIs for control and creation of video streams are available. \n \nTo learn more, please visit the Amazon IVS Server-Side Ad Insertion documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ivs-low-latency-streaming-server-side-ad-insertion/",
+      "pubDate": "2026-04-22T15:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2f35d377a70e",
+      "title": "Amazon EC2 for SQL Server HA now supports health notifications",
+      "description": "Today, AWS announced that you can now receive notifications through the AWS Health Dashboard when Amazon EC2 for SQL Server cannot detect a valid SQL Server High Availability (HA) status.\n \nThis enhancement is particularly valuable for customers who register EC2 SQL HA clusters through AWS Console or CloudFormation automation to reduce license included costs. You can receive this notification through multiple channels, including AWS Health, Amazon EventBridge events, and email. These notifications will guide you to respond quickly, helping avoid unexpected billing costs or charges.\n \nTo learn more, access the High Availability for SQL Server on Amazon EC2 user guide for additional details.  This feature is accessible in all AWS Regions where Amazon EC2 SQL HA is available and the AWS GovCloud (US) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-sql-ha-health-notifications/",
+      "pubDate": "2026-04-22T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "cloudformation",
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "cloudformation",
+        "eventbridge",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3cfd47de926c",
+      "title": "Amazon OpenSearch Service now supports rollback for service software updates",
+      "description": "Amazon OpenSearch Service now supports rollback for service software updates, giving you greater control when managing updates to your Amazon OpenSearch Service domains. Previously, once a software update was applied, there was no self-service option to revert it to a previous version if you encountered an unexpected issue.\n \nSoftware update rollback uses a blue/green deployment. You can initiate a rollback within 15 days of a service software update being applied, using the new RollbackServiceSoftwareUpdate API, the AWS CLI, or the Amazon OpenSearch Service console.\n \nRollback option for service software updates is now available in all AWS Regions where Amazon OpenSearch Service is available. To learn more about the software updates and rollback option, refer to the Amazon OpenSearch Service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-service-now-supports-rollback-for-service-software-updates/",
+      "pubDate": "2026-04-22T03:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f24a01a993b5",
       "title": "Amazon Athena Spark adds support for AWS PrivateLink",
@@ -400,164 +551,6 @@
       ],
       "tags": [
         "s3"
-      ]
-    },
-    {
-      "id": "aws-news-9326cca5daf0",
-      "title": "Amazon RDS Blue/Green Deployments now supports Amazon RDS Proxy",
-      "description": "Amazon RDS Blue/Green Deployments now supports Amazon RDS Proxy, enabling faster application recovery during switchover by eliminating DNS propagation delays. Blue/Green Deployments create a fully managed staging environment (Green) that allows you to deploy and test production changes, keeping your current production database (Blue) safe. When ready, you can switchover to the new production environment and your applications begin accessing it immediately without any configuration changes.\n  During a Blue/Green Deployment switchover for single-Region configurations, RDS Proxy actively monitors database instances and detects when the Green environment becomes the new production environment. This allows RDS Proxy to quickly redirect connections to the Green environment, enabling faster application recovery. You don't need to modify your drivers or change your existing application setup.\n  Amazon RDS Blue/Green Deployments with Amazon RDS Proxy is available for Amazon Aurora with MySQL compatibility, Amazon Aurora with PostgreSQL compatibility, Amazon RDS for MySQL, Amazon RDS for PostgreSQL, and Amazon RDS for MariaDB in all commercial AWS Regions where RDS Proxy is available.\n  In a few clicks, update your databases using RDS Blue/Green Deployments via the Amazon RDS Console or Amazon CLI. To learn more, see Blue/Green Deployments overview in the Amazon RDS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/rds-proxy-blue-green/",
-      "pubDate": "2026-04-09T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8e73ccd316a7",
-      "title": "AWS Private CA now supports customer managed permissions for cross-account sharing",
-      "description": "AWS Private Certificate Authority (AWS Private CA) now supports customer managed permissions in AWS Resource Access Manager (AWS RAM). AWS Private CA lets you share certificate authorities (CAs) across accounts using AWS RAM so you can centralize your PKI instead of creating separate CAs in every account. With customer managed permissions, you can now select exactly which AWS Private CA API operations to allow when sharing a CA, granting only the specific operations each consuming account needs.\n  Previously, you could only use AWS managed permissions, which provide predefined sets of actions and restrict cross-account issuers to specific certificate templates. Now you can select from read operations (e.g., DescribeCertificateAuthority, GetCertificate, and GetCertificateAuthorityCertificate) and write operations (e.g., IssueCertificate and RevokeCertificate) to tailor access for each consuming account or organizational unit. With customer managed permissions, cross-account issuers are not restricted to a specific certificate template.\n  Customer managed permissions for AWS Private CA are available in all AWS Regions where AWS Private CA and AWS RAM are available. To learn more, see Customer managed permissions in RAM in the AWS Private CA User Guide and Creating and using customer managed permissions in the AWS RAM User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-private-ca-customer-managed-permissions/",
-      "pubDate": "2026-04-09T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5873d263a9d0",
-      "title": "Amazon EC2 Capacity Manager now supports tag-based dimensions",
-      "description": "Starting today, Amazon EC2 Capacity Manager supports tag-based dimensions, enabling you to use tags from your EC2 resources to group and filter capacity metrics. EC2 Capacity Manager helps you monitor and optimize capacity usage across On-Demand Instances, Spot Instances, and Capacity Reservations. This launch also introduces Account Name as a new built-in dimension.\n \nYou can activate up to five custom tag keys — such as environment, team, or cost-center — and use them alongside built-in dimensions like Region, Instance Type, and Availability Zone to group and filter capacity metrics by tag values in the console and APIs, and include tag data as additional columns in newly created S3 data exports. Capacity Manager also includes four Capacity Manager-provided tags by default: EC2 Auto Scaling group name, EKS cluster name, EKS Kubernetes node pool, and Karpenter node pool. The new Account Name dimension makes it easier to identify accounts when analyzing cross-account capacity data across your organization.\n \nThis feature is available in all AWS Regions where EC2 Capacity Manager is available. To get started, navigate to the Settings tab in Capacity Manager and choose Manage tag keys, or use the AWS CLI. To learn more, see Managing monitored tag keys in the Amazon EC2 User Guide. For more information about Amazon EC2 Capacity Manager, visit the EC2 Capacity Manager documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-capacity-manager-tag-based-dimensions/",
-      "pubDate": "2026-04-09T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "ec2",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ec2",
-        "eks",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-32bf4b6a0c00",
-      "title": "Amazon Route 53 Resolver endpoints now support DNS delegation for private hosted zones in AWS GovCloud (US) Regions",
-      "description": "Starting today, domain name system (DNS) delegation for private hosted zone subdomains can be used with Route 53 inbound and outbound Resolver endpoints in AWS GovCloud (US) Regions. This allows you to delegate the authority for a subdomain from your on-premises infrastructure to the Route 53 Resolver cloud service and vice versa, enabling a simplified cloud experience across namespaces in AWS and on your own local infrastructure.\n  Many AWS customers delegate subdomain management to individual teams while maintaining central control of apex domains. Previously, we launched Route 53 Resolver delegation support for private hosted zones in commercial AWS Regions, enabling customers to use standard name server records to delegate subdomain authority between Route 53 and on-premises DNS — eliminating the need for conditional forwarding rules across their organization. With today's release, this delegation capability is now available for Route 53 Resolver endpoints in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions as well.\n  Inbound and outbound delegation is provided at no additional cost to Resolver endpoints usage. For more details on pricing, visit the Route 53 pricing page, and to learn more about this feature, visit the developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/route-53-resolver-endpoints/",
-      "pubDate": "2026-04-08T22:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3cd23d1b3e33",
-      "title": "Amazon IVS Real-Time Streaming now supports redundant ingest",
-      "description": "Amazon Interactive Video Service (Amazon IVS) Real-Time Streaming now supports redundant ingest, helping protect your live streams against source encoder failures and first-mile network issues. With redundant ingest, you can stream from two encoders simultaneously to a single stage with automated failover, ensuring uninterrupted delivery to your viewers.\n \nRedundant ingest is ideal for live events, 24/7 live streams, or any scenario where uninterrupted delivery is essential. This capability helps you maintain viewer engagement during unexpected disruptions and enables continuous 24/7 streaming. \n \nAmazon IVS is a managed live streaming solution designed to make low-latency or real-time video available to viewers around the world. Visit the AWS region table for a full list of AWS Regions where the Amazon IVS console and APIs for control and creation of video streams are available.\n \nTo learn more, please visit the Amazon IVS Real-Time Streaming RTMP ingest documentation page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ivs-real-time-streaming-redundant-ingest/",
-      "pubDate": "2026-04-08T19:25:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a52c6b8dca1e",
-      "title": "Oracle Database@AWS is now available in twelve AWS Regions",
-      "description": "Oracle Database@AWS is now generally available in five additional AWS Regions: EU-West-1 (Dublin), EU-West-2 (London), AP-South-1 (Mumbai), AP-South-2 (Hyderabad), and AP-Northeast-2 (Seoul). Oracle Database@AWS enables customers to access Oracle Cloud Infrastructure (OCI) managed Oracle Exadata systems within AWS data centers. With this launch, customers in Europe and Asia Pacific with in-region data residency requirements can migrate on-premises Oracle Exadata and Oracle Real Application Clusters (RAC) applications to AWS. Dublin, Mumbai, and Hyderabad are available with two Availability Zones (AZs), while London and Seoul are available with one Availability Zone. Additionally, CA-Central-1 (Canada Central) and AP-Southeast-2 (Sydney) now support two Availability Zones, providing enhanced high availability for production workloads.\n  With this expansion, Oracle Database@AWS services are now available in twelve Regions: US-East-1 (N. Virginia), US-West-2 (Oregon), US-East-2 (Ohio), CA-Central-1 (Canada Central), EU-Central-1 (Frankfurt), EU-West-1 (Dublin), EU-West-2 (London), AP-Northeast-1 (Tokyo), AP-Southeast-2 (Sydney), AP-South-1 (Mumbai), AP-South-2 (Hyderabad), and AP-Northeast-2 (Seoul). To use Oracle Database@AWS services, request a private offer from Oracle through the AWS Marketplace, and use AWS Management Console to setup and use your databases.\n  To learn more, visit Oracle Database@AWS overview and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/oracle-database-aws-available-twelve-regions/",
-      "pubDate": "2026-04-08T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-0645040f6f60",
-      "title": "AWS Lambda expands response streaming support to all commercial AWS Regions",
-      "description": "AWS Lambda response streaming is now available in all commercial AWS Regions, bringing full regional parity for this capability. Customers in newly supported Regions can use the InvokeWithResponseStream API to progressively stream response payloads back to clients as data becomes available.\n \nResponse streaming enables functions to send partial responses to clients incrementally rather than buffering the entire response before transmission. This reduces time-to-first-byte (TTFB) latency and is well suited for latency-sensitive workloads such as LLM-based applications as well as web and mobile applications where users benefit from seeing responses appear incrementally. Response streaming supports payloads up to a default maximum of 200 MB.\n \nWith this expansion, customers in all commercial Regions can stream responses using the InvokeWithResponseStream API through a supported AWS SDK, or through Amazon API Gateway REST APIs with response streaming enabled. Response streaming supports Node.js managed runtimes as well as custom runtimes.\n \nStreaming responses incur an additional cost for network transfer of the response payload. You are billed based on the number of bytes generated and streamed out of your Lambda function over the first 6 MB. To get started with Lambda response streaming, visit the AWS Lambda documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-lambda-response-streaming/",
-      "pubDate": "2026-04-07T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "api gateway"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "api gateway",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-55a19a5b3cfe",
-      "title": "Amazon Lightsail is now available in the Asia Pacific (Malaysia) Region",
-      "description": "Starting today, Amazon Lightsail is available in the Asia Pacific (Malaysia) Region. This expansion brings the power and simplicity of Lightsail to customers in Malaysia and surrounding regions.\n  With this launch, customers in Malaysia and nearby countries can now enjoy lower latency and better performance for their applications while meeting local data residency requirements. The new Region provides access to Lightsail's full range of features including instances that meet your compute needs—from general purpose to compute-optimized and memory-optimized bundles—as well as managed databases, containers, load balancers and more, all with the same simple, predictable pricing that Lightsail customers love.\n  Lightsail is available in these AWS Regions: US East (Ohio, N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt, Ireland, London, Paris, Stockholm), Asia Pacific (Malaysia, Jakarta, Mumbai, Seoul, Singapore, Sydney, Tokyo). To learn more about Regions and Availability Zones for Lightsail, please refer to the documentation.\n  You can use this Region through the Lightsail Console, AWS Command Line Interface (CLI) and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-lightsail-malaysia/",
-      "pubDate": "2026-04-07T17:30:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "now-available",
-        "new-region",
-        "expansion"
       ]
     },
     {

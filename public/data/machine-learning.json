@@ -1,8 +1,26 @@
 {
-  "lastUpdated": "2026-04-22T07:17:52.911Z",
+  "lastUpdated": "2026-04-23T07:19:50.875Z",
   "category": "machine-learning",
-  "totalItems": 14,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-8cf740d36791",
+      "title": "Analyzing your data catalog: Query SageMaker Catalog metadata with SQL",
+      "description": "In this post, we demonstrate how to use the metadata export capability in Amazon SageMaker Catalog and perform analytics such as historical changes, monitor asset growth and track metadata improvements.",
+      "link": "https://aws.amazon.com/blogs/big-data/analyzing-your-data-catalog-query-sagemaker-catalog-metadata-with-sql/",
+      "pubDate": "2026-04-22T15:37:38.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "improvement"
+      ]
+    },
     {
       "id": "aws-news-4d1d7f3018b5",
       "title": "End-to-end lineage with DVC and Amazon SageMaker AI MLflow apps",
@@ -74,6 +92,28 @@
       ]
     },
     {
+      "id": "aws-news-05628239f244",
+      "title": "Amazon SageMaker HyperPod now supports on-demand deep health checks",
+      "description": "Amazon SageMaker HyperPod now supports on-demand deep health checks for Amazon EKS and Slurm-orchestrated clusters, enabling you to proactively verify GPU accelerator health on running instances at any time. HyperPod Slurm-orchestrated clusters now also support deep health checks during node provisioning, at the time of cluster creation. This capability addresses a critical challenge where even a single unhealthy node can waste hours of compute time and delay critical workloads.\n  With on-demand deep health checks, you can target entire instance groups or specific instances to run comprehensive hardware stress tests and connectivity tests before committing compute resources to a job. Progress and results are visible at both the instance group and instance level through the SageMaker console and APIs, providing complete visibility into GPU health, network connectivity, and multi-node communication performance. Instances undergoing checks are automatically isolated from workload scheduling and returned to service upon passing. When paired with HyperPod's automatic node recovery capability, instances that fail are automatically rebooted or replaced, ensuring cluster health.\n  This capability is available in all regions where Amazon SageMaker HyperPod is available. To learn more about on-demand health checks, see the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-sagemaker-hyperpod-on-demand-deep-health-check/",
+      "pubDate": "2026-04-17T18:16:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-fb3ee525221d",
       "title": "Get to insights faster using Notebooks in Amazon SageMaker Unified Studio",
       "description": "In this post, we demonstrate how Notebooks in Amazon SageMaker Unified Studio help you get to insights faster by simplifying infrastructure configuration. You'll see how to analyze housing price data, create scalable data tables, run distributed profiling, and train machine learning (ML) models within a single notebook environment.",
@@ -110,26 +150,6 @@
       ]
     },
     {
-      "id": "aws-news-6aed88d66c5e",
-      "title": "Use-case based deployments on SageMaker JumpStart",
-      "description": "We're excited to announce the launch of Amazon SageMaker JumpStart optimized deployments. SageMaker JumpStart improved deployments address the need for rich and straightforward deployment customization on SageMaker JumpStart by offering pre-defined deployment configurations, designed for specific use cases. Customers maintain the same level of visibility into the details of their proposed deployments, but now deployments are optimized for their specific use case and performance constraint.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/use-case-based-deployments-on-sagemaker-jumpstart/",
-      "pubDate": "2026-04-14T18:14:54.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "jumpstart"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "jumpstart",
-        "launch"
-      ]
-    },
-    {
       "id": "aws-news-8ec3a34d7e24",
       "title": "How to use Parquet Column Indexes with Amazon Athena",
       "description": "In this blog post, we use Athena and Amazon SageMaker Unified Studio to explore Parquet Column Indexes and demonstrate how they can improve Iceberg query performance. We explain what Parquet Column Indexes are, demonstrate their performance benefits, and show you how to use them in your applications.",
@@ -148,61 +168,6 @@
         "sagemaker",
         "unified studio",
         "athena"
-      ]
-    },
-    {
-      "id": "aws-news-8f3c5bfdfd41",
-      "title": "SageMaker HyperPod now supports gang scheduling for distributed training workloads",
-      "description": "Amazon SageMaker HyperPod task governance now supports gang scheduling, which ensures all pods required for a distributed training job are ready before training begins. Administrators can configure gang scheduling to prevent wasted compute from partial job runs and avoid deadlocks from jobs waiting for resources.\n  Data scientists running distributed AI/ML training jobs on Amazon SageMaker HyperPod clusters using the EKS orchestrator require multiple pods to work together across nodes with pod-to-pod communication. When some pods start but others do not, jobs can hold onto resources without making progress, block other workloads, and increase costs. Gang scheduling resolves this by monitoring all pods in a workload and pulling the workload back if not all pods are ready within a set time. Pulled-back workloads are automatically requeued to prevent stalling. Administrators can adjust settings on the HyperPod Console, such as how long to wait for pods to be ready, how to handle node failures, whether to admit workloads one at a time to avoid deadlocks on busy clusters, and how retries are scheduled.\n  This capability is currently available for Amazon SageMaker HyperPod clusters using the EKS orchestrator across the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo), Asia Pacific (Jakarta), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Stockholm), Europe (Spain), and South America (São Paulo).\n  To learn more, visit SageMaker HyperPod webpage, and HyperPod task governance documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/sagemaker-hyperpod-gang-scheduling/",
-      "pubDate": "2026-04-08T19:26:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-761a9ab006af",
-      "title": "Amazon SageMaker adds serverless workflows to Identity Center domains",
-      "description": "Amazon SageMaker Unified Studio now supports Serverless Workflows in Identity Center domains.  With this launch, customers using Identity Center domains can orchestrate data processing tasks with Apache Airflow (powered by Managed Workflows for Apache Airflow) without provisioning or managing Airflow infrastructure. Serverless Workflows were previously available only in IAM-based domains. \n \nServerless Workflows automatically provision compute resources when a workflow runs and release them when it completes, so you only pay for actual workflow run time. Each workflow runs with its own execution role and isolated worker, providing workflow-level security and preventing cross-workflow interference. With Serverless Workflows, Identity Center domain customers also get access to the Visual Workflow experience with support for around 200 operators, including built-in integration with AWS services such as Amazon S3, Amazon Redshift, Amazon EMR, AWS Glue, and Amazon SageMaker AI.\n \nServerless Workflows in Identity Center domains are available in all AWS Regions where SageMaker Unified Studio is supported. To learn more, visit the Serverless Workflows documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-sagemaker-serverless-workflows/",
-      "pubDate": "2026-04-07T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "emr",
-        "redshift",
-        "iam",
-        "glue"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "emr",
-        "redshift",
-        "iam",
-        "glue",
-        "launch",
-        "integration",
-        "support"
       ]
     },
     {
