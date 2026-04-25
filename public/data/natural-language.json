@@ -1,8 +1,30 @@
 {
-  "lastUpdated": "2026-04-24T07:46:16.551Z",
+  "lastUpdated": "2026-04-25T07:00:38.635Z",
   "category": "natural-language",
-  "totalItems": 13,
+  "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-a58cb2b1b1f2",
+      "title": "AWS Client VPN now supports native AWS Transit Gateway integration",
+      "description": "AWS Client VPN now supports native integration with AWS Transit Gateway, simplifying centralized remote access for your end users across multiple VPCs and on-premises, and providing end-to-end source IP visibility.\n  AWS Transit Gateway interconnects your Amazon Virtual Private Clouds (VPCs) and on-premises networks, while AWS Client VPN enables secure remote access to AWS and on-premises resources connected through your AWS network. Previously, connecting Client VPN to multiple VPCs required provisioning and managing an intermediate VPC, adding operational complexity as you needed to manage additional resources. Moreover, client source IPs were translated through Source Network Address Translation (SNAT), making it difficult to identify which remote user generated specific traffic and complicating security audits. Native Transit Gateway attachment eliminates the need for an intermediate VPC, letting you provide centralized remote access to multiple VPCs and on-premises networks directly from your Client VPN endpoint. Additionally, the end-user source IP is now preserved end-to-end, so you can create authorization rules based on actual client IPs and trace traffic back to specific users, simplifying security, compliance, and troubleshooting workflows. Furthermore, Transit Gateway flow logs capture connection-level details tied to preserved source IPs for improved troubleshooting and compliance audits.\n  This integration is available in all AWS Regions where AWS Client VPN is available. There are no additional charges for this native integration beyond standard pricing of AWS Client VPN and AWS Transit Gateway.\n \nTo learn more about Client VPN:\n \n \n \nVisit the AWS Client VPN product page\n \n \nRead the AWS Client VPN documentation",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-client-vpn-transit-gateway/",
+      "pubDate": "2026-04-23T21:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "translate",
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "translate",
+        "lex",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b617cf768df7",
       "title": "Amazon Redshift supports UPDATE, DELETE, MERGE for Apache Iceberg tables",
@@ -188,68 +210,6 @@
         "eks",
         "launch",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-2bbbbcf842fe",
-      "title": "Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-West) Region",
-      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-West) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex instance page or visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-m8i-flex-govcloud-us-west/",
-      "pubDate": "2026-04-13T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-e9eda9f3eb29",
-      "title": "Amazon CloudWatch Logs Insights now supports saved queries with parameters",
-      "description": "Amazon CloudWatch Logs Insights saved queries now support parameters, allowing you to pass values to reusable query templates with placeholders. This eliminates the need to maintain multiple copies of nearly identical queries that differ only in specific values such as log levels, service names, or time intervals.\n  You can define up to 20 parameters in a query, with each parameter supporting optional default values. For example, you can create a single template to query logs by severity level (such as ERROR or WARN) and pass different service names each time you run it. To execute a query with parameters, invoke it using the query name prefixed with $ and pass your parameter values, such as $ErrorsByService(logLevel=\"ERROR\", serviceName=\"OrderEntry\"). You can also use multiple saved queries with parameters together for complex log analysis, significantly reducing query maintenance overhead while improving reusability.\n  Saved queries with parameters are available in all commercial AWS regions. You can create and use saved queries with parameters using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS Cloud Development Kit (AWS CDK), and AWS SDKs. To learn more, see the Amazon CloudWatch Logs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/cloudwatch-logs-insights-query-params/",
-      "pubDate": "2026-04-13T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "cloudwatch"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-babcc52a3fc1",
-      "title": "Amazon EC2 R8i and R8i-flex instances are now available in AWS GovCloud (US-West) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i and R8i-flex instances are available in the AWS GovCloud (US-West) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i and R8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.\n  R8i-flex, our first memory-optimized Flex instances, are the easiest way to get price performance benefits for a majority of memory-intensive workloads. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, delivering exceptional performance for mission-critical SAP workloads.\n  To get started, sign in to the AWS Management Console. For more information about the R8i and R8i-flex instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-r8i-instances-govcloud-us-west/",
-      "pubDate": "2026-04-13T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "ga",
-        "now-available"
       ]
     },
     {
