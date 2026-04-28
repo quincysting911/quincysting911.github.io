@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-04-27T08:02:03.131Z",
+  "lastUpdated": "2026-04-28T08:02:44.549Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 21,
   "items": [
     {
       "id": "aws-news-6be8573928dc",
@@ -24,6 +24,42 @@
         "dynamodb",
         "glue",
         "athena"
+      ]
+    },
+    {
+      "id": "aws-news-4cfc28f7e780",
+      "title": "Amazon SageMaker Unified Studio now offers CI/CD CLI for data and AI applications",
+      "description": "Amazon SageMaker Unified Studio now offers the CI/CD CLI (aws-smus-cicd-cli), an open-source command line tool that automates deployment of multi-service data and AI applications across development, test, and production. Organizations building applications in SageMaker Unified Studio combine multiple AWS services, including AWS Glue, Amazon Athena, Amazon MWAA, Amazon SageMaker AI, Amazon Bedrock, and Amazon QuickSight, into single applications. The CLI allows data teams to define applications once in a YAML manifest while DevOps teams deploy with a single command, reducing deployment bottlenecks and configuration drift.\n \nThe CLI reads a declarative manifest.yaml that maps each pipeline stage to an isolated SageMaker Unified Studio project. At deploy time, it substitutes stage-specific configurations (S3 paths, IAM roles, account IDs, and connection strings) and provisions resources in dependency order. Four commands cover the lifecycle: describe validates permissions and connections, bundle packages an immutable artifact from the source target, deploy writes that artifact to the destination target, and test runs post-deployment validation. It works with existing CI/CD solutions such as GitHub Actions, Jenkins, and GitLab CI.\n \nThe CI/CD CLI is available at no additional cost in all AWS Regions where Amazon SageMaker Unified Studio is available. You pay only for the underlying AWS resources provisioned during deployment.\n \nTo get started, visit the following resources:\n \nThe CI/CD CLI is available at no additional cost in all AWS Regions where Amazon SageMaker Unified Studio is available. You pay only for the underlying AWS resources provisioned during deployment.\n \nTo get started, visit the following resources:\n \n \n \nInstall from PyPI \n \n \nGitHub repository\n \n \nAmazon SageMaker Unified Studio documentation",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-smus-ci-cd-cli/",
+      "pubDate": "2026-04-23T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "amazon q",
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "iam",
+        "glue",
+        "athena",
+        "quicksight",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "amazon q",
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "iam",
+        "glue",
+        "athena",
+        "quicksight",
+        "organizations",
+        "ga"
       ]
     },
     {
@@ -183,6 +219,28 @@
       ]
     },
     {
+      "id": "aws-news-220b68277885",
+      "title": "Amazon Quick Automate now supports import and export of automations across AWS accounts",
+      "description": "Amazon Quick Automate now enables you to migrate automation versions across automation groups, AWS accounts, and AWS Regions. Previously, moving automations between environments required time-consuming manual recreation of workflows. This new capability is designed for DevOps teams and organizations managing multi-environment deployments who need to promote tested automations from development to production, deploy across geographic regions, or share proven workflows with other teams.\n  The migration process packages your workflow, runtime configuration, and process step metadata into a secure, encrypted link using AWS KMS encryption. Export links remain valid for 12 hours and can be reused multiple times, eliminating repeated exports. This streamlined approach saves significant time compared to manual recreation and enables point-in-time snapshots for disaster recovery scenarios. Key use cases include promoting automations between development, staging, and production environments, deploying across AWS Regions, and sharing proven automation with teams outside your automation group.\n  This feature is available in all AWS Regions where Quick Automate is enabled, including US East (N. Virginia), US West (Oregon), Europe (Dublin), Europe (London), Europe (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney). Note that dependencies such as action connectors, credentials, and humn-in-the-loop task queue configurations are not included in the migration bundle and must be configured separately in the destination environment.\n \nTo learn more, visit the Amazon Quick Automate marketing page or see the export and import documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/quick-automate-import-export/",
+      "pubDate": "2026-04-20T20:12:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "amazon q",
+        "organizations",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
       "id": "aws-news-93ac36644795",
       "title": "Amazon EKS enhances cluster governance with new IAM condition keys",
       "description": "Amazon Elastic Kubernetes Service (EKS) now supports seven additional IAM condition keys for cluster creation and configuration APIs, enhancing the governance controls available through IAM policies and Service Control Policies (SCPs). Organizations managing multi-account environments require centralized mechanisms to enforce security and compliance requirements consistently across all clusters without relying on manual processes or post-deployment checks. This expansion of EKS IAM condition keys further enables proactive policy enforcement, providing organizations with more granular control to establish guardrails for cluster configurations.\n  Organizations can now enforce private-only API endpoints (eks:endpointPublicAccess, eks:endpointPrivateAccess), require customer-managed AWS KMS keys for secrets encryption (eks:encryptionConfigProviderKeyArns), restrict clusters to approved Kubernetes versions (eks:kubernetesVersion), mandate deletion protection for production workloads (eks:deletionProtection), specify control plane scaling tiers (eks:controlPlaneScalingTier), and enable zonal shift capabilities for high availability (eks:zonalShiftEnabled). These condition keys apply to CreateCluster, UpdateClusterConfig, UpdateClusterVersion, and AssociateEncryptionConfig APIs, integrating seamlessly with AWS Organizations SCPs for centralized governance across accounts.\n  The new IAM condition keys are available in all AWS Regions where Amazon EKS is available at no additional charge. To learn more about Amazon EKS IAM condition keys, see the Amazon EKS User Guide and the Service Authorization Reference for Amazon EKS. For information about implementing Service Control Policies, see the AWS Organizations documentation.",
@@ -308,70 +366,6 @@
         "organizations",
         "ga",
         "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-6de4126073d7",
-      "title": "How Automated Reasoning checks in Amazon Bedrock transform generative AI compliance",
-      "description": "In this post, you'll learn why probabilistic AI validation falls short in regulated industries and how Automated Reasoning checks use formal verification to deliver mathematically proven results. You'll also see how customers across six industries use this technology to produce formally verified, auditable AI outputs, and how to get started.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-automated-reasoning-checks-in-amazon-bedrock-transform-generative-ai-compliance/",
-      "pubDate": "2026-04-16T17:34:42.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-ad4ccaf51f7f",
-      "title": "AWS Payment Cryptography now available in South America (São Paulo)",
-      "description": "AWS Payment Cryptography has expanded its global presence with availability in South America (São Paulo). This expansion enables customers with latency-sensitive payment applications to build, deploy or migrate into additional AWS Regions without depending on cross-region support.\n \nAWS Payment Cryptography is a fully managed service that simplifies payment-specific cryptographic operations and key management for cloud-hosted payment applications. The service scales elastically with your business needs and is assessed as compliant with PCI PIN and PCI P2PE requirements, eliminating the need to maintain dedicated payment HSM instances. Organizations performing payment functions - including acquirers, payment facilitators, networks, switches, processors, and banks can now position their payment cryptographic operations closer to their applications while reducing dependencies on auxiliary data centers with dedicated payment HSMs.\n \nAWS Payment Cryptography is available in the following AWS Regions: Canada (Montreal), US East (Ohio, N. Virginia), US West (Oregon), Europe (Ireland, Frankfurt, London, Paris), South America (São Paulo), Africa (Cape Town) and Asia Pacific (Singapore, Tokyo, Osaka, Mumbai, Hyderabad).\n \nTo start using the service, please download the latest AWS CLI/SDK and see the AWS Payment Cryptography user guide for more information.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-payment-cryptography-south/",
-      "pubDate": "2026-04-15T20:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-6ec3ef5276e0",
-      "title": "Amazon Quick Introduces Sheet Tooltips for Rich, Contextual Data Exploration",
-      "description": "Quick Sight in Amazon Quick now supports sheet tooltips, enabling authors to surface rich, contextual detail when viewers hover over data points — without disrupting their analysis flow. Sheet tooltips allow authors to create dedicated tooltip sheets containing visuals, text boxes, and images arranged in a free-form layout. When a viewer hovers over a data point, the tooltip sheet automatically inherits all filters from the source visual and applies an additional filter for the specific data point, delivering an instant, focused breakdown.\n \nThis enhancement helps organizations build more intuitive dashboards that reduce the need for multiple sheets or manual navigation. For example, a bar chart showing sales by product category can surface a trend line of monthly sales, a year-over-year growth KPI, and a text box with the category name — all filtered to whichever category the viewer hovers over. Authors can assign one tooltip sheet to multiple visuals, switch between basic, detailed, and sheet tooltip types at any time, and tables and pivot tables are also supported. Sheet tooltips are available on interactive sheets only.\n \nThis feature is now available in all Amazon Quick regions where Quick Sight is supported. Learn more about how to use sheet tooltips in Amazon Quick and read more about this new feature in our blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/quick-sheet-tooltips/",
-      "pubDate": "2026-04-15T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
-        "organizations",
-        "ga",
-        "now-available",
-        "new-feature",
-        "enhancement",
         "support"
       ]
     },
