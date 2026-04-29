@@ -1,8 +1,50 @@
 {
-  "lastUpdated": "2026-04-28T08:02:44.549Z",
+  "lastUpdated": "2026-04-29T07:56:36.470Z",
   "category": "machine-learning",
-  "totalItems": 15,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-c8c4fdddb796",
+      "title": "NVIDIA Nemotron 3 Nano Omni model now available on Amazon SageMaker JumpStart",
+      "description": "Today, we are excited to announce the day zero availability of NVIDIA Nemotron 3 Nano Omni on Amazon SageMaker JumpStart. In this post, we walk through the model architecture and key capabilities of Nemotron 3 Nano Omni, explore the enterprise use cases it unlocks, and show you how to deploy and run inference using Amazon SageMaker JumpStart.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-nano-omni-model-now-available-on-amazon-sagemaker-jumpstart/",
+      "pubDate": "2026-04-28T16:40:34.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-385bbe3b0132",
+      "title": "Amazon SageMaker Training Plans now provides capacity utilization monitoring through Amazon CloudWatch",
+      "description": "Amazon SageMaker Training Plans now supports Amazon CloudWatch metrics to monitor the utilization of capacity reservations associated with your purchased plan. SageMaker Flexible Training Plans helps you create the most cost-efficient training plans that fit within your timeline and AI budget. Once you create and purchase your training plans, SageMaker automatically provisions the infrastructure and runs the AI workloads on these compute resources without requiring any manual intervention. \n \nThis feature provides administrators access to both historical and real-time metrics on instance usage—at the individual plan level and across all plans in your account—enabling them to make informed decisions about capacity and cost. To learn more about the Flexible Training Plan reservation monitoring feature, see the Amazon SageMaker Training Plans User Guide.\n  For a detailed breakdown of Training Plan instance availability by AWS Region, see the SageMaker AI pricing page",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-sagemaker-training-plan-cloudwatch-observability/",
+      "pubDate": "2026-04-27T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "lex",
+        "cloudwatch"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "cloudwatch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-8580663f7888",
       "title": "Amazon SageMaker HyperPod now supports automatic Slurm topology management",
@@ -110,81 +152,6 @@
       ]
     },
     {
-      "id": "aws-news-9bcc708aa427",
-      "title": "Amazon SageMaker HyperPod now supports flexible instance groups",
-      "description": "Amazon SageMaker HyperPod now supports flexible instance groups, enabling customers to specify multiple instance types and multiple subnets within a single instance group. Customers running training and inference workloads on HyperPod often need to span multiple instance types and availability zones for capacity resilience, cost optimization, and subnet utilization, but previously had to create and manage a separate instance group for every instance type and availability zone combination, resulting in operational overhead across cluster configuration, scaling, patching, and monitoring.\n  With flexible instance groups, you can define an ordered list of instance types using the new InstanceRequirements parameter and provide multiple subnets across availability zones in a single instance group. HyperPod provisions instances using the highest-priority type first and automatically falls back to lower-priority types when capacity is unavailable, eliminating the need for customers to manually retry across individual instance groups. Training customers benefit from multi-subnet distribution within an availability zone to avoid subnet exhaustion. Inference customers scaling manually get automatic priority-based fallback across instance types without needing to retry each instance group individually, while those using Karpenter autoscaling can reference a single flexible instance group. Karpenter automatically detects supported instance types from the flexible instance group and provisions the optimal type and availability zone based on pod requirements. You can create flexible instance groups using the CreateCluster and UpdateCluster APIs, the AWS CLI, or the AWS Management Console.\n  Flexible instance groups are available for SageMaker HyperPod clusters using the EKS orchestrator in all AWS Regions where SageMaker HyperPod is supported. To learn more, see Flexible instance groups.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/sagemaker-hyperpod-flexible-instance-groups/",
-      "pubDate": "2026-04-17T20:03:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "eks"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "eks",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-bb52391579bc",
-      "title": "AWS Neuron SDK 2.29.0 now available with NKI and Neuron Explorer out of Beta, a new CPU Simulator, and an expanded NKI Library",
-      "description": "In this release, AWS Neuron SDK 2.29.0 promotes the Neuron Kernel Interface (NKI) from Beta to Stable with version 0.3.0. NKI gives developers direct, low-level programming access to AWS Trainium and AWS Inferentia NeuronCores using a Python-based syntax. This release introduces the NKI Standard Library, which exposes developer-visible source code for all NKI APIs and native language objects. It also contains a new CPU Simulator that lets developers write, test, and debug NKI kernels locally on standard CPU, without requiring Trainium hardware, using standard Python debugging tools. NKI 0.3.0 also adds new ISA-level features including a dedicated exponential instruction, matmul accumulation control, DMA priority settings for Trn3, and variable-length all-to-all collectives.\n  The NKI Library expands with 7 new experimental kernels covering Conv1D, a multi-layer Transformer token generation megakernel, fused communication-compute primitives for Trainium2, and dynamic tiling operations. Existing kernels also receive improvements. Attention CTE scales to larger batch sizes and sequence lengths, MLP adds mixed-precision quantization paths, and MoE TKG introduces a dynamic all-expert algorithm.\n  For inference, NxD Inference improves vision language model support with optimizations for Qwen3 VL and Qwen2 VL, including text-model sequence parallelism and vision data parallelism. vLLM Neuron Plugin updated to version 0.5.0.\n  Neuron Explorer, Neuron’s profiling and debugging suite of tools, also moves from Beta to Stable. The System Trace Viewer now supports the full set of Device widgets for multi-device profile analysis, and the tool is available on the VS Code Extension Marketplace for streamlined installation. For full release details, see the AWS Neuron SDK 2.29.0 release notes.\n  The SDK is available in all AWS Regions supporting Inferentia and Trainium instances.\n  Learn more:\n \n \n \nNeuron Kernel Interface (NKI) Documentation\n \n \nvLLM Neuron Plugin Documentation\n \n \nNeuron Explorer Documentation",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/announcing-neuron-2-29/",
-      "pubDate": "2026-04-17T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "inferentia",
-        "neuron"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "beta",
-        "experimental",
-        "ga",
-        "now-available",
-        "update",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-05628239f244",
-      "title": "Amazon SageMaker HyperPod now supports on-demand deep health checks",
-      "description": "Amazon SageMaker HyperPod now supports on-demand deep health checks for Amazon EKS and Slurm-orchestrated clusters, enabling you to proactively verify GPU accelerator health on running instances at any time. HyperPod Slurm-orchestrated clusters now also support deep health checks during node provisioning, at the time of cluster creation. This capability addresses a critical challenge where even a single unhealthy node can waste hours of compute time and delay critical workloads.\n  With on-demand deep health checks, you can target entire instance groups or specific instances to run comprehensive hardware stress tests and connectivity tests before committing compute resources to a job. Progress and results are visible at both the instance group and instance level through the SageMaker console and APIs, providing complete visibility into GPU health, network connectivity, and multi-node communication performance. Instances undergoing checks are automatically isolated from workload scheduling and returned to service upon passing. When paired with HyperPod's automatic node recovery capability, instances that fail are automatically rebooted or replaced, ensuring cluster health.\n  This capability is available in all regions where Amazon SageMaker HyperPod is available. To learn more about on-demand health checks, see the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-sagemaker-hyperpod-on-demand-deep-health-check/",
-      "pubDate": "2026-04-17T18:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-fb3ee525221d",
       "title": "Get to insights faster using Notebooks in Amazon SageMaker Unified Studio",
       "description": "In this post, we demonstrate how Notebooks in Amazon SageMaker Unified Studio help you get to insights faster by simplifying infrastructure configuration. You'll see how to analyze housing price data, create scalable data tables, run distributed profiling, and train machine learning (ML) models within a single notebook environment.",
@@ -260,26 +227,6 @@
       "tags": [
         "sagemaker",
         "unified studio"
-      ]
-    },
-    {
-      "id": "aws-news-fce2a502b9e0",
-      "title": "Navigating multi-account deployments in Amazon SageMaker Unified Studio: a governance-first approach",
-      "description": "In this post, we explore SageMaker Unified Studio multi-account deployments in depth: what they entail, why they matter, and how to implement them effectively. We examine architecture patterns, evaluate trade-offs across security boundaries, operational overhead, and team autonomy. We also provide practical guidance to help you design a deployment that balances centralized control with distributed ownership across your organization.",
-      "link": "https://aws.amazon.com/blogs/big-data/navigating-multi-account-deployments-in-amazon-sagemaker-unified-studio-a-governance-first-approach/",
-      "pubDate": "2026-04-01T19:12:46.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "ga"
       ]
     },
     {
