@@ -1,8 +1,70 @@
 {
-  "lastUpdated": "2026-04-29T07:56:36.470Z",
+  "lastUpdated": "2026-04-30T07:59:39.409Z",
   "category": "ai-safety",
   "totalItems": 21,
   "items": [
+    {
+      "id": "aws-news-a5a2b7a61e74",
+      "title": "Organizing Agents’ memory at scale: Namespace design patterns in AgentCore Memory",
+      "description": "In this post, you will learn how to design namespace hierarchies, choose the right retrieval patterns, and implement AWS Identity and Access Management (IAM)-based access control for AgentCore Memory.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/organizing-agents-memory-at-scale-namespace-design-patterns-in-agentcore-memory/",
+      "pubDate": "2026-04-29T19:31:54.000Z",
+      "source": "mlBlog",
+      "services": [
+        "agentcore",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "agentcore",
+        "iam",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-59622a9ba474",
+      "title": "Amazon CloudFront now supports invalidation by cache tag",
+      "description": "Amazon CloudFront now allows you to invalidate cached objects by cache tag, enabling you to remove groups of related content from CloudFront edge locations with a single invalidation request. Cache tag invalidation simplifies common operational workflows such as updating product information across multiple pages, managing legal takedown requests, handling regulatory compliance requests, and refreshing content across multi-tenant platforms.\n  Previously, invalidating related objects that didn't share a common URL path required tracking individual URLs or using broad wildcard patterns that could unnecessarily clear unrelated content. With invalidation by cache tag, developers and site reliability engineers can tag cached objects when returning an object by including a specified header in HTTP responses with comma-separated tag values. When needed, they can invalidate all objects sharing a tag in one request, maintaining high cache hit ratios while ensuring end users see fresh content within seconds. You can configure the header name through the Amazon CloudFront console, AWS CLI, or API, and assign multiple tags per object for flexible, precise cache management. Over the years, CloudFront has made improvements to propagation times. Currently, invalidations take effect in under 5 seconds at P95. The end-to-end completion time, which includes reporting the invalidation status back, is under 25 seconds at P95.\n  Amazon CloudFront invalidation by cache tag is available in all AWS Regions where CloudFront is offered except China (Beijing, operated by Sinnet) and China (Ningxia, operated by NWCD). To learn more, view the Invalidations By Cache Tag documentation. Each cache tag is priced as one path. For details on pricing, refer to the CloudFront pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/cloudfront-invalidation-cache-tag/",
+      "pubDate": "2026-04-29T17:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudfront"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "cloudfront",
+        "ga",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-933ac47c3ade",
+      "title": "AWS Transfer Family Terraform module now supports Okta and Microsoft Entra ID integration examples",
+      "description": "AWS Transfer Family Terraform module now includes end-to-end examples for deploying Transfer Family endpoints integrated with Okta and Microsoft Entra ID as custom identity providers (IdP) for authentication and access control. This allows enterprises already using these platforms to automate and streamline the deployment of Transfer Family servers with their existing identity infrastructure.\n \nThe Terraform module and examples are based on the open source Custom IdP solution, which provides standardized integration with widely used identity providers and includes built-in security controls such as multi-factor authentication, audit logging, and per-user IP allowlisting. The Okta example supports password-based authentication flows, time-based one-time password (TOTP)-based MFA, and attribute retrieval, while the Entra ID example demonstrates password-based authentication for organizations standardized on Microsoft's identity platform.\n \nCustomers can get started by using the new module from the Terraform Registry. To learn more about the Transfer Family Custom IdP solution, visit the user guide. To see all the AWS Regions where Transfer Family is available, visit the AWS Capabilities table.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-transfer-family-terraform-okta-microsoft-entra-id/",
+      "pubDate": "2026-04-29T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ff45cf2da7f1",
       "title": "AWS Glue 5.1 is now available in all AWS Commercial and AWS GovCloud (US) Regions",
@@ -306,76 +368,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-220b68277885",
-      "title": "Amazon Quick Automate now supports import and export of automations across AWS accounts",
-      "description": "Amazon Quick Automate now enables you to migrate automation versions across automation groups, AWS accounts, and AWS Regions. Previously, moving automations between environments required time-consuming manual recreation of workflows. This new capability is designed for DevOps teams and organizations managing multi-environment deployments who need to promote tested automations from development to production, deploy across geographic regions, or share proven workflows with other teams.\n  The migration process packages your workflow, runtime configuration, and process step metadata into a secure, encrypted link using AWS KMS encryption. Export links remain valid for 12 hours and can be reused multiple times, eliminating repeated exports. This streamlined approach saves significant time compared to manual recreation and enables point-in-time snapshots for disaster recovery scenarios. Key use cases include promoting automations between development, staging, and production environments, deploying across AWS Regions, and sharing proven automation with teams outside your automation group.\n  This feature is available in all AWS Regions where Quick Automate is enabled, including US East (N. Virginia), US West (Oregon), Europe (Dublin), Europe (London), Europe (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney). Note that dependencies such as action connectors, credentials, and humn-in-the-loop task queue configurations are not included in the migration bundle and must be configured separately in the destination environment.\n \nTo learn more, visit the Amazon Quick Automate marketing page or see the export and import documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/quick-automate-import-export/",
-      "pubDate": "2026-04-20T20:12:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "organizations",
-        "ga",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-93ac36644795",
-      "title": "Amazon EKS enhances cluster governance with new IAM condition keys",
-      "description": "Amazon Elastic Kubernetes Service (EKS) now supports seven additional IAM condition keys for cluster creation and configuration APIs, enhancing the governance controls available through IAM policies and Service Control Policies (SCPs). Organizations managing multi-account environments require centralized mechanisms to enforce security and compliance requirements consistently across all clusters without relying on manual processes or post-deployment checks. This expansion of EKS IAM condition keys further enables proactive policy enforcement, providing organizations with more granular control to establish guardrails for cluster configurations.\n  Organizations can now enforce private-only API endpoints (eks:endpointPublicAccess, eks:endpointPrivateAccess), require customer-managed AWS KMS keys for secrets encryption (eks:encryptionConfigProviderKeyArns), restrict clusters to approved Kubernetes versions (eks:kubernetesVersion), mandate deletion protection for production workloads (eks:deletionProtection), specify control plane scaling tiers (eks:controlPlaneScalingTier), and enable zonal shift capabilities for high availability (eks:zonalShiftEnabled). These condition keys apply to CreateCluster, UpdateClusterConfig, UpdateClusterVersion, and AssociateEncryptionConfig APIs, integrating seamlessly with AWS Organizations SCPs for centralized governance across accounts.\n  The new IAM condition keys are available in all AWS Regions where Amazon EKS is available at no additional charge. To learn more about Amazon EKS IAM condition keys, see the Amazon EKS User Guide and the Service Authorization Reference for Amazon EKS. For information about implementing Service Control Policies, see the AWS Organizations documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-eks-iam-condition-keys/",
-      "pubDate": "2026-04-20T17:48:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "iam",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eks",
-        "iam",
-        "organizations",
-        "ga",
-        "update",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-9c6029bc3236",
-      "title": "AWS Transform automates landing zone creation in migration workflows",
-      "description": "AWS Transform now supports landing zone creation directly within migration workflows, delivering a secure, multi-account AWS environment tailored to your migration needs. By consolidating orchestration into AWS Transform, it automates the setup that previously required configuration across AWS Control Tower, AWS Organizations and AWS Identity and Access Management, accelerating migration readiness with a ready-to-deploy target environment. This new capability extends the end-to-end automation that AWS Transform provides across the migration lifecycle from discovery and migration planning to network and server migration, so that preparing the target environment is no longer a separate workstream.\n  Whether starting from scratch or extending an existing AWS organization, AWS Transform aligns landing zone foundations with AWS best practices, recommending optimal account structures based on migration data and business requirements. Customers can customize Organizational Unit (OU) hierarchies, accounts, and Service Control Policies (SCP), then choose between agent-managed deployment or generate Infrastructure as Code templates downloadable in CloudFormation, AWS CDK, or Landing Zone Accelerator (LZA) formats for self deployment.\n \nThe landing zone creation capability is now available in AWS Transform across all supported target regions.\n \nTo learn more, visit the AWS Transform User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-transform-automates-landing-zone/",
-      "pubDate": "2026-04-20T11:59:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "cloudformation",
-        "organizations",
-        "ga",
-        "now-available",
-        "support",
-        "new-capability"
       ]
     },
     {
