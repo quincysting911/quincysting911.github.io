@@ -1,16 +1,354 @@
 {
-  "lastUpdated": "2026-04-30T07:59:39.409Z",
-  "totalItems": 205,
+  "lastUpdated": "2026-05-01T07:58:10.594Z",
+  "totalItems": 206,
   "sources": {
     "whatsNew": 99,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 19,
     "architectureBlog": 19,
-    "computeBlog": 17,
+    "computeBlog": 18,
     "developersAndDevOps": 14
   },
   "items": [
+    {
+      "id": "aws-news-848656f3cd7e",
+      "title": "AWS Outposts racks now support LagStatus CloudWatch metric",
+      "description": "AWS Outposts racks now support the LagStatus Amazon CloudWatch metric in all AWS commercial Regions and the AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions.\n \nThis metric provides you with the ability to monitor Outposts LAG connectivity status directly within the CloudWatch console, without having to rely on external networking tools or coordination with other teams. You can use this metric to set alarms, troubleshoot connectivity issues, and ensure your Outposts racks are properly integrated with your on-premises infrastructure. The LagStatus metric indicates whether an Outposts LAG is operationally up and ready to forward traffic. A value of \"1\" means that the LAG is up, while \"0\" means that it is down. When combined with the existing VifConnectionStatus and VifBgpSessionState metrics, you can quickly identify whether issues stem from LAG configuration, BGP peering, or connection problems.\n \nThe LagStatus metric is now available for all Outposts LAGs in all commercial AWS Regions and the AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions where Outposts racks are available.\n \nTo get started, read this blog post and access the metrics in the CloudWatch console. To learn more, check out the CloudWatch metrics for AWS Outposts documentation for second-generation Outposts racks and first-generation Outposts racks.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-outposts-lagstatus-cloudwatch/",
+      "pubDate": "2026-04-30T20:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch",
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "outposts",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ffcd94b65c48",
+      "title": "Reinforcement fine-tuning with LLM-as-a-judge",
+      "description": "In this post, we take a deeper look at how RLAIF or RL with LLM-as-a-judge works with Amazon Nova models effectively.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-with-llm-as-a-judge/",
+      "pubDate": "2026-04-30T20:07:25.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-ba7dc8f2fe21",
+      "title": "Enhancing network observability with new AWS Outposts racks LAG metrics",
+      "description": "When you deploy AWS Outposts racks, you can run AWS infrastructure and services in on-premises locations. Maintaining seamless connectivity, both to the AWS Region and your on-premises network, is fundamental to delivering consistent, uninterrupted service to your applications. Implementing an observability strategy that uses available network metrics is key to understanding the health of this […]",
+      "link": "https://aws.amazon.com/blogs/compute/enhancing-network-observability-with-new-aws-outposts-racks-lag-metrics/",
+      "pubDate": "2026-04-30T19:14:52.000Z",
+      "source": "computeBlog",
+      "services": [
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "outposts"
+      ]
+    },
+    {
+      "id": "aws-news-b32db677ad58",
+      "title": "Amazon ECS Managed Instances now supports NVIDIA GPU metrics",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now offers NVIDIA GPU metrics for containerized workloads running on Amazon ECS Managed Instances. These metrics are available through Amazon CloudWatch Container Insights with enhanced observability, giving customers visibility into GPU health and performance to help troubleshoot and optimize GPU-accelerated workloads on Amazon ECS.\n  With the new GPU metrics, Amazon ECS Managed Instances customers can now monitor GPU capacity, utilization, memory, hardware health, and thermal conditions directly in CloudWatch. Using Container Insights with enhanced observability, customers get granular visibility into these metrics, including at the GPU device level. These metrics give customers visibility into GPU operational and hardware health across their Amazon ECS Managed Instances fleet, enabling them to right-size GPU capacity, troubleshoot performance issues, and detect problems before they impact GPU-accelerated workloads, such as AI/ML training and inference.\n  NVIDIA GPU metrics for Amazon ECS Managed Instances are available through Container Insights in all commercial AWS Regions. To get started, enable Container Insights with enhanced observability on your Amazon ECS cluster, and launch GPU-accelerated Amazon EC2 instance types through an Amazon ECS Managed Instances capacity provider. For Container Insights pricing, see Amazon CloudWatch Pricing. To learn more, see the Amazon ECS Container Insights with enhanced observability metrics user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ecs-mi-gpu-metrics/",
+      "pubDate": "2026-04-30T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "cloudwatch",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b5cf313fd0af",
+      "title": "Amazon MQ for RabbitMQ now supports Prometheus metrics",
+      "description": "Amazon MQ for RabbitMQ now supports the Prometheus plugin on RabbitMQ 4.2 brokers, providing a native Prometheus-compatible metrics endpoint on your RabbitMQ brokers. You can scrape broker, queue, and connection metrics directly from your brokers using any Prometheus-compatible monitoring tool, giving you more flexibility in how you observe and alert on your messaging infrastructure.\n  The plugin exposes metrics through the /metrics, /metrics/detailed, and /metrics/memory-breakdown endpoints in Prometheus text format. Amazon MQ also publishes a curated subset of these Prometheus metrics to CloudWatch. With the Prometheus plugin, you can now integrate your brokers into existing Prometheus-based monitoring stacks including Grafana dashboards, Amazon Managed Service for Prometheus, and self-hosted Prometheus servers.\n  The Prometheus plugin is enabled by default on all Amazon MQ for RabbitMQ 4.2 brokers in all AWS Regions where Amazon MQ is available. To learn more about monitoring with Prometheus, see the Amazon MQ release notes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-mq-rabbitmq-prometheus-metrics/",
+      "pubDate": "2026-04-30T18:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds",
+        "cloudwatch",
+        "grafana"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "cloudwatch",
+        "grafana",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a60b05e6a7c6",
+      "title": "AWS Generative AI Model Agility Solution: A comprehensive guide to migrating LLMs for generative AI production",
+      "description": "In this post, we introduce a systematic framework for LLM migration or upgrade in generative AI production, encompassing essential tools, methodologies, and best practices. The framework facilitates transitions between different LLMs by providing robust protocols for prompt conversion and optimization.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/aws-generative-ai-model-agility-solution-a-comprehensive-guide-to-migrating-llms-for-generative-ai-production/",
+      "pubDate": "2026-04-30T17:04:41.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-03d851c77d81",
+      "title": "Sun Finance automates ID extraction and fraud detection with generative AI on AWS",
+      "description": "In this post, we show how Sun Finance used Amazon Bedrock, Amazon Textract, and Amazon Rekognition to build an AI-powered identity verification (IDV) pipeline. The solution improved extraction accuracy from 79.7% to 90.8%, cut per-document costs by 91%, and reduced processing time from up to 20 hours to under 5 seconds. You'll learn how combining specialized OCR with large language model (LLM) structuring outperformed using either tool alone. You'll also learn how to architect a serverless fraud detection system using vector similarity search.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/sun-finance-automates-id-extraction-and-fraud-detection-with-generative-ai-on-aws/",
+      "pubDate": "2026-04-30T17:00:45.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "rekognition",
+        "textract"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "rekognition",
+        "textract"
+      ]
+    },
+    {
+      "id": "aws-news-7a847cb7fdf9",
+      "title": "Amazon Bedrock AgentCore Identity now supports On-Behalf-Of (OBO) token exchange",
+      "description": "Amazon Bedrock AgentCore Identity now supports On-Behalf-Of (OBO) token exchange, enabling developers to build agents that securely access protected resources on behalf of authenticated users — without requiring users to complete multiple consent flows.\n  Previously, developers building agents that needed to act on behalf of a user had to manage separate consent flows for each protected resource, adding friction for end users and complexity for builders. With OBO token exchange, developers can exchange an access token for a new scoped-down access token that carries both the original user identity and the agent identity. This token is targeted specifically to the outbound protected resource, granting just-in-time, least-privilege access without prompting the user for additional consent.\n  Amazon Bedrock AgentCore Identity OBO token exchange is now generally available in 14 AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm). To learn more, visit the Amazon Bedrock AgentCore Identity documentation .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-agentcore/",
+      "pubDate": "2026-04-30T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-78a78ac2657a",
+      "title": "Unleashing Agentic AI Analytics on Amazon SageMaker with Amazon Athena and Amazon Quick",
+      "description": "This post demonstrates how agentic AI assistant from Amazon Quick transform data analytics into a self-service capability by using Amazon Simple Storage Service (Amazon S3) as a storage, Amazon SageMaker and AWS Glue for lakehouse, Amazon Athena for serverless SQL querying across multiple storage formats (S3 Table, Iceberg, and Parquet).",
+      "link": "https://aws.amazon.com/blogs/machine-learning/unleashing-agentic-ai-analytics-on-amazon-sagemaker-with-amazon-athena-and-amazon-quick/",
+      "pubDate": "2026-04-30T16:52:40.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "sagemaker",
+        "s3",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "sagemaker",
+        "s3",
+        "glue",
+        "athena"
+      ]
+    },
+    {
+      "id": "aws-news-42b87d61d305",
+      "title": "Configuring Amazon Bedrock AgentCore Gateway for secure access to private resources",
+      "description": "In this post, you will configure Amazon Bedrock AgentCore Gateway to access private endpoints using Resource Gateway, a managed construct that provisions Elastic Network Interfaces (ENIs) directly inside your Amazon VPC, one per subnet. You will explore two implementation modes (managed and self-managed) and walk through three practical scenarios: connecting to a private Amazon API Gateway endpoint, integrating with a MCP server on Amazon Elastic Kubernetes Service (Amazon EKS), and accessing a private REST API.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/configuring-amazon-bedrock-agentcore-gateway-for-secure-access-to-private-resources/",
+      "pubDate": "2026-04-30T16:32:43.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "eks",
+        "api gateway"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "eks",
+        "api gateway",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-058d9c5d0cba",
+      "title": "Serverless ICYMI Q1 2026",
+      "description": "Stay current with the latest serverless innovations that can improve your applications. In this 32nd quarterly recap, discover the most impactful AWS serverless launches, features, and resources from Q1 2026 that you might have missed. In case you missed our last ICYMI, check out what happened in Q4 2025. 2026 Q1 calendar Serverless with Mama […]",
+      "link": "https://aws.amazon.com/blogs/compute/serverless-icymi-q1-2026/",
+      "pubDate": "2026-04-30T15:58:24.000Z",
+      "source": "computeBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "nova",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-9d2cb6486890",
+      "title": "AWS Neuron SDK now available with Neuron Agentic Development for NKI kernel development on Trainium",
+      "description": "AWS Neuron announces the Neuron Agentic Development capabilities, an open-source collection of agents and skills that equip AI coding assistants to accelerate development on AWS Trainium and AWS Inferentia. The initial release provides agentic coding capabilities for Neuron Kernel Interface (NKI) kernel development, covering the workflow from authoring to profiling and performance analysis.\n  NKI gives developers direct, low-level programming access to Trainium for writing custom compute kernels that maximize hardware performance. Neuron Agentic Development brings NKI expertise directly into the developer's agentic IDE (such as Claude Code and Kiro) through natural language. For example, a developer can describe a PyTorch operation and receive a working NKI kernel, ask the agent to fix a compilation error and have it automatically identify the issue and apply a correction, or request a performance analysis and receive a report identifying which lines of kernel code are causing bottlenecks. The capabilities span kernel authoring, debugging, documentation lookup, profile capture, and profile analysis.\n  Neuron Agentic Development is designed as a broad framework for agentic capabilities across the Neuron stack, with NKI kernel development as the initial release. The repository is available on GitHub.\n  Learn more:\n  \n \n \nNeuron Agentic Development GitHub repository\n \n \nAWS Neuron documentation",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/announcing-neuron-agentic-development/",
+      "pubDate": "2026-04-30T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "trainium",
+        "inferentia",
+        "neuron"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "trainium",
+        "inferentia",
+        "neuron",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-f8bb9687655a",
+      "title": "Amazon Bedrock AgentCore launches capabilities for optimizing agent performance in preview",
+      "description": "Amazon Bedrock AgentCore launches recommendations and two ways to validate performance (batch evaluations and A/B tests). This completes the observe, evaluate, improve loop for AI agents in production. Until now, translating evaluation findings into concrete, validated improvements required manual developer intervention and intuition rather than a systematic approach. With recommendations, batch evaluations and A/B tests, developers now have the tools to act on what evaluations surface.\n  As models evolve and user behavior shifts, agent quality degrades quietly over time. The recommendations capability analyzes production traces and evaluation outputs generated by AgentCore to create optimized system prompts and tool descriptions tailored to your specific workload. Batch evaluations are then used for validating the recommendations against pre-defined test cases. A/B tests further validate those recommendations through controlled A/B testing against pre-defined test sets or live production traffic, with statistical significance reported before any change is promoted. Every recommendation requires your approval before it ships. Together, these capabilities complete the performance improvement cycle for agents. Agents don't just run, they get better, on your terms.\n  You can use optimization capabilities in all AWS Regions where AgentCore Evaluations is available. To learn more, visit the AgentCore documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/bedrock-agentcore-optimization-preview/",
+      "pubDate": "2026-04-30T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "launch",
+        "preview",
+        "ga",
+        "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-0199348e1ce8",
+      "title": "AWS Lambda adds support for Ruby 4.0",
+      "description": "AWS Lambda now supports creating serverless applications using Ruby 4.0. Developers can use Ruby 4.0 as both a managed runtime and a container base image, and AWS will automatically apply updates to the managed runtime and base image as they become available.\n  Ruby 4.0 is the latest long-term support (LTS) release of Ruby and is expected to be supported for security and bug fixes until March 2029. In addition to providing access to the latest Ruby language features, the Lambda Runtime for Ruby 4.0 also adds support for Lambda advanced logging controls, providing customers with JSON structured logs, configurable logging levels, and the ability to configure the target Amazon CloudWatch log group.\n  The Ruby 4.0 runtime is available in all AWS Regions, including China Regions and the AWS GovCloud (US) Regions.\n  You can use the full range of AWS deployment tools, including the Lambda console, AWS CLI, AWS Serverless Application Model (AWS SAM), CDK, and AWS CloudFormation to deploy and manage serverless applications written in Ruby 4.0. For more information on using Ruby 4.0 in Lambda, see our documentation. For more information about AWS Lambda, visit our product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-lambda-adds-ruby/",
+      "pubDate": "2026-04-30T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "cloudwatch",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-77267d6252dc",
+      "title": "Amazon Quick adds Microsoft Excel, PowerPoint extensions and updates the Word extension (Preview)",
+      "description": "Today, Amazon Quick introduces new and upgraded Microsoft 365 extensions in preview for Excel, PowerPoint, and Word, enabling Quick to perform tasks directly within users’ Microsoft 365 environments. These extensions allow you to use AI to perform complex local tasks such as redlining documents, building financial models, and creating presentation-ready decks.\n The Microsoft Excel extension helps with complex spreadsheet analysis, creating pivot tables and charts, and importing and cleaning data. The Microsoft PowerPoint extension helps you create and refine presentations from Quick data using organization-defined templates. Updates to the Microsoft Word extension include the ability to generate formatted documents with Word primitives, make sweeping edits with track changes enabled, and participate as a reviewer in comments.\n  These extensions transform daily work across teams. Finance teams can build complex models by describing what they need, and sales teams can draft proposals that automatically pull from CRM data. Marketing teams can create branded presentations without manual formatting, legal teams can streamline contract reviews, and IT teams can automate routine data analysis that previously required manual effort.\n Amazon Quick extensions are available in US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), Europe (Ireland), Asia Pacific (Tokyo), Europe (Frankfurt), and Europe (London).\n Start working with Amazon Quick by signing up for an account. To learn more about Amazon Quick, visit the Quick website, and install extensions on the Quick download page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-microsoft-excel/",
+      "pubDate": "2026-04-30T11:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "lex",
+        "preview",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-18d1f9baa4b1",
+      "title": "Amazon OpenSearch Service now supports index-level encryption",
+      "description": "Amazon OpenSearch Service now supports index-level encryption, enabling you to encrypt data at rest on a per-index basis using AWS Key Management Service (KMS) customer managed keys. You can use different customer managed keys for different indexes on the same domain, enabling more granular, tenant-specific encryption policies.\n \nIndex-level encryption builds on the existing encryption at rest capability in Amazon OpenSearch Service. While domain-level encryption uses a single AWS KMS key to encrypt all data on a domain, index-level encryption lets you specify a customer managed key for each index, isolating encrypted data across indexes. To get started, register your KMS key using the Amazon OpenSearch Service API, then specify the key ARN in the index settings when creating an encrypted index.\n \nIndex-level encryption is available at no additional cost for Amazon OpenSearch Service domains running OpenSearch version 3.3 or later. This feature is available in 14 AWS Regions: US West (Oregon), US East (Ohio), US East (N. Virginia), South America (São Paulo), Europe (Paris), Europe (London), Europe (Ireland), Europe (Frankfurt), Canada (Central), Asia Pacific (Tokyo), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Seoul), and Asia Pacific (Mumbai).\n \nTo learn more, see Index-level encryption in the Amazon OpenSearch Service Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-service-supports-index-level-encryption/",
+      "pubDate": "2026-04-30T02:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f74786f2e8cc",
       "title": "Extracting contract insights with PwC’s AI-driven annotation on AWS",
@@ -646,6 +984,29 @@
       ]
     },
     {
+      "id": "aws-news-60399ef42a8c",
+      "title": "Amazon Quick expands integrations to include Google Workspace, Zoom, Airtable, and more",
+      "description": "Amazon Quick is expanding integrations with 13 new built-in action connectors, all supporting managed authentication so users can securely connect their accounts in just a few clicks without manual credentials setup. Amazon Quick is an AI assistant that turns questions into answers, answers into actions, and actions into outcomes—for you and your entire team. Quick brings all your tools and data together in one place. It learns what matters to you and your team, grounds every answer in your real business data, and goes beyond answers: scheduling, building deliverables, creating dashboards, and acting on your behalf.\n  With Quick, business users can now take action directly across Gmail, Google Sheets, Google Docs, Google Calendar, Google Drive, Google Slides, Google Meet, Google Analytics, Zoom, QuickBooks, Airtable, and Dropbox. For example, you can draft and send emails in Gmail, update a Google Sheet with the latest data, schedule a meeting in Google Calendar, share files from Google Drive or Dropbox, schedule a Zoom meeting, sync financial records in QuickBooks, manage projects in Airtable, or collaborate with your team in Microsoft Teams, all without leaving Quick. Each connector includes built-in sign-in support, so Quick securely handles the account authorization flow on your behalf, making it easy to get connected in just a few clicks.\n  These connectors are now available in all AWS Regions where Amazon Quick is available.\n  Start working with Amazon Quick by signing up for an account. To learn more about integrations, visit the integrations webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-google-workspace-zoom/",
+      "pubDate": "2026-04-28T11:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "rds",
+        "now-available",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-0ccac18a4aaa",
       "title": "Amazon Quick now supports document and visual creation in chat",
       "description": "Today, Amazon Quick introduces document and visual creation capabilities, enabling you to produce polished documents, presentations, spreadsheets, and more through natural language without leaving your conversation. No more switching between multiple tools to draft reports, build decks, or format tables. Quick users can now create documents and visuals, refine them in conversation or inline, and download finished files including Word, PDF, PowerPoint, and Excel formats.\n  Quick also generates images, infographics, charts, and other visuals you can embed in any document or presentation, or export as standalone image files, all from the same conversation. Visual creation is currently available in preview.\n Whether you need to generate an executive briefing from meeting notes, create a deck to review quarterly sales trends, build a spreadsheet in Excel or produce an infographic that brings your data to life, Quick handles the end-to-end creation process within your existing chat workflow. This capability is ideal for business analysts, product managers, marketing, finance, and operations teams who need to quickly transform data and insights into shareable, presentation-ready materials without switching tools.\n  Document creation is available in all AWS Regions where Amazon Quick is currently supported. Visual creation (preview) is available in the US East (N. Virginia) and US West (Oregon) AWS Regions.\n You can sign up for an account and start working with Quick for free; no AWS account or credit card is required. To get started with document and visual creation, open a chat conversation and describe whatever you need created. To learn more, see the Amazon Quick User Guide.",
@@ -681,29 +1042,6 @@
       "tags": [
         "amazon q",
         "personalize",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-60399ef42a8c",
-      "title": "Amazon Quick expands integrations to include Google Workspace, Zoom, Airtable, and more",
-      "description": "Amazon Quick is expanding integrations with 13 new built-in action connectors, all supporting managed authentication so users can securely connect their accounts in just a few clicks without manual credentials setup. Amazon Quick is an AI assistant that turns questions into answers, answers into actions, and actions into outcomes—for you and your entire team. Quick brings all your tools and data together in one place. It learns what matters to you and your team, grounds every answer in your real business data, and goes beyond answers: scheduling, building deliverables, creating dashboards, and acting on your behalf.\n  With Quick, business users can now take action directly across Gmail, Google Sheets, Google Docs, Google Calendar, Google Drive, Google Slides, Google Meet, Google Analytics, Zoom, QuickBooks, Airtable, and Dropbox. For example, you can draft and send emails in Gmail, update a Google Sheet with the latest data, schedule a meeting in Google Calendar, share files from Google Drive or Dropbox, schedule a Zoom meeting, sync financial records in QuickBooks, manage projects in Airtable, or collaborate with your team in Microsoft Teams, all without leaving Quick. Each connector includes built-in sign-in support, so Quick securely handles the account authorization flow on your behalf, making it easy to get connected in just a few clicks.\n  These connectors are now available in all AWS Regions where Amazon Quick is available.\n  Start working with Amazon Quick by signing up for an account. To learn more about integrations, visit the integrations webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-google-workspace-zoom/",
-      "pubDate": "2026-04-28T11:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
-        "now-available",
-        "update",
-        "integration",
         "support"
       ]
     },
@@ -1401,7 +1739,7 @@
     {
       "id": "aws-news-4cfc28f7e780",
       "title": "Amazon SageMaker Unified Studio now offers CI/CD CLI for data and AI applications",
-      "description": "Amazon SageMaker Unified Studio now offers the CI/CD CLI (aws-smus-cicd-cli), an open-source command line tool that automates deployment of multi-service data and AI applications across development, test, and production. Organizations building applications in SageMaker Unified Studio combine multiple AWS services, including AWS Glue, Amazon Athena, Amazon MWAA, Amazon SageMaker AI, Amazon Bedrock, and Amazon QuickSight, into single applications. The CLI allows data teams to define applications once in a YAML manifest while DevOps teams deploy with a single command, reducing deployment bottlenecks and configuration drift.\n \nThe CLI reads a declarative manifest.yaml that maps each pipeline stage to an isolated SageMaker Unified Studio project. At deploy time, it substitutes stage-specific configurations (S3 paths, IAM roles, account IDs, and connection strings) and provisions resources in dependency order. Four commands cover the lifecycle: describe validates permissions and connections, bundle packages an immutable artifact from the source target, deploy writes that artifact to the destination target, and test runs post-deployment validation. It works with existing CI/CD solutions such as GitHub Actions, Jenkins, and GitLab CI.\n \nThe CI/CD CLI is available at no additional cost in all AWS Regions where Amazon SageMaker Unified Studio is available. You pay only for the underlying AWS resources provisioned during deployment.\n \nTo get started, visit the following resources:\n \nThe CI/CD CLI is available at no additional cost in all AWS Regions where Amazon SageMaker Unified Studio is available. You pay only for the underlying AWS resources provisioned during deployment.\n \nTo get started, visit the following resources:\n \n \n \nInstall from PyPI \n \n \nGitHub repository\n \n \nAmazon SageMaker Unified Studio documentation",
+      "description": "Amazon SageMaker Unified Studio now offers the CI/CD CLI (aws-smus-cicd-cli), an open-source command line tool that automates deployment of multi-service data and AI applications across development, test, and production. Organizations building applications in SageMaker Unified Studio combine multiple AWS services, including AWS Glue, Amazon Athena, Amazon MWAA, Amazon SageMaker AI, Amazon Bedrock, and Amazon QuickSight, into single applications. The CLI allows data teams to define applications once in a YAML manifest while DevOps teams deploy with a single command, reducing deployment bottlenecks and configuration drift.\n \nThe CLI reads a declarative manifest.yaml that maps each pipeline stage to an isolated SageMaker Unified Studio project. At deploy time, it substitutes stage-specific configurations (S3 paths, IAM roles, account IDs, and connection strings) and provisions resources in dependency order. Four commands cover the lifecycle: describe validates permissions and connections, bundle packages an immutable artifact from the source target, deploy writes that artifact to the destination target, and test runs post-deployment validation. It works with existing CI/CD solutions such as GitHub Actions, Jenkins, and GitLab CI.\n \nThe CI/CD CLI is available at no additional cost in all AWS Regions where Amazon SageMaker Unified Studio is available. You pay only for the underlying AWS resources provisioned during deployment.\n \nTo get started, visit the following resources:\n \n \n \nInstall from PyPI \n \n \nGitHub repository\n \n \nAmazon SageMaker Unified Studio documentation",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-smus-ci-cd-cli/",
       "pubDate": "2026-04-23T19:00:00.000Z",
       "source": "whatsNew",
@@ -1845,26 +2183,6 @@
       ]
     },
     {
-      "id": "aws-news-c49d32293913",
-      "title": "Get to your first working agent in minutes: Announcing new features in Amazon Bedrock AgentCore",
-      "description": "Today, we're introducing new capabilities that further streamline the agent building experience, removing the infrastructure barriers that slow teams down at every stage of agent development from the first prototype through production deployment.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/get-to-your-first-working-agent-in-minutes-announcing-new-features-in-amazon-bedrock-agentcore/",
-      "pubDate": "2026-04-22T19:13:56.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "new-feature"
-      ]
-    },
-    {
       "id": "aws-news-262ec9c0135f",
       "title": "Enhancements to AWS Network Firewall Managed Rules from AWS Marketplace Partners",
       "description": "AWS Network Firewall now supports expanded Managed Rules from AWS Marketplace partners, with new rule group optimizations through partners to include up to 10 million domain name indicators and up to 1 million IP addresses in their managed rule groups. Infoblox is expanding domain name indicators to protect your workloads from critical and high-risk domains. Lumen is introducing new rule groups to stop command and control attacks. ThreatSTOP is adding managed rules for Office of Foreign Assets Control (OFAC) sanctions and expanding global compliance protections with new European Union, Japan, and United Nations sanction coverage.\n  These enhancements give you access to richer, more comprehensive threat intelligence directly within AWS Network Firewall, reducing the operational burden of managing threat feeds and enabling faster, more accurate protection against emerging threats. Whether you need to block malicious domains at scale, defend against command and control infrastructure, or enforce sanctions-based compliance policies, managed rules from AWS Marketplace partners provide ready-to-deploy, continuously updated protections for your cloud workloads.\n  Managed rules for AWS Network Firewall are available from AWS Marketplace sellers of Check Point, Fortinet, Infoblox, Lumen, Rapid7, ThreatSTOP, and Trend Micro. AWS Marketplace rule groups are now available in 9 additional AWS Regions: Asia Pacific (Jakarta), Asia Pacific (Hyderabad), Asia Pacific (Melbourne), Asia Pacific (Malaysia), Canada West (Calgary), Europe (Zurich), Europe (Spain), Israel (Tel Aviv), and Mexico (Central). For a full list of supported regions, visit the AWS Regional Services page.\n  To get started, visit the AWS Network Firewall console or browse available managed rules in AWS Marketplace. For more information, see the AWS Network Firewall product page and the service documentation.",
@@ -1994,23 +2312,6 @@
         "new-feature",
         "support",
         "coming-soon"
-      ]
-    },
-    {
-      "id": "aws-news-1827bafe0927",
-      "title": "Company-wise memory in Amazon Bedrock with Amazon Neptune and Mem0",
-      "description": "Company-wise memory in Amazon Bedrock, powered by Amazon Neptune and Mem0, provides AI agents with persistent, company-specific context—enabling them to learn, adapt, and respond intelligently across multiple interactions. TrendMicro, one of the largest antivirus software companies in the world, developed the Trend’s Companion chatbot, so their customers can explore information through natural, conversational interactions",
-      "link": "https://aws.amazon.com/blogs/machine-learning/company-wise-memory-in-amazon-bedrock-with-amazon-neptune-and-mem0/",
-      "pubDate": "2026-04-22T15:56:24.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2271,24 +2572,6 @@
       ]
     },
     {
-      "id": "aws-news-81b8c9889668",
-      "title": "From developer desks to the whole organization: Running Claude Cowork in Amazon Bedrock",
-      "description": "Today, we're excited to announce Claude Cowork in Amazon Bedrock. You can now run Cowork and Claude Code Desktop through Amazon Bedrock, directly or using an LLM gateway. In this post, we walk through how Claude Cowork integrates with Amazon Bedrock and show an example of how knowledge workers use it in practice.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/from-developer-desks-to-the-whole-organization-running-claude-cowork-in-amazon-bedrock/",
-      "pubDate": "2026-04-21T19:13:49.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-1878ce7599e5",
       "title": "AWS Marketplace streamlines VAT payment for deemed supply transactions",
       "description": "AWS Marketplace now offers sellers a streamlined self-service process to submit Value Added Tax (VAT) invoices and receive automated VAT disbursements for deemed supply of digital services in the European Union, Norway, and the United Kingdom. Under the European Union, United Kingdom, and Norwegian VAT laws, when AWS Marketplace facilitates digital service sales, the law creates a deemed supply arrangement between sellers and the marketplace. To receive VAT payment, sellers are required to invoice the relevant AWS Europe, Middle East, and Africa (EMEA) SARL branch facilitating their transaction. This new capability provides sellers a unified experience within AWS Marketplace to submit VAT invoices and receive VAT payments, simplifying tax compliance under deemed supply arrangements.\n  Sellers can now access the new experience through AWS Marketplace Management portal or AWS Partner Central, submit VAT invoices, track invoice status in real-time, and receive automated VAT payments. The system automatically validates invoices against mandatory fields and disburses VAT amounts once buyer payment is received. Sellers can consolidate multiple deemed supply transactions into a single invoice per period, provided they relate to the same AWS EMEA branch and currency. Sellers can also submit invoices before buyer payment is received, with the system automatically processing disbursements when all conditions are met. Enhanced reporting capabilities through the Seller Reports help sellers identify eligible transactions and reconcile disbursements for audit and financial reporting purposes. This launch eliminates the previous manual process and separate platform onboarding while reducing the administrative burden of tracking VAT invoices and payments.\n  This capability is available for transactions where both seller and buyer AWS accounts are located in the same country when transacting via the AWS EMEA branch across 20 jurisdictions: Austria, Belgium, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, Netherlands, Norway, Poland, Portugal, Romania, Spain, Sweden, and the United Kingdom.\n  To learn more about VAT payment for deemed supply transactions and invoice submission requirements, visit the AWS Marketplace Seller Guide or VAT on Deemed Supply FAQs.",
@@ -2347,23 +2630,6 @@
         "cloudformation",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-4d1d7f3018b5",
-      "title": "End-to-end lineage with DVC and Amazon SageMaker AI MLflow apps",
-      "description": "In this post, we show how to combine DVC (Data Version Control), Amazon SageMaker AI, and Amazon SageMaker AI MLflow Apps to build end-to-end ML model lineage. We walk through two deployable patterns — dataset-level lineage and record-level lineage — that you can run in your own AWS account using the companion notebooks.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/end-to-end-lineage-with-dvc-and-amazon-sagemaker-ai-mlflow-apps/",
-      "pubDate": "2026-04-21T16:43:03.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
       ]
     },
     {
@@ -2471,181 +2737,6 @@
       ]
     },
     {
-      "id": "aws-news-a2d7907eaf38",
-      "title": "Amazon MSK Serverless expands to 13 new AWS regions",
-      "description": "You can now connect your Apache Kafka applications to Amazon MSK Serverless in the Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Asia Pacific (New Zealand), Asia Pacific (Osaka), Asia Pacific (Thailand),  Europe (Milan), Europe (Spain),  Europe (Zurich), Israel (Tel Aviv), Mexico (Central) AWS Regions.\n  Amazon MSK is a fully managed service that makes it easier for you to build and run applications that use Apache Kafka as a data store. Amazon MSK Serverless is a cluster type for Amazon MSK that allows you to run Apache Kafka without having to manage and scale cluster capacity. MSK Serverless automatically provisions and scales compute and storage resources, so you can use Apache Kafka on demand.\n  To learn more about Amazon MSK Serverless, visit our Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-msk-serverless-13-regions/",
-      "pubDate": "2026-04-21T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "kafka",
-        "msk"
-      ]
-    },
-    {
-      "id": "aws-news-31e8bc6b7e18",
-      "title": "Amazon EC2 G7e instances now available in AWS Local Zones in Los Angeles",
-      "description": "Today, AWS announces the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7e instances in AWS Local Zones in Los Angeles, California. G7e instances feature NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs and 5th generation Intel Xeon Scalable (Emerald Rapids) processors, bringing high-performance GPU compute closer to end users in Los Angeles. \n \nFor creative workloads, you can use G7e instances to run studio workstation workloads with low-latency access to local storage, and post-production workloads including visual effects (VFX) editorial, color correction, and VFX finishing. G7e instances support enhanced real-time rendering on graphics engines and 2D/3D VFX composition software. For AI workloads, you can also use G7e instances to deploy Large Language Models (LLMs), inference, and agentic AI at the edge. \n \nTo get started, opt-in to the Los Angeles Local Zone (us-west-2-lax-1b) from AWS Global View. You can enable G7e instances from the Amazon EC2 console, AWS Command Line Interface (AWS CLI), and AWS SDKs. G7e instances are available through On Demand and Savings Plans. To learn more, visit the AWS Local Zones Features page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-g7e-instances-local-zones/",
-      "pubDate": "2026-04-21T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f1452eafc5fc",
-      "title": "Amazon Location Service now offers bulk address validation for the United States, Canada, Australia, and the United Kingdom",
-      "description": "Amazon Location Service now offers bulk address validation for the United States, Canada, Australia, and the United Kingdom. Customers can now validate, correct, and standardize large volumes of addresses at scale, whether cleaning customer databases before a CRM migration, verifying shipping addresses to reduce failed deliveries, screening addresses for identity verification and fraud prevention, or improving direct mail targeting and insurance underwriting accuracy. This capability supports use cases across healthcare, financial services, transportation and logistics, retail, and more.\n  Address validation checks addresses against authoritative postal data, corrects common errors like misspellings, missing postal codes, and non-standard abbreviations, and standardizes formatting to match regional postal rules. Each result includes a confidence score and deliverability indicators so applications know exactly what to trust and act on. Using the new Amazon Location Service Jobs API, customers upload their address records to their own Amazon S3 bucket, submit a validation job, and retrieve enriched, standardized results when processing is complete. For addresses in the United States, Canada, and Australia, customers can optionally request position (geocode) coordinates alongside validated address results in the same job.\n  Address validation is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), Europe (Ireland), Europe (Stockholm), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai), Canada (Central), Europe (London), and South America (São Paulo). To learn more, visit the Amazon Location Service bulk address validation feature page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-location-service-bulk-address-validation/",
-      "pubDate": "2026-04-21T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "rds"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "s3",
-        "rds",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-152ed0da8f93",
-      "title": "Amazon Aurora serverless: Up to 30% better performance, smarter scaling, and still scales to zero",
-      "description": "Amazon Aurora serverless — the autoscaling database that scales up to support your most demanding workloads and down to zero when you don't need it — just got faster and smarter, with up to 30% better performance than the previous version and enhanced scaling that understands your workload. It's especially well-suited for agentic AI applications, which typically have bursts of activity, long idle windows, and unpredictable patterns. Aurora serverless handles all of it automatically, scaling capacity with your agents rather than against them, and you only pay for what you actually use. When not in use, the database automatically scales down to zero to save cost.\n  With improved performance and scaling, you can now use serverless for even more demanding workloads. The enhanced scaling algorithm enables you to efficiently run workloads where multiple tasks compete for resources, such as busy web applications and API services. These improvements are available in platform version 4 at no additional cost. All new clusters, database restores, and new clones will automatically launch on platform version 4. Existing clusters on platform version 1, 2, or 3 can upgrade directly to platform version 4 by using pending maintenance action, stopping and restarting the cluster, or using blue/green deployments. You can verify your cluster's platform version in the AWS Console under instance configuration section or via the RDS API's ServerlessV2PlatformVersion parameter. To learn more, read the blog.\n  Aurora serverless is an on-demand, automatic scaling configuration for Amazon Aurora. For pricing details and Region availability, visit Amazon Aurora Pricing. To learn more, read the documentation, and get started by creating an Aurora serverless database using only a few steps in the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aurora-serverless-smarter-scaling/",
-      "pubDate": "2026-04-21T13:53:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "ga",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c64f3ec592a4",
-      "title": "AWS Backup adds Amazon Redshift Serverless and Aurora DSQL support for AWS Organizations backup policies",
-      "description": "AWS Backup now supports Amazon Redshift Serverless namespaces and Amazon Aurora DSQL clusters as resource types in AWS Organizations backup policies. Organization administrators can now define backup policy rules that directly target these resource types across member accounts.\n \nPreviously, backing up Redshift Serverless namespaces and Aurora DSQL clusters through organization backup policies required using tag-based selections or backing up all resources in a member account. With this launch, administrators can specify these resource types directly in their backup policy selections, providing more precise control over which resources are included in or excluded from Organization-wide backup plans.\n \nThis capability is available in all AWS Commercial and GovCloud Regions where AWS Backup and the respective services are available. To get started, visit the AWS Organizations backup policies documentation or the AWS Backup console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/backup-policies-aurora-dsql-redshift-serverless/",
-      "pubDate": "2026-04-21T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "redshift",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-257e5d633022",
-      "title": "Amazon Quick Automate announces shared file storage for automations",
-      "description": "Amazon Quick Automate now supports in-app file storage, enabling you to seamlessly manage files within your automations without requiring external storage solutions or connectors. This feature provides a centralized location for uploading, downloading, and sharing files across multiple automations within the same automation group, eliminating the friction previously experienced when working with files in automation workflows.\n Previously, providing files as inputs to automations or receiving file outputs required uploading to external services like Amazon S3, OneDrive, or SharePoint, and configuring connectors. With shared file storage, automation builders and business users can now upload files directly through an intuitive drag-and-drop interface and access them immediately across all automations in their automation group. Key use cases include static lookup files that business users can update as needed, such as contact lists or pricing tables; configuration files where business users can manage agent guidelines outside the automation itself; multi-automation workflows where one automation's output feeds into another; and daily or weekly reporting where automations share outputs with users for review.\n \nThis feature is available in all AWS Regions where Quick Automate is enabled, including US East (N. Virginia), US West (Oregon), Europe (Dublin), Europe (London), Europe (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney). To learn more about shared file storage, visit the Amazon Quick Automate product page or read the shared file actions documentation..",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-automate-shared-file-storage/",
-      "pubDate": "2026-04-21T06:22:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "s3",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-52236be82025",
-      "title": "AWS Lambda Durable Execution SDK for Java GA",
-      "description": "Today, AWS announces the general availability of the AWS Lambda Durable Execution SDK for Java, empowering Java developers to build resilient, long-running workflows using Lambda durable functions. With this SDK, developers can create multi-step applications like order processing pipelines, AI agent orchestration, and human-in-the-loop approvals directly in their applications without implementing custom progress tracking or integrating external orchestration services.\n \nLambda durable functions extend Lambda's event-driven programming model with operations that checkpoint progress automatically and pause execution for up to a year when waiting on external events. The AWS Lambda Durable Execution SDK for Java provides an idiomatic Java experience for building with Lambda durable functions. It includes steps for progress tracking, callback integration for human and agent-in-the-loop workflows, durable invocation for reliable function chaining, and waits for efficient suspension. The SDK is compatible with Java 17+ and can be deployed using Lambda managed runtimes or functions packaged as container images. The local testing emulator in the SDK enables developers to build and debug locally before deploying to production.\n \nTo get started, see the Lambda durable functions developer guide and the AWS Lambda Durable Execution SDK for Java on GitHub. For Regional availability and pricing details, see the AWS Regional Services List and AWS Lambda Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/lambda-durable-execution-java-ga/",
-      "pubDate": "2026-04-21T06:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "lambda",
-        "ga",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-903ac7218139",
-      "title": "Amazon Quick Automate now provides APIs to trigger and monitor automation jobs",
-      "description": "Amazon Quick Automate now provides APIs that enable you to programmatically start automation jobs and check their status from external applications and services. The new StartAutomationJob and DescribeAutomationJob APIs allow automation developers and DevOps engineers to invoke deployed automations with custom input data and retrieve structured results when jobs complete, extending Quick Automate's capabilities beyond scheduled execution.\n \nThese APIs enable seamless integration of Quick Automate workflows into your existing applications and event-driven architectures. You can trigger automations in response to application events such as new user registrations or order completions, pass dynamic input parameters with typed schemas, and use the output data for further processing. Use cases include incorporating automations into data pipelines, coordinating workflows across multiple AWS services or third-party applications, and executing batch operations with different input parameters from a single application.\n \nThis feature is available through AWS SDK and AWS CLI in all AWS Regions where Quick Automate is enabled, including US East (N. Virginia), US West (Oregon), Europe (Dublin), Europe (London), Europe (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney). To learn more, visit the Amazon Quick Automate marketing page or see the API documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-automate-api-trigger/",
-      "pubDate": "2026-04-21T05:49:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-205901761e11",
-      "title": "Amazon Connect Outbound Campaigns now supports contact priority ordering",
-      "description": "Amazon Connect Outbound Campaigns now allows you to dial contacts in configurable priority order based on up to 10 profile attributes for voice campaigns and voice activities in journeys. This helps you focus agent time on the most valuable customers or time-sensitive opportunities, improving campaign effectiveness and conversion rates.\n \nWith contact priority ordering, you can sort segments on attributes such as customer lifetime value, account tier, or appointment date. For example, a financial services team can prioritize outreach to high-value accounts nearing contract renewal, or a healthcare provider can ensure patients with the earliest upcoming appointments are contacted first. Initial dial attempts always take precedence over reattempts, ensuring your priority order is maintained throughout campaign execution. \n \nThis capability is available in all AWS Regions where Amazon Connect Outbound Campaigns is offered at no additional cost. To get started, configure sort attributes when building segments in Amazon Connect Customer Profiles. To learn more, see the Amazon Connect Outbound Campaigns best practice and how to build customer segments.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-connect-priority-dialing/",
-      "pubDate": "2026-04-21T02:03:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-89bf56f79ac8",
       "title": "Migrate third-party and self-managed Apache Kafka clusters to Amazon MSK Express brokers with Amazon MSK Replicator",
       "description": "In this post, we walk you through how to replicate Apache Kafka data from your external Apache Kafka deployments to Amazon MSK Express brokers using MSK Replicator. You will learn how to configure authentication on your external cluster, establish network connectivity, set up bidirectional replication, and monitor replication health to achieve a low-downtime migration.",
@@ -2662,27 +2753,6 @@
       "tags": [
         "kafka",
         "msk"
-      ]
-    },
-    {
-      "id": "aws-news-da7f9acc886e",
-      "title": "Accelerate Generative AI Inference on Amazon SageMaker AI with G7e Instances",
-      "description": "Today, we are thrilled to announce the availability of G7e instances powered by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs on Amazon SageMaker AI. You can provision nodes with 1, 2, 4, and 8 RTX PRO 6000 GPU instances, with each GPU providing 96 GB of GDDR7 memory. This launch provides the capability to use a single-node GPU, G7e.2xlarge instance to host powerful open source foundation models (FMs) like GPT-OSS-120B, Nemotron-3-Super-120B-A12B (NVFP4 variant), and Qwen3.5-35B-A3B, offering organizations a cost-effective and high-performing option.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-generative-ai-inference-on-amazon-sagemaker-ai-with-g7e-instances/",
-      "pubDate": "2026-04-20T19:38:10.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "organizations"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "sagemaker",
-        "organizations",
-        "launch",
-        "ga"
       ]
     },
     {
@@ -3949,25 +4019,6 @@
         "step functions",
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-c9da28428aee",
-      "title": "Node.js 24 runtime now available in AWS Lambda",
-      "description": "You can now develop AWS Lambda functions using Node.js 24, either as a managed runtime or using the container base image. Node.js 24 is in active LTS status and ready for production use. It is expected to be supported with security patches and bugfixes until April 2028. The Lambda runtime for Node.js 24 includes a new implementation of the […]",
-      "link": "https://aws.amazon.com/blogs/compute/node-js-24-runtime-now-available-in-aws-lambda/",
-      "pubDate": "2025-11-25T22:19:46.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "now-available",
-        "support"
       ]
     },
     {
