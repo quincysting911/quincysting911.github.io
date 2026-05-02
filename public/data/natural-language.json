@@ -1,8 +1,59 @@
 {
-  "lastUpdated": "2026-05-01T07:58:10.594Z",
+  "lastUpdated": "2026-05-02T07:17:02.177Z",
   "category": "natural-language",
   "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-9d6d5875f5bf",
+      "title": "OpenSearch UI supports cross-region data access to OpenSearch domains",
+      "description": "Amazon OpenSearch Service now supports cross-region data access for OpenSearch UI, enabling users to access OpenSearch domains hosted in different AWS Regions from within a single OpenSearch UI application. Combined with the cross-account data access launch earlier this year, you can now query or build dashboards on OpenSearch domains in flexible combinations of accounts and Regions - without switching endpoints or replicating data. Cross-region data access is available for OpenSearch domains hosted in both public and Virtual Private Cloud (VPC) configurations.\n  With cross-region data access, teams can build centralized analytics, search, and observability workflows across globally distributed deployments while keeping data in place - meeting data residency requirements, minimizing inter-region egress, and preserving each Region’s latency and availability characteristics. If you are using cross-cluster replication, you can now query both your primary and replica domains directly from a single OpenSearch UI application. Cross-region data access can be combined with cross-account data access, so a single OpenSearch UI application can connect to domains in different accounts, different Regions, or both. Cross-region data access supports both IAM and IAM Identity Center for end-user authentication.\n  Cross-region data access to OpenSearch domains is available in all AWS Regions where OpenSearch UI is available. To learn more, see Cross-region data access to OpenSearch domains in the Amazon OpenSearch Service Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/opensearch-ui-cross-region-data-access-domains/",
+      "pubDate": "2026-05-01T20:54:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "opensearch",
+        "opensearch service",
+        "rds",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "opensearch",
+        "opensearch service",
+        "rds",
+        "iam",
+        "iam identity center",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2127ae194ef6",
+      "title": "Amazon EKS now supports one-click cluster access through CloudShell",
+      "description": "Amazon Elastic Kubernetes Service (EKS) now provides one-click cluster access directly from the AWS Management Console through AWS CloudShell, eliminating the need to install and configure kubectl, AWS CLI, or kubeconfig files locally. This feature helps developers and operators who want immediate cluster access without tooling setup or complex environment configuration.\n  With one-click cluster access, you can navigate to any EKS cluster in the console and choose Connect to instantly launch an AWS CloudShell session with kubectl pre-configured for that cluster. You can then run kubectl commands immediately to inspect workloads, troubleshoot issues, or manage resources without switching to a local terminal. This feature supports clusters with both public and private API server endpoints. Each CloudShell session also includes the AWS CLI and standard CloudShell utilities, giving you immediate access to essential cluster operations.\n  One-click cluster access is available at no additional charge in all the AWS Regions where Amazon EKS is available. To get started, see Connect kubectl to an EKS cluster in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-eks-one-click-cluster-access/",
+      "pubDate": "2026-04-30T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "eks"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "eks",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b5cf313fd0af",
       "title": "Amazon MQ for RabbitMQ now supports Prometheus metrics",
@@ -139,52 +190,6 @@
         "kafka",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-1d3367a2a537",
-      "title": "AWS Lambda durable functions are now available in 16 additional AWS Regions",
-      "description": "AWS Lambda durable functions are now available in 16 additional AWS Regions. Lambda durable functions enable developers to build reliable multi-step applications and AI workflows within the Lambda developer experience, and with this expansion, you can now use durable functions in 16 additional AWS Regions: Africa (Cape Town), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Taipei), Canada (Central), Canada West (Calgary), Europe (London), Europe (Paris), Europe (Zurich), Israel (Tel Aviv), Mexico (Central), South America (São Paulo), and US West (N. California).\n \nLambda durable functions extend the Lambda programming model with new primitives in your event handler, such as \"steps\" and \"waits\", allowing you to checkpoint progress, automatically recover from failures, and pause execution without incurring compute charges for on-demand functions. With this region expansion, you can orchestrate complex processes such as order workflows, user onboarding, and AI-assisted tasks closer to your users and data, helping you to meet low-latency and data residency requirements.\n \nYou can activate durable functions for new Python (versions 3.13 and 3.14), Node.js (versions 22 and 24), or Java (17+) based Lambda functions using the AWS Lambda API, AWS Management Console, or AWS SDK. You can also use infrastructure as code tools such as AWS CloudFormation, AWS Serverless Application Model (AWS SAM), and the AWS Cloud Development Kit (AWS CDK).\n \nFor more information on durable functions, visit the AWS Lambda durable functions product page or the AWS Lambda Developer Guide. To learn about pricing, visit AWS Lambda pricing. For region availability, visit the AWS Capabilities by Region page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/lambda-durable-functions-16-new-regions/",
-      "pubDate": "2026-04-22T06:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "lambda",
-        "cloudformation"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "lambda",
-        "cloudformation",
-        "ga",
-        "now-available",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-c53d8d89f172",
-      "title": "Introducing the Amazon EKS Hybrid Nodes gateway for hybrid Kubernetes networking",
-      "description": "Amazon Elastic Kubernetes Service (EKS) now offers the Amazon EKS Hybrid Nodes gateway, a feature that automates networking between your Amazon EKS cluster VPC and Kubernetes Pods running on Amazon EKS Hybrid Nodes. The Amazon EKS Hybrid Nodes gateway eliminates the need to make on-premises pod networks routable or coordinate network infrastructure changes when running in hybrid Kubernetes environments.\n  Networking in hybrid Kubernetes environments can be complex, often requiring changes to on-premises routing configurations, coordination with network teams, and ongoing maintenance as workloads scale. The Amazon EKS Hybrid Nodes gateway addresses these challenges by automatically enabling Kubernetes control plane-to-webhook communication, pod-to-pod traffic across cloud and on-premises environments, and connectivity for AWS services such as Application Load Balancers, Network Load Balancers, and Amazon Managed Service for Prometheus. Customers deploy the Amazon EKS Hybrid Nodes gateway to Amazon EC2 instances using Helm, and the gateway automatically maintains VPC route tables as workloads scale. The Amazon EKS Hybrid Nodes gateway codebase is open source.\n  The Amazon EKS Hybrid Nodes gateway is available in all AWS Regions where Amazon EKS Hybrid Nodes is available, except the China Regions. The Amazon EKS Hybrid Nodes gateway is offered at no additional charge. You pay for the underlying AWS infrastructure used to run the gateway, including Amazon EC2 instance charges and any associated data transfer fees. To get started, visit the Amazon EKS Hybrid Nodes gateway documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-eks-hybrid-nodes-gateway/",
-      "pubDate": "2026-04-21T19:51:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "eks"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "eks",
-        "ga"
       ]
     },
     {

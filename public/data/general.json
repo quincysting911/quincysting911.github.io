@@ -1,8 +1,54 @@
 {
-  "lastUpdated": "2026-05-01T07:58:10.594Z",
+  "lastUpdated": "2026-05-02T07:17:02.177Z",
   "category": "general",
   "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-6018869e347d",
+      "title": "FreeRTOS 202604 LTS now available with enhanced security and MQTT v5.0",
+      "description": "FreeRTOS 202604 LTS, a new Long Term Support release of the open-source real-time operating system for embedded devices, is now available. This release provides embedded systems developers and Internet of Things (IoT) device manufacturers with feature stability, security updates, and critical bug fixes for two years. It addresses key challenges in embedded systems, including memory safety, code quality, and protocol support.\n  FreeRTOS kernel v11.3.0 introduces new hardware ports, security hardening, and expanded Memory Protection Unit (MPU) support, reducing the number of MPU regions claimed by FreeRTOS and allowing developers to reserve hardware regions for application-specific memory protection. Additionally, coreMQTT v5.0.2 adds MQTT v5.0 protocol support, enabling features like topic aliases for bandwidth-constrained devices and request/response patterns for interactive IoT applications. coreSNTP v2.0.0 brings year 2038 readiness, so devices deployed today can validate TLS certificates and timestamp data correctly throughout their operational lifetime.\n  This release offers libraries verified for memory safety and MISRA-C compliance. The libraries improve robustness, portability, and reliability in embedded systems.\n  Migration guides for coreMQTT and coreSNTP provide detailed guidance for updating to FreeRTOS 202604 LTS. For projects requiring critical fixes on the previous LTS version beyond its expiry, the FreeRTOS Extended Maintenance Plan is available. To learn more, visit the FreeRTOS LTS page and FreeRTOS LTS GitHub repository.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/freertos-lts/",
+      "pubDate": "2026-05-01T21:42:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-993e0ed97309",
+      "title": "A guide to Airflow worker pool optimization in Amazon MWAA",
+      "description": "Optimizing the Airflow worker pool configuration in Amazon Managed Workflows for Apache Airflow (Amazon MWAA), the AWS fully managed Apache Airflow service, is an important yet often overlooked strategy for scaling workflow operations. Tasks queued for longer periods can create the illusion that additional workers are the solution, when in reality the root cause might […]",
+      "link": "https://aws.amazon.com/blogs/big-data/a-guide-to-airflow-worker-pool-optimization-in-amazon-mwaa/",
+      "pubDate": "2026-05-01T15:41:26.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-0645377159e0",
+      "title": "Spatial Data Management on AWS adds custom transformations",
+      "description": "Spatial Data Management on AWS (SDMA) now supports custom transformation connectors and a unified desktop client installer. Custom transformation connectors let you run compute-intensive processing — such as format conversion, 3D rendering, image tiling, or metadata extraction — by submitting jobs to AWS Deadline Cloud using Open Job Description templates. You can extend SDMA's built-in content analysis with custom logic to verify formats, extract attributes, or run transformations that require dedicated compute resources.\n \nConnectors run in isolated compute environments and automatically ingest declared outputs back into SDMA's governed asset repository, enabling you to automate and chain processing workloads across your spatial data pipeline. The SDMA desktop application now includes a standalone installer that bundles all required dependencies, removing the need to separately install the CLI or other components.\n \nThese features are available in the following AWS Regions: Asia Pacific (Tokyo, Singapore, Sydney), Europe (Frankfurt, Ireland, London), US East (N. Virginia, Ohio), and US West (Oregon). To learn more, visit the SDMA solutions library product page. For technical details, see the SDMA documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/spatial-data-management-aws/",
+      "pubDate": "2026-05-01T14:35:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-848656f3cd7e",
       "title": "AWS Outposts racks now support LagStatus CloudWatch metric",
@@ -102,27 +148,6 @@
         "cloudformation",
         "cloudwatch",
         "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-18d1f9baa4b1",
-      "title": "Amazon OpenSearch Service now supports index-level encryption",
-      "description": "Amazon OpenSearch Service now supports index-level encryption, enabling you to encrypt data at rest on a per-index basis using AWS Key Management Service (KMS) customer managed keys. You can use different customer managed keys for different indexes on the same domain, enabling more granular, tenant-specific encryption policies.\n \nIndex-level encryption builds on the existing encryption at rest capability in Amazon OpenSearch Service. While domain-level encryption uses a single AWS KMS key to encrypt all data on a domain, index-level encryption lets you specify a customer managed key for each index, isolating encrypted data across indexes. To get started, register your KMS key using the Amazon OpenSearch Service API, then specify the key ARN in the index settings when creating an encrypted index.\n \nIndex-level encryption is available at no additional cost for Amazon OpenSearch Service domains running OpenSearch version 3.3 or later. This feature is available in 14 AWS Regions: US West (Oregon), US East (Ohio), US East (N. Virginia), South America (São Paulo), Europe (Paris), Europe (London), Europe (Ireland), Europe (Frankfurt), Canada (Central), Asia Pacific (Tokyo), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Seoul), and Asia Pacific (Mumbai).\n \nTo learn more, see Index-level encryption in the Amazon OpenSearch Service Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-service-supports-index-level-encryption/",
-      "pubDate": "2026-04-30T02:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "ga",
         "support"
       ]
     },
@@ -624,49 +649,6 @@
         "cloudformation",
         "eventbridge",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3cfd47de926c",
-      "title": "Amazon OpenSearch Service now supports rollback for service software updates",
-      "description": "Amazon OpenSearch Service now supports rollback for service software updates, giving you greater control when managing updates to your Amazon OpenSearch Service domains. Previously, once a software update was applied, there was no self-service option to revert it to a previous version if you encountered an unexpected issue.\n \nSoftware update rollback uses a blue/green deployment. You can initiate a rollback within 15 days of a service software update being applied, using the new RollbackServiceSoftwareUpdate API, the AWS CLI, or the Amazon OpenSearch Service console.\n \nRollback option for service software updates is now available in all AWS Regions where Amazon OpenSearch Service is available. To learn more about the software updates and rollback option, refer to the Amazon OpenSearch Service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-opensearch-service-now-supports-rollback-for-service-software-updates/",
-      "pubDate": "2026-04-22T03:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "now-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f24a01a993b5",
-      "title": "Amazon Athena Spark adds support for AWS PrivateLink",
-      "description": "Amazon Athena Spark now supports AWS PrivateLink so that you can access APIs and endpoints from your Amazon Virtual Private Cloud (VPC) without traversing the public internet. This feature can help you meet compliance requirements by allowing you to access and use Athena Spark APIs and endpoints entirely within the AWS network.\n  You can now create AWS PrivateLink interface endpoints to connect from clients in your VPC. The Athena VPC endpoint supports all Athena Spark APIs and endpoints, including the Spark Connect, Spark Live UI and Spark History Server endpoints. Communication between your VPC and Athena Spark APIs and endpoints is then conducted entirely within the AWS network, providing a secure pathway for your data.\n  To get started, you can create an interface VPC endpoint to connect to Amazon Athena Spark using the AWS Management Console or AWS Command Line Interface (AWS CLI) commands or AWS CloudFormation. This new feature is available in all AWS Regions where Amazon Athena Spark and AWS PrivateLink are available. For more information, refer to the AWS PrivateLink documentation and Athena Spark documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-athena-spark-aws-privatelink/",
-      "pubDate": "2026-04-21T18:09:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "athena"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "athena",
-        "new-feature",
         "support"
       ]
     },
