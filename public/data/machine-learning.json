@@ -1,8 +1,25 @@
 {
-  "lastUpdated": "2026-05-04T08:13:30.539Z",
+  "lastUpdated": "2026-05-05T07:51:10.742Z",
   "category": "machine-learning",
-  "totalItems": 13,
+  "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-7f544eb84473",
+      "title": "Capacity-aware inference: Automatic instance fallback for SageMaker AI endpoints",
+      "description": "Today, Amazon SageMaker AI introduces capacity aware instance pool for new and existing inference endpoints. You define a prioritized list of instance types, and SageMaker AI automatically works through your list whenever capacity is constrained at creation, during scale-out, and during scale-in. Your endpoint provisions on available AI Infrastructure without manual intervention. This capability is available for Single Model Endpoints, Inference Component-based endpoints, and Asynchronous Inference endpoints.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/capacity-aware-inference-automatic-instance-fallback-for-sagemaker-ai-endpoints/",
+      "pubDate": "2026-05-04T16:05:02.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
     {
       "id": "aws-news-382b818f1ec2",
       "title": "Announcing Kubernetes Dynamic Resource Allocation for Elastic Fabric Adapter",
@@ -22,6 +39,30 @@
         "trainium",
         "inferentia",
         "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3f46f14df480",
+      "title": "Amazon SageMaker AI Now Supports Capacity-Aware Inference with Automatic Instance Fallback",
+      "description": "Amazon SageMaker AI inference endpoints now support flexible provisioning across a prioritized list of instance types. When your preferred instance type has insufficient capacity, SageMaker AI automatically provisions from the next available option in your list — keeping endpoint creation and autoscaling running smoothly without manual intervention. This gives teams deploying AI/ML models in production the resilience to handle capacity constraints gracefully, ensuring endpoints come up reliably and scale on demand.\n  With instance pool support, you define a prioritized list of instance types and SageMaker AI automatically provisions capacity by working through your list in order. This applies across endpoint creation, updates, and scaling. When scaling down, SageMaker AI removes lowest-priority instances first, preserving your preferred infrastructure as the fleet contracts. This works for Single Model Endpoints, InferenceComponent-based endpoints, and Asynchronous Inference endpoints — including endpoints that scale to zero, where SageMaker AI provisions from your highest-priority available pool when scaling back up.\n  Because fallback instance types differ in GPU memory and compute capability, you can specify a different optimized model for each instance type in your priority list. You can prepare these artifacts yourself or use SageMaker AI inference recommendations, which automatically generates hardware-specific optimized configurations per instance type. Additionally, per-instance-type CloudWatch metrics give you visibility into latency, throughput, GPU utilization, and instance count by hardware type within a single endpoint.\n \n\n This capability is available today in US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), South America (São Paulo), Europe (Ireland), Europe (London), Europe (Frankfurt), Europe (Stockholm), Europe (Zurich), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Mumbai), and Asia Pacific (Jakarta). To learn more, visit the Amazon SageMaker AI documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-sagemaker-ai-inf-auto-inst/",
+      "pubDate": "2026-05-01T00:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "lex",
+        "cloudwatch"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "cloudwatch",
+        "ga",
+        "update",
         "support"
       ]
     },
@@ -135,27 +176,6 @@
         "iam",
         "iam identity center",
         "athena",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-73b059743cf8",
-      "title": "Amazon SageMaker Unified Studio now supports VPC for notebook kernels",
-      "description": "Amazon SageMaker Unified Studio now supports Amazon Virtual Private Cloud (Amazon VPC) for notebook kernels. With this launch, notebook kernels execute within the VPC configured at the domain level, giving enterprises network isolation for interactive data and machine learning (ML) workloads. This helps customers meet security and compliance requirements by keeping applicable notebook compute traffic within their VPC boundaries.\n \nWith VPC support for notebook kernels, data engineers, analysts, and data scientists can connect to private resources from their notebooks. The notebook kernel inherits the VPC settings, subnets, and security groups defined at the SageMaker Unified Studio domain level, so administrators can manage network policies centrally. This means you can query private databases, access internal APIs, and work with data sources that are not publicly accessible, all from the same notebook environment that supports SQL, Python, and natural language through the built-in data agent. This VPC configuration only applies to the notebook's interactive compute, where your Python code and dataframes execute. For VPC configurations with other compute engines, refer to the documentation for each individual engine.\n \nYou can use VPC-enabled notebook kernels in all AWS Regions where Amazon SageMaker Unified Studio is supported. To learn more, see the SageMaker Unified Studio user guide and the Amazon SageMaker product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/sagemaker-unified-studio-vpc/",
-      "pubDate": "2026-04-23T00:57:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
         "launch",
         "support"
       ]

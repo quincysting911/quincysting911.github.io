@@ -1,8 +1,44 @@
 {
-  "lastUpdated": "2026-05-04T08:13:30.539Z",
+  "lastUpdated": "2026-05-05T07:51:10.742Z",
   "category": "general",
-  "totalItems": 46,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-3b9c87ed4633",
+      "title": "Amazon FSx is now available in the AWS Asia Pacific (New Zealand) Region",
+      "description": "Amazon FSx, a fully-managed service that makes it easy and cost effective to launch, run, and scale feature-rich, high-performance file systems in the cloud, is now available in the AWS Asia Pacific (New Zealand) Region.\n \nAmazon FSx lets you choose between four widely-used file systems: NetApp ONTAP, Windows File Server, Lustre, and OpenZFS. It supports a wide range of workloads with its reliability, security, scalability, and broad set of capabilities. Amazon FSx is built on the latest AWS compute, networking, and disk technologies to provide high performance and lower TCO. And as a fully managed service, it handles hardware provisioning, patching, and backups — freeing you up to focus on your applications, your end users, and your business.\n \nTo learn more about Amazon FSx, visit our product page, and see the AWS Region Table for complete regional availability information.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-fsx-aws-asia-pacific/",
+      "pubDate": "2026-05-04T17:37:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9dc7acc3a7db",
+      "title": "Amazon EventBridge supports data plane logging to AWS CloudTrail",
+      "description": "Today, Amazon EventBridge announces support for logging data plane APIs using AWS CloudTrail, enabling customers to have greater visibility into event bus activity in their AWS account for best practices in security and operational troubleshooting. Amazon EventBridge is a serverless event bus that enables customers to build event-driven applications at scale using events from AWS services, integrated SaaS applications, and custom sources.\n  CloudTrail captures API activities related to Amazon EventBridge as events, including calls from the Amazon EventBridge console and calls made programmatically using Amazon EventBridge APIs. Using the information that CloudTrail collects, you can identify a specific request to an Amazon EventBridge API, the IP address of the requester, the requester's identity, and the date and time of the request. Logging EventBridge APIs using CloudTrail helps you enable operational and risk auditing, governance, and compliance of your AWS account. With the introduction of data plane logging support, the EventBridge PutEvents API is now logged to CloudTrail.\n  To opt-in for CloudTrail logging of the above mentioned data plane APIs, you can simply configure logging on your event bus using the AWS CloudTrail Console or by using CloudTrail APIs.\n  Logging data plane EventBridge APIs using AWS CloudTrail is now available in all commercial AWS Regions, AWS GovCloud (US) Regions, the Amazon Web Services China (Beijing) Region, operated by Sinnet, and the Amazon Web Services China (Ningxia) Region, operated by NWCD.\n  To learn more about logging data plane APIs using AWS CloudTrail, see AWS Documentation. For more information about CloudTrail, see the AWS CloudTrail User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-eventbridge-data-aws-cloudtrail/",
+      "pubDate": "2026-05-04T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eventbridge",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-6018869e347d",
       "title": "FreeRTOS 202604 LTS now available with enhanced security and MQTT v5.0",
@@ -108,6 +144,24 @@
         "cloudwatch",
         "launch",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-d2873c4b5e6a",
+      "title": "AWS IoT Core now supports customer managed domains in the AWS GovCloud (US) Regions",
+      "description": "AWS IoT Core now supports customer managed domains in the AWS GovCloud (US) Regions. Customer managed domains (also known as custom domains), allow you to configure custom domain names, use your own server certificates stored in AWS Certificate Manager, attach custom authorizers, and create multiple data endpoints for your account.\n  Custom domains provide long-term stability of TLS behavior, domain names, and their trust chain for device deployments. They also help you enable separate domain configurations for heterogeneous device fleets, and simplify migration of existing devices to AWS IoT Core. For example, by configuring custom domain names and custom authorizers for your data endpoints, you can keep using the same domain names and authentication methods your devices already know. This means you don't need to update device credentials or CA certificates during migration to AWS IoT Core, minimizing software updates on devices already in the field.\n \n\n With the expansion to the AWS GovCloud (US) Regions, this feature is now available in all AWS regions where AWS IoT Core is present. To learn more, visit the AWS IoT Core documentation and API reference guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-iot-core-aws-govcloud-us/",
+      "pubDate": "2026-04-30T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available",
+        "update",
+        "support",
+        "expansion"
       ]
     },
     {
@@ -505,154 +559,6 @@
       ]
     },
     {
-      "id": "aws-news-c86c63792502",
-      "title": "Amazon S3 now supports five additional checksum algorithms",
-      "description": "Amazon S3 now supports five additional checksum algorithms: MD5, XXHash3, XXHash64, XXHash128, and SHA-512, bringing the total to ten. S3 validates and stores the checksum alongside your object for any of these supported algorithms, so you can verify data integrity end to end without additional tooling.\n  When uploading objects, you can provide a checksum value and S3 validates it against the uploaded data before storing the object. For multipart uploads, you provide part-level checksums and S3 calculates a composite checksum upon completion. If you do not provide a checksum on upload, S3 automatically calculates and applies a CRC64NVME checksum as default integrity protection. Similarly, you can request the stored checksum when downloading to verify your data. The new algorithms work with S3 Replication, so you can replicate objects across buckets while preserving checksums, as well as S3 Inventory so you can audit checksums for datasets over time. For pre-existing objects that were uploaded without a checksum or with a different algorithm, you can use S3 Batch Operations to calculate checksums at scale without downloading or restoring data.\n  The new checksum algorithms are available at no additional cost across 37 AWS Regions, including the AWS China and AWS GovCloud (US) Regions. You can get started using the AWS CLI or AWS SDKs. To learn more, visit the S3 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/s3-five-additional-checksum-algorithms/",
-      "pubDate": "2026-04-23T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0a363befb1b3",
-      "title": "Amazon EC2 C8i instances are now available in Europe (Ireland) and Asia Pacific (New Zealand) regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i instances are available in the Europe (Ireland) and Asia Pacific (New Zealand) regions. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. C8i instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i instances, with even higher gains for specific workloads. The C8i instances deliver up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-c8i-instances-europe-ireland-asia-pacific-new-zealand-regions/",
-      "pubDate": "2026-04-22T19:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-2adf0c9af2cf",
-      "title": "Amazon EC2 announces Managed resource visibility settings",
-      "description": "Amazon EC2 now lets you control whether resources provisioned by managed instance offerings appear in your Amazon EC2 console views and API list operations.\n \nAmazon EC2 Managed Instances are instances provisioned and managed by a designated service provider, such as Amazon EKS, Amazon ECS, AWS Lambda or Amazon Workspaces. AWS is responsible for the configuration, patching, and health of managed EC2 instances as well as other associated resources like EBS volumes, snapshots and Network Interfaces. Until today, by default these managed resources appeared alongside self-managed ones in API responses and respective resource consoles even though AWS is responsible for managing these resources. Now, with Managed resource visibility settings, any new managed resources are hidden by default from your resource console views and describe API responses such as EC2 console and describe-instances API responses, to align better with the shared responsibility model of these resources.  \n \nYou can configure managed resource visibility through the Amazon EC2 console or by using the AWS CLI. To learn more, see Managed resource visibility settings the Amazon EC2 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/ec2-managed-resource-visibility/",
-      "pubDate": "2026-04-22T17:53:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "ecs",
-        "eks"
-      ]
-    },
-    {
-      "id": "aws-news-8f75abe6514d",
-      "title": "Introducing GPU Health Monitoring and Auto Repair for Amazon ECS Managed Instances",
-      "description": "Amazon Elastic Container Service (Amazon ECS) now offers NVIDIA GPU health monitoring and auto repair functionality for Amazon ECS Managed Instances. The new capability automatically detects critical NVIDIA GPU hardware failures and replaces impaired instances, helping customers improve the availability and reliability of their GPU-accelerated containerized workloads.\n  Running GPU-accelerated workloads, such as GenAI inference, requires specialized hardware management to mitigate failures and minimize disruption. Amazon ECS Managed Instances now continuously monitor GPU health using NVIDIA Data Center GPU Manager (DCGM) and proactively replace impaired capacity when critical failures occur. You can monitor GPU health through the DescribeContainerInstances API and receive notifications through Amazon EventBridge when instances become impaired. For workloads where you prefer to manage instance lifecycle manually, you can opt out of auto repair at the capacity provider level and handle GPU error events with your own remediation logic.\n  GPU health auto repair is enabled by default on all Amazon ECS Managed Instances running on supported NVIDIA GPU instance types at no additional cost. The capability is available in all AWS Commercial Regions. To learn more, visit the Amazon ECS Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ecs-gpu-auto-repair/",
-      "pubDate": "2026-04-22T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ecs",
-        "eventbridge",
-        "ga",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-543b417d1994",
-      "title": "AWS Secrets Manager extends managed external secrets to MongoDB Atlas and Confluent Cloud",
-      "description": "AWS Secrets Manager now supports managed external secrets for MongoDB Atlas and Confluent Cloud.\n \nAWS Secrets Manager now supports managed external secrets for MongoDB Atlas and Confluent Cloud, enabling you to centrally manage and automatically rotate secrets for these third-party services directly from AWS Secrets Manager — without building or maintaining custom Lambda rotation functions.\n \nThe MongoDB Atlas integration supports two secret types: database user secrets (username-password authentication via SCRAM) and service account secrets (OAuth client ID and secret). The Confluent Cloud integration supports API key rotation for service accounts, with support for both cluster-scoped and cloud resource management keys. All integrations include automatic rotation enabled by default, eliminating hardcoded secrets and reducing the operational overhead of managing secrets across multiple platforms.\n \nWith managed external secrets, secret rotation is fully managed by AWS Secrets Manager using partner-provided rotation logic — no Lambda functions are deployed in your account. For example, a data pipeline using MongoDB Atlas and Confluent Kafka can now centralize secret management in AWS Secrets Manager, automatically rotating database and streaming platform secrets without modifying application code or managing separate rotation logic for each service.\n \nMongoDB Atlas and Confluent Cloud integrations for managed external secrets are available in all AWS Regions where managed external secrets is supported, joining existing integrations with Salesforce, Snowflake, and BigID. To learn more, visit the AWS Secrets Manager managed external secrets documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/secrets-manager-managed-external-secrets-mongodb-confluent/",
-      "pubDate": "2026-04-22T16:21:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "kafka",
-        "secrets manager"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "kafka",
-        "secrets manager",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-100c2ea93af4",
-      "title": "Amazon IVS Low-Latency Streaming now supports server-side ad insertion",
-      "description": "Amazon Interactive Video Service (Amazon IVS) Low-Latency Streaming now supports server-side ad insertion (SSAI), enabling you to monetize your live streams with video ads. IVS SSAI integrates with AWS Elemental MediaTailor to stitch ads directly into the video stream on the server, delivering a seamless viewing experience while providing access to ad decisioning, audience targeting, and personalization capabilities. \n \nIVS provides an API operation to insert ad breaks into your live stream, giving creators or operators control over when ads run. Ads are stitched into the stream on the server, reducing the impact of ad blockers and simplifying client-side integration. When a live stream is recorded to Amazon S3, IVS includes ad markers in the recording, enabling you to monetize on-demand content as well. \n \nAmazon IVS is a managed live streaming solution designed to make low-latency or real-time video available to viewers around the world. Visit the AWS region table for a full list of AWS Regions where the Amazon IVS console and APIs for control and creation of video streams are available. \n \nTo learn more, please visit the Amazon IVS Server-Side Ad Insertion documentation page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ivs-low-latency-streaming-server-side-ad-insertion/",
-      "pubDate": "2026-04-22T15:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2f35d377a70e",
-      "title": "Amazon EC2 for SQL Server HA now supports health notifications",
-      "description": "Today, AWS announced that you can now receive notifications through the AWS Health Dashboard when Amazon EC2 for SQL Server cannot detect a valid SQL Server High Availability (HA) status.\n \nThis enhancement is particularly valuable for customers who register EC2 SQL HA clusters through AWS Console or CloudFormation automation to reduce license included costs. You can receive this notification through multiple channels, including AWS Health, Amazon EventBridge events, and email. These notifications will guide you to respond quickly, helping avoid unexpected billing costs or charges.\n \nTo learn more, access the High Availability for SQL Server on Amazon EC2 user guide for additional details.  This feature is accessible in all AWS Regions where Amazon EC2 SQL HA is available and the AWS GovCloud (US) Regions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-sql-ha-health-notifications/",
-      "pubDate": "2026-04-22T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "cloudformation",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "cloudformation",
-        "eventbridge",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-54b202e5799b",
       "title": "Streamlining access to powerful disaster recovery capabilities of AWS",
       "description": "In this blog post, we take a building blocks approach. Starting with the tools like AWS Backup to protect your data, we then add protection for Amazon Elastic Compute Cloud (Amazon EC2) compute using AWS Elastic Disaster Recovery (AWS DRS). Finally, we show how to use the full capabilities of AWS to restore your entire workload—data, infrastructure, networking, and configuration, using Arpio disaster recovery automation.",
@@ -848,21 +754,6 @@
       "tags": [
         "new-feature",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-875544c87826",
-      "title": "Preview Release of the AWS SDK Java 2.x HTTP Client built on Apache HttpClient 5.5.x",
-      "description": "The AWS SDK for Java 2.x introduces the Apache 5 SDK HTTP client which is built on Apache HttpClient 5.5.x. This new SDK HTTP client is available alongside our existing SDK HTTP clients: Apache HttpClient 4.5.x, Netty, URL Connection, and AWS CRT HttpClient. To differentiate the use of Apache HttpClient 4.5.x and Apache HttpClient 5.5.x, […]",
-      "link": "https://aws.amazon.com/blogs/developer/preview-release-of-theaws-sdk-java-2-x-http-client-built-on-apache-httpclient-5-5-x/",
-      "pubDate": "2025-07-18T03:36:05.000Z",
-      "source": "developersAndDevOps",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "preview"
       ]
     }
   ]
