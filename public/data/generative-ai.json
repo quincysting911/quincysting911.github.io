@@ -1,8 +1,193 @@
 {
-  "lastUpdated": "2026-05-05T07:51:10.742Z",
+  "lastUpdated": "2026-05-06T08:03:09.995Z",
   "category": "generative-ai",
-  "totalItems": 63,
+  "totalItems": 65,
   "items": [
+    {
+      "id": "aws-news-295400006ed6",
+      "title": "Amazon ElastiCache adds thirteen new Amazon CloudWatch metrics for network capacity planning and engine diagnostics",
+      "description": "Amazon ElastiCache customers can now detect network throttling, memory fragmentation, and connection exhaustion, using thirteen new Amazon CloudWatch metrics for node-based clusters. You can monitor these host-level and engine-level diagnostics directly from CloudWatch without running INFO commands on individual nodes or calculating baselines from raw byte counters.\n  \n \n \nNetwork capacity: NetworkBaselineUsageInPercentage, NetworkBaselineUsageOutPercentage, NetworkBaselineMaxUsageInPercentage, and NetworkBaselineMaxUsageOutPercentage report network utilization relative to instance baseline, enabling portable alarms that remain valid across instance type changes. Values above 100 percent signal that a host is consuming burst credits, a leading indicator that a sustained workload will eventually lead to credit exhaustion and throttling. The variants capturing max report per-second bursts that averaged metrics can hide.\n \n \nMemory health: UsedMemoryDataset shows memory consumed by actual stored data excluding engine overhead. AllocatorFragmentationBytes and AllocatorFragmentationRatio isolate fragmentation that the activedefrag parameter can address. MajorPageFaults captures OS-level page faults that indicate memory pressure beyond what the engine can surface.\n \n \nConnectivity health: BlockedConnections and RejectedConnections surface connections waiting on blocking commands and connections turned away when the maxclients limit is reached. When RejectedConnections is non-zero, raise maxclients or diagnose client-side connection pool leaks. \n \n \nPub/sub workloads: PubSubChannels and PubSubShardChannels expose active classic and sharded channels on each node. When classic channel counts are growing with utilization, consider switching to sharded pub/sub to scale horizontally.\n \n \nCommand throughput: ProcessedCommands provides total command throughput across all command types.\n \n \nThese metrics are available for node-based clusters in all commercial AWS Regions and the AWS China and AWS GovCloud (US) Regions where ElastiCache is supported, at no additional cost.\n  To get started, view the new metrics in the ElastiCache console monitoring tab or in the AWS/ElastiCache namespace in the CloudWatch console. To learn more, see Host-Level Metrics and Metrics for Valkey and Redis OSS.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-cloudwatch-metrics-network-engine-diagnostics/",
+      "pubDate": "2026-05-05T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bf6d2729a664",
+      "title": "How Hapag-Lloyd uses Amazon Bedrock to transform customer feedback into actionable insights",
+      "description": "Hapag-Lloyd's Digital Customer Experience and Engineering team, distributed between Hamburg and Gdańsk, drives digital innovation by developing and maintaining customer-facing web and mobile products. In this post, we walk you through our generative AI–powered feedback analysis solution built using Amazon Bedrock, Elasticsearch, and open-source frameworks like LangChain and LangGraph",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-hapag-lloyd-uses-amazon-bedrock-to-transform-customer-feedback-into-actionable-insights/",
+      "pubDate": "2026-05-05T16:55:42.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-b0a2f956f71f",
+      "title": "Streamlining generative AI development with MLflow v3.10 on Amazon SageMaker AI",
+      "description": "Today, we’re excited to announce that Amazon SageMaker AI MLflow Apps now support MLflow version 3.10, bringing enhanced capabilities for generative AI development and streamlined experiment tracking to your generative AI workflows. Building on the foundations established with Amazon SageMaker AI MLflow Apps, this latest version introduces powerful new features for observability, evaluation, and generative […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/streamlining-generative-ai-development-with-mlflow-v3-10-on-amazon-sagemaker-ai/",
+      "pubDate": "2026-05-05T16:55:18.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-898e8e2b7a3e",
+      "title": "Introducing OS Level Actions in Amazon Bedrock AgentCore Browser",
+      "description": "We’re announcing OS Level Actions for AgentCore Browser. This new capability unblocks these scenarios by exposing direct OS control through the InvokeBrowser API, so agents can interact with content visible on the screen, not only what's accessible through the browser's web layer. By combining full-desktop screenshots with mouse and keyboard control at the OS level, agents can observe native UI, reason about it, and act on it within the same session. This post walks through how OS Level Actions work, what actions are supported, and how to get started.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser/",
+      "pubDate": "2026-05-05T16:54:35.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-31a4f8eed2a6",
+      "title": "Amazon MQ now supports in-place major version upgrades for RabbitMQ 4",
+      "description": "Amazon MQ now supports in-place version upgrades for RabbitMQ brokers, enabling you to upgrade your brokers to RabbitMQ 4 without creating a new broker or migrating your data. You can now upgrade from RabbitMQ 3.13 to 4.2, directly from the Amazon MQ console, AWS CLI, or API.\n  In-place upgrades preserve your broker configuration, queues, exchanges, bindings, users, and policies. RabbitMQ 4.2 introduces breaking changes including the removal of classic mirrored queues and migration from Mnesia to the Khepri metadata store. Brokers must be running on M7G (Graviton) instance types and must not have classic mirrored queues to be eligible for the upgrade. A queue migration tool is available to convert classic mirrored queues to quorum queues before upgrading. During a major version upgrade, your broker will be unavailable while Amazon MQ performs the upgrade.\n  To upgrade your broker, simply select RabbitMQ 4.2 as your version through the AWS Management console, AWS CLI, or AWS SDKs. Amazon MQ automatically manages patch version upgrades for your RabbitMQ 4.2 brokers, so you need to only specify the major.minor version. To learn more about RabbitMQ 4.2 and the upgrade process, see the Amazon MQ release notes and the Amazon MQ developer guide. This capability is available in all regions where RabbitMQ 4 instances are available today.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-mq-inplace-upgrades-rabbitmq4/",
+      "pubDate": "2026-05-05T16:50:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "q developer",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "q developer",
+        "graviton",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cbf424e8fdea",
+      "title": "Amazon Quick now integrates with New Relic for observability-driven AI agents",
+      "description": "Amazon Quick, your AI assistant for work, now integrates with New Relic's AI agents, enabling on-call engineers, SREs, and engineering leaders to investigate incidents, generate root cause analysis briefs, and create tracked tasks without leaving their Amazon Quick workspace.\n \nAfter connecting to New Relic's remote model context protocol (MCP) server, you can invoke New Relic's AI agents directly from a conversational prompt in Quick – including alert insights, user impact analysis, log analysis, transaction diagnostics, and natural language NRQL queries. In a single chat exchange, you can investigate an incident across your observability data, generate a root cause analysis (RCA) document with evidence links, and send it as an email attachment. Quick Flows can also invoke New Relic AI agents to automate recurring triage runbooks or escalation workflows. Because Quick surfaces responses alongside enterprise knowledge stored in Spaces - such as runbooks, architecture docs, and on-call policies—every answer reflects both live telemetry and organizational context. \n \nThe New Relic integration with Amazon Quick is available in all AWS Regions where Amazon Quick is available.\n \nTo get started with Amazon Quick, visit the website and sign up in minutes. To learn more about the New Relic integration, read the New Relic integration guide, and explore more Quick integrations on the integrations page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-quick-new-relic/",
+      "pubDate": "2026-05-05T16:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-4ef6c4f678aa",
+      "title": "EC2 Instance Store CSI driver now generally available in EKS add-ons",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports using the Amazon EKS console, and AWS Command Line Interface (CLI) to install and manage the Amazon Elastic Cloud Compute (EC2) Container Storage Interface (CSI) driver. This launch enables a simple experience for attaching a EC2 local instance store to an EKS cluster.\n \nThe Amazon EC2 Instance Store CSI driver is a plugin that enables Kubernetes to use EC2 instance store volumes. Instance store volumes provide ephemeral block-level storage that is physically attached to the host computer. The driver manages the lifecycle of these NVMe storage volumes and makes them available as Kubernetes persistent volumes. \n \nThis feature is available in all commercial regions. To get started and learn more visit the Amazon EKS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/ec2-csi-eks/",
+      "pubDate": "2026-05-05T16:22:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "eks",
+        "launch",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2bb14e48e7a6",
+      "title": "Secure AI agents with Amazon Bedrock AgentCore Identity on Amazon ECS",
+      "description": "AI agents in production require secure access to external services. Amazon Bedrock AgentCore Identity, available as a standalone service, secures how your AI agents access external services whether they run on compute platforms like Amazon ECS, Amazon EKS, AWS Lambda, or on-premises. This post implements Authorization Code Grant (3-legged OAuth) on Amazon ECS with secure session binding and scoped tokens.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-amazon-bedrock-agentcore-identity-on-amazon-ecs/",
+      "pubDate": "2026-05-05T15:27:30.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lambda",
+        "ecs",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lambda",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-70c5e9b73b2c",
+      "title": "Amazon OpenSearch Service expands Cluster Insights with a new insight",
+      "description": "Amazon OpenSearch Service expands Cluster Insights availability to all OpenSearch versions and Elasticsearch version 6.8 and above, bringing proactive cluster health and performance visibility through the Console. In addition, a new Unused Index insight helps customers identify indices in an OpenSearch cluster that have had zero search and indexing activity over the past 30 days, and provides actionable recommendation to optimize costs.\n  Cluster Insights now supports expanded version coverage — customers running OpenSearch 1.0 and later, and Elasticsearch 6.8 and later, can easily identify and resolve performance and stability risks before they impact workloads. Additionally, the new Unused Index insight detects indices with no search or indexing activity and recommends migration to warm or cold storage tiers for cost optimization. These insights are available through the Console, OpenSearch Service Notifications, OpenSearch UI, and Amazon EventBridge, giving users instant visibility into cluster health along with actionable recommendations to prevent issues before they affect stability or performance.\n  Cluster Insights is available at no additional cost in all Regions where Amazon OpenSearch Service is available. View the complete list of supported Regions here. To learn more about Cluster Insights, refer to our technical documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-opensearch-cluster-insights/",
+      "pubDate": "2026-05-05T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service",
+        "eventbridge"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "eventbridge",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-0e7268c35325",
       "title": "Announcing the general availability of Amazon S3 Transfer Manager for Swift",
@@ -41,10 +226,10 @@
       ]
     },
     {
-      "id": "aws-news-b65341b7232d",
-      "title": "Introducing the agent quality loop: AgentCore Optimization now in preview",
+      "id": "aws-news-9c0d2c0cb567",
+      "title": "Introducing agent quality optimization in AgentCore, now in preview",
       "description": "Generate recommendations from production traces, validate them with batch evaluation and A/B testing, and ship with confidence. AI agents that perform well at launch don’t stay that way. As models evolve, user behavior shifts, and prompts get reused in new contexts they were never designed for. Agent quality quietly degrades. In most teams, the improvement […]",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-the-agent-quality-loop-agentcore-optimization-now-in-preview/",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-agent-quality-optimization-in-agentcore-now-in-preview/",
       "pubDate": "2026-05-04T17:13:42.000Z",
       "source": "mlBlog",
       "services": [
@@ -95,6 +280,28 @@
       ],
       "tags": [
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-9fb384138670",
+      "title": "Amazon EC2 I8ge instances are now generally available in additional AWS regions",
+      "description": "Amazon Web Services (AWS) announces the availability of Amazon EC2 I8ge instances in Europe (Paris), Asia Pacific (Thailand), Asia Pacific (Hong Kong), Asia Pacific (Seoul), and Asia Pacific (Tokyo) AWS regions. I8ge instances are powered by AWS Graviton4 processors and deliver up to 60% better compute performance compared to previous generation Graviton2-based storage optimized Amazon EC2 instances. I8ge instances use the third generation AWS Nitro SSDs, local NVMe storage, and deliver up to 55% better real-time storage performance per TB compared to previous generation Amazon EC2 Im4gn instances . They offer up to 60% lower storage I/O latency and up to 75% lower storage I/O latency variability compared to Im4gn instances. \n  I8ge instances are storage-optimized instances, and offer up to 120TB of local NVMe storage. They are ideal for workloads that demand rapid local storage with high random read/write performance and consistently low latency for accessing large datasets. These versatile instances are offered in eleven different sizes including two metal sizes, providing flexibility to match customers’ computational needs. They deliver up to 180 Gbps of network performance bandwidth and 60 Gbps of dedicated bandwidth for Amazon Elastic Block Store (EBS), ensuring fast and efficient data transfer for the most demanding applications.\n  To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs. To learn more, visit the I8ge instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/ec2-i8ge-available-new-regions/",
+      "pubDate": "2026-05-04T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "graviton",
+        "generally-available"
       ]
     },
     {
@@ -522,26 +729,6 @@
       ]
     },
     {
-      "id": "aws-news-2424bf77ecaf",
-      "title": "Run custom MCP proxies serverless on Amazon Bedrock AgentCore Runtime",
-      "description": "This post shows you how to deploy a serverless MCP proxy on Amazon Bedrock AgentCore Runtime that gives you a programmable layer to implement proper governance, controls, and observability aligned with an organization's security policies.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/run-custom-mcp-proxies-serverless-on-amazon-bedrock-agentcore-runtime/",
-      "pubDate": "2026-04-29T11:52:16.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-4d5d0e793c29",
       "title": "Amazon Bedrock AgentCore Runtime now supports Node.js for direct code deployment",
       "description": "Amazon Bedrock AgentCore Runtime now supports Node.js as a managed language runtime for direct code deployment, alongside the existing Python support. Developers can bring their Node.js-based agents to AgentCore Runtime by packaging their agent code and dependencies into a .zip file archive, without building or managing a container image.\n \nTo deploy, write your agent in Node.js, zip it up with its dependencies, upload the zip to Amazon S3, and create your agent runtime. You can deploy a plain Node.js app, a TypeScript project (compiled to JavaScript first), or an agent built with any agent framework like the Strands Agents SDK. Dependencies can be included as a `node_modules` folder in the zip, or bundled into a single JavaScript file using esbuild to keep the package smaller.\n \nNode.js agents on AgentCore Runtime benefit from the same capabilities as other supported runtimes, including session isolation, built-in authentication with SigV4 and OAuth 2.0, bidirectional streaming, managed session storage, and observability with Amazon CloudWatch. Observability is available through the AWS Distro for OpenTelemetry Node.js auto-instrumentation package.\n \nTo learn more, see Direct code deployment for Node.js in the Amazon Bedrock AgentCore documentation.",
@@ -664,6 +851,29 @@
       ]
     },
     {
+      "id": "aws-news-60399ef42a8c",
+      "title": "Amazon Quick expands integrations to include Google Workspace, Zoom, Airtable, and more",
+      "description": "Amazon Quick is expanding integrations with 13 new built-in action connectors, all supporting managed authentication so users can securely connect their accounts in just a few clicks without manual credentials setup. Amazon Quick is an AI assistant that turns questions into answers, answers into actions, and actions into outcomes—for you and your entire team. Quick brings all your tools and data together in one place. It learns what matters to you and your team, grounds every answer in your real business data, and goes beyond answers: scheduling, building deliverables, creating dashboards, and acting on your behalf.\n  With Quick, business users can now take action directly across Gmail, Google Sheets, Google Docs, Google Calendar, Google Drive, Google Slides, Google Meet, Google Analytics, Zoom, QuickBooks, Airtable, and Dropbox. For example, you can draft and send emails in Gmail, update a Google Sheet with the latest data, schedule a meeting in Google Calendar, share files from Google Drive or Dropbox, schedule a Zoom meeting, sync financial records in QuickBooks, manage projects in Airtable, or collaborate with your team in Microsoft Teams, all without leaving Quick. Each connector includes built-in sign-in support, so Quick securely handles the account authorization flow on your behalf, making it easy to get connected in just a few clicks.\n  These connectors are now available in all AWS Regions where Amazon Quick is available.\n  Start working with Amazon Quick by signing up for an account. To learn more about integrations, visit the integrations webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-google-workspace-zoom/",
+      "pubDate": "2026-04-28T11:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "rds",
+        "now-available",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-0ccac18a4aaa",
       "title": "Amazon Quick now supports document and visual creation in chat",
       "description": "Today, Amazon Quick introduces document and visual creation capabilities, enabling you to produce polished documents, presentations, spreadsheets, and more through natural language without leaving your conversation. No more switching between multiple tools to draft reports, build decks, or format tables. Quick users can now create documents and visuals, refine them in conversation or inline, and download finished files including Word, PDF, PowerPoint, and Excel formats.\n  Quick also generates images, infographics, charts, and other visuals you can embed in any document or presentation, or export as standalone image files, all from the same conversation. Visual creation is currently available in preview.\n Whether you need to generate an executive briefing from meeting notes, create a deck to review quarterly sales trends, build a spreadsheet in Excel or produce an infographic that brings your data to life, Quick handles the end-to-end creation process within your existing chat workflow. This capability is ideal for business analysts, product managers, marketing, finance, and operations teams who need to quickly transform data and insights into shareable, presentation-ready materials without switching tools.\n  Document creation is available in all AWS Regions where Amazon Quick is currently supported. Visual creation (preview) is available in the US East (N. Virginia) and US West (Oregon) AWS Regions.\n You can sign up for an account and start working with Quick for free; no AWS account or credit card is required. To get started with document and visual creation, open a chat conversation and describe whatever you need created. To learn more, see the Amazon Quick User Guide.",
@@ -699,29 +909,6 @@
       "tags": [
         "amazon q",
         "personalize",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-60399ef42a8c",
-      "title": "Amazon Quick expands integrations to include Google Workspace, Zoom, Airtable, and more",
-      "description": "Amazon Quick is expanding integrations with 13 new built-in action connectors, all supporting managed authentication so users can securely connect their accounts in just a few clicks without manual credentials setup. Amazon Quick is an AI assistant that turns questions into answers, answers into actions, and actions into outcomes—for you and your entire team. Quick brings all your tools and data together in one place. It learns what matters to you and your team, grounds every answer in your real business data, and goes beyond answers: scheduling, building deliverables, creating dashboards, and acting on your behalf.\n  With Quick, business users can now take action directly across Gmail, Google Sheets, Google Docs, Google Calendar, Google Drive, Google Slides, Google Meet, Google Analytics, Zoom, QuickBooks, Airtable, and Dropbox. For example, you can draft and send emails in Gmail, update a Google Sheet with the latest data, schedule a meeting in Google Calendar, share files from Google Drive or Dropbox, schedule a Zoom meeting, sync financial records in QuickBooks, manage projects in Airtable, or collaborate with your team in Microsoft Teams, all without leaving Quick. Each connector includes built-in sign-in support, so Quick securely handles the account authorization flow on your behalf, making it easy to get connected in just a few clicks.\n  These connectors are now available in all AWS Regions where Amazon Quick is available.\n  Start working with Amazon Quick by signing up for an account. To learn more about integrations, visit the integrations webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-google-workspace-zoom/",
-      "pubDate": "2026-04-28T11:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
-        "now-available",
-        "update",
-        "integration",
         "support"
       ]
     },
@@ -762,23 +949,6 @@
       "tags": [
         "ec2",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-d6027a912921",
-      "title": "Automate repetitive tasks with Amazon Quick Flows",
-      "description": "This post shows you how to build your first AI-powered workflow, using Amazon Quick, starting with a financial analysis tool and progressing to an advanced employee onboarding automation.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automate-repetitive-tasks-with-amazon-quick-flows/",
-      "pubDate": "2026-04-27T17:52:05.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q"
       ]
     },
     {
@@ -877,132 +1047,6 @@
         "lex",
         "eks",
         "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-553c94ebeb1a",
-      "title": "Amazon Connect now provides eight new metrics to measure and improve AI agent performance",
-      "description": "Amazon Connect now provides eight new metrics to measure and improve AI agent performance, including goal success rate, faithfulness score, and tool selection accuracy. These metrics offer visibility into the quality of AI-driven customer interactions, enabling measurement and continuous improvement of AI agent outcomes. With this launch, you can monitor whether AI agents successfully resolved customer requests, assess faithfulness and detect contextual hallucinations. You can also evaluate tool selection and utilization accuracy, and capture customer feedback through thumbs up/down ratings when enabled. \n  You can access these new metrics through Amazon Connect's AI Agent Performance dashboard, or through the GetMetricDataV2 API and zero-ETL data lake for custom reporting or integration with your existing analytics workflows.\n \nThis feature is available in all AWS Regions where Amazon Connect AI Agents is supported. For more information, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, an AI-native solution that turns every customer interaction into a moment worth remembering, visit the Amazon Connect website",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-connect-ai-agent-metrics/",
-      "pubDate": "2026-04-24T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "launch",
-        "improvement",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0625076d2fd6",
-      "title": "AWS Parallel Computing Service now supports Slurm 25.11",
-      "description": "AWS Parallel Computing Service (AWS PCS) now supports Slurm version 25.11, with support for a Prometheus-compatible OpenMetrics endpoint, and introduces new log types including scheduler audit logs.\n  This release of Slurm 25.11 introduces expedited re-queue, which can automatically reschedule jobs affected by node issues at the highest priority to help your workloads recover faster. You can enable a new OpenMetrics endpoint for real-time visibility into jobs, nodes, and scheduling using your existing monitoring tools. AWS PCS can now also send Slurm database daemon (slurmdbd) and REST API daemon (slurmrestd) logs to Amazon CloudWatch Logs, Amazon S3, or Amazon Data Firehose, helping diagnose accounting issues and debug API integrations. Scheduler audit logs, previously included in operational logs, are now delivered as a dedicated log type, providing independent control over ingestion and storage costs.\n  AWS PCS is a managed service that makes it easier for you to run and scale your high performance computing (HPC) workloads and build scientific and engineering models on AWS using Slurm. You can use AWS PCS to build complete, elastic environments that integrate compute, storage, networking, and visualization tools. AWS PCS simplifies cluster operations with managed updates and built-in observability features, helping to remove the burden of maintenance. You can work in a familiar environment, focusing on your research and innovation instead of worrying about infrastructure.\n  These features are available in all AWS Regions where AWS PCS is available. Standard charges apply for log delivery destinations. To learn more about AWS PCS, refer to the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-pcs-slurm-25-11/",
-      "pubDate": "2026-04-23T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "nova",
-        "s3",
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "nova",
-        "s3",
-        "cloudwatch",
-        "update",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8cbe5b34529a",
-      "title": "AWS Compute Optimizer supports 162 new EC2 instance types and 32 new RDS DB instance classes",
-      "description": "AWS Compute Optimizer now supports the latest generation of Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Relational Database Service (Amazon RDS) instance types. This expansion enables Compute Optimizer to help you take advantage of the price-to-performance improvements offered by the newest EC2 and RDS instance types.\n \nAWS Compute Optimizer has expanded support to include the latest generation EC2 instance types, including Compute Optimized (C8a, C8gb, C8i, C8i-flex, C8id), General Purpose (M8a, M8azn, M8gb, M8gn, M8id), Memory Optimized (R8a, R8gb, R8gn, R8id), Memory Intensive (x8i), and Storage Optimized (i7i) in its EC2 and EC2 Auto Scaling group recommendations. For RDS recommendations, Compute Optimizer has added support for M7i, M8g, R8g, X1, and Z1d DB instance classes across RDS for MySQL, RDS for PostgreSQL, Amazon Aurora MySQL, and Aurora PostgreSQL.\n \nThis new feature is available in all AWS Regions where Compute Optimizer is available except the AWS GovCloud (US) Regions, the AWS China (Beijing) Region, operated by Sinnet, and the AWS China (Ningxia) Region, operated by NWCD. For more information about Compute Optimizer, visit our product page and documentation. You can start using Compute Optimizer through the AWS Management Console, AWS CLI, or AWS SDK.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-compute-optimizer-ec2-rds/",
-      "pubDate": "2026-04-23T18:28:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "rds",
-        "new-feature",
-        "improvement",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-bdd9cf8ea1da",
-      "title": "AWS Elastic Beanstalk AI-powered environment analysis now supports Windows",
-      "description": "AWS Elastic Beanstalk AI-powered environment analysis is now available on Windows Server platforms. Previously available on Amazon Linux 2 and AL2023, this feature now extends to Windows-based environments, enabling you to quickly identify root causes and get recommended solutions for environment health issues. Elastic Beanstalk collects recent events, instance health, and logs from your Windows environment and sends them to Amazon Bedrock for analysis.\n  With this expansion, developers and operations teams running .NET applications and other Windows workloads on Elastic Beanstalk can now diagnose and resolve environment issues faster without manually reviewing logs and events. You can request an AI analysis from the Elastic Beanstalk console using the AI Analysis button or using the AWS CLI with the RequestEnvironmentInfo and RetrieveEnvironmentInfo API operations. The analysis provides step-by-step troubleshooting recommendations tailored to your Windows environment's current state.\n \nAI-powered environment analysis is available in all AWS Regions where both AWS Elastic Beanstalk and Amazon Bedrock are available.\n  For more information about the AI-powered environment analysis and for a full list of supported platform versions, see the Elastic Beanstalk developer guide. To learn more about Elastic Beanstalk, visit the Elastic Beanstalk product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/elastic-beanstalk-ai-analysis-windows/",
-      "pubDate": "2026-04-23T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-a2b53e3ef59f",
-      "title": "Amazon Quick now supports multiple owners for admin-managed SharePoint and Google Drive knowledge bases",
-      "description": "Amazon Quick now enables you to add co-owners to knowledge bases and data source connections for admin-managed Microsoft SharePoint Online and Google Drive integrations. This makes it easier to collaborate across teams and reuse existing connections without re-entering credentials.\n  Knowledge base owners can share their knowledge bases with two roles: Owner (full management access including editing, syncing, sharing, and deleting) and Viewer (query-only access). Co-owner sharing with the Owner role is available exclusively for admin-managed SharePoint and Google Drive knowledge bases. All other knowledge base types support Viewer sharing only. To share, navigate to the actions menu next to any knowledge base or use the Permissions tab.\n  Administrators can also share data source connections, allowing other users to create knowledge bases from the same connection. Data source sharing supports Owner (create knowledge bases and edit connection details) and Viewer (create knowledge bases only) roles. To share a data source, go to Manage account > Manage assets > Data sources and select the connection to share.\n  This feature is available in all AWS Regions where Amazon Quick is available. For more information, see Knowledge Base Sharing in the Amazon Quick User Guide.\n  Amazon Quick is available in US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (London), and Europe (Ireland). For more information, visit the Amazon Quick page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-sharepoint/",
-      "pubDate": "2026-04-23T15:59:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-963a8b0fbea7",
-      "title": "Amazon Quick now supports permission verification for ACL-enabled knowledge bases",
-      "description": "Amazon Quick now provides ACL verification for ACL enabled knowledge bases, enabling administrators to check whether a specific user has access to a specific document. This feature simplifies troubleshooting access issues and helps confirm that sensitive documents are properly restricted, without manually tracing permission inheritance across your data sources.\n  To verify document access, open a knowledge base with document-level ACLs enabled, navigate to the Sync reports tab, and choose View Access Details from the actions menu next to any synced item. From the Access Details panel, use the Permission Checker to enter a user's email address and instantly confirm whether they can access the document. The panel also displays all users and groups with access to the document, giving you full visibility into the applied permissions.\n The Permission Checker returns one of three results: the user has access, the user does not have access, or no ACL was found for the document. \n \n\n This feature is available for ACL enabled Knowledge Bases in all AWS Regions where Amazon Quick is available. For more information, see Sync reports and observability in the Amazon Quick User Guide.\n  Amazon Quick is available in US East (N. Virginia), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (London), and Europe (Ireland). For more information, visit the Amazon Quick page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-quick-acl/",
-      "pubDate": "2026-04-23T14:56:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
         "ga",
         "support"
       ]

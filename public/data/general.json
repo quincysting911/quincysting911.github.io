@@ -1,8 +1,69 @@
 {
-  "lastUpdated": "2026-05-05T07:51:10.742Z",
+  "lastUpdated": "2026-05-06T08:03:09.995Z",
   "category": "general",
   "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-25569164952a",
+      "title": "AWS SAM now supports WebSocket APIs for Amazon API Gateway",
+      "description": "AWS Serverless Application Model (AWS SAM) now supports WebSocket APIs for Amazon API Gateway, enabling you to define complete WebSocket APIs with minimal configuration in your SAM template.\n \nAWS SAM is a collection of open-source tools that make it easy for you to build and manage serverless applications. WebSocket APIs are critical for real-time applications such as chat, live dashboards, AI/LLM streaming, and IoT. However, SAM previously did not support WebSocket APIs, requiring you to manually configure all of the underlying resources in AWS CloudFormation. This made it difficult to debug common issues such as missing IAM permissions for Lambda functions. Now, SAM handles all of this automatically, generating the required resources and permissions from your template. The new resource provides feature parity with API Gateway WebSocket APIs, including IAM and Lambda authorization, custom domains, RouteSettings, Models, and StageVariables. Globals support lets you share common configuration across multiple WebSocket APIs.\n \nTo get started, add the AWS::Serverless::WebSocketApi resource type to your SAM template. Define your routes by specifying Lambda function handlers for $connect, $disconnect, and $default routes, along with any custom routes your application requires. SAM automatically wires up the integrations and permissions for each route. You can also configure authorization, stage settings, and custom domains directly within the resource definition.\n \nTo learn more, visit the SAM developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sam-websocket-apis-api-gateway/",
+      "pubDate": "2026-05-05T18:31:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "rds",
+        "cloudformation",
+        "iam",
+        "api gateway"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "rds",
+        "cloudformation",
+        "iam",
+        "api gateway",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a8b863bea617",
+      "title": "AWS IoT Core for Device Location adds Confidence Level Configuration and Measurement Type support",
+      "description": "AWS IoT Core for Device Location now supports two enhancements that give developers greater control over location resolution and richer metadata for resolved device locations.\n  Customers using the Cell ID, Wi-Fi, or Cell+Wi-Fi solvers can now specify a desired confidence level between 50% and 99% when resolving device locations. The confidence level represents the statistical probability that the actual device location falls within the reported accuracy radius. A higher confidence level (for example, 95%) increases certainty that the device falls within the reported radius but produces a larger accuracy radius. A lower confidence level (for example, 50%) yields a smaller radius with less certainty. Customers can now configure this value to balance accuracy and confidence based on their specific requirements. This feature is currently supported for HTTP-based location resolution.\n  This update also introduces a measurement type field in resolved location metadata, giving developers greater visibility into how each device location was determined — whether through GNSS, Wi-Fi or BLE location resolvers. This make it easier to assess location data quality, debug positioning issues, and make more informed decisions based on how each location was determined.\n  These updates are available in all AWS IoT Core for Device Location supported regions. For detailed guidance and implementation instructions, visit the AWS IoT Core Device Location and IoT Wireless Developer Guide .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-core-device-location/",
+      "pubDate": "2026-05-05T16:59:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "update",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b17dff27d7a3",
+      "title": "Amazon Connect Cases now supports customer profile identity resolution",
+      "description": "Amazon Connect Cases now automatically reassociates cases when duplicate customer profiles are merged, so agents always see a complete case history for each customer. When the same customer has multiple profiles, such as when they reach out through different channels or provide different contact details, Identity Resolution in Amazon Connect Customer Profiles detects and merges those duplicates, and Cases now brings all associated cases together under the unified profile. Agents no longer have to search across profiles or piece together a customer's history manually.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town). To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-cases-customer-profiles-id-res/",
+      "pubDate": "2026-05-05T15:25:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-3b9c87ed4633",
       "title": "Amazon FSx is now available in the AWS Asia Pacific (New Zealand) Region",
@@ -17,6 +78,22 @@
       "tags": [
         "launch",
         "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-81ec0ae3bda8",
+      "title": "Amazon VPC Lattice resource configurations now support private domain-name targets",
+      "description": "VPC Lattice resource configurations now support domain-name targets that are private to your network. You can define a resource configuration for a private FQDN and share it with other accounts, enabling secure cross-account access to privately-hosted resources.\n  Previously, only publicly resolvable domain-name targets could be shared using resource configurations. Customers with private DNS servers could not share FQDNs with other accounts using this mechanism. To enable this feature, set the 'Resource Config DNS Resolution' property to 'IN_VPC' on your resource gateway. VPC Lattice uses your VPC's DNS configuration to resolve FQDNs, routing traffic to the correct backend without requiring public DNS entries.\n  You can enable this feature through the AWS Management Console, AWS CLI, AWS SDKs, and AWS APIs. The feature is available at no additional cost in all AWS Regions where VPC Lattice is available. For more information, see the VPC Lattice user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-vpc-lattice/",
+      "pubDate": "2026-05-04T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
         "support"
       ]
     },
@@ -53,6 +130,25 @@
       "tags": [
         "now-available",
         "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-35d76cdc4e97",
+      "title": "Amazon CloudWatch RUM now supports Session Replay for Web Applications",
+      "description": "Amazon CloudWatch RUM (Real User Monitoring) Session Replay gives developers a video-like playback of user experiences on their web applications — capturing clicks, scrolls, page changes, and errors — so they can see exactly what a user encountered in their browser without needing to reproduce the issue. CloudWatch RUM collects client-side performance metrics and error data from both web and mobile applications; Session Replay extends this visibility for web applications by letting developers visually diagnose issues like broken navigation flows or unresponsive UI elements that don't surface in server-side logs. This capability is built for front-end developers and application owners who need to move quickly from a user-reported problem to its root cause.\n  Session Replay helps developers identify user experience issues — such as forms that fail to render or navigation flows that break — that can silently impact conversion and engagement, even when no one reports them. Developers can also replay sessions to study navigation patterns and identify drop-off points. To get started, enable Session Replay in your app monitor and view recorded sessions from the Session Replay tab in the CloudWatch RUM console — the feature is opt-in, supports sensitive field masking, and is included at no additional cost.\n \nSession Replay for Amazon CloudWatch RUM is available in all AWS Regions where CloudWatch RUM is supported. To learn more about Session Replay for Amazon CloudWatch RUM, see the  Amazon CloudWatch RUM documentation . For pricing details, see the  Amazon CloudWatch pricing page .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-cloudwatch-rum-session/",
+      "pubDate": "2026-05-01T21:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga",
         "support"
       ]
     },
@@ -460,100 +556,6 @@
         "kafka",
         "msk",
         "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c77ad59d56bf",
-      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
-      "description": "Amazon EC2 High Memory U7i-8TB instances (u7i-8tb.112xlarge) are now available in AWS Europe (Stockholm, Zurich) regions, U7in-16TB instances (u7in-16tb.224xlarge) are now available in the AWS US East (Ohio) region, and U7in-24TB instances (u7in-24tb.224xlarge) are now available in the AWS Europe (Stockholm) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7i-8TB instances offer 8 TiB of DDR5 memory, U7in-16TB instances offer 16 TiB of DDR5 memory, and U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7i-8TB instances deliver 448 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth, 100 Gbps of network bandwidth, and ENA Express. Both U7in-16TB and U7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ec2-high-memory-u7i/",
-      "pubDate": "2026-04-24T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-170c28780c46",
-      "title": "AWS Marketplace Management Portal now supports bank account deletion",
-      "description": "AWS Marketplace sellers can now delete bank accounts directly from the Payment Settings page in the AWS Marketplace Management Portal (AMMP). This new self-service capability addresses a long-standing gap in payment account management, allowing sellers to remove ACH-type and SWIFT-type bank accounts without contacting customer service. This enhancement is particularly valuable for global enterprises and ISVs managing multiple currencies and banking relationships.\n \nWith this update, sellers gain complete control over their payment account management. Key benefits include the ability to clean up unused accounts, remove failed or outdated banking relationships, and reduce payment routing risks. The feature also includes Last Updated timestamps to help differentiate between modified bank accounts. \n \nTo learn more, see the AWS Marketplace Seller Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-marketplace-management-portal/",
-      "pubDate": "2026-04-24T16:37:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "update",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e6a9a4d5f560",
-      "title": "AWS Deadline Cloud now supports custom scripting for job submission workflows",
-      "description": "AWS Deadline Cloud now supports running custom scripts before and after job submission, giving studios the ability to integrate their pipeline directly into the submission workflow. AWS Deadline Cloud is a fully managed service that simplifies render management for teams creating computer-generated graphics and visual effects for films, television, web content, and design.\n  With the new submission scripting capability, you can configure scripts that run automatically as part of every job submission. Pre-submission scripts run before job attachments are uploaded, allowing you to validate job configurations, discover and add additional input files such as textures or caches, modify submission parameters, or enforce studio policies. Post-submission scripts run after the job is created, enabling you to send notifications, update tracking systems, or log submission details. Scripts are defined in a simple YAML or JSON configuration file placed in your job bundle directory or in a shared studio-wide directory using an environment variable, making it easy for pipeline teams to enforce standards across all artists. Each script receives job metadata automatically and supports configurable timeouts. \n  To get started, visit the Deadline Cloud Client documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-deadline-cloud/",
-      "pubDate": "2026-04-24T15:42:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-05b9da698c81",
-      "title": "Attributed Revenue Dashboard Now Available in AWS Partner Central",
-      "description": "Today, AWS announces the launch of the Attributed Revenue dashboard in AWS Partner Central in the AWS Console, giving Partners self-service visibility into the revenue impact of their solutions as measured by Partner Revenue Measurement. The dashboard displays aggregated monthly attributed revenue by Partner product, AWS service, and billing period. It provides consolidated insights from all three Partner Revenue Measurement capabilities—Resource Tagging, User Agent string, and AWS Marketplace Metering—in a single view.\n \nPartners who implement Partner Revenue Measurement can now access the Attributed Revenue Dashboard through Partner Analytics to view monthly consumption patterns, monitor revenue trends over time, and verify that their implementation is actively measuring AWS service consumption driven by their solutions. Partners with multiple AWS Marketplace seller accounts can connect subsidiary accounts to see aggregated revenue across all connected accounts.\n \nThe Attributed Revenue Dashboard is available in all commercial regions for Partners that have migrated to AWS Partner Central in the AWS Console. To learn more about Partner Revenue Measurement, review the onboarding guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/attributed-revenue-dashboard-launch/",
-      "pubDate": "2026-04-23T16:30:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-fb3c8301ad65",
-      "title": "Amazon EC2 X8g instances now available in Europe (Ireland) region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8g instances are available in Europe (Ireland) region. These instances are powered by AWS Graviton4 processors and deliver up to 60% better performance than AWS Graviton2-based Amazon EC2 X2gd instances. X8g instances offer up to 3 TiB of total memory and increased memory per vCPU compared to other Graviton4-based instance. They have the best price performance among EC2 X-series instances, and are ideal for memory-intensive workloads such as electronic design automation (EDA) workloads, in-memory databases (Redis, Memcached), relational databases (MySQL, PostgreSQL), real-time big data analytics, real-time caching servers, and memory-intensive containerized applications.\n  X8g instances offer larger instance sizes with up to 3x more vCPU (up to 48xlarge) and memory (up to 3TiB) than Graviton2-based X2gd instances. They offer up to 50 Gbps enhanced networking bandwidth and up to 40 Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS). Elastic Fabric Adapter (EFA) networking support is offered on 24xlarge, 48xlarge, and bare metal sizes, and Elastic Network Adapter (ENA) Express support is available on instance sizes larger than 12xlarge.\n  To learn more, see Amazon EC2 X8g Instances. To quickly migrate your workloads to Graviton-based instances, see AWS Graviton Fast Start program. To get started, see the AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-ec2-x8g-instances-europe-ireland/",
-      "pubDate": "2026-04-23T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "graviton",
         "now-available",
         "support"
       ]

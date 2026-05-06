@@ -1,8 +1,29 @@
 {
-  "lastUpdated": "2026-05-05T07:51:10.742Z",
+  "lastUpdated": "2026-05-06T08:03:09.995Z",
   "category": "natural-language",
-  "totalItems": 10,
+  "totalItems": 9,
   "items": [
+    {
+      "id": "aws-news-9b45af690b1d",
+      "title": "AWS IAM now provides higher maximum quotas for roles, role trust policies, instance profiles, managed policies, and identity providers",
+      "description": "AWS Identity and Access Management (IAM) has increased maximum quotas for six resources:\n  \n \n \nCustomer managed policies per account (5,000 to 10,000)\n \n \nInstance profiles per account (5,000 to 10,000)\n \n \nManaged policies per role (20 to 25)\n \n \nRole trust policy length (4,096 to 8,192 characters)\n \n \nRoles per account (5,000 to 10,000)\n \n \nOpenId connect providers per account (100 to 700)\n \n \nThese updates address common scaling constraints customers encounter as their AWS environments grow. With these higher maximum quotas, customers have more flexibility to customize IAM controls and support additional workloads that require creation of IAM resources.\n \nCustomers can view the latest IAM quotas in the IAM and AWS STS quotas documentation. To request quota increases for accounts in AWS commercial regions, use Service Quotas in US East (N. Virginia). In AWS GovCloud (US) and China Regions, customers can request increases through AWS Support. For more information, see Requesting a Quota Increase in the Service Quotas User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iam-increased-quotas/",
+      "pubDate": "2026-05-05T02:28:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "iam"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "iam",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-9d6d5875f5bf",
       "title": "OpenSearch UI supports cross-region data access to OpenSearch domains",
@@ -115,57 +136,6 @@
       "tags": [
         "lex",
         "redshift",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a58cb2b1b1f2",
-      "title": "AWS Client VPN now supports native AWS Transit Gateway integration",
-      "description": "AWS Client VPN now supports native integration with AWS Transit Gateway, simplifying centralized remote access for your end users across multiple VPCs and on-premises, and providing end-to-end source IP visibility.\n  AWS Transit Gateway interconnects your Amazon Virtual Private Clouds (VPCs) and on-premises networks, while AWS Client VPN enables secure remote access to AWS and on-premises resources connected through your AWS network. Previously, connecting Client VPN to multiple VPCs required provisioning and managing an intermediate VPC, adding operational complexity as you needed to manage additional resources. Moreover, client source IPs were translated through Source Network Address Translation (SNAT), making it difficult to identify which remote user generated specific traffic and complicating security audits. Native Transit Gateway attachment eliminates the need for an intermediate VPC, letting you provide centralized remote access to multiple VPCs and on-premises networks directly from your Client VPN endpoint. Additionally, the end-user source IP is now preserved end-to-end, so you can create authorization rules based on actual client IPs and trace traffic back to specific users, simplifying security, compliance, and troubleshooting workflows. Furthermore, Transit Gateway flow logs capture connection-level details tied to preserved source IPs for improved troubleshooting and compliance audits.\n  This integration is available in all AWS Regions where AWS Client VPN is available. There are no additional charges for this native integration beyond standard pricing of AWS Client VPN and AWS Transit Gateway.\n \nTo learn more about Client VPN:\n \n \n \nVisit the AWS Client VPN product page\n \n \nRead the AWS Client VPN documentation",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-client-vpn-transit-gateway/",
-      "pubDate": "2026-04-23T21:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "translate",
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "translate",
-        "lex",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b617cf768df7",
-      "title": "Amazon Redshift supports UPDATE, DELETE, MERGE for Apache Iceberg tables",
-      "description": "Amazon Redshift now supports row-level UPDATE, DELETE, and MERGE operations on Apache Iceberg tables. Customers who use Iceberg to build interoperable data lakes can now perform data manipulation language (DML) operations directly from Amazon Redshift, without moving data to external processing engines. Previously, modifying individual rows in Iceberg tables required using separate engines, adding complexity and latency to data pipelines.\n  With this launch, you can run UPDATE, DELETE, and MERGE (UPSERT) statements on both partitioned and unpartitioned Iceberg tables, including S3 Tables. Supported Iceberg partition transforms include identity, bucket, truncate, year, month, day, and hour. MERGE enables you to combine insert and update logic in a single statement for common data integration patterns such as change data capture and slowly changing dimensions. Tables modified by Redshift are compatible with other Iceberg-compatible engines, including Amazon EMR and Amazon Athena, preserving cross-engine interoperability. AWS Lake Formation permissions are supported for Iceberg write operations.\n  Amazon Redshift support for UPDATE, DELETE, and MERGE commands on Apache Iceberg tables is available in all AWS Regions where Amazon Redshift is available. To get started, visit the Writing to Apache Iceberg tables section in the Amazon Redshift Database Developer Guide, where you will also find documentation for the SQL syntax.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/redshift-update-delete-merge-iceberg-tables/",
-      "pubDate": "2026-04-23T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "s3",
-        "emr",
-        "redshift",
-        "athena"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "s3",
-        "emr",
-        "redshift",
-        "athena",
-        "launch",
-        "update",
-        "integration",
         "support"
       ]
     },
