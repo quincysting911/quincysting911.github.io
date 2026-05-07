@@ -1,8 +1,86 @@
 {
-  "lastUpdated": "2026-05-06T08:03:09.995Z",
+  "lastUpdated": "2026-05-07T08:10:45.203Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 23,
   "items": [
+    {
+      "id": "aws-news-31933b851730",
+      "title": "Announcing Agent Toolkit for AWS — help AI coding agents build effectively on AWS",
+      "description": "Today, AWS is launching the Agent Toolkit for AWS, a production-ready suite of tools and guidance that helps AI coding agents build on AWS with fewer errors, lower token costs, and enterprise-grade security controls. The Agent Toolkit for AWS is the successor to the MCP servers, plugins, and skills available on AWS Labs.\n  Developers using coding agents to build on AWS often find that their agents struggle with complex multi-service workflows, rely on outdated knowledge of AWS services, and are difficult to govern — leading to wasted time, wasted tokens, and a reluctance to deploy agents in production. The Agent Toolkit for AWS addresses these challenges through agent skills, a fully-managed MCP server, and easy-to-install plugins. Agent skills give agents validated, up-to-date procedures for tasks like authoring CloudFormation templates, configuring data pipelines, and building serverless applications — so agents follow best practices rather than improvising from general knowledge. Today, we are launching more than 40 skills across infrastructure-as-code, storage, analytics, serverless, containers, and AI services, and we plan to release more in the coming weeks: including for databases, networking, and IAM. Each skill has been rigorously evaluated to ensure that it helps agents complete tasks more accurately and reliably. The AWS MCP Server, now generally available, is a fully-managed MCP server that allows coding agents to interact with any AWS service. It offers IAM-based guardrails on which actions agents can perform, Amazon CloudWatch and AWS CloudTrail observability, and sandboxed code execution for multi-step operations. The AWS MCP server also equips agents with tools to efficiently search and retrieve documentation, so they always have the latest knowledge and guidance. Agent plugins bundle the AWS MCP server and curated sets of skills into a single install. Today, we are releasing three agent plugins: AWS Core, to help application developers build and manage full-stack applications on AWS, AWS Data Analytics, which helps data analysts and business intelligence engineers create data pipelines and load and query data, and AWS Agents, which helps AI engineers build production-ready agents using Amazon Bedrock AgentCore.\n  The MCP servers, skills, and plugins available on AWS Labs will continue to be available, and over time the best of AWS Labs will be transitioned to the Agent Toolkit for AWS to ensure that customers can access the broadest array of tooling and guidance for their agents. The Agent Toolkit for AWS is available at no additional charge; you pay only for the AWS resources your agents use. To learn more, see Agent Toolkit for AWS. To get started, visit the Quick Start guide or browse the available skills and plugins on GitHub.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/agent-toolkit/",
+      "pubDate": "2026-05-06T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "eks",
+        "cloudformation",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "lex",
+        "eks",
+        "cloudformation",
+        "iam",
+        "cloudwatch",
+        "launch",
+        "generally-available"
+      ]
+    },
+    {
+      "id": "aws-news-caa51055758e",
+      "title": "The AWS MCP Server is now generally available",
+      "description": "Today, AWS announces the general availability of the AWS MCP Server, a managed server that gives AI coding agents secure, auditable access to AWS services through the Model Context Protocol (MCP). The AWS MCP Server is a core component of the Agent Toolkit for AWS, which helps coding agents build on AWS more effectively. With the AWS MCP Server, organizations can let coding agents interact with AWS while maintaining visibility and control through IAM-based guardrails, Amazon CloudWatch metrics, and AWS CloudTrail logging.\n \nSince the preview launch at re:Invent 2025, the AWS MCP Server has added several capabilities. Agents can now call any AWS API through a single tool, including operations that require file uploads or long-running execution. Sandboxed script execution lets agents run Python code against AWS services for multi-step operations, without access to your local filesystem or shell tools. Agent skills replace agent SOPs with a more flexible format: agents discover and load curated guidance on demand, keeping context window usage low while providing tested procedures for complex tasks. Additionally, documentation search and skill discovery no longer require AWS credentials, removing a common barrier to getting started.\n \nThe AWS MCP Server is available at no additional charge; you pay only for the AWS resources your agents use. To learn more, see Agent Toolkit for AWS. To get started, visit the Agent Toolkit for AWS Quick Start guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/",
+      "pubDate": "2026-05-06T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "iam",
+        "cloudwatch",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "iam",
+        "cloudwatch",
+        "organizations",
+        "launch",
+        "preview",
+        "generally-available",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f75e5d7acf55",
+      "title": "AWS Directory Service expands directory security settings with STIG-aligned controls for Managed AD",
+      "description": "AWS Directory Service for Microsoft Active Directory (AWS Managed Microsoft AD) now has expanded its security settings to include STIG-aligned configurations for high-impact security areas. These new security settings help customers meet their organizations requirements for directory-level security and compliance configurations. For regulated or security-focused customers, these settings align with the Defense Information Systems Agency (DISA) Security Technical Implementation Guides (STIG) for Windows Server and Active Directory.\n \nThese expanded STIG-aligned security settings are available today through a self-service interface, both programmatically and via the AWS Management Console. Security and Identity Management professionals can now ensure consistent configuration across multiple managed directories by declaring their desired configuration and letting AWS implement and persist these configurations. When expanding to additional regions or scaling out with additional domain controllers, AWS Managed Microsoft AD automatically applies these settings to all new instances.\n  For information about AWS Regions where AWS Directory Service is available, see the AWS Region table. To learn more about configuring these security settings, see the AWS Directory Service Administration Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/add-security-settings-stig-aws-microsoft-ad/",
+      "pubDate": "2026-05-06T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "directory service",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "directory service",
+        "organizations",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-b393b1520022",
       "title": "AWS SAM CLI adds BuildKit support for AWS Lambda functions packaged as container images",
@@ -228,26 +306,6 @@
       ]
     },
     {
-      "id": "aws-news-a5a2b7a61e74",
-      "title": "Organizing Agents’ memory at scale: Namespace design patterns in AgentCore Memory",
-      "description": "In this post, you will learn how to design namespace hierarchies, choose the right retrieval patterns, and implement AWS Identity and Access Management (IAM)-based access control for AgentCore Memory.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/organizing-agents-memory-at-scale-namespace-design-patterns-in-agentcore-memory/",
-      "pubDate": "2026-04-29T19:31:54.000Z",
-      "source": "mlBlog",
-      "services": [
-        "agentcore",
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "agentcore",
-        "iam",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-59622a9ba474",
       "title": "Amazon CloudFront now supports invalidation by cache tag",
       "description": "Amazon CloudFront now allows you to invalidate cached objects by cache tag, enabling you to remove groups of related content from CloudFront edge locations with a single invalidation request. Cache tag invalidation simplifies common operational workflows such as updating product information across multiple pages, managing legal takedown requests, handling regulatory compliance requests, and refreshing content across multi-tenant platforms.\n  Previously, invalidating related objects that didn't share a common URL path required tracking individual URLs or using broad wildcard patterns that could unnecessarily clear unrelated content. With invalidation by cache tag, developers and site reliability engineers can tag cached objects when returning an object by including a specified header in HTTP responses with comma-separated tag values. When needed, they can invalidate all objects sharing a tag in one request, maintaining high cache hit ratios while ensuring end users see fresh content within seconds. You can configure the header name through the Amazon CloudFront console, AWS CLI, or API, and assign multiple tags per object for flexible, precise cache management. Over the years, CloudFront has made improvements to propagation times. Currently, invalidations take effect in under 5 seconds at P95. The end-to-end completion time, which includes reporting the invalidation status back, is under 25 seconds at P95.\n  Amazon CloudFront invalidation by cache tag is available in all AWS Regions where CloudFront is offered except China (Beijing, operated by Sinnet) and China (Ningxia, operated by NWCD). To learn more, view the Invalidations By Cache Tag documentation. Each cache tag is priced as one path. For details on pricing, refer to the CloudFront pricing page.",
@@ -337,24 +395,6 @@
         "ga",
         "update",
         "limited-preview"
-      ]
-    },
-    {
-      "id": "aws-news-e57dc2d98a83",
-      "title": "Amazon Connect now logs supervisor agent activity status changes to AWS CloudTrail",
-      "description": "Amazon Connect now provides audit logging for agent activity status changes made through analytics dashboards to AWS CloudTrail. This enhancement provides visibility into who changed agent activity status, and when changes occurred, helping contact centers maintain clear audit trails. For example, if an agent is scheduled to be on break, a supervisor can change an agent's status from \"Available\" to \"Break\", this action is now captured in CloudTrail with details including the supervisor's identity, timestamp, and the specific status change.\n \n\n Logging agent activity status changes made from analytics dashboards to AWS CloudTrail is available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect is offered. To get started, ensure CloudTrail logging is enabled for your AWS account, and status changes made through Amazon Connect analytics dashboards will automatically appear in your CloudTrail logs. To learn more about dashboards, see the Amazon Connect Administrator Guide. To learn more about Amazon Connect, the AWS cloud-based contact center, please visit the Amazon Connect website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-connect-logs-supervisor/",
-      "pubDate": "2026-04-24T18:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "enhancement"
       ]
     },
     {
