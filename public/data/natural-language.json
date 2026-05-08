@@ -1,8 +1,29 @@
 {
-  "lastUpdated": "2026-05-07T08:10:45.203Z",
+  "lastUpdated": "2026-05-08T07:13:11.384Z",
   "category": "natural-language",
   "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-2389081fe295",
+      "title": "Amazon ElastiCache now supports real-time aggregations",
+      "description": "Amazon ElastiCache now supports aggregation queries, making it easier to filter, group, transform, and summarize data directly in your cache with a single query. Developers can use aggregation queries to build real-time application experiences with latencies as low as microseconds over terabytes of data and results reflecting completed writes.\n  By running aggregations directly in-memory within ElastiCache, developers can reduce architectural complexity and improve response times without a separate analytics engine. Applications can use aggregations to power faceted navigation, category counts, rollups, and leaderboards. Applications can aggregate over the most up-to-date data to deliver real-time insights such as trending content, popular categories, and top-performing items in e-commerce marketplaces and streaming services. Aggregations can drive AI-powered personalization applications that need fast summaries over search results, and operational dashboards for live monitoring and business analytics.\n  Aggregations are available in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions, for node-based clusters running ElastiCache version 9.0 for Valkey at no additional cost. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 or above cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, read the aggregations blog and see the ElastiCache documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-aggregations/",
+      "pubDate": "2026-05-06T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f665e9b6e83f",
       "title": "Amazon Neptune now supports 1-click connect with CloudShell",
@@ -40,6 +61,27 @@
         "lex",
         "kafka",
         "msk"
+      ]
+    },
+    {
+      "id": "aws-news-c4fbdf2f5d33",
+      "title": "Announcing Valkey 9.0 for Amazon ElastiCache",
+      "description": "Amazon ElastiCache now supports Valkey 9.0, bringing new capabilities to customers building real-time, AI-driven, and high-throughput applications on AWS. As applications grow more data-intensive and latency-sensitive, teams often face the overhead of managing separate search infrastructure, throughput ceilings that force over-provisioning, and complex workarounds for data lifecycle management and multi-tenant architectures. Valkey 9.0 addresses these challenges directly with built-in search, engine-level performance improvements, and new operational flexibility.\n  Valkey 9.0 for Amazon ElastiCache introduces full-text and hybrid search that expands on existing vector similarity functionality to provide real-time full-text search, semantic retrieval, filtering, and aggregations over terabytes of data with microsecond latency and throughput up to millions of requests per second. Valkey 9.0 also delivers up to 40% higher throughput for pipelined workloads through engine-level optimizations including faster command parsing and improved memory prefetching. Valkey 9.0 also introduces hash field expiration that allow TTLs to be applied to individual fields within a hash for fine-grained data lifecycle management and multi-database support in cluster mode enabled deployments, providing lightweight logical namespaces to simplify multi-tenant architectures and migrations from standalone environments. These and more than 100 additional enhancements together bring the performance, functionality, and operational flexibility needed to power increasingly demanding real-time and AI-driven workloads.\n  Valkey 9.0 is available for ElastiCache node-based clusters and serverlesss caches at no additional cost in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, visit the Amazon ElastiCache documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/valkey-amazon-elasticache/",
+      "pubDate": "2026-05-05T22:33:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "improvement",
+        "enhancement",
+        "support"
       ]
     },
     {
@@ -135,46 +177,6 @@
         "rds",
         "cloudwatch",
         "grafana",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5eddc758d850",
-      "title": "Amazon RDS for Db2 is now available in the AWS GovCloud (US-East, US-West) Regions",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Db2 is now available in the AWS GovCloud (US-East, US-West) Regions. Amazon RDS for Db2 makes it easy to set up, operate, and scale Db2 databases in the cloud. Customers can deploy a Db2 database in minutes with automatically configured parameters for optimal performance. For databases setup with Multi-AZ configuration, Amazon RDS performs synchronous replication to a standby instance in a different Availability Zone to provide high availability.\n  To use Amazon RDS for Db2, customers can use Bring Your Own License (BYOL) available in Standard and Advanced Editions. Your RDS for Db2 usage may be eligible for Database Savings Plan, a flexible pricing model that offers savings in exchange for a commitment to a specific amount of usage (measured in $/hour) over a 1-year term. You can learn more about eligible usage on the Database Savings Plans pricing page.\n  To learn more about Amazon RDS for Db2, refer to documentation and pricing pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-rds-db2-available-aws-govcloud-us-east-us-west-regions/",
-      "pubDate": "2026-04-29T07:21:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-868a0bf6917b",
-      "title": "Amazon Redshift Serverless AI-driven scaling is now the default for new workgroups",
-      "description": "Amazon Redshift Serverless now makes AI-driven scaling and optimization the default for all new workgroups. AI-driven scaling uses machine learning to predict compute needs and automatically adjust resources before queries queue, delivering better price-performance without manual tuning. This release also expands support to workloads with a Base RPU range of 8–512 RPU, from the previous range of 32–512 RPU, reducing the entry cost for AI-driven scaling.\n  With AI-driven scaling and optimization, Amazon Redshift monitors your workload patterns and automatically adjusts compute resources based on query complexity, data volume, and expected data scan size. You can use the price-performance slider to choose whether to prioritize cost, performance, or a balance of both. Amazon Redshift also applies additional optimizations, including automatic materialized views and automatic table design optimization, to meet your selected target. To configure price-performance targets, use the AWS Management Console or Amazon Redshift API operations. You can also modify the target after you create the workgroup.\n  Amazon Redshift Serverless AI-driven scaling and optimization is available in all AWS Regions where Amazon Redshift Serverless is available. For more information, see Amazon Redshift Serverless product page and AI-driven scaling and optimization documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-redshift-serverless-ai-driven-scaling-default/",
-      "pubDate": "2026-04-27T22:03:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
         "support"
       ]
     },

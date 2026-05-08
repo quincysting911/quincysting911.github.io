@@ -1,8 +1,78 @@
 {
-  "lastUpdated": "2026-05-07T08:10:45.203Z",
+  "lastUpdated": "2026-05-08T07:13:11.384Z",
   "category": "machine-learning",
-  "totalItems": 11,
+  "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-da6f05c97b06",
+      "title": "Amazon SageMaker Unified Studio adds identity and user management features",
+      "description": "Amazon SageMaker Unified Studio announces new administration features that give administrators more control over identity configuration and user management for both IAM and Identity Center domain types.\n  In SageMaker IAM domains, administrators can now onboard users through single sign-on by configuring AWS IAM Identity Center. After configuration, administrators can add IAM roles, IAM users, IAM Identity Center users, and IAM Identity Center groups as project members. Teams can collaborate on project data and resources regardless of how individual members authenticate. Administrators can set up IAM Identity Center integration in the SageMaker Unified Studio admin portal. A new domain user management page for SageMaker IAM domains gives administrators a consolidated view of all users active in the domain, where they can manage access and update permissions from a single screen.\n  In SageMaker Identity Center domains, users can now access the SageMaker Unified Studio portal by federating through an IAM role. SageMaker Unified Studio creates a unique user session for each federated user, so users sharing the same role don't overwrite each other's work. Administrators can audit individual actions even when multiple users share a single IAM role.\n  With these features, customers can use IAM identity or IAM Identity Center corporate identity across both domain types, giving teams flexibility to collaborate in SageMaker Unified Studio regardless of their authentication method.\n  These features are available in the following AWS Regions: Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), South America (São Paulo), US East (N. Virginia), US East (Ohio), and US West (Oregon).\n  To learn more, visit the SageMaker Unified Studio documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/smus-identity-user-management/",
+      "pubDate": "2026-05-07T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "iam",
+        "iam identity center",
+        "ga",
+        "update",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-04fb5da473d0",
+      "title": "Amazon SageMaker HyperPod now supports AMI-based node lifecycle configuration for Slurm clusters",
+      "description": "Amazon SageMaker HyperPod now supports AMI-based configuration that provisions Slurm cluster nodes with the software and configurations needed for a production-ready environment to run AI/ML training workloads. This removes the need to download, configure, or upload lifecycle configuration scripts to Amazon S3. With fewer operational steps to prepare a cluster and no lifecycle configuration scripts executing during node provisioning, cluster creation time is significantly reduced, so you can start running jobs sooner.\n \nAMI-based configuration includes required software such as Docker, Enroot, and Pyxis, and configurations such as Slurm accounting, SSH key generation, Slurm log rotation and user home directory setup. To enable AMI-based configuration, omit the LifeCycleConfig block from the instance group configuration when creating clusters using the CreateCluster API, or when using the SageMaker AI console, select \"None\" under Lifecycle scripts in Custom setup. For additional customization on top of the AMI-based configuration baseline, an extension script can be provided, allowing you to focus only on what capabilities and software to add, such as user configuration, observability, or LDAP integration.\n \nExtension scripts can be configured when creating clusters through both the API and the SageMaker AI console. Using the CreateCluster API, specify the new OnInitComplete parameter and SourceS3Uri in the LifeCycleConfig block. Via the console, provide the S3 URI to the extension script in the \"Extension script file in S3\" field in Custom setup. For advanced use cases that require full control over provisioning, custom lifecycle configuration scripts remain fully supported through both the API and the SageMaker AI console.\n \nThis feature is available in all AWS Regions where SageMaker HyperPod is available. To get started with creating HyperPod Slurm clusters with AMI-based node lifecycle configuration, see Getting started with SageMaker HyperPod using the AWS CLI or Getting started with SageMaker HyperPod using the SageMaker AI console in the SageMaker AI developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-ami-based-node/",
+      "pubDate": "2026-05-07T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "s3"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "s3",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f526a2e9a558",
+      "title": "Secure short-term GPU capacity for ML workloads with EC2 Capacity Blocks for ML and SageMaker training plans",
+      "description": "In this post, you will learn how to secure reserved GPU capacity for short-term workloads using Amazon Elastic Compute Cloud (Amazon EC2) Capacity Blocks for ML and Amazon SageMaker training plans. These solutions can address GPU availability challenges when you need short-term capacity for load testing, model validation, time-bound workshops, or preparing inference capacity ahead of a release.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/secure-short-term-gpu-capacity-for-ml-workloads-with-ec2-capacity-blocks-for-ml-and-sagemaker-training-plans/",
+      "pubDate": "2026-05-07T15:59:50.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2"
+      ]
+    },
     {
       "id": "aws-news-d2f7c3394b98",
       "title": "Cost effective deployment of vision-language models for pet behavior detection on AWS Inferentia2",

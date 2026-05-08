@@ -1,8 +1,114 @@
 {
-  "lastUpdated": "2026-05-07T08:10:45.203Z",
+  "lastUpdated": "2026-05-08T07:13:11.384Z",
   "category": "ai-safety",
-  "totalItems": 23,
+  "totalItems": 25,
   "items": [
+    {
+      "id": "aws-news-3428cc4b9a18",
+      "title": "AWS Capabilities by Region now supports availability notifications",
+      "description": "Today, AWS announces availability notifications for AWS Capabilities by Region in AWS Builder Center, a new subscription-based system that automatically alerts builders when an AWS service(s) and/or features(s) become available in their target Regions. Availability notifications make it easy for builders to track availability of 1,500+ services and features across 37 AWS Regions, accelerating infrastructure planning and deployment decisions.\n \nWith availability notifications, builders can subscribe at the service level through AWS Builder Center UI, and the subscription automatically covers all underlying features across selected Regions, so there's no need to track each feature individually. Notifications are delivered through two channels: instantaneous in-app alerts within AWS Builder Center, and a consolidated weekly email digest. Subscriptions and notification preferences can be managed through Settings > Notifications in AWS Builder Center. Common use cases include tracking a specific capability launch, monitoring service parity across AWS Regions, and preparing for upcoming migrations or Regional expansions. For example, a solutions architect expanding a generative AI application into new Regions can subscribe to Amazon Bedrock and receive automatic updates as Knowledge Bases, Guardrails, and other features become available.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-regional-planning-tool-notification",
+      "pubDate": "2026-05-07T17:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "launch",
+        "update",
+        "support",
+        "new-region",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-9b3234ded8a3",
+      "title": "AWS Advanced JDBC Wrapper now provides client-side encryption",
+      "description": "The AWS Advanced JDBC Wrapper now provides column-level client-side encryption through its KMS Encryption plugin. The wrapper provides advanced capabilities such as failover handling, AWS authentication integration, and enhanced monitoring for Amazon Aurora and Amazon RDS open source databases. It enables Java applications to encrypt sensitive data before it reaches the database without changing application code.\n  Database encryption at rest and TLS in transit are foundational security controls. However, with these controls decrypt the data within the database engine. A compromised credential, overprivileged administrator, or SQL injection attack can expose sensitive data in plaintext, creating compliance risk under PCI DSS, HIPAA, and GDPR. The KMS Encryption plugin closes this gap by working at the JDBC driver level. When your application writes to an encrypted column, the plugin encrypts the value before it reaches the database. When reading, it decrypts the value before returning it. Plaintext remains visible only to your application, while the database sees encrypted values. The database can verify data integrity through HMAC validation without needing the encryption key. The plugin integrates seamlessly with your existing SQL, Spring, Hibernate, and connection pool setup without requiring code changes.\n  The KMS Encryption plugin works with Amazon RDS and Amazon Aurora PostgreSQL and MySQL-compatible databases.\n  The plugin is available as an open-source project under the Apache 2.0 license. To learn more, see AWS Advanced JDBC Wrapper documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-advanced-jdbc-wrapper-encryption/",
+      "pubDate": "2026-05-07T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-1702ca3fb6df",
+      "title": "Overcoming reward signal challenges: Verifiable rewards-based reinforcement learning with GRPO on SageMaker AI",
+      "description": "In this post, you will learn how to implement reinforcement learning with verifiable rewards (RLVR) to introduce verification and transparency into reward signals to improve training performance. This approach works best when outputs can be objectively verified for correctness, such as in mathematical reasoning, code generation, or symbolic manipulation tasks. You will also learn how to layer techniques like Group Relative Policy Optimization (GRPO) and few-shot examples to further improve results. You’ll use the GSM8K dataset (Grade School Math 8K: a collection of grade school math problems) to improve math problem solving accuracy, but the techniques used here can be adapted to a wide variety of other use cases.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learning-with-grpo-on-sagemaker-ai/",
+      "pubDate": "2026-05-07T15:53:30.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-b6f032f86ebe",
+      "title": "Amazon SES Mail Manager now available in AWS GovCloud (US) Regions",
+      "description": "Amazon SES Mail Manager is now available in AWS GovCloud (US) regions, expanding Mail Manager coverage to 30 AWS regions.\n \nAmazon SES Mail Manager provides a centralized gateway to manage all inbound and outbound email traffic with advanced routing, filtering, and archiving capabilities. It simplifies complex email infrastructure by replacing the need for multiple third-party tools with a single, scalable solution integrated directly into AWS. This gives organizations greater visibility and control over their email flows while reducing operational overhead and cost.\n \nThe new Mail Manager regions include AWS GovCloud (US-East) and AWS GovCloud (US-West). The full list of Mail Manager region availability is here.\n \nTo learn more, visit the SES Mail Manager documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/ses-mail-manager-available-aws-govcloud-regions",
+      "pubDate": "2026-05-07T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "organizations",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-1fa71e04b487",
+      "title": "Amazon Redshift now scales data ingestion automatically with concurrency scaling for batch workloads",
+      "description": "Amazon Redshift now scales data ingestion automatically with concurrency scaling for batch workloads\n \nPosted on: May 7, 2026\n  Amazon Redshift now extends concurrency scaling to support high-volume data ingestion workloads, enabling concurrency scaling for Amazon Redshift COPY queries from Amazon S3. This means your data pipelines no longer have to choose between ingestion speed and query performance—even during peak demand.\n  Organizations running time-sensitive data operations—real-time analytics, continuous ETL, or high-frequency reporting—often face ingestion bottlenecks during traffic spikes. Until now, concurrency scaling supported read queries, but write-heavy workloads could still experience resource contention with concurrent queries. With this launch, Amazon Redshift automatically provisions additional compute capacity to absorb burstiness in ingestion workloads, delivering:\n  \n \n \nFaster COPY performance – For batch workloads, concurrency scaling now supports COPY for Parquet and ORC file formats from Amazon S3. Load multiple files concurrently without queuing delays, even under heavy concurrent workloads by enabling concurrency scaling for Amazon Redshift COPY queries.\n \n \nZero operational overhead – No manual cluster resizing or workload scheduling required. Concurrency scaling is enabled and disabled automatically on Amazon Redshift Serverless based on the demand or based on a pre-set configurations in Amazon Redshift Provisioned.\n \n \nThis feature is generally available across all AWS commercial regions and AWS GovCloud (US) regions for both Amazon Redshift Serverless and provisioned data warehouses. No migration or configuration changes are required — enable concurrency scaling and your ingestion workloads will benefit immediately. To learn more, visit the Amazon Redshift concurrency scaling documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/concurrencyscaling-support-for-copy",
+      "pubDate": "2026-05-07T02:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "redshift",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "redshift",
+        "organizations",
+        "launch",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-31933b851730",
       "title": "Announcing Agent Toolkit for AWS — help AI coding agents build effectively on AWS",
@@ -325,76 +431,6 @@
         "ga",
         "improvement",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-933ac47c3ade",
-      "title": "AWS Transfer Family Terraform module now supports Okta and Microsoft Entra ID integration examples",
-      "description": "AWS Transfer Family Terraform module now includes end-to-end examples for deploying Transfer Family endpoints integrated with Okta and Microsoft Entra ID as custom identity providers (IdP) for authentication and access control. This allows enterprises already using these platforms to automate and streamline the deployment of Transfer Family servers with their existing identity infrastructure.\n \nThe Terraform module and examples are based on the open source Custom IdP solution, which provides standardized integration with widely used identity providers and includes built-in security controls such as multi-factor authentication, audit logging, and per-user IP allowlisting. The Okta example supports password-based authentication flows, time-based one-time password (TOTP)-based MFA, and attribute retrieval, while the Entra ID example demonstrates password-based authentication for organizations standardized on Microsoft's identity platform.\n \nCustomers can get started by using the new module from the Terraform Registry. To learn more about the Transfer Family Custom IdP solution, visit the user guide. To see all the AWS Regions where Transfer Family is available, visit the AWS Capabilities table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-transfer-family-terraform-okta-microsoft-entra-id/",
-      "pubDate": "2026-04-29T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ff45cf2da7f1",
-      "title": "AWS Glue 5.1 is now available in all AWS Commercial and AWS GovCloud (US) Regions",
-      "description": "AWS Glue 5.1 is now available in the Asia Pacific (New Zealand), AWS GovCloud (US-West) and AWS GovCloud (US-East) Regions.\n  AWS Glue is a serverless, scalable data integration service that simplifies discovering, preparing, moving, and integrating data from multiple sources. AWS Glue 5.1 upgrades core engines to Apache Spark 3.5.6, Python 3.11, and Scala 2.12.18, bringing performance and security enhancements. This release also updates support for open table format libraries, including Apache Hudi 1.0.2, Apache Iceberg 1.10.0, and Delta Lake 3.3.2. Additionally, AWS Glue 5.1 introduces support for Apache Iceberg format version 3.0, adding default column values, deletion vectors for merge-on-read tables, multi-argument transforms, and row lineage tracking. This release extends AWS Lake Formation fine-grained access control to write operations - both DML and DDL - for Spark DataFrames and Spark SQL. Previously, this capability was limited to read operations only. AWS Glue 5.1 also adds full-table access control in Apache Spark for Apache Hudi and Delta Lake tables, providing more comprehensive security options for your data.\n  With this expansion, AWS Glue 5.1 is now available all AWS commercial and AWS GovCloud (US) Regions.\n  You can get started with AWS Glue 5.1 using AWS APIs, AWS CLI, AWS SDK, or AWS Glue Studio. To learn more, visit the AWS Glue product page and our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-glue-5-1-all-govcloud-commercial-regions/",
-      "pubDate": "2026-04-28T18:44:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "glue"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "glue",
-        "now-available",
-        "update",
-        "enhancement",
-        "integration",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-260dc3af247d",
-      "title": "Amazon Bedrock now offers OpenAI models, Codex, and Managed Agents (Limited Preview)",
-      "description": "AWS and OpenAI are expanding their partnership to bring frontier intelligence to the infrastructure millions of organizations already trust. Enterprises want the most capable AI models and agents, with the security, operational maturity, and data governance that production workloads demand. Today, we’re bringing those together with three new offerings on Amazon Bedrock, all in limited preview: the latest OpenAI models, Codex, and Managed Agents powered by OpenAI.\n \nFirst, the latest OpenAI models are available on Amazon Bedrock. For the first time, AWS customers can access OpenAI frontier models through the same Bedrock services they already use for model access, fine-tuning, and orchestration. OpenAI models on Bedrock inherit the enterprise controls customers depend on, including IAM, AWS PrivateLink, guardrails, encryption, and CloudTrail logging. Second, Codex on Amazon Bedrock brings the OpenAI coding agent into the AWS environments where enterprise teams already build. Customers authenticate with AWS credentials and run inference through Bedrock. Codex will be available through Bedrock via the Codex CLI, desktop app, and VS Code extension. Usage of both OpenAI models and Codex can be applied toward existing AWS cloud commitments. Lastly, Amazon Bedrock Managed Agents, powered by OpenAI, makes it fast to deploy production-ready OpenAI-powered agents on AWS. At the core are the latest OpenAI frontier models and the OpenAI agent harness, engineered for faster execution, sharper reasoning, and reliable steering of long-running tasks. Every agent has its own identity, logs each action, and runs in your environment with all inference on Amazon Bedrock. Managed Agents works with Amazon Bedrock AgentCore, which provides the default compute environment.\n \nRead the blog to learn more. To follow our progress and be among the first to hear about the latest updates, register here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/bedrock-openai-models-codex-managed-agents/",
-      "pubDate": "2026-04-28T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "iam",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "iam",
-        "organizations",
-        "preview",
-        "ga",
-        "update",
-        "limited-preview"
       ]
     },
     {
