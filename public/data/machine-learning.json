@@ -1,8 +1,29 @@
 {
-  "lastUpdated": "2026-05-11T08:54:20.376Z",
+  "lastUpdated": "2026-05-12T08:20:09.953Z",
   "category": "machine-learning",
-  "totalItems": 14,
+  "totalItems": 12,
   "items": [
+    {
+      "id": "aws-news-c91941383bd2",
+      "title": "Announcing Region Expansion of P4de instances on SageMaker Studio notebooks",
+      "description": "We are pleased to announce general availability of Amazon EC2 P4de instances in Asia Pacific (Tokyo, Singapore) and Europe (Frankfurt) on SageMaker Studio notebooks.\n  Amazon EC2 P4de instances are powered by 8 NVIDIA A100 GPUs with 80GB high-performance HBM2e GPU memory, 2X higher than the GPUs in our current P4d instances. The new P4de instances provide a total of 640GB of GPU memory, which provide up to 60% better ML training performance along with 20% lower cost to train when compared to P4d instances. The improved performance will allow customers to reduce model training times and accelerate time to market. Increased GPU memory on P4de will also benefit workloads that need to train on large datasets of high-resolution data.\n  Visit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio. For pricing information on these instances, please visit our pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/p4de-region-expansion-sagemaker-studio-notebooks/",
+      "pubDate": "2026-05-11T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "ga",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-da6f05c97b06",
       "title": "Amazon SageMaker Unified Studio adds identity and user management features",
@@ -93,23 +114,6 @@
       ]
     },
     {
-      "id": "aws-news-7f544eb84473",
-      "title": "Capacity-aware inference: Automatic instance fallback for SageMaker AI endpoints",
-      "description": "Today, Amazon SageMaker AI introduces capacity aware instance pool for new and existing inference endpoints. You define a prioritized list of instance types, and SageMaker AI automatically works through your list whenever capacity is constrained at creation, during scale-out, and during scale-in. Your endpoint provisions on available AI Infrastructure without manual intervention. This capability is available for Single Model Endpoints, Inference Component-based endpoints, and Asynchronous Inference endpoints.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/capacity-aware-inference-automatic-instance-fallback-for-sagemaker-ai-endpoints/",
-      "pubDate": "2026-05-04T16:05:02.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
-      ]
-    },
-    {
       "id": "aws-news-382b818f1ec2",
       "title": "Announcing Kubernetes Dynamic Resource Allocation for Elastic Fabric Adapter",
       "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports Dynamic Resource Allocation (DRA) for Elastic Fabric Adapter (EFA), simplifying high-performance inter-node communication and RDMA (Remote Direct Memory Access) for artificial intelligence, machine learning, and High Performance Computing (HPC) workloads. The EFA DRA driver, built on the upstream DRANET project, brings EFA interface sharing and topology-aware allocation for workloads running on Kubernetes.\n  With the EFA DRA driver, you can allocate EFA interfaces and accelerator devices that share the same PCIe root or device group, ensuring inter-node traffic flows through the closest network interface to each NVIDIA GPU, AWS Trainium, or AWS Inferentia device on the node. The EFA DRA driver also supports EFA interface sharing across workloads on the same node to maximize EFA interface utilization.\n  The EFA DRA driver is recommended for new deployments on Amazon EKS clusters running Kubernetes version 1.34 or later with EKS managed node groups or self-managed nodes. The EFA DRA driver is available in all AWS Regions where Amazon EKS is available. The EFA device plugin remains supported and is recommended for use with Karpenter and Amazon EKS Auto Mode.\n  To learn more, see Manage EFA devices on Amazon EKS in the Amazon EKS User Guide.",
@@ -156,28 +160,6 @@
       ]
     },
     {
-      "id": "aws-news-9d2cb6486890",
-      "title": "AWS Neuron SDK now available with Neuron Agentic Development for NKI kernel development on Trainium",
-      "description": "AWS Neuron announces the Neuron Agentic Development capabilities, an open-source collection of agents and skills that equip AI coding assistants to accelerate development on AWS Trainium and AWS Inferentia. The initial release provides agentic coding capabilities for Neuron Kernel Interface (NKI) kernel development, covering the workflow from authoring to profiling and performance analysis.\n  NKI gives developers direct, low-level programming access to Trainium for writing custom compute kernels that maximize hardware performance. Neuron Agentic Development brings NKI expertise directly into the developer's agentic IDE (such as Claude Code and Kiro) through natural language. For example, a developer can describe a PyTorch operation and receive a working NKI kernel, ask the agent to fix a compilation error and have it automatically identify the issue and apply a correction, or request a performance analysis and receive a report identifying which lines of kernel code are causing bottlenecks. The capabilities span kernel authoring, debugging, documentation lookup, profile capture, and profile analysis.\n  Neuron Agentic Development is designed as a broad framework for agentic capabilities across the Neuron stack, with NKI kernel development as the initial release. The repository is available on GitHub.\n  Learn more:\n  \n \n \nNeuron Agentic Development GitHub repository\n \n \nAWS Neuron documentation",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/announcing-neuron-agentic-development/",
-      "pubDate": "2026-04-30T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "inferentia",
-        "neuron"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "inferentia",
-        "neuron",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-8cf740d36791",
       "title": "Analyzing your data catalog: Query SageMaker Catalog metadata with SQL",
       "description": "In this post, we demonstrate how to use the metadata export capability in Amazon SageMaker Catalog and perform analytics such as historical changes, monitor asset growth and track metadata improvements.",
@@ -212,27 +194,6 @@
       "tags": [
         "sagemaker",
         "unified studio"
-      ]
-    },
-    {
-      "id": "aws-news-8ec3a34d7e24",
-      "title": "How to use Parquet Column Indexes with Amazon Athena",
-      "description": "In this blog post, we use Athena and Amazon SageMaker Unified Studio to explore Parquet Column Indexes and demonstrate how they can improve Iceberg query performance. We explain what Parquet Column Indexes are, demonstrate their performance benefits, and show you how to use them in your applications.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-to-use-parquet-column-indexes-with-amazon-athena/",
-      "pubDate": "2026-04-13T15:57:18.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "athena"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "athena"
       ]
     },
     {
