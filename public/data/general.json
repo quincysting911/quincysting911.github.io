@@ -1,8 +1,86 @@
 {
-  "lastUpdated": "2026-05-14T08:24:35.897Z",
+  "lastUpdated": "2026-05-15T08:36:01.524Z",
   "category": "general",
-  "totalItems": 39,
+  "totalItems": 38,
   "items": [
+    {
+      "id": "aws-news-c5c6f640d55b",
+      "title": "ARC Region switch adds Lambda event source mapping execution block for event handling during failover",
+      "description": "Amazon Application Recovery Controller (ARC) Region Switch helps customers orchestrate the failover of their multi-Region applications to achieve a bounded recovery time in the event of a Regional impairment. Today, we are announcing the Lambda event source mapping execution block, which automates the coordinated failover of event streams for multi-Region workloads.\n  Customers running event-driven architectures use Lambda functions with event source mappings to process event streams from Kinesis, DynamoDB Streams, MSK, or SQS. For active-passive workloads, customers may maintain Lambda functions in each Region but process events in only one Region at a time. These event source mappings must be toggled during failover to avoid duplicate processing—a manual, error-prone step. The Lambda event source mapping execution block automates this by enabling or disabling event source mappings in either the activating or deactivating Region. To control duplicate processing, customers can configure two Lambda event source mapping execution blocks in sequence: a disable block to stop event processing in the deactivating Region, and an enable block to start it in the activating Region. The disable block can be overridden by running the plan in \"ungraceful\" mode for unplanned failovers where the deactivating Region may be impaired. Native cross-account support enables a single plan to handle event stream failover across multiple accounts.\n  To get started, see the Lambda event source mapping execution block documentation. ARC Region switch is available in all commercial Regions. See ARC Region switch availability",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/region-switch-lambda-esm-execution-block/",
+      "pubDate": "2026-05-14T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "dynamodb",
+        "kinesis",
+        "msk",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "dynamodb",
+        "kinesis",
+        "msk",
+        "sqs",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f0137aaeb11",
+      "title": "Amazon Aurora DSQL now supports change data capture (Preview)",
+      "description": "Amazon Aurora DSQL introduces support for change data capture (CDC) in preview, enabling you to stream real-time database changes directly to Amazon Kinesis Data Streams. This fully managed capability removes the need to build or maintain custom streaming pipelines, making it easier to build event-driven applications, power real-time analytics pipelines, and synchronize data across systems.\n  Aurora DSQL automatically captures the result of insert, update, and delete operations as change events. You can use these events to synchronize data across microservices, trigger downstream processing with AWS Lambda, or deliver to Amazon S3, Amazon Redshift, and Amazon OpenSearch Service through Amazon Data Firehose for analytics. CDC streaming requires no infrastructure setup and is designed to have zero impact on your database workload, so you can stream changes without affecting database throughput or latency.\n  CDC streaming in preview is available in all AWS Regions where Aurora DSQL is available. Streams are billed using Distributed Processing Units (DPUs) based on the volume of data captured, with standard Amazon Kinesis Data Streams pricing applying separately. To learn more, read the blog and see getting started.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-aurora-dsql-change-data-capture-preview/",
+      "pubDate": "2026-05-14T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "redshift",
+        "opensearch",
+        "opensearch service",
+        "kinesis"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "redshift",
+        "opensearch",
+        "opensearch service",
+        "kinesis",
+        "preview",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d2ae89482239",
+      "title": "Reference stack outputs across accounts and Regions with AWS CloudFormation and CDK",
+      "description": "AWS CloudFormation now supports a new intrinsic function, Fn::GetStackOutput, that enables you to reference stack outputs across AWS accounts and Regions directly within your CloudFormation templates and CDK applications. This new capability simplifies the provisioning and management of multi-account and multi-Region workloads in CloudFormation and CDK, and eliminates deployment deadlocks when restructuring cross-stack dependencies in CDK apps.\n  When managing multi-account AWS environments, teams often need to share infrastructure values, such as VPC IDs or database endpoints, across account boundaries. Previously, achieving this required multiple steps, including copying values between templates or coordinating parameter updates across teams. Now, with Fn::GetStackOutput, you simply specify the target stack name, output key, an IAM role ARN for cross-account access, and optionally a Region. CloudFormation assumes the specified role, retrieves the output value, and resolves it during template processing, reducing manual coordination and the risk of configuration drift. In CDK applications, cross-account and cross-Region references now use this function automatically, eliminating the need for custom resources and SSM parameters that the previous approach required. Customers can also call Fn.getStackOutput directly to create weak references between stacks, simplifying stack refactoring.\n  To get started, add the Fn::GetStackOutput function to your CloudFormation template and configure the appropriate IAM permissions for cross-account access. In CDK, cross-account and cross-Region references use this function automatically. Visit the AWS CloudFormation User Guide or the CDK developer guide to learn more.\n \n\n This feature is available in all AWS Regions where CloudFormation is supported. Refer to the AWS Region table for service availability details.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-cloudformation-cdk-stack/",
+      "pubDate": "2026-05-14T17:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "iam",
+        "update",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-f0f3fe28aafd",
       "title": "AWS Lambda supports scheduled scaling for functions on Lambda Managed Instances",
@@ -402,77 +480,6 @@
       ],
       "tags": [
         "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a4527571560f",
-      "title": "AWS Console Mobile App adds interactive graphs, AI log summaries, and natural language logs search for CloudWatch Alarms",
-      "description": "Amazon Web Services (AWS) is announcing new CloudWatch Alarms capabilities in the AWS Console Mobile Application. You can now investigate alarms and move from notification to root cause faster with interactive graphs, AI-generated logs summaries, natural language logs search, and streamlined access to related metrics and resources.\n \nWhen a CloudWatch Alarm triggers, engineers often need to quickly understand what went wrong. Previously, investigating an alarm on the mobile app required switching between multiple screens and services to view metrics, access logs, and identify the root cause. This update brings these capabilities together in a single view, reducing the time from notification to resolution.\n \nCloudWatch Alarms now include interactive graphs that let you visualize the metric that triggered the alarm, zoom in on specific time windows, and explore the data to quickly identify anomalies. You can access related logs and review an AI-generated summary that highlights key contributing factors. To refine log search results, you can type queries, use voice input, or select pre-saved Logs Insights queries using natural language. A time selector lets you view custom time ranges and adjust time zones to match your operational needs. Related metrics and resources are conveniently displayed alongside the alarm, facilitating a more thorough investigation.\n \nTo get started, download the AWS Console Mobile App from the Apple App Store or Google Play Store, then navigate to CloudWatch in the app to investigate Alarms. The AWS Console Mobile App is available in all AWS Commercial Regions at no additional cost. For more information, visit the AWS Console Mobile Application product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-console-mobile-app/",
-      "pubDate": "2026-05-04T17:49:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "ga",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-3b9c87ed4633",
-      "title": "Amazon FSx is now available in the AWS Asia Pacific (New Zealand) Region",
-      "description": "Amazon FSx, a fully-managed service that makes it easy and cost effective to launch, run, and scale feature-rich, high-performance file systems in the cloud, is now available in the AWS Asia Pacific (New Zealand) Region.\n \nAmazon FSx lets you choose between four widely-used file systems: NetApp ONTAP, Windows File Server, Lustre, and OpenZFS. It supports a wide range of workloads with its reliability, security, scalability, and broad set of capabilities. Amazon FSx is built on the latest AWS compute, networking, and disk technologies to provide high performance and lower TCO. And as a fully managed service, it handles hardware provisioning, patching, and backups — freeing you up to focus on your applications, your end users, and your business.\n \nTo learn more about Amazon FSx, visit our product page, and see the AWS Region Table for complete regional availability information.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-fsx-aws-asia-pacific/",
-      "pubDate": "2026-05-04T17:37:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-81ec0ae3bda8",
-      "title": "Amazon VPC Lattice resource configurations now support private domain-name targets",
-      "description": "VPC Lattice resource configurations now support domain-name targets that are private to your network. You can define a resource configuration for a private FQDN and share it with other accounts, enabling secure cross-account access to privately-hosted resources.\n  Previously, only publicly resolvable domain-name targets could be shared using resource configurations. Customers with private DNS servers could not share FQDNs with other accounts using this mechanism. To enable this feature, set the 'Resource Config DNS Resolution' property to 'IN_VPC' on your resource gateway. VPC Lattice uses your VPC's DNS configuration to resolve FQDNs, routing traffic to the correct backend without requiring public DNS entries.\n  You can enable this feature through the AWS Management Console, AWS CLI, AWS SDKs, and AWS APIs. The feature is available at no additional cost in all AWS Regions where VPC Lattice is available. For more information, see the VPC Lattice user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-vpc-lattice/",
-      "pubDate": "2026-05-04T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9dc7acc3a7db",
-      "title": "Amazon EventBridge supports data plane logging to AWS CloudTrail",
-      "description": "Today, Amazon EventBridge announces support for logging data plane APIs using AWS CloudTrail, enabling customers to have greater visibility into event bus activity in their AWS account for best practices in security and operational troubleshooting. Amazon EventBridge is a serverless event bus that enables customers to build event-driven applications at scale using events from AWS services, integrated SaaS applications, and custom sources.\n  CloudTrail captures API activities related to Amazon EventBridge as events, including calls from the Amazon EventBridge console and calls made programmatically using Amazon EventBridge APIs. Using the information that CloudTrail collects, you can identify a specific request to an Amazon EventBridge API, the IP address of the requester, the requester's identity, and the date and time of the request. Logging EventBridge APIs using CloudTrail helps you enable operational and risk auditing, governance, and compliance of your AWS account. With the introduction of data plane logging support, the EventBridge PutEvents API is now logged to CloudTrail.\n  To opt-in for CloudTrail logging of the above mentioned data plane APIs, you can simply configure logging on your event bus using the AWS CloudTrail Console or by using CloudTrail APIs.\n  Logging data plane EventBridge APIs using AWS CloudTrail is now available in all commercial AWS Regions, AWS GovCloud (US) Regions, the Amazon Web Services China (Beijing) Region, operated by Sinnet, and the Amazon Web Services China (Ningxia) Region, operated by NWCD.\n  To learn more about logging data plane APIs using AWS CloudTrail, see AWS Documentation. For more information about CloudTrail, see the AWS CloudTrail User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-eventbridge-data-aws-cloudtrail/",
-      "pubDate": "2026-05-04T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eventbridge",
-        "now-available",
         "support"
       ]
     },
