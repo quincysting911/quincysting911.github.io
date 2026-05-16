@@ -1,8 +1,134 @@
 {
-  "lastUpdated": "2026-05-15T08:36:01.524Z",
+  "lastUpdated": "2026-05-16T07:46:46.923Z",
   "category": "general",
-  "totalItems": 38,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-3d0ce081054e",
+      "title": "Amazon CloudWatch Logs announces increased query result limits",
+      "description": "Amazon CloudWatch Logs now supports retrieving up to 100,000 results using the Logs Insights query language. Customers can specify the limit in their query using the LIMIT command.\n  Previously, customers were limited to 10,000 results and had to split their queries into smaller time ranges to retrieve all results. With this launch, customers can view a larger set of results and use existing features such as patterns, visualization, and export on the full 100,000 result set. The GetQueryResults API has also been updated to support pagination; each invocation can return up to 10,000 results along with a token that can be used to fetch the next set of results.\n  The increased query result limits are available in all commercial AWS regions. You can execute queries and view up to 100,000 results using the Amazon CloudWatch console, AWS CLI, AWS CDK, and AWS SDKs. To learn more, see the Amazon CloudWatch Logs documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/cloudwatch-logs-query-results/",
+      "pubDate": "2026-05-15T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "launch",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-244df189520e",
+      "title": "Amazon EMR Serverless is now available in additional AWS Regions",
+      "description": "Amazon EMR Serverless is now generally available in six additional AWS Regions - Asia Pacific (Hyderabad), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Taipei), Asia Pacific (Thailand), and Mexico (Central).\n  Amazon EMR Serverless is a deployment option in Amazon EMR that makes it simple and cost effective for data engineers and analysts to run petabyte-scale data analytics in the cloud. With EMR Serverless, you can run your Apache Spark and Apache Hive applications without having to configure, optimize, tune, or manage clusters. EMR Serverless offers fine-grained automatic scaling, fast launch times, customizable worker configurations, and support for batch, interactive and streaming workloads.\n  To get started, visit the Amazon EMR Serverless User Guide. For pricing info, visit the EMR Serverless pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-emr-serverless-aws-regions/",
+      "pubDate": "2026-05-15T19:50:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "emr"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "emr",
+        "launch",
+        "generally-available",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b1b70d311d22",
+      "title": "Amazon Connect Cases now lets you edit related items and delete cases from the agent workspace",
+      "description": "Amazon Connect Cases now supports editing and deleting related items, and deleting cases directly from the agent workspace without administrator help. Agents can update comments, unlink contacts associated with the wrong case, or delete cases opened in error. Agents can also create, edit, and delete custom related items such as orders, returns, and invoices to capture additional case context.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town). To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-cases-related-item/",
+      "pubDate": "2026-05-15T17:25:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-78847788701c",
+      "title": "Amazon Managed Grafana now supports in-place upgrade to Grafana version 12.4",
+      "description": "Amazon Managed Grafana now supports in-place upgrade from Grafana version 10.4 to 12.4. You can upgrade with just a few clicks from the AWS Console or via AWS SDK or AWS CLI.\n \nUpgrading to version 12.4 brings native Grafana Scenes-powered dashboards for faster rendering and queryless Drilldown apps for point-and-click exploration of Prometheus metrics, Loki logs, Tempo traces, and Pyroscope profiles. Amazon CloudWatch plugin enhancements simplify log analysis with PPL/SQL query support, broaden visibility through cross-account Metrics Insights, and surface issues proactively with log anomaly detection. The rebuilt table visualization delivers smoother performance with CSS cell styling and interactive Actions buttons, while trendline transformations and navigation bookmarks streamline data exploration. \n \nIn-place upgrade to Grafana 12.4 is supported in all AWS regions where Amazon Managed Grafana is generally available.  For a complete list of new features, refer to Differences between Grafana versions in the Amazon Managed Grafana User Guide. For upgrade instructions, see Update your workspace version.  To learn more about Amazon Managed Grafana features and its pricing, visit the product page and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-managed-grafana-v12-update/",
+      "pubDate": "2026-05-15T16:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch",
+        "grafana"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "grafana",
+        "generally-available",
+        "ga",
+        "new-feature",
+        "update",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3b6c10b2859d",
+      "title": "Amazon CloudFront announces Passthrough Mode for mutual TLS (Viewer)",
+      "description": "Amazon CloudFront now supports passthrough mode for mutual TLS (mTLS) viewer authentication, allowing CloudFront to forward client certificates to the origin without verifying the certificates on CloudFront. Customers who already validate client certificates at their origin can now add CloudFront to their existing mTLS infrastructure without changing how or where validation happens.\n  In passthrough mode, customers configure mutual TLS on their CloudFront distribution without setting up a trust store. CloudFront forwards every request along with the client's full certificate chain directly to the origin for authentication. Connection functions, which allow customers to inspect or transform connection-level data at the edge, still run on every request, enabling customers to process or reformat certificate headers before requests reach the origin. Customers benefit from CloudFront's global edge network while maintaining their current mutual TLS authentication architecture.\n  Passthrough mode is now available alongside other mutual TLS modes in CloudFront. Required mode validates all client certificates against trust stores at the edge. Optional mode allows customers to configure trust store validation at the edge while serving both clients that present certificates and clients that do not present certificates from the same application. CloudFront mutual TLS in passthrough mode is available at no additional cost. To learn more, refer to the documentation for CloudFront Mutual TLS (Viewer).",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-cloudfront-mtls-passthrough/",
+      "pubDate": "2026-05-14T22:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudfront"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudfront",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8b82d1ac0b86",
+      "title": "Amazon EC2 High Memory U7i instances now available in AWS Europe (Paris) region",
+      "description": "Amazon EC2 High Memory U7i-12TB instances (u7i-12tb.224xlarge) and U7in-16TB instances (u7in-16tb.224xlarge) are now available in the AWS Europe (Paris) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7i instances offer up to 45% better price performance over existing U-1 instances. \n \nU7i-12TB instances offer 12 TiB of DDR5 memory, U7in-16TB instances offer 16 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i-12TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth, 100 Gbps of network bandwidth, and ENA Express. U7in-16TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-u7i-aws-europe-paris/",
+      "pubDate": "2026-05-14T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c5c6f640d55b",
       "title": "ARC Region switch adds Lambda event source mapping execution block for event handling during failover",
@@ -419,67 +545,6 @@
       "tags": [
         "s3",
         "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-25569164952a",
-      "title": "AWS SAM now supports WebSocket APIs for Amazon API Gateway",
-      "description": "AWS Serverless Application Model (AWS SAM) now supports WebSocket APIs for Amazon API Gateway, enabling you to define complete WebSocket APIs with minimal configuration in your SAM template.\n \nAWS SAM is a collection of open-source tools that make it easy for you to build and manage serverless applications. WebSocket APIs are critical for real-time applications such as chat, live dashboards, AI/LLM streaming, and IoT. However, SAM previously did not support WebSocket APIs, requiring you to manually configure all of the underlying resources in AWS CloudFormation. This made it difficult to debug common issues such as missing IAM permissions for Lambda functions. Now, SAM handles all of this automatically, generating the required resources and permissions from your template. The new resource provides feature parity with API Gateway WebSocket APIs, including IAM and Lambda authorization, custom domains, RouteSettings, Models, and StageVariables. Globals support lets you share common configuration across multiple WebSocket APIs.\n \nTo get started, add the AWS::Serverless::WebSocketApi resource type to your SAM template. Define your routes by specifying Lambda function handlers for $connect, $disconnect, and $default routes, along with any custom routes your application requires. SAM automatically wires up the integrations and permissions for each route. You can also configure authorization, stage settings, and custom domains directly within the resource definition.\n \nTo learn more, visit the SAM developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sam-websocket-apis-api-gateway/",
-      "pubDate": "2026-05-05T18:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "rds",
-        "cloudformation",
-        "iam",
-        "api gateway"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "rds",
-        "cloudformation",
-        "iam",
-        "api gateway",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a8b863bea617",
-      "title": "AWS IoT Core for Device Location adds Confidence Level Configuration and Measurement Type support",
-      "description": "AWS IoT Core for Device Location now supports two enhancements that give developers greater control over location resolution and richer metadata for resolved device locations.\n  Customers using the Cell ID, Wi-Fi, or Cell+Wi-Fi solvers can now specify a desired confidence level between 50% and 99% when resolving device locations. The confidence level represents the statistical probability that the actual device location falls within the reported accuracy radius. A higher confidence level (for example, 95%) increases certainty that the device falls within the reported radius but produces a larger accuracy radius. A lower confidence level (for example, 50%) yields a smaller radius with less certainty. Customers can now configure this value to balance accuracy and confidence based on their specific requirements. This feature is currently supported for HTTP-based location resolution.\n  This update also introduces a measurement type field in resolved location metadata, giving developers greater visibility into how each device location was determined — whether through GNSS, Wi-Fi or BLE location resolvers. This make it easier to assess location data quality, debug positioning issues, and make more informed decisions based on how each location was determined.\n  These updates are available in all AWS IoT Core for Device Location supported regions. For detailed guidance and implementation instructions, visit the AWS IoT Core Device Location and IoT Wireless Developer Guide .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-core-device-location/",
-      "pubDate": "2026-05-05T16:59:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "update",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b17dff27d7a3",
-      "title": "Amazon Connect Cases now supports customer profile identity resolution",
-      "description": "Amazon Connect Cases now automatically reassociates cases when duplicate customer profiles are merged, so agents always see a complete case history for each customer. When the same customer has multiple profiles, such as when they reach out through different channels or provide different contact details, Identity Resolution in Amazon Connect Customer Profiles detects and merges those duplicates, and Cases now brings all associated cases together under the unified profile. Agents no longer have to search across profiles or piece together a customer's history manually.\n  Amazon Connect Cases is available in the following AWS regions: US East (N. Virginia), US West (Oregon), Canada (Central), Europe (Frankfurt), Europe (London), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Africa (Cape Town). To learn more and get started, visit the Amazon Connect Cases webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-cases-customer-profiles-id-res/",
-      "pubDate": "2026-05-05T15:25:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
         "support"
       ]
     },
