@@ -1,8 +1,77 @@
 {
-  "lastUpdated": "2026-05-18T09:35:12.805Z",
+  "lastUpdated": "2026-05-19T08:55:13.983Z",
   "category": "natural-language",
-  "totalItems": 11,
+  "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-6f945ce073e4",
+      "title": "AWS Glue zero-ETL is now available in Asia Pacific (Mumbai) region",
+      "description": "AWS Glue zero-ETL integrations are now available in the Asia Pacific (Mumbai) region. With this expansion, customers in the Asia Pacific (Mumbai) region can now use zero-ETL integrations to simplify their data pipelines, reduce data movement latency, and accelerate time-to-insight for analytics and machine learning workloads.\n  Zero-ETL integrations offer a set of fully managed integrations by AWS that minimizes the need to build ETL data pipelines for common ingestion and replication use cases. You can use zero-ETL to replicate data from sources such as Amazon DynamoDB, Oracle Database@AWS, self-managed databases (Oracle, SQL Server, MySQL or PostgreSQL), and supported SaaS applications including Salesforce, SAP, Zendesk, and Zoho CRM directly into target analytics data stores without writing or maintaining ETL pipelines. It automatically handles schema mapping, change data capture, and incremental data replication, eliminating the need to build and manage complex data pipelines by yourself. This allows your data engineering teams to focus on deriving value from data rather than managing infrastructure, while replicating data in your target data stores in near real-time.\n  To learn more, visit the AWS Glue documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-glue-zero-etl-mumbai-region",
+      "pubDate": "2026-05-18T21:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "dynamodb",
+        "glue"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "dynamodb",
+        "glue",
+        "now-available",
+        "integration",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-1a02a69c815d",
+      "title": "Amazon EVS enables support for 32 hosts per environment",
+      "description": "Today, we are announcing that Amazon Elastic VMware Service (Amazon EVS) now supports up to 32 ESXi hosts per environment, double the previous limit of 16 hosts.\n \nAmazon EVS gives you flexibility in how you configure VMware Cloud Foundation (VCF) domains and clusters within an environment. You can put all your hosts into a single large cluster, spread them across several smaller clusters, or any combination that fits your needs. With this release, you can now submit a service quota increase to scale up to a total of 32 hosts and reduce the operational overhead of managing multiple environments.\n \nThis latest release is available in all regions where Amazon EVS is offered.\n \nFor more details on the steps and procedure, visit the Amazon EVS product detail page and user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-evs-32-hosts",
+      "pubDate": "2026-05-18T17:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0a318228964e",
+      "title": "Amazon Redshift adds ALTER TABLE for Iceberg tables and writes via the AWS Glue Data Catalog mount",
+      "description": "Amazon Redshift now supports writing directly to Apache Iceberg tables via the AWS Glue Data Catalog (awsdatacatalog) mount and ALTER TABLE DDL statements to modify the schema, partitioning, and properties of Apache Iceberg tables. With write access through the auto-mounted awsdatacatalog, you can land Redshift transformations in your data lake for any engine to query without creating external schemas—particularly useful for Iceberg tables federated with AWS Lake Formation. Supported ALTER TABLE operations include ADD/DROP/ALTER columns, RENAME COLUMN, SET TABLE PROPERTIES to overwrite the default compression type, and ADD/DROP/REPLACE PARTITION FIELD to adapt partitioning strategies as data volumes grow. Previously, updating the structure of Iceberg tables required deleting the table and its data, adding complexity and latency to data pipelines. Tables modified by Redshift remain compatible with other Iceberg-compatible engines, including Amazon EMR and Amazon Athena, preserving cross-engine interoperability. AWS Lake Formation permissions are supported for Iceberg write operations.\n  These capabilities are available in all AWS Regions where Amazon Redshift is available. To get started, visit the Referencing Iceberg tables in Amazon Redshift and Altering table definitions sections in the Amazon Redshift Database Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-redshift-alter-table-iceberg/",
+      "pubDate": "2026-05-18T16:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "emr",
+        "redshift",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "emr",
+        "redshift",
+        "glue",
+        "athena",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-4983f2b438bf",
       "title": "AWS announces AWS Interconnect - multicloud connectivity with Oracle Cloud Infrastructure in preview",
@@ -167,27 +236,6 @@
         "lex",
         "kafka",
         "msk"
-      ]
-    },
-    {
-      "id": "aws-news-c4fbdf2f5d33",
-      "title": "Announcing Valkey 9.0 for Amazon ElastiCache",
-      "description": "Amazon ElastiCache now supports Valkey 9.0, bringing new capabilities to customers building real-time, AI-driven, and high-throughput applications on AWS. As applications grow more data-intensive and latency-sensitive, teams often face the overhead of managing separate search infrastructure, throughput ceilings that force over-provisioning, and complex workarounds for data lifecycle management and multi-tenant architectures. Valkey 9.0 addresses these challenges directly with built-in search, engine-level performance improvements, and new operational flexibility.\n  Valkey 9.0 for Amazon ElastiCache introduces full-text and hybrid search that expands on existing vector similarity functionality to provide real-time full-text search, semantic retrieval, filtering, and aggregations over terabytes of data with microsecond latency and throughput up to millions of requests per second. Valkey 9.0 also delivers up to 40% higher throughput for pipelined workloads through engine-level optimizations including faster command parsing and improved memory prefetching. Valkey 9.0 also introduces hash field expiration that allow TTLs to be applied to individual fields within a hash for fine-grained data lifecycle management and multi-database support in cluster mode enabled deployments, providing lightweight logical namespaces to simplify multi-tenant architectures and migrations from standalone environments. These and more than 100 additional enhancements together bring the performance, functionality, and operational flexibility needed to power increasingly demanding real-time and AI-driven workloads.\n  Valkey 9.0 is available for ElastiCache node-based clusters and serverlesss caches at no additional cost in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, visit the Amazon ElastiCache documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/valkey-amazon-elasticache/",
-      "pubDate": "2026-05-05T22:33:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ga",
-        "improvement",
-        "enhancement",
-        "support"
       ]
     },
     {

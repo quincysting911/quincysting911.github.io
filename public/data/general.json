@@ -1,8 +1,81 @@
 {
-  "lastUpdated": "2026-05-18T09:35:12.805Z",
+  "lastUpdated": "2026-05-19T08:55:13.983Z",
   "category": "general",
-  "totalItems": 41,
+  "totalItems": 44,
   "items": [
+    {
+      "id": "aws-news-c697d435f529",
+      "title": "AWS Management Console now displays AWS Local Zones in the Region Selector",
+      "description": "Today, AWS announces the addition of AWS Local Zones to the Region selector in the AWS Management Console, providing a unified experience across AWS global infrastructure. AWS Local Zones now appear alongside AWS Regions in the Console's top navigation, making it easier for customers to quickly navigate to the Console page for managing their resources in AWS Local Zones.\n \nNow, when customers select the Local Zones tab in the Region selector, they will see all opted-in AWS Local Zones in one place. Clicking on an AWS Local Zone takes customers directly to its parent Region's Console page to view and manage resources. This capability streamlines navigation for customers operating across multiple AWS Local Zones parented to different AWS Regions.\n \nThis capability is available across all AWS Local Zones in public AWS Regions. To get started, navigate to the Region selector in the AWS Management Console. For more information, see the AWS Local Zones documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-local-zones-region-selector/",
+      "pubDate": "2026-05-18T21:50:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-a03027fe6e0e",
+      "title": "Amazon Lightsail CDN distributions now support IPv6-only instances as origins",
+      "description": "Amazon Lightsail content delivery network (CDN) distributions now support IPv6-only instances as origins. This feature enables customers to use IPv6-only instances to deliver content through the Lightsail CDN distributions with low latency and high transfer speeds worldwide. With this launch, customers can run their websites and applications on cost-effective IPv6-only instances while seamlessly serving content to all end users, including those on networks that don't yet support IPv6 connectivity.\n  Previously, only IPv4 and dual-stack instances were supported as origins for Lightsail CDN distributions. With this launch, customers can also use IPv6-only instances as origins for their Lightsail CDN distributions, making applications running on those instances accessible to all end users, regardless of whether end users have IPv6 connectivity. Lightsail CDN distributions support multiple origin types including instances, containers, buckets, and load balancers.\n \nAmazon Lightsail is available in 16 AWS Regions including US East (N. Virginia), US West (Oregon), Europe (Frankfurt), Europe (London), Asia Pacific (Tokyo), and Asia Pacific (Malaysia). To get started, visit the Lightsail console. For pricing and other details, visit the Amazon Lightsail pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-lightsail-cdn-ipv6/",
+      "pubDate": "2026-05-18T18:49:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2f3ffec884e7",
+      "title": "AWS SAM CLI adds AWS CloudFormation Language Extensions support to accelerate local serverless development",
+      "description": "AWS SAM CLI now supports AWS CloudFormation Language Extensions, enabling you to reduce duplication in your infrastructure as code (IaC) templates while retaining the full local development workflow. This accelerates your serverless development by letting you define resources once and iterate locally without waiting for cloud deployments.\n \nDevelopers frequently need to define multiple similar resources, such as Lambda functions, DynamoDB tables, or SNS topics, from a single template definition. However, developers who use SAM CLI to build, test, and deploy their serverless applications previously could not process templates that use CloudFormation Language Extensions. This required choosing between reducing template duplication and using SAM CLI for local development. Now, SAM CLI processes Language Extensions in memory for local operations while preserving your original template for CloudFormation deployment. You can define your resources once and test them locally across all SAM CLI commands, catching errors like invalid syntax or missing dependencies before deploying. This shortens your iteration cycles and reduces time spent debugging failed deployments in the cloud.\n \nTo get started, download or update SAM CLI to the latest version. Add the AWS::LanguageExtensions transform to your SAM template and use Fn::ForEach to generate multiple resources from a single definition. SAM CLI commands including sam build, sam local invoke, sam sync, sam local start-api, and sam validate will automatically expand your loops and process each generated resource. You can invoke expanded functions by name, for example sam local invoke AlphaFunction. SAM CLI also supports Fn::Length, Fn::ToJsonString, Fn::FindInMap with DefaultValue, and conditional DeletionPolicy and UpdateReplacePolicy attributes.\n \nTo learn more, visit the SAM CLI developer guide and launch blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sam-cli-cloudformation/",
+      "pubDate": "2026-05-18T16:31:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "dynamodb",
+        "cloudformation",
+        "sns"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "dynamodb",
+        "cloudformation",
+        "sns",
+        "launch",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3d32b82e3b6b",
+      "title": "Sharing Capacity Blocks for ML Across Your AWS Organization",
+      "description": "When your data science team reserves GPU instances for a two-week training job but completes it in four days, that capacity has the potential to sit unused while your computer vision team waits another week to start their project. Now you can eliminate this GPU waste and scheduling conflict by sharing Capacity Blocks for ML […]",
+      "link": "https://aws.amazon.com/blogs/compute/sharing-capacity-blocks-for-ml-across-your-aws-organization/",
+      "pubDate": "2026-05-18T15:47:16.000Z",
+      "source": "computeBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-3d0ce081054e",
       "title": "Amazon CloudWatch Logs announces increased query result limits",
@@ -526,25 +599,6 @@
         "launch",
         "ga",
         "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ea357a519efe",
-      "title": "AWS Transfer Family web apps are now available in the AWS Asia Pacific (New Zealand) Region",
-      "description": "Customers in the Asia Pacific (New Zealand) Region can now use AWS Transfer Family web apps to provide their workforce with a fully managed, branded portal for browsing, uploading, and downloading data in Amazon S3 through a web browser.\n \nAWS Transfer Family web apps provide a simple interface for accessing your data in Amazon S3 through a web browser. With Transfer Family web apps, you can provide your workforce with a fully managed, branded, and secure portal for your end users to browse, upload, and download data in S3.\n \nTo learn more about AWS Transfer Family web apps, visit the Transfer Family User Guide. For the full list of supported regions, visit the AWS Capabilities tool in Builder Center.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-transfer-family-asia-pacific/",
-      "pubDate": "2026-05-06T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "now-available",
         "support"
       ]
     },
