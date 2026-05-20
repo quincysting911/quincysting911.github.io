@@ -1,8 +1,65 @@
 {
-  "lastUpdated": "2026-05-19T08:55:13.983Z",
+  "lastUpdated": "2026-05-20T08:49:57.290Z",
   "category": "generative-ai",
-  "totalItems": 54,
+  "totalItems": 53,
   "items": [
+    {
+      "id": "aws-news-f8db2bafbbd5",
+      "title": "Extending conversational memory in Kiro CLI using Amazon Bedrock AgentCore Memory",
+      "description": "In this post, we demonstrate how you can extend the conversational memory of Kiro CLI by implementing a custom Model Context Protocol (MCP) server that integrates with Amazon Bedrock AgentCore Memory. You can use Kiro CLI to interact with AI agents of Kiro directly from your terminal. Amazon Bedrock AgentCore Memory is a fully managed service that allows AI agents to retain information from past interactions, creating more intelligent and context-aware conversations. By implementing a custom MCP server, you can provide Kiro CLI with tools to store and retrieve conversation context, monitor memory usage, and manage the underlying Bedrock Agent Core Memory infrastructure.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/extending-conversational-memory-in-kiro-cli-using-amazon-bedrock-agentcore-memory/",
+      "pubDate": "2026-05-19T15:23:22.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-2dc15955581e",
+      "title": "Implementing programmatic tool calling on Amazon Bedrock",
+      "description": "In this post, we show three ways to implement Programmatic tool calling (PTC) on Amazon Bedrock: a self-hosted Docker sandbox on ECS for maximum control, a managed solution using Amazon Bedrock AgentCore Code Interpreter, and an Anthropic SDK-compatible path through a proxy for teams that prefer that developer experience.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/implementing-programmatic-tool-calling-on-amazon-bedrock/",
+      "pubDate": "2026-05-19T15:17:00.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "ecs"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ecs"
+      ]
+    },
+    {
+      "id": "aws-news-5c3e0fe7470b",
+      "title": "How Synthesia optimizes generative AI video inference on Amazon EC2 G7e instances",
+      "description": "This post introduces a video decoding optimization technique that we have ideated in collaboration with Synthesia Research Engineering team, which we call Asynchronous Frame Generation Pipeline. Adopting this technique allows you to overlap GPU compute, device-to-host (D2H) data transfer, and host-side post-processing. In this post, we apply this technique to the VAE decoder of a Wan video generation model as an example, where our benchmarks on G7e show increased GPU kernel utilization from 82% to 99.9%, in turn leading to an 8.2% decrease in latency (and increase in throughput) for video decoding. We expect this technique to benefit any customer with a chunked video generation pipeline that transfers frames to host memory.",
+      "link": "https://aws.amazon.com/blogs/architecture/how-synthesia-optimizes-generative-ai-video-inference-on-amazon-ec2-g7e-instances/",
+      "pubDate": "2026-05-19T15:06:40.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2"
+      ]
+    },
     {
       "id": "aws-news-c7caff782b85",
       "title": "Aderant transforms cloud operations with Amazon Quick",
@@ -428,21 +485,6 @@
       ]
     },
     {
-      "id": "aws-news-8218c8bfd96d",
-      "title": "Building web search-enabled agents with Strands and Exa",
-      "description": "In this post, you will learn how to set up the Exa integration in Strands Agents, understand the two core tools it exposes, and walk through real-world use cases that show how agents use web search to complete multi-step tasks.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-web-search-enabled-agents-with-strands-and-exa/",
-      "pubDate": "2026-05-11T21:58:16.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-c68cad1c0781",
       "title": "ENA Express for Amazon EC2 instances now supports traffic between Availability Zones",
       "description": "Elastic Network Adapter (ENA) Express now supports traffic between Amazon EC2 instances in different Availability Zones within a Region, delivering up to 25 Gbps single-flow bandwidth. ENA Express is a networking feature that uses the AWS Scalable Reliable Datagram (SRD) protocol to improve network performance. SRD is a reliable network protocol that delivers performance improvements through advanced congestion control and multi-pathing. Amazon Elastic Block Store (EBS) io2 Block Express and Elastic Fabric Adapter (EFA) for high performance computing and machine learning workloads also leverage SRD.\n \nWorkloads such as distributed storage, databases, and file systems require deployments spanning multiple Availability Zones for resilience, yet single flows between zones support up to 5 Gbps with ENA. ENA Express delivers up to 25 Gbps single-flow bandwidth for traffic between Availability Zones. To achieve this, ENA Express detects compatibility between your EC2 instances and establishes an SRD connection when both communicating instances have ENA Express enabled. Once established, SRD uses multi-pathing to route your traffic across the network and avoids head-of-line blocking as it does not need packets to arrive in order. Using these capabilities, ENA Express delivers the performance benefits transparently to your application with TCP and UDP protocols.\n \nENA Express for connections between Availability Zones within a Region is available for all supported instance types and sizes in Africa (Cape Town), Asia Pacific (Hong Kong, Hyderabad, Jakarta, Malaysia, Melbourne, Mumbai, New Zealand, Osaka, Seoul, Singapore, Sydney, Taipei, Thailand, Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt, Ireland, London, Milan, Paris, Spain, Stockholm, Zurich), Israel (Tel Aviv), Mexico (Central), US East (N. Virginia, Ohio), US West (N. California, Oregon), and AWS GovCloud (US) Regions. ENA Express comes at no additional cost. For a list of supported instances and configuration guidance, please review the latest EC2 documentation.",
@@ -522,23 +564,6 @@
         "lex",
         "ec2",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-5c1c249c25b9",
-      "title": "How Miro uses Amazon Bedrock to boost software bug routing accuracy and improve time-to-resolution from days to hours",
-      "description": "In this post, we dive deep into the architecture and techniques we used to improve Miro’s bug routing, achieving six times fewer team reassignments and five times shorter time-to-resolution powered by Amazon Bedrock.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-miro-uses-amazon-bedrock-to-boost-software-bug-routing-accuracy-and-improve-time-to-resolution-from-days-to-hours/",
-      "pubDate": "2026-05-11T17:03:00.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -792,48 +817,6 @@
         "preview",
         "support",
         "public-preview"
-      ]
-    },
-    {
-      "id": "aws-news-ebcd8b08fdd1",
-      "title": "Amazon ElastiCache now supports real-time hybrid search with vector and full-text",
-      "description": "Amazon ElastiCache now supports real-time hybrid search that combines vector similarity with full-text search in a single query, without a separate search service. Applications can combine semantic meaning with exact keyword matching that captures both intent and precise terms to deliver more relevant results than either method alone. Customers can use ElastiCache to combine full-text and vector similarity search across billions of embeddings from popular providers like Amazon Bedrock, Amazon SageMaker, Anthropic, and OpenAI with latency as low as microseconds and up to 99% recall.\n  ElastiCache makes data searchable as soon as writes complete, so applications always search the most current vectors and text. Developers can use hybrid search to build AI agent memory and RAG systems that retrieve relevant context by exact terms and meaning to improve generative AI responses while reducing token costs. E-commerce and streaming platforms can use hybrid search to surface relevant matches, whether users search by exact product name, description, or both. ElastiCache for Valkey delivers the lowest latency vector search with the highest throughput and best price-performance at 95%+ recall rate among popular vector databases on AWS.\n  Hybrid search is available in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions, for node-based clusters running ElastiCache version 9.0 for Valkey at no additional cost. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 or above cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, read this blog and see the ElastiCache documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-hybrid-search/",
-      "pubDate": "2026-05-06T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "sagemaker"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3c88196fc605",
-      "title": "Amazon Bedrock AgentCore Memory announces metadata for long-term memory",
-      "description": "Amazon Bedrock AgentCore Memory now supports metadata on long-term memory (LTM) records, enabling agents to tag, filter, and retrieve memories using structured attributes alongside semantic search. You can define up to ten indexed keys per memory resource - with support for STRING, NUMBER, and STRING_LIST types - and use different operator types to filter retrieval results.\n \nMetadata can be attached to events at ingestion time or inferred automatically by the LLM based on extraction instructions you define on the memory resource. During ingestion, the LLM processes all events and determines how metadata is applied to the resulting memory records.\n \nYou define a metadata schema on the memory resource that includes indexed key definitions (key name, type, and optional allowed values) along with extraction instructions that guide the LLM on how to generate metadata from conversation content. With metadata filters on retrieval - agents can retrieve records by structured attributes like ticket number, priority, or date - eliminating irrelevant context and improving response accuracy.\n \nTo get started, see the Amazon Bedrock AgentCore Memory documentation. This feature is available today in all AWS Regions where Amazon Bedrock AgentCore Memory is supported.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata",
-      "pubDate": "2026-05-06T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "rds",
-        "support"
       ]
     },
     {

@@ -1,8 +1,94 @@
 {
-  "lastUpdated": "2026-05-19T08:55:13.983Z",
+  "lastUpdated": "2026-05-20T08:49:57.290Z",
   "category": "general",
-  "totalItems": 44,
+  "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-3b7def4ecd70",
+      "title": "Amazon MWAA now supports Apache Airflow 3.2",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 3.2, the latest major release of the popular open-source workflow orchestration framework. Amazon MWAA is a managed service that lets you run Apache Airflow at scale without managing the underlying infrastructure. This release brings new data-aware scheduling capabilities and developer productivity improvements to teams building and operating data pipelines on AWS.\n \nWith Apache Airflow 3.2, you can now use asset partitioning to trigger downstream DAGs based on specific slices of data, such as a date-partitioned S3 path, rather than an entire asset, giving data engineering teams more precise control over pipeline execution. This release also expands Human-in-the-Loop (HITL) capabilities with a full audit history view for approvals, HITL support for the AgenticOperator, and synchronous callback support for Deadline Alerts. Additional improvements include Grid View virtualization for faster rendering of large DAGs, full XCom management from the Airflow UI, and async callable support in PythonOperator..\n \nYou can launch a new Apache Airflow 3.2 environment on Amazon MWAA, or upgrade from 2.11 or later, with just a few clicks in the AWS Management Console in all currently supported Amazon MWAA regions. To learn more about Apache Airflow 3.2 visit the Amazon MWAA documentation, and the Apache Airflow 3.2 change log in the Apache Airflow documentation.\n  Apache, Apache Airflow, and Airflow are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-mwaa-now-supports-apache-airflow-3-2/",
+      "pubDate": "2026-05-19T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "launch",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f733330971a",
+      "title": "Amazon ECS introduces pause and continue controls for service deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now enables you to pause service deployments at critical stages during deployment progression and continue deployments when ready. You can use these pause points to introduce manual decision points and interactive controls into your deployments for scenarios such as manual approval workflows, operational checks, integration tests, or custom automation, while continuing to use native Amazon ECS deployment strategies with managed traffic shifting, bake times, fast rollbacks, CloudWatch alarms, and deployment circuit breaker.\n \nWith this launch, you can configure a new PAUSE deployment lifecycle hook as part of your Amazon ECS service deployment configuration. When a deployment reaches a configured pause point, Amazon ECS pauses deployment progression and emits Amazon EventBridge events that you can use to trigger automation workflows, approval systems, or external validation processes. You can then continue or roll back the deployment using the new ContinueServiceDeployment API. With pause hooks, you can configure timeout durations up to 14 days and timeout actions to automatically continue or roll back the deployment if no action is received.\n \nYou can configure pause hooks for rolling, blue/green, linear, and canary deployment strategies using the Amazon ECS Console, AWS CLI, AWS SDKs, AWS CloudFormation, AWS CDK, and Terraform. You can use the ContinueServiceDeployment API through the Amazon ECS Console, AWS CLI, and AWS SDKs. This feature is available in all AWS commercial and AWS GovCloud (US) Regions. To learn more, see our documentation on pause hooks for service deployments and continuing service deployments.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ecs-pause-continue-deployments/",
+      "pubDate": "2026-05-19T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudformation",
+        "eventbridge",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudformation",
+        "eventbridge",
+        "cloudwatch",
+        "launch",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-8b3b7511d8fe",
+      "title": "Meet Amazon Redshift RG – AWS Graviton-based instances with an integrated data lake query engine delivering up to 2.4x better performance at 30% lower price than RA3",
+      "description": "On May 12, 2026, we announced the general availability of Amazon Redshift RG instances, powered by AWS Graviton processors. RG instances are up to 2.2x as fast for data warehouse workloads and up to 2.4x as fast for data lake workloads, all at 30% lower price per vCPU compared to RA3 instances. RG instances support all data lake formats supported by RA3 and eliminate Amazon Redshift Spectrum’s per-TB scanning charges. RG instances feature a custom-built integrated vectorized query engine, making them a more performant and cost-effective foundation for unified analytics. We are launching with two instance sizes: rg.xlarge and rg.4xlarge, with additional sizes coming later this year.",
+      "link": "https://aws.amazon.com/blogs/big-data/meet-amazon-redshift-rg-aws-graviton-based-instances-with-an-integrated-data-lake-query-engine-delivering-up-to-2-4x-better-performance-at-30-lower-price-than-ra3/",
+      "pubDate": "2026-05-19T15:38:08.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "redshift",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "graviton",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0b8988ae37d8",
+      "title": "Amazon Managed Grafana now supports dual-stack connectivity (IPv6 and IPv4)",
+      "description": "Amazon Managed Grafana now supports dual-stack connectivity, enabling workspaces to communicate over both Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6). Dual-stack mode is available for workspaces running Grafana version 10.4 or later.\n \nWith dual-stack support, customers can simplify their network stack by eliminating the need to manage overlapping address spaces in their VPCs. Customers migrating to IPv6 can connect to their Grafana workspaces over IPv6 while maintaining IPv4 compatibility, and those not yet on IPv6 can continue using IPv4-only connections. This is especially beneficial as the continued growth of the internet exhausts available IPv4 addresses. \n \nSupport for dual-stack connectivity on Amazon Managed Grafana is available in all regions where the service is generally available. To get started, update your workspace configuration via the Amazon Managed Grafana console, API, or CLI. For more information, see the Amazon Managed Grafana User Guide. To learn more about best practices for configuring IPv6 in your environment, visit the whitepaper on IPv6 in AWS.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-managed-grafana-ipv6/",
+      "pubDate": "2026-05-19T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "grafana"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "grafana",
+        "generally-available",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c697d435f529",
       "title": "AWS Management Console now displays AWS Local Zones in the Region Selector",
@@ -559,47 +645,6 @@
       "tags": [
         "ec2",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-509cdfec8231",
-      "title": "Amazon ElastiCache now supports real-time full-text, exact-match, and numeric range search",
-      "description": "Amazon ElastiCache now supports real-time full-text, exact-match, and numeric range search directly in your cache without a separate search service. Applications can use ElastiCache to search terabytes of data with latency as low as microseconds and throughput up to millions of search operations per second. Developers can combine any of these search types in a single query to power real-time, scalable search across frequently changing data.\n  ElastiCache makes data searchable as soon as writes complete, so applications always search the most current data. This is ideal for frequently updated datasets such as user session details, product inventory, and transaction records. Exact-match search enables instant lookup of records by precise values such as usernames, content IDs, or genres across streaming and gaming applications. Numeric range queries enable filtering by transaction amounts, date ranges, or player scores in financial applications and leaderboards. Developers can use full-text search with prefix, suffix, and fuzzy matching to power product discovery in e-commerce platforms, or combine search types to filter by category, price, and ratings.\n  Full-text, exact-match, and numeric range search is available in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions, for node-based clusters running ElastiCache version 9.0 for Valkey at no additional cost. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 or above cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, read this blog and see the ElastiCache documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-enchanced-search/",
-      "pubDate": "2026-05-06T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-95c42ad7e8ca",
-      "title": "AWS Marketplace now supports programmatic procurement with Agreements API",
-      "description": "Today, AWS Marketplace announces the Agreements API, enabling you to procure AWS Marketplace products and manage agreements programmatically. With this launch, you can generate estimates, accept offers, track charges and entitlements, update purchase orders and manage agreements all within your existing tools and workflows.\n \nCombined with the Discovery API, the Agreements API provides an end-to-end procurement journey from product discovery to purchase. You can integrate these APIs into your procurement systems to build custom workflows and streamline operations across your organization. Partners can also use these APIs to build custom storefronts that deliver unified procurement experiences for their customers. \n \nThe AWS Marketplace Agreements APIs is available in the US East (N. Virginia) Region.\n \nTo get started, configure AWS Identity and Access Management (IAM) permissions for your AWS account and call the API through the AWS SDK. To learn more, see the AWS Marketplace Agreement APIs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-marketplace-agreements-api/",
-      "pubDate": "2026-05-06T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "launch",
-        "ga",
-        "update",
-        "support"
       ]
     },
     {

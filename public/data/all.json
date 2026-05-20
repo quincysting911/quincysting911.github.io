@@ -1,16 +1,303 @@
 {
-  "lastUpdated": "2026-05-19T08:55:13.983Z",
-  "totalItems": 200,
+  "lastUpdated": "2026-05-20T08:49:57.290Z",
+  "totalItems": 201,
   "sources": {
     "whatsNew": 94,
     "mlBlog": 20,
     "newsBlog": 18,
     "bigDataBlog": 18,
-    "architectureBlog": 18,
+    "architectureBlog": 19,
     "computeBlog": 18,
     "developersAndDevOps": 14
   },
   "items": [
+    {
+      "id": "aws-news-ee5a77f21026",
+      "title": "Amazon SageMaker HyperPod now supports data capture for inference workloads",
+      "description": "Amazon SageMaker HyperPod now supports data capture for inference workloads, enabling customers to record inference request and response payloads for model monitoring, compliance, debugging, and offline analysis. Organizations deploying generative AI and machine learning models on HyperPod need systematic visibility into the inputs flowing into their models and the outputs returned to clients to detect model drift, satisfy regulatory audit requirements, debug production issues, and build ground-truth datasets for fine-tuning. Previously, customers had to either accept limited operational visibility into their inference workloads or build expensive custom logging pipelines outside the HyperPod Inference Operator.\n  With data capture, you can choose to record inference traffic at the SageMaker endpoint, at the load balancer, or at the model pod, depending on the level of visibility you need, and combine these options for layered observability. Captured data is delivered asynchronously to your Amazon S3 bucket and supports configurable sampling and encryption with customer-managed AWS KMS keys, so you can balance coverage with cost while keeping sensitive data protected. Data capture is designed to never block inference, ensuring production availability is preserved. You can enable data capture by configuring it on your inference endpoint when deploying models through the HyperPod Inference Operator or with SageMaker JumpStart.\n  This feature is available for SageMaker HyperPod clusters using the EKS orchestrator in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see Data capture for inference on HyperPod.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-data-capture",
+      "pubDate": "2026-05-20T01:08:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3",
+        "eks",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3",
+        "eks",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3b7def4ecd70",
+      "title": "Amazon MWAA now supports Apache Airflow 3.2",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 3.2, the latest major release of the popular open-source workflow orchestration framework. Amazon MWAA is a managed service that lets you run Apache Airflow at scale without managing the underlying infrastructure. This release brings new data-aware scheduling capabilities and developer productivity improvements to teams building and operating data pipelines on AWS.\n \nWith Apache Airflow 3.2, you can now use asset partitioning to trigger downstream DAGs based on specific slices of data, such as a date-partitioned S3 path, rather than an entire asset, giving data engineering teams more precise control over pipeline execution. This release also expands Human-in-the-Loop (HITL) capabilities with a full audit history view for approvals, HITL support for the AgenticOperator, and synchronous callback support for Deadline Alerts. Additional improvements include Grid View virtualization for faster rendering of large DAGs, full XCom management from the Airflow UI, and async callable support in PythonOperator..\n \nYou can launch a new Apache Airflow 3.2 environment on Amazon MWAA, or upgrade from 2.11 or later, with just a few clicks in the AWS Management Console in all currently supported Amazon MWAA regions. To learn more about Apache Airflow 3.2 visit the Amazon MWAA documentation, and the Apache Airflow 3.2 change log in the Apache Airflow documentation.\n  Apache, Apache Airflow, and Airflow are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-mwaa-now-supports-apache-airflow-3-2/",
+      "pubDate": "2026-05-19T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "launch",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4060d84e0041",
+      "title": "Amazon Inspector is now available in the AWS Asia Pacific (Taipei) Region",
+      "description": "Today, AWS announces the availability of Amazon Inspector in the AWS Asia Pacific (Taipei) Region. Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads including Amazon EC2 instances, container images, and AWS Lambda functions for software vulnerabilities and unintended network exposure across your AWS Organization. \n  With this expansion, Amazon Inspector extends its security coverage to AWS Asia Pacific (Taipei) Region, designed to help customers automatically discover workloads, conduct continuous vulnerability assessments, and receive actionable security findings. The service is designed to detect newly launched Amazon EC2 instances, Lambda functions, and eligible container images pushed to Amazon Elastic Container Registry (ECR) and scan them for software vulnerabilities and unintended network exposure.\n  All accounts new to Amazon Inspector are eligible for a 15-day free trial to evaluate the service and estimate its cost. During the trial, all eligible Amazon EC2 instances, AWS Lambda functions, and container images pushed to Amazon ECR are continually scanned at no cost. After the trial period, you will be charged based on public pricing for Amazon Inspector. Visit the Amazon Inspector pricing page for more details.\n  To get started with Amazon Inspector visit our documentation or begin your free trial today.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-inspector-taipei/",
+      "pubDate": "2026-05-19T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "launch",
+        "ga",
+        "now-available",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-8f733330971a",
+      "title": "Amazon ECS introduces pause and continue controls for service deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now enables you to pause service deployments at critical stages during deployment progression and continue deployments when ready. You can use these pause points to introduce manual decision points and interactive controls into your deployments for scenarios such as manual approval workflows, operational checks, integration tests, or custom automation, while continuing to use native Amazon ECS deployment strategies with managed traffic shifting, bake times, fast rollbacks, CloudWatch alarms, and deployment circuit breaker.\n \nWith this launch, you can configure a new PAUSE deployment lifecycle hook as part of your Amazon ECS service deployment configuration. When a deployment reaches a configured pause point, Amazon ECS pauses deployment progression and emits Amazon EventBridge events that you can use to trigger automation workflows, approval systems, or external validation processes. You can then continue or roll back the deployment using the new ContinueServiceDeployment API. With pause hooks, you can configure timeout durations up to 14 days and timeout actions to automatically continue or roll back the deployment if no action is received.\n \nYou can configure pause hooks for rolling, blue/green, linear, and canary deployment strategies using the Amazon ECS Console, AWS CLI, AWS SDKs, AWS CloudFormation, AWS CDK, and Terraform. You can use the ContinueServiceDeployment API through the Amazon ECS Console, AWS CLI, and AWS SDKs. This feature is available in all AWS commercial and AWS GovCloud (US) Regions. To learn more, see our documentation on pause hooks for service deployments and continuing service deployments.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ecs-pause-continue-deployments/",
+      "pubDate": "2026-05-19T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudformation",
+        "eventbridge",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudformation",
+        "eventbridge",
+        "cloudwatch",
+        "launch",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-c81001c32e70",
+      "title": "A systematic approach to benchmarking SQL processing engines on AWS",
+      "description": "Selecting the right SQL processing solution for large-scale data analytics is a critical decision for organizations. As data volumes grow exponentially, the technology landscape has evolved to offer diverse options for processing and analyzing this information efficiently. This post presents a systematic framework for evaluating and benchmarking SQL processing engines on AWS, using Apache JMeter to conduct practical performance testing at scale.",
+      "link": "https://aws.amazon.com/blogs/big-data/a-systematic-approach-to-benchmarking-sql-processing-engines-on-aws/",
+      "pubDate": "2026-05-19T15:44:02.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6acbee54495e",
+      "title": "Build petabyte-scale synthetic test data with Amazon EMR on EC2",
+      "description": "As data volumes grow from terabytes to petabytes, the architecture for generating synthetic data must evolve to meet increasing demands for scale, performance, and data quality. In this post, we show how you can build a scalable synthetic data generation solution using Amazon EMR, Apache Spark, and the Faker library.",
+      "link": "https://aws.amazon.com/blogs/big-data/build-petabyte-scale-synthetic-test-data-with-amazon-emr-on-ec2/",
+      "pubDate": "2026-05-19T15:42:49.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "ec2",
+        "emr"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "ec2",
+        "emr"
+      ]
+    },
+    {
+      "id": "aws-news-8b3b7511d8fe",
+      "title": "Meet Amazon Redshift RG – AWS Graviton-based instances with an integrated data lake query engine delivering up to 2.4x better performance at 30% lower price than RA3",
+      "description": "On May 12, 2026, we announced the general availability of Amazon Redshift RG instances, powered by AWS Graviton processors. RG instances are up to 2.2x as fast for data warehouse workloads and up to 2.4x as fast for data lake workloads, all at 30% lower price per vCPU compared to RA3 instances. RG instances support all data lake formats supported by RA3 and eliminate Amazon Redshift Spectrum’s per-TB scanning charges. RG instances feature a custom-built integrated vectorized query engine, making them a more performant and cost-effective foundation for unified analytics. We are launching with two instance sizes: rg.xlarge and rg.4xlarge, with additional sizes coming later this year.",
+      "link": "https://aws.amazon.com/blogs/big-data/meet-amazon-redshift-rg-aws-graviton-based-instances-with-an-integrated-data-lake-query-engine-delivering-up-to-2-4x-better-performance-at-30-lower-price-than-ra3/",
+      "pubDate": "2026-05-19T15:38:08.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "redshift",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "graviton",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8bee9658b869",
+      "title": "Scalable voice agent design with Amazon Nova Sonic: multi-agent, tools, and session segmentation",
+      "description": "In this post, you’ll learn how to use Amazon Nova Sonic, Amazon Bedrock AgentCore, and Strands BidiAgent to build scalable, maintainable voice agents that handle these challenges efficiently, resulting in more responsive and intelligent customer interactions. We’ll explore three popular architectural patterns for voice agents, highlighting their trade-offs and best practices for minimizing latency.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/scalable-voice-agent-design-with-amazon-nova-sonic-multi-agent-tools-and-session-segmentation/",
+      "pubDate": "2026-05-19T15:26:37.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-f8db2bafbbd5",
+      "title": "Extending conversational memory in Kiro CLI using Amazon Bedrock AgentCore Memory",
+      "description": "In this post, we demonstrate how you can extend the conversational memory of Kiro CLI by implementing a custom Model Context Protocol (MCP) server that integrates with Amazon Bedrock AgentCore Memory. You can use Kiro CLI to interact with AI agents of Kiro directly from your terminal. Amazon Bedrock AgentCore Memory is a fully managed service that allows AI agents to retain information from past interactions, creating more intelligent and context-aware conversations. By implementing a custom MCP server, you can provide Kiro CLI with tools to store and retrieve conversation context, monitor memory usage, and manage the underlying Bedrock Agent Core Memory infrastructure.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/extending-conversational-memory-in-kiro-cli-using-amazon-bedrock-agentcore-memory/",
+      "pubDate": "2026-05-19T15:23:22.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-3e0b26ddd4ac",
+      "title": "Accelerate ML feature pipelines with new capabilities in Amazon SageMaker Feature Store",
+      "description": "Today, we’re announcing three new capabilities available in SageMaker Python SDK v3.8.0. In this post, we walk through each capability with code examples you can use to get started. For complete end-to-end walkthroughs, see the accompanying notebooks for Lake Formation governance and Iceberg table properties in the SageMaker Python SDK repository.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-ml-feature-pipelines-with-new-capabilities-in-amazon-sagemaker-feature-store/",
+      "pubDate": "2026-05-19T15:20:33.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
+    {
+      "id": "aws-news-2dc15955581e",
+      "title": "Implementing programmatic tool calling on Amazon Bedrock",
+      "description": "In this post, we show three ways to implement Programmatic tool calling (PTC) on Amazon Bedrock: a self-hosted Docker sandbox on ECS for maximum control, a managed solution using Amazon Bedrock AgentCore Code Interpreter, and an Anthropic SDK-compatible path through a proxy for teams that prefer that developer experience.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/implementing-programmatic-tool-calling-on-amazon-bedrock/",
+      "pubDate": "2026-05-19T15:17:00.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "ecs"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ecs"
+      ]
+    },
+    {
+      "id": "aws-news-90f793e24588",
+      "title": "How ALS GeoAnalytics LITHOLENS ™ revolutionizes core logging through machine learning with Amazon EKS",
+      "description": "This post explores how ALS GeoAnalytics successfully deployed LITHOLENS ™ with Amazon Elastic Kubernetes Service (Amazon EKS) to scale model training and inference while minimizing cost.",
+      "link": "https://aws.amazon.com/blogs/architecture/how-als-geoanalytics-litholens-revolutionizes-core-logging-through-machine-learning-with-amazon-eks/",
+      "pubDate": "2026-05-19T15:09:36.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-5c3e0fe7470b",
+      "title": "How Synthesia optimizes generative AI video inference on Amazon EC2 G7e instances",
+      "description": "This post introduces a video decoding optimization technique that we have ideated in collaboration with Synthesia Research Engineering team, which we call Asynchronous Frame Generation Pipeline. Adopting this technique allows you to overlap GPU compute, device-to-host (D2H) data transfer, and host-side post-processing. In this post, we apply this technique to the VAE decoder of a Wan video generation model as an example, where our benchmarks on G7e show increased GPU kernel utilization from 82% to 99.9%, in turn leading to an 8.2% decrease in latency (and increase in throughput) for video decoding. We expect this technique to benefit any customer with a chunked video generation pipeline that transfers frames to host memory.",
+      "link": "https://aws.amazon.com/blogs/architecture/how-synthesia-optimizes-generative-ai-video-inference-on-amazon-ec2-g7e-instances/",
+      "pubDate": "2026-05-19T15:06:40.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2"
+      ]
+    },
+    {
+      "id": "aws-news-0b8988ae37d8",
+      "title": "Amazon Managed Grafana now supports dual-stack connectivity (IPv6 and IPv4)",
+      "description": "Amazon Managed Grafana now supports dual-stack connectivity, enabling workspaces to communicate over both Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6). Dual-stack mode is available for workspaces running Grafana version 10.4 or later.\n \nWith dual-stack support, customers can simplify their network stack by eliminating the need to manage overlapping address spaces in their VPCs. Customers migrating to IPv6 can connect to their Grafana workspaces over IPv6 while maintaining IPv4 compatibility, and those not yet on IPv6 can continue using IPv4-only connections. This is especially beneficial as the continued growth of the internet exhausts available IPv4 addresses. \n \nSupport for dual-stack connectivity on Amazon Managed Grafana is available in all regions where the service is generally available. To get started, update your workspace configuration via the Amazon Managed Grafana console, API, or CLI. For more information, see the Amazon Managed Grafana User Guide. To learn more about best practices for configuring IPv6 in your environment, visit the whitepaper on IPv6 in AWS.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-managed-grafana-ipv6/",
+      "pubDate": "2026-05-19T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "grafana"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "grafana",
+        "generally-available",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c697d435f529",
       "title": "AWS Management Console now displays AWS Local Zones in the Region Selector",
@@ -1510,21 +1797,6 @@
       ]
     },
     {
-      "id": "aws-news-8218c8bfd96d",
-      "title": "Building web search-enabled agents with Strands and Exa",
-      "description": "In this post, you will learn how to set up the Exa integration in Strands Agents, understand the two core tools it exposes, and walk through real-world use cases that show how agents use web search to complete multi-step tasks.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-web-search-enabled-agents-with-strands-and-exa/",
-      "pubDate": "2026-05-11T21:58:16.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-c68cad1c0781",
       "title": "ENA Express for Amazon EC2 instances now supports traffic between Availability Zones",
       "description": "Elastic Network Adapter (ENA) Express now supports traffic between Amazon EC2 instances in different Availability Zones within a Region, delivering up to 25 Gbps single-flow bandwidth. ENA Express is a networking feature that uses the AWS Scalable Reliable Datagram (SRD) protocol to improve network performance. SRD is a reliable network protocol that delivers performance improvements through advanced congestion control and multi-pathing. Amazon Elastic Block Store (EBS) io2 Block Express and Elastic Fabric Adapter (EFA) for high performance computing and machine learning workloads also leverage SRD.\n \nWorkloads such as distributed storage, databases, and file systems require deployments spanning multiple Availability Zones for resilience, yet single flows between zones support up to 5 Gbps with ENA. ENA Express delivers up to 25 Gbps single-flow bandwidth for traffic between Availability Zones. To achieve this, ENA Express detects compatibility between your EC2 instances and establishes an SRD connection when both communicating instances have ENA Express enabled. Once established, SRD uses multi-pathing to route your traffic across the network and avoids head-of-line blocking as it does not need packets to arrive in order. Using these capabilities, ENA Express delivers the performance benefits transparently to your application with TCP and UDP protocols.\n \nENA Express for connections between Availability Zones within a Region is available for all supported instance types and sizes in Africa (Cape Town), Asia Pacific (Hong Kong, Hyderabad, Jakarta, Malaysia, Melbourne, Mumbai, New Zealand, Osaka, Seoul, Singapore, Sydney, Taipei, Thailand, Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt, Ireland, London, Milan, Paris, Spain, Stockholm, Zurich), Israel (Tel Aviv), Mexico (Central), US East (N. Virginia, Ohio), US West (N. California, Oregon), and AWS GovCloud (US) Regions. ENA Express comes at no additional cost. For a list of supported instances and configuration guidance, please review the latest EC2 documentation.",
@@ -1733,19 +2005,6 @@
       ]
     },
     {
-      "id": "aws-news-a05db950a53a",
-      "title": "Introducing Claude Platform on AWS: Anthropic’s native platform, through your AWS account",
-      "description": "Today, we're excited to announce the general availability of Claude Platform on AWS. Claude Platform on AWS is a new service that gives customers direct access to Anthropic's native Claude Platform experience through their AWS account, with no separate credentials, contracts, or billing relationships required. AWS is the first cloud provider to offer access to the native Claude Platform experience. In this post, we explore how Claude Platform on AWS works and how you can start using it today.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/",
-      "pubDate": "2026-05-11T18:43:03.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": []
-    },
-    {
       "id": "aws-news-b1a1980b6ef2",
       "title": "AWS WAF introduces dynamic label interpolation for custom request and response handling",
       "description": "AWS WAF now supports dynamic label interpolation, enabling you to forward WAF classification signals to your origin and embed context in responses with a single rule. Security engineers who previously maintained a separate rule for every signal value can now use ${namespace:} syntax in custom request headers, response headers, and response bodies to forward an entire label namespace at once. For example, one rule with a dynamic variable can forward all IP reputation signals to your application, which can then respond adaptively, such as by enforcing multi-factor authentication (MFA).\n \nInterpolation also introduces synthetic labels: built-in values resolved from request context, including client IP address, WAF request ID, and JA3 and JA4 fingerprints. You can embed these in custom block pages and challenge pages so users reporting false positives have a reference ID to cite, or forward TLS fingerprints to your application for adaptive auth decisions. Interpolation works with any label namespace, including AWS Managed Rules, AWS Marketplace rule groups, and your own custom labels. Headers automatically adapt as new labels are added to the namespace, and when multiple labels match, values resolve to a comma-separated list.\n \nDynamic label interpolation is available in all AWS Regions where AWS WAF is available at no additional cost. There are no new API fields or configuration steps. To get started, see Dynamic label interpolation in the AWS WAF Developer Guide, or explore the sample on GitHub.",
@@ -1809,46 +2068,6 @@
         "enhancement",
         "support",
         "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-bce9c2c64893",
-      "title": "Manufacturing intelligence with Amazon Nova Multimodal Embeddings",
-      "description": "In this post, we build a multimodal retrieval system for aerospace manufacturing documents using Amazon Nova Multimodal Embeddings on Amazon Bedrock and Amazon S3 Vectors. We evaluate the system on 26 manufacturing queries and compare generation quality between a text-only pipeline and the multimodal pipeline.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/manufacturing-intelligence-with-amazon-nova-multimodal-embeddings/",
-      "pubDate": "2026-05-11T17:08:24.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "nova",
-        "s3 vectors",
-        "s3"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "nova",
-        "s3 vectors",
-        "s3"
-      ]
-    },
-    {
-      "id": "aws-news-5c1c249c25b9",
-      "title": "How Miro uses Amazon Bedrock to boost software bug routing accuracy and improve time-to-resolution from days to hours",
-      "description": "In this post, we dive deep into the architecture and techniques we used to improve Miro’s bug routing, achieving six times fewer team reassignments and five times shorter time-to-resolution powered by Amazon Bedrock.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-miro-uses-amazon-bedrock-to-boost-software-bug-routing-accuracy-and-improve-time-to-resolution-from-days-to-hours/",
-      "pubDate": "2026-05-11T17:03:00.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2595,107 +2814,6 @@
       ]
     },
     {
-      "id": "aws-news-ebcd8b08fdd1",
-      "title": "Amazon ElastiCache now supports real-time hybrid search with vector and full-text",
-      "description": "Amazon ElastiCache now supports real-time hybrid search that combines vector similarity with full-text search in a single query, without a separate search service. Applications can combine semantic meaning with exact keyword matching that captures both intent and precise terms to deliver more relevant results than either method alone. Customers can use ElastiCache to combine full-text and vector similarity search across billions of embeddings from popular providers like Amazon Bedrock, Amazon SageMaker, Anthropic, and OpenAI with latency as low as microseconds and up to 99% recall.\n  ElastiCache makes data searchable as soon as writes complete, so applications always search the most current vectors and text. Developers can use hybrid search to build AI agent memory and RAG systems that retrieve relevant context by exact terms and meaning to improve generative AI responses while reducing token costs. E-commerce and streaming platforms can use hybrid search to surface relevant matches, whether users search by exact product name, description, or both. ElastiCache for Valkey delivers the lowest latency vector search with the highest throughput and best price-performance at 95%+ recall rate among popular vector databases on AWS.\n  Hybrid search is available in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions, for node-based clusters running ElastiCache version 9.0 for Valkey at no additional cost. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 or above cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, read this blog and see the ElastiCache documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-hybrid-search/",
-      "pubDate": "2026-05-06T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "sagemaker"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-509cdfec8231",
-      "title": "Amazon ElastiCache now supports real-time full-text, exact-match, and numeric range search",
-      "description": "Amazon ElastiCache now supports real-time full-text, exact-match, and numeric range search directly in your cache without a separate search service. Applications can use ElastiCache to search terabytes of data with latency as low as microseconds and throughput up to millions of search operations per second. Developers can combine any of these search types in a single query to power real-time, scalable search across frequently changing data.\n  ElastiCache makes data searchable as soon as writes complete, so applications always search the most current data. This is ideal for frequently updated datasets such as user session details, product inventory, and transaction records. Exact-match search enables instant lookup of records by precise values such as usernames, content IDs, or genres across streaming and gaming applications. Numeric range queries enable filtering by transaction amounts, date ranges, or player scores in financial applications and leaderboards. Developers can use full-text search with prefix, suffix, and fuzzy matching to power product discovery in e-commerce platforms, or combine search types to filter by category, price, and ratings.\n  Full-text, exact-match, and numeric range search is available in all commercial AWS Regions, AWS GovCloud (US) Regions, and China Regions, for node-based clusters running ElastiCache version 9.0 for Valkey at no additional cost. Valkey is the most permissive open source and vendor-neutral alternative to Redis and the recommended engine on ElastiCache. To get started, create a new Valkey 9.0 or above cluster or upgrade an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To learn more, read this blog and see the ElastiCache documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-elasticache-enchanced-search/",
-      "pubDate": "2026-05-06T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-95c42ad7e8ca",
-      "title": "AWS Marketplace now supports programmatic procurement with Agreements API",
-      "description": "Today, AWS Marketplace announces the Agreements API, enabling you to procure AWS Marketplace products and manage agreements programmatically. With this launch, you can generate estimates, accept offers, track charges and entitlements, update purchase orders and manage agreements all within your existing tools and workflows.\n \nCombined with the Discovery API, the Agreements API provides an end-to-end procurement journey from product discovery to purchase. You can integrate these APIs into your procurement systems to build custom workflows and streamline operations across your organization. Partners can also use these APIs to build custom storefronts that deliver unified procurement experiences for their customers. \n \nThe AWS Marketplace Agreements APIs is available in the US East (N. Virginia) Region.\n \nTo get started, configure AWS Identity and Access Management (IAM) permissions for your AWS account and call the API through the AWS SDK. To learn more, see the AWS Marketplace Agreement APIs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-marketplace-agreements-api/",
-      "pubDate": "2026-05-06T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "launch",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3c88196fc605",
-      "title": "Amazon Bedrock AgentCore Memory announces metadata for long-term memory",
-      "description": "Amazon Bedrock AgentCore Memory now supports metadata on long-term memory (LTM) records, enabling agents to tag, filter, and retrieve memories using structured attributes alongside semantic search. You can define up to ten indexed keys per memory resource - with support for STRING, NUMBER, and STRING_LIST types - and use different operator types to filter retrieval results.\n \nMetadata can be attached to events at ingestion time or inferred automatically by the LLM based on extraction instructions you define on the memory resource. During ingestion, the LLM processes all events and determines how metadata is applied to the resulting memory records.\n \nYou define a metadata schema on the memory resource that includes indexed key definitions (key name, type, and optional allowed values) along with extraction instructions that guide the LLM on how to generate metadata from conversation content. With metadata filters on retrieval - agents can retrieve records by structured attributes like ticket number, priority, or date - eliminating irrelevant context and improving response accuracy.\n \nTo get started, see the Amazon Bedrock AgentCore Memory documentation. This feature is available today in all AWS Regions where Amazon Bedrock AgentCore Memory is supported.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata",
-      "pubDate": "2026-05-06T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f665e9b6e83f",
-      "title": "Amazon Neptune now supports 1-click connect with CloudShell",
-      "description": "Amazon Neptune now offers 1-click connect capability, enabling you to quickly connect to Neptune Database and Neptune Analytics using CloudShell.\n \nPreviously, connecting to Neptune resources required manual configuration network settings and access permissions, taking time from database administrators, developers, and data analysts who needed to query their graph databases. With 1-click connect, you can immediately start querying your Neptune resources without manual network configuration, significantly reducing setup time and technical complexity. This streamlined approach works across different network configurations, including VPC only resources. 1-click connect is particularly valuable for testing and development workflows, troubleshooting, and for customers new to Neptune who want to quickly explore and experiment with their graph data.\n  1-click connect is available at no additional charge in all regions where Amazon Neptune is currently offered. To learn more and how to get started, visit https://aws.amazon.com/neptune/.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-neptune-cloudshell/",
-      "pubDate": "2026-05-06T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a5a08a4f2b65",
       "title": "Build streaming applications on Amazon Managed Service for Apache Flink with AI-assisted guidance",
       "description": "In this post, we walk through installing the Power and Skill, using Amazon Kinesis Data Streams to build a Kinesis Data Stream-to-Kinesis Data Stream streaming pipeline, and migrating an existing application to Flink 2.2. You can follow along with this use case to see how the Managed Service for Apache Flink Kiro Power can help you build a resilient, performant application grounded in best practices.",
@@ -2962,41 +3080,6 @@
       "tags": []
     },
     {
-      "id": "aws-news-46ee5528f815",
-      "title": "Using Apache Sedona with AWS Glue to process billions of daily points from a geospatial dataset",
-      "description": "In this post, we explore how to use Apache Sedona with AWS Glue to process and analyze massive geospatial datasets.",
-      "link": "https://aws.amazon.com/blogs/big-data/using-apache-sedona-with-aws-glue-to-process-billions-of-daily-points-from-a-geospatial-dataset/",
-      "pubDate": "2026-04-22T15:42:28.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "glue"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "glue"
-      ]
-    },
-    {
-      "id": "aws-news-8cf740d36791",
-      "title": "Analyzing your data catalog: Query SageMaker Catalog metadata with SQL",
-      "description": "In this post, we demonstrate how to use the metadata export capability in Amazon SageMaker Catalog and perform analytics such as historical changes, monitor asset growth and track metadata improvements.",
-      "link": "https://aws.amazon.com/blogs/big-data/analyzing-your-data-catalog-query-sagemaker-catalog-metadata-with-sql/",
-      "pubDate": "2026-04-22T15:37:38.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "improvement"
-      ]
-    },
-    {
       "id": "aws-news-f31a0d9dd43c",
       "title": "PACIFIC enables multi-tenant, sovereign product carbon footprint exchange on the Catena-X data space using AWS",
       "description": "This post explores how PACIFIC enables multi-tenant, sovereign PCF exchange on the Catena-X data space using Amazon Elastic Container Service (Amazon ECS) on AWS Fargate, Amazon Cognito, and AWS Identity and Access Management (IAM) to deliver measurable environmental impact and competitive advantage in a carbon-conscious marketplace.",
@@ -3038,25 +3121,6 @@
         "rds",
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-b061666ac55e",
-      "title": "Configure a custom domain name for your Amazon MSK cluster enabled with IAM authentication",
-      "description": "In the first part of Configure a custom domain name for your Amazon MSK cluster, we discussed about why custom domain names are important and provided details on how to configure a custom domain name in Amazon MSK when using SASL_SCRAM authentication. In this post, we discuss how to configure a custom domain name in Amazon MSK when using IAM authentication.",
-      "link": "https://aws.amazon.com/blogs/big-data/configure-a-custom-domain-name-for-your-amazon-msk-cluster-enabled-with-iam-authentication/",
-      "pubDate": "2026-04-21T16:33:29.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "iam",
-        "msk"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "iam",
-        "msk"
       ]
     },
     {
@@ -3715,24 +3779,6 @@
       ],
       "tags": [
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-579c56d79c87",
-      "title": "Mastering millisecond latency and millions of events: The event-driven architecture behind the Amazon Key Suite",
-      "description": "In this post, we explore how the Amazon Key team used Amazon EventBridge to modernize their architecture, transforming a tightly coupled monolithic system into a resilient, event-driven solution. We explore the technical challenges we faced, our implementation approach, and the architectural patterns that helped us achieve improved reliability and scalability. The post covers our solutions for managing event schemas at scale, handling multiple service integrations efficiently, and building an extensible architecture that accommodates future growth.",
-      "link": "https://aws.amazon.com/blogs/architecture/mastering-millisecond-latency-and-millions-of-events-the-event-driven-architecture-behind-the-amazon-key-suite/",
-      "pubDate": "2026-02-04T15:53:39.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "eventbridge"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "eventbridge",
-        "integration"
       ]
     },
     {
