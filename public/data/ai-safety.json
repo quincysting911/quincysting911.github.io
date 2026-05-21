@@ -1,20 +1,41 @@
 {
-  "lastUpdated": "2026-05-20T08:49:57.290Z",
+  "lastUpdated": "2026-05-21T08:52:00.858Z",
   "category": "ai-safety",
-  "totalItems": 30,
+  "totalItems": 31,
   "items": [
     {
-      "id": "aws-news-ee5a77f21026",
-      "title": "Amazon SageMaker HyperPod now supports data capture for inference workloads",
-      "description": "Amazon SageMaker HyperPod now supports data capture for inference workloads, enabling customers to record inference request and response payloads for model monitoring, compliance, debugging, and offline analysis. Organizations deploying generative AI and machine learning models on HyperPod need systematic visibility into the inputs flowing into their models and the outputs returned to clients to detect model drift, satisfy regulatory audit requirements, debug production issues, and build ground-truth datasets for fine-tuning. Previously, customers had to either accept limited operational visibility into their inference workloads or build expensive custom logging pipelines outside the HyperPod Inference Operator.\n  With data capture, you can choose to record inference traffic at the SageMaker endpoint, at the load balancer, or at the model pod, depending on the level of visibility you need, and combine these options for layered observability. Captured data is delivered asynchronously to your Amazon S3 bucket and supports configurable sampling and encryption with customer-managed AWS KMS keys, so you can balance coverage with cost while keeping sensitive data protected. Data capture is designed to never block inference, ensuring production availability is preserved. You can enable data capture by configuring it on your inference endpoint when deploying models through the HyperPod Inference Operator or with SageMaker JumpStart.\n  This feature is available for SageMaker HyperPod clusters using the EKS orchestrator in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see Data capture for inference on HyperPod.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-data-capture",
-      "pubDate": "2026-05-20T01:08:00.000Z",
+      "id": "aws-news-559b74d4166d",
+      "title": "Security Hub Extended expands to 21 curated partner solutions across 9 categories",
+      "description": "AWS Security Hub Extended plan now includes 21 curated partner solutions across 9 security categories, adding SentinelOne (endpoint), CyberArk (identity), Sublime (email), Varonis (data security), LayerX (browser), Native Security (cloud), and Zenity (AI security). With these additions, you have more flexibility to select the solutions that best fit your enterprise security requirements. All solutions have published pay-as-you-go pricing, a single AWS bill, automatic Enterprise Discount Program (EDP) eligibility, unified Level 1 support for AWS Enterprise Support customers, and no long-term commitments.\n \n\n Security Hub Extended is a plan of Security Hub that helps simplify how you procure, deploy, and integrate a full-stack enterprise security solution across endpoint, identity, email, network, data, browser, cloud, AI, and security operations. With today's expansion, you now have more choice within each category, selecting between established leaders and fast-growing innovators across your security domains. Security findings from all participating solutions are emitted in the Open Cybersecurity Schema Framework (OCSF) schema and automatically aggregated in AWS Security Hub. With the Extended plan, you can combine AWS and curated partner solutions to quickly identify and respond to risks that span boundaries.\n \n \n \nWe will continue to expand the Extended plan based on customer feedback. The seven new curated partner solutions are available today in all AWS commercial Regions where Security Hub is available. For a list of supported Regions, see the AWS Region table. For more information about pricing, visit the AWS Security Hub pricing page. To get started, visit the AWS Security Hub console or product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-hub-extended/",
+      "pubDate": "2026-05-20T18:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "sagemaker",
-        "jumpstart",
-        "hyperpod",
+        "nova",
+        "lex"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "nova",
+        "lex",
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-fb16db70e8db",
+      "title": "Announcing the general availability of a new AWS Local Zone in Istanbul, Türkiye",
+      "description": "Today, AWS announces the general availability of a new AWS Local Zone in Istanbul, Türkiye, bringing AWS infrastructure closer to end users, while enabling organizations to meet data residency requirements by storing and backing up data locally.\n \nAWS Local Zones are AWS infrastructure deployments that extend core services, such as compute, storage, networking, and other select services, closer to metropolitan areas worldwide. AWS Local Zones help you achieve single-digit millisecond latency for end-user workloads, meet data residency requirements, support AI/ML inference workloads, and accelerate migration and modernization of legacy applications to the cloud, all while maintaining consistent AWS APIs, tools, and services as AWS Regions. AWS Local Zones are available in more than 30 metropolitan areas worldwide.\n \nThe AWS Local Zone in Istanbul supports Amazon Elastic Compute Cloud (Amazon EC2) with C7i, M7i, and R7i instances, Amazon S3 with the One Zone-Infrequent Access storage class, Amazon EBS with Local Snapshots and volume types gp3, gp2, io1, sc1, and st1, Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Virtual Private Cloud (Amazon VPC), AWS Direct Connect, and Application Load Balancer.  \n \nTo get started, enable the AWS Local Zone in Istanbul (eu-central-1-ist-1a) from the Zones tab in the Amazon EC2 console settings or by using the ModifyAvailabilityZoneGroup API. For pricing information, visit the AWS Local Zones pricing page. To learn more, visit the AWS Local Zones overview page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-local-zones-istanbul-turkiye/",
+      "pubDate": "2026-05-20T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
         "s3",
+        "ec2",
+        "ecs",
         "eks",
         "organizations"
       ],
@@ -22,14 +43,40 @@
         "ai-safety"
       ],
       "tags": [
-        "sagemaker",
-        "jumpstart",
-        "hyperpod",
         "s3",
+        "ec2",
+        "ecs",
         "eks",
         "organizations",
         "ga",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-ee5a77f21026",
+      "title": "Amazon SageMaker HyperPod now supports data capture for inference workloads",
+      "description": "Amazon SageMaker HyperPod now supports data capture for inference workloads, a new capability that records inference request and response payloads from production endpoints to Amazon S3. Customers deploying generative AI models on HyperPod need visibility into model inputs and outputs to detect drift, troubleshoot production issues, build evaluation datasets, and continuously improve their deployed models, but previously had to build custom logging pipelines outside of the service to obtain this visibility.\n \nWith data capture, customers can train speculative decoding draft models from their real production traffic for better performance than generic draft models, build evaluation pipelines from production data, feed fine-tuning jobs with real-world inputs, and maintain audit trails for compliance. Customers choose where to capture inference traffic on each endpoint, at the SageMaker endpoint, the load balancer, or the model pod. Captured data is delivered asynchronously to their Amazon S3 bucket without blocking inference, and supports configurable sampling and customer-managed AWS KMS encryption. You can enable data capture when deploying models through the HyperPod Inference Operator, and use the captured data with Amazon SageMaker Model Monitor and your existing evaluation, fine-tuning, and draft-model training workflows.\n \nThis feature is available for SageMaker HyperPod clusters using the EKS orchestrator in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see Data capture for inference on HyperPod.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-data-capture",
+      "pubDate": "2026-05-20T01:08:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "s3",
+        "rds",
+        "eks"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "s3",
+        "rds",
+        "eks",
+        "support",
+        "new-capability"
       ]
     },
     {
@@ -508,31 +555,6 @@
         "organizations",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-1fa71e04b487",
-      "title": "Amazon Redshift now scales data ingestion automatically with concurrency scaling for batch workloads",
-      "description": "Amazon Redshift now extends concurrency scaling to support high-volume data ingestion workloads, enabling concurrency scaling for Amazon Redshift COPY queries from Amazon S3. This means your data pipelines no longer have to choose between ingestion speed and query performance—even during peak demand.\n  Organizations running time-sensitive data operations—real-time analytics, continuous ETL, or high-frequency reporting—often face ingestion bottlenecks during traffic spikes. Until now, concurrency scaling supported read queries, but write-heavy workloads could still experience resource contention with concurrent queries. With this launch, Amazon Redshift automatically provisions additional compute capacity to absorb burstiness in ingestion workloads, delivering:\n  \n \n \nFaster COPY performance – For batch workloads, concurrency scaling now supports COPY for Parquet and ORC file formats from Amazon S3. Load multiple files concurrently without queuing delays, even under heavy concurrent workloads by enabling concurrency scaling for Amazon Redshift COPY queries.\n \n \nZero operational overhead – No manual cluster resizing or workload scheduling required. Concurrency scaling is enabled and disabled automatically on Amazon Redshift Serverless based on the demand or based on a pre-set configurations in Amazon Redshift Provisioned.\n \n \nThis feature is generally available across all AWS commercial regions and AWS GovCloud (US) regions for both Amazon Redshift Serverless and provisioned data warehouses. No migration or configuration changes are required — enable concurrency scaling and your ingestion workloads will benefit immediately. To learn more, visit the Amazon Redshift concurrency scaling documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/concurrencyscaling-support-for-copy",
-      "pubDate": "2026-05-07T02:06:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "organizations",
-        "launch",
-        "generally-available",
-        "ga",
-        "support"
       ]
     },
     {

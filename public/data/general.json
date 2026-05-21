@@ -1,8 +1,61 @@
 {
-  "lastUpdated": "2026-05-20T08:49:57.290Z",
+  "lastUpdated": "2026-05-21T08:52:00.858Z",
   "category": "general",
-  "totalItems": 46,
+  "totalItems": 44,
   "items": [
+    {
+      "id": "aws-news-a8ede73df2af",
+      "title": "AWS Security Hub now uncovers identity risks from unused access",
+      "description": "Today, AWS Security Hub brings identity risk into the same unified console where central security teams already manage threats, exposures, and posture findings. Security Hub now detects unused IAM permissions, roles, and credentials across your AWS organization, helping central security teams identify and reduce identity risk at scale. Until now, managing identity risk across hundreds of accounts required toggling between multiple tools, with no unified view connecting unused permissions to actual resource exposure. Security Hub now surfaces these identity risks alongside threats, exposures, and posture findings in a unified console, enabling teams to prioritize remediation based on actual organizational risk.\n  When you enable Security Hub for your organization, a service-linked IAM Access Analyzer is automatically created in each member account with no additional configuration required. Security Hub evaluates IAM principals against 90 days of actual access activity, detects unused access, and correlates identity findings with exposure context so teams can focus on the risks that matter most. Security Hub also provides on-demand generation of recommended least-privilege policies based on actual usage patterns, helping teams refine IAM permissions and reduce their attack surface. These capabilities represent a foundational step toward broader cloud infrastructure entitlement management in Security Hub, delivered with consistent workflows, automation rules, and downstream integrations. These capabilities are included with Security Hub Essentials at no additional cost.\n  To learn more, see Understanding unused access findings in Security Hub in the AWS Security Hub User Guide and the AWS Security Hub product page. For the full list of AWS Regions where Security Hub is available, see the AWS Regional Services List.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-hub-unused-access/",
+      "pubDate": "2026-05-20T20:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-3b65de582dd9",
+      "title": "Multimodal evaluators: MLLM-as-a-judge for image-to-text tasks in Strands Evals",
+      "description": "If you’re building visual shopping, image or document understanding, or chart analysis, you need a way to verify whether your model’s response is actually grounded in the source image. A text-only evaluator cannot tell you whether a caption faithfully describes an image, whether an extracted invoice total matches the document, or whether a screen summary […]",
+      "link": "https://aws.amazon.com/blogs/machine-learning/multimodal-evaluators-mllm-as-a-judge-for-image-to-text-tasks-in-strands-evals/",
+      "pubDate": "2026-05-20T18:01:29.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-57a93fb21c4a",
+      "title": "AWS Transfer Family web apps now support federated permissions with IAM Identity Center across AWS Regions",
+      "description": "AWS Transfer Family web apps now support federated permissions with AWS IAM Identity Center across multiple AWS Regions. Previously, you could only create Transfer Family web apps in the Region where your IAM Identity Center instance was enabled. With IAM Identity Center's support for multi-Region replication, you can now replicate your identity configurations to another Region and create Transfer Family web apps there, reducing latency and improving reliability for your users.\n \nAfter you enable a new Region in IAM Identity Center, you can create a Transfer Family web app in that Region. IAM Identity Center automatically replicates your workforce identities to the new Region, eliminating the need to reconfigure user credentials. Administrators can manage fine-grained permissions using the same workforce identities already configured in IAM Identity Center, and your Transfer Family web app users can sign in immediately using their existing credentials.\n \nTo get started, visit the Transfer Family User Guide. To enable IAM Identity Center across multiple Regions, refer to the IAM Identity Center User Guide. For regional availability, visit AWS Capabilities.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-transfer-family-federated-permissions-across-regions/",
+      "pubDate": "2026-05-20T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "support",
+        "new-region"
+      ]
+    },
     {
       "id": "aws-news-3b7def4ecd70",
       "title": "Amazon MWAA now supports Apache Airflow 3.2",
@@ -591,63 +644,6 @@
       ]
     },
     {
-      "id": "aws-news-654044c5e883",
-      "title": "Amazon OpenSearch Service now supports VPC egress for private connectivity to resources in your VPC",
-      "description": "Amazon OpenSearch Service now supports the VPC egress option, which allows your virtual private cloud (VPC) domain to establish private network connections to resources in your VPC, such as ML models, AWS services, and custom applications, without exposing traffic to the public internet.\n \nWhen you enable the VPC egress option, OpenSearch Service adds network interfaces to the subnets you selected for the domain and routes outbound traffic into your VPC. You can enable or disable the VPC egress option using the Amazon OpenSearch Service console, AWS CLI, or the CreateDomain and UpdateDomainConfig API operations.\n \nVPC egress is now supported in all AWS Regions where Amazon OpenSearch Service is available. To get started, refer to Routing domain egress traffic through your VPC.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-opensearch-service-vpc",
-      "pubDate": "2026-05-07T00:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-7992b6cf98c4",
-      "title": "AWS Site-to-Site VPN now supports modifying tunnel bandwidth on existing VPN connections",
-      "description": "AWS Site-to-Site VPN now supports modifying tunnel bandwidth between standard (up to 1.25 Gbps) and large (up to 5 Gbps) on existing connections, making it easier to update your VPN connections’ bandwidth per your organization’s need.\n  Previously, changing tunnel bandwidth required deleting and recreating the connection, which generated new tunnel IP addresses and meant updating your on-premises VPN device configuration and firewall rules. With this launch, tunnels are upgraded while preserving your IP addresses, CIDR blocks, pre-shared keys, and all configuration settings, eliminating the need to make any changes to your on-premises device.\n  This feature is available in the following AWS Regions: US East (N. Virginia, Ohio), US West (N. California), AWS GovCloud (US-West), Europe (Frankfurt, London, Paris, Spain, Stockholm), Asia Pacific (Hong Kong, Hyderabad, Jakarta, Malaysia, Mumbai, New Zealand, Osaka, Seoul, Sydney, Taipei, Thailand, Tokyo), Africa (Cape Town), Mexico (Central), and South America (São Paulo). To learn more and get started, visit the AWS Site-to-Site VPN documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-site-to-site-vpn-modify-bandwidth/",
-      "pubDate": "2026-05-06T21:09:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-654e5942459e",
-      "title": "Amazon EC2 P6-B200 instances are now available in the AWS GovCloud (US-West) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) P6-B200 instances accelerated by NVIDIA Blackwell GPUs are available in AWS GovCloud (US-West) Region. These instances offer up to 2x performance compared to P5en instances for AI training and inference.\n  P6-B200 instances feature 8 Blackwell GPUs with 1440 GB of high-bandwidth GPU memory and a 60% increase in GPU memory bandwidth compared to P5en, 5th Generation Intel Xeon processors (Emerald Rapids), and up to 3.2 terabits per second of Elastic Fabric Adapter (EFAv4) networking. P6-B200 instances are powered by the AWS Nitro System, so you can reliably and securely scale AI workloads within Amazon EC2 UltraClusters to tens of thousands of GPUs.\n  P6-B200 instances are now available in p6-b200.48xlarge size in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio) and AWS GovCloud (US-West). To learn more about P6-B200 instances, visit Amazon EC2 P6 instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-p6-b200-aws-govcloud",
-      "pubDate": "2026-05-06T19:45:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-993e0ed97309",
       "title": "A guide to Airflow worker pool optimization in Amazon MWAA",
       "description": "Optimizing the Airflow worker pool configuration in Amazon Managed Workflows for Apache Airflow (Amazon MWAA), the AWS fully managed Apache Airflow service, is an important yet often overlooked strategy for scaling workflow operations. Tasks queued for longer periods can create the illusion that additional workers are the solution, when in reality the root cause might […]",
@@ -743,19 +739,6 @@
       "tags": [
         "new-feature"
       ]
-    },
-    {
-      "id": "aws-news-daed5df4319f",
-      "title": "6,000 AWS accounts, three people, one platform: Lessons learned",
-      "description": "This post describes why ProGlove chose a account-per-tenant approach for our serverless SaaS architecture and how it changes the operational model. It covers the challenges you need to anticipate around automation, observability and cost. We will also discuss how the approach can affect other operational models in different environments like an enterprise context.",
-      "link": "https://aws.amazon.com/blogs/architecture/6000-aws-accounts-three-people-one-platform-lessons-learned/",
-      "pubDate": "2026-02-25T19:47:07.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-892f4e62054e",
@@ -858,22 +841,6 @@
       ],
       "tags": [
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-4fbb29739c17",
-      "title": "General Availability Release of the Migration Tool for the AWS SDK for Java 2.x",
-      "description": "The AWS SDK for Java 1.x (v1) entered maintenance mode on July 31, 2024, and will reach end-of-support on December 31, 2025. We recommend that you migrate to the AWS SDK for Java 2.x (v2) to access new features, enhanced performance, and continued support from AWS. To help you migrate efficiently, we’ve created a migration […]",
-      "link": "https://aws.amazon.com/blogs/developer/general-availability-release-of-the-migration-tool-for-the-aws-sdk-for-java-2-x/",
-      "pubDate": "2025-09-26T16:47:36.000Z",
-      "source": "developersAndDevOps",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "new-feature",
-        "support"
       ]
     }
   ]
