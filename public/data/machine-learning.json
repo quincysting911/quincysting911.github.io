@@ -1,8 +1,54 @@
 {
-  "lastUpdated": "2026-05-21T08:52:00.858Z",
+  "lastUpdated": "2026-05-22T08:45:48.268Z",
   "category": "machine-learning",
-  "totalItems": 11,
+  "totalItems": 12,
   "items": [
+    {
+      "id": "aws-news-95816de46937",
+      "title": "Automate deployment of data and AI applications with Amazon SageMaker Unified Studio CI/CD CLI",
+      "description": "The CI/CD CLI for Amazon SageMaker Unified Studio (aws-smus-cicd-cli) is an open source command line tool that automates deployment of multi-service data and AI applications across pipeline stages. Data teams define their application once in a YAML manifest, DevOps teams deploy with a single command, and the CLI handles configuration substitution, dependency ordering, and resource provisioning automatically. In this post, we walk through how the CI/CD CLI works, show you how to deploy a real application across environments, and demonstrate how it fits into your existing CI/CD workflows.",
+      "link": "https://aws.amazon.com/blogs/big-data/automate-deployment-of-data-and-ai-applications-with-amazon-sagemaker-unified-studio-ci-cd-cli/",
+      "pubDate": "2026-05-21T19:13:50.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
+      "id": "aws-news-357de993ee74",
+      "title": "Amazon SageMaker Unified Studio now supports data quality rule authoring and evaluation",
+      "description": "Amazon SageMaker Unified Studio now supports data quality rule authoring and evaluation, powered by AWS Glue Data Quality. Data engineers, analysts, and data scientists can define data quality rules, run ruleset evaluations, and view results directly within SageMaker Unified Studio for both data at rest in catalog tables and data in transit within Visual ETL jobs. This helps you catch data quality issues before bad data enters your data lakes or affects downstream analytics and machine learning workloads.\n  With this launch, you can author rules using the same Data Quality Definition Language (DQDL) used in AWS Glue Data Quality and run evaluations directly in SageMaker Unified Studio across two workflows. For data at rest, a dedicated Data Quality tab on catalog assets provides rule authoring, on-demand or scheduled evaluations, and detailed per-rule pass/fail results. For data in transit, you can add an Evaluate Data Quality transform to any Visual ETL job, and review data quality results as part of the run details. You can create rulesets that check for completeness, uniqueness, freshness, accuracy, and other data quality dimensions.\n  This feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available, in both AWS IAM Identity Center-based and IAM-based domains. To learn more, visit the Amazon SageMaker Unified Studio documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/smus-data-quality",
+      "pubDate": "2026-05-20T17:42:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "iam",
+        "iam identity center",
+        "glue"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "iam",
+        "iam identity center",
+        "glue",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-386d710ac97c",
       "title": "Build real-time voice applications with Amazon SageMaker AI and vLLM",
@@ -163,29 +209,6 @@
         "ga",
         "update",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-04fb5da473d0",
-      "title": "Amazon SageMaker HyperPod now supports AMI-based node lifecycle configuration for Slurm clusters",
-      "description": "Amazon SageMaker HyperPod now supports AMI-based configuration that provisions Slurm cluster nodes with the software and configurations needed for a production-ready environment to run AI/ML training workloads. This removes the need to download, configure, or upload lifecycle configuration scripts to Amazon S3. With fewer operational steps to prepare a cluster and no lifecycle configuration scripts executing during node provisioning, cluster creation time is significantly reduced, so you can start running jobs sooner.\n \nAMI-based configuration includes required software such as Docker, Enroot, and Pyxis, and configurations such as Slurm accounting, SSH key generation, Slurm log rotation and user home directory setup. To enable AMI-based configuration, omit the LifeCycleConfig block from the instance group configuration when creating clusters using the CreateCluster API, or when using the SageMaker AI console, select \"None\" under Lifecycle scripts in Custom setup. For additional customization on top of the AMI-based configuration baseline, an extension script can be provided, allowing you to focus only on what capabilities and software to add, such as user configuration, observability, or LDAP integration.\n \nExtension scripts can be configured when creating clusters through both the API and the SageMaker AI console. Using the CreateCluster API, specify the new OnInitComplete parameter and SourceS3Uri in the LifeCycleConfig block. Via the console, provide the S3 URI to the extension script in the \"Extension script file in S3\" field in Custom setup. For advanced use cases that require full control over provisioning, custom lifecycle configuration scripts remain fully supported through both the API and the SageMaker AI console.\n \nThis feature is available in all AWS Regions where SageMaker HyperPod is available. To get started with creating HyperPod Slurm clusters with AMI-based node lifecycle configuration, see Getting started with SageMaker HyperPod using the AWS CLI or Getting started with SageMaker HyperPod using the SageMaker AI console in the SageMaker AI developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-ami-based-node/",
-      "pubDate": "2026-05-07T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "s3"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "s3",
-        "integration",
-        "support"
       ]
     },
     {
