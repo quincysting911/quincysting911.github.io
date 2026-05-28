@@ -1,8 +1,33 @@
 {
-  "lastUpdated": "2026-05-27T08:57:10.811Z",
+  "lastUpdated": "2026-05-28T09:40:53.782Z",
   "category": "machine-learning",
-  "totalItems": 14,
+  "totalItems": 12,
   "items": [
+    {
+      "id": "aws-news-2230893a51aa",
+      "title": "Amazon SageMaker HyperPod Slurm clusters now support specifying minimum capacity requirements with continuous provisioning",
+      "description": "Amazon SageMaker HyperPod now supports minimum capacity requirements (MinCount) for clusters using Slurm orchestration with continuous provisioning. With continuous provisioning, HyperPod provisions clusters with available partial capacity so you can start your AI/ML jobs quickly, while continuing to provision remaining instances asynchronously in the background. While this provides flexibility, some training workloads require a guaranteed minimum number of nodes before they can start effectively. MinCount lets you specify the minimum number of instances that must be successfully provisioned before an instance group transitions to InService status, giving you greater control over when your cluster becomes available for job scheduling.\n  This is particularly useful for distributed training workloads using frameworks such as PyTorch FSDP, Megatron-LM, or NVIDIA NeMo, where training jobs are commonly configured with a fixed number of participating nodes and may not start efficiently or correctly with partial cluster capacity. It also benefits teams that need to guarantee a baseline GPU count to meet SLA or cost-efficiency targets before committing to a training run.\n  You can specify MinInstanceCount in the CreateCluster or UpdateCluster API request to set a minimum capacity threshold for an instance group. The instance group remains in Creating or Updating status until the threshold is met, then transitions to InService and nodes become available for Slurm job scheduling. HyperPod continues launching additional instances beyond MinCount until the target count is reached. If MinCount cannot be satisfied within 3 hours, the system automatically rolls back the instance group to its last known good state.\n  MinCount for Slurm clusters with continuous provisioning is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To get started on specifying minimum capacity requirements for your cluster, see Minimum capacity requirements (MinCount) in the Amazon SageMaker AI documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-mincount/",
+      "pubDate": "2026-05-27T15:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "lex",
+        "launch",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-f0427872cda4",
       "title": "How Amazon is moving to integrate catalogs to improve data discovery with Amazon SageMaker",
@@ -141,23 +166,6 @@
       ]
     },
     {
-      "id": "aws-news-386d710ac97c",
-      "title": "Build real-time voice applications with Amazon SageMaker AI and vLLM",
-      "description": "Voice agents, live captioning, contact center analytics, and accessibility tools all depend on real-time speech-to-text, where your application streams audio in and receives transcription back simultaneously over a single persistent connection. Traditional request-response inference falls short here because transcription cannot begin until the entire audio recording has been received, adding latency that breaks the real-time […]",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-real-time-voice-applications-with-amazon-sagemaker-ai-and-vllm/",
-      "pubDate": "2026-05-20T17:10:17.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
-      ]
-    },
-    {
       "id": "aws-news-90f793e24588",
       "title": "How ALS GeoAnalytics LITHOLENS ™ revolutionizes core logging through machine learning with Amazon EKS",
       "description": "This post explores how ALS GeoAnalytics successfully deployed LITHOLENS ™ with Amazon Elastic Kubernetes Service (Amazon EKS) to scale model training and inference while minimizing cost.",
@@ -208,53 +216,6 @@
         "ga",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c91941383bd2",
-      "title": "Announcing Region Expansion of P4de instances on SageMaker Studio notebooks",
-      "description": "We are pleased to announce general availability of Amazon EC2 P4de instances in Asia Pacific (Tokyo, Singapore) and Europe (Frankfurt) on SageMaker Studio notebooks.\n  Amazon EC2 P4de instances are powered by 8 NVIDIA A100 GPUs with 80GB high-performance HBM2e GPU memory, 2X higher than the GPUs in our current P4d instances. The new P4de instances provide a total of 640GB of GPU memory, which provide up to 60% better ML training performance along with 20% lower cost to train when compared to P4d instances. The improved performance will allow customers to reduce model training times and accelerate time to market. Increased GPU memory on P4de will also benefit workloads that need to train on large datasets of high-resolution data.\n  Visit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio. For pricing information on these instances, please visit our pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/p4de-region-expansion-sagemaker-studio-notebooks/",
-      "pubDate": "2026-05-11T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "ec2"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "ec2",
-        "ga",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-6eaa1facfb1b",
-      "title": "Amazon SageMaker Unified Studio adds getting started tutorials and in-product release notes",
-      "description": "Amazon SageMaker Unified Studio now helps you get productive faster with getting started tutorials and a development environment appearance that automatically adapts to your system preference, and adds in-product release notes to help you discover new capabilities.\n  On the homepage, a new getting started section helps you get productive in minutes by walking through core workflows such as running your first SQL query, analyzing data from a notebook, building a data pipeline with Visual ETL, and training an ML model. Each tutorial uses pre-loaded sample data and can be completed in under 10 minutes. The development environment now also defaults to match your operating system’s light or dark mode setting, so the interface matches your preference from your first sign-in. A new “What’s New” section surfaces recent feature announcements and release notes directly in the product, so you can stay informed about new capabilities as they launch. In 2026 alone, SageMaker Unified Studio has added over 20 new features, which you can also find in the release notes.\n  These enhancements are available in all AWS Regions where Amazon SageMaker Unified Studio is supported in IAM-based domains. Sign in to SageMaker Unified Studio to explore what’s new, or start with the getting started tutorials in the Amazon SageMaker Unified Studio User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/smus-getting-started",
-      "pubDate": "2026-05-11T17:12:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "iam"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "launch",
-        "new-feature",
-        "enhancement",
-        "support",
-        "announcement"
       ]
     },
     {
