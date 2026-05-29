@@ -1,8 +1,47 @@
 {
-  "lastUpdated": "2026-05-28T09:40:53.782Z",
+  "lastUpdated": "2026-05-29T09:30:10.603Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-88090b13180b",
+      "title": "AWS IoT Core adds APIs for MQTT connection management",
+      "description": "Today, AWS IoT Core launches two new MQTT connection management APIs, GetConnection and ListSubscriptions, enabling you to easily access MQTT client connection and subscription information for your Internet of Things (IoT) devices. These APIs help you troubleshoot connectivity issues, monitor client behavior, and audit connection patterns across your device fleet.\n  The GetConnection API gives you visibility into an IoT device connection by retrieving detailed connection information, including connection status, MQTT session details, and optional socket-level data such as source and target IP addresses, ports, and client VPC endpoint ID, controlled via granular IAM policies. The ListSubscriptions API complements this by returning all topic subscriptions, including QoS levels for a client’s MQTT session, for connected and offline clients with persistent sessions. This enables you to validate and identify overlapping or unnecessary subscriptions that may impact solution performance. Together with the existing DeleteConnection API, these new APIs provide a comprehensive MQTT connection management experience.\n \nThese APIs are now available in all AWS regions where AWS IoT Core is supported. To learn more, visit the AWS IoT Core documentation and AWS IoT Core API reference guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-core-apis-mqtt/",
+      "pubDate": "2026-05-28T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e9453b2618f1",
+      "title": "AWS Elemental Inference now supports Smart Subtitles for automated live captioning",
+      "description": "AWS Elemental Inference now supports smart subtitles, a new AI-powered feature that automatically generates real-time subtitles for live video streams. Smart subtitles use advanced speech recognition to transcribe spoken audio and deliver Timed Text Markup Language (TTML)-formatted subtitles with low latency, helping broadcasters and streamers provide accessible content to viewers without manual captioning workflows or third-party services.\n \nWith Smart subtitles, you can add live subtitling for content that is English (United States, Great Britain, and Australian), French, German, Italian, Portuguese, and Spanish to your broadcasts by enabling the feature through the native integration with AWS Elemental MediaLive. You can improve transcription accuracy for specialized content—such as sports commentary with athlete names or technical terminology—by creating custom dictionaries through the AWS Elemental Inference API or console. Smart subtitles work alongside existing Elemental Inference features like smart cropping for vertical video and clip generation, and you benefit from the same non-linear pricing that reduces per-feature costs when using multiple features simultaneously on the same content.\n \nTo learn more, visit the AWS Elemental Inference documentation, MediaLive documentation,  and the AWS Elemental Inference pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/elemental-inference-subtitles",
+      "pubDate": "2026-05-27T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "transcribe"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "transcribe",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-8c021c75c7f9",
       "title": "Migrating your Java applications to AWS Graviton using AWS Transform custom",
@@ -587,92 +626,6 @@
         "update",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-f0f3fe28aafd",
-      "title": "AWS Lambda supports scheduled scaling for functions on Lambda Managed Instances",
-      "description": "AWS Lambda now supports scheduled scaling for functions running on Lambda Managed Instances, using Amazon EventBridge Scheduler. This capability allows you to define one-time or recurring schedules that proactively adjust your function's capacity limits ahead of expected traffic, to meet your performance targets during peak periods and avoid costs during idle periods.\n  Lambda Managed Instances lets you run Lambda functions on managed Amazon EC2 instances with built-in routing, load balancing, and autoscaling. Capacity scales between your configured minimum and maximum execution environment limits based on traffic. Previously, customers with predictable traffic patterns, such as business-hours applications or marketing events, were required to manually adjust capacity limits ahead of known demand changes or build custom automation to manage scaling on a schedule. With scheduled scaling, you can now define schedules that proactively adjust your function’s capacity limits ahead of expected traffic. For example, you can schedule capacity limits to increase before business hours so execution environments are ready when the first requests arrive. You can also define a schedule that scales capacity to zero during idle periods (so you only pay when the function is actively serving traffic), and schedule it to scale back up before traffic returns.\n  Scheduled scaling for functions running on Lambda Managed Instances is available in all AWS Regions where Lambda Managed Instances is supported. You can create schedules using the Amazon EventBridge Scheduler console, AWS CLI, AWS SDK, AWS CDK, or AWS CloudFormation. To learn more, visit the AWS Lambda Managed Instances documentation, Amazon EventBridge Scheduler documentation, AWS Lambda pricing, and Amazon EventBridge pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-lambda-managed-instances/",
-      "pubDate": "2026-05-12T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2",
-        "cloudformation",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "cloudformation",
-        "eventbridge",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b197c35862c9",
-      "title": "Amazon EventBridge Scheduler adds 619 new SDK API actions, including Lambda Managed Instances",
-      "description": "Amazon EventBridge Scheduler expands its AWS SDK integrations with 13 additional services and 619 new API actions across new and existing AWS services, including AWS Lambda Managed Instances. You can now schedule direct invocations of a broader set of AWS services without writing custom integration code.\n  EventBridge Scheduler is a serverless scheduler that allows you to create, run, and manage billions of scheduled events and tasks across more than 270 AWS services, without provisioning or managing the underlying infrastructure. With this expansion, you can now schedule a broader set of AWS API actions directly from Scheduler, including scaling Lambda managed instances up or down on a time-based schedule for precise control over capacity provisioning.\n  These enhancements are now generally available in all AWS Regions where AWS EventBridge Scheduler is available. Specific services and API actions are subject to the availability of the target service in the AWS Region. To learn more about AWS EventBridge Scheduler SDK integrations, visit the Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-eventbridge-sdk-integrations/",
-      "pubDate": "2026-05-12T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "eventbridge",
-        "generally-available",
-        "enhancement",
-        "integration",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-2dd932e106ae",
-      "title": "AWS Security Agent now supports full repository code reviews",
-      "description": "Today, AWS announces the release of full repository code review, a new capability in AWS Security Agent that performs deep, context-aware security analysis of your entire codebase. Unlike traditional static analysis tools that match code against known vulnerability patterns, full repository code review reasons about your application's architecture, trust boundaries, and data flows to surface systemic vulnerabilities that pattern-matching tools miss. When vulnerabilities are found, the scanner generates code remediation, specific fixes tied to the exact file and line, so teams can identify and remediate security vulnerabilities faster than ever before. This capability is available at no additional charge for existing AWS Security Agent customers during the preview.\n \nAI-driven cybersecurity capabilities are advancing rapidly. AWS Security Agent can find vulnerabilities and build working exploits at a scale and speed we haven't seen before. AWS is prioritizing free early access for customers, giving defenders the opportunity to strengthen their codebases and share what they learn so the whole industry can benefit.\n \nFull repository code review is available in in all AWS Regions where AWS Security Agent is available.\n \nTo get started, visit the AWS Security Agent console to enable full repository code review and run your first review. To learn more, see the AWS Security Agent documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-agent-full-repository-code-review/",
-      "pubDate": "2026-05-12T17:37:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "preview",
-        "early-access",
-        "ga",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-4dc3f7970e8b",
-      "title": "Karpenter now supports Amazon Application Recovery Controller zonal shift",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports Amazon Application Recovery Controller (ARC) zonal shift and zonal autoshift when using the open source Karpenter project for compute provisioning. ARC helps you manage and coordinate recovery for your applications across AWS Regions and Availability Zones (AZs). With this launch, you can better maintain Kubernetes application availability by automating the process of shifting in-cluster network traffic away from an impaired AZ.\n  Customers increasingly deploy highly available applications in Amazon EKS across multiple AZs to eliminate a single point of failure. With ARC zonal shift, you can temporarily mitigate an AZ impairment by redirecting in-cluster network traffic away from the impacted AZ. For a fully automated experience, authorize AWS to manage this on your behalf using ARC zonal autoshift, which includes practice runs to verify your cluster functions as expected with one less AZ. When a zonal shift is activated for your EKS cluster, Karpenter stops provisioning new capacity in the impaired AZ, halts voluntary disruptions such as consolidation and drift for nodes in that AZ, and prevents voluntary disruptions in healthy zones if they depend on scheduling pods to the impaired zone. Pods with strict scheduling requirements such as volume affinities that require the impaired zone will not trigger launch attempts. When the zonal shift expires or is canceled, Karpenter resumes normal operations.\n  This Karpenter feature works with both manual zonal shifts and zonal autoshifts. No custom ARC resources are required as Karpenter integrates directly with the existing EKS cluster ARC resource. To enable zonal shift support, set the ENABLE_ZONAL_SHIFT setting in your Karpenter settings. To learn more, visit the Karpenter documentation and the ARC zonal shift documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/karpenter-arc-zonal-shift/",
-      "pubDate": "2026-05-12T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
-        "ga",
-        "support"
       ]
     },
     {

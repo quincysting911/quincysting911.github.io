@@ -1,8 +1,45 @@
 {
-  "lastUpdated": "2026-05-28T09:40:53.782Z",
+  "lastUpdated": "2026-05-29T09:30:10.603Z",
   "category": "machine-learning",
-  "totalItems": 12,
+  "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-7b534fd46c8b",
+      "title": "Build a custom portal with embedded Amazon SageMaker AI MLflow Apps",
+      "description": "In this post, you learn how to build a custom portal with embedded SageMaker AI MLflow Apps UI. You walk through the architecture pattern behind a React front end paired with a Flask reverse proxy that handles AWS Signature Version 4 (SigV4) authentication, deploy the entire stack through the AWS Cloud Development Kit (AWS CDK), validate the deployment, and review security considerations and cleanup procedures.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-custom-portal-with-embedded-amazon-sagemaker-ai-mlflow-apps/",
+      "pubDate": "2026-05-28T20:39:22.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
+    {
+      "id": "aws-news-cfb7815c4390",
+      "title": "Announcing Region Expansion of P4de instances on SageMaker Notebook Instances",
+      "description": "We are pleased to announce general availability of Amazon EC2 P4de instances in Asia Pacific (Tokyo) on SageMaker notebook instances.\n \nAmazon EC2 P4de instances are powered by 8 NVIDIA A100 GPUs with 80GB high-performance HBM2e GPU memory, 2X higher than the GPUs in our current P4d instances. The new P4de instances provide a total of 640GB of GPU memory, which provide up to 60% better ML training performance along with 20% lower cost to train when compared to P4d instances. The improved performance will allow customers to reduce model training times and accelerate time to market. Increased GPU memory on P4de will also benefit workloads that need to train on large datasets of high-resolution data.\n \nVisit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio and SageMaker notebook instances.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/p4de-region-expansion-sagemaker-notebook-instances/",
+      "pubDate": "2026-05-27T23:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-2230893a51aa",
       "title": "Amazon SageMaker HyperPod Slurm clusters now support specifying minimum capacity requirements with continuous provisioning",
@@ -25,6 +62,37 @@
         "launch",
         "ga",
         "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cfd5cc3b933c",
+      "title": "AWS Neuron 2.30.0 now available with NKI 0.4.0 and 22 new NKI Library kernels",
+      "description": "Today, AWS announces the general availability of AWS Neuron 2.30.0, delivering NKI 0.4.0 with new AWS Trainium3 specific hardware capabilities, 22 new NKI Library kernels, and expanded Neuron Agentic Development skills for model porting and validation. This release is for ML developers building custom kernels, optimizing training and inference workloads, or porting models to AWS Trainium and Inferentia.\n  NKI 0.4.0 introduces the activate2 Scalar Engine instruction for Trn3, OCP FP8 input support for matrix multiplication, and bytes-aware tile-size constants that simplify kernel development. The NKI Library adds 3 new core kernels for segmented attention, KV-parallel prefill, and FP8 quantization, as well as 19 experimental kernels covering context parallelism, MXFP8 training, state-space models, and fused optimizers. PyTorch reference implementations are now available for 29 kernels.\n  Neuron Agentic Development, launched as a beta in April 2026, adds two new skills: neuron-framework-autoport for porting HuggingFace models to NxD Inference end to end, and neuron-framework-equivalence for validating numerical equivalence of ported models. By default, both are now included in all Neuron DLAMIs and Deep Learning Containers. This release also introduces the Neuron DRA Driver for Kubernetes Dynamic Resource Allocation, enabling topology-aware scheduling of Trainium accelerators and Elastic Fabric Adapter (EFA) interfaces. The Neuron Graph Compiler now delivers significant compile-time improvements, and the Neuron Runtime enables zero-copy host-device transfers by default.\n  AWS Neuron is available in all AWS Regions where Amazon EC2 Trn1, Trn2, Inf2, and Inf1 instances are available. For more information about Regional availability, see the AWS Region table.\n \nTo get started, see the following resources:\n  \n \n \nAWS Neuron 2.30.0 Release Notes\n \n \nNeuron Kernel Interface (NKI) Documentation\n \n \nNeuron Agentic Development\n \n \nAWS Neuron",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-announce-neuron-2-30-0",
+      "pubDate": "2026-05-26T20:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "trainium",
+        "trainium3",
+        "inferentia",
+        "neuron",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "trainium",
+        "trainium3",
+        "inferentia",
+        "neuron",
+        "ec2",
+        "launch",
+        "beta",
+        "experimental",
+        "now-available",
+        "improvement",
         "support"
       ]
     },
@@ -180,42 +248,6 @@
       ],
       "tags": [
         "eks"
-      ]
-    },
-    {
-      "id": "aws-news-320c1f5296e1",
-      "title": "Amazon SageMaker Data Agent now available for IAM Identity Center domains",
-      "description": "Amazon SageMaker Data Agent is now available in SageMaker Unified Studio domains configured with IAM Identity Center. Data Agent extends its AI-powered capabilities to help data analysts and engineers streamline their analytics workflows across both SageMaker notebooks and Query Editor environments, eliminating the need to manually write complex SQL joins, aggregations, and Python code.\n  With Data Agent, you can describe your analysis goals in plain English and receive working Python or SQL code tailored to your connected data sources, including Amazon Athena, Amazon Redshift, Amazon S3, and AWS Glue Data Catalog. The agent maintains conversational context across notebook cells, selected tables, and query history, proposing step-by-step plans before generating code. Use it to calculate quarterly revenue growth rates, generate visualizations, transform DataFrames, or optimize query performance—all through natural language interaction. The \"Fix with AI\" feature provides intelligent debugging by analyzing execution errors and suggesting corrections, accelerating your development cycle.\n  This capability is available in all commercial AWS Regions where Amazon SageMaker Unified Studio is supported. To get started, navigate to a project in SageMaker Unified Studio, open a notebook or Query Editor, and select the Data Agent panel. To learn more, visit the Amazon SageMaker Unified Studio page and refer to \"Use the SageMaker Data Agent\" in the Amazon SageMaker Unified Studio User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-data-agent-idc/",
-      "pubDate": "2026-05-13T21:53:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "s3",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "glue",
-        "athena"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "s3",
-        "redshift",
-        "iam",
-        "iam identity center",
-        "glue",
-        "athena",
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {
