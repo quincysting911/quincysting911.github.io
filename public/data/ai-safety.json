@@ -1,8 +1,41 @@
 {
-  "lastUpdated": "2026-06-02T09:58:30.348Z",
+  "lastUpdated": "2026-06-03T10:29:24.880Z",
   "category": "ai-safety",
-  "totalItems": 31,
+  "totalItems": 34,
   "items": [
+    {
+      "id": "aws-news-a1208d7c0fbd",
+      "title": "Amazon ElastiCache for Valkey now supports durability",
+      "description": "Today, AWS announces durability support for Amazon ElastiCache. Durability enables you to use ElastiCache for workloads that require microsecond read latency but cannot tolerate data loss. With durability support, ElastiCache now stores data durably across multiple Availability Zones (AZs) using a Multi-AZ transactional log to enable fast failover, database recovery, and node restarts to prevent data loss in the unlikely event of a failure.\n \nYou can choose between two durability options: synchronous and asynchronous writes. Synchronous writes persist data across at least two AZs before responding to the client, designed for zero data loss at single-digit millisecond write latency. Asynchronous writes persist data after responding to the client, maintaining microsecond write latency at no additional cost. However, up to 10 seconds of uncommitted data could be lost in the rare event of a failure. Both options maintain microsecond read latency. You can now use ElastiCache for a broader set of use cases beyond caching where data loss is unacceptable such as AI agent long-term memory, AI agent workflow state, knowledge bases for RAG applications, payment tokenization, and real-time inventory management.\n \nDurability for ElastiCache is available in all AWS commercial Regions, AWS China Regions, and AWS GovCloud (US) Regions starting with Valkey 9.0. To get started, create a new ElastiCache cluster and select your preferred durability option using the AWS Management Console, AWS Software Development Kit (SDK), or AWS Command Line Interface (CLI). For pricing details, visit the Amazon ElastiCache pricing page. To learn more, visit the ElastiCache documentation and blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/durability-amazon-elasticache",
+      "pubDate": "2026-06-02T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cca6aae4c55d",
+      "title": "Automating contract intelligence with Doczy.ai™ on AWS",
+      "description": "In this post, we show you how Doczy.ai™ uses generative AI on AWS to automate contract intelligence at scale, transforming unstructured documents into structured, actionable insights, so organizations can automate critical business processes and unlock the full value of their data.",
+      "link": "https://aws.amazon.com/blogs/architecture/automating-contract-intelligence-with-doczy-ai-on-aws/",
+      "pubDate": "2026-06-02T14:06:32.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-48ea15939a1e",
       "title": "Extending MCP support for Amazon Bedrock AgentCore Gateway",
@@ -149,6 +182,31 @@
       ]
     },
     {
+      "id": "aws-news-9212419c1fb9",
+      "title": "AWS HealthLake now supports CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F) requirements",
+      "description": "AWS HealthLake now provides native support for healthcare payers to comply with the CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F). This rule requires Medicare Advantage organizations, Medicaid managed care plans, CHIP managed care entities, and Qualified Health Plan (QHP) issuers to implement four standardized FHIR-based APIs by January 1, 2027.\n \nNew capabilities\n \nPatient Access API\n \n \n \nCARIN IG for Blue Button® 2.1.0 — enables patients to access their claims, encounter data, and prior authorization information through third-party applications \n  \n \n \n \nSMART App Launch 2.0.0 — provides secure, standards-based authorization for patient-facing applications\n  \n \n \n \nDaVinci PDex Drug Formulary 2.1.0 — allows patients to query drug coverage information\n  \n \n \n \nAPI use metrics collection — supports the annual reporting requirement for aggregated, de-identified Patient Access API usage data\n  \n \nProvider Access API \n \n \n \nCARIN IG for Blue Button® 2.1.0 — enables sharing of patient claims and encounter data with in-network providers\n  \n \n \n \nDaVinci PDex 2.1.0 — supports payer-to-provider clinical data exchange\n  \n \n \n \nDaVinci PDex Drug Formulary 2.1.0 — provides drug formulary information to treating providers\n  \n \n \n \nConsent management integration — supports patient opt-out workflows and provider attribution through integration with AWS services \n  \n \nPayer-to-Payer API\n \n \n \nCARIN IG for Blue Button® 2.1.0 — facilitates claims and encounter data exchange between payers\n  \n \n \n \nDaVinci PDex 2.1.0 — supports clinical data exchange across payer boundaries\n  \n \n \n \n$bulk-member-match operation — enables payers to identify shared members at scale for data exchange, supporting the requirement to request patient data from previous payers within one week of coverage start \n  \n \n \n \n$bulk-member-match status tracking — provides asynchronous status polling for large-scale member matching operations\n  \n \n \n \nDaVinci Data Export — supports bulk FHIR data export aligned with the DaVinci implementation guide for efficient payer-to-payer data transfer\n  \n \n \n \nGroup Discovery APIs — enables auto-discovery of resource types available for export, streamlining payer-to-payer integration\n  \n \n \n \nConsent management integration — supports patient opt-in workflows required for payer-to-payer data exchange \n  \n \nPrior Authorization API\n \n \n \nDaVinci Coverage Requirements Discovery (CRD) 2.1.0 — allows providers to query whether prior authorization is required and discover documentation requirements for items and services\n  \n \n \n \nDaVinci Documentation Templates and Rules (DTR) 2.1.0 — supports compilation of necessary documentation to accompany prior authorization requests\n  \n \n \n \nDaVinci Prior Authorization Support (PAS) 2.1.0 — enables end-to-end electronic prior authorization including submission, status tracking, and decision communication via FHIR APIs \n  \n \n \n \nSMART App Launch 2.0.0 — provides secure authorization for prior authorization workflow applications\n  \n \n \n \nPrior authorization metrics support — enables payers to collect and expose required metrics including approval rates, denial rates, appeal outcomes, and average decision timeframes\n  \n \n \n \nAWS HealthLake is a HIPAA-eligible service. Customers are responsible for determining their own compliance obligations under CMS-0057-F and should consult with legal and compliance counsel regarding their specific requirements.\n \nAWS HealthLake is available in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Europe West (London), Europe (Ireland), and Asia Pacific SouthEast (Sydney) Regions. Visit the AWS Region Table to see all the regions.\n \n \n \nTo learn more, see the AWS HealthLake product page and AWS HealthLake Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-healthlake-cms-cms-0057-f/",
+      "pubDate": "2026-05-29T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "healthlake",
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "healthlake",
+        "rds",
+        "organizations",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-c178ef95c7b7",
       "title": "Amazon Connect Customer now supports scheduling tasks up to 90 days in advance",
       "description": "Amazon Connect Customer now supports scheduling tasks up to 90 days in advance, helping organizations plan, route, and track long-running follow-up work. For example, an insurance team managing an auto repair claim can schedule future tasks for an adjuster visit, parts availability check, and repair completion follow-up, with each task routed to the right team at the right time with relevant claim context. You can schedule tasks using the StartTaskContact API, flows, or the agent workspace.\n \nThis feature is available in all commercial and AWS GovCloud (US) regions where Amazon Connect Customer is offered. To learn more, see our documentation. To learn more about Connect Customer, visit the Amazon Connect Customer website.",
@@ -275,6 +333,25 @@
       ]
     },
     {
+      "id": "aws-news-f56d5db3b50c",
+      "title": "Amazon WorkSpaces Applications adds support for Windows Desktop OS",
+      "description": "Amazon WorkSpaces Applications now supports the ability to set up streaming resources powered by Windows Desktop operating systems using Bring Your Own License (BYOL). Customers can now bring their existing Windows Desktop licenses to support their eligible Microsoft 365 Apps for enterprise, delivering a consistent and familiar desktop experience as users move between on-premises and virtual desktop environments.\n  With BYOL support on WorkSpaces Applications, the operating system is hosted on hardware dedicated to the customer's AWS account, enabling customers to stream Windows desktop applications and full desktop experiences at scale. Customers benefit from cost savings by bringing their existing Windows Desktop OS licenses, eliminating OS fees so they only pay for compute and streaming infrastructure. When the local device and the streaming session both run the same Windows Desktop OS, users apply the same workflows, shortcuts, and navigation in both environments. This removes the cognitive overhead of adapting to a different desktop experience when switching between local and remote work, reducing onboarding time.\n  Windows Desktop for WorkSpaces Applications is available in multiple AWS Regions. For the list of supported regions, see Amazon WorkSpaces Applications BYOL documentation.\n  To take advantage of BYOL on WorkSpaces Applications, organizations must meet Microsoft's licensing requirements and commit to running a minimum number of streaming resources in a given AWS Region each month. To learn more about eligibility requirements and getting started, see the Amazon WorkSpaces Applications documentation and FAQs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-workspaces-applications-windows-desktop-OS/",
+      "pubDate": "2026-05-28T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-44a90737b475",
       "title": "DynamoDB Streams now supports AWS PrivateLink for FIPS endpoints in AWS GovCloud (US) Regions",
       "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for FIPS (Federal Information Processing Standard) endpoints in AWS GovCloud (US) Regions. DynamoDB Streams captures time-ordered sequences of item-level modifications in DynamoDB tables, enabling real-time data processing and event-driven architectures. This enhancement allows government agencies and organizations with federal compliance requirements to establish private connectivity between their VPCs and DynamoDB Streams FIPS endpoints without exposing traffic to the public internet.\n \nThis capability helps customers meet strict federal compliance and regulatory requirements while simplifying their network architecture. By keeping all traffic within the AWS network infrastructure, organizations can securely process real-time data streams, implement compliant change data capture (CDC) solutions, and build event-driven architectures that adhere to federal security standards. Government agencies operating in GovCloud regions can now leverage DynamoDB Streams for secure data streaming applications while maintaining the enhanced security and privacy that AWS PrivateLink provides.\n \nAWS PrivateLink support for DynamoDB Streams FIPS endpoints is available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions, as well as US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n \n To learn more, visit the Amazon DynamoDB Streams PrivateLink documentation and the AWS PrivateLink page.",
@@ -295,25 +372,6 @@
         "organizations",
         "ga",
         "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-f56d5db3b50c",
-      "title": "Amazon WorkSpaces Applications adds support for Windows Desktop OS",
-      "description": "Amazon WorkSpaces Applications now supports the ability to set up streaming resources powered by Windows Desktop operating systems using Bring Your Own License (BYOL). Customers can now bring their existing Windows Desktop licenses to support their eligible Microsoft 365 Apps for enterprise, delivering a consistent and familiar desktop experience as users move between on-premises and virtual desktop environments.\n  With BYOL support on WorkSpaces Applications, the operating system is hosted on hardware dedicated to the customer's AWS account, enabling customers to stream Windows desktop applications and full desktop experiences at scale. Customers benefit from cost savings by bringing their existing Windows Desktop OS licenses, eliminating OS fees so they only pay for compute and streaming infrastructure. When the local device and the streaming session both run the same Windows Desktop OS, users apply the same workflows, shortcuts, and navigation in both environments. This removes the cognitive overhead of adapting to a different desktop experience when switching between local and remote work, reducing onboarding time.\n  Windows Desktop for WorkSpaces Applications is available in multiple AWS Regions. For the list of supported regions, see Amazon WorkSpaces Applications BYOL documentation.\n  To take advantage of BYOL on WorkSpaces Applications, organizations must meet Microsoft's licensing requirements and commit to running a minimum number of streaming resources in a given AWS Region each month. To learn more about eligibility requirements and getting started, see the Amazon WorkSpaces Applications documentation and FAQs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-workspaces-applications-windows-desktop-OS/",
-      "pubDate": "2026-05-28T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
         "support"
       ]
     },
