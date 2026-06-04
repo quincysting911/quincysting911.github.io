@@ -1,8 +1,89 @@
 {
-  "lastUpdated": "2026-06-03T10:29:24.880Z",
+  "lastUpdated": "2026-06-04T09:39:53.855Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-4f0e493a2d0b",
+      "title": "AWS IoT Device Management adds MQTT session data to connectivity status API",
+      "description": "AWS IoT Device Management adds MQTT session data to connectivity status API, enabling you to troubleshoot connectivity issues and audit connection patterns across your Internet of things (IoT) device fleet.\n  This launch brings AWS IoT Device Management's existing connectivity status API to full parity with AWS IoT Core's recently launched GetConnection API, enabling you to retrieve detailed connection and MQTT session information for the IoT device by its thing name. In addition to the connection status, timestamp, and disconnect reason already available, you now get visibility into MQTT session timeout and session expiry values, along with optional socket level details such as source and destination IP addresses, ports, and client VPC endpoint ID. Access to socket information is controlled through granular IAM policies, so you can restrict it to the teams that need it.\n  A key advantage of the connectivity status API over AWS IoT Core's GetConnection API is data retention. While GetConnection retains connection and session details for 30 minutes after a device disconnects, the connectivity status API stores this information indefinitely. This means you can investigate disconnect reasons, review session metadata, and troubleshoot issues long after a device goes offline.\n  This enhancement is available in all AWS regions where AWS IoT Device Management is supported. AWS IoT Device Management only supports devices registered in AWS IoT Core Thing Registry. To learn more, visit the AWS IoT Device Management documentation and reference guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-device-management-mqtt/",
+      "pubDate": "2026-06-03T21:15:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "launch",
+        "ga",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-11ec9d3d761b",
+      "title": "Amazon Keyspaces (for Apache Cassandra) now provides CDC iterator position",
+      "description": "Amazon Keyspaces (for Apache Cassandra) now returns an iterator position in the GetRecords response for change data capture (CDC) streams, indicating whether a consumer has reached the tip of the stream or whether additional records may be available. Amazon Keyspaces is a scalable, serverless, and managed Apache Cassandra-compatible database service that lets customers run Cassandra workloads on AWS without managing infrastructure. CDC streams capture row-level changes to Keyspaces tables so customers can integrate with downstream analytics, replication, and event-driven applications.\n \nPreviously, customers polled CDC streams at a fixed cadence regardless of whether new records were available, leading to inefficient resource usage and unnecessary CDC consumption costs. With iterator position, customers can now adapt polling frequency based on whether the iterator is at the tip of the stream or has records pending, lowering CDC consumption costs while maintaining timely data processing. The GetRecords response now includes an iteratorDescription structure with an iteratorPosition field that returns either AT_TIP or BEHIND_TIP, enabling customers to optimize their data integration pipelines and event-driven architectures.\n \nThis feature is available in all AWS Regions where Amazon Keyspaces CDC is supported. To use it, customers need to update to the latest AWS SDK. To learn more, visit the Amazon Keyspaces product page and see Working with change data capture (CDC) streams in the Amazon Keyspaces Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/keyspaces-cdc-iterator-position/",
+      "pubDate": "2026-06-03T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-301e53485c37",
+      "title": "Amazon RDS for Db2 launches support for IBM Db2 v12.1 and Db2 Community Edition",
+      "description": "Amazon RDS for Db2 now supports IBM Db2 v12.1. With Db2 v12.1, RDS now supports Db2 Standard, Db2 Advanced, and Db2 Community Edition. Db2 Community Edition provides all the features available in Standard and Advanced Editions, with no commercial software licensing charges for development and test applications. This allows you to easily start developing and testing Db2 applications with a managed database service without worrying about software licensing.\n  To use Db2 Community Edition, get a free IBM Customer ID from the IBM website and create your database instances using the the Amazon RDS console. For details, see Amazon RDS for Db2 documentation. For information about new features included in Db2 12.1, visit IBM documentation.\n  Amazon RDS for Db2 12.1 with support for Db2 Community Edition is available in all the AWS Regions where Amazon RDS for Db2 is currently available.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-db2-v12-community-edition",
+      "pubDate": "2026-06-03T07:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-47f760b88a6a",
+      "title": "AWS IoT Core adds new logs to troubleshoot connectivity and authentication",
+      "description": "AWS IoT Core now provides two new Amazon CloudWatch Log event types that help you troubleshoot device connectivity issues and authentication errors across your Internet of Things (IoT) fleet.\n \nThe new Ping log event type is emitted when devices send MQTT Keep-alive messages, and it enables you to identify connections or devices that were unable to keep the connection alive. The new Connection.AuthNError log event type records rejected connection attempts due to authentication failure, along with detailed error codes that tell you what went wrong, so you can resolve credential and certificate issues faster.\n \nTo get started, configure event-level logging in your AWS IoT Core settings with your desired log level and Amazon CloudWatch log group destination, then opt into these new event types. The two new event types are available in all AWS Regions where AWS IoT Core is available. To learn more, see AWS IoT log entries in the AWS IoT Core developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-iot-core-ping-auth-logs/",
+      "pubDate": "2026-06-03T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch"
+      ]
+    },
     {
       "id": "aws-news-a3f0312be820",
       "title": "Amazon EKS and Amazon EKS Distro now supports Kubernetes version 1.36",
@@ -381,6 +462,26 @@
       ]
     },
     {
+      "id": "aws-news-f090da8746d8",
+      "title": "AWS Glue Data Catalog Client for Apache Hive Metastore now supports Hive 3 and discovery of multiple catalogs",
+      "description": "The AWS Glue Data Catalog Client for Apache Hive Metastore now supports Hive 3. With this update, Hive-compatible clients can now use this library to list and read multiple catalogs in the Glue Data Catalog. This client library is available as an open-source reference implementation that customers and partners can use to build their own Hive-compatible Glue Data Catalog integrations. To learn more, see AWS Glue Data Catalog Client for Apache Hive Metastore.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-glue-data-catalog-apache-hive3/",
+      "pubDate": "2026-05-23T00:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "glue",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-dc449d36d1ee",
       "title": "Streamline your infrastructure: Automating AMI creation with Kiro CLI and EC2 Image Builder",
       "description": "Managing infrastructure at scale requires robust automation tools that reduce manual effort while maintaining consistency and security. The combination of Kiro CLI and AWS EC2 Image Builder offers a powerful solution for automating the creation, testing, and deployment of Amazon Machine Images (AMIs). The challenge of manual image management Traditional approaches of creating and maintaining AMIs often involve manual […]",
@@ -448,131 +549,6 @@
       ]
     },
     {
-      "id": "aws-news-30a166b02d68",
-      "title": "Amazon Aurora MySQL 8.4  is now generally available",
-      "description": "Amazon Aurora MySQL-Compatible Edition now supports MySQL 8.4, a community MySQL Long Term Support (LTS) major version. Aurora MySQL 8.4 launches with compatibility for community MySQL 8.4.7 and introduces aligned version numbering, so the version number you run on Aurora matches the community MySQL version it is compatible with. Aurora also manages the underlying patch on your behalf, simplifying day-to-day operations. Aurora MySQL now targets major versions within 12 months of community MySQL LTS releases, minor versions within 3 months of each community minor, and an Aurora LTS minor within 12 months of each major. For engine specific release objectives, see the Aurora and RDS open source release calendar announcement.\n  Aurora MySQL 8.4 strengthens security defaults for new clusters. TLS is enforced by default with only TLS 1.2 and 1.3 supported, new accounts use the caching_sha2_password authentication plugin, and password validation policies are customizable through DB cluster parameter groups. Automated upgrade prechecks identify compatibility issues before your cluster goes offline, giving you confidence before you upgrade. To learn more about the Aurora MySQL 8.4 customer experience, refer to the Aurora MySQL 8.4 launch announcement blog.\n  You can upgrade your database using Amazon RDS Blue/Green Deployments, in-place upgrade, or restore from a snapshot. Learn more about performing major version upgrades in the Amazon Aurora User Guide. You can also migrate to Aurora MySQL 8.4 from external MySQL sources using AWS Database Migration Service or Percona XtraBackup. Aurora MySQL 8.4 is available in all AWS Regions where Aurora MySQL is available.\n  Amazon Aurora MySQL is designed for unparalleled high performance and availability at global scale with full MySQL compatibility. It provides scale-to-zero serverless compute, Aurora Global Database for Multi-Region resilience, Aurora I/O-Optimized for improved price performance on I/O-intensive workloads, and built-in security and continuous backups. To get started with Amazon Aurora, take a look at our getting started page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-aurora-mysql/8-4/",
-      "pubDate": "2026-05-21T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "generally-available",
-        "support",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-3644bc0c118d",
-      "title": "AWS Deadline Cloud now supports browsing job attachments in the monitor",
-      "description": "AWS Deadline Cloud now supports browsing job attachment files directly within the Deadline Cloud monitor. AWS Deadline Cloud is a fully managed service that simplifies render management for teams creating computer-generated graphics and visual effects, for films, television, broadcasting, web content, and design.\n  The Deadline Cloud job attachments feature simplifies managing input and output files for render jobs by handling uploads and downloads through Amazon S3. Previously, you could download all outputs for a job but couldn't easily see which specific files were attached as inputs or generated as outputs. With this new browsing capability, you can now view all attached files for a given job directly from the monitor in the browser or desktop application, clearly organized by inputs and outputs. You can also download individual files as needed, making it easy to retrieve specific assets without downloading everything.\n  For more information, please visit the Deadline Cloud product page and our AWS Deadline Cloud documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-deadline-cloud/",
-      "pubDate": "2026-05-20T20:28:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a8ede73df2af",
-      "title": "AWS Security Hub now uncovers identity risks from unused access",
-      "description": "Today, AWS Security Hub brings identity risk into the same unified console where central security teams already manage threats, exposures, and posture findings. Security Hub now detects unused IAM permissions, roles, and credentials across your AWS organization, helping central security teams identify and reduce identity risk at scale. Until now, managing identity risk across hundreds of accounts required toggling between multiple tools, with no unified view connecting unused permissions to actual resource exposure. Security Hub now surfaces these identity risks alongside threats, exposures, and posture findings in a unified console, enabling teams to prioritize remediation based on actual organizational risk.\n  When you enable Security Hub for your organization, a service-linked IAM Access Analyzer is automatically created in each member account with no additional configuration required. Security Hub evaluates IAM principals against 90 days of actual access activity, detects unused access, and correlates identity findings with exposure context so teams can focus on the risks that matter most. Security Hub also provides on-demand generation of recommended least-privilege policies based on actual usage patterns, helping teams refine IAM permissions and reduce their attack surface. These capabilities represent a foundational step toward broader cloud infrastructure entitlement management in Security Hub, delivered with consistent workflows, automation rules, and downstream integrations. These capabilities are included with Security Hub Essentials at no additional cost.\n  To learn more, see Understanding unused access findings in Security Hub in the AWS Security Hub User Guide and the AWS Security Hub product page. For the full list of AWS Regions where Security Hub is available, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-hub-unused-access/",
-      "pubDate": "2026-05-20T20:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "ga",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-57a93fb21c4a",
-      "title": "AWS Transfer Family web apps now support federated permissions with IAM Identity Center across AWS Regions",
-      "description": "AWS Transfer Family web apps now support federated permissions with AWS IAM Identity Center across multiple AWS Regions. Previously, you could only create Transfer Family web apps in the Region where your IAM Identity Center instance was enabled. With IAM Identity Center's support for multi-Region replication, you can now replicate your identity configurations to another Region and create Transfer Family web apps there, reducing latency and improving reliability for your users.\n \nAfter you enable a new Region in IAM Identity Center, you can create a Transfer Family web app in that Region. IAM Identity Center automatically replicates your workforce identities to the new Region, eliminating the need to reconfigure user credentials. Administrators can manage fine-grained permissions using the same workforce identities already configured in IAM Identity Center, and your Transfer Family web app users can sign in immediately using their existing credentials.\n \nTo get started, visit the Transfer Family User Guide. To enable IAM Identity Center across multiple Regions, refer to the IAM Identity Center User Guide. For regional availability, visit AWS Capabilities.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-transfer-family-federated-permissions-across-regions/",
-      "pubDate": "2026-05-20T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center",
-        "support",
-        "new-region"
-      ]
-    },
-    {
-      "id": "aws-news-3b7def4ecd70",
-      "title": "Amazon MWAA now supports Apache Airflow 3.2",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 3.2, the latest major release of the popular open-source workflow orchestration framework. Amazon MWAA is a managed service that lets you run Apache Airflow at scale without managing the underlying infrastructure. This release brings new data-aware scheduling capabilities and developer productivity improvements to teams building and operating data pipelines on AWS.\n \nWith Apache Airflow 3.2, you can now use asset partitioning to trigger downstream DAGs based on specific slices of data, such as a date-partitioned S3 path, rather than an entire asset, giving data engineering teams more precise control over pipeline execution. This release also expands Human-in-the-Loop (HITL) capabilities with a full audit history view for approvals, HITL support for the AgenticOperator, and synchronous callback support for Deadline Alerts. Additional improvements include Grid View virtualization for faster rendering of large DAGs, full XCom management from the Airflow UI, and async callable support in PythonOperator..\n \nYou can launch a new Apache Airflow 3.2 environment on Amazon MWAA, or upgrade from 2.11 or later, with just a few clicks in the AWS Management Console in all currently supported Amazon MWAA regions. To learn more about Apache Airflow 3.2 visit the Amazon MWAA documentation, and the Apache Airflow 3.2 change log in the Apache Airflow documentation.\n  Apache, Apache Airflow, and Airflow are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-mwaa-now-supports-apache-airflow-3-2/",
-      "pubDate": "2026-05-19T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "launch",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8f733330971a",
-      "title": "Amazon ECS introduces pause and continue controls for service deployments",
-      "description": "Amazon Elastic Container Service (Amazon ECS) now enables you to pause service deployments at critical stages during deployment progression and continue deployments when ready. You can use these pause points to introduce manual decision points and interactive controls into your deployments for scenarios such as manual approval workflows, operational checks, integration tests, or custom automation, while continuing to use native Amazon ECS deployment strategies with managed traffic shifting, bake times, fast rollbacks, CloudWatch alarms, and deployment circuit breaker.\n \nWith this launch, you can configure a new PAUSE deployment lifecycle hook as part of your Amazon ECS service deployment configuration. When a deployment reaches a configured pause point, Amazon ECS pauses deployment progression and emits Amazon EventBridge events that you can use to trigger automation workflows, approval systems, or external validation processes. You can then continue or roll back the deployment using the new ContinueServiceDeployment API. With pause hooks, you can configure timeout durations up to 14 days and timeout actions to automatically continue or roll back the deployment if no action is received.\n \nYou can configure pause hooks for rolling, blue/green, linear, and canary deployment strategies using the Amazon ECS Console, AWS CLI, AWS SDKs, AWS CloudFormation, AWS CDK, and Terraform. You can use the ContinueServiceDeployment API through the Amazon ECS Console, AWS CLI, and AWS SDKs. This feature is available in all AWS commercial and AWS GovCloud (US) Regions. To learn more, see our documentation on pause hooks for service deployments and continuing service deployments.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ecs-pause-continue-deployments/",
-      "pubDate": "2026-05-19T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs",
-        "cloudformation",
-        "eventbridge",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ecs",
-        "cloudformation",
-        "eventbridge",
-        "cloudwatch",
-        "launch",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-8b3b7511d8fe",
       "title": "Meet Amazon Redshift RG – AWS Graviton-based instances with an integrated data lake query engine delivering up to 2.4x better performance at 30% lower price than RA3",
       "description": "On May 12, 2026, we announced the general availability of Amazon Redshift RG instances, powered by AWS Graviton processors. RG instances are up to 2.2x as fast for data warehouse workloads and up to 2.4x as fast for data lake workloads, all at 30% lower price per vCPU compared to RA3 instances. RG instances support all data lake formats supported by RA3 and eliminate Amazon Redshift Spectrum’s per-TB scanning charges. RG instances feature a custom-built integrated vectorized query engine, making them a more performant and cost-effective foundation for unified analytics. We are launching with two instance sizes: rg.xlarge and rg.4xlarge, with additional sizes coming later this year.",
@@ -590,26 +566,6 @@
         "redshift",
         "graviton",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0b8988ae37d8",
-      "title": "Amazon Managed Grafana now supports dual-stack connectivity (IPv6 and IPv4)",
-      "description": "Amazon Managed Grafana now supports dual-stack connectivity, enabling workspaces to communicate over both Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6). Dual-stack mode is available for workspaces running Grafana version 10.4 or later.\n \nWith dual-stack support, customers can simplify their network stack by eliminating the need to manage overlapping address spaces in their VPCs. Customers migrating to IPv6 can connect to their Grafana workspaces over IPv6 while maintaining IPv4 compatibility, and those not yet on IPv6 can continue using IPv4-only connections. This is especially beneficial as the continued growth of the internet exhausts available IPv4 addresses. \n \nSupport for dual-stack connectivity on Amazon Managed Grafana is available in all regions where the service is generally available. To get started, update your workspace configuration via the Amazon Managed Grafana console, API, or CLI. For more information, see the Amazon Managed Grafana User Guide. To learn more about best practices for configuring IPv6 in your environment, visit the whitepaper on IPv6 in AWS.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-managed-grafana-ipv6/",
-      "pubDate": "2026-05-19T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "grafana",
-        "generally-available",
-        "update",
         "support"
       ]
     },

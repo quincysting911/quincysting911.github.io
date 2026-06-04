@@ -1,8 +1,44 @@
 {
-  "lastUpdated": "2026-06-03T10:29:24.880Z",
+  "lastUpdated": "2026-06-04T09:39:53.855Z",
   "category": "foundation-models",
-  "totalItems": 11,
+  "totalItems": 10,
   "items": [
+    {
+      "id": "aws-news-414f0324eb08",
+      "title": "Amazon SageMaker AI launches multi-turn reinforcement learning for AI agent model customization",
+      "description": "Amazon SageMaker AI now offers multi-turn reinforcement learning (RL), a new serverless model customization technique for fine-tuning models on multi-step, agentic tasks. SageMaker AI model customization lets you adapt foundation models using techniques such as supervised fine-tuning, reinforcement learning from verifiable rewards (RLVR), and reinforcement learning from AI feedback (RLAIF), without the undifferentiated heavy lifting of building and operating your own training infrastructure. Multi-turn RL extends this by training models against your own agent environment and rewarding the full sequence of decisions an agent makes across a task, helping you specialize smaller, lower-cost models to match or exceed the task accuracy of larger general-purpose models on your target workload.\n \nTraining models that power agents to reliably complete multi-step tasks is complex and time-consuming, often requiring custom infrastructure that takes weeks to build. SageMaker's Multi-turn RL offering handles this for you. You can connect your agent running on Amazon Bedrock AgentCore Runtime for fully managed hosting, or on Amazon EKS, Amazon EC2, AWS Fargate, or any infrastructure using the framework of your choice. SageMaker AI manages the full training loop, from rollout orchestration and trajectory collection to training and checkpoint management. Built-in MLflow tracking lets you inspect agent trajectories, rewards, and traces. Evaluation jobs report reward, pass@k, and trajectory metrics so you can benchmark a model before deploying it to a SageMaker AI endpoint or Amazon Bedrock. Multi-turn RL runs as a fully serverless capability, so you pay only for the tokens processed, with no infrastructure to provision or manage.\n \nMulti-turn RL is available today through SageMaker Studio and the SageMaker Python SDK as part of Amazon SageMaker AI model customization. Supported models include Qwen 3.6 27B, Nova Lite 2.0, GPT-OSS-20B and Gemma 31B in us-west-2, and Nova Lite 2.0, GPT-OSS-20B in us-east-1. To get started with multi-turn reinforcement learning in SageMaker AI, visit the Amazon SageMaker AI documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/multi-turn-reinforcement-learning-on-sagemaker-ai/",
+      "pubDate": "2026-06-03T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "nova",
+        "sagemaker",
+        "lex",
+        "ec2",
+        "rds",
+        "eks",
+        "fargate"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "nova",
+        "sagemaker",
+        "lex",
+        "ec2",
+        "rds",
+        "eks",
+        "fargate",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-eba598bc93e0",
       "title": "The art and science of hyperparameter optimization on Amazon Nova Forge",
@@ -131,25 +167,6 @@
       ]
     },
     {
-      "id": "aws-news-89627826654e",
-      "title": "Claude Opus 4.8 is now available on AWS",
-      "description": "This post covers Opus 4.8's improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/claude-opus-4-8-is-now-available-on-aws/",
-      "pubDate": "2026-05-28T17:51:32.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "now-available",
-        "improvement"
-      ]
-    },
-    {
       "id": "aws-news-916f73acf2dd",
       "title": "Claude Opus 4.8 is now available on AWS",
       "description": "AWS  now offers Claude Opus 4.8 -- Anthropic's most capable generally available model to date -- delivering meaningful advances across agentic coding, professional knowledge work, and long-running autonomous tasks for developers and enterprises building production AI applications.\n \nClaude Opus 4.8 can perform longer autonomous runs, deeper reasoning, and consistency to be trusted with production work. For coding, the Opus 4.8 reads codebases like an engineer, plans before it edits, and holds context across long sessions in real repositories. For agentic tasks, it is better at finding paths around obstacles instead of stalling, recovering from its own errors, and knowing when to ask for help versus when to keep going. For knowledge work, it better synthesizes across long documents and complex sources, self-checks its output, and delivers structured deliverables that hold up to review.\n \nCustomers have two ways to access Claude Opus 4.8: Amazon Bedrock and Claude Platform on AWS.\n \nAmazon Bedrock keeps your data within AWS infrastructure and provides access to Claude Opus 4.8 through a unified service with AWS-managed features like Guardrails, Knowledge Bases, and regional data residency. To learn more, see Amazon Bedrock documentation  and regional availability..\n \nClaude Platform on AWS gives you direct access to Anthropic's native platform experience and capabilities via the AWS Console. Build, test, and deploy with the same APIs, features, and console experience you'd get working with Anthropic directly, unified with AWS billing and authentication. To get started, see the Claude Platform on AWS documentation",
@@ -205,28 +222,6 @@
       ],
       "tags": [
         "bedrock",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c2b0fe13c5d6",
-      "title": "Amazon Bedrock expands support for request-level usage attribution",
-      "description": "Amazon Bedrock customers can now attribute model inference usage to specific teams, applications, environments, and experiments at the individual request level on the InvokeModel and InvokeModelWithResponseStream APIs. This gives customers fine-grained visibility into how their Amazon Bedrock usage is distributed across their organization, helping them\n understand consumption patterns, optimize spend, and report usage back to internal stakeholders without provisioning additional resources.\n  This launch builds on Amazon Bedrock's existing portfolio of usage attribution capabilities. Customers can already attribute model inference usage at the resource and identity level using application inference profiles, IAM principal-based attribution, project-level tracking on the OpenAI-compatible bedrock-mantle endpoint, and workspace-level tracking for\n Anthropic Claude models. For finer-grained, per-request attribution, the Converse and ConverseStream APIs have supported request-level metadata since launch. Today's release brings the same capability to the InvokeModel and InvokeModelWithResponseStream APIs, giving customers a consistent way to tag inference calls across the entire bedrock-runtime endpoint.\n  With this launch, customers can tag each Amazon Bedrock model inference call with attributes like team, project, or environment, and analyze usage by these tags in Amazon Bedrock model invocation logs. To get started, enable model invocation logging in the AWS Region where you call Amazon Bedrock, then add metadata to your inference requests. This feature is available in all AWS commercial Regions where Amazon Bedrock is available. To learn more, see Request metadata.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-bedrock-request-level-usage-attribution/",
-      "pubDate": "2026-05-20T23:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "iam"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "iam",
         "launch",
         "ga",
         "support"
