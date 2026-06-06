@@ -1,8 +1,77 @@
 {
-  "lastUpdated": "2026-06-05T09:24:51.392Z",
+  "lastUpdated": "2026-06-06T08:21:16.855Z",
   "category": "generative-ai",
-  "totalItems": 45,
+  "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-12e805b427a3",
+      "title": "Amazon Bedrock AgentCore Runtime introduces interactive shells for terminal access into agent sessions",
+      "description": "Amazon Bedrock AgentCore Runtime now supports interactive shells through a new InvokeAgentRuntimeCommandShell API, opening a persistent, PTY-backed terminal directly into a running agent session over WebSocket. This complements the existing InvokeAgentRuntimeCommand API for one-shot execution, giving developers a full terminal experience inside an isolated microVM with colors, tab completion, Ctrl+C, terminal resize, and automatic reconnect on network drop.\n  This is particularly important for developers hosting coding agents such as Claude Code, OpenAI Codex, Amazon Kiro on AgentCore Runtime. In addition to the asynchronous command execution they already had, they can now authenticate, drop into the microVM hosting their coding agent, and interact with it like a local terminal: interact with the agent, inspect files, run ad-hoc commands, or debug the environment state. The shell carries persistent state across commands within the same session, so environment variables, working directory, and command history all behave as expected.\n  Each interactive session is identified by a runtime session ID and a shell ID. Passing both back when reconnecting lands you in the exact same shell. Brief network drops reconnect automatically, and longer disconnects can be resumed manually using the same IDs. A single agent runtime supports up to 10 concurrent shells, allowing developers to open multiple terminals against the same or multiple microVMs and watch agents work different branches in parallel.\n  To get started using the AgentCore CLI: `agentcore exec --it --runtime <runtime-arn>`. To learn more, see Interactive Shells (Terminals) and Shell execution in AgentCore Runtime for a comparison of both shell modes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-runtime/",
+      "pubDate": "2026-06-05T22:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-80b4478941e3",
+      "title": "Amazon ECS with AWS Fargate now supports 32vCPU compute configurations",
+      "description": "Amazon Elastic Container Service (Amazon ECS) with AWS Fargate now supports 32vCPU compute configurations, enabling customers to run more demanding applications with greater flexibility and performance. AWS Fargate offers 32vCPU tasks with the following memory configurations: 60 GiB, 120 GiB, or 244 GiB, for both x86-based and ARM-based workloads on Linux. These new task sizes extend Amazon ECS’s capability to support high-performance computing use-cases, large-scale data processing, AI inference, and other compute-intensive workloads. With 32vCPUs and up to 244 GiB of memory, Amazon ECS customers can now deploy larger containers and scale applications beyond previous limits, all while leveraging the reliability, security, and scalability of AWS Fargate.\n  To use the new 32vCPU task sizes, simply configure your task definitions to specify 32 as the vCPU value and select one of the new memory options (60, 120, or 244 GiB), then deploy your Amazon ECS services or tasks as usual via the AWS Management Console, CLI, or your infrastructure-as-code of choice. The new vCPU and memory configurations are available on both Fargate and Fargate Spot capacity providers, and existing Compute Savings Plans apply automatically. For pricing details, refer to AWS Fargate pricing page.\n  The 32vCPU tasks are available with Amazon ECS and AWS Fargate in all AWS commercial and AWS GovCloud (US) Regions. To learn more, refer to the Amazon ECS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ecs-fargate-32vcpu",
+      "pubDate": "2026-06-05T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ecs",
+        "fargate"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "ecs",
+        "fargate",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-74201dcec323",
+      "title": "The AWS MCP Server now supports cross-account and cross-role access",
+      "description": "Today, AWS announced cross-account and cross-role access for the AWS Model Context Protocol (MCP) Server, part of the Agent Toolkit for AWS. This feature allows developers using AI coding agents like Kiro, Claude Code, or Codex to work across multiple AWS accounts and AWS Identity and Access Management (IAM) roles within a single session, with no restarts required. Previously, switching profiles required stopping the AI coding session, updating local AWS credentials, and restarting the MCP server for every account change. Now, AI agents using the AWS MCP Server can specify a profile on each command, allowing users to switch between accounts and roles seamlessly.\n \n\n Cross-account access helps developers move faster across multi-account environments. For example, a DevOps engineer can query CloudWatch logs across production and staging accounts to diagnose a performance issue, or an application developer can update a Lambda configuration in one account and adjust an S3 bucket policy in another, all within the same conversation. Each request specifies which profile to use, so there is no risk of commands reaching the wrong account.\n \nTo get started, see Multi-profile support in the Agent Toolkit for AWS user guide. The AWS MCP Server is available in the US East (N. Virginia) and Europe (Frankfurt) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-mcp-server/",
+      "pubDate": "2026-06-05T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "iam",
+        "cloudwatch",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c71a70b41926",
       "title": "Build governance dashboards for Amazon SageMaker Catalog with Amazon Quick",

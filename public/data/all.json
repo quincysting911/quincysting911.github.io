@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05T09:24:51.392Z",
+  "lastUpdated": "2026-06-06T08:21:16.855Z",
   "totalItems": 199,
   "sources": {
     "whatsNew": 93,
@@ -11,6 +11,152 @@
     "developersAndDevOps": 12
   },
   "items": [
+    {
+      "id": "aws-news-12e805b427a3",
+      "title": "Amazon Bedrock AgentCore Runtime introduces interactive shells for terminal access into agent sessions",
+      "description": "Amazon Bedrock AgentCore Runtime now supports interactive shells through a new InvokeAgentRuntimeCommandShell API, opening a persistent, PTY-backed terminal directly into a running agent session over WebSocket. This complements the existing InvokeAgentRuntimeCommand API for one-shot execution, giving developers a full terminal experience inside an isolated microVM with colors, tab completion, Ctrl+C, terminal resize, and automatic reconnect on network drop.\n  This is particularly important for developers hosting coding agents such as Claude Code, OpenAI Codex, Amazon Kiro on AgentCore Runtime. In addition to the asynchronous command execution they already had, they can now authenticate, drop into the microVM hosting their coding agent, and interact with it like a local terminal: interact with the agent, inspect files, run ad-hoc commands, or debug the environment state. The shell carries persistent state across commands within the same session, so environment variables, working directory, and command history all behave as expected.\n  Each interactive session is identified by a runtime session ID and a shell ID. Passing both back when reconnecting lands you in the exact same shell. Brief network drops reconnect automatically, and longer disconnects can be resumed manually using the same IDs. A single agent runtime supports up to 10 concurrent shells, allowing developers to open multiple terminals against the same or multiple microVMs and watch agents work different branches in parallel.\n  To get started using the AgentCore CLI: `agentcore exec --it --runtime <runtime-arn>`. To learn more, see Interactive Shells (Terminals) and Shell execution in AgentCore Runtime for a comparison of both shell modes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-runtime/",
+      "pubDate": "2026-06-05T22:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-87a360161fab",
+      "title": "Simplified permissions for Amazon S3 Tables and Iceberg materialized views are now available in AWS GovCloud (US) Regions",
+      "description": "AWS Glue Data Catalog now supports AWS IAM-based authorization for Amazon S3 Tables and Apache Iceberg materialized views. With IAM-based authorization, you can define all necessary permissions across storage, catalog, and query engines in a single IAM policy.\n  This capability simplifies the integration of S3 Tables or materialized views with any AWS Analytics service, including Amazon Athena, Amazon EMR, Amazon Redshift, and AWS Glue. You can also opt in to AWS Lake Formation at any time to manage fine-grained access controls using the AWS Management Console, AWS CLI, API, and AWS CloudFormation.\n  This feature is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. To learn more, visit the S3 Tables documentation and the AWS Glue Data Catalog documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/gdc-s3tables-simplified-permissions-in-aws-govcloud/",
+      "pubDate": "2026-06-05T21:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "emr",
+        "redshift",
+        "cloudformation",
+        "iam",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "emr",
+        "redshift",
+        "cloudformation",
+        "iam",
+        "glue",
+        "athena",
+        "now-available",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2351dbb9487a",
+      "title": "Amazon OpenSearch UI is now available in GovCloud regions",
+      "description": "Amazon OpenSearch Service expands its modernized operational analytics experience to GovCloud regions, including AWS GovCloud (US-East) and AWS GovCloud (US-West), enabling users to gain insights across data spanning managed domains and serverless collections from a single endpoint. The expansion includes Workspaces to enhance collaboration and productivity, allowing teams to create dedicated spaces. Discover is revamped to provide a unified log exploration experience supporting languages such as Piped-Processing-Language (PPL) and SQL, in addition to DQL and Lucene. Discover now features a data selector to support multiple sources, new visual design and query autocomplete for improved usability. This experience ensures users can access the latest UI enhancements, regardless of version of underlying managed cluster or collection.\n  The expanded OpenSearch analytics helps users gain insights from their operational data by providing purpose-built features for observability, security analytics, and search use cases. With the enhanced Discover interface, users can now analyze data from multiple sources without switching tools, improving efficiency. Workspaces enable better collaboration by creating dedicated environments for teams to work on dashboards, saved queries, and other relevant content. Availability of the latest UI updates across all versions ensures uninterrupted access to the newest features and tools.\n  OpenSearch UI can connect to OpenSearch domains (above version 1.3) and OpenSearch serverless collections. To get started, create an OpenSearch application in AWS Management Console. Learn more at Amazon OpenSearch Service Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-ui-govcloud-region",
+      "pubDate": "2026-06-05T20:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "opensearch",
+        "opensearch service",
+        "rds"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "rds",
+        "ga",
+        "now-available",
+        "update",
+        "enhancement",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-6c4e5a7bcd21",
+      "title": "Try the new console experience in Amazon Bedrock, optimized for Anthropic- and OpenAI-compatible APIs",
+      "description": "You can use the new console experience on Amazon Bedrock to browse and compare the latest AI models side by side, organize work into projects with streamlined evaluation workflows, and access project-aware live documentation with auto-prefilled code snippets ready to copy and run.",
+      "link": "https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/",
+      "pubDate": "2026-06-05T19:15:11.000Z",
+      "source": "newsBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "bedrock",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-80b4478941e3",
+      "title": "Amazon ECS with AWS Fargate now supports 32vCPU compute configurations",
+      "description": "Amazon Elastic Container Service (Amazon ECS) with AWS Fargate now supports 32vCPU compute configurations, enabling customers to run more demanding applications with greater flexibility and performance. AWS Fargate offers 32vCPU tasks with the following memory configurations: 60 GiB, 120 GiB, or 244 GiB, for both x86-based and ARM-based workloads on Linux. These new task sizes extend Amazon ECS’s capability to support high-performance computing use-cases, large-scale data processing, AI inference, and other compute-intensive workloads. With 32vCPUs and up to 244 GiB of memory, Amazon ECS customers can now deploy larger containers and scale applications beyond previous limits, all while leveraging the reliability, security, and scalability of AWS Fargate.\n  To use the new 32vCPU task sizes, simply configure your task definitions to specify 32 as the vCPU value and select one of the new memory options (60, 120, or 244 GiB), then deploy your Amazon ECS services or tasks as usual via the AWS Management Console, CLI, or your infrastructure-as-code of choice. The new vCPU and memory configurations are available on both Fargate and Fargate Spot capacity providers, and existing Compute Savings Plans apply automatically. For pricing details, refer to AWS Fargate pricing page.\n  The 32vCPU tasks are available with Amazon ECS and AWS Fargate in all AWS commercial and AWS GovCloud (US) Regions. To learn more, refer to the Amazon ECS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ecs-fargate-32vcpu",
+      "pubDate": "2026-06-05T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ecs",
+        "fargate"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "ecs",
+        "fargate",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-74201dcec323",
+      "title": "The AWS MCP Server now supports cross-account and cross-role access",
+      "description": "Today, AWS announced cross-account and cross-role access for the AWS Model Context Protocol (MCP) Server, part of the Agent Toolkit for AWS. This feature allows developers using AI coding agents like Kiro, Claude Code, or Codex to work across multiple AWS accounts and AWS Identity and Access Management (IAM) roles within a single session, with no restarts required. Previously, switching profiles required stopping the AI coding session, updating local AWS credentials, and restarting the MCP server for every account change. Now, AI agents using the AWS MCP Server can specify a profile on each command, allowing users to switch between accounts and roles seamlessly.\n \n\n Cross-account access helps developers move faster across multi-account environments. For example, a DevOps engineer can query CloudWatch logs across production and staging accounts to diagnose a performance issue, or an application developer can update a Lambda configuration in one account and adjust an S3 bucket policy in another, all within the same conversation. Each request specifies which profile to use, so there is no risk of commands reaching the wrong account.\n \nTo get started, see Multi-profile support in the Agent Toolkit for AWS user guide. The AWS MCP Server is available in the US East (N. Virginia) and Europe (Frankfurt) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-mcp-server/",
+      "pubDate": "2026-06-05T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "iam",
+        "cloudwatch",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b35c3af1bf49",
       "title": "Query Amazon Redshift using natural language with Kiro",
@@ -130,6 +276,27 @@
         "sagemaker",
         "jumpstart",
         "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-e39bf351b06a",
+      "title": "AWS Deadline Cloud now supports plugin sync for service-managed fleets",
+      "description": "AWS Deadline Cloud now gives you an easier way to deliver plugins to cloud workers when using service-managed fleets. AWS Deadline Cloud is a fully managed service that helps teams run compute-intensive workloads in the cloud for visual effects, animation, product design, simulation, and gaming.\n \nPreviously, deploying plugins to cloud workers required custom scripting or manual configuration for each digital content creation (DCC) application and version. With this feature, you upload your plugin files to a prescribed path in your queue's job attachments Amazon S3 bucket, much like copying plugins into a shared folder on your workstation, and Deadline Cloud automatically syncs them to workers when a job session starts. This simplifies pipeline setup, reduces configuration errors, and helps you start jobs with the correct plugins in place. Plugin sync is now generally available for Blender and Autodesk Maya, with support for additional DCC applications coming soon.\n \nPlugin sync for service-managed fleets is available in all AWS Regions where Deadline Cloud is offered. To learn more, see Sync plugins to workers in the AWS Deadline Cloud Developer Guide, or visit the AWS Deadline Cloud product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/deadline-cloud/plugin-sync",
+      "pubDate": "2026-06-04T16:13:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "generally-available",
+        "ga",
+        "support",
+        "coming-soon"
       ]
     },
     {
@@ -1360,6 +1527,29 @@
       ]
     },
     {
+      "id": "aws-news-861ae10eb85d",
+      "title": "Amazon Bedrock AgentCore Identity now allows you to bring your own secrets with AWS Secrets Manager",
+      "description": "Amazon Bedrock AgentCore Identity now allows customers the ability to reference existing AWS Secrets Manager secret ARNs directly in AgentCore Identity Credential Providers.\n  Previously, AgentCore Identity used a service-managed secret approach, where secrets were created and managed by the service on the customer's behalf. This approach prevented customers from applying resource tags on create, encrypting secrets with a customer-managed key (CMK), or applying other organization-specific governance controls at the time of secret creation — causing friction for teams with strict governance requirements.\n  Now, customers create and manage their secrets in AWS Secrets Manager using their own governance and compliance policies, including custom CMKs, tagging strategies, automatic rotation and resource policies, and then reference the existing secret ARN when configuring a Credential Provider in AgentCore Identity. This gives customers full ownership of how their secrets are created, classified, and governed, without changing how AgentCore Identity uses them at runtime.\n  Amazon Bedrock AgentCore Identity bring your own secret is now generally available in 14 AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm). To learn more, visit the Amazon Bedrock AgentCore Identity documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/agentcore-identity-secrets-manager/",
+      "pubDate": "2026-06-01T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "secrets manager"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "secrets manager",
+        "generally-available",
+        "ga"
+      ]
+    },
+    {
       "id": "aws-news-ab2c13910643",
       "title": "Amazon EC2 M8i and M8i-flex instances are now available in Asia Pacific (New Zealand) Region",
       "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in Asia Pacific (New Zealand) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex instance page or visit the AWS News blog.",
@@ -1402,26 +1592,26 @@
       ]
     },
     {
-      "id": "aws-news-861ae10eb85d",
-      "title": "Amazon Bedrock AgentCore Identity now allows you to bring your own secrets with AWS Secrets Manager",
-      "description": "Amazon Bedrock AgentCore Identity now allows customers the ability to reference existing AWS Secrets Manager secret ARNs directly in AgentCore Identity Credential Providers.\n  Previously, AgentCore Identity used a service-managed secret approach, where secrets were created and managed by the service on the customer's behalf. This approach prevented customers from applying resource tags on create, encrypting secrets with a customer-managed key (CMK), or applying other organization-specific governance controls at the time of secret creation — causing friction for teams with strict governance requirements.\n  Now, customers create and manage their secrets in AWS Secrets Manager using their own governance and compliance policies, including custom CMKs, tagging strategies, automatic rotation and resource policies, and then reference the existing secret ARN when configuring a Credential Provider in AgentCore Identity. This gives customers full ownership of how their secrets are created, classified, and governed, without changing how AgentCore Identity uses them at runtime.\n  Amazon Bedrock AgentCore Identity bring your own secret is now generally available in 14 AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm). To learn more, visit the Amazon Bedrock AgentCore Identity documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/agentcore-identity-secrets-manager/",
+      "id": "aws-news-f7bc5466ba10",
+      "title": "Amazon SageMaker HyperPod now offers troubleshooting skills for AI coding assistants",
+      "description": "Amazon SageMaker HyperPod now provides troubleshooting skills that bring expert-level AI/ML cluster diagnostics directly into AI coding assistants such as Claude Code, Cursor, and Kiro. SageMaker HyperPod is a purpose-built infrastructure for developing, training, and deploying foundation models at scale. It provides a resilient and performant environment with built-in fault tolerance, and automated cluster recovery, reducing the undifferentiated heavy lifting of managing large-scale AI/ML infrastructure. HyperPod skills enable you to diagnose and resolve cluster issues through natural language, reducing the time and expertise required to troubleshoot distributed training and inference infrastructure.\n \nDebugging GPU hardware faults, diagnosing NCCL communication failures, and identifying performance bottlenecks across large distributed clusters remains complex and time-consuming. Operators often need to manually SSM into nodes, parse logs across dozens of instances, and cross-reference documentation. The new HyperPod troubleshooting skills help with faster time to resolution with capabilities spanning cluster health validation, hardware and communication diagnostics, software version drifts, and automated diagnostic reporting. Each skill encodes AWS best practices into structured diagnostic workflows that systematically guides AI agents to collect evidence from your cluster nodes via AWS Systems Manager, analyze patterns, and provide actionable recommendations. The skills work with your existing HyperPod infrastructure — no modifications are required.\n \nThe HyperPod troubleshooting skills are open source and available today for both Slurm and Amazon EKS orchestrated HyperPod clusters via the SageMaker AI skills plugin. To get started, visit the AWSLabs github repository to install the sagemaker-ai plugin in your preferred coding assistant.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-hyperpod-troubleshooting-skills/",
       "pubDate": "2026-06-01T16:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "bedrock",
-        "agentcore",
-        "secrets manager"
+        "sagemaker",
+        "hyperpod",
+        "lex",
+        "eks"
       ],
       "categories": [
-        "generative-ai"
+        "foundation-models"
       ],
       "tags": [
-        "bedrock",
-        "agentcore",
-        "secrets manager",
-        "generally-available",
-        "ga"
+        "sagemaker",
+        "hyperpod",
+        "lex",
+        "eks"
       ]
     },
     {
@@ -1444,29 +1634,6 @@
         "launch",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f7bc5466ba10",
-      "title": "Amazon SageMaker HyperPod now offers troubleshooting skills for AI coding assistants",
-      "description": "Amazon SageMaker HyperPod now provides troubleshooting skills that bring expert-level AI/ML cluster diagnostics directly into AI coding assistants such as Claude Code, Cursor, and Kiro. SageMaker HyperPod is a purpose-built infrastructure for developing, training, and deploying foundation models at scale. It provides a resilient and performant environment with built-in fault tolerance, and automated cluster recovery, reducing the undifferentiated heavy lifting of managing large-scale AI/ML infrastructure. HyperPod skills enable you to diagnose and resolve cluster issues through natural language, reducing the time and expertise required to troubleshoot distributed training and inference infrastructure.\n \nDebugging GPU hardware faults, diagnosing NCCL communication failures, and identifying performance bottlenecks across large distributed clusters remains complex and time-consuming. Operators often need to manually SSM into nodes, parse logs across dozens of instances, and cross-reference documentation. The new HyperPod troubleshooting skills help with faster time to resolution with capabilities spanning cluster health validation, hardware and communication diagnostics, software version drifts, and automated diagnostic reporting. Each skill encodes AWS best practices into structured diagnostic workflows that systematically guides AI agents to collect evidence from your cluster nodes via AWS Systems Manager, analyze patterns, and provide actionable recommendations. The skills work with your existing HyperPod infrastructure — no modifications are required.\n \nThe HyperPod troubleshooting skills are open source and available today for both Slurm and Amazon EKS orchestrated HyperPod clusters via the SageMaker AI skills plugin. To get started, visit the AWSLabs github repository to install the sagemaker-ai plugin in your preferred coding assistant.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-hyperpod-troubleshooting-skills/",
-      "pubDate": "2026-06-01T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "eks"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "eks"
       ]
     },
     {
@@ -2013,25 +2180,6 @@
       ]
     },
     {
-      "id": "aws-news-f56d5db3b50c",
-      "title": "Amazon WorkSpaces Applications adds support for Windows Desktop OS",
-      "description": "Amazon WorkSpaces Applications now supports the ability to set up streaming resources powered by Windows Desktop operating systems using Bring Your Own License (BYOL). Customers can now bring their existing Windows Desktop licenses to support their eligible Microsoft 365 Apps for enterprise, delivering a consistent and familiar desktop experience as users move between on-premises and virtual desktop environments.\n  With BYOL support on WorkSpaces Applications, the operating system is hosted on hardware dedicated to the customer's AWS account, enabling customers to stream Windows desktop applications and full desktop experiences at scale. Customers benefit from cost savings by bringing their existing Windows Desktop OS licenses, eliminating OS fees so they only pay for compute and streaming infrastructure. When the local device and the streaming session both run the same Windows Desktop OS, users apply the same workflows, shortcuts, and navigation in both environments. This removes the cognitive overhead of adapting to a different desktop experience when switching between local and remote work, reducing onboarding time.\n  Windows Desktop for WorkSpaces Applications is available in multiple AWS Regions. For the list of supported regions, see Amazon WorkSpaces Applications BYOL documentation.\n  To take advantage of BYOL on WorkSpaces Applications, organizations must meet Microsoft's licensing requirements and commit to running a minimum number of streaming resources in a given AWS Region each month. To learn more about eligibility requirements and getting started, see the Amazon WorkSpaces Applications documentation and FAQs.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-workspaces-applications-windows-desktop-OS/",
-      "pubDate": "2026-05-28T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-44a90737b475",
       "title": "DynamoDB Streams now supports AWS PrivateLink for FIPS endpoints in AWS GovCloud (US) Regions",
       "description": "Amazon DynamoDB Streams now supports AWS PrivateLink for FIPS (Federal Information Processing Standard) endpoints in AWS GovCloud (US) Regions. DynamoDB Streams captures time-ordered sequences of item-level modifications in DynamoDB tables, enabling real-time data processing and event-driven architectures. This enhancement allows government agencies and organizations with federal compliance requirements to establish private connectivity between their VPCs and DynamoDB Streams FIPS endpoints without exposing traffic to the public internet.\n \nThis capability helps customers meet strict federal compliance and regulatory requirements while simplifying their network architecture. By keeping all traffic within the AWS network infrastructure, organizations can securely process real-time data streams, implement compliant change data capture (CDC) solutions, and build event-driven architectures that adhere to federal security standards. Government agencies operating in GovCloud regions can now leverage DynamoDB Streams for secure data streaming applications while maintaining the enhanced security and privacy that AWS PrivateLink provides.\n \nAWS PrivateLink support for DynamoDB Streams FIPS endpoints is available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions, as well as US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), and Canada West (Calgary).\n \n To learn more, visit the Amazon DynamoDB Streams PrivateLink documentation and the AWS PrivateLink page.",
@@ -2052,6 +2200,25 @@
         "organizations",
         "ga",
         "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f56d5db3b50c",
+      "title": "Amazon WorkSpaces Applications adds support for Windows Desktop OS",
+      "description": "Amazon WorkSpaces Applications now supports the ability to set up streaming resources powered by Windows Desktop operating systems using Bring Your Own License (BYOL). Customers can now bring their existing Windows Desktop licenses to support their eligible Microsoft 365 Apps for enterprise, delivering a consistent and familiar desktop experience as users move between on-premises and virtual desktop environments.\n  With BYOL support on WorkSpaces Applications, the operating system is hosted on hardware dedicated to the customer's AWS account, enabling customers to stream Windows desktop applications and full desktop experiences at scale. Customers benefit from cost savings by bringing their existing Windows Desktop OS licenses, eliminating OS fees so they only pay for compute and streaming infrastructure. When the local device and the streaming session both run the same Windows Desktop OS, users apply the same workflows, shortcuts, and navigation in both environments. This removes the cognitive overhead of adapting to a different desktop experience when switching between local and remote work, reducing onboarding time.\n  Windows Desktop for WorkSpaces Applications is available in multiple AWS Regions. For the list of supported regions, see Amazon WorkSpaces Applications BYOL documentation.\n  To take advantage of BYOL on WorkSpaces Applications, organizations must meet Microsoft's licensing requirements and commit to running a minimum number of streaming resources in a given AWS Region each month. To learn more about eligibility requirements and getting started, see the Amazon WorkSpaces Applications documentation and FAQs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-workspaces-applications-windows-desktop-OS/",
+      "pubDate": "2026-05-28T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
         "support"
       ]
     },
@@ -2542,10 +2709,10 @@
       ]
     },
     {
-      "id": "aws-news-04ef45480c72",
-      "title": "Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-East) Region",
-      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-East) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex instance page or visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-m8i-m8i-flex-govcloud-east/",
+      "id": "aws-news-cd94d038383e",
+      "title": "Amazon EC2 R8i and R8i-flex instances are now available in AWS GovCloud (US-East) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i and R8i-flex instances are available in the AWS GovCloud (US-East) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i and R8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.\n  R8i-flex, our first memory-optimized Flex instances, are the easiest way to get price performance benefits for a majority of memory-intensive workloads. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, delivering exceptional performance for mission-critical SAP workloads.\n  To get started, sign in to the AWS Management Console. For more information about the R8i and R8i-flex instances visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-r8i-r8i-flex-govcloud-east/",
       "pubDate": "2026-05-26T16:00:00.000Z",
       "source": "whatsNew",
       "services": [
@@ -2563,10 +2730,10 @@
       ]
     },
     {
-      "id": "aws-news-cd94d038383e",
-      "title": "Amazon EC2 R8i and R8i-flex instances are now available in AWS GovCloud (US-East) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i and R8i-flex instances are available in the AWS GovCloud (US-East) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i and R8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.\n  R8i-flex, our first memory-optimized Flex instances, are the easiest way to get price performance benefits for a majority of memory-intensive workloads. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, delivering exceptional performance for mission-critical SAP workloads.\n  To get started, sign in to the AWS Management Console. For more information about the R8i and R8i-flex instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-r8i-r8i-flex-govcloud-east/",
+      "id": "aws-news-04ef45480c72",
+      "title": "Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-East) Region",
+      "description": "Starting today, Amazon EC2 M8i and M8i-flex instances are now available in AWS GovCloud (US-East) Region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The M8i and M8i-flex instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% better performance than M7i and M7i-flex instances, with even higher gains for specific workloads. The M8i and M8i-flex instances are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to M7i and M7i-flex instances.\n  M8i-flex are the easiest way to get price performance benefits for a majority of general-purpose workloads like web and application servers, microservices, small and medium data stores, virtual desktops, and enterprise applications. They offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources.\n  M8i instances are a great choice for all general purpose workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. The SAP-certified M8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. For more information about the new instances, visit the M8i and M8i-flex instance page or visit the AWS News blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-m8i-m8i-flex-govcloud-east/",
       "pubDate": "2026-05-26T16:00:00.000Z",
       "source": "whatsNew",
       "services": [
@@ -2737,126 +2904,6 @@
         "unified studio",
         "iam",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-aeb68829b9bd",
-      "title": "New agentic migration assessment capabilities now available with AWS Transform",
-      "description": "AWS Transform now offers advanced migration assessment capabilities including what-if scenarios, customizable assumptions, flexible file format support, and multiple new total cost of ownership (TCO) assessment features. These latest features let you quickly build a migration business case and accelerate your migration decisions.\n  You can start your migration assessment with whatever data you have including RVTools exports, CMDB data, exports from the AWS Transform discovery tool, and a wide variety of third-party discovery tools. Create what-if scenarios for your migrations with customized assumptions including region, resource utilization, and service mapping. You can also compare scenarios and find the best path for your AWS migration. This latest release lets you include multiple analyses in your what-if scenarios including cost modelling of EC2, FSx, S3, SQL Server on EC2, and virtual desktops. On top of this, you can enhance your assessment with the inclusion of additional pillars of the Cloud Value Framework such as staff productivity, operational resilience, business agility, and sustainability.\n  Now you can build a comprehensive assessment for migrating to AWS faster than ever before and start your migration with the confidence of having an optimized TCO.\n  AWS Transform migration assessments are available in all AWS Regions where AWS Transform is offered. Learn more here on the user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/assessment-capabilities-transform",
-      "pubDate": "2026-05-22T18:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "s3",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "s3",
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fa9827a0fd9b",
-      "title": "Amazon SageMaker adds business metadata and governance in IAM-based domains",
-      "description": "Amazon SageMaker Unified Studio now supports business context, metadata and data governance capabilities in IAM-based domains. With this launch, customers using Amazon SageMaker IAM-based domains can add business context to their AWS Glue Data Catalog tables, including business names, descriptions, and README documentation. They can use AI-generated metadata to produce business names and descriptions automatically, reducing the effort of cataloging large numbers of tables. Customers can also create business glossaries so that teams across the organization use consistent definitions for terms like \"ARR\" or \"churn rate,\" and define metadata form templates to capture structured attributes such as data classification, retention policies, or ownership details.\n \nWith this business context in place, data engineers, analysts, and data scientists can search for and discover tables across the entire domain, filter results by glossary terms and metadata form fields, and request access through subscriptions. After an administrator approves the request, SageMaker Unified Studio automatically grants the necessary AWS Lake Formation permissions to the project. Administrators can also grant access to tables directly from within SageMaker Unified Studio without waiting for a request.\n \nAmazon SageMaker Unified Studio business context, metadata, and governance capabilities in IAM-based domains are available in all AWS Regions where SageMaker Unified Studio is supported. To learn more, visit the Amazon SageMaker Unified Studio documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/sagemaker-catalog-iam-domains/",
-      "pubDate": "2026-05-22T18:24:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "glue"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "glue",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-26d658d557ee",
-      "title": "AWS Security Agent adds verification scripts for pentest findings",
-      "description": "AWS Security Agent now generates verification scripts for penetration test findings, enabling security teams to independently reproduce and validate discovered vulnerabilities.\n  Previously, teams manually followed reproduction steps from finding details. Now, AWS Security Agent automatically generates ready-to-run scripts for each confirmed finding. Teams download the script, configure environment variables, and execute it against their target system to verify the vulnerability, streamlining triage and accelerating remediation.\n  Verification scripts include setup instructions, documented environment variables, and redacted sensitive values. Available in all AWS Regions where AWS Security Agent is supported.\n  To get started, run a penetration test, navigate to findings, and expand the Verification Script section. To learn more, see Review findings from a penetration test in the AWS Security Agent User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-agent/",
-      "pubDate": "2026-05-22T17:21:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-df9e5ef81adc",
-      "title": "Amazon GameLift Streams launches Generation 6e stream classes for high-fidelity game streaming",
-      "description": "Today, Amazon GameLift Streams launched Generation 6e (G6e) stream classes, providing enhanced GPU performance for streaming high-fidelity, graphically demanding games and applications. The new G6e stream classes are powered by EC2 G6e instances featuring NVIDIA L40S Tensor Core GPUs and 3rd generation AMD EPYC processors, delivering 2x the GPU memory and up to 2.9x faster GPU memory bandwidth compared to standard Generation 6 stream classes.\n \nThe two new G6e stream classes -- gen6e_pro and gen6e_pro_win2022 -- are designed for customers who need maximum GPU performance for AAA-quality game streaming or GPU-intensive applications. These classes provide a full dedicated NVIDIA L40S GPU with 48 GB of GPU memory, making them ideal for streaming experiences that require high frame rates at high resolutions.\n \nGeneration 6e stream classes are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Stockholm), and Asia Pacific (Tokyo, Seoul).\n \nTo learn more and get started, visit: \n \n \n \nAWS Docs: Configuration options - Stream classes \n https://docs.aws.amazon.com/gameliftstreams/latest/developerguide/configuration-options.html#configuration-options-stream-classes\n  \n \n \n \nAPI Reference Guide: CreateStreamGroup \n https://docs.aws.amazon.com/gameliftstreams/latest/apireference/API_CreateStreamGroup.html",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-gamelift-streams-g6e-stream-class/",
-      "pubDate": "2026-05-22T16:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-5768483c6599",
-      "title": "Amazon WorkSpaces Personal now supports WorkSpace Migration for Linux WorkSpaces",
-      "description": "Amazon WorkSpaces now supports the WorkSpace Migration feature for all Linux operating systems that Amazon WorkSpaces offers. This allows customers to seamlessly migrate WorkSpaces from one Linux operating system to another, automating the process to migrate to newer operating system versions or to move from one Linux operating system to another.\n  When customers migrate their WorkSpaces from one operating system to another, the user data on a Linux WorkSpace’s home directory is now automatically moved to the new WorkSpace. Customers can seamlessly migrate WorkSpaces without having to manually copy data between WorkSpaces. This streamlines the process to upgrade Linux WorkSpaces to take advantage of the latest Linux operating systems without disrupting end users with manual migration steps.\n  The WorkSpace Migration feature is now supported for all Linux operating systems in AWS commercial and AWS GovCloud (US) Regions where Amazon WorkSpaces Personal is supported. For more information, see the Migrate a Linux WorkSpace section in the Amazon WorkSpaces Administration Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/workspaces-linux-migration",
-      "pubDate": "2026-05-22T16:24:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-79eca2503383",
-      "title": "Amazon Keyspaces (for Apache Cassandra) expands to Asia Pacific (Malaysia) and Asia Pacific (Thailand) Regions",
-      "description": "Amazon Keyspaces (for Apache Cassandra) is now available in the Asia Pacific (Malaysia) and Asia Pacific (Thailand) Regions, allowing customers in Asia Pacific Region to build Cassandra-compatible applications with lower latency while keeping their data within the Region to meet data residency requirements.\n   \n Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. Amazon Keyspaces is serverless, so you pay for only the resources that you use and you can build applications that serve thousands of requests per second with virtually unlimited throughput and storage.\n   \n The Asia Pacific (Malaysia) and Asia Pacific (Thailand) Regions provide the same Amazon Keyspaces features available in other AWS Regions, including point-in-time recovery, Multi-Region replication, CDC streams, and IPv6 support. This regional expansion enables organizations in Asia Pacific to build highly scalable, low-latency applications using familiar Cassandra Query Language (CQL) without the operational burden of managing Cassandra clusters.\n \nTo learn more about Keyspaces, visit the Amazon Keyspaces documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-keyspaces-malaysia-thailand/",
-      "pubDate": "2026-05-22T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
       ]
     },
     {
@@ -3495,24 +3542,6 @@
         "organizations",
         "outposts",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-4897a7a1d758",
-      "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
-      "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
-      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/",
-      "pubDate": "2026-04-13T16:16:20.000Z",
-      "source": "newsBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "bedrock",
-        "preview"
       ]
     },
     {
