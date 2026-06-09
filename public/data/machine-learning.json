@@ -1,8 +1,50 @@
 {
-  "lastUpdated": "2026-06-08T10:12:36.418Z",
+  "lastUpdated": "2026-06-09T08:55:51.465Z",
   "category": "machine-learning",
-  "totalItems": 19,
+  "totalItems": 16,
   "items": [
+    {
+      "id": "aws-news-9d6489ef417f",
+      "title": "AWS Compute Optimizer now supports idle recommendations for six additional resource types",
+      "description": "AWS Compute Optimizer now identifies idle resources for Amazon DynamoDB provisioned tables, Amazon ElastiCache (Redis and Valkey), Amazon MemoryDB, Amazon DocumentDB (provisioned and serverless), Amazon WorkSpaces, and Amazon SageMaker endpoints. This expansion enables you to detect unused resources across more of your AWS environment and identify potential cost savings.\n \nCompute Optimizer analyzes utilization metrics to determine whether a resource is idle. Customers can set this lookback period based on the nature of their workloads. For each resource type, Compute Optimizer evaluates service-specific signals such as consumed capacity, cache hits, active connections, and CPU utilization. When Compute Optimizer identifies potential idle resources, it surfaces these recommendations, along with detailed utilization metrics and estimated savings in the console, enabling you to evaluate recommendations before acting. You can also view idle resource recommendations across all AWS accounts in your organization through the Cost Optimization Hub, with de-duplicated estimated savings with other recommendations on the same resources.\n \nFor more information about the AWS Regions where Compute Optimizer is available, see the AWS Region table. For more information about AWS Compute Optimizer, visit our product page and documentation. You can start using AWS Compute Optimizer through the AWS Management Console, AWS CLI, and AWS SDK.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-compute-optimizer-six-new-idle",
+      "pubDate": "2026-06-08T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "dynamodb"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "dynamodb",
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-ae169d7e7e1a",
+      "title": "End-to-end encrypted ML inference with Amazon SageMaker AI and FHE",
+      "description": "This blog has previously discussed FHE for ML inference in the post Enable fully homomorphic encryption with Amazon SageMaker endpoints for secure, real-time inferencing, but this post goes a little further. That previous post showed how to implement FHE-based inference 'from scratch' by hand-crafting a linear-regression algorithm using a low-level library called SEAL. Instead, this post shows a much more flexible and higher-level approach based on concrete-ml, a high-level library built specifically for FHE-based inference. It supports several common types of models 'out of the box' and is even API compatible with the well-known ML library scikit-learn.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-and-fhe/",
+      "pubDate": "2026-06-08T16:14:14.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "lex"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "lex",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-80e0725486b0",
       "title": "Accelerate SQL development with SageMaker Data Agent in Query Editor",
@@ -151,27 +193,6 @@
       ]
     },
     {
-      "id": "aws-news-57e42b2d61e3",
-      "title": "Comprehensive observability for Amazon SageMaker AI LLM inference: From GPU utilization to LLM quality",
-      "description": "This post demonstrates a comprehensive observability solution using Amazon Managed Grafana dashboards that provides a holistic view of both quality and quantity for LLMs served on Amazon SageMaker AI endpoints with inference components.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/comprehensive-observability-for-amazon-sagemaker-ai-llm-inference-from-gpu-utilization-to-llm-quality/",
-      "pubDate": "2026-05-29T23:36:58.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "rds",
-        "grafana"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "rds",
-        "grafana"
-      ]
-    },
-    {
       "id": "aws-news-cfb7815c4390",
       "title": "Announcing Region Expansion of P4de instances on SageMaker Notebook Instances",
       "description": "We are pleased to announce general availability of Amazon EC2 P4de instances in Asia Pacific (Tokyo) on SageMaker notebook instances.\n \nAmazon EC2 P4de instances are powered by 8 NVIDIA A100 GPUs with 80GB high-performance HBM2e GPU memory, 2X higher than the GPUs in our current P4d instances. The new P4de instances provide a total of 640GB of GPU memory, which provide up to 60% better ML training performance along with 20% lower cost to train when compared to P4d instances. The improved performance will allow customers to reduce model training times and accelerate time to market. Increased GPU memory on P4de will also benefit workloads that need to train on large datasets of high-resolution data.\n \nVisit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio and SageMaker notebook instances.",
@@ -192,62 +213,6 @@
       ]
     },
     {
-      "id": "aws-news-2230893a51aa",
-      "title": "Amazon SageMaker HyperPod Slurm clusters now support specifying minimum capacity requirements with continuous provisioning",
-      "description": "Amazon SageMaker HyperPod now supports minimum capacity requirements (MinCount) for clusters using Slurm orchestration with continuous provisioning. With continuous provisioning, HyperPod provisions clusters with available partial capacity so you can start your AI/ML jobs quickly, while continuing to provision remaining instances asynchronously in the background. While this provides flexibility, some training workloads require a guaranteed minimum number of nodes before they can start effectively. MinCount lets you specify the minimum number of instances that must be successfully provisioned before an instance group transitions to InService status, giving you greater control over when your cluster becomes available for job scheduling.\n  This is particularly useful for distributed training workloads using frameworks such as PyTorch FSDP, Megatron-LM, or NVIDIA NeMo, where training jobs are commonly configured with a fixed number of participating nodes and may not start efficiently or correctly with partial cluster capacity. It also benefits teams that need to guarantee a baseline GPU count to meet SLA or cost-efficiency targets before committing to a training run.\n  You can specify MinInstanceCount in the CreateCluster or UpdateCluster API request to set a minimum capacity threshold for an instance group. The instance group remains in Creating or Updating status until the threshold is met, then transitions to InService and nodes become available for Slurm job scheduling. HyperPod continues launching additional instances beyond MinCount until the target count is reached. If MinCount cannot be satisfied within 3 hours, the system automatically rolls back the instance group to its last known good state.\n  MinCount for Slurm clusters with continuous provisioning is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To get started on specifying minimum capacity requirements for your cluster, see Minimum capacity requirements (MinCount) in the Amazon SageMaker AI documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-mincount/",
-      "pubDate": "2026-05-27T15:06:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "lex"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "launch",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cfd5cc3b933c",
-      "title": "AWS Neuron 2.30.0 now available with NKI 0.4.0 and 22 new NKI Library kernels",
-      "description": "Today, AWS announces the general availability of AWS Neuron 2.30.0, delivering NKI 0.4.0 with new AWS Trainium3 specific hardware capabilities, 22 new NKI Library kernels, and expanded Neuron Agentic Development skills for model porting and validation. This release is for ML developers building custom kernels, optimizing training and inference workloads, or porting models to AWS Trainium and Inferentia.\n  NKI 0.4.0 introduces the activate2 Scalar Engine instruction for Trn3, OCP FP8 input support for matrix multiplication, and bytes-aware tile-size constants that simplify kernel development. The NKI Library adds 3 new core kernels for segmented attention, KV-parallel prefill, and FP8 quantization, as well as 19 experimental kernels covering context parallelism, MXFP8 training, state-space models, and fused optimizers. PyTorch reference implementations are now available for 29 kernels.\n  Neuron Agentic Development, launched as a beta in April 2026, adds two new skills: neuron-framework-autoport for porting HuggingFace models to NxD Inference end to end, and neuron-framework-equivalence for validating numerical equivalence of ported models. By default, both are now included in all Neuron DLAMIs and Deep Learning Containers. This release also introduces the Neuron DRA Driver for Kubernetes Dynamic Resource Allocation, enabling topology-aware scheduling of Trainium accelerators and Elastic Fabric Adapter (EFA) interfaces. The Neuron Graph Compiler now delivers significant compile-time improvements, and the Neuron Runtime enables zero-copy host-device transfers by default.\n  AWS Neuron is available in all AWS Regions where Amazon EC2 Trn1, Trn2, Inf2, and Inf1 instances are available. For more information about Regional availability, see the AWS Region table.\n \nTo get started, see the following resources:\n  \n \n \nAWS Neuron 2.30.0 Release Notes\n \n \nNeuron Kernel Interface (NKI) Documentation\n \n \nNeuron Agentic Development\n \n \nAWS Neuron",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-announce-neuron-2-30-0",
-      "pubDate": "2026-05-26T20:17:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "trainium3",
-        "inferentia",
-        "neuron",
-        "ec2"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "trainium3",
-        "inferentia",
-        "neuron",
-        "ec2",
-        "launch",
-        "beta",
-        "experimental",
-        "now-available",
-        "improvement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-f0427872cda4",
       "title": "How Amazon is moving to integrate catalogs to improve data discovery with Amazon SageMaker",
       "description": "Enterprises face challenges when teams create data assets outside of central data catalogs. It adds overhead for discovery, and limits collaboration. Amazon’s Business Data Technologies (BDT) team has built an enterprise data catalog Andes for sharing datasets under well-defined policies. However, teams created catalog of local datasets and other non-tabular assets such as dashboards and metrics, outside Andes. This made it difficult to discover all assets in a consolidated way. In this post, we share how Amazon.com is working to integrate catalogs by extending enterprise data catalog Andes with Amazon SageMaker.",
@@ -264,52 +229,6 @@
       "tags": [
         "sagemaker",
         "rds"
-      ]
-    },
-    {
-      "id": "aws-news-664705f46284",
-      "title": "Amazon SageMaker Unified Studio adds interactive interface for managing Feature Store in IAM Domains",
-      "description": "Amazon SageMaker Unified Studio IAM domains now includes an interactive interface for creating and managing feature groups in SageMaker Feature Store, eliminating the need to write code for common feature management tasks. This launch makes feature management accessible to data scientists, ML engineers, and business analysts from a single collaborative environment.\n \nFeatures are the inputs to ML models used during training and inference. For example, a music recommendation app might use features like song ratings, listening duration, and listener demographics to personalize which songs are suggested to each user. With this interactive interface for creating and managing features, you can now discover and search existing features, create and modify feature groups, view definitions and schemas, monitor data ingestion status - all without writing API calls. Features created elsewhere appear immediately in SageMaker Unified Studio when sharing the same IAM role, ensuring seamless workflows across your ML development lifecycle.\n \nTo learn more about using the interactive interface for creating and managing features in SageMaker Unified Studio, visit the Amazon SageMaker Unifed Studio User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/04/sagemaker-feature-store/",
-      "pubDate": "2026-05-22T20:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "personalize",
-        "iam"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "personalize",
-        "iam",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-744b6aeb4053",
-      "title": "Amazon SageMaker expands domain management across domain types",
-      "description": "Amazon SageMaker Unified Studio now provides domain management experience for Identity Center and IAM-based domains outside of AWS console, allows administrators and data management teams to create and manage projects, configure workforce identity, manage users and permissions, and set networking properties for projects. Previously, this was only available for IAM based domains.\n  With this launch, administrators of Identity Center-based domains can access domain management capabilities in SageMaker Unified Studio portal to create projects with configurable execution roles that define which AWS analytics, AI, and ML services the project can access. VPC configuration is consistent across both domain types, inherited by all projects, and can be edited to change the VPC, subnets, or security group. Administrators can also manage associated accounts, enabling users to publish and consume data from other AWS accounts within SageMaker Unified Studio.\n  These features are available in all AWS Regions where Amazon SageMaker Unified Studio is available. To learn more, visit the Domain administration for Identity Center-based domains.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/domain-management-iam-idc/",
-      "pubDate": "2026-05-22T19:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "iam"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "launch"
       ]
     },
     {
