@@ -1,8 +1,133 @@
 {
-  "lastUpdated": "2026-06-10T09:36:57.779Z",
+  "lastUpdated": "2026-06-11T10:00:35.015Z",
   "category": "generative-ai",
-  "totalItems": 52,
+  "totalItems": 55,
   "items": [
+    {
+      "id": "aws-news-51c674508c26",
+      "title": "OpenAI GPT-5.4 and GPT-5.5 models now available in US East (N. Virginia) on Amazon Bedrock",
+      "description": "Today, AWS announces the expanded availability of OpenAI's GPT-5.4 and GPT-5.5 models, which are now available in the US East (N. Virginia) Region on Amazon Bedrock. With GPT-5.4 and GPT-5.5, you can build generative AI applications across reasoning, coding, computer use, document workflows, and long-running agentic tasks.\n  GPT-5.5 is OpenAI's most capable model, designed for advanced coding, research, analysis, software operation, document workflows, and long-running agentic tasks. It can understand open-ended goals, use tools, reason across longer workflows, navigate ambiguity, and carry complex tasks through to completion with less orchestration. GPT-5.4 brings frontier reasoning, coding, computer use, long-context workflows, and tool use to production applications that interpret context, interact with tools, operate software environments, and verify outputs across multiple steps. Both models support a 272K-token context window, accept text and image input, and are available through the Responses API with support for server-side and client-side tool calling, projects, and response streaming.\n  With this launch, GPT-5.4 and GPT-5.5 are now available in additional AWS Regions. To get started, visit the GPT-5.5 and GPT-5.4 model cards in our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/openai-gpt-us-east-virginia-amazon/",
+      "pubDate": "2026-06-11T00:12:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "lex",
+        "rds",
+        "launch",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-47fbec35cd5e",
+      "title": "Amazon ECS Managed Daemons now support inter-task visibility and communication",
+      "description": "Amazon ECS Managed Daemons now support inter-task visibility and communication, enabling customers to deploy tracing, profiling, and security agents that require access to application processes and shared IPC resources on ECS Managed Instances.\n  With this launch, you can configure two new settings in ECS daemon definitions: pidMode controls whether the daemon can see all processes on the instance, and ipcMode controls whether the daemon shares an IPC namespace with other containers on the instance. Setting either to \"shared\" grants the daemon access to the respective namespace; the default of \"none\" keeps daemons isolated from application containers and other tasks. These settings let you run process-aware and IPC-dependent agents as ECS daemons instead of embedding them as sidecars in application task definitions. ECS places exactly one daemon task per managed instance and starts daemons before application tasks, so platform teams can deploy and update agents independently with consistent coverage across all workloads.\n  To get started, register a daemon task definition specifying pidMode or ipcMode set to \"shared\" using the AWS Console, CLI, CloudFormation, or AWS SDKs, then create or update a daemon with associated ECS Managed Instances capacity providers in your clusters. This feature is now available in all AWS Regions at no additional cost. For more details, refer to our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ecs-managed-daemons-pid-ipc-modes/",
+      "pubDate": "2026-06-10T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ecs",
+        "cloudformation",
+        "launch",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f520f4f09f5b",
+      "title": "Real-time CDC from Aurora PostgreSQL to Amazon S3 Tables using Debezium and Firehose",
+      "description": "In this post, we show you how to build a CDC pipeline that delivers query-ready Iceberg tables directly. The pipeline captures inserts, updates, and deletes from Aurora PostgreSQL and applies them as row-level operations in Amazon S3 Tables, a capability of Amazon Simple Storage Service (Amazon S3).",
+      "link": "https://aws.amazon.com/blogs/big-data/real-time-cdc-from-aurora-postgresql-to-amazon-s3-tables-using-debezium-and-firehose/",
+      "pubDate": "2026-06-10T15:29:26.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-4ca90c03338e",
+      "title": "Stop hand-tuning kernels: How Neuron Agentic Development accelerates AWS Trainium optimizations",
+      "description": "Today, we’re announcing the Neuron Agentic Development capabilities: a collection of AI agents and skills that make this possible for developers building on AWS Trainium and AWS Inferentia. In this post, we explain how the Neuron Agentic Development capabilities accelerate the kernel development workflow.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/stop-hand-tuning-kernels-how-neuron-agentic-development-accelerates-aws-trainium-optimizations/",
+      "pubDate": "2026-06-10T15:26:45.000Z",
+      "source": "mlBlog",
+      "services": [
+        "trainium",
+        "inferentia",
+        "neuron"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "trainium",
+        "inferentia",
+        "neuron"
+      ]
+    },
+    {
+      "id": "aws-news-3535455f843a",
+      "title": "Amazon EC2 M9g and M9gd general purpose instances are now available",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M9g and M9gd instances, powered by AWS Graviton5 processors, are generally available. AWS Graviton5 processors are the fifth generation of custom-designed AWS processors, delivering the best price performance for general purpose workloads running on Amazon EC2.\n \n​​M9g instances serve a broad range of general-purpose workloads including application servers, microservices, gaming, caching, and containers, while also delivering the performance needed for agentic AI use cases like real-time reasoning, code generation, and multi-step orchestration.  \n \n​​M9gd instances offer local NVMe-based SSD block-level storage for customers that require high-speed, low-latency local storage, such as media processing, batch and log processing, and applications that need access to temporary storage including caches and scratch files.​\n \n​​​M9g and M9gd instances deliver up to 25% better compute performance compared to AWS Graviton4-based M8g and M8gd instances. They are up to 30% faster for databases, up to 35% faster for web applications, and up to 35% faster for machine learning. These instances are built on the sixth-generation AWS Nitro System and are the first to feature the Nitro Isolation Engine, harnessing formal verification to provide mathematical assurance that customer workloads are isolated from each other and AWS operators, pioneering a new standard for mathematically proven cloud security​​.\n \nM9g and M9gd instances are available in US East (N. Virginia, Ohio), US West (Oregon), and EU (Frankfurt) regions. M9g and M9gd instances are available for purchase via Savings Plans, On-Demand, Spot instances, Dedicated instances, or Dedicated hosts.\n \nLevel up your compute with AWS Graviton and get started today.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-m9g-m9gd-instances-graviton5-processors-available",
+      "pubDate": "2026-06-10T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "generally-available",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-c6cff61d4522",
+      "title": "Amazon FSx for OpenZFS Intelligent-Tiering storage class is now available in 8 additional AWS Regions",
+      "description": "You can now create Amazon FSx for OpenZFS file systems with the Intelligent-Tiering storage class in 8 additional AWS Regions across the US, Europe, Asia Pacific, and South America.\n \nFSx Intelligent-Tiering is built for general-purpose file workloads such as file shares, archives, media libraries, and migrations from on-premises HDD storage. It automatically moves your data across three storage tiers (Frequent Access, Infrequent Access, and Archive) based on access patterns, and an optional SSD read cache keeps your active data fast. You get high performance for active workloads and low-cost storage for everything else, paying only for what you store with no capacity to manage. With FSx Intelligent-Tiering, you can save up to 85% compared to the FSx SSD storage class and up to 20% compared to on-premises HDD-based NAS.\n \nWith this expansion, the FSx Intelligent-Tiering storage class is now available for FSx for OpenZFS file systems in the following additional AWS Regions: US West (N. California), Europe (London, Stockholm, Spain, Zurich), Asia Pacific (Hyderabad, Seoul), and South America (São Paulo). To learn more, visit the FSx Intelligent-Tiering page and the Amazon FSx for OpenZFS product page, and see the FSx for OpenZFS Region Table for complete regional availability information.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-fsx-openzfs/",
+      "pubDate": "2026-06-09T20:52:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "now-available",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-a36f80881921",
       "title": "Beyond JSON blobs: Implementing the VARIANT data type in Apache Iceberg V3",
@@ -75,6 +200,26 @@
         "amazon q",
         "ga",
         "integration"
+      ]
+    },
+    {
+      "id": "aws-news-43b62b54999a",
+      "title": "Announcing metal-48xl and metal-96xl for Amazon EC2 network/EBS instances",
+      "description": "AWS is announcing the general availability of metal-48xl and metal-96xl sizes for Amazon Elastic Compute Cloud (Amazon EC2) M8in, M8ib, M8idn, M8idb, R8in, R8ib, R8idn, and R8idb instances. These instances are powered by custom sixth generation Intel Xeon Scalable processors, available only on AWS and feature the latest sixth generation AWS Nitro cards. These instances deliver up to 43% better compute performance per vCPU compared to previous generation M6in, M6idn, R6in, and R6idn instances.\n  M8in, M8idn, R8in, R8idn instances deliver 600 Gbps network bandwidth, the highest network bandwidth among enhanced networking EC2 instances. M8in and R8in instances are ideal for workloads such as real-time big data analytics, distributed web scale in-memory caches, caching fleets for AI/ML clusters, and Telco applications such as 5G User Plane Function (UPF). M8idn and R8idn instances are ideal for network-intensive general purpose workloads requiring local storage, such as distributed compute, data analytics, and high-performance file systems.\n  M8ib, M8idb, R8ib, R8idb instances deliver up to 300Gbps EBS bandwidth, the highest among non-accelerated compute EC2 instances. M8ib and R8ib instances are best suited for workloads that benefit from high block storage performance, such as high-performance file systems and NoSQL databases. M8idb and R8idb instances are ideal for storage-intensive general purpose workloads such as large commercial databases, data lakes, and NoSQL databases that benefit from both high EBS throughput and low-latency local NVMe storage.\n  M8in, M8ib, M8idn, M8idb, R8in, R8ib, R8idn, and R8idb instances support Elastic Fabric Adapter (EFA) networking on 48xlarge, 96xlarge, metal-48xl, and metal-96xl sizes. EFA networking enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters.\n  The new metal-48xl and metal-96xl sizes are available in the AWS US East (N. Virginia) region. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-metal-sizes-network-EBS/",
+      "pubDate": "2026-06-09T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "support"
       ]
     },
     {
@@ -593,68 +738,6 @@
       ]
     },
     {
-      "id": "aws-news-422eaaea16cb",
-      "title": "Building a secure auth code flow setup using AgentCore Gateway with MCP clients",
-      "description": "This post demonstrates how to implement Open Authorization (OAuth) Code flow as an inbound authorization mechanism for MCP servers hosted on Amazon Bedrock AgentCore Gateway. By the end of this guide, you will have a production-ready setup where each AI assistant request is authenticated with a valid user identity token issued from your organization’s identity provider.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-a-secure-auth-code-flow-setup-using-agentcore-gateway-with-mcp-clients/",
-      "pubDate": "2026-06-02T03:23:35.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-096730af5c0a",
-      "title": "Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity",
-      "description": "Today, we’re excited to announce the ability to reference a secret in AWS Secrets Manager for AgentCore Identity, so you can reference your own preconfigured secret from Secrets Manager and retain full control over how it is managed. With this ability, you can extend your organization’s existing secrets governance processes to AgentCore. You can provide an existing, preconfigured AWS Secrets Manager secret to use with your credential provider resources. You retain full control over its encryption configuration, rotation, replication, tags, and resource policies, just as you would manage other secrets in Secrets Manager. You can also choose a secret from another AWS account within the same AWS Region, though cross-Region secret sharing isn’t supported. This also supports secrets brought in through AWS Secrets Manager external connectors, enabling integration with third-party secret managers.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/reference-your-own-aws-secrets-manager-secrets-in-amazon-bedrock-agentcore-identity/",
-      "pubDate": "2026-06-01T22:16:28.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "secrets manager"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "secrets manager",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-184e19cea134",
-      "title": "Transforming rare cancer research with Amazon Quick: Integrating biomedical databases for breakthrough discoveries",
-      "description": "In this post, we walk through how to use Amazon Quick Research to integrate biomedical data sources for rare cancer research. The walkthrough uses pediatric sarcoma as the research domain and draws on publicly available datasets from PubMed and other open biomedical repositories. It covers the end-to-end workflow: defining a research objective, configuring data sources, reviewing the AI-generated research plan, running the investigation, and iterating on results using the revision and versioning system.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/transforming-rare-cancer-research-with-amazon-quick-integrating-biomedical-databases-for-breakthrough-discoveries/",
-      "pubDate": "2026-06-01T21:54:16.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-8ebf471795b9",
       "title": "Introducing multipart download support for AWS Tools for PowerShell v5",
       "description": "The new multipart download support in AWS Tools for PowerShell v5 improves the performance of downloading large objects from Amazon Simple Storage Service (Amazon S3) compared to the single-stream downloads. The Read-S3Object and Copy-S3Object cmdlets now deliver faster download speeds through an opt-in switch parameter -UseMultipartDownload for multipart downloads, reducing the need for complex code to manage […]",
@@ -837,28 +920,6 @@
         "lex",
         "opensearch",
         "opensearch service"
-      ]
-    },
-    {
-      "id": "aws-news-ce6507436c9a",
-      "title": "The next generation of Amazon OpenSearch Serverless is now generally available",
-      "description": "Today, AWS announced the general availability of the next generation of Amazon OpenSearch Serverless, a fully managed search and vector engine designed for customers building agents. The next generation of OpenSearch Serverless auto scales 20x faster than its predecessor and provisions resources in seconds to meet the demands of even the most unpredictable agentic workflows. With scale-to-zero and pay-per-usage pricing, customers can now save up to 60% compared to the cost of provisioning Opensearch clusters for peak loads.\n  The next generation of OpenSearch Serverless introduces complete decoupling of compute and storage through a new shared storage layer. This means customers can scale compute up and down independently, reducing costs during low-traffic periods while maintaining instant readiness for traffic spikes. To simplify network connectivity, OpenSearch Serverless now offers two resource-based endpoints - a collection level endpoint and a regional endpoint which makes multi-VPC and on-premise connectivity straightforward using standard VPC APIs. The next generation of OpenSearch Serverless also launches with native integrations with AI development platforms including Vercel and Kiro, enabling developers to provision search infrastructure directly from their development environment using natural language commands. OpenSearch Serverless is now also part of OpenSearch Agent Skills that allows you to bring OpenSearch capabilities to your agents when using popular coding platfroms like Claude Code, Cursor and Codex.\n  At GA, search and vector are the two available collection types. The next generation of OpenSearch Serverless is available today in all commercial AWS regions where Amazon OpenSearch Serverless is currently available. For pricing details about the next generation of OpenSearch Serverless, visit the pricing page.\n  To learn more about the next generation of Amazon OpenSearch Serverless, see the marketing page, technical documentation and AWS News Blog. You can get started by visiting the technical launch blog that details all the new features launching in the next generation of Amazon OpenSearch Serverless.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-opensearch-serverless-next-generation-generally-available/",
-      "pubDate": "2026-05-28T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "opensearch",
-        "launch",
-        "generally-available",
-        "ga",
-        "new-feature",
-        "integration"
       ]
     },
     {
