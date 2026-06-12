@@ -1,8 +1,53 @@
 {
-  "lastUpdated": "2026-06-11T10:00:35.015Z",
+  "lastUpdated": "2026-06-12T09:53:02.429Z",
   "category": "ai-safety",
-  "totalItems": 23,
+  "totalItems": 21,
   "items": [
+    {
+      "id": "aws-news-a289d1cc97c7",
+      "title": "Build RAG-powered AI solutions at the edge with AWS Local Zones and Outposts",
+      "description": "Organizations in regulated industries or with strict information security requirements are increasingly looking to use generative AI. However, they often face a dilemma: how to utilize powerful models while keeping data strictly on-premises or within specific geographic boundaries. The solution lies in deploying self-managed Small Language Models (SLMs) on premises with AWS Outposts or in […]",
+      "link": "https://aws.amazon.com/blogs/compute/build-rag-powered-ai-solutions-at-the-edge-with-aws-local-zones-and-outposts/",
+      "pubDate": "2026-06-11T16:59:02.000Z",
+      "source": "computeBlog",
+      "services": [
+        "organizations",
+        "outposts"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "outposts",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-5b5038abea45",
+      "title": "AWS announces AWS Workload Credentials Provider",
+      "description": "AWS announces AWS Workload Credentials Provider, a lightweight client-side provider that automates deployment of exported certificates from AWS Certificate Manager (ACM) and local caching of secrets from AWS Secrets Manager across AWS and non-AWS workloads.\n  Previously, customers exporting public or private certificates from ACM had to build custom automation using Amazon EventBridge to detect renewals and deploy the updated certificates. With public certificate lifetimes decreasing per the the Certification Authority Browser Forum (CA/B) mandate, this custom automation can become difficult to maintain at scale. AWS Workload Credentials Provider eliminates this complexity by providing a single provider that helps distribute and automate both secrets and certificates to your workloads. You configure it with your certificate ARN and specify options such as file paths and server reload behavior — the provider then handles certificate export and deployment automatically to prevent expiry related failures. It runs on Windows and Linux and supports Apache and NGINX web servers.\n  For secrets caching, the provider maintains full backwards compatibility with the AWS Secrets Manager Agent, enabling you to securely cache application secrets locally across AWS and non-AWS workloads through the same unified provider.\n  AWS Workload Credentials Provider is open source and available on GitHub. You can use it with exportable ACM certificates and Secrets Manager in all AWS Regions. To learn more, visit the AWS Certificate Manager documentation or the AWS Secrets Manager documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-workload-credentials-provider/",
+      "pubDate": "2026-06-11T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds",
+        "eventbridge",
+        "secrets manager"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "eventbridge",
+        "secrets manager",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c44a8f0adac3",
       "title": "Amazon SageMaker Unified Studio Notebooks now support EMR Serverless",
@@ -369,93 +414,6 @@
         "organizations",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-38c8e6b48426",
-      "title": "Amazon RDS for Oracle now supports April 2026 Release Update and Supplemental Patch Bundle",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports the Oracle April 2026 Release Update (RU) for Oracle Database versions 19c and 21c, and the corresponding Supplemental Patch Bundle for Oracle Database version 19c. We recommend upgrading to the April 2026 RU as it includes security updates for Oracle database products. \n  Starting with April 2026 releases, the Oracle Spatial Patch Bundle has been renamed to Supplemental Patch Bundle (SPB). The SPB includes additional database patches recommended by Oracle for specific use cases, such as Oracle Spatial, Oracle Data Pump, and Oracle GoldenGate.\n  You can apply the April 2026 RU from the Amazon RDS Management Console, or by using the AWS SDK or CLI. To automatically apply updates to your database instance during your maintenance window, enable Automatic Minor Version Upgrade. You can apply the Supplemental Patch Bundle update for new database instances, or upgrade existing instances to engine version '19.0.0.0.ru-2026-04.spb-1.r1' by selecting the \"Supplemental Patch Bundle Engine Versions\" checkbox in the AWS Console. \n  You can also use AWS Organizations upgrade rollout policy to stagger automatic minor version upgrades for your Amazon RDS database instances. This feature allows you to automatically apply updates to non-production environments, validate the updates, and then automatically apply the same update to production environments. For additional details about using AWS Organizations upgrade rollout policy for automatic minor version upgrades, refer to Amazon RDS for Oracle documentation .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-rds-oracle-supports-april-2026-release-update-supplemental-patch-bundle",
-      "pubDate": "2026-05-29T07:49:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-bdfb64df0bfc",
-      "title": "AWS Organizations emits CloudTrail events for account membership changes",
-      "description": "AWS Organizations now automatically emits CloudTrail events to your management account whenever accounts join or leave your organization. These new events—AccountJoinedOrganization and AccountDepartedOrganization—provide security teams and cloud administrators with enhanced visibility into organizational membership changes, helping detect unauthorized activities and potential security incidents that previously could go unnoticed. \n \nThe AccountJoinedOrganization event captures how an account joined an organization (Created or Invited) and the join timestamp, while the AccountDepartedOrganization event records how an account departed —Left for accounts that departed voluntarily, Removed for accounts removed by the management account, or  Cleaned for accounts that were permanently closed along with the departure timestamp. \n \nYou can leverage these events to create CloudWatch alarms or Amazon EventBridge rules for real-time notifications, enabling rapid response to suspicious organizational changes. This capability supports critical use cases including fraud detection, compliance auditing, security monitoring, and incident investigation across your AWS environment.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-organizations-cloudtrail/",
-      "pubDate": "2026-05-28T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "eventbridge",
-        "cloudwatch",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "eventbridge",
-        "cloudwatch",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a2678ab12ad1",
-      "title": "AWS announces general availability of the next generation of AWS Resilience Hub",
-      "description": "Today, AWS announces the general availability of the next generation of AWS Resilience Hub, a central location in the AWS console that helps platform engineering and site reliability teams assess and strengthen the resilience of their critical workloads running on AWS. This new update expands on AWS Resilience Hub’s existing experience for meeting resilience objectives by introducing a new application model, dependency discovery, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.\n \nWith the next generation of Resilience Hub, teams model applications using a three-level hierarchy — systems, user journeys, and services — that reflects how these applications deliver business value. Through dependency discovery assessments, maintain up-to-date visibility into the AWS services, internal endpoints, and third-party endpoints that your services rely on. A generative AI-powered failure mode assessment analyzes your services against AWS Well-Architected best practices, the AWS Resilience Analysis Framework, and the organization's resilience policies, generating prioritized, actionable recommendations. AWS Organizations integration enables central teams to define resilience policies and monitor posture across all accounts and regions from a single dashboard.\n \nThe next generation of the AWS Resilience Hub is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Europe (Ireland), Europe (London), Europe (Frankfurt), Europe (Paris), Europe (Stockholm), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Seoul), and South America (São Paulo).\n \nTo get started, visit the AWS console. To learn more about the next generation of AWS Resilience Hub, see the product page, or visit the AWS News Blog. \n \nExisting AWS Resilience Hub customers can continue using their current experience and adopt the next generation of AWS Resilience Hub at their own pace. For guidance, see the migration user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-announces-next-gen-aws-resilience-hub/",
-      "pubDate": "2026-05-28T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "update",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-8fd178c57c92",
-      "title": "Amazon Connect Customer expands generative AI-powered post-contact summaries to eight new languages",
-      "description": "Amazon Connect Customer now supports generative AI-powered post-contact summaries in eight additional language families: Portuguese, French, Italian, German, Spanish, Chinese, Japanese, and Korean. Post-contact summaries also now support non-US variations of English, including British English, Australian English, and other regional locales, ensuring summaries reflect locally appropriate spelling and terminology.\n \nGenerative AI-powered post-contact summaries provide agents and managers with concise, structured overviews of customer conversations across voice, chat, and email channels, eliminating the need to read full transcripts. With this expansion, organizations can automatically generate summaries in the language of the conversation, helping agents complete after-contact work faster and enabling managers to review contacts across languages. For example, a global support organization can now generate post-contact summaries for calls handled in French, German, or Japanese, giving supervisors visibility into service quality across all regions.\n \nThe newly supported languages are available in all AWS Regions where Amazon Connect Customer post-contact summaries are available. To learn more, refer to View generative AI-powered post-contact summaries in the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, visit the Amazon Connect Customer website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-summary-languages/",
-      "pubDate": "2026-05-28T15:21:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "support",
-        "expansion"
       ]
     },
     {

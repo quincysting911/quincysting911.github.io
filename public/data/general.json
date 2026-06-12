@@ -1,8 +1,95 @@
 {
-  "lastUpdated": "2026-06-11T10:00:35.015Z",
+  "lastUpdated": "2026-06-12T09:53:02.429Z",
   "category": "general",
-  "totalItems": 39,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-3551db662bb2",
+      "title": "Amazon CloudWatch Application Signals now supports infrastructure, logs, and traces context for faster troubleshooting",
+      "description": "Amazon CloudWatch Application Signals introduces service health ranking on the application map and new infrastructure, logs, and traces tabs on the service overview page. These capabilities let operators triage unhealthy services and inspect the underlying compute environment, log snippets, and trace details in one place, making it easier to find root causes without switching tools.\n Customers use Application Signals to monitor the health of distributed applications, but identifying why a service was unhealthy often required leaving CloudWatch to correlate infrastructure data across separate tools. The application map now ranks services by health and shows runtime indicators on service nodes for Amazon EKS, Amazon ECS, AWS Lambda, and Amazon EC2, along with a new infrastructure tab that surfaces the compute and runtime environment, its components, and curated default metrics with deep links to the relevant monitoring tools. In addition, the service overview page provides the infrastructure, logs, and traces tab, helping operators spot issues in context of their application. With health-ranked services on the application map and new infrastructure, logs, and traces tabs, operators can instantly identify their most degraded services and drill into the compute environment, error-producing log snippets, and slow or failing transactions — all without leaving Application Signals. These capabilities span workloads running on Amazon EKS, Amazon ECS, AWS Lambda, and Amazon EC2, giving teams a single pane to move from symptom to root cause in minutes instead of hours.\n  These capabilities are available in all AWS Regions where Amazon CloudWatch Application Signals is supported. To learn more about this feature, see the Amazon CloudWatch Application Signals documentation . For pricing details, see the Amazon CloudWatch pricing page",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-application-signals-supports infrastructure-logs-traces-context-for-faster troubleshooting/",
+      "pubDate": "2026-06-11T20:10:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3ee495f9784b",
+      "title": "AWS Elastic Beanstalk console now integrates CloudWatch Logs in the Logs tab",
+      "description": "AWS Elastic Beanstalk now provides a CloudWatch Logs integration directly in the environment Logs tab of the Elastic Beanstalk console. Previously, customers had to navigate to the CloudWatch console to find the relevant log groups and log streams for their environments. With this launch, customers can view CloudWatch log events without leaving the Elastic Beanstalk console.  \n \nThe Logs tab displays log groups that an environment streams logs to, as well as log groups matching the aws/elasticbeanstalk/<env-name>/* prefix. Customers can select a log group to view its log streams, with the most recently active stream selected by default. A log stream dropdown allows switching between streams and filtering results. For deeper analysis, a View in CloudWatch dropdown provides direct links to the log group, log stream, or CloudWatch Logs Insights in the CloudWatch console.\n \nThis feature is available across all Elastic Beanstalk platform branches in all AWS Commercial Regions and AWS GovCloud (US) Regions where Elastic Beanstalk is available. For a complete list of supported Regions, see AWS Regions.\n \nFor more information about using Elastic Beanstalk with Amazon CloudWatch, see the AWS Elastic Beanstalk developer guide. To learn more, visit the AWS Elastic Beanstalk product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/elastic-beanstalk-cloudwatch-logs/",
+      "pubDate": "2026-06-11T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ff093c4b90d8",
+      "title": "Amazon MWAA Serverless now supports Amazon EventBridge notifications",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) Serverless now supports workflow and task state change events to Amazon EventBridge, enabling data engineering and platform teams to build event-driven automation for their Apache Airflow workflows.\n \nPreviously, monitoring workflow execution required custom polling logic or manual observation. With this launch, MWAA Serverless can emit events when workflows transition between states, including started, running, succeeded, or failed, and when individual tasks change state, such as scheduled, succeeded, failed, or up for retry. With this feature, you can further automate your existing workflows - for example, using EventBridge notifications to trigger alerts when a production workflow fails, automatically restart dependent pipelines when an upstream workflow succeeds, or log state transitions to Amazon S3 for compliance and auditing.\n \nThis feature is available in all AWS Regions where Amazon MWAA Serverless is available. For the complete list of supported Regions, see Regions in the Amazon MWAA Serverless User Guide. For pricing details, see Amazon EventBridge pricing. To learn more, see Monitoring Amazon MWAA Serverless in the Amazon MWAA Serverless User Guide and Amazon MWAA Serverless events in the Amazon EventBridge Events Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-mwaa-serverless-eventbridge/",
+      "pubDate": "2026-06-11T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "eventbridge"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "eventbridge",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-55c68393b4c7",
+      "title": "Amazon Managed Service for Prometheus now supports out of order sample ingestion",
+      "description": "Amazon Managed Service for Prometheus now supports out-of-order sample ingestion and a workspace-level rule query offset. All workspaces have a default out-of-order time window of 1 minute, allowing the workspace to accept metric samples arriving outside strict chronological order. You can adjust this window to match your ingestion patterns or set it to 0 to disable the feature and discard out-of-order samples. You can also configure a global rule query offset that introduces a delay before rule evaluation queries run, giving late-arriving samples time to be ingested before rules execute.\n \nTogether, these features reduce data loss and improve alerting accuracy for workloads with distributed collectors, batched exports, or variable network latency. Out-of-order sample support ensures late-arriving data points are ingested rather than discarded, preserving metric completeness. The rule query offset compensates for the expected ingestion delay. Without it, rules evaluate instantly and may miss samples that haven't landed yet, producing results that differ from the same expression evaluated after all metrics arrive. Two new CloudWatch vended metrics, OutOfOrderIngestionRate and OutOfOrderSampleAge give you visibility into ingestion patterns, helping you tune both settings for your workload. \n \nOut-of-order sample ingestion and rule query offset are available in all AWS regions where Amazon Managed Service for Prometheus is generally available. To get started, configure the out-of-order time window and ruler query offset in your workspace settings via AWS console, API or CLI. For more information, see Amazon Managed Service for Prometheus user documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-outoforder-ingestion/",
+      "pubDate": "2026-06-11T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "generally-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-512040917dfa",
       "title": "How frontier teams are reinventing AI-native development",
@@ -36,6 +123,27 @@
         "opensearch",
         "opensearch service",
         "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4e3c08fa032f",
+      "title": "Amazon Virtual Private Cloud (VPC) Flow Logs introduces additional metadata",
+      "description": "Amazon Virtual Private Cloud (VPC) Flow Logs now supports EC2 resource tags and next-hop interface metadata, simplifying network monitoring and troubleshooting by eliminating the need to manually correlate flow log data with resource metadata.\n \nVPC Flow Logs enable you to capture and log information about your VPC network traffic to monitor and troubleshoot network traffic issues. With EC2 resource tag support, you can embed tag values from your network interfaces, EC2 instances, and auto scaling groups. This eliminates the need for you to join flow log data with separate tag metadata to correlate records with specific workloads. With next-hop metadata support, you can capture details about the next-hop network interface for each flow, including its interface ID, subnet, Availability Zone, VPC, and interface type. These fields help you understand how traffic traverses through network resources such as NAT Gateways, Network Load Balancers, and Transit Gateways without requiring manual correlation of multiple data sources.\n  VPC Flow Logs EC2 resource tag and next-hop metadata support is available in the following AWS Regions: US East (Ohio, N. Virginia), US West (Northern California, Oregon), Africa (Cape Town), Asia Pacific (Hong Kong, Hyderabad, Jakarta, Melbourne, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokyo, Auckland, Taipei, Bangkok, Malaysia), Canada (Central), Canada West (Calgary), Europe (Frankfurt, Ireland, London, Milan, Paris, Spain, Stockholm, Zurich), Israel (Tel Aviv), South America (Sao Paulo), Mexico (Central), European Sovereign Cloud (Germany), and AWS GovCloud (US-East, US-West) Regions. To get started, see the VPC Flow Logs documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-flow-logs-metadata",
+      "pubDate": "2026-06-10T16:58:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
         "ga",
         "support"
       ]
@@ -544,45 +652,6 @@
       ]
     },
     {
-      "id": "aws-news-80c04b3edb3e",
-      "title": "Oracle Database@AWS is now available in twenty AWS Regions",
-      "description": "Oracle Database@AWS is now generally available in eight additional AWS Regions: EU-Central-2 (Zurich), EU-South-1 (Milan), EU-South-2 (Spain), EU-West-3 (Paris), AP-Northeast-3 (Osaka), AP-Southeast-1 (Singapore), AP-Southeast-4 (Melbourne) and SA-East-1 (Sao Paulo). Oracle Database@AWS enables customers to access Oracle Cloud Infrastructure (OCI) managed Oracle Exadata systems within AWS data centers. With this launch, customers in Europe, South America, and Asia Pacific with in-region data residency requirements can migrate on-premises Oracle Exadata and Oracle Real Application Clusters (RAC) applications to AWS.\n  With this expansion, Oracle Database@AWS services are now available in twenty Regions: US-East-1 (N. Virginia), US-West-2 (Oregon), US-East-2 (Ohio), CA-Central-1 (Canada Central), SA-East-1 (Sao Paulo), EU-Central-1 (Frankfurt), EU-West-1 (Dublin), EU-West-2 (London), EU-Central-2 (Zurich), EU-South-1 (Milan), EU-South-2 (Spain), EU-West-3 (Paris), AP-Northeast-1 (Tokyo), AP-Northeast-3 (Osaka), AP-Southeast-1 (Singapore), AP-Southeast-2 (Sydney), AP-Southeast-4 (Melbourne), AP-South-1 (Mumbai), AP-South-2 (Hyderabad), and AP-Northeast-2 (Seoul). To use Oracle Database@AWS services, request a private offer from Oracle through the AWS Marketplace, and use AWS Management Console to setup your databases.\n  To learn more, visit Oracle Database@AWS overview and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/oracle-database-aws-available-twenty-regions/",
-      "pubDate": "2026-05-29T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "ga",
-        "now-available",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-88090b13180b",
-      "title": "AWS IoT Core adds APIs for MQTT connection management",
-      "description": "Today, AWS IoT Core launches two new MQTT connection management APIs, GetConnection and ListSubscriptions, enabling you to easily access MQTT client connection and subscription information for your Internet of Things (IoT) devices. These APIs help you troubleshoot connectivity issues, monitor client behavior, and audit connection patterns across your device fleet.\n  The GetConnection API gives you visibility into an IoT device connection by retrieving detailed connection information, including connection status, MQTT session details, and optional socket-level data such as source and target IP addresses, ports, and client VPC endpoint ID, controlled via granular IAM policies. The ListSubscriptions API complements this by returning all topic subscriptions, including QoS levels for a client’s MQTT session, for connected and offline clients with persistent sessions. This enables you to validate and identify overlapping or unnecessary subscriptions that may impact solution performance. Together with the existing DeleteConnection API, these new APIs provide a comprehensive MQTT connection management experience.\n \nThese APIs are now available in all AWS regions where AWS IoT Core is supported. To learn more, visit the AWS IoT Core documentation and AWS IoT Core API reference guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-core-apis-mqtt/",
-      "pubDate": "2026-05-28T20:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-8c021c75c7f9",
       "title": "Migrating your Java applications to AWS Graviton using AWS Transform custom",
       "description": "For Java applications, modern JVMs like Amazon Corretto and OpenJDK are highly optimized for Arm64 and modern applications that are pure Java often require zero changes to run on Graviton. In many cases, applications aren’t fully modernized or purely Java and have a range of dependencies. When you’re responsible for migrating workloads, it’s helpful to […]",
@@ -710,24 +779,6 @@
         "general"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-294ebadd8ed1",
-      "title": "Serverless ICYMI Q4 2025",
-      "description": "Stay current with the latest serverless innovations that can transform your applications. In this 31st quarterly recap, discover the most impactful AWS serverless launches, features, and resources from Q4 2025 that you might have missed.",
-      "link": "https://aws.amazon.com/blogs/compute/serverless-icymi-q4-2025/",
-      "pubDate": "2026-01-30T15:23:57.000Z",
-      "source": "computeBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "nova",
-        "launch"
-      ]
     }
   ]
 }
