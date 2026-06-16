@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-15T11:40:28.650Z",
+  "lastUpdated": "2026-06-16T10:49:37.446Z",
   "category": "machine-learning",
-  "totalItems": 13,
+  "totalItems": 8,
   "items": [
     {
       "id": "aws-news-d9910ba8cb8a",
@@ -67,62 +67,6 @@
       ]
     },
     {
-      "id": "aws-news-ae169d7e7e1a",
-      "title": "End-to-end encrypted ML inference with Amazon SageMaker AI and FHE",
-      "description": "This blog has previously discussed FHE for ML inference in the post Enable fully homomorphic encryption with Amazon SageMaker endpoints for secure, real-time inferencing, but this post goes a little further. That previous post showed how to implement FHE-based inference 'from scratch' by hand-crafting a linear-regression algorithm using a low-level library called SEAL. Instead, this post shows a much more flexible and higher-level approach based on concrete-ml, a high-level library built specifically for FHE-based inference. It supports several common types of models 'out of the box' and is even API compatible with the well-known ML library scikit-learn.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-and-fhe/",
-      "pubDate": "2026-06-08T16:14:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "lex"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "lex",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-80e0725486b0",
-      "title": "Accelerate SQL development with SageMaker Data Agent in Query Editor",
-      "description": "In this post, you learn how to use Data Agent in Query Editor to explore data, build multi-step analyses, recover from errors, and summarize results using a public education dataset.",
-      "link": "https://aws.amazon.com/blogs/big-data/accelerate-sql-development-with-sagemaker-data-agent-in-query-editor/",
-      "pubDate": "2026-06-04T15:40:11.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
-      ]
-    },
-    {
-      "id": "aws-news-846a908744e6",
-      "title": "Schedule notebook runs in Amazon SageMaker Unified Studio",
-      "description": "In this post, we walk you through the new scheduling and orchestrating capabilities for notebooks in Amazon SageMaker Unified Studio.",
-      "link": "https://aws.amazon.com/blogs/big-data/schedule-notebook-runs-in-amazon-sagemaker-unified-studio/",
-      "pubDate": "2026-06-03T20:19:11.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio"
-      ]
-    },
-    {
       "id": "aws-news-51f4a674b792",
       "title": "Amazon SageMaker Unified Studio now supports notebook scheduling",
       "description": "Amazon SageMaker Unified Studio now enables you to schedule, parameterize, and orchestrate notebook runs directly from the notebook interface without managing external orchestration infrastructure. This makes it easier for customers to take notebooks from experimentation to production, automating recurring workloads such as daily reports, data quality checks, and model retraining.\n \nYou can trigger on-demand background runs on dedicated compute without interrupting interactive sessions and create scheduled or recurring runs. With notebook parameterization, you can reuse a single notebook across different inputs, for example, generating shipping performance reports for multiple carriers, by defining parameters and overriding their values per schedule or on-demand run. You can also orchestrate multi-notebook workflows using the Notebook Operator in the Workflows tool, chaining notebooks so that outputs from one run feed as inputs to the next. When a scheduled or background run fails, AI-assisted troubleshooting using SageMaker Data Agent helps you identify the root cause and suggests fixes directly in the notebook, reducing time to resolution. You can also use the Data Agent to create schedules and start notebook runs using natural language, without having to navigate. To get started, open a notebook in your SageMaker Unified Studio project, choose the menu on the Run all button, and select Run in background. To create a schedule, choose the schedule icon in the notebook header or ask the Data Agent to set one up for you.\n \nYou can use notebook scheduling in all AWS Regions where Amazon SageMaker Unified Studio is supported. To learn more, see the AWS blog and user guide.",
@@ -166,49 +110,6 @@
         "iam identity center",
         "launch",
         "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ead8fde01cd5",
-      "title": "Capture data lineage of Amazon EMR spark jobs into Amazon SageMaker Unified Studio",
-      "description": "In this post, you’ll walk through a practical, step-by-step example that shows how to capture and track data lineage from Spark jobs running on Amazon EMR directly into Amazon SageMaker Catalog using OpenLineage. You’ll see how lineage metadata flows automatically and explore data relationships and dependencies across your workflows in Amazon SageMaker Unified Studio.",
-      "link": "https://aws.amazon.com/blogs/big-data/capture-data-lineage-of-amazon-emr-spark-jobs-into-amazon-sagemaker-unified-studio/",
-      "pubDate": "2026-06-01T18:37:47.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "emr"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "emr"
-      ]
-    },
-    {
-      "id": "aws-news-bb6df1ae3bb5",
-      "title": "Amazon SageMaker HyperPod now supports EFA-only network interfaces",
-      "description": "Amazon SageMaker HyperPod now supports EFA-only network interfaces for cluster instance groups, enabling you to configure dedicated Elastic Fabric Adapter (EFA) devices without the traditional Elastic Network Adapter (ENA) for IP networking. SageMaker HyperPod is a purpose-built infrastructure for AI/ML model development that provides a resilient, high-performance environment with built-in fault tolerance and automated cluster recovery. Now with EFA-only, you can scale AI/ML clusters further without risking IP address exhaustion in your VPC.\n \nWhen running large-scale distributed training workloads, inter-node communication bandwidth is critical to training performance. SageMaker HyperPod cluster instances support multiple EFA-capable network interfaces, but configuring them with the standard efa interface type attaches both an EFA device and an ENA device (for IP networking) to each interface — even when IP networking is only needed on a subset of interfaces within a node. The efa interface type inescapably consumes IP addresses in your subnet for each ENA device attached, which can lead to IP address exhaustion and limit the number of nodes you can deploy within a single subnet. With this launch, you can now set efa-only when configuring network interfaces for your HyperPod cluster instance groups. This option allocates the network interface exclusively for EFA traffic without attaching an ENA device, allowing you to maximize the number of EFA interfaces dedicated to low-latency, high-throughput inter-node communication. Because EFA-only interfaces do not require IP addresses, you can scale to larger clusters within the same subnets without encountering IP exhaustion. This configuration is particularly beneficial for large-scale distributed training jobs where inter-node communication bandwidth is critical and dedicated IP networking on every interface is not required.\n \nTo enable EFA-only, specify efa-only in the ClusterNetworkInterface configuration when creating or updating your HyperPod cluster via the CreateCluster/UpdateCluster API. EFA-only is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see ClusterNetworkInterface in the Amazon SageMaker API Reference.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-hyperpod-efa-only/",
-      "pubDate": "2026-06-01T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "launch",
-        "update",
         "support"
       ]
     },

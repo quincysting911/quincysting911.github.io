@@ -1,8 +1,84 @@
 {
-  "lastUpdated": "2026-06-15T11:40:28.650Z",
+  "lastUpdated": "2026-06-16T10:49:37.446Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 26,
   "items": [
+    {
+      "id": "aws-news-fc588cab03c5",
+      "title": "AWS Management Console Private Access now works without internet connectivity",
+      "description": "AWS Management Console Private Access now enables customers to access the AWS Console from VPCs without internet connectivity, allowing enterprises to manage their AWS infrastructure through the console while maintaining strict network security controls in air-gapped environments.\n  Previously, AWS Management Console Private Access allowed customers to restrict console access to authorized AWS accounts and corporate networks but still required internet connectivity. With this launch, AWS Console traffic can flow through VPC endpoints for the supported service consoles, eliminating the need for any internet access. This capability is particularly valuable for customers in regulated industries such as financial services, government and defense, and healthcare, and for enterprises with strict security requirements who need to access sensitive data only from controlled environments and use the console in classified or networks without internet connectivity.\n  AWS Management Console Private Access uses AWS PrivateLink to establish secure network paths between customer VPCs and the console. Customers can apply VPC endpoint policies to restrict access to specific AWS accounts and organizations, and use IAM, Service Control, and Resource Control policies to require that employees access resources only from authorized networks.\n \nThis capability is available in all AWS commercial regions. You pay only for the underlying AWS PrivateLink VPC endpoint usage and data processing. To get started and learn about the supported services, visit the Management Console Private Access documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-management-console-private/",
+      "pubDate": "2026-06-15T23:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "organizations",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3f01609f6657",
+      "title": "AWS Lambda Managed Instances now supports Tag Propagation for Managed Resources",
+      "description": "AWS Lambda Managed Instances (LMI) now supports tag propagation, enabling you to automatically apply tags to managed resources such as Amazon EC2 instances, Amazon EBS volumes, and Amazon ENIs. This helps you enforce cost allocation, service control policies (SCPs), and compliance requirements across all resources provisioned by your capacity providers.\n \nLMI lets you run Lambda functions on managed EC2 instances with built-in routing, load balancing, and auto scaling, giving you access to specialized compute configurations including the latest-generation processors and high-bandwidth networking, with no operational overhead. Organizations that use resource tagging for cost tracking, governance, or security previously had no way to propagate tags to the underlying managed resources that LMI provisions on their behalf. This made it difficult to track costs accurately, enforce SCPs, or meet compliance standards that require approved tags on all resources. Now, with tag propagation, you can specify a set of tags on your capacity provider configuration, and LMI automatically applies those tags to all managed resources it creates. This ensures consistent tagging across your EC2 instances, EBS volumes, and ENIs without requiring manual intervention or custom automation.\n \nThis feature is available in all AWS commercial Regions where LMI is generally available. To get started, configure the PropagateTags setting on your capacity provider using the CreateCapacityProvider or UpdateCapacityProvider APIs. Set the mode to Explicit and provide your desired tags as key-value pairs. Tag propagation applies to all new managed resources provisioned after the configuration is applied. You can configure these settings using the AWS Management Console, AWS CLI, AWS CloudFormation, AWS CDK, or AWS SAM. To learn more, visit the AWS Lambda Managed Instances product page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-lambda-managed-instances-tag-propagation/",
+      "pubDate": "2026-06-15T15:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "rds",
+        "cloudformation",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "rds",
+        "cloudformation",
+        "organizations",
+        "generally-available",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cdefb0256073",
+      "title": "Amazon CloudWatch now supports cross-account metrics centralization",
+      "description": "Today, Amazon Web Services announces the general availability of Amazon CloudWatch Metrics Centralization, which enables you to replicate CloudWatch metrics cross-account and cross-region into a single destination account.\n  Enterprise teams with complex multi-account, multi-region deployments often need a unified view of their operational health across their entire infrastructure. CloudWatch metrics centralization solves this by letting you define centralization rules through AWS Organizations that automatically replicate metrics from source accounts and regions into a centralized destination account. Central teams gain full ownership of the data for querying, alarming, compliance, and governance. Centralized metrics work with both CloudWatch and OpenTelemetry metrics, and are fully compatible with Metrics Insights, dashboards, alarms, Metric Math, anomaly detection, Metric Streams, and PromQL.\n  CloudWatch Metrics Centralization is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To learn more, see CloudWatch Metrics Centralization in the Amazon CloudWatch User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cross-account-metrics-centralization",
+      "pubDate": "2026-06-15T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds",
+        "cloudwatch",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "cloudwatch",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-4d3b5e914118",
       "title": "From PDFs to insights: Architecting an intelligent document processing pipeline with AWS generative AI services",
@@ -359,86 +435,77 @@
       ]
     },
     {
-      "id": "aws-news-a64f85da9aaf",
-      "title": "Quick Research now supports customer managed keys",
-      "description": "Amazon Quick Research now enables customers to encrypt their data using customer-managed keys (CMK) through AWS Key Management Service (KMS).\n \nThis enhancement allows organizations with strict security and compliance requirements to manage their own encryption keys. With customer-managed keys, you gain enhanced security control and comprehensive audit capabilities through AWS CloudTrail integration. You can encrypt your data with your own KMS keys, trace all data access for security auditing, and revoke access to compromised keys within 15 minutes during security incidents. This feature supports multiple CMKs with one default key per AWS account per region, providing the flexibility to manage encryption across different datasets while maintaining granular control over your sensitive business intelligence data.\n \nCustomer-managed keys must be created in the same AWS account and region as your Quick resources, and only symmetric AWS KMS keys are supported.\n \nThis feature is generally available in all AWS Regions where Amazon Quick is available. To learn more, visit the Amazon Quick Research detail page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick-research-cm-keys",
-      "pubDate": "2026-06-01T18:27:00.000Z",
-      "source": "whatsNew",
+      "id": "aws-news-c81001c32e70",
+      "title": "A systematic approach to benchmarking SQL processing engines on AWS",
+      "description": "Selecting the right SQL processing solution for large-scale data analytics is a critical decision for organizations. As data volumes grow exponentially, the technology landscape has evolved to offer diverse options for processing and analyzing this information efficiently. This post presents a systematic framework for evaluating and benchmarking SQL processing engines on AWS, using Apache JMeter to conduct practical performance testing at scale.",
+      "link": "https://aws.amazon.com/blogs/big-data/a-systematic-approach-to-benchmarking-sql-processing-engines-on-aws/",
+      "pubDate": "2026-05-19T15:44:02.000Z",
+      "source": "bigDataBlog",
       "services": [
-        "amazon q",
-        "lex",
         "organizations"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "amazon q",
-        "lex",
         "organizations",
-        "generally-available",
-        "ga",
-        "enhancement",
-        "integration",
-        "support"
+        "ga"
       ]
     },
     {
-      "id": "aws-news-58b27f8c3cc2",
-      "title": "Amazon Quick now supports VPC connectivity for MCP connections",
-      "description": "Amazon Quick now enables enterprise customers to connect their privately hosted Model Context Protocol (MCP) servers to Quick through Amazon Virtual Private Cloud (VPC). Amazon Quick is an AI assistant that turns questions into answers, answers into actions, and actions into outcomes for you and your entire team. Previously, Quick's MCP support was limited to third-party hosted servers accessible over the public internet. With VPC support, organizations that host MCP servers on private networks for proprietary applications, custom data sources, and internal tools can now securely extend those capabilities to AI workflows in Quick.\n  With VPC connectivity for MCP, you can connect Quick to MCP servers running on Amazon EC2, AWS Fargate, AWS Agentcore, or other compute within your private network without exposing them to the internet. During MCP connector creation, select your VPC connection and provide your MCP server URL. Once connected, your team interacts with private MCP servers through natural language in Quick, with all traffic routed securely through your VPC.\n  VPC support for MCP servers is available in all AWS Regions where Amazon Quick is available.\n  Learn more about Amazon Quick and try for free. To learn more about connecting private MCP servers, visit the MCP documentation and the VPC connectivity guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick-vpc-mcp/",
-      "pubDate": "2026-06-01T17:26:00.000Z",
-      "source": "whatsNew",
+      "id": "aws-news-abf218baf9d7",
+      "title": "Optimize Amazon S3 Tables queries with Amazon Redshift",
+      "description": "This is the third post in our S3 Tables and Amazon Redshift series. The first post covered getting started with querying Apache Iceberg tables, and the second post walked through enterprise-scale governance and access controls. In this post, you address those performance and usability gaps with three different approaches.",
+      "link": "https://aws.amazon.com/blogs/big-data/optimize-amazon-s3-tables-queries-with-amazon-redshift/",
+      "pubDate": "2026-05-14T16:58:31.000Z",
+      "source": "bigDataBlog",
       "services": [
-        "agentcore",
-        "amazon q",
-        "ec2",
-        "fargate",
-        "organizations"
+        "s3",
+        "redshift"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "agentcore",
-        "amazon q",
-        "ec2",
-        "fargate",
-        "organizations",
-        "ga",
-        "support"
+        "s3",
+        "redshift",
+        "ga"
       ]
     },
     {
-      "id": "aws-news-f29a5e36e851",
-      "title": "Amazon SageMaker adds permissions boundaries for SCP compliance",
-      "description": "Amazon SageMaker Unified Studio now supports custom IAM permissions boundaries, so organizations that enforce Service Control Policies (SCPs) requiring permissions boundaries on all IAM roles can adopt SageMaker Unified Studio without modifying their security posture.\n  When a user creates a project, SageMaker Unified Studio provisions three IAM roles: a project user role, an Amazon Bedrock service role, and a Bedrock Lambda execution role. With this launch, administrators can specify a permissions boundary in the Tooling blueprint configuration, and all three roles are created with that permissions boundary attached. This satisfies SCP requirements at creation time, and project provisioning succeeds without administrator intervention. The permissions boundary also limits what the provisioned roles can do, so administrators retain control over project-level permissions even as new projects are created. Because the permissions boundary is set at the blueprint level, it applies to every new project automatically.\n  This feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available. To learn more, visit the Manage Tooling blueprint parameters documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-scp/",
-      "pubDate": "2026-06-01T17:00:00.000Z",
-      "source": "whatsNew",
+      "id": "aws-news-7b02c01315ee",
+      "title": "Securing client confidentiality at scale: Automated data discovery and governed analytics for legal workloads",
+      "description": "In this post, we show you a reference architecture that automates sensitive data discovery across legal document repositories on Amazon Web Services (AWS), demonstrate how to capture structured findings as a compliance dataset, and guide you through building a governed analytics workspace that maintains your security boundaries. You walk away with a practical model for building security and analytics into the same lifecycle, without moving documents outside their system of record.",
+      "link": "https://aws.amazon.com/blogs/big-data/securing-client-confidentiality-at-scale-automated-data-discovery-and-governed-analytics-for-legal-workloads/",
+      "pubDate": "2026-05-13T15:57:14.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-49ae1de70158",
+      "title": "How to use streamlined permissions for Amazon S3 Tables and Iceberg materialized views",
+      "description": "In this post, we walk through how to set up and manage S3 Tables in the AWS Glue Data Catalog, create and query Iceberg materialized views, and configure access controls that work across your analytics stack with IAM-based authorization.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-to-use-streamlined-permissions-for-amazon-s3-tables-and-iceberg-materialized-views/",
+      "pubDate": "2026-05-11T18:59:36.000Z",
+      "source": "bigDataBlog",
       "services": [
-        "bedrock",
-        "sagemaker",
-        "unified studio",
-        "lambda",
+        "s3",
         "iam",
-        "organizations"
+        "glue"
       ],
       "categories": [
         "ai-safety"
       ],
       "tags": [
-        "bedrock",
-        "sagemaker",
-        "unified studio",
-        "lambda",
+        "s3",
         "iam",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
+        "glue"
       ]
     },
     {
