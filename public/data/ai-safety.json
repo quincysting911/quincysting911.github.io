@@ -1,8 +1,107 @@
 {
-  "lastUpdated": "2026-06-17T10:22:19.829Z",
+  "lastUpdated": "2026-06-18T10:01:35.321Z",
   "category": "ai-safety",
-  "totalItems": 26,
+  "totalItems": 27,
   "items": [
+    {
+      "id": "aws-news-b1982bfcae09",
+      "title": "AWS DevOps Agent adds release management capability (preview)",
+      "description": "AWS DevOps Agent now offers a release management capability in preview, reviewing code changes for release readiness and running autonomous release testing to help you ship code to production safely and with confidence. With this addition, AWS DevOps Agent now works across both delivery and operations. It accelerates and validates the deployment of code changes, then keeps your applications running optimally across AWS, multicloud, and on-prem environments, so your team ships faster, reduces MTTR, and achieves operational excellence.\n  With release readiness review, AWS DevOps Agent evaluates code changes for production safety during code generation by checking for drift from your internal standards, dependency impacts, and access controls. It maps cross-repository dependencies to surface breaking changes before commit and uses deterministic proofs to review that infrastructure changes do not drift from AWS Well-Architected best practices. With release testing, AWS DevOps Agent generates and runs test plans for web and API-based applications in customer-provisioned environments, catching regressions, UX issues, and integration failures a human reviewer may miss.\n  To get started with the preview, connect your code repositories and pipelines in your AWS DevOps Agent space. AWS DevOps Agent release management is available in the US East (N. Virginia) Region and at no additional cost during the preview period. For the list of AWS Regions where AWS DevOps Agent production operations is available, see the supported Regions table. For pricing of production operations features, which are generally available, see AWS DevOps Agent pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-devops-agent-release-management/",
+      "pubDate": "2026-06-17T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "preview",
+        "generally-available",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-35f7ba570df6",
+      "title": "Amazon Bedrock AgentCore now supports Bedrock Guardrails in policy",
+      "description": "Today, AWS announces that Amazon Bedrock AgentCore now supports Bedrock Guardrails in policy, giving enterprises deeper safety and security controls as they scale AI agents in production. AgentCore policy is an authorization capability within Amazon Bedrock AgentCore that controls which actions AI agents are authorized to take. Guardrails give enterprises defenses against the top security and safety risks with AI agent workloads, including prompt injection attacks and sensitive data exposure.\n  Guardrails can evaluate the outputs of every authorized agent action and inputs of every call to a gateway target (tools, agents, and models) in real-time, helping detect and block prompt injection attacks, harmful content, and sensitive information exposure before they reach downstream systems. Guardrail results are evaluated in policy at the AgentCore gateway perimeter, outside the agent's code, ensuring consistent enforcement regardless of agent autonomy. All policy evaluations are logged via AgentCore observability for optimization and auditing purposes.\n  AgentCore policy works with existing AgentCore gateway deployments and requires no new infrastructure. Customers author policies through natural language or policy-as-code, with consumption-based pricing for policy evaluations.\n  Bedrock Guardrails are available in policy in US East (N. Virginia), Europe (London), Europe (Stockholm), Asia Pacific (Sydney), and Asia Pacific (Tokyo). To learn more, visit Amazon Bedrock AgentCore or explore the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-policy-guardrails-generally-available",
+      "pubDate": "2026-06-17T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9eed688d3196",
+      "title": "Introducing AWS Continuum for security at machine speed",
+      "description": "Today, AWS announces AWS Continuum, which discovers, prioritizes, validates, and remediates security risks at machine speed within guardrails you define. Frontier models have made finding software vulnerabilities faster and cheaper, but the harder work comes after: deciding which vulnerabilities matter to your business, proving which are exploitable, and fixing them without days of cross-team coordination. AWS Continuum closes that gap, so your security team shifts from manual triage to setting direction and approving outcomes. \n \nAWS Continuum for code vulnerabilities, available in gated preview, works the full lifecycle of a vulnerability at machine speed. It ingests findings from your existing tools and its own scans, prioritizes each one using a context graph of your environment and business, and validates which are exploitable by building reproducible proof in an isolated sandbox. Confirmed exposures then receive fast, reversible mitigations within your guardrails, followed by durable fixes that route through your own review and deployment process, with blast radius visibility and rollback. AWS Security Agent penetration testing and code scanning are now available as Continuum penetration testing and Continuum code scanning (preview). We are also launching Continuum threat modeling in preview, which automatically generates more comprehensive threat models from design documents or source code and outputs results in STRIDE format.\n \nAWS Continuum works alongside your existing AWS security services, including Amazon GuardDuty and AWS Security Hub. For more information about the AWS Regions where AWS Continuum is available, see the AWS Region table. To learn more and request access, see the AWS Continuum product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-continuum/",
+      "pubDate": "2026-06-17T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "launch",
+        "preview",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-0bc394224e10",
+      "title": "AWS Secrets Manager introduces safe secrets handling in the Agent Toolkit for AWS",
+      "description": "AWS Secrets Manager now offers a secret safety skill as part of the aws-core plugin in the Agent Toolkit for AWS, an open-source repository that equips AI coding agents with tools, knowledge, and guardrails for building on AWS. The skill lets developers use secrets within agentic workflows without ever exposing secret values to the underlying model or session logs.\n  Until now, developers using AI coding agents could retrieve secrets as plain text without any guardrails, bringing sensitive values into agent context. With this skill, agents can securely retrieve and consume secrets without passing secret values through the context window, adding a layer of protection. To achieve this, the skill uses a two-layer approach. First, it steers the agent so the model never requests or receives a raw secret value—instead prompting the developer to clarify intent and constructing a command that uses the secret rather than retrieving it. Second, a child process resolves secret references to actual values only at execution time, outside the agent process. Together, these layers ensure plaintext secrets never appear in model context, session logs, or agent memory—without disrupting the developer's workflow.\n  The secret safety skill is available today for all agent harnesses supported by the Agent Toolkit for AWS—including Claude Code, Codex, and Cursor—and in all AWS Regions where Secrets Manager is available. To get started, visit the Agent Toolkit for AWS repository on GitHub and install the aws-core plugin for your preferred coding agent. For details, refer to the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/safe-secrets-handling-in-agent-toolkit-for-aws/",
+      "pubDate": "2026-06-17T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "secrets manager"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "secrets manager",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bf2ff0f67490",
+      "title": "AWS Security Agent announces support for Threat Modeling",
+      "description": "AWS Security Agent (now part of AWS Continuum) now includes threat modeling, an AI-powered agentic capability that automatically generates threat models for your applications. Available today in public preview, AWS Security Agent analyzes your design documents or application source code, understands the full context of your application architecture, and identifies threats with recommended mitigations using the STRIDE framework.\n \nThreat modeling is critical but often requires specialized expertise and significant manual effort. The threat modeling capability brings agentic AI reasoning to this process by deeply analyzing your code and documentation to understand architecture, data flows, and trust boundaries, then producing a contextually relevant threat model with actionable mitigations across all six STRIDE categories.\n \nDevelopers can integrate the agent into IDEs such as Kiro and Claude Code to create threat models from specs and address threats early in the design phase. Security teams can use it for pre-deployment assessments against design documents and source code.\n \nThe threat modeling capability is available in all regions supported by AWS Security Agent, at no additional cost during the public preview. \n \nTo learn more, visit our blog post or our documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-security-agent-threat-modeling/",
+      "pubDate": "2026-06-17T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ecs",
+        "preview",
+        "ga",
+        "support",
+        "public-preview"
+      ]
+    },
     {
       "id": "aws-news-b3808bfce29c",
       "title": "Amazon Bedrock Guardrails announces a new API targeting agentic AI workflows",
@@ -68,6 +167,27 @@
         "integration",
         "support",
         "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-4f57b4a4b7ac",
+      "title": "Amazon Bedrock Guardrails adds automated reasoning checks in Sydney",
+      "description": "Automated Reasoning checks in Amazon Bedrock Guardrails use formal verification techniques to validate AI model outputs with mathematical rigor, providing a fundamentally different approach from traditional sampling-based testing methods. This capability addresses critical challenges in deploying generative AI applications, including AI hallucinations, policy compliance violations, and ambiguous responses that can undermine trust in AI systems. Organizations in regulated industries such as finance, healthcare, and legal services, as well as any enterprise requiring unambiguous validation of AI outputs, can now leverage this advanced verification capability.\n \nThe feature delivers up to 99% accuracy in detecting correct responses from large language models, offering provable assurance through mathematical guarantees rather than probabilistic testing. Automated Reasoning checks help enterprises meet regulatory requirements for AI deployment while significantly reducing risks associated with incorrect or fabricated model outputs. Specific use cases include validating AI responses before production deployment in regulated environments, ensuring business rule compliance in enterprise applications, and providing quality assurance for generative AI outputs in critical workflows where ambiguity cannot be tolerated.\n \nAutomated Reasoning checks in Amazon Bedrock Guardrails are now available in the Asia Pacific (Sydney) Region, joining existing availability in US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Frankfurt), Europe (Ireland), and Europe (Paris). Customers can access this capability through the Amazon Bedrock console or the Amazon Bedrock SDK. To learn more about Automated Reasoning checks and Amazon Bedrock Guardrails, visit Amazon Bedrock Guardrails.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-guardrails-sydney/",
+      "pubDate": "2026-06-16T20:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "organizations",
+        "ga",
+        "now-available"
       ]
     },
     {
@@ -397,116 +517,6 @@
         "now-available",
         "support",
         "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-9c6b18d8792a",
-      "title": "AWS Application Migration Service is now AWS Transform MGN",
-      "description": "AWS Application Migration Service (MGN) is now available as AWS Transform MGN. This name change reflects MGN's role as the proven replication engine powering AWS Transform, the agentic migration service.\n  You can choose between two rehosting experiences. Use the AWS Transform MGN console for direct control over replication and cutover. Or use the AWS Transform agentic workflow, where an agent handles discovery, wave planning, landing zone setup, network creation, and rehosting or containerization on your behalf, accelerating your path to AWS.\n  AWS Transform MGN retains all of its existing compliance certifications, including FedRAMP High, HIPAA, PCI DSS, ISO, and SOC 1, 2, and 3, so you can migrate with confidence. It is available in all commercial regions and both GovCloud (US) Regions.\n  Visit the AWS Transform MGN product page and AWS Transform MGN documentation for more information on how to rehost applications to AWS.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-transform-mgn-rebrand/",
-      "pubDate": "2026-06-08T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-c8d48d1c4649",
-      "title": "AWS now provides AI-powered cost investigations for cost anomalies",
-      "description": "AWS Cost Anomaly Detection now includes AI-powered cost investigation, which uses Amazon Q to analyze the root cause of detected cost anomalies. Investigating a cost change typically requires correlating cost data with AWS CloudTrail events and resource activity, which can take hours. Cost investigation delivers a plain-language explanation in minutes, helping FinOps practitioners and engineering teams move from alert to action faster.\n \nWhen you investigate an anomaly, Amazon Q determines whether the cost change is usage-driven or rate-driven, identifies the contributing services, accounts, and regions, and for usage-driven changes, correlates with AWS CloudTrail to attribute the change to specific API calls and IAM principals. For organizations with a CloudTrail organization trail, the investigation works across all member accounts automatically. You can continue the conversation with follow-up questions to explore patterns or drill into specific resources. \n \nAI-powered cost investigation is available today in all commercial AWS Regions at no additional charge. Cross-account investigations that use an organization-wide CloudTrail trail delivered to Amazon CloudWatch Logs might incur standard CloudWatch Logs Insights charges based on data scanned.\n \nTo get started, navigate to AWS Cost Anomaly Detection in the AWS Billing and Cost Management console and choose Investigate with Amazon Q on any detected anomaly. To learn more, see Investigating anomaly root causes with Amazon Q in the AWS Billing and Cost Management User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-ai-powered-cost-investigations/",
-      "pubDate": "2026-06-08T16:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "iam",
-        "cloudwatch",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "iam",
-        "cloudwatch",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-87a360161fab",
-      "title": "Simplified permissions for Amazon S3 Tables and Iceberg materialized views are now available in AWS GovCloud (US) Regions",
-      "description": "AWS Glue Data Catalog now supports AWS IAM-based authorization for Amazon S3 Tables and Apache Iceberg materialized views. With IAM-based authorization, you can define all necessary permissions across storage, catalog, and query engines in a single IAM policy.\n  This capability simplifies the integration of S3 Tables or materialized views with any AWS Analytics service, including Amazon Athena, Amazon EMR, Amazon Redshift, and AWS Glue. You can also opt in to AWS Lake Formation at any time to manage fine-grained access controls using the AWS Management Console, AWS CLI, API, and AWS CloudFormation.\n  This feature is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. To learn more, visit the S3 Tables documentation and the AWS Glue Data Catalog documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/gdc-s3tables-simplified-permissions-in-aws-govcloud/",
-      "pubDate": "2026-06-05T21:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "emr",
-        "redshift",
-        "cloudformation",
-        "iam",
-        "glue",
-        "athena"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "emr",
-        "redshift",
-        "cloudformation",
-        "iam",
-        "glue",
-        "athena",
-        "now-available",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-332e4706e3f6",
-      "title": "The AWS Command Line Interface (CLI) now supports the Agent Toolkit for AWS",
-      "description": "Today, AWS announced that the AWS Command Line Interface (CLI) allows users to install the Agent Toolkit for AWS across multiple coding agents with a simple interactive wizard. The Agent Toolkit for AWS gives coding agents the tools, guidance, and guardrails they need to operate safely, effectively, and efficiently on AWS. Starting today, customers can simply type `aws configure agent-toolkit` to install the Agent Toolkit across Kiro, Claude Code, Codex, Cursor, and other popular coding agents. Additionally, customers can now use the AWS CLI to easily search for, install, and manage skills from the Agent Toolkit for AWS to equip their agents with expert guidance to complete tasks.\n  The Agent Toolkit for AWS consists of the AWS MCP Server (which provides a secure, auditable agent interface to 15,000+ AWS APIs), a suite of 40+ agent skills (which give agents expert guidance across storage, networking, analytics, and more), and three plugins (which bundle the MCP server and curate sets of skills into a single install). Using the AWS CLI, customers can now install and configure the MCP server and a customizable set of skills across multiple coding agents via an easy-to-use, interactive wizard. The AWS CLI automatically detects which coding agents are installed and allows users to choose which skills to install for which agents. Customers can then use the CLI to search for available skills, install new skills, and update existing skills. \n \nTo get started, see AWS CLI in the Agent Toolkit for AWS user guide. The AWS MCP Server is available in the US East (N. Virginia) and Europe (Frankfurt) Regions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cli-agent-toolkit/",
-      "pubDate": "2026-06-05T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-705396d11bd0",
-      "title": "Amazon SageMaker Data Agent integrates business context into conversations",
-      "description": "Amazon SageMaker Data Agent now integrates with SageMaker Catalog business context and metadata, enabling data practitioners to discover datasets and generate more accurate SQL and Python code using business terminology instead of cryptic technical table names. This integration allows the Data Agent to leverage the business context that companies have invested months curating in their SageMaker Catalog, including those synced from Collibra, Atlan, and Alation, to deliver more accurate data discovery and code generation.\n \nWith this capability, data practitioners can ask questions like \"Calculate customer retention rate\" or \"What data do I have on customer churn?\" and the Data Agent will search glossary terms, custom metadata forms, asset summaries, and README content to identify the correct tables and columns. The agent generates more accurate code on first attempt by understanding business context, plans multi-step workflows with the correct sequence of tables and transformations, and respects data governance by checking subscription status and providing access request links when needed. Organizations maximize their existing catalog investment without changing the current data workflows, reducing time-to-insight, and enabling data teams to work in business language rather than deciphering technical table names.\n \nThis integration is available in SageMaker Unified Studio notebooks and Query Editor in all AWS Regions where Amazon SageMaker Unified Studio is available. To learn more, visit the Amazon SageMaker Unified Studio page and Amazon SageMaker Data Agent documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-data-agent-bdc/",
-      "pubDate": "2026-06-04T21:51:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "organizations",
-        "ga",
-        "integration"
       ]
     },
     {
