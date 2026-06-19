@@ -1,8 +1,31 @@
 {
-  "lastUpdated": "2026-06-18T10:01:35.321Z",
+  "lastUpdated": "2026-06-19T10:08:51.704Z",
   "category": "ai-safety",
-  "totalItems": 27,
+  "totalItems": 25,
   "items": [
+    {
+      "id": "aws-news-4eabd87c2b30",
+      "title": "Amazon EKS now supports customer-routed control plane egress",
+      "description": "Today, Amazon Elastic Kubernetes Service (Amazon EKS) introduces customer-routed control plane egress, a capability that lets you route outbound Kubernetes API server traffic through your own Amazon VPC. This includes admission webhook callbacks, OpenID Connect (OIDC) provider lookups, and aggregate API server requests. With customer-routed control plane egress, this traffic flows through your VPC, where you control the routing, security groups, and egress path.\n  Organizations with data perimeter requirements, compliance mandates, or private network infrastructure can use customer-routed control plane egress to reach private OIDC providers and webhook servers that are accessible only within their VPC, and control how that traffic routes through their network. To get started, set controlPlaneEgressMode to CUSTOMER_ROUTED when creating a new cluster or updating an existing cluster. To enforce this configuration organization-wide, use the eks:controlPlaneEgressMode IAM condition key with AWS Organizations Service Control Policies.\n  Customer-routed control plane egress is available at no additional cost in all AWS Regions where Amazon EKS is available. To learn more, see Configure control plane egress routing in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-eks-customer-routed-control-plane-egress",
+      "pubDate": "2026-06-18T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "eks",
+        "iam",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b1982bfcae09",
       "title": "AWS DevOps Agent adds release management capability (preview)",
@@ -441,82 +464,6 @@
         "secrets manager",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c44a8f0adac3",
-      "title": "Amazon SageMaker Unified Studio Notebooks now support EMR Serverless",
-      "description": "Amazon SageMaker Unified Studio Notebooks now support Amazon EMR Serverless with Apache Spark Connect, giving data engineers and analysts more flexibility in choosing their Spark runtime for interactive analytics and data engineering workloads. In addition to Amazon Athena Spark, users can now leverage Amazon EMR Serverless as their Spark runtime, selecting the optimal engine based on their requirements.\n \nWith this launch, you can run PySpark and Spark SQL on an EMR Serverless Spark Application in Notebook cells. Users can select their Spark runtime from the Notebook side panel, and the selected runtime applies to both Python and SQL cells. Additionally, users can leverage SageMaker Data Agent, the built-in AI assistant, to generate code and execution plans from natural language prompts, accelerating Spark development workflows with EMR Serverless. Organizations can leverage pre-initialized capacity to improve session start times, while benefiting from unified Spark UI monitoring across all supported engines for consistent visibility into job execution and performance. Additionally, EMR Serverless provides VPC connectivity support for workloads requiring network isolation.\n \nThis feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available, supporting both SageMaker Unified Studio notebooks and JupyterLab IDE environments. To get started, see Amazon SageMaker Unified Studio User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-unified-studio-emr/",
-      "pubDate": "2026-06-09T18:46:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "emr",
-        "athena",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "emr",
-        "athena",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-07a145b685bb",
-      "title": "AWS announces Claude Fable 5, the first generally available Mythos-class model",
-      "description": "Updated on June, 12, 2026 - Claude Fable 5 and Claude Mythos 5 on Amazon Bedrock access unavailable.\n To support compliance with the US Government export control directive, Anthropic has asked AWS to revoke access to Claude Fable 5 and Claude Mythos 5 for all users. All other models, including Opus4.8, are not affected and you can continue using them in full confidence. Please view the Anthropic statement for further details.\n \n---------------------------------------------------------------------------------------------------------------------------------\n \nClaude Fable 5 is generally available on AWS and makes Mythos-level capabilities available to all customers, with strong safeguards designed to make it safe for broader use. Fable 5 is state-of-the-art on nearly all tested benchmarks and delivers a step-change in autonomous knowledge work and coding for developers and enterprises building production AI applications. Claude Mythos 5, the same model without those safety classifiers, is available to a small group of customers who currently have access to Claude Mythos Preview.\n \nClaude Fable 5 can run for extended periods on complex knowledge work and coding tasks without intervention, representing a fundamental shift in the types of problems customers can solve with AI. It is built for professional tasks in finance, legal, marketing, sales, data, and engineering — proactively self-updating skills based on learnings, developing its own evaluation harnesses, and verifying its work before delivery. \n \nCustomers have two ways to access Claude Fable 5: Amazon Bedrock and Claude Platform on AWS. Amazon Bedrock keeps your data within AWS infrastructure and provides access to Claude Fable 5 through a unified service with AWS-managed features like Guardrails, Knowledge Bases, and regional data residency. To learn more, see Amazon Bedrock documentation and regional availability. \n \nClaude Platform on AWS, operated by Anthropic, gives you direct access to Anthropic's native Claude platform experience with unified AWS billing and authentication. To get started, see the Claude Platform on AWS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/claude-fable-5-aws/",
-      "pubDate": "2026-06-09T14:15:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "lex",
-        "rds",
-        "preview",
-        "generally-available",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-429ba585f8a7",
-      "title": "AWS Backup support for Amazon EKS is now available in the AWS European Sovereign Cloud (Germany) Region",
-      "description": "AWS Backup support for Amazon Elastic Kubernetes Service (EKS) is now available in the AWS European Sovereign Cloud (Germany) Region. This expansion brings fully-managed, policy-based data protection and recovery to your Amazon EKS clusters in this newly supported Region — including automated scheduling, retention management, immutable vaults, and cross-Region and cross-account copies.\n \nYou can use AWS Backup for Amazon EKS to protect entire EKS clusters, specific namespaces, or individual persistent volumes using a centralized, agent-free solution that replaces custom scripts or third-party tools. Use AWS Backup to protect your clusters for disaster recovery, compliance requirements, or before EKS cluster upgrades.\n \nTo get started, visit the AWS Backup console, refer to the AWS Backup documentation, or read the AWS News Blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-backup-amazon-eks-aws-european-sovereign-cloud/",
-      "pubDate": "2026-06-09T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eks",
-        "now-available",
-        "support",
-        "expansion"
       ]
     },
     {
