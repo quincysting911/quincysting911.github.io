@@ -1,8 +1,32 @@
 {
-  "lastUpdated": "2026-06-22T11:29:29.861Z",
+  "lastUpdated": "2026-06-23T08:54:19.708Z",
   "category": "ai-safety",
-  "totalItems": 25,
+  "totalItems": 23,
   "items": [
+    {
+      "id": "aws-news-0e7c4712751b",
+      "title": "AWS IAM Identity Center now supports separate quotas for AWS accounts and applications",
+      "description": "AWS IAM Identity Center now supports separate quotas for the number of AWS accounts and applications that can be configured in an IAM Identity Center instance. By default, you can configure up to 7,000 AWS accounts and up to 7,000 applications independently, so that using more of one does not consume capacity from the other. Quotas can be further increased by submitting a quota increase request through AWS Service Quotas console.\n \nCustomers with existing higher limits are automatically granted the same limit for both accounts and applications, with no action required. Organizations managing thousands of AWS accounts can now onboard applications without consuming account quota capacity.\n \nThis update is available in all AWS Regions where IAM Identity Center is available.\n \nTo learn more, see Quotas for IAM Identity Center. Visit the IAM Identity Center product page to get started.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-identity-center-separate-quotas/",
+      "pubDate": "2026-06-22T16:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-4eabd87c2b30",
       "title": "Amazon EKS now supports customer-routed control plane egress",
@@ -420,53 +444,6 @@
       ]
     },
     {
-      "id": "aws-news-eeb3aa023ca3",
-      "title": "AWS Lake Formation extends table permissions to access underlying data in Amazon S3",
-      "description": "AWS Lake Formation now enables you to read and write the underlying data files in Amazon S3 for tables registered in the AWS Glue Data Catalog. This provides you with a single set of permissions for both SQL queries and direct file access using your existing Lake Formation table grants.\n  With this launch, Lake Formation provides temporary, scoped credentials for registered S3 locations based on your table permissions. SELECT permissions grant read access, and SUPER permissions grant read and write access to the data at that location. This capability comes built-in with Amazon EMR 7.13 or later. As a result, you can access data files directly from your Spark jobs for tasks that require file level access such as model training, feature engineering, or debugging data quality issues.\n  You can also integrate your Apache Spark or Trino applications using APIs or through an open source plugin provided by AWS. Additionally, all access is logged in AWS CloudTrail to provide a unified audit trail across SQL and file-based operations on your tables.\n  This feature is available at no additional charge in all AWS Regions where AWS Lake Formation is available. To learn more, see Lake Formation documentation, EMR documentation, API reference, and open source plug-in.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-lake-formation-access-data-amazon-s3",
-      "pubDate": "2026-06-11T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "emr",
-        "glue"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "emr",
-        "glue",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-5b5038abea45",
-      "title": "AWS announces AWS Workload Credentials Provider",
-      "description": "AWS announces AWS Workload Credentials Provider, a lightweight client-side provider that automates deployment of exported certificates from AWS Certificate Manager (ACM) and local caching of secrets from AWS Secrets Manager across AWS and non-AWS workloads.\n  Previously, customers exporting public or private certificates from ACM had to build custom automation using Amazon EventBridge to detect renewals and deploy the updated certificates. With public certificate lifetimes decreasing per the the Certification Authority Browser Forum (CA/B) mandate, this custom automation can become difficult to maintain at scale. AWS Workload Credentials Provider eliminates this complexity by providing a single provider that helps distribute and automate both secrets and certificates to your workloads. You configure it with your certificate ARN and specify options such as file paths and server reload behavior — the provider then handles certificate export and deployment automatically to prevent expiry related failures. It runs on Windows and Linux and supports Apache and NGINX web servers.\n  For secrets caching, the provider maintains full backwards compatibility with the AWS Secrets Manager Agent, enabling you to securely cache application secrets locally across AWS and non-AWS workloads through the same unified provider.\n  AWS Workload Credentials Provider is open source and available on GitHub. You can use it with exportable ACM certificates and Secrets Manager in all AWS Regions. To learn more, visit the AWS Certificate Manager documentation or the AWS Secrets Manager documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-workload-credentials-provider/",
-      "pubDate": "2026-06-11T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds",
-        "eventbridge",
-        "secrets manager"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "eventbridge",
-        "secrets manager",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-cca6aae4c55d",
       "title": "Automating contract intelligence with Doczy.ai™ on AWS",
       "description": "In this post, we show you how Doczy.ai™ uses generative AI on AWS to automate contract intelligence at scale, transforming unstructured documents into structured, actionable insights, so organizations can automate critical business processes and unlock the full value of their data.",
@@ -498,28 +475,6 @@
         "ai-safety"
       ],
       "tags": [
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-3e1997f9f0e0",
-      "title": "Real-time analytics: Oldcastle integrates Infor with Amazon Aurora and Amazon Quick Sight",
-      "description": "This post explores how Oldcastle used AWS services to transform their analytics and AI capabilities by integrating Infor ERP with Amazon Aurora and Amazon Quick Sight. We discuss how they overcame the limitations of traditional cloud ERP reporting to deploy real-time dashboards and build a scalable analytics system. This practical, enterprise-grade approach offers a blueprint that organizations can adapt when extending ERP capabilities with cloud-native analytics and AI.",
-      "link": "https://aws.amazon.com/blogs/architecture/real-time-analytics-oldcastle-integrates-infor-with-amazon-aurora-and-amazon-quick-sight/",
-      "pubDate": "2026-04-21T16:37:12.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "amazon q",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
         "organizations",
         "ga"
       ]

@@ -1,8 +1,44 @@
 {
-  "lastUpdated": "2026-06-22T11:29:29.861Z",
+  "lastUpdated": "2026-06-23T08:54:19.708Z",
   "category": "general",
   "totalItems": 36,
   "items": [
+    {
+      "id": "aws-news-dcb9c23495a2",
+      "title": "AWS HealthOmics now supports Nextflow profiles",
+      "description": "AWS HealthOmics now supports Nextflow profiles, enabling customers to activate predefined execution settings at run time. Nextflow profiles allow customers to define reusable settings and select them at the point of execution, making it easy to switch between execution settings without modifying workflow source code. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n \nWith Nextflow profiles, you can cleanly separate platform-specific settings such as resource limits or execution options from core workflow logic. You can switch between development and production settings without creating separate workflow definitions. This reduces errors from manual edits, accelerates workflow portability, and saves time when scaling from development to production. If you use nf-core workflows, you can now activate the built-in and institutional profiles those pipelines already ship with.\n \nYou can now specify one or more Nextflow profiles in your workflow runs in all AWS HealthOmics Regions: US East (N. Virginia), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Singapore, Seoul). To learn more, visit the Nextflow Profiles section on HealthOmics Nextflow engine settings documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-healthomics-nextflow-profiles/",
+      "pubDate": "2026-06-22T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-355bd2c17007",
+      "title": "Introducing self-service lifecycle management capabilities for AWS Outposts",
+      "description": "AWS Outposts now provides self-service capabilities for configuration, quoting, ordering, subscription management, renewal, and decommissioning directly from the AWS Management Console, CLI, and API. Previously, customers relied on AWS teams for managing their Outposts lifecycle, from evaluation through end of term.\n  A new configuration and quoting tool generates real-time cost estimates across payment options and term lengths, and proactively surfaces account and regional constraints before order submission. Quotes are generated in seconds and can be converted to orders directly in the console, for both new deployments and capacity additions. Subscription details, including term dates and billing, are now available in the console and programmatically, eliminating the need to contact AWS for contract information. When your term approaches its end date, self-service workflows let you renew with a new term and payment option, or decommission your Outpost through a guided workflow that handles resource cleanup.\n  These features are available in all commercial AWS Regions that support AWS Outposts. To learn more, refer to the Launch Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-outposts-self-service-lifecycle-management",
+      "pubDate": "2026-06-22T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "outposts",
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ae71c74ce9b4",
       "title": "Upgrading Lambda function runtimes at scale with AWS Transform custom",
@@ -451,47 +487,6 @@
         "s3",
         "eventbridge",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-55c68393b4c7",
-      "title": "Amazon Managed Service for Prometheus now supports out of order sample ingestion",
-      "description": "Amazon Managed Service for Prometheus now supports out-of-order sample ingestion and a workspace-level rule query offset. All workspaces have a default out-of-order time window of 1 minute, allowing the workspace to accept metric samples arriving outside strict chronological order. You can adjust this window to match your ingestion patterns or set it to 0 to disable the feature and discard out-of-order samples. You can also configure a global rule query offset that introduces a delay before rule evaluation queries run, giving late-arriving samples time to be ingested before rules execute.\n \nTogether, these features reduce data loss and improve alerting accuracy for workloads with distributed collectors, batched exports, or variable network latency. Out-of-order sample support ensures late-arriving data points are ingested rather than discarded, preserving metric completeness. The rule query offset compensates for the expected ingestion delay. Without it, rules evaluate instantly and may miss samples that haven't landed yet, producing results that differ from the same expression evaluated after all metrics arrive. Two new CloudWatch vended metrics, OutOfOrderIngestionRate and OutOfOrderSampleAge give you visibility into ingestion patterns, helping you tune both settings for your workload. \n \nOut-of-order sample ingestion and rule query offset are available in all AWS regions where Amazon Managed Service for Prometheus is generally available. To get started, configure the out-of-order time window and ruler query offset in your workspace settings via AWS console, API or CLI. For more information, see Amazon Managed Service for Prometheus user documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-outoforder-ingestion/",
-      "pubDate": "2026-06-11T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-57bf3c251f43",
-      "title": "Amazon OpenSearch Service launches MCP Apps for agentic observability",
-      "description": "Amazon OpenSearch Service now supports MCP Apps, bringing observability workflows directly into compatible agentic IDEs such as Claude Desktop and VS Code. With this capability, your AI agent in local environment can investigate incidents using logs, traces, metrics, and alerts stored in OpenSearch domains, collections and Amazon Managed Service for Prometheus. You can easily review and verify the results in interactive MCP App visualizations without leaving your local environment.\n  Each MCP App tool call returns a dual response, a concise text summary for your agent to reason over and an interactive visualization rendered in the same conversation thread for you to review. You can work alongside your observability agent from firing an alert, perform root cause analysis, exploring distributed traces, service maps, PromQL metric charts, and cross-signal correlations all within a single conversation. Available MCP App tools cover log, metrics and trace investigation, service performance, topology, dynamic visualizations, agent health, cluster health, and instrumentation scoring.\n \n\n The OpenSearch MCP app experience is available is available in all AWS Regions where Amazon OpenSearch UI is offered. To get started, follow the instructions in OpenSearch Agentic observability with MCP Apps. To learn more about OpenSearch, visit Amazon OpenSearch Service Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-agentic-observability-mcp-app",
-      "pubDate": "2026-06-10T22:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "launch",
-        "ga",
         "support"
       ]
     },

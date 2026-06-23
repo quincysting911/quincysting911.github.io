@@ -1,8 +1,84 @@
 {
-  "lastUpdated": "2026-06-22T11:29:29.861Z",
+  "lastUpdated": "2026-06-23T08:54:19.708Z",
   "category": "generative-ai",
-  "totalItems": 69,
+  "totalItems": 67,
   "items": [
+    {
+      "id": "aws-news-be323c7dc520",
+      "title": "Building pay-per-intelligence for AI agents: How Ampersend uses Amazon Bedrock AgentCore Payments",
+      "description": "In this post, you will learn how Ampersend built a pay-per-intelligence routing layer on top of Amazon Bedrock AgentCore Payments. AI agents autonomously route tasks to the most effective model, pay per request, and operate within spending budgets. You will also see how the two-hop payment pattern works end-to-end and how to get started with your own implementation.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/building-pay-per-intelligence-for-ai-agents-how-ampersend-uses-amazon-bedrock-agentcore-payments/",
+      "pubDate": "2026-06-22T17:53:40.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-020137a4b74d",
+      "title": "AWS Network Firewall updates default drop action for improved connection reliability",
+      "description": "AWS Network Firewall now uses \"Application drop established (server-directed only)\" as the default stateful action for all newly created firewall policies, replacing the previous default of \"Application drop established (bidirectional)\" (formerly named \"Application layer drop established\"). No action is required to benefit from this change when creating new policies.\n  AWS Network Firewall is a managed service that lets you deploy network protections across your Amazon VPCs. Previously, the “Application drop established (bidirectional)” default could silently drop legitimate server-to-client TCP packets, such as window updates, keep-alives, and resets — causing intermittent connection failures that were difficult to diagnose. With the safer default now in place, new policies avoid this issue.\n  If your existing environment requires “Application drop established (bidirectional)” to support post-quantum cryptography (PQC) fragmented TLS handshakes, refer to our documentation for guidance on on switching to \"Application drop established (server-directed only)\" or adding the “to_server” flag to your TCP drop rules so legitimate flow control packets are not blocked.\n  This update is available in all AWS Regions where AWS Network Firewall is offered. To get started, see Managing evaluation order for Suricata compatible rules in the AWS Network Firewall service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-network-firewall-updates-default-drop-action",
+      "pubDate": "2026-06-22T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cfed8f958de2",
+      "title": "Automating IT support with AI: How Nexthink uses OpenSearch Service to power self-service issue resolution",
+      "description": "In this post, we explore how Nexthink combined Amazon OpenSearch Service vector search, Amazon Bedrock, and infrastructure as code to power the Spark agent’s retrieval layer.",
+      "link": "https://aws.amazon.com/blogs/big-data/automating-it-support-with-ai-how-nexthink-uses-opensearch-service-to-power-self-service-issue-resolution/",
+      "pubDate": "2026-06-22T16:25:40.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "bedrock",
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "opensearch",
+        "opensearch service",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f5d37b207e9f",
+      "title": "Amazon MSK now offers AI Agent Skills to help developers operate MSK efficiently and accelerate migrations to MSK",
+      "description": "Amazon MSK now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for operating Amazon MSK. The skills provide expert guidance for common operational tasks such as troubleshooting, sizing, configuring, monitoring, and migration from external Kafka clusters.\n  Teams can leverage these skills to keep their clusters healthy and performant, and to migrate their external Kafka workloads to MSK Express to take advantage of up to 3 times more throughput per broker, scale up to 20 times faster, and reduced recovery time by 90 percent as compared to Standard brokers running Apache Kafka. The skills turn tasks that once required specialized knowledge into a guided experience developers can complete quickly, on their own.\n  You can use the MSK skills with your existing AI coding agent - Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"What broker type and size should I use for my MSK cluster?\" or \"Is my Kafka cluster compatible with MSK Express?\"",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-ai-agent-skills",
+      "pubDate": "2026-06-22T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "kafka",
+        "msk"
+      ]
+    },
     {
       "id": "aws-news-428aea239002",
       "title": "Introducing Web Search on Amazon Bedrock AgentCore",
@@ -120,6 +196,26 @@
       "tags": [
         "q developer",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-abe8ab586cb2",
+      "title": "AWS Parallel Computing Service supports P6e-GB200 and P6e-GB300 UltraServers",
+      "description": "AWS Parallel Computing Service (PCS) now supports Amazon EC2 P6e-GB200 and P6e-GB300 UltraServer instances, enabling customers to run large-scale GPU workloads using the NVIDIA Blackwell architecture within Slurm-managed clusters. You can reserve UltraServers through EC2 Capacity Blocks for ML, associate them with a PCS compute node group via an EC2 launch template, and PCS automatically configures Slurm with the correct topology plugin.\n  With P6e-GB200 UltraServers, you can access up to 72 NVIDIA Blackwell GPUs within one NVLink domain to use 360 petaflops of FP8 compute (without sparsity) and 13.4 TB of total high bandwidth memory (HBM3e). P6e-GB300 UltraServers provide 1.5x GPU memory and 1.5x FP4 compute (without sparsity) compared to P6e-GB200.\n  AWS PCS is a managed service that simplifies running and scaling HPC workloads on AWS using Slurm. You can build complete, elastic environments that integrate compute, storage, networking, and visualization tools, while the service handles cluster operations with managed updates and built-in observability features.\n  You can use P6e UltraServers with PCS in all AWS Regions where both PCS and EC2 Capacity Blocks for UltraServers are available. To learn more about P6e UltraServers, visit Amazon EC2 P6 instances. To reserve P6e UltraServers, contact your AWS sales representative. Read more about PCS support for P6e UltraServers in the PCS User Guide and make sure to set the right Permissions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-parallel-computing-service/",
+      "pubDate": "2026-06-18T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "update",
         "support"
       ]
     },
@@ -995,25 +1091,6 @@
       ]
     },
     {
-      "id": "aws-news-991cb6e54064",
-      "title": "Extract Data with On-demand and Batch Pipelines Dynamically",
-      "description": "This post demonstrates an intelligent document processing pipeline that consists of both on-demand inference and batch inference options on Amazon Bedrock to enable the flexibility on the document processing time and cost.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/extract-data-with-on-demand-and-batch-pipelines-dynamically/",
-      "pubDate": "2026-06-11T19:40:33.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "lex"
-      ]
-    },
-    {
       "id": "aws-news-b64ad069e22b",
       "title": "Amazon Aurora now supports PostgreSQL major version 18",
       "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports PostgreSQL major version 18, starting with version 18.3. This release brings community improvements to query performance and database management, and introduces support for pg_roaringbitmap, a new extension that performs fast, memory-efficient set operations on large collections of integers. This enables use cases such as audience segmentation, tag-based filtering, and permission checks directly in the database without application-layer processing.\n  PostgreSQL 18 introduces B-tree skip scans, which improve query performance, and reduce index storage and maintenance overhead. Major version upgrades now retain optimizer statistics, ensuring consistent query performance immediately after upgrading without waiting for statistics to be regenerated. Logical replication can now stream large transactions in parallel, reducing replication lag and keeping downstream systems more current. Please refer to the Amazon Aurora PostgreSQL release notes for details.\n  You can upgrade your database using several options including RDS Blue/Green deployments, upgrade in-place, or restoring a snapshot. Learn more about upgrading your database instances in the Amazon Aurora User Guide. Aurora PostgreSQL 18.3 is available in all commercial AWS Regions and AWS GovCloud (US) Regions.\n  Amazon Aurora is designed for unparalleled high performance and availability at global scale with full PostgreSQL and MySQL compatibility. It provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication, and integrations with other AWS services. To get started with Amazon Aurora, take a look at our getting started page.",
@@ -1031,23 +1108,6 @@
         "improvement",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c75544665c44",
-      "title": "Evaluate AI agents systematically with Agent-EvalKit",
-      "description": "Agent-EvalKit is an open-source toolkit (Apache 2.0) that makes this evaluation infrastructure available by integrating with AI coding assistants, including Claude Code, Kiro CLI, and Kilo Code. This post walks through how Agent-EvalKit works across its six evaluation phases, using a travel research agent built with the Strands Agents SDK and Amazon Bedrock as a running example.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/evaluate-ai-agents-systematically-with-agent-evalkit/",
-      "pubDate": "2026-06-11T15:49:47.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -1071,69 +1131,6 @@
         "agentcore",
         "opensearch",
         "opensearch service"
-      ]
-    },
-    {
-      "id": "aws-news-476b822fc094",
-      "title": "Amazon Managed Service for Prometheus now supports Native Histograms",
-      "description": "Amazon Managed Service for Prometheus now supports ingestion, storage, and querying of Prometheus native histograms, enabling customers to capture high-resolution metric distributions with greater precision and lower cardinality than classic histograms. DevOps engineers, site reliability engineers, and platform teams monitoring latency, request durations, and other distributions can now get more accurate percentile calculations without pre-defining bucket boundaries or managing high-cardinality time series.\n \nNative histograms use exponential bucketing to automatically adapt resolution to your data, storing an entire distribution in a single time series rather than requiring one series per bucket boundary. This reduces active series count, as a classic histogram with 20 buckets that previously required 22 time series now requires only one, while delivering more precise tail-latency insights from functions like histogram_quantile(). You can adopt native histograms incrementally alongside existing classic histograms, migrating workloads at your own pace without disrupting current monitoring. Amazon Managed Service for Prometheus meters and charges native histograms based only on populated buckets that contain actual observations, so you don't pay for empty buckets in sparse distributions. \n \nThis capability is available in all AWS Regions where Amazon Managed Service for Prometheus is offered. To get started, see Amazon Managed Service for Prometheus documentation. To learn about Native Histograms pricing, visit the Amazon Managed Service for Prometheus pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-native-histograms/",
-      "pubDate": "2026-06-11T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-51c674508c26",
-      "title": "OpenAI GPT-5.4 and GPT-5.5 models now available in US East (N. Virginia) on Amazon Bedrock",
-      "description": "Today, AWS announces the expanded availability of OpenAI's GPT-5.4 and GPT-5.5 models, which are now available in the US East (N. Virginia) Region on Amazon Bedrock. With GPT-5.4 and GPT-5.5, you can build generative AI applications across reasoning, coding, computer use, document workflows, and long-running agentic tasks.\n  GPT-5.5 is OpenAI's most capable model, designed for advanced coding, research, analysis, software operation, document workflows, and long-running agentic tasks. It can understand open-ended goals, use tools, reason across longer workflows, navigate ambiguity, and carry complex tasks through to completion with less orchestration. GPT-5.4 brings frontier reasoning, coding, computer use, long-context workflows, and tool use to production applications that interpret context, interact with tools, operate software environments, and verify outputs across multiple steps. Both models support a 272K-token context window, accept text and image input, and are available through the Responses API with support for server-side and client-side tool calling, projects, and response streaming.\n  With this launch, GPT-5.4 and GPT-5.5 are now available in additional AWS Regions. To get started, visit the GPT-5.5 and GPT-5.4 model cards in our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/openai-gpt-us-east-virginia-amazon/",
-      "pubDate": "2026-06-11T00:12:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "lex",
-        "rds",
-        "launch",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-47fbec35cd5e",
-      "title": "Amazon ECS Managed Daemons now support inter-task visibility and communication",
-      "description": "Amazon ECS Managed Daemons now support inter-task visibility and communication, enabling customers to deploy tracing, profiling, and security agents that require access to application processes and shared IPC resources on ECS Managed Instances.\n  With this launch, you can configure two new settings in ECS daemon definitions: pidMode controls whether the daemon can see all processes on the instance, and ipcMode controls whether the daemon shares an IPC namespace with other containers on the instance. Setting either to \"shared\" grants the daemon access to the respective namespace; the default of \"none\" keeps daemons isolated from application containers and other tasks. These settings let you run process-aware and IPC-dependent agents as ECS daemons instead of embedding them as sidecars in application task definitions. ECS places exactly one daemon task per managed instance and starts daemons before application tasks, so platform teams can deploy and update agents independently with consistent coverage across all workloads.\n  To get started, register a daemon task definition specifying pidMode or ipcMode set to \"shared\" using the AWS Console, CLI, CloudFormation, or AWS SDKs, then create or update a daemon with associated ECS Managed Instances capacity providers in your clusters. This feature is now available in all AWS Regions at no additional cost. For more details, refer to our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ecs-managed-daemons-pid-ipc-modes/",
-      "pubDate": "2026-06-10T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ecs",
-        "cloudformation",
-        "launch",
-        "now-available",
-        "update",
-        "support"
       ]
     },
     {
@@ -1294,22 +1291,6 @@
       "tags": []
     },
     {
-      "id": "aws-news-99a9ee9965a6",
-      "title": "Build a multi-tenant configuration system with tagged storage patterns",
-      "description": "In this post, we demonstrate how you can build a scalable, multi-tenant configuration service using the tagged storage pattern, an architectural approach that uses key prefixes (like tenant_config_ or param_config_) to automatically route configuration requests to the most appropriate AWS storage service. This pattern maintains strict tenant isolation and supports real-time, zero-downtime configuration updates through event-driven architecture, alleviating the cache staleness problem.",
-      "link": "https://aws.amazon.com/blogs/architecture/build-a-multi-tenant-configuration-system-with-tagged-storage-patterns/",
-      "pubDate": "2026-04-08T20:00:04.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-21862210c262",
       "title": "Smithy Java client framework is now generally available",
       "description": "Smithy Java client code generation is now generally available. You can use it to build type-safe, protocol-agnostic Java clients directly from Smithy models. With Smithy Java, serialization, protocol handling, and request/response lifecycles are all generated automatically from your model. This removes the need to write or maintain any of this code by hand. In this […]",
@@ -1337,26 +1318,6 @@
       ],
       "tags": [
         "generally-available"
-      ]
-    },
-    {
-      "id": "aws-news-244d6333a5a3",
-      "title": "Enabling high availability of Amazon EC2 instances on AWS Outposts servers (Part 3)",
-      "description": "This post is part 3 of the three-part series ‘Enabling high availability of Amazon EC2 instances on AWS Outposts servers’. We provide you with code samples and considerations for implementing custom logic to automate Amazon Elastic Compute Cloud (EC2) relaunch on Outposts servers. This post focuses on guidance for using Outposts servers with third party storage for boot […]",
-      "link": "https://aws.amazon.com/blogs/compute/enabling-high-availability-of-amazon-ec2-instances-on-aws-outposts-servers-part-3/",
-      "pubDate": "2026-03-06T23:11:22.000Z",
-      "source": "computeBlog",
-      "services": [
-        "ec2",
-        "outposts"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "outposts",
-        "launch"
       ]
     }
   ]

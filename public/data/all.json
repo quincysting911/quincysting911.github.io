@@ -1,16 +1,344 @@
 {
-  "lastUpdated": "2026-06-22T11:29:29.861Z",
+  "lastUpdated": "2026-06-23T08:54:19.708Z",
   "totalItems": 191,
   "sources": {
     "whatsNew": 94,
     "mlBlog": 20,
     "newsBlog": 17,
-    "bigDataBlog": 15,
+    "bigDataBlog": 16,
     "architectureBlog": 18,
-    "computeBlog": 16,
+    "computeBlog": 15,
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-4cd4e34ed4c6",
+      "title": "Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs",
+      "description": "AWS launches a new serverless compute primitive, AWS Lambda MicroVMs. VM-level, isolated sandboxes with no shared kernel or resources between sessions. Rapid launch and resume, full lifecycle control, state preservation up to 8 hours, no infrastructure to manage.",
+      "link": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/",
+      "pubDate": "2026-06-22T22:40:07.000Z",
+      "source": "newsBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "lambda",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-dcb9c23495a2",
+      "title": "AWS HealthOmics now supports Nextflow profiles",
+      "description": "AWS HealthOmics now supports Nextflow profiles, enabling customers to activate predefined execution settings at run time. Nextflow profiles allow customers to define reusable settings and select them at the point of execution, making it easy to switch between execution settings without modifying workflow source code. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n \nWith Nextflow profiles, you can cleanly separate platform-specific settings such as resource limits or execution options from core workflow logic. You can switch between development and production settings without creating separate workflow definitions. This reduces errors from manual edits, accelerates workflow portability, and saves time when scaling from development to production. If you use nf-core workflows, you can now activate the built-in and institutional profiles those pipelines already ship with.\n \nYou can now specify one or more Nextflow profiles in your workflow runs in all AWS HealthOmics Regions: US East (N. Virginia), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Singapore, Seoul). To learn more, visit the Nextflow Profiles section on HealthOmics Nextflow engine settings documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-healthomics-nextflow-profiles/",
+      "pubDate": "2026-06-22T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6ff3d56862cb",
+      "title": "AWS introduces Lambda MicroVMs for isolated execution of user and AI-generated code",
+      "description": "AWS introduces Lambda MicroVMs, a new serverless compute primitive that provides VM-level isolation, near-instant launch and resume speeds, and state preservation for executing user or AI-generated code. You can now give each user or job their own compute environment to securely run code without managing virtualization infrastructure or choosing between isolation, speed, and state retention.\n \nDevelopers are increasingly building multi-tenant applications that execute code supplied by end users or AI for use cases such as interactive coding environments, data analytics platforms, coding assistants, and vulnerability scanning platforms. For these applications, developers need to allocate a separate, isolated execution environment per user or session to limit the impact of incorrect or malicious code on other concurrently running users or jobs. Previously, developers needed to choose between strong isolation, fast launch times, and state retention when building these applications. Starting today, Lambda MicroVMs provides you these capabilities without any trade-offs. You get VM-level isolation, near-instant launch speeds, and the ability to suspend and resume execution for up to 8 hours. Lambda MicroVMs is built on Firecracker virtualization, the technology powering more than 15 trillion monthly Lambda Function invocations. \n \nTo get started, create a MicroVM image from your Dockerfile, then launch MicroVMs from that image. Give each user or job their own MicroVM with a dedicated HTTPS URL that supports popular connectivity protocols such as HTTP/2, gRPC, and WebSockets. \n \nLambda MicroVMs is available today in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Tokyo), and Europe (Ireland). To learn more, visit the AWS Lambda MicroVMs developer guide and the launch blog post. Get started with MicroVMs through the AWS Lambda console, AWS CloudFormation, AWS Cloud Development Kit, or use the Agent Toolkit for AWS with your preferred Agentic development tools. You pay for baseline compute resources while your MicroVM is running, and only for the active duration of additional resources consumed when your workload exceeds the baseline. To learn more about pricing, see Lambda MicroVMs pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-lambda-microvms/",
+      "pubDate": "2026-06-22T20:37:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-be323c7dc520",
+      "title": "Building pay-per-intelligence for AI agents: How Ampersend uses Amazon Bedrock AgentCore Payments",
+      "description": "In this post, you will learn how Ampersend built a pay-per-intelligence routing layer on top of Amazon Bedrock AgentCore Payments. AI agents autonomously route tasks to the most effective model, pay per request, and operate within spending budgets. You will also see how the two-hop payment pattern works end-to-end and how to get started with your own implementation.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/building-pay-per-intelligence-for-ai-agents-how-ampersend-uses-amazon-bedrock-agentcore-payments/",
+      "pubDate": "2026-06-22T17:53:40.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-020137a4b74d",
+      "title": "AWS Network Firewall updates default drop action for improved connection reliability",
+      "description": "AWS Network Firewall now uses \"Application drop established (server-directed only)\" as the default stateful action for all newly created firewall policies, replacing the previous default of \"Application drop established (bidirectional)\" (formerly named \"Application layer drop established\"). No action is required to benefit from this change when creating new policies.\n  AWS Network Firewall is a managed service that lets you deploy network protections across your Amazon VPCs. Previously, the “Application drop established (bidirectional)” default could silently drop legitimate server-to-client TCP packets, such as window updates, keep-alives, and resets — causing intermittent connection failures that were difficult to diagnose. With the safer default now in place, new policies avoid this issue.\n  If your existing environment requires “Application drop established (bidirectional)” to support post-quantum cryptography (PQC) fragmented TLS handshakes, refer to our documentation for guidance on on switching to \"Application drop established (server-directed only)\" or adding the “to_server” flag to your TCP drop rules so legitimate flow control packets are not blocked.\n  This update is available in all AWS Regions where AWS Network Firewall is offered. To get started, see Managing evaluation order for Suricata compatible rules in the AWS Network Firewall service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-network-firewall-updates-default-drop-action",
+      "pubDate": "2026-06-22T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-390600fa501a",
+      "title": "Secure multi-tenant RAG with Amazon Bedrock and Verified Permissions",
+      "description": "This post walks you through a two-layer, defense-in-depth authorization pattern for granular, intra-tenant access control in RAG applications. Defense in depth is a security strategy that uses multiple independent layers of protection. Each layer operates independently. If one layer is misconfigured, the other layer still enforces access control. The pattern runs on Amazon Bedrock, a fully managed service that offers a choice of high-performing foundation models (FMs) from Amazon and AI companies through a single API, along with a broad set of capabilities you need to build generative AI applications with security, privacy, and responsible AI.",
+      "link": "https://aws.amazon.com/blogs/architecture/secure-multi-tenant-rag-with-amazon-bedrock-and-verified-permissions/",
+      "pubDate": "2026-06-22T16:49:13.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-8d6ba71a0ea1",
+      "title": "Why tombola chose Graviton-powered RG instances for Amazon Redshift",
+      "description": "In this post, you learn how tombola followed a strict engineering principle: no changes to production without evidence. That meant a head-to-head comparison of RA3 versus RG on their actual workload. You also see benchmark results on Amazon S3 Tables and the migration from RA3 to RG instances.",
+      "link": "https://aws.amazon.com/blogs/big-data/why-tombola-chose-graviton-powered-rg-instances-for-amazon-redshift/",
+      "pubDate": "2026-06-22T16:45:34.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "redshift",
+        "graviton"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "s3",
+        "redshift",
+        "graviton"
+      ]
+    },
+    {
+      "id": "aws-news-2c7273c56387",
+      "title": "Modernizing financial analytics with Amazon SageMaker Unified Studio",
+      "description": "Avanse Financial Services, India’s leading education loan providers, migrated to a cloud-native lakehouse architecture using Amazon SageMaker Unified Studio, which unified their data engineering, analytics, and artificial intelligence (AI) workflows in a single governed environment on AWS. In this post, we walk through their migration journey so you can adapt their approach to your own environment.",
+      "link": "https://aws.amazon.com/blogs/architecture/modernizing-financial-analytics-with-amazon-sagemaker-unified-studio/",
+      "pubDate": "2026-06-22T16:42:55.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio"
+      ]
+    },
+    {
+      "id": "aws-news-294b5c46e017",
+      "title": "Detecting fraud patterns across Snowflake and AWS using SageMaker Data Agent",
+      "description": "Amazon SageMaker Data Agent launches three new capabilities in Amazon SageMaker Unified Studio notebooks: SQL analytics on Snowflake data sources, materialized view management, and interactive charting. Practitioners can use them together to query Snowflake alongside AWS data, pre-compute and schedule repeated aggregations, and create interactive visualizations from natural language prompts in a single notebook, without writing boilerplate code or switching tools. In this post, we describe the challenges these capabilities address, introduce each one, and walk through a fraud analytics scenario that demonstrates them working together in an end-to-end investigation workflow.",
+      "link": "https://aws.amazon.com/blogs/big-data/detecting-fraud-patterns-across-snowflake-and-aws-using-sagemaker-data-agent/",
+      "pubDate": "2026-06-22T16:38:49.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-0ac7459c1e84",
+      "title": "Architecting AI-powered resilience framework on AWS",
+      "description": "In this post, you’ll learn how to architect and implement a five-layer AI-powered resilience framework that automatically discovers dependencies, generates targeted experiments, and integrates with your existing Continuous Integration/Continuous Deployment (CI/CD) pipelines. First, we’ll explore the key challenges in resilience testing. Then, we’ll walk through the five-layer architecture that solves these challenges. Finally, we’ll show you how to implement this, with phased rollout guidance for pilot, expansion, and organization-wide deployment.",
+      "link": "https://aws.amazon.com/blogs/architecture/architecting-ai-powered-resilience-framework-on-aws/",
+      "pubDate": "2026-06-22T16:35:07.000Z",
+      "source": "architectureBlog",
+      "services": [],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "ga",
+        "integration",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-d1bb4a89b3a0",
+      "title": "Embed the world: Multimodal AI for searchable aerial imagery at scale",
+      "description": "In this post, we walk through the problem space, our architecture on Amazon Bedrock and Amazon OpenSearch Serverless, the evaluation methodology we built on OpenStreetMap ground truth, four experiments that compared embedding models, fusion strategies, captioning, and search methods, and the practical guidance you can apply when building a similar system. You’ll learn which design choices move the needle for geospatial semantic search, including why Amazon Nova Multimodal Embeddings delivered the highest F1 scores across both benchmark queries in our evaluation. The work described here evolved into Vexcel Intelligence, a searchable imagery product.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/embed-the-world-multimodal-ai-for-searchable-aerial-imagery-at-scale/",
+      "pubDate": "2026-06-22T16:32:15.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova",
+        "opensearch"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova",
+        "opensearch"
+      ]
+    },
+    {
+      "id": "aws-news-273e71733bd6",
+      "title": "Running ComfyUI workflows on Amazon SageMaker AI processing jobs",
+      "description": "In this post, we walk you through how to deploy ComfyUI workflows on Amazon SageMaker AI processing jobs to generate hundreds of high-quality images in a single batch. You learn how to set up the infrastructure using AWS Cloud Development Kit (AWS CDK), configure GPU-accelerated processing, and automate image generation at scale. You can then adapt this solution to your ComfyUI workflows specific to your needs. We will guide you through a practical, step-by-step process to automate ComfyUI workflows to generate hundreds of high-quality images in a single batch empowering you to scale your creative pipeline.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/running-comfyui-workflows-on-amazon-sagemaker-ai-processing-jobs/",
+      "pubDate": "2026-06-22T16:28:46.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
+    {
+      "id": "aws-news-cfed8f958de2",
+      "title": "Automating IT support with AI: How Nexthink uses OpenSearch Service to power self-service issue resolution",
+      "description": "In this post, we explore how Nexthink combined Amazon OpenSearch Service vector search, Amazon Bedrock, and infrastructure as code to power the Spark agent’s retrieval layer.",
+      "link": "https://aws.amazon.com/blogs/big-data/automating-it-support-with-ai-how-nexthink-uses-opensearch-service-to-power-self-service-issue-resolution/",
+      "pubDate": "2026-06-22T16:25:40.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "bedrock",
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "opensearch",
+        "opensearch service",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0e7c4712751b",
+      "title": "AWS IAM Identity Center now supports separate quotas for AWS accounts and applications",
+      "description": "AWS IAM Identity Center now supports separate quotas for the number of AWS accounts and applications that can be configured in an IAM Identity Center instance. By default, you can configure up to 7,000 AWS accounts and up to 7,000 applications independently, so that using more of one does not consume capacity from the other. Quotas can be further increased by submitting a quota increase request through AWS Service Quotas console.\n \nCustomers with existing higher limits are automatically granted the same limit for both accounts and applications, with no action required. Organizations managing thousands of AWS accounts can now onboard applications without consuming account quota capacity.\n \nThis update is available in all AWS Regions where IAM Identity Center is available.\n \nTo learn more, see Quotas for IAM Identity Center. Visit the IAM Identity Center product page to get started.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-identity-center-separate-quotas/",
+      "pubDate": "2026-06-22T16:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f5d37b207e9f",
+      "title": "Amazon MSK now offers AI Agent Skills to help developers operate MSK efficiently and accelerate migrations to MSK",
+      "description": "Amazon MSK now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for operating Amazon MSK. The skills provide expert guidance for common operational tasks such as troubleshooting, sizing, configuring, monitoring, and migration from external Kafka clusters.\n  Teams can leverage these skills to keep their clusters healthy and performant, and to migrate their external Kafka workloads to MSK Express to take advantage of up to 3 times more throughput per broker, scale up to 20 times faster, and reduced recovery time by 90 percent as compared to Standard brokers running Apache Kafka. The skills turn tasks that once required specialized knowledge into a guided experience developers can complete quickly, on their own.\n  You can use the MSK skills with your existing AI coding agent - Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"What broker type and size should I use for my MSK cluster?\" or \"Is my Kafka cluster compatible with MSK Express?\"",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-ai-agent-skills",
+      "pubDate": "2026-06-22T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "kafka",
+        "msk"
+      ]
+    },
+    {
+      "id": "aws-news-5195e58471bc",
+      "title": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
+      "description": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation. Dr. Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote, all built around one thesis: agents that compound value […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
+      "pubDate": "2026-06-22T14:46:17.000Z",
+      "source": "newsBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "bedrock",
+        "nova",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-355bd2c17007",
+      "title": "Introducing self-service lifecycle management capabilities for AWS Outposts",
+      "description": "AWS Outposts now provides self-service capabilities for configuration, quoting, ordering, subscription management, renewal, and decommissioning directly from the AWS Management Console, CLI, and API. Previously, customers relied on AWS teams for managing their Outposts lifecycle, from evaluation through end of term.\n  A new configuration and quoting tool generates real-time cost estimates across payment options and term lengths, and proactively surfaces account and regional constraints before order submission. Quotes are generated in seconds and can be converted to orders directly in the console, for both new deployments and capacity additions. Subscription details, including term dates and billing, are now available in the console and programmatically, eliminating the need to contact AWS for contract information. When your term approaches its end date, self-service workflows let you renew with a new term and payment option, or decommission your Outpost through a guided workflow that handles resource cleanup.\n  These features are available in all commercial AWS Regions that support AWS Outposts. To learn more, refer to the Launch Blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-outposts-self-service-lifecycle-management",
+      "pubDate": "2026-06-22T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "outposts",
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ae71c74ce9b4",
       "title": "Upgrading Lambda function runtimes at scale with AWS Transform custom",
@@ -231,6 +559,26 @@
       "tags": [
         "q developer",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-abe8ab586cb2",
+      "title": "AWS Parallel Computing Service supports P6e-GB200 and P6e-GB300 UltraServers",
+      "description": "AWS Parallel Computing Service (PCS) now supports Amazon EC2 P6e-GB200 and P6e-GB300 UltraServer instances, enabling customers to run large-scale GPU workloads using the NVIDIA Blackwell architecture within Slurm-managed clusters. You can reserve UltraServers through EC2 Capacity Blocks for ML, associate them with a PCS compute node group via an EC2 launch template, and PCS automatically configures Slurm with the correct topology plugin.\n  With P6e-GB200 UltraServers, you can access up to 72 NVIDIA Blackwell GPUs within one NVLink domain to use 360 petaflops of FP8 compute (without sparsity) and 13.4 TB of total high bandwidth memory (HBM3e). P6e-GB300 UltraServers provide 1.5x GPU memory and 1.5x FP4 compute (without sparsity) compared to P6e-GB200.\n  AWS PCS is a managed service that simplifies running and scaling HPC workloads on AWS using Slurm. You can build complete, elastic environments that integrate compute, storage, networking, and visualization tools, while the service handles cluster operations with managed updates and built-in observability features.\n  You can use P6e UltraServers with PCS in all AWS Regions where both PCS and EC2 Capacity Blocks for UltraServers are available. To learn more about P6e UltraServers, visit Amazon EC2 P6 instances. To reserve P6e UltraServers, contact your AWS sales representative. Read more about PCS support for P6e UltraServers in the PCS User Guide and make sure to set the right Permissions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-parallel-computing-service/",
+      "pubDate": "2026-06-18T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "update",
         "support"
       ]
     },
@@ -2263,21 +2611,6 @@
       ]
     },
     {
-      "id": "aws-news-47df80206a04",
-      "title": "Built from the inside out: How AWS Professional Services became a frontier team first",
-      "description": "AWS Professional Services (AWS ProServe) compressed engagement timelines from months to days, not by adding artificial intelligence (AI) tools to an existing process, but by fundamentally rebuilding how we deliver from the inside out. In this post, we share how AWS ProServe became a frontier team, the practices that enabled it, and what your engineering organization can take from our experience.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/built-from-the-inside-out-how-aws-professional-services-became-a-frontier-team-first/",
-      "pubDate": "2026-06-12T13:00:10.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-c7d706d34d90",
       "title": "Amazon EC2 High Memory U7i-8TB instances now available in AWS Europe (Paris) region",
       "description": "Amazon EC2 High Memory U7i-8TB instances (u7i-8tb.112xlarge) are now available in AWS Europe (Paris) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7i-8TB instances offer 8 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7i-8TB instances deliver 448 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 100 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
@@ -2387,25 +2720,6 @@
       ]
     },
     {
-      "id": "aws-news-991cb6e54064",
-      "title": "Extract Data with On-demand and Batch Pipelines Dynamically",
-      "description": "This post demonstrates an intelligent document processing pipeline that consists of both on-demand inference and batch inference options on Amazon Bedrock to enable the flexibility on the document processing time and cost.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/extract-data-with-on-demand-and-batch-pipelines-dynamically/",
-      "pubDate": "2026-06-11T19:40:33.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "lex"
-      ]
-    },
-    {
       "id": "aws-news-b64ad069e22b",
       "title": "Amazon Aurora now supports PostgreSQL major version 18",
       "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports PostgreSQL major version 18, starting with version 18.3. This release brings community improvements to query performance and database management, and introduces support for pg_roaringbitmap, a new extension that performs fast, memory-efficient set operations on large collections of integers. This enables use cases such as audience segmentation, tag-based filtering, and permission checks directly in the database without application-layer processing.\n  PostgreSQL 18 introduces B-tree skip scans, which improve query performance, and reduce index storage and maintenance overhead. Major version upgrades now retain optimizer statistics, ensuring consistent query performance immediately after upgrading without waiting for statistics to be regenerated. Logical replication can now stream large transactions in parallel, reducing replication lag and keeping downstream systems more current. Please refer to the Amazon Aurora PostgreSQL release notes for details.\n  You can upgrade your database using several options including RDS Blue/Green deployments, upgrade in-place, or restoring a snapshot. Learn more about upgrading your database instances in the Amazon Aurora User Guide. Aurora PostgreSQL 18.3 is available in all commercial AWS Regions and AWS GovCloud (US) Regions.\n  Amazon Aurora is designed for unparalleled high performance and availability at global scale with full PostgreSQL and MySQL compatibility. It provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication, and integrations with other AWS services. To get started with Amazon Aurora, take a look at our getting started page.",
@@ -2488,45 +2802,6 @@
       ]
     },
     {
-      "id": "aws-news-eeb3aa023ca3",
-      "title": "AWS Lake Formation extends table permissions to access underlying data in Amazon S3",
-      "description": "AWS Lake Formation now enables you to read and write the underlying data files in Amazon S3 for tables registered in the AWS Glue Data Catalog. This provides you with a single set of permissions for both SQL queries and direct file access using your existing Lake Formation table grants.\n  With this launch, Lake Formation provides temporary, scoped credentials for registered S3 locations based on your table permissions. SELECT permissions grant read access, and SUPER permissions grant read and write access to the data at that location. This capability comes built-in with Amazon EMR 7.13 or later. As a result, you can access data files directly from your Spark jobs for tasks that require file level access such as model training, feature engineering, or debugging data quality issues.\n  You can also integrate your Apache Spark or Trino applications using APIs or through an open source plugin provided by AWS. Additionally, all access is logged in AWS CloudTrail to provide a unified audit trail across SQL and file-based operations on your tables.\n  This feature is available at no additional charge in all AWS Regions where AWS Lake Formation is available. To learn more, see Lake Formation documentation, EMR documentation, API reference, and open source plug-in.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-lake-formation-access-data-amazon-s3",
-      "pubDate": "2026-06-11T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "emr",
-        "glue"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "emr",
-        "glue",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-c75544665c44",
-      "title": "Evaluate AI agents systematically with Agent-EvalKit",
-      "description": "Agent-EvalKit is an open-source toolkit (Apache 2.0) that makes this evaluation infrastructure available by integrating with AI coding assistants, including Claude Code, Kiro CLI, and Kilo Code. This post walks through how Agent-EvalKit works across its six evaluation phases, using a travel research agent built with the Strands Agents SDK and Amazon Bedrock as a running example.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/evaluate-ai-agents-systematically-with-agent-evalkit/",
-      "pubDate": "2026-06-11T15:49:47.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-4bb7079c8e94",
       "title": "Building AI shopping agent using Amazon Bedrock AgentCore Runtime and Amazon OpenSearch Service",
       "description": "In this post, we explore how to build an online shopping AI agent. We focus on its architecture and implementation with Amazon OpenSearch Service, Amazon Bedrock AgentCore, and Strands Agents. Amazon Bedrock AgentCore is an agentic platform for deploying and operating those agents and tools securely at scale without managing infrastructure.",
@@ -2547,135 +2822,6 @@
         "agentcore",
         "opensearch",
         "opensearch service"
-      ]
-    },
-    {
-      "id": "aws-news-476b822fc094",
-      "title": "Amazon Managed Service for Prometheus now supports Native Histograms",
-      "description": "Amazon Managed Service for Prometheus now supports ingestion, storage, and querying of Prometheus native histograms, enabling customers to capture high-resolution metric distributions with greater precision and lower cardinality than classic histograms. DevOps engineers, site reliability engineers, and platform teams monitoring latency, request durations, and other distributions can now get more accurate percentile calculations without pre-defining bucket boundaries or managing high-cardinality time series.\n \nNative histograms use exponential bucketing to automatically adapt resolution to your data, storing an entire distribution in a single time series rather than requiring one series per bucket boundary. This reduces active series count, as a classic histogram with 20 buckets that previously required 22 time series now requires only one, while delivering more precise tail-latency insights from functions like histogram_quantile(). You can adopt native histograms incrementally alongside existing classic histograms, migrating workloads at your own pace without disrupting current monitoring. Amazon Managed Service for Prometheus meters and charges native histograms based only on populated buckets that contain actual observations, so you don't pay for empty buckets in sparse distributions. \n \nThis capability is available in all AWS Regions where Amazon Managed Service for Prometheus is offered. To get started, see Amazon Managed Service for Prometheus documentation. To learn about Native Histograms pricing, visit the Amazon Managed Service for Prometheus pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-native-histograms/",
-      "pubDate": "2026-06-11T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-55c68393b4c7",
-      "title": "Amazon Managed Service for Prometheus now supports out of order sample ingestion",
-      "description": "Amazon Managed Service for Prometheus now supports out-of-order sample ingestion and a workspace-level rule query offset. All workspaces have a default out-of-order time window of 1 minute, allowing the workspace to accept metric samples arriving outside strict chronological order. You can adjust this window to match your ingestion patterns or set it to 0 to disable the feature and discard out-of-order samples. You can also configure a global rule query offset that introduces a delay before rule evaluation queries run, giving late-arriving samples time to be ingested before rules execute.\n \nTogether, these features reduce data loss and improve alerting accuracy for workloads with distributed collectors, batched exports, or variable network latency. Out-of-order sample support ensures late-arriving data points are ingested rather than discarded, preserving metric completeness. The rule query offset compensates for the expected ingestion delay. Without it, rules evaluate instantly and may miss samples that haven't landed yet, producing results that differ from the same expression evaluated after all metrics arrive. Two new CloudWatch vended metrics, OutOfOrderIngestionRate and OutOfOrderSampleAge give you visibility into ingestion patterns, helping you tune both settings for your workload. \n \nOut-of-order sample ingestion and rule query offset are available in all AWS regions where Amazon Managed Service for Prometheus is generally available. To get started, configure the out-of-order time window and ruler query offset in your workspace settings via AWS console, API or CLI. For more information, see Amazon Managed Service for Prometheus user documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-outoforder-ingestion/",
-      "pubDate": "2026-06-11T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5b5038abea45",
-      "title": "AWS announces AWS Workload Credentials Provider",
-      "description": "AWS announces AWS Workload Credentials Provider, a lightweight client-side provider that automates deployment of exported certificates from AWS Certificate Manager (ACM) and local caching of secrets from AWS Secrets Manager across AWS and non-AWS workloads.\n  Previously, customers exporting public or private certificates from ACM had to build custom automation using Amazon EventBridge to detect renewals and deploy the updated certificates. With public certificate lifetimes decreasing per the the Certification Authority Browser Forum (CA/B) mandate, this custom automation can become difficult to maintain at scale. AWS Workload Credentials Provider eliminates this complexity by providing a single provider that helps distribute and automate both secrets and certificates to your workloads. You configure it with your certificate ARN and specify options such as file paths and server reload behavior — the provider then handles certificate export and deployment automatically to prevent expiry related failures. It runs on Windows and Linux and supports Apache and NGINX web servers.\n  For secrets caching, the provider maintains full backwards compatibility with the AWS Secrets Manager Agent, enabling you to securely cache application secrets locally across AWS and non-AWS workloads through the same unified provider.\n  AWS Workload Credentials Provider is open source and available on GitHub. You can use it with exportable ACM certificates and Secrets Manager in all AWS Regions. To learn more, visit the AWS Certificate Manager documentation or the AWS Secrets Manager documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-workload-credentials-provider/",
-      "pubDate": "2026-06-11T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds",
-        "eventbridge",
-        "secrets manager"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "eventbridge",
-        "secrets manager",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-51c674508c26",
-      "title": "OpenAI GPT-5.4 and GPT-5.5 models now available in US East (N. Virginia) on Amazon Bedrock",
-      "description": "Today, AWS announces the expanded availability of OpenAI's GPT-5.4 and GPT-5.5 models, which are now available in the US East (N. Virginia) Region on Amazon Bedrock. With GPT-5.4 and GPT-5.5, you can build generative AI applications across reasoning, coding, computer use, document workflows, and long-running agentic tasks.\n  GPT-5.5 is OpenAI's most capable model, designed for advanced coding, research, analysis, software operation, document workflows, and long-running agentic tasks. It can understand open-ended goals, use tools, reason across longer workflows, navigate ambiguity, and carry complex tasks through to completion with less orchestration. GPT-5.4 brings frontier reasoning, coding, computer use, long-context workflows, and tool use to production applications that interpret context, interact with tools, operate software environments, and verify outputs across multiple steps. Both models support a 272K-token context window, accept text and image input, and are available through the Responses API with support for server-side and client-side tool calling, projects, and response streaming.\n  With this launch, GPT-5.4 and GPT-5.5 are now available in additional AWS Regions. To get started, visit the GPT-5.5 and GPT-5.4 model cards in our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/openai-gpt-us-east-virginia-amazon/",
-      "pubDate": "2026-06-11T00:12:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "lex",
-        "rds",
-        "launch",
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-57bf3c251f43",
-      "title": "Amazon OpenSearch Service launches MCP Apps for agentic observability",
-      "description": "Amazon OpenSearch Service now supports MCP Apps, bringing observability workflows directly into compatible agentic IDEs such as Claude Desktop and VS Code. With this capability, your AI agent in local environment can investigate incidents using logs, traces, metrics, and alerts stored in OpenSearch domains, collections and Amazon Managed Service for Prometheus. You can easily review and verify the results in interactive MCP App visualizations without leaving your local environment.\n  Each MCP App tool call returns a dual response, a concise text summary for your agent to reason over and an interactive visualization rendered in the same conversation thread for you to review. You can work alongside your observability agent from firing an alert, perform root cause analysis, exploring distributed traces, service maps, PromQL metric charts, and cross-signal correlations all within a single conversation. Available MCP App tools cover log, metrics and trace investigation, service performance, topology, dynamic visualizations, agent health, cluster health, and instrumentation scoring.\n \n\n The OpenSearch MCP app experience is available is available in all AWS Regions where Amazon OpenSearch UI is offered. To get started, follow the instructions in OpenSearch Agentic observability with MCP Apps. To learn more about OpenSearch, visit Amazon OpenSearch Service Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-agentic-observability-mcp-app",
-      "pubDate": "2026-06-10T22:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-47fbec35cd5e",
-      "title": "Amazon ECS Managed Daemons now support inter-task visibility and communication",
-      "description": "Amazon ECS Managed Daemons now support inter-task visibility and communication, enabling customers to deploy tracing, profiling, and security agents that require access to application processes and shared IPC resources on ECS Managed Instances.\n  With this launch, you can configure two new settings in ECS daemon definitions: pidMode controls whether the daemon can see all processes on the instance, and ipcMode controls whether the daemon shares an IPC namespace with other containers on the instance. Setting either to \"shared\" grants the daemon access to the respective namespace; the default of \"none\" keeps daemons isolated from application containers and other tasks. These settings let you run process-aware and IPC-dependent agents as ECS daemons instead of embedding them as sidecars in application task definitions. ECS places exactly one daemon task per managed instance and starts daemons before application tasks, so platform teams can deploy and update agents independently with consistent coverage across all workloads.\n  To get started, register a daemon task definition specifying pidMode or ipcMode set to \"shared\" using the AWS Console, CLI, CloudFormation, or AWS SDKs, then create or update a daemon with associated ECS Managed Instances capacity providers in your clusters. This feature is now available in all AWS Regions at no additional cost. For more details, refer to our documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ecs-managed-daemons-pid-ipc-modes/",
-      "pubDate": "2026-06-10T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ecs",
-        "cloudformation",
-        "launch",
-        "now-available",
-        "update",
-        "support"
       ]
     },
     {
@@ -2974,25 +3120,6 @@
       ]
     },
     {
-      "id": "aws-news-846a908744e6",
-      "title": "Schedule notebook runs in Amazon SageMaker Unified Studio",
-      "description": "In this post, we walk you through the new scheduling and orchestrating capabilities for notebooks in Amazon SageMaker Unified Studio.",
-      "link": "https://aws.amazon.com/blogs/big-data/schedule-notebook-runs-in-amazon-sagemaker-unified-studio/",
-      "pubDate": "2026-06-03T20:19:11.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio"
-      ]
-    },
-    {
       "id": "aws-news-305a3a394fed",
       "title": "Align your architecture backlog with Tech Roadmap Prioritization (TRP)",
       "description": "In this post, we show you how to run a one-hour prioritization session with your stakeholders, plot competing initiatives on a shared matrix by cost and impact and turn the result into an actionable architecture backlog - using a framework called Tech Roadmap Prioritization (TRP).",
@@ -3139,27 +3266,6 @@
       ]
     },
     {
-      "id": "aws-news-ead8fde01cd5",
-      "title": "Capture data lineage of Amazon EMR spark jobs into Amazon SageMaker Unified Studio",
-      "description": "In this post, you’ll walk through a practical, step-by-step example that shows how to capture and track data lineage from Spark jobs running on Amazon EMR directly into Amazon SageMaker Catalog using OpenLineage. You’ll see how lineage metadata flows automatically and explore data relationships and dependencies across your workflows in Amazon SageMaker Unified Studio.",
-      "link": "https://aws.amazon.com/blogs/big-data/capture-data-lineage-of-amazon-emr-spark-jobs-into-amazon-sagemaker-unified-studio/",
-      "pubDate": "2026-06-01T18:37:47.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "emr"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "emr"
-      ]
-    },
-    {
       "id": "aws-news-17b9fc3b2e93",
       "title": "Building a scalable user search layer on top of Amazon Cognito",
       "description": "In this post, we show how to build a comprehensive scalable user search layer on top of Amazon Cognito using AWS Lambda, Amazon DynamoDB, and Amazon OpenSearch Service.",
@@ -3194,39 +3300,6 @@
         "news"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-5af2373db2f4",
-      "title": "Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey",
-      "description": "AWS launches the next generation of AWS Resilience Hub with a significantly expanded experience that brings together a new application model, dependency discovery assessment, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.",
-      "link": "https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/",
-      "pubDate": "2026-05-28T19:29:55.000Z",
-      "source": "newsBlog",
-      "services": [],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-e16f3a55dc20",
-      "title": "Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications",
-      "description": "AWS rebuilt Amazon OpenSearch Serverless from the ground up for agentic AI and dynamic workloads. Get instant autoscaling and up to 60% cost savings.",
-      "link": "https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/",
-      "pubDate": "2026-05-28T18:26:16.000Z",
-      "source": "newsBlog",
-      "services": [
-        "opensearch"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "opensearch"
-      ]
     },
     {
       "id": "aws-news-8c021c75c7f9",
@@ -3431,50 +3504,6 @@
       "tags": []
     },
     {
-      "id": "aws-news-f31a0d9dd43c",
-      "title": "PACIFIC enables multi-tenant, sovereign product carbon footprint exchange on the Catena-X data space using AWS",
-      "description": "This post explores how PACIFIC enables multi-tenant, sovereign PCF exchange on the Catena-X data space using Amazon Elastic Container Service (Amazon ECS) on AWS Fargate, Amazon Cognito, and AWS Identity and Access Management (IAM) to deliver measurable environmental impact and competitive advantage in a carbon-conscious marketplace.",
-      "link": "https://aws.amazon.com/blogs/architecture/pacific-enables-multi-tenant-sovereign-product-carbon-footprint-exchange-on-the-catena-x-data-space-using-aws/",
-      "pubDate": "2026-04-22T15:33:54.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "ecs",
-        "fargate",
-        "iam"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "ecs",
-        "fargate",
-        "iam",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-3e1997f9f0e0",
-      "title": "Real-time analytics: Oldcastle integrates Infor with Amazon Aurora and Amazon Quick Sight",
-      "description": "This post explores how Oldcastle used AWS services to transform their analytics and AI capabilities by integrating Infor ERP with Amazon Aurora and Amazon Quick Sight. We discuss how they overcame the limitations of traditional cloud ERP reporting to deploy real-time dashboards and build a scalable analytics system. This practical, enterprise-grade approach offers a blueprint that organizations can adapt when extending ERP capabilities with cloud-native analytics and AI.",
-      "link": "https://aws.amazon.com/blogs/architecture/real-time-analytics-oldcastle-integrates-infor-with-amazon-aurora-and-amazon-quick-sight/",
-      "pubDate": "2026-04-21T16:37:12.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "amazon q",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-097979bc3b7f",
       "title": "AWS Outposts monitoring and reporting: A comprehensive Amazon EventBridge solution",
       "description": "Organizations using AWS Outposts racks commonly manage capacity from a single AWS account and share resources through AWS Resource Access Manager (AWS RAM) with other AWS accounts (consumer accounts) within AWS Organizations. In this post, we demonstrate one approach to create a multi-account serverless solution to surface costs in shared AWS Outposts environments using Amazon […]",
@@ -3513,22 +3542,6 @@
       "tags": [
         "lex",
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-99a9ee9965a6",
-      "title": "Build a multi-tenant configuration system with tagged storage patterns",
-      "description": "In this post, we demonstrate how you can build a scalable, multi-tenant configuration service using the tagged storage pattern, an architectural approach that uses key prefixes (like tenant_config_ or param_config_) to automatically route configuration requests to the most appropriate AWS storage service. This pattern maintains strict tenant isolation and supports real-time, zero-downtime configuration updates through event-driven architecture, alleviating the cache staleness problem.",
-      "link": "https://aws.amazon.com/blogs/architecture/build-a-multi-tenant-configuration-system-with-tagged-storage-patterns/",
-      "pubDate": "2026-04-08T20:00:04.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "update",
-        "support"
       ]
     },
     {
@@ -3610,26 +3623,6 @@
       ],
       "tags": [
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-244d6333a5a3",
-      "title": "Enabling high availability of Amazon EC2 instances on AWS Outposts servers (Part 3)",
-      "description": "This post is part 3 of the three-part series ‘Enabling high availability of Amazon EC2 instances on AWS Outposts servers’. We provide you with code samples and considerations for implementing custom logic to automate Amazon Elastic Compute Cloud (EC2) relaunch on Outposts servers. This post focuses on guidance for using Outposts servers with third party storage for boot […]",
-      "link": "https://aws.amazon.com/blogs/compute/enabling-high-availability-of-amazon-ec2-instances-on-aws-outposts-servers-part-3/",
-      "pubDate": "2026-03-06T23:11:22.000Z",
-      "source": "computeBlog",
-      "services": [
-        "ec2",
-        "outposts"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "outposts",
-        "launch"
       ]
     },
     {
