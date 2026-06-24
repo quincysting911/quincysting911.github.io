@@ -1,8 +1,132 @@
 {
-  "lastUpdated": "2026-06-23T08:54:19.708Z",
+  "lastUpdated": "2026-06-24T08:50:11.909Z",
   "category": "generative-ai",
-  "totalItems": 67,
+  "totalItems": 68,
   "items": [
+    {
+      "id": "aws-news-d31299f2c1ff",
+      "title": "SageMaker Notebook Instances now support G6e instance types",
+      "description": "We are pleased to announce general availability of Amazon EC2 G6e instances on SageMaker notebook instances.\n \nAmazon EC2 G6e instances are powered by up to 8 NVIDIA L40s Tensor Core GPUs with 48 GB of memory per GPU and third generation AMD EPYC processors. G6e instances deliver up to 2.5x better performance compared to EC2 G5 instances. Customers can use G6e instances to interactively test model deployment and for interactive model training use cases such as generative AI fine-tuning. You can use G6e instances to deploy large language models (LLMs) with up to 13B parameters and diffusion models for generating images, video, and audio.\n \nAmazon EC2 G6e instances are available on SageMaker notebook instances in the AWS US East (N. Virginia and Ohio), US West (Oregon), Asia Pacific (Tokyo), Middle East (Dubai) and Europe (Frankfurt, Sweden, Spain) regions.\n \nVisit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio and SageMaker notebook instances.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/g6e-new-launch-sagemaker-notebook-instances/",
+      "pubDate": "2026-06-23T18:14:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-638ad007dad6",
+      "title": "Amazon Bedrock AgentCore Memory now supports cross-account access",
+      "description": "Amazon Bedrock AgentCore Memory now enables cross-account access, allowing you to build multi-account architectures where memory resources and consuming agents span multiple AWS accounts. You can grant principals in one account permission to call memory data plane APIs against resources in another account using resource-based policies, and configure memory delivery destinations (Amazon S3, Amazon SNS, Amazon Kinesis Data Streams) that reside in a separate account.\n \nCross-account access is configured by attaching a resource-based policy to your memory resource. Once configured, principals in the consuming account can create events, write memory records, retrieve records, and perform semantic search by referencing the full memory ARN. Cross-account delivery destinations allow your memory resource to deliver payloads and stream events to S3 buckets, SNS topics, and Kinesis Data Streams in other accounts.\n \nTo get started, see Cross-account memory access in the Amazon Bedrock AgentCore Developer Guide. Amazon Bedrock AgentCore Memory cross-account access is available in all AWS Regions where Amazon Bedrock AgentCore Memory is supported.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/agentcore-memory-cross-account-access",
+      "pubDate": "2026-06-23T17:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "s3",
+        "rds",
+        "kinesis",
+        "sns"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "s3",
+        "rds",
+        "kinesis",
+        "sns",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8a1b51c6edd8",
+      "title": "AWS HealthOmics now supports ephemeral storage for private workflows",
+      "description": "AWS HealthOmics adds ephemeral storage for private workflows, giving bioinformatics workloads dedicated scratch space that delivers more consistent run performance and lower costs. Each workflow task now receives a dedicated local volume mounted at /tmp, and workflows that generate significant scratch data, such as genomic sequence alignment, BAM sorting, and variant calling, can experience faster run times. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs with fully managed bioinformatics workflows.\n \nWith this launch, workflow tasks can write temporary data to their own local volume, keeping scratch I/O isolated from shared run storage that hosts the working directory. By default, each task includes 16 GiB of ephemeral storage at no additional charge. You can increase the amount of ephemeral storage allocated to individual tasks, up to a maximum of 3,072 GiB per task, using the appropriate directive in your WDL, Nextflow, or CWL workflow definition. You can enable ephemeral storage at runtime with the StartRun API. All ephemeral storage volumes are encrypted and deleted when a task terminates.\n \nYou can use ephemeral storage in all AWS Regions where AWS HealthOmics is available: US East (N. Virginia), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Singapore, Seoul). To learn more about ephemeral storage, visit the AWS HealthOmics User Guide. For more information on pricing, visit AWS HealthOmics pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/healthomics-scratch-storage/",
+      "pubDate": "2026-06-23T17:15:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b767462e905c",
+      "title": "Build a protein research copilot with Amazon Bedrock AgentCore",
+      "description": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-generated scientific summaries of search results.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-protein-research-copilot-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-06-23T16:39:34.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-497100e0aad0",
+      "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
+      "description": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-06-23T15:43:59.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-427cdb06aa69",
+      "title": "Amazon SageMaker Studio notebooks now support G7e instance types",
+      "description": "Amazon G7e instances feature up to 8 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, with 96 GB of memory per GPU, and 5th Generation Intel Xeon processors. They support up to 192 virtual CPUs (vCPUs) and up to 1600 Gbps of Elastic Fabric Adapter networking bandwidth. G7e instances support NVIDIA GPUDirect Peer to Peer (P2P) that boosts performance for multi-GPU workloads. Multi-GPU G7e instances also support NVIDIA GPUDirect Remote Direct Memory Access (RDMA) with EFAv4 in EC2 UltraClusters, reducing latency for small-scale multi-node workloads. Customers can use G7e instances to deploy large language models (LLMs), agentic AI models, multimodal generative AI models, and physical AI models. G7e instances offer the highest performance for spatial computing workloads as well as workloads that require both graphics and AI processing capabilities.\n \nAmazon EC2 G7e instances are available for SageMaker Studio notebooks in the AWS US East (N. Virginia and Ohio) and US West (Oregon) regions.\n \nVisit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio. For pricing information on these instances, please visit our pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/g7e-new-launch-sagemaker-studio-notebooks/",
+      "pubDate": "2026-06-23T01:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-be323c7dc520",
       "title": "Building pay-per-intelligence for AI agents: How Ampersend uses Amazon Bedrock AgentCore Payments",
@@ -997,26 +1121,6 @@
       ]
     },
     {
-      "id": "aws-news-649a47273ec6",
-      "title": "Amazon RDS for MariaDB now supports community MariaDB minor versions 10.6.27, 10.11.18, 11.4.12, and 11.8.8",
-      "description": "Amazon Relational Database Service (Amazon RDS) for MariaDB now supports community MariaDB minor versions 10.6.27, 10.11.18, 11.4.12, and 11.8.8. We recommend that you upgrade to the latest minor versions to fix known security vulnerabilities in prior versions of MariaDB, and to benefit from the bug fixes, performance improvements, and new functionality added by the MariaDB community.\n  You can leverage automatic minor version upgrades to automatically upgrade your databases to more recent minor versions during scheduled maintenance windows. You can also leverage Amazon RDS Managed Blue/Green deployments for safer, simpler, and faster updates to your MariaDB instances. Learn more about upgrading your database instances, including automatic minor version upgrades and Blue/Green Deployments, in the Amazon RDS User Guide.\n  Amazon RDS for MariaDB makes it straightforward to set up, operate, and scale MariaDB deployments in the cloud. Learn more about pricing details and regional availability at Amazon RDS for MariaDB. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-rds-mariadb-community-versions/",
-      "pubDate": "2026-06-15T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "update",
-        "improvement",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-96011fb52490",
       "title": "Building Supercharger: How Rocket Close optimized title operations with agentic AI",
       "description": "In this post, we explore how Rocket Close built a solution using Strands Agents, large language models (LLMs), Amazon Bedrock, Amazon Bedrock Knowledge Bases, and Model Context Protocol (MCP) tools. We cover solution features, the rationale for the technology stack, lessons learned, and the business impact at Rocket Close.",
@@ -1031,83 +1135,6 @@
       ],
       "tags": [
         "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-1a61b615183f",
-      "title": "Amazon EC2 I7i instances now available in AWS Europe (Paris) Region",
-      "description": "AWS is announcing the availability of high performance Storage optimized Amazon EC2 I7i instances in AWS Europe (Paris) region. Powered by 5th Gen Intel Xeon Processors with an all-core turbo frequency of 3.2 GHz, these new instances deliver up to 23% better compute performance and more than 10% better price performance over previous generation I4i instances. Powered by 3rd generation AWS Nitro SSDs, I7i instances offer up to 45TB of NVMe storage with up to 50% better real-time storage performance, up to 50% lower storage I/O latency, and up to 60% lower storage I/O latency variability compared to I4i instances.\n  I7i instances offer compute and storage performance for x86-based storage optimized instances in Amazon EC2 ideal for I/O intensive and latency-sensitive workloads that demand very high random IOPS performance with real-time latency to access the small to medium size datasets. Additionally, torn write prevention feature support up to 16KB block sizes, enabling customers to eliminate database performance bottlenecks.\n  I7i instances are available in eleven sizes - nine virtual sizes up to 48xlarge and two bare metal sizes - delivering up to 100Gbps of network bandwidth and 60Gbps of Amazon Elastic Block Store (EBS) bandwidth. To learn more, visit the I7i instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-i7i-instances-europe-paris-region/",
-      "pubDate": "2026-06-12T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-23138c1914a1",
-      "title": "Build a meeting prep and follow-up assistant with Amazon Quick and Cisco Webex MCP servers",
-      "description": "This post shows how to build a custom meeting prep and follow-up assistant using Amazon Quick and Cisco Webex MCP servers. From a single prompt, the agent finds an upcoming Webex meeting, reviews prior meeting summaries and transcripts, and pulls related Vidcast highlights and transcript context. It then searches Webex message threads for unresolved follow-ups and creates a concise prep brief. After the meeting, the same assistant can summarize the discussion and identify action items. It can also find related Vidcast updates and draft a follow-up message for the right Webex space.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-meeting-prep-and-follow-up-assistant-with-amazon-quick-and-cisco-webex-mcp-servers/",
-      "pubDate": "2026-06-12T14:49:40.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-382a3ac89c23",
-      "title": "Amazon Quick now integrates with Snowflake Cortex AI",
-      "description": "Amazon Quick now integrates with Snowflake Cortex AI through the Model Context Protocol (MCP), enabling teams to query their Snowflake data and documents using natural language, and automate multi-step workflows directly within their Quick workspace. After setting up the connection using Snowflake's managed MCP server with OAuth authentication, you can ask questions across structured data through Cortex Analyst and retrieve insights from unstructured documents through Cortex Search.\n \nWith this integration, you can build Flows in Quick that orchestrate Snowflake Cortex Agents to execute repeatable, governed workflows with consistent structured output. This is ideal for any multi-step process that spans structured data and unstructured documents. The same MCP connection is also accessible from Quick Chat and other Quick features. For example, users can ask ad-hoc follow-up questions or explore their Snowflake data conversationally alongside their automated flows. Quick intelligently routes relevant prompts to Snowflake Cortex AI and returns contextualized answers alongside enterprise knowledge stored in Quick Spaces, giving teams both the rigor of a structured process and the flexibility of a conversational interface.\n \nThe Snowflake Cortex AI integration with Amazon Quick is available in all AWS Regions where Amazon Quick is available.\n \nVisit the Amazon Quick website to learn more and start your Quick free trial. To learn more about the Snowflake Cortex AI integration, read the blog. To learn more about Quick integrations, visit the integrations page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick-snowflake-cortex-ai/",
-      "pubDate": "2026-06-11T22:02:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "lex",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-b64ad069e22b",
-      "title": "Amazon Aurora now supports PostgreSQL major version 18",
-      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports PostgreSQL major version 18, starting with version 18.3. This release brings community improvements to query performance and database management, and introduces support for pg_roaringbitmap, a new extension that performs fast, memory-efficient set operations on large collections of integers. This enables use cases such as audience segmentation, tag-based filtering, and permission checks directly in the database without application-layer processing.\n  PostgreSQL 18 introduces B-tree skip scans, which improve query performance, and reduce index storage and maintenance overhead. Major version upgrades now retain optimizer statistics, ensuring consistent query performance immediately after upgrading without waiting for statistics to be regenerated. Logical replication can now stream large transactions in parallel, reducing replication lag and keeping downstream systems more current. Please refer to the Amazon Aurora PostgreSQL release notes for details.\n  You can upgrade your database using several options including RDS Blue/Green deployments, upgrade in-place, or restoring a snapshot. Learn more about upgrading your database instances in the Amazon Aurora User Guide. Aurora PostgreSQL 18.3 is available in all commercial AWS Regions and AWS GovCloud (US) Regions.\n  Amazon Aurora is designed for unparalleled high performance and availability at global scale with full PostgreSQL and MySQL compatibility. It provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication, and integrations with other AWS services. To get started with Amazon Aurora, take a look at our getting started page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-aurora-postgresql-major-version-18/",
-      "pubDate": "2026-06-11T18:59:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "improvement",
-        "integration",
-        "support"
       ]
     },
     {
