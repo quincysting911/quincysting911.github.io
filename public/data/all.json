@@ -1,16 +1,270 @@
 {
-  "lastUpdated": "2026-06-24T08:50:11.909Z",
-  "totalItems": 191,
+  "lastUpdated": "2026-06-25T08:44:20.661Z",
+  "totalItems": 193,
   "sources": {
-    "whatsNew": 94,
+    "whatsNew": 95,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 16,
     "architectureBlog": 18,
-    "computeBlog": 15,
+    "computeBlog": 16,
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-b8edd5fef458",
+      "title": "Amazon EC2 announces AMI Watermarks for improved AMI governance",
+      "description": "Amazon EC2 introduces AMI watermarks, letting you embed custom identifiers in your private AMIs. Once applied, a watermark automatically carries forward to every AMI derived from the original, whether you copy it across regions or create a new AMI from a running instance. Watermarks also remain visible when you share an AMI with other accounts. This helps you identify trusted AMIs, track provenance, and enforce governance policies across your organization.\n  Each watermark includes metadata such as the AMI ID, owner ID, region, and creation timestamps, providing reliable provenance that persists regardless of how many times an AMI is copied or new AMIs are created from it. AMI Watermarks improve AMI tracking by enabling you to filter and find related AMIs across your accounts. For governance, you can combine watermarks with Allowed AMIs to restrict instance launches to only AMIs carrying approved watermarks and enforce the setting at scale across your organization through Declarative Policies.\n  You can start adding AMI watermarks to your private AMIs by using the AWS Management Console, AWS CLI, or SDKs. To learn more, please visit the documentation. You can also attach watermarks through EC2 Image Builder, a service used to create and manage AMIs, as part of your AMI build pipeline.\n  AMI watermarks are available to all customers at no additional cost in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, and AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-image-watermarks-allowed-images",
+      "pubDate": "2026-06-24T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-be618b0f1ee6",
+      "title": "Amazon EMR Serverless now supports live configuration updates without application restarts",
+      "description": "Amazon EMR Serverless now supports updates to key application configurations such as maximum capacity, and custom image settings — without stopping and restarting the application. New workloads submitted after the update automatically use the new settings, while existing workloads continue uninterrupted with their original configuration.\n \nPreviously, modifying these settings required stopping your EMR Serverless application, making the change, and restarting it — forcing you to coordinate maintenance windows and temporarily block job submissions. Now you can adjust scaling boundaries or deploy updated custom images at any time without disrupting running jobs. This reduces operational overhead and lets you respond to changing workload demands or deploy image updates immediately. \n \nThis feature is available on all Amazon EMR releases and in all AWS Regions where Amazon EMR Serverless is available. To learn more, visit the EMR Serverless User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-emr-serverless/",
+      "pubDate": "2026-06-24T19:21:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "emr"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "emr",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a2382fa7dd57",
+      "title": "AWS IoT Device SDK for Swift is now generally available",
+      "description": "The AWS IoT Device SDK for Swift is now generally available, enabling Swift developers to build secure, scalable IoT applications natively on Apple platforms including macOS, iOS, and tvOS, as well as Linux. This SDK addresses the previous lack of native Swift support for AWS IoT services, providing stable, production-ready APIs specifically designed for teams managing IoT device fleets and building cross-platform IoT solutions across the Apple ecosystem.\n \nThe SDK delivers comprehensive capabilities for real-time device management and secure communication. With integrated service clients for AWS IoT Device Shadow, Jobs, and Fleet Provisioning, developers can synchronize device states between applications and AWS IoT Core, manage remote operations on connected devices at scale, and automate certificate and policy creation for secure device onboarding. The SDK also provides built-in TLS 1.3 support on Apple iOS and tvOS platforms, ensuring IoT applications use the latest industry-standard security practices for protecting data in transit.\n \nTo learn more, visit the  AWS IoT Device SDK documentation  and explore  code samples on GitHub . Get started by installing the SDK via Swift Package Manager.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-iot-device-sdk-swift/",
+      "pubDate": "2026-06-24T18:48:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c9b807753c5a",
+      "title": "Implement multi-tenant search with Amazon OpenSearch Serverless next generation",
+      "description": "In this post, we show how the next-generation OpenSearch Serverless architecture makes the collection-per-tenant model practical for multi-tenant search.",
+      "link": "https://aws.amazon.com/blogs/big-data/implement-multi-tenant-search-with-amazon-opensearch-serverless-next-generation/",
+      "pubDate": "2026-06-24T18:31:25.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "opensearch"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "opensearch"
+      ]
+    },
+    {
+      "id": "aws-news-2b28719609ab",
+      "title": "Huntington Bank: Redacting sensitive data from 400M+ documents with AWS",
+      "description": "In this post, we walk through how Huntington built a scalable AWS solution to detect and redact Personally Identifiable Information (PII) and Payment Card Industry (PCI) data from over 400 million documents, reducing processing time from years to just a few months while achieving 95%+ redaction accuracy.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws/",
+      "pubDate": "2026-06-24T18:24:50.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-7ff33f7fd9b5",
+      "title": "Build a healthcare appointment agent with Amazon Nova 2 Sonic",
+      "description": "In this post, you will learn how to build a voice agent that handles appointment reminder conversations using Amazon Nova 2 Sonic and Amazon Bedrock AgentCore. The agent authenticates patients by voice, manages appointments (confirm, cancel, or reschedule), collects pre-visit health information, and escalates to human staff when needed. You handle routine calls at scale, which can help reduce no-show rates. This sample focuses on the agentic side of the problem: voice conversation and tool orchestration. A browser-based interface is included for testing. To connect the agent to actual phone lines for outbound dialing, you would integrate a telephony service such as Amazon Connect Customer.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic/",
+      "pubDate": "2026-06-24T18:20:27.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-4188c45c9c72",
+      "title": "AI-powered BI with Snowflake and Amazon Quick",
+      "description": "In this post, you will learn how to build an end-to-end integration between Snowflake semantic views and Amazon Quick. The sample data is user review data for a media company. You start by loading movie review data from Amazon Simple Storage Service (Amazon S3) into Snowflake, define a semantic view in SQL to add business meaning, explore it with natural-language queries through Cortex Analyst, and then generate an Amazon Quick dataset and dashboard. The dataset can be created manually or with a provided automation script. By the end, your BI team or AI team can ask natural-language questions against a governed data layer and trust that every response reflects the same business logic.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/ai-powered-bi-with-snowflake-and-amazon-quick/",
+      "pubDate": "2026-06-24T18:19:35.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "s3",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-3c623896c7ef",
+      "title": "Multi-Region identity-based access to Amazon Redshift and S3 Tables",
+      "description": "In Part 1 of this series, we showed how to simplify enterprise data access using the Amazon Redshift integration with Amazon S3 Access Grants. In this post, we extend that solution across AWS Regions. We introduce a fictional company, AnyCompany Global, to illustrate how organizations with global operations can use AWS IAM Identity Center Multi-Region to set up consistent, identity-based access to Amazon Redshift and Amazon S3 Tables across Regions.",
+      "link": "https://aws.amazon.com/blogs/big-data/multi-region-identity-based-access-to-amazon-redshift-and-s3-tables/",
+      "pubDate": "2026-06-24T18:15:24.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "organizations",
+        "ga",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-0bbf826d806d",
+      "title": "How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic",
+      "description": "In this post, we demonstrate the architecture and approach Loka used to solve a common frustration: robotic, slow voice assistants that cause customers to hang up, damaging brand reputation and driving up support costs.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic/",
+      "pubDate": "2026-06-24T16:56:24.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-abab712aba4e",
+      "title": "Modernizing Lambda + S3 workloads with Amazon S3 Files",
+      "description": "Learn how Amazon S3 Files simplifies Lambda functions by eliminating transfer code and /tmp constraints. See three modernization patterns with code examples for image processing, ETL pipelines, and multi-agent AI workloads. AWS Lambda functions that interact with Amazon Simple Storage Service (Amazon S3) typically follow a familiar pattern: download an object to /tmp, process it […]",
+      "link": "https://aws.amazon.com/blogs/compute/modernizing-lambda-s3-workloads-with-amazon-s3-files/",
+      "pubDate": "2026-06-24T13:32:48.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lambda",
+        "s3"
+      ]
+    },
+    {
+      "id": "aws-news-8d678847b26d",
+      "title": "Amazon Neptune now supports AWS CloudFormation for global databases",
+      "description": "Amazon Neptune now supports AWS CloudFormation for provisioning and managing Neptune global databases. Using the new AWS::Neptune::GlobalCluster resource type, you can define your multi-region graph database topology as code — automating deployment, storing configurations in source control, and integrating with CI/CD pipelines.\n \nNeptune global databases provide a primary cluster with read-write capability and up to five read-only secondary clusters in different AWS Regions, connected through low-latency replication via the Neptune storage subsystem. Common use cases include low-latency read access across regions, disaster recovery, data residency compliance, and high-availability graph deployments with centralized writes and distributed reads.\n \nThis feature is available in all AWS Regions where Neptune global databases are supported.  To get started, see the Neptune global databases CloudFormation documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-neptune-aws-cloudformation/",
+      "pubDate": "2026-06-24T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudformation",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2cb333ac4ebc",
+      "title": "Amazon CloudWatch now supports tags on dashboards",
+      "description": "Amazon CloudWatch now supports tagging for CloudWatch dashboards, enabling you to organize, categorize, and control access to your dashboards using tags. Tags are key-value pairs that help you identify and manage AWS resources across your environment.\n  With this launch, the PutDashboard API now accepts an optional Tags parameter, allowing you to assign up to 50 tags when creating a new dashboard. The TagResource, UntagResource, and ListTagsForResource APIs now support dashboard ARNs, enabling you to add, remove, and list tags on existing dashboards. You can also manage dashboard tags using AWS CloudFormation. This new capability allows you to group dashboards by team by team, project, or environment, implement attribute-based access control by scoping IAM permissions to dashboards with specific tag values, and filter dashboards by tag in AWS Resource Explorer.\n  CloudWatch Dashboard tagging support is available at no additional cost in all AWS Regions where Amazon CloudWatch is available.\n  To learn more, see TagResource in the Amazon CloudWatch API Reference. To get started with CloudWatch dashboards, see Amazon CloudWatch features.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-tags-on-dashboards",
+      "pubDate": "2026-06-24T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudformation",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "cloudformation",
+        "iam",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-78f77b0ac881",
+      "title": "Amazon EC2 High Memory U7in-24TB instances now available in AWS Asia Pacific (Seoul) region",
+      "description": "Amazon EC2 High Memory U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Asia Pacific (Seoul) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-u7in-24tb-aws-seoul/",
+      "pubDate": "2026-06-24T01:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-3f6a53e6333f",
       "title": "Amazon CloudWatch Logs supports managed syslog ingestion",
@@ -29,6 +283,27 @@
         "launch",
         "ga",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-88a2cc9e3a94",
+      "title": "Amazon GuardDuty AI-powered investigations accelerate threat response (Preview)",
+      "description": "AWS announces the preview of AI-powered investigations in Amazon GuardDuty, a new capability that automatically analyzes GuardDuty findings and accounts to help you quickly distinguish true threats from benign findings. This feature addresses the time-intensive manual investigation process that contributes to alert fatigue and slows incident response for security operations centers and cloud security analysts. \n \nAI-powered investigations examine finding context, related activity from the last 90 days, affected resources, and threat indicators using knowledge graphs and threat intelligence, in minutes. Each investigation provides a disposition assessment with confidence scoring, MITRE ATT&CK® technique classification, supporting evidence, and actionable recommendations for suppression, containment, or remediation. This automation enables security teams to focus on genuine threats across individual AWS accounts or entire AWS Organizations and accelerate mean time to resolution.\n \nThis feature is available in preview in 10 AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Europe (Ireland), Europe (London), Europe (Frankfurt), Europe (Paris), Europe (Stockholm), Asia Pacific (Tokyo). To get started, access AI-powered investigations through the Amazon GuardDuty console, CLI, API, or AWS' MCP Server. \n \nTo learn more, visit the Amazon GuardDuty User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-guardduty/",
+      "pubDate": "2026-06-23T19:49:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "preview",
+        "ga",
+        "support",
+        "new-capability"
       ]
     },
     {
@@ -214,7 +489,7 @@
     {
       "id": "aws-news-82c10573caf7",
       "title": "Claude Tag is now available in beta via Claude Enterprise in AWS Marketplace",
-      "description": "Anthropic is launching Claude Tag — bringing Claude directly into the channels where your team already works, starting with Slack. Claude Tag is available today in beta to AWS customers who access Claude Enterprise through AWS Marketplace.\n \nClaude Tag is a new way for teams to work with Claude. Grant Claude access to selected channels, and connect it to whichever tools, data—and even codebases—you choose.. It's multiplayer, so anyone in the channel can tag @Claude in, and delegate tasks to it while they focus on other work. Claude builds context by remembering relevant information from the channels it’s in, and can plan out tasks to complete in the future. And, for security and governance teams, Claude Tag operates under its own identity, scoped per channel, with spend controls and ambient mode off by default.\n \nGetting started with Claude Enterprise on AWS Marketplace\n \nThe experience for Claude Enterprise in AWS Marketplace customers is identical to first-party Claude Enterprise: same setup, same capabilities, same controls. Consumption-based pricing tracks usage rather than headcount, with org-wide budget visibility and per-channel limits. Customers use their existing Claude Enterprise on AWS entitlement — an admin provisions the agent identity in the Claude admin console (approximately one hour) and scopes it per channel.\n \nTo learn more, see the Claude Enterprise in AWS Marketplace",
+      "description": "Anthropic is launching Claude Tag — bringing Claude directly into the channels where your team already works, starting with Slack. Claude Tag is available today in beta to AWS customers who access Claude Enterprise through AWS Marketplace.\n \nClaude Tag is a new way for teams to work with Claude. Grant Claude access to selected channels, and connect it to whichever tools, data—and even codebases—you choose.. It's multiplayer, so anyone in the channel can tag @Claude in, and delegate tasks to it while they focus on other work. Claude builds context by remembering relevant information from the channels it’s in, and can plan out tasks to complete in the future. And, for security and governance teams, Claude Tag operates under its own identity, scoped per channel, with spend controls and ambient mode off by default.\n \nGetting started with Claude Enterprise in AWS Marketplace\n \nThe experience for Claude Enterprise in AWS Marketplace customers is identical to first-party Claude Enterprise: same setup, same capabilities, same controls. Consumption-based pricing tracks usage rather than headcount, with org-wide budget visibility and per-channel limits. Customers use their existing Claude Enterprise on AWS entitlement — an admin provisions the agent identity in the Claude admin console (approximately one hour) and scopes it per channel.\n \nTo learn more, see the Claude Enterprise in AWS Marketplace",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/claude-tag-aws-marketplace/",
       "pubDate": "2026-06-23T05:00:00.000Z",
       "source": "whatsNew",
@@ -884,9 +1159,9 @@
       ]
     },
     {
-      "id": "aws-news-4645e713e1d3",
-      "title": "Nested virtualization is now available on additional Intel platforms and US Gov Cloud regions",
-      "description": "Starting today, Nested virtualization is now available on additional Intel platforms and additional Regions. Nested virtualization is now available on C7i,R7i, M7i, C8id,R8id, M8id, C7i-flex, M7i-flex, I7i, C8i-flex,R8i-flex, M8i-flex,and X8i, in addition to already available support on C8i, M8i and R8i instances. This capability is also now available in US GovCloud (US-East) and US GovCloud (US-West), in addition to existing support in all commercial regions.\n With nested virtualization capabilities, customers can create nested environments by running KVM or Hyper-V on virtual EC2 instances. Customers can leverage this capability for use cases such as running emulators for mobile applications, simulating in-vehicle hardware for automobiles, and running Windows Subsystem for Linux on Windows workstations. To learn more see documentation .",
+      "id": "aws-news-b6b42000ae8a",
+      "title": "Nested virtualization is now available on additional Intel platforms and AWS GovCloud (US) regions",
+      "description": "Starting today, Nested virtualization is now available on additional Intel platforms and additional Regions. Nested virtualization is now available on C7i,R7i, M7i, C8id,R8id, M8id, C7i-flex, M7i-flex, I7i, C8i-flex,R8i-flex, M8i-flex,and X8i, in addition to already available support on C8i, M8i and R8i instances. This capability is also now available in AWSGovCloud (US-East) and AWS GovCloud (US-West), in addition to existing support in all commercial regions.\n With nested virtualization capabilities, customers can create nested environments by running KVM or Hyper-V on virtual EC2 instances. Customers can leverage this capability for use cases such as running emulators for mobile applications, simulating in-vehicle hardware for automobiles, and running Windows Subsystem for Linux on Windows workstations. To learn more see documentation .",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/nested-virtualization-intel-us-gov-cloud/",
       "pubDate": "2026-06-18T18:47:00.000Z",
       "source": "whatsNew",
@@ -2232,9 +2507,9 @@
       ]
     },
     {
-      "id": "aws-news-fc588cab03c5",
-      "title": "AWS Management Console Private Access now works without internet connectivity",
-      "description": "AWS Management Console Private Access now enables customers to access the AWS Console from VPCs without internet connectivity, allowing enterprises to manage their AWS infrastructure through the console while maintaining strict network security controls in air-gapped environments.\n  Previously, AWS Management Console Private Access allowed customers to restrict console access to authorized AWS accounts and corporate networks but still required internet connectivity. With this launch, AWS Console traffic can flow through VPC endpoints for the supported service consoles, eliminating the need for any internet access. This capability is particularly valuable for customers in regulated industries such as financial services, government and defense, and healthcare, and for enterprises with strict security requirements who need to access sensitive data only from controlled environments and use the console in classified or networks without internet connectivity.\n  AWS Management Console Private Access uses AWS PrivateLink to establish secure network paths between customer VPCs and the console. Customers can apply VPC endpoint policies to restrict access to specific AWS accounts and organizations, and use IAM, Service Control, and Resource Control policies to require that employees access resources only from authorized networks.\n \nThis capability is available in all AWS commercial regions. You pay only for the underlying AWS PrivateLink VPC endpoint usage and data processing. To get started and learn about the supported services, visit the Management Console Private Access documentation.",
+      "id": "aws-news-7b8e6e2c030c",
+      "title": "AWS Management Console Private Access now ensures all console traffic flows through VPC endpoints",
+      "description": "AWS Management Console Private Access now enables customers to access the AWS Console from VPCs, allowing enterprises to manage their AWS infrastructure through the console while maintaining strict network security controls.\n  Previously, AWS Management Console Private Access allowed customers to restrict console access to authorized AWS accounts and corporate networks but still required internet connectivity. With this launch, AWS Console traffic can flow through VPC endpoints for the supported service consoles, eliminating the need for any internet access. This capability is particularly valuable for customers in regulated industries—financial services, government and defense, healthcare—and enterprises with strict security requirements who need to access sensitive data only from controlled environments and use the console in classified or isolated networks.\n \n\n AWS Management Console Private Access uses AWS PrivateLink to establish secure network paths between customer VPCs and the console. Customers can apply VPC endpoint policies to restrict access to specific AWS accounts and organizations, and use IAM, Service Control, and Resource Control policies to require that employees access resources only from authorized networks.\n \nThis capability is available in all AWS commercial regions. You pay only for the underlying AWS PrivateLink VPC endpoint usage and data processing. To get started and learn about the supported services, visit the Management Console Private Access documentation.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-management-console-private/",
       "pubDate": "2026-06-15T23:00:00.000Z",
       "source": "whatsNew",
@@ -2273,23 +2548,6 @@
         "now-available",
         "support",
         "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-199e8e21520e",
-      "title": "Introducing Gemma 4 models on Amazon Bedrock",
-      "description": "Today, we are announcing the availability of the Gemma 4 family on Amazon Bedrock. Built by Google DeepMind and released under the Apache 2.0 license, Gemma 4 is a family of open-weight models designed with a focus on intelligence-per-parameter across a broad range of deployment scenarios. The family includes three instruction-tuned variants: Gemma 4 31B, Gemma 4 26B-A4B, and Gemma 4 E2B. These cover dense and mixture-of-experts (MoE) architectures, where only a fraction of the model’s parameters activate per request. The variants offer built-in reasoning, native function calling, and multimodal input across text and image.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-gemma-4-models-on-amazon-bedrock/",
-      "pubDate": "2026-06-15T20:24:15.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2349,19 +2607,6 @@
       "tags": [
         "support"
       ]
-    },
-    {
-      "id": "aws-news-1f80e27c6e55",
-      "title": "AI Agent Failure Detection and Root Cause Analysis with Strands Evals",
-      "description": "In this post, we walk you through calling the detector functions to diagnose real agent failures. You learn how to interpret their structured output: categorized failures with confidence scores, causal chains linking root causes to downstream symptoms, and fix recommendations specifying whether a change belongs in your system prompt or tool definitions. You also learn how to integrate detection into your evaluation pipeline for automated diagnosis on every test run.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/ai-agent-failure-detection-and-root-cause-analysis-with-strands-evals/",
-      "pubDate": "2026-06-15T18:07:59.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-db945c3e2ce3",
@@ -2547,25 +2792,6 @@
       ]
     },
     {
-      "id": "aws-news-b91ab8191068",
-      "title": "Build context-rich research agents with Deep Agents and Bedrock AgentCore",
-      "description": "In this post, you'll build a competitive research agent that demonstrates this pattern end to end. This walkthrough targets developers building multi-step AI workflows who need isolated execution environments for their agents. In Part 2 of the notebook, you can deploy this same agent to Bedrock AgentCore Runtime using the AgentCore CLI, so it runs as a managed, session-isolated service.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-context-rich-research-agents-with-deep-agents-and-bedrock-agentcore/",
-      "pubDate": "2026-06-15T13:56:33.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
       "id": "aws-news-69f604f1a286",
       "title": "Amazon EC2 C8i instances are now available in Europe (Stockholm) region",
       "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8i instances are available in the Europe (Stockholm) region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. These C8i instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver up to 20% higher performance than C7i instances, with even higher gains for specific workloads. The C8i are up to 60% faster for NGINX web applications, up to 40% faster for AI deep learning recommendation models, and 35% faster for Memcached stores compared to C7i and C7i-flex.\n  C8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. C8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new C8i instances visit the AWS News blog.",
@@ -2587,47 +2813,6 @@
       ]
     },
     {
-      "id": "aws-news-418a793f3896",
-      "title": "Amazon EC2 C7i instances are now available in the Israel (Tel Aviv) region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in the Israel (Tel Aviv) Region. C7i instances are supported by custom Intel processors, available only on AWS.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad-serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads.\n  C7i instances support new Intel Advanced Matrix Extensions (AMX) that accelerate matrix multiplication operations for applications such as CPU-based ML. Customers can attach up to 128 EBS volumes to a C7i instance vs. up to 28 EBS volumes to a C6i instance. This allows processing of larger amounts of data, scale workloads, and improved performance over C6i instances.\n  To learn more, visit Amazon EC2 C7i Instances. To get started, see the AWS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-c7i-instances-israel-tel-aviv-region/",
-      "pubDate": "2026-06-15T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-baef99a9ceed",
-      "title": "AWS WAF announces AI traffic monetization",
-      "description": "Today, AWS WAF announced AI traffic monetization, a new Bot Control capability that lets you price, meter, and collect payment from AI bots and agents accessing your content and APIs. As AI agents increasingly support autonomous payments for the content and APIs they consume, AWS WAF now lets content owners and publishers set a price for that access, accept payment through third-party providers, and grant scoped access directly at the edge.\n \nWhen an AI bot or agent requests a protected resource like an article, a data feed, or a licensed archive, AWS WAF returns a machine-readable HTTP 402 Payment Required response using the x402 open protocol for machine-to-machine payments. The response contains your prices to access the content, accepted payment methods, and license terms. The agent presents proof of payment, AWS WAF verifies it at the edge, issues a scoped access token, and serves the response within a single request cycle. With AWS WAF AI traffic monetization, you can configure pricing through the AWS WAF console, define AI bot or agent policies based on verification status (including Web Bot Auth signatures), and receive payouts in stablecoins to your preferred wallet. AWS WAF’s integration with payment settlement and verification flows are provided by Coinbase’s x402 Facilitator. Integration with Stripe for direct account payments and Machine Payments Protocol (MPP) support is coming soon.\n \nPublishers can apply differentiated pricing based on agent identity and intent, allow verified AI search crawlers at one price while charging a different price to unverified agents or training crawlers, and validate end-to-end configuration in test mode before going live. Revenue analytics are available directly in the AWS WAF console alongside the AI traffic analysis dashboard, giving publishers a unified view of agent traffic and the revenue it generates.\n \nPublishers receive payments directly from agents and manage disbursement through their chosen payment provider. AI traffic monetization is available to AWS WAF customers at no additional charge. Standard AWS WAF charges apply. Refer to AWS WAF pricing for details. \n \nThis capability is available in all edge locations where AWS WAF Web ACLs are associated with Amazon CloudFront distributions. To get started, visit the AWS WAF console or explore the AWS WAF Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-waf-ai-traffic-monetization/",
-      "pubDate": "2026-06-15T12:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudfront",
-        "waf"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudfront",
-        "waf",
-        "integration",
-        "support",
-        "coming-soon"
-      ]
-    },
-    {
       "id": "aws-news-180314785024",
       "title": "AWS Weekly Roundup: AWS FinOps Agent in preview, Gemma 4 on Bedrock, Kiro Pro Max, and more (June 15, 2026)",
       "description": "This week, New York City is hosting AWS Summit, bringing together builders, customers, and AWS teams for a full day of announcements, demos, and technical sessions at the Javits Center. I wrote blog posts for some of the Summit launches, so I am excited to see them go live this week. I just won’t be […]",
@@ -2645,110 +2830,6 @@
         "launch",
         "preview",
         "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-cdefb0256073",
-      "title": "Amazon CloudWatch now supports cross-account metrics centralization",
-      "description": "Today, Amazon Web Services announces the general availability of Amazon CloudWatch Metrics Centralization, which enables you to replicate CloudWatch metrics cross-account and cross-region into a single destination account.\n  Enterprise teams with complex multi-account, multi-region deployments often need a unified view of their operational health across their entire infrastructure. CloudWatch metrics centralization solves this by letting you define centralization rules through AWS Organizations that automatically replicate metrics from source accounts and regions into a centralized destination account. Central teams gain full ownership of the data for querying, alarming, compliance, and governance. Centralized metrics work with both CloudWatch and OpenTelemetry metrics, and are fully compatible with Metrics Insights, dashboards, alarms, Metric Math, anomaly detection, Metric Streams, and PromQL.\n  CloudWatch Metrics Centralization is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To learn more, see CloudWatch Metrics Centralization in the Amazon CloudWatch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cross-account-metrics-centralization",
-      "pubDate": "2026-06-15T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds",
-        "cloudwatch",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "cloudwatch",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-abfd685a07e8",
-      "title": "Amazon CloudWatch Query Studio is now generally available",
-      "description": "Today, Amazon Web Services announces the general availability of Amazon CloudWatch Query Studio, a unified querying and visualization experience that enables you to explore metrics from a single interface within the CloudWatch console.\n  With Query Studio, a team operating services across multiple AWS accounts and regions can use PromQL or Metrics Insights to query OpenTelemetry and AWS vended metrics from a single workspace. Per-query cross-account and cross-region selectors make it easy to correlate latency and error rates across their entire fleet. They can build queries visually with guided builders for PromQL and Metrics Insights (SQL), then choose from visualization types including line, bar, scatter plot, heatmap, histogram, pie, gauge, and number widgets with dual y-axis configuration and series overrides. Query Studio also integrates with CloudWatch dashboards, supports Grafana imports, and provides keyboard shortcuts for running queries.\n  Query Studio is available in all commercial AWS regions, except Middle East (UAE), Middle East (Bahrain) and Israel (Tel Aviv). For more information about regional availability, see the AWS Region table. To learn more, see Query Studio in the Amazon Cloudwatch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-query-studio-generally-available",
-      "pubDate": "2026-06-15T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch",
-        "grafana"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "grafana",
-        "generally-available",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-23f60617521d",
-      "title": "Free Network Bandwidth Amazon GameLift Servers is Here!",
-      "description": "Starting today, Amazon GameLift Servers provides network bandwidth in and out of AWS at no additional charge for all instance types from generation 6 and later, including On-Demand and Spot, with no commitment required. You now pay only for your Amazon GameLift Servers instance hours; all network bandwidth is free.\n \nMultiplayer game servers generate continuous network traffic to connected players, making bandwidth one of the most unpredictable cost components for game studio customers. With free network bandwidth included, Amazon GameLift Servers eliminates this cost, giving you the simplicity of bare-metal hosting with the global reach of AWS.\n \nFree network bandwidth applies with no enrollment, pricing agreement, or configuration change required. Existing customers on eligible fleets receive the benefit immediately. It is now available in all Amazon GameLift Servers supported regions, except China.\n \nTo learn more, visit the Amazon GameLift Servers documentation or pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-gamelift-servers-free-network-bandwidth",
-      "pubDate": "2026-06-15T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cd17723ed64d",
-      "title": "Amazon RDS for MariaDB supports Long-Term Support version 12.3 in Amazon RDS Database Preview Environment",
-      "description": "Amazon RDS for MariaDB now supports MariaDB 12.3 in the Amazon RDS Database Preview Environment, allowing you to evaluate the latest Long-Term Support Release on Amazon RDS for MariaDB. This preview environment provides a sandbox where you can test applications and explore new MariaDB 12.3 capabilities before they become generally available.\n  MariaDB 12.3 includes Oracle TO_DATE() function compatibility, a SQL Standard IS JSON predicate for native JSON validation, and a basic XML data type. It adds support for cursors on prepared statements and allows UPDATE/DELETE operations to read from Common Table Expressions. The query optimizer now handles reorderable LEFT JOIN statements and ordered scans over RANGE partitions more efficiently. Please refer to the MariaDB 12.3 release notes for more details.\n  Amazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots created in the preview environment can only be used to create or restore database instances within the preview environment. For pricing information, see Amazon RDS for MariaDB pricing. For further information, see Working with the Database Preview Environment.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-rds-maria-db-innovation-release-12-3-rds-database-preview-environment/",
-      "pubDate": "2026-06-15T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "preview",
-        "generally-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-96011fb52490",
-      "title": "Building Supercharger: How Rocket Close optimized title operations with agentic AI",
-      "description": "In this post, we explore how Rocket Close built a solution using Strands Agents, large language models (LLMs), Amazon Bedrock, Amazon Bedrock Knowledge Bases, and Model Context Protocol (MCP) tools. We cover solution features, the rationale for the technology stack, lessons learned, and the business impact at Rocket Close.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-supercharger-how-rocket-close-optimized-title-operations-with-agentic-ai/",
-      "pubDate": "2026-06-12T20:43:56.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -3068,44 +3149,6 @@
       "tags": [
         "bedrock",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-b35c3af1bf49",
-      "title": "Query Amazon Redshift using natural language with Kiro",
-      "description": "In this post, you learn how to set up Kiro with the Amazon Redshift MCP server to query your data warehouse using natural language. You explore cluster discovery, schema browsing, analytical queries, cross-cluster comparisons, and data quality checks, all without writing SQL from scratch or switching between tools.",
-      "link": "https://aws.amazon.com/blogs/big-data/query-amazon-redshift-using-natural-language-with-kiro/",
-      "pubDate": "2026-06-04T22:06:00.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "redshift"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "redshift"
-      ]
-    },
-    {
-      "id": "aws-news-c71a70b41926",
-      "title": "Build governance dashboards for Amazon SageMaker Catalog with Amazon Quick",
-      "description": "In a previous post, we showed you how to query Amazon SageMaker Catalog metadata using SQL by using the metadata export feature. This post builds on that foundation by demonstrating how to create governance dashboards with Amazon Quick.",
-      "link": "https://aws.amazon.com/blogs/big-data/build-governance-dashboards-for-amazon-sagemaker-catalog-with-amazon-quick/",
-      "pubDate": "2026-06-04T15:41:17.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "amazon q",
-        "sagemaker",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "sagemaker",
-        "rds"
       ]
     },
     {
