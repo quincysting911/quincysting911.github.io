@@ -1,8 +1,93 @@
 {
-  "lastUpdated": "2026-06-29T10:17:33.403Z",
+  "lastUpdated": "2026-06-30T08:52:36.482Z",
   "category": "ai-safety",
-  "totalItems": 26,
+  "totalItems": 28,
   "items": [
+    {
+      "id": "aws-news-fe72df261114",
+      "title": "AWS WAF adds support for Amazon Bedrock AgentCore Gateway",
+      "description": "Today, AWS announces general availability of AWS Web Application Firewall (AWS WAF) protection for Amazon Bedrock AgentCore Gateway, enabling you to protect your agentic AI workloads from common web exploits and abuse. As enterprises move agentic applications from prototype to production, this launch gives security and platform teams ability to apply consistent, customizable web protections at the Gateway layer.\n \nYou can now associate an AWS WAF protection pack with your AgentCore Gateway to enforce IP-based access controls, rate-based rules that throttle abusive traffic, and AWS Managed Rule Groups including common rule sets, known bad inputs, and Bot Control. You configure the protection pack once at the Gateway level and AWS WAF applies it consistently to every target behind that Gateway, so a single configuration protects all downstream tools, agents, and integrations.\n \nSupport for AWS WAF on AgentCore Gateway is available in all AWS Regions where both AWS WAF and Amazon Bedrock AgentCore Gateway are available.\n \nTo learn more, see the AWS WAF Developer Guide and the Amazon Bedrock AgentCore documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-waf-amazon-bedrock-agentcore/",
+      "pubDate": "2026-06-29T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "waf"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "waf",
+        "launch",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-64f3aae5afd8",
+      "title": "Amazon MWAA Serverless now supports shared VPC configurations",
+      "description": "Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless now supports shared VPC subnets. Previously, customers using subnets shared via AWS Resource Access Manager (AWS RAM) received a validation error when creating MWAA Serverless workflows. With this update, MWAA Serverless correctly validates subnet ownership in shared VPC configurations, consistent with MWAA Provisioned environments.\n Sharing VPC subnets across accounts using AWS RAM is a common pattern in multi-account landing zone architectures. Organizations that centrally manage networking can now launch MWAA Serverless workflows in member accounts using shared subnets — no workarounds required. Customers using Amazon SageMaker Unified Studio Workflows also benefit from this update when their projects are configured with shared VPC networking.\n This update is available in all AWS Regions where Amazon MWAA Serverless is supported. To learn more, see the Networking section of the Amazon MWAA Serverless User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-mwaa-serverless-vpc/",
+      "pubDate": "2026-06-29T17:19:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "organizations",
+        "launch",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-167a37b1cf0d",
+      "title": "Preventing data exfiltration in machine learning environments with Amazon SageMaker AI",
+      "description": "In this post, we demonstrate how iBusiness implemented a three-layered security architecture using Amazon SageMaker AI, virtual private cloud (VPC) endpoints, and Amazon WorkSpaces Secure Browser to prevent data exfiltration while maintaining data scientist productivity. You can adapt this approach to build secure machine learning environments that balance strict data protection with team scalability.",
+      "link": "https://aws.amazon.com/blogs/architecture/preventing-data-exfiltration-in-machine-learning-environments-with-amazon-sagemaker-ai/",
+      "pubDate": "2026-06-29T17:16:48.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
+    {
+      "id": "aws-news-f4b9c2424c8b",
+      "title": "Optimize your Tableau integration with Amazon Redshift Serverless",
+      "description": "In this post, we provide a guide to help you use Tableau’s Relationships and Amazon Redshift Serverless architecture to deliver sub-second insights while maximizing every Redshift Processing Unit (RPU). We also provide guidance on five key areas: data model architecture for optimal query performance, security configuration and access control, performance optimization through smart configuration, cost management strategies, and query and join optimization techniques.",
+      "link": "https://aws.amazon.com/blogs/big-data/optimize-your-tableau-integration-with-amazon-redshift-serverless/",
+      "pubDate": "2026-06-29T17:00:00.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "redshift"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "redshift",
+        "integration"
+      ]
+    },
     {
       "id": "aws-news-f9a587cde93b",
       "title": "OpenAI GPT, OpenAI GPT OSS, and NVIDIA Nemotron models on Amazon Bedrock receive FedRAMP High and DoD IL-4/5 approval in AWS GovCloud (US)",
@@ -453,32 +538,6 @@
       ]
     },
     {
-      "id": "aws-news-365367f50f64",
-      "title": "Amazon S3 adds annotations to provide AI agents and analytics tools with context for data discovery",
-      "description": "Amazon S3 adds annotations, so you can attach custom metadata to your S3 objects at massive scale, giving AI agents and analytics tools the context they need to find and use the right data. Annotations are a new metadata capability purpose-built for attaching business context directly in JSON, XML, or YAML to your objects, with up to 1GB per object. Annotations can be modified or deleted at any time, making it easier to keep context current as your data evolves. This lets applications and AI agents discover and understand your data without building or maintaining separate metadata systems.\n  S3 already supports several ways to describe your objects: system-defined metadata captures properties like size and storage class, object tags support operational tasks like access control and lifecycle management, and user-defined metadata lets you add small amounts of custom information at upload time. Annotations complement these existing capabilities at a fundamentally different scale and flexibility. Annotations share the same durability and consistency properties as the object, move with the object during copy and replication operations, and are removed when the object is deleted. You can attach and retrieve annotations on any existing or new object. To query annotations at scale, you can optionally surface them in S3 Metadata, the easiest and fastest way to discover and understand your S3 data. S3 Metadata automatically captures object metadata and stores it in read-only, fully managed Apache Iceberg tables that you can query with Amazon Athena and other Iceberg-compatible tools. You can also use natural language to search objects by their annotations using agents in Amazon SageMaker Unified Studio, or any IDE with the S3 Tables MCP server.\n  Annotations are available in all AWS Regions, including the AWS China Regions. Annotation tables are available in all AWS Regions where S3 Metadata is available. Get started using the AWS CLI, S3 APIs, or AWS SDKs. For pricing information, visit the S3 pricing page. To learn more, read the AWS News Blog, documentation, and S3 Metadata overview page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-s3-annotations-business-context",
-      "pubDate": "2026-06-16T04:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "s3",
-        "athena"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "lex",
-        "s3",
-        "athena",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a289d1cc97c7",
       "title": "Build RAG-powered AI solutions at the edge with AWS Local Zones and Outposts",
       "description": "Organizations in regulated industries or with strict information security requirements are increasingly looking to use generative AI. However, they often face a dilemma: how to utilize powerful models while keeping data strictly on-premises or within specific geographic boundaries. The solution lies in deploying self-managed Small Language Models (SLMs) on premises with AWS Outposts or in […]",
@@ -504,24 +563,6 @@
       "description": "In this post, we show you how Doczy.ai™ uses generative AI on AWS to automate contract intelligence at scale, transforming unstructured documents into structured, actionable insights, so organizations can automate critical business processes and unlock the full value of their data.",
       "link": "https://aws.amazon.com/blogs/architecture/automating-contract-intelligence-with-doczy-ai-on-aws/",
       "pubDate": "2026-06-02T14:06:32.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-a148468beca7",
-      "title": "Choosing between single or multiple organizations in AWS Organizations",
-      "description": "Organizations face critical architectural decisions that can impact their operations for years to come such as: Is it better to maintain a single organization or implement multiple organizations? In this post, I explain the key advantages and disadvantages of both approaches and the scenarios where each model fits best.",
-      "link": "https://aws.amazon.com/blogs/architecture/choosing-between-single-or-multiple-organizations-in-aws-organizations/",
-      "pubDate": "2026-05-11T18:56:38.000Z",
       "source": "architectureBlog",
       "services": [
         "organizations"
