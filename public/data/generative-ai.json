@@ -1,8 +1,294 @@
 {
-  "lastUpdated": "2026-06-30T08:52:36.482Z",
+  "lastUpdated": "2026-07-01T09:25:27.247Z",
   "category": "generative-ai",
-  "totalItems": 62,
+  "totalItems": 59,
   "items": [
+    {
+      "id": "aws-news-dfe0a178729d",
+      "title": "Safely Releasing Frontier Models to Customers",
+      "description": "It’s our goal for AWS to be the most secure place to run any workload, and in support of that we’ve been deeply investing in security across our services since AWS's inception more than two decades ago. Our AI services like Amazon Bedrock are built on this foundation and with the same focus.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/",
+      "pubDate": "2026-07-01T03:13:19.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-86c6edea9dee",
+      "title": "AWS CloudFormation and CDK accelerate development feedback loops with pre-deployment validation on all stack operations",
+      "description": "AWS CloudFormation customers can now get immediate feedback on deployment errors in seconds, eliminating the need to wait through a full provision-and-rollback cycle to discover preventable failures. CloudFormation now runs pre-deployment validation on Create Stack and Update Stack operations, catching common deployment errors before resource provisioning begins. This accelerates development velocity across all deployment workflows, from manual iteration to CI/CD pipelines to AI agents provisioning infrastructure.\n  Previously, pre-deployment validation was available during change set creation, covering property syntax errors, resource name conflicts, and S3 bucket emptiness constraints. With this release, the same validations now run automatically on Create Stack and Update Stack operations. Additionally, three new validation checks are now available as warnings during change set creation. Service quota limits validation warns when creating resources would exceed your account's service quotas. AWS Config Recorder conflict detection warns when your template adds Config rules to an account that does not have Config recording enabled, or defines a Config Recorder in an account where one is already active. ECR repository delete readiness validation warns when an ECR repository targeted for deletion still contains images. When validation detects an issue, you can view errors using the DescribeEvents API with the operation ID, or in the CloudFormation console by navigating to your stack's Events tab and clicking the operation ID (or the link in the banner or status reason column) to open the Operation view page, which opens directly on the Deployment validations tab. Each error includes the logical resource ID and property path, so you can pinpoint and fix the problem before any resources are provisioned. In CDK, both cdk deploy and cdk validate surface validation results with construct-level tracing in a unified report, so AI agents and automation tools can parse structured responses and self-correct immediately.\n  Pre-deployment validation is enabled by default on all stack operations with no configuration required. If you need to skip validation for a specific operation, use the new DisableValidation parameter on CreateStack, UpdateStack and CreateChangeSet API calls, or the --disable-validation flag in the CLI. Visit the Validate stack deployments User Guide to learn more.\n  This feature is available in all AWS Regions where CloudFormation is supported, excluding China. Refer to the AWS Region table for service availability details.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cloudformation/",
+      "pubDate": "2026-06-30T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "cloudformation",
+        "ga",
+        "now-available",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f8d9c61da859",
+      "title": "AWS CloudFormation and CDK express mode speeds up infrastructure deployments by up to 4x",
+      "description": "AWS CloudFormation and CDK express mode reduces deployment time by up to 4x for developers and AI agents building infrastructure, based on internal benchmarks. Express mode completes stack operations when CloudFormation confirms resource configuration is applied, rather than waiting for extended stabilization checks such as traffic readiness, region propagation, and resource cleanup. This enables faster iteration cycles for developers and AI agents building infrastructure.\n  When iterating on infrastructure in development environments, developers and AI agents need faster iteration cycles to build infrastructure incrementally. Previously, every deployment waited for full resource stabilization regardless of whether the workflow required it. For example, creating a CloudFront distribution required waiting 5-10 minutes for propagation to all edge locations before the deployment completed, even when the developer only needed the distribution domain name to continue. With express mode, deployments complete in seconds once configuration is applied, and propagation continues in the background. CloudFormation still processes resources in dependency order and handles dependent resource failures within the same stack. Express mode disables rollback by default, enabling immediate fix-and-retry without waiting for rollback operations.\n  To get started, set --deployment-config '{\"mode\": \"EXPRESS\"}' when creating, updating, and deleting stacks or creating a change set through the AWS CLI, AWS SDKs, or the AWS Management Console. For AWS CDK users, activate express mode with cdk deploy --express. No template changes are required. Express mode works with all existing CloudFormation templates, and nested stacks. Visit the CloudFormation Express mode documentation to learn more.\n  This feature is available in all AWS Regions where CloudFormation is supported. Refer to the AWS Region table for service availability details.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cloudformation-cdk/",
+      "pubDate": "2026-06-30T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "cloudfront"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudformation",
+        "cloudfront",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-405389a0180e",
+      "title": "Amazon RDS Enhances IAM Database Authentication with Connection Rate Scaling",
+      "description": "Amazon Relational Database Service (Amazon RDS) now offers dynamic connection scaling for IAM database authentication, allowing connection rates to scale with instance resources.\n  IAM database authentication performance now scales with available instance resources, enabling enterprise workloads to leverage IAM authentication for high-volume connection patterns. The number of new IAM authentication requests your instance can handle depends on available resources and workload characteristics. For optimal performance, we recommend reusing IAM user or IAM assumed role principals to generate authentication tokens, or reusing the authentication tokens themselves, when possible.\n  This update is available in all AWS Regions, including the AWS GovCloud (US) Regions, where IAM database authentication is supported for Amazon Aurora and Amazon RDS database engines including PostgreSQL, MySQL, and MariaDB. To learn more, visit the IAM database authentication documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-iam/",
+      "pubDate": "2026-06-30T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "iam",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-415327ecb85c",
+      "title": "AWS Parallel Computing Service supports in-place Slurm major version upgrades",
+      "description": "AWS Parallel Computing Service (PCS) now supports managed in-place Slurm version upgrades for existing clusters. You can move your clusters up to three Slurm major versions ahead with no disruption to running jobs.\n  To upgrade, update your Cluster configuration with your target Slurm version using the AWS Management Console, AWS CLI, or UpdateCluster API. PCS handles the upgrade of all managed Slurm components — the controller, accounting database, and REST API. Running jobs continue uninterrupted during the upgrade, queued jobs resume once the operation completes, and any accounting data is preserved in the database. You can then update your compute nodes to the new Slurm version at your convenience. Refer to the PCS User Guide for more information on the steps to follow and considerations to review based on your cluster configuration.\n  AWS PCS is a managed service that simplifies running and scaling HPC workloads on AWS using Slurm. You can build complete, elastic environments that integrate compute, storage, networking, and visualization tools, while the service handles cluster operations with managed updates and built-in observability features.\n  This feature is available in all AWS Regions where PCS is available. To get started, see the PCS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-parallel-computing-service-upgrade/",
+      "pubDate": "2026-06-30T19:12:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0ae1327b3620",
+      "title": "Amazon Time Sync Service adds support for Microsecond accurate time on 26 additional EC2 instance types in all commercial regions",
+      "description": "Amazon Time Sync Service introduces support for microsecond accurate time on 26 additional EC2 instance types in all commercial regions. Built on Amazon's proven network infrastructure and the AWS Nitro System, microsecond accurate time and nanosecond precision hardware timestamps leverage the reference clocks running in the Nitro System directly, enabling customers to easily order application events, measure 1-way network latency, and increase distributed application transaction speed. \n  \n Starting today, customers can access microsecond accurate time on these additional instance types by creating a Precision Time Placement Group (PTPG), a new placement strategy that allows customers to launch instances with Precision Time Protocol hardware clock (PHC) enabled. Customers that require both low network latency as well as precision time can associate a PTPG with their Cluster Placement Group (CPG), so that their low-latency workloads also benefit from microsecond accurate time. \n  \n For more information, refer to the Amazon Time Sync Service documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-time-sync-precision-time-placement-group",
+      "pubDate": "2026-06-30T17:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-aaf2f5f87f35",
+      "title": "Build generative UI for AI agents on Amazon Bedrock AgentCore with the AG-UI protocol",
+      "description": "This post walks through how AG-UI integrates into the Fullstack AgentCore Solution Template (FAST) to build interactive agent frontends on Amazon Bedrock AgentCore. We then show how CopilotKit extends this with generative UI, shared state, and human-in-the-loop interactions, all deployed on Amazon Bedrock AgentCore.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/",
+      "pubDate": "2026-06-30T16:46:17.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-8c36c49429c3",
+      "title": "Implementing resilience patterns with Amazon Bedrock and LLM gateway",
+      "description": "In this post, you will learn five practical patterns for building resilient generative AI applications on AWS, progressing from native Amazon Bedrock features to multi-model orchestration using an LLM gateway. These patterns address real-world challenges such as quota exhaustion during unexpected traffic surges, maximizing availability through geographic distribution of inference, and helping prevent noisy neighbor problems in multi-tenant environments.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/",
+      "pubDate": "2026-06-30T16:40:47.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-17ba60bcf469",
+      "title": "Building bilingual NER for cargo logistics with Amazon Bedrock",
+      "description": "In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the Amazon Bedrock knowledge distillation capabilities.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/",
+      "pubDate": "2026-06-30T16:33:46.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-8a0d19126d3d",
+      "title": "Amazon SageMaker AI cuts generative AI inference scale-out time by up to half with automatic container image caching",
+      "description": "Amazon SageMaker Inference now supports container image caching, enabling up to 2x faster end-to-end scaling for generative AI models during scale-out events. When your endpoint scales out, the service pre-caches your container image so new instances can start serving traffic faster, without waiting for large container images to be pulled from Amazon ECR.\n  Generative AI workloads typically use large container images (10 GB or more) for deep learning frameworks and model serving. Previously, every new instance launched during scale-out had to pull the full image from ECR, adding several minutes of cold-start latency. Container image caching eliminates this bottleneck by pre-pulling the image so new instances launch with the container already available locally. Customers don't need to make any changes. The service automatically caches whatever image URI is specified in your endpoint or inference component configuration. This capability supports accelerator instance types, single-model endpoints, and inference component-based endpoints.\n  With this launch, SageMaker Inference now offers a comprehensive scaling optimization suite for generative AI: sub-minute concurrency metrics for up to 6x faster load detection, instance-store container caching for faster scaling on existing instances, and container image caching for up to 2x faster scaling on new instances.\n  Container image caching is available in all AWS commercial regions where SageMaker Inference is supported. To learn more, visit the launch blog.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/sagemakerai-inf-scale-out-time",
+      "pubDate": "2026-06-30T16:31:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a009a67d6013",
+      "title": "Amazon EC2 C9g and C9gd compute optimized instances are now available",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C9g and C9gd instances, powered by AWS Graviton5 processors, are generally available. AWS Graviton5 processors are the fifth generation of custom-designed CPUs, delivering the best price performance for compute-intensive workloads running on Amazon EC2.\n \nC9g instances are ideal for workloads such as high-performance computing (HPC), batch processing, gaming, video encoding, scientific modeling, distributed analytics, CPU-based machine learning (ML) inference, real time analytics, and ad serving. C9gd instances offer local NVMe-based SSD block-level storage for customers running compute-intensive workloads that also require high-speed, low-latency local storage for scratch space, temporary files, and caches.\n \nC9g and C9gd instances deliver up to 25% better compute performance compared to AWS Graviton4-based C8g and C8gd instances. They are up to 30% faster for databases, up to 35% faster for web applications, and up to 35% faster for machine learning. They feature 5x larger cache and the fastest memory of any processor instances in the cloud. These instances are built on the sixth-generation AWS Nitro System and are the first to feature the Nitro Isolation Engine, harnessing formal verification to provide mathematical assurance that customer workloads are isolated from each other and AWS operators, pioneering a new standard for mathematically proven cloud security. \n \nC9g and C9gd instances are available in US East (N. Virginia, Ohio), US West (Oregon), and EU (Frankfurt) regions. C9g and C9gd instances are available for purchase via Savings Plans, On-Demand, Spot instances, Dedicated instances, or Dedicated hosts.\n \nLevel up your compute with AWS Graviton and get started today.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-c9g-c9gd-instances-graviton5-processors-available/",
+      "pubDate": "2026-06-30T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "generally-available",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-67e7712ee197",
+      "title": "OpenAI GPT-5.4 and NVIDIA Nemotron 3 Super 120B now available on Kiro in AWS GovCloud (US-West) Region",
+      "description": "Two new models are now available in the Kiro IDE and CLI for the AWS GovCloud (US-West) Region.\n  OpenAI GPT-5.4 is now available in Kiro for complex reasoning, coding, document analysis, and multi-step agentic workflows. It helps developers build AI applications and production workflows that can interpret context, interact with tools, operate software environments, and verify outputs across multiple steps. GPT-5.4 runs on Amazon Bedrock's next-generation inference engine with isolated queues and durable execution for resilient workloads. Available with a 272K context window and 1.2x credit multiplier.\n  NVIDIA Nemotron 3 Super 120B is now available in Kiro as an open weight model option. A hybrid mixture-of-experts model activating only 12B of its 120B parameters for high compute efficiency and fast inference on agentic tasks. 256K context window with 32K max output. Available with a 0.25x credit multiplier.\n  Ensure your IDE or CLI is updated to the latest version, then restart it to access the new models from the model selector. For more details about Kiro in AWS GovCloud (US), visit the GovCloud documentation or contact your AWS account team for more information. To learn more about Kiro, visit the Kiro product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/kiro-gpt-nemotron-launch-aws-govcloud-us/",
+      "pubDate": "2026-06-30T09:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "lex"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "lex",
+        "now-available",
+        "update",
+        "new-model"
+      ]
+    },
+    {
+      "id": "aws-news-0f940d05dbd8",
+      "title": "Amazon CloudWatch pipelines now supports processing and enriching OpenTelemetry metrics",
+      "description": "Amazon CloudWatch pipelines now supports processing and enriching OpenTelemetry (OTel) metrics during ingestion. CloudWatch pipelines is a fully managed service that ingests, transforms, and routes telemetry data to CloudWatch without requiring you to manage infrastructure.\n  Until now, customers who needed to enrich or transform OTel metrics before storage had to build custom processing layers or modify application instrumentation at the source. With OTel metric processing in CloudWatch pipelines, you can apply metric transformations centrally as part of the ingestion path with no new infrastructure required. With CloudWatch pipelines, you can enrich metrics by adding business context such as team ownership, cost center, and environment tags to metrics from sources you cannot modify. You can strip high-cardinality labels from custom workloads to reduce storage costs, and rename metrics and attributes to enforce consistent naming conventions across your organization. Processing is applied transparently to matched metrics with no changes to application instrumentation required.\n  OTel metric processing for CloudWatch pipelines is available in all AWS Regions where CloudWatch pipelines and CloudWatch native OpenTelemetry metrics are supported. Processing of OTel metrics via pipelines is offered at no additional cost. Standard CloudWatch pricing for OTel metrics ingestion apply. For pricing details, see CloudWatch Pricing.\n  To get started, open the Amazon CloudWatch console, navigate to pipelines under Ingestion, and select CloudWatch Metrics (OTel) as the source. To learn more, see the CloudWatch pipelines documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-pipelines-otel-metrics",
+      "pubDate": "2026-06-30T07:27:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6ef70d2258bd",
+      "title": "AWS Service Availability Updates",
+      "description": "We’re announcing availability changes to the following AWS services and features.\n  Services moving to Maintenance\n \nServices moving to maintenance will no longer be accessible to new customers starting July 30, 2026. Customers already using these services and features can continue to do so. AWS will continue to operate and support these services and features. We recommend that customers learn about the changes in the product pages and documentation.\n \n·       Amazon Bedrock Agents (launched November 2023) is now Amazon Bedrock Agents Classic\n \n·       Amazon Cognito Sync\n \n·       Amazon Kendra\n \n·       Amazon Q Business\n \n·       AWS Directory Service – Simple AD\n \n·       AWS IoT Device Defender – Detect (feature will no longer be accessible to new customers starting August 31, 2026)\n \n·       AWS Mainframe Modernization – Self-Managed Experience\n \n·       AWS Management Console – myApplications\n \n·       AWS Resource Groups – Group Lifecycle Events\n \n·       AWS Service Catalog – Application Registry\n \n·       AWS Systems Manager – Application Manager\n \n Amazon SageMaker AI Features\n \no   A2I\n \no   Clarify\n \no   Debugger\n \no   GeoSpatial\n \no   Ground Truth\n \no   Mechanical Turk\n \no   Model Monitor\n \no   Profiler\n \no   Role Manager\n \no   Studio Lab\n \n \n \nServices entering Sunset\n \nThe following services are entering sunset, and we are announcing the date upon which we will end operations and support of the service. Customers using these services should click on the links below to understand the sunset timeline and begin planning migration to alternatives as recommended in the updated service web pages and documentation.\n \n·       Amazon WorkSpaces – PCoIP\n \n·       Amazon WorkSpaces - Pool\n \n·       AWS Managed Services (AMS) Advanced\n \n·       AWS re:Post Private\n \n \n \nServices reaching End of Support\n \nThe following services have reached end of support and are no longer available as of June 30, 2026.\n \n·       Amazon Chime SDK – Carrier Voice Focus\n \n·       Amazon SageMaker AI – Ground Truth Plus\n \n        AWS Elemental MediaLive and MediaPackage (Select Regions only)\n \n \n \nFor customers affected by these changes, we've prepared comprehensive migration guides, and our support teams are ready to assist with your transition. Visit AWS Product Lifecycle Page to learn more, and subscribe to the RSS feed for future updates.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
+      "pubDate": "2026-06-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "amazon q",
+        "q business",
+        "sagemaker",
+        "kendra",
+        "a2i",
+        "directory service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "amazon q",
+        "q business",
+        "sagemaker",
+        "kendra",
+        "a2i",
+        "directory service",
+        "launch",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ed62f8b2f77d",
       "title": "Implement a backup strategy for Amazon Quick Sight BI assets",
@@ -224,40 +510,6 @@
       ]
     },
     {
-      "id": "aws-news-4d5b4ba0ed4a",
-      "title": "Building agentic AI applications with a modern data mesh strategy on AWS",
-      "description": "This post shows how to build a governed, serverless data mesh on AWS that provides the secure, scalable data foundation production agentic AI requires.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-agentic-ai-applications-with-a-modern-data-mesh-strategy-on-aws/",
-      "pubDate": "2026-06-25T16:35:07.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-4188c45c9c72",
-      "title": "AI-powered BI with Snowflake and Amazon Quick",
-      "description": "In this post, you will learn how to build an end-to-end integration between Snowflake semantic views and Amazon Quick. The sample data is user review data for a media company. You start by loading movie review data from Amazon Simple Storage Service (Amazon S3) into Snowflake, define a semantic view in SQL to add business meaning, explore it with natural-language queries through Cortex Analyst, and then generate an Amazon Quick dataset and dashboard. The dataset can be created manually or with a provided automation script. By the end, your BI team or AI team can ask natural-language questions against a governed data layer and trust that every response reflects the same business logic.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/ai-powered-bi-with-snowflake-and-amazon-quick/",
-      "pubDate": "2026-06-24T18:19:35.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q",
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "s3",
-        "ga",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-abab712aba4e",
       "title": "Modernizing Lambda + S3 workloads with Amazon S3 Files",
       "description": "Learn how Amazon S3 Files simplifies Lambda functions by eliminating transfer code and /tmp constraints. See three modernization patterns with code examples for image processing, ETL pipelines, and multi-agent AI workloads. AWS Lambda functions that interact with Amazon Simple Storage Service (Amazon S3) typically follow a familiar pattern: download an object to /tmp, process it […]",
@@ -361,44 +613,6 @@
       ]
     },
     {
-      "id": "aws-news-b767462e905c",
-      "title": "Build a protein research copilot with Amazon Bedrock AgentCore",
-      "description": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-generated scientific summaries of search results.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-a-protein-research-copilot-with-amazon-bedrock-agentcore/",
-      "pubDate": "2026-06-23T16:39:34.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
-      "id": "aws-news-497100e0aad0",
-      "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
-      "description": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
-      "pubDate": "2026-06-23T15:43:59.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
       "id": "aws-news-427cdb06aa69",
       "title": "Amazon SageMaker Studio notebooks now support G7e instance types",
       "description": "Amazon G7e instances feature up to 8 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, with 96 GB of memory per GPU, and 5th Generation Intel Xeon processors. They support up to 192 virtual CPUs (vCPUs) and up to 1600 Gbps of Elastic Fabric Adapter networking bandwidth. G7e instances support NVIDIA GPUDirect Peer to Peer (P2P) that boosts performance for multi-GPU workloads. Multi-GPU G7e instances also support NVIDIA GPUDirect Remote Direct Memory Access (RDMA) with EFAv4 in EC2 UltraClusters, reducing latency for small-scale multi-node workloads. Customers can use G7e instances to deploy large language models (LLMs), agentic AI models, multimodal generative AI models, and physical AI models. G7e instances offer the highest performance for spatial computing workloads as well as workloads that require both graphics and AI processing capabilities.\n \nAmazon EC2 G7e instances are available for SageMaker Studio notebooks in the AWS US East (N. Virginia and Ohio) and US West (Oregon) regions.\n \nVisit developer guides for instructions on setting up and using JupyterLab and CodeEditor applications on SageMaker Studio. For pricing information on these instances, please visit our pricing page.",
@@ -416,25 +630,6 @@
         "sagemaker",
         "ec2",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-be323c7dc520",
-      "title": "Building pay-per-intelligence for AI agents: How Ampersend uses Amazon Bedrock AgentCore Payments",
-      "description": "In this post, you will learn how Ampersend built a pay-per-intelligence routing layer on top of Amazon Bedrock AgentCore Payments. AI agents autonomously route tasks to the most effective model, pay per request, and operate within spending budgets. You will also see how the two-hop payment pattern works end-to-end and how to get started with your own implementation.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-pay-per-intelligence-for-ai-agents-how-ampersend-uses-amazon-bedrock-agentcore-payments/",
-      "pubDate": "2026-06-22T17:53:40.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
       ]
     },
     {
@@ -799,250 +994,6 @@
         "eventbridge",
         "cloudwatch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-87c935bcbae9",
-      "title": "Amazon Bedrock Managed Knowledge Base is now generally available",
-      "description": "Amazon Bedrock Managed Knowledge Base, a fully managed retrieval-augmented generation (RAG) service, is now generally available. With Managed Knowledge Base, developers can build production-ready AI agents grounded in enterprise data without managing vector databases, data pipelines, or retrieval infrastructure. The service handles data ingestion, storage optimization, and advanced retrieval so teams can go from prototype to production faster.\n \nAmazon Bedrock Managed Knowledge Base includes six native data source connectors—Amazon S3, SharePoint, Confluence, Google Drive, OneDrive, and Web Crawler—with automatic data syncing and managed vector storage optimized for price-performance. Advanced retrieval capabilities include hybrid search, document ranking, and agentic retrieval that automatically orchestrates query planning, interim response evaluation, and re-ranking for complex multi-hop queries. You can use Managed Knowledge Base to power employee assistants, automate customer support, or build multimodal knowledge bases spanning text, video, audio, and images. The service integrates natively with Amazon Bedrock AgentCore, enabling you to connect your knowledge base to agents with auto-generated permissions and built-in observability.\n \nAmazon Bedrock Managed Knowledge Base is available today in the US East (N. Virginia), US West (Oregon), Asia Paciﬁc (Sydney, Tokyo), Europe (Dublin, Frankfurt, London), and AWS GovCloud (US-West) Regions.\n \nTo learn more, visit the Amazon Bedrock Knowledge Bases product page. To get started, see the Amazon Bedrock Knowledge Bases documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-managed-knowledge-base/",
-      "pubDate": "2026-06-17T05:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "lex",
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "lex",
-        "s3",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ecfeb18c59ff",
-      "title": "AWS Transform for mainframe now delivers a traceable reimagine workflow",
-      "description": "AWS Transform for mainframe now delivers a connected, traceable reimagine experience from assessment through code generation. Previously, modernizing mainframe applications required months of analysis across multiple tools for discovery, reverse engineering, and code generation with manual handoffs between phases. With this launch, enterprises running z/OS COBOL and PL/I workloads can assess their portfolio to identify the discrete business functions, extract business rules, generate development-ready requirements, and produce traceable cloud-native code in a single connected workflow.\n \nThe experience starts with a portfolio assessment, where AWS Transform systematically identifies and catalogs discrete business functions. Selected business functions flow directly into the reimagine workflow, creating a connected path from portfolio analysis through code generation. For each business function, AWS Transform generates development-ready requirements with full traceability, flowing directly into Kiro and other IDEs through MCP-based integrations. Teams can generate interactive documentation for any requirement or code directly in the IDE. Every requirement traces back to the source code, so teams can audit any transformation decision back to its origin. This end-to-end approach compresses what previously took years of manual effort into months of automated, evidence-based modernization.\n  \nThese capabilities are available in all AWS Regions where AWS Transform for mainframe is available. For more information, see the AWS Region table.\n \nTo learn more, visit AWS Transform for mainframe or see the AWS Transform for mainframe documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-transform-mainframe-traceable-reimagine-workflow/",
-      "pubDate": "2026-06-16T18:29:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "launch",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-fd592e84cfde",
-      "title": "Announcing Web Search on Amazon Bedrock AgentCore for Agentic Web Retrieval",
-      "description": "As AI agents become more capable, they need access to information beyond a model's training data - to answer questions, retrieve latest facts, and take action grounded in current developments. Today, we're making that easy with the general availability of Web Search on AgentCore. Web Search is a fully managed tool that enables agents to ground responses in current, accurate web knowledge while keeping data residency within your secured AWS environment with zero data egress.\n  Previously, adding web search to agents on Amazon Bedrock AgentCore required integrating with external search providers, building custom orchestration, managing authentication and billing, and coordinating security and compliance across multiple services. Web Search removes this undifferentiated heavy lifting, enabling developers to focus on building agents.\n  Web Search is built on Amazon’s proven search infrastructure, informed by years of experience powering agentic search experiences across Alexa+, Amazon Q Business, and Kiro. It uses a multi-source grounding approach, by combining a web index operated by amazon with structured knowledge graph data. Beyond standard web results, this gives agents access to entity data and verified facts, helping them retrieve more relevant and accurate responses than traditional web search alone.\n  Web Search is optimized for agentic retrieval, returning high-value excerpts that deliver strong intelligence per token. The tool is exposed as a built-in connector target on AgentCore gateway using the Model Context Protocol (MCP). Your agent sends a natural-language query, and Web Search returns ranked results with relevant snippets, source URLs, titles, and publication dates that the model can reason over to produce a grounded response.\n  Web Search on AgentCore is generally available today in the AWS Region: US East (N. Virginia). For more information, see the AgentCore documentation or read the AWS News Blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-web-search/",
-      "pubDate": "2026-06-16T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "amazon q",
-        "q business",
-        "lex"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "amazon q",
-        "q business",
-        "lex",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-9f909eddcdd0",
-      "title": "Amazon Redshift RG instances powered by AWS Graviton now available in additional regions",
-      "description": "Amazon Redshift is expanding the general availability of RG instances — powered by AWS Graviton processors — to three additional AWS Regions: Africa (Cape Town), Asia Pacific (Bangkok), and Mexico (Central). Amazon Redshift's new Graviton-based RG instances deliver up to 4.2X better price-performance for data warehouse workloads compared to other data warehouses, run workloads up to 2.4x faster than previous-generation RA3 instances, and cost 30% less per vCPU.\n  Customers in Cape Town (af-south-1), Bangkok (ap-southeast-7), and Mexico Central (mx-central-1) can provision rg.xlarge and rg.4xlarge node types — ideal for a wide range of workloads from smaller development environments to production data warehouse deployments. Customers can upgrade their existing RA3 provisioned instances to RG instances and immediately benefit from improved query performance and reduced compute costs.\n  RG instances come with additional cost savings built in by default. With Amazon Redshift incremental manual snapshots, customers now pay less for backup storage as snapshot costs are metered based on unique data blocks rather than total snapshot size. Additionally, RG instances eliminate Redshift Spectrum scanning charges, meaning customers no longer pay for data scanned in Amazon S3 via Spectrum — further reducing the total cost of running data lake queries.\n  To get started, visit the Amazon Redshift documentation and the RG instances pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-redshift-rg-instances-3-additional-regions/",
-      "pubDate": "2026-06-16T16:10:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift",
-        "graviton"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "graviton",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-3befdb4ffec1",
-      "title": "AWS announces AWS Blocks, an open-source framework for composing application backends on AWS (Preview)",
-      "description": "Today, AWS announces the public preview of AWS Blocks, an open-source TypeScript framework for application developers who want backend capabilities on AWS removing the need to learn infrastructure tools. AWS Blocks runs a fully functional local environment with Postgres, authentication, and real-time messaging, no AWS account required. When ready to deploy, the same application code runs on production AWS services with zero changes, and developers can drop into AWS CDK at any point for direct resource configuration.\n \nA developer building a SaaS application can add database tables, user authentication, AI agents, file uploads, and background jobs in a single session, test the full stack locally, and deploy to AWS when ready. Built-in guidance for AI coding tools enables correct architecture without custom configuration, and end-to-end type safety flows from the data schema to the frontend without a code generation step. At preview, supported frontend frameworks include SPAs (e.g. Vite + React) and SSR frameworks such as Next.js, Nuxt, and Astro. AWS Blocks is available at no additional charge. You pay only for the AWS services your application uses.\n \nAWS Blocks deploys to all commercial AWS regions.\n \nTo get started, run npx @aws-blocks/create-blocks-app. Read more here:\n \n \n \nAWS Blocks product page\n \n \nGetting started guide in the AWS Blocks Developer Guide\n \n \nAWS Blocks on GitHub",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-blocks-preview",
-      "pubDate": "2026-06-16T15:49:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "preview",
-        "support",
-        "public-preview"
-      ]
-    },
-    {
-      "id": "aws-news-e6d8fdb20601",
-      "title": "Amazon Quick expands integrations with new connectors for Adobe, Figma, WhatsApp, and more",
-      "description": "Amazon Quick now connects to 16 additional tools, allowing teams to act on insights from their data, analytics, design, and communication apps without switching context. New connectors include Adobe, Cisco Video Messaging, Cisco Webex Meetings, Dun & Bradstreet, Figma, Google Chat, HG Insights, Microsoft OneNote, Moody’s, Shopify, Smartsheet, Snowflake, Visier, WhatsApp, Zapier, and ZoomInfo.\n \nWith this expansion, Quick now integrates across productivity, design, analytics, data infrastructure, financial intelligence, commerce, and communication covering the tools teams already rely on and making it easier to build workflows that combine multiple tools in a single conversation. For example, a revenue team can enrich account data from Dun & Bradstreet, cross-reference it against a Snowflake dataset, and track outreach tasks in Smartsheet without leaving Quick. Teams can add new tools to their workspace in minutes and immediately start incorporating them into Quick Flows, Chat, and Spaces alongside their existing integrations.\n \nThese integrations are available in all AWS Regions where Amazon Quick is available.\n \nVisit the Amazon Quick website to learn more and start your Quick free trial. To learn more about Quick integrations, visit the integrations page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick-adobe-figma-whatsapp/",
-      "pubDate": "2026-06-16T15:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "ga",
-        "integration",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-118342fa12d7",
-      "title": "AWS Partner Central agents now accelerate co-selling on every deal",
-      "description": "Starting today, AWS Partner Central agents qualify every co-sell opportunity in real time and make recommendations that drive AWS engagement and accelerate deal progression. Building on the AWS Partner Central agents released on March 16, 2026, the agent can act on the partner's behalf through conversation to enrich the opportunity details. This eliminates waiting for manual review, so partners build a stronger pipeline and progress deals faster.\n  Now, each opportunity is matched to a co-sell motion that determines AWS engagement: AWS field-engaged, where an AWS sales team collaborates directly; Agent-engaged, where the agent strengthens the submission to increase AWS engagement; and Partner-led, where the partner drives the deal with agent support. Across all motions, the agent provides customer insights, recommendations, and sales plays, and each opportunity receives an Opportunity Quality Score that measures co-sell readiness and directly influences how AWS engages. The agent recommends how to improve this score, and as the opportunity improves, the score and motion recalculate in real time, moving it closer to AWS engagement.\n  The new enhanced experience is available today to AWS Partners in all commercial AWS Regions. To get started, log in to AWS Partner Central and access opportunity management. Partners can also use the agentic experience in native AI tools like Amazon Quick and Kiro, or through MCP in their own CRM. See the Partner Central agents MCP server guide to get started.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/accelerate-co-selling-with-agents/",
-      "pubDate": "2026-06-16T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-084d0b2c3700",
-      "title": "Amazon CloudWatch introduces native OpenTelemetry metrics with PromQL querying and per-GB pricing",
-      "description": "Amazon CloudWatch now natively supports OpenTelemetry metrics. You can send metrics via the OpenTelemetry Protocol (OTLP) and query them using Prometheus Query Language (PromQL), with per-GB ingestion pricing and 15 months of storage included.\n \nThis allows you to consolidate custom application metrics and AWS vended metrics from more than 70 services in a single solution, queryable together in PromQL. CloudWatch exposes a Prometheus-compatible query API, so teams already using OpenTelemetry, Prometheus, or Grafana can use CloudWatch as a destination that fits seamlessly with their existing tools.\n \nAvailable in all commercial AWS Regions except Middle East (UAE), Middle East (Bahrain), and Israel (Tel Aviv). For pricing details, see the Amazon CloudWatch pricing page. To get started, see the Amazon CloudWatch metrics documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-otel-metrics/",
-      "pubDate": "2026-06-16T12:44:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch",
-        "grafana"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudwatch",
-        "grafana",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-14274372fb50",
-      "title": "AWS Partner Central launches new funding benefits for Business Value Realization",
-      "description": "AWS Partner Central now supports the Business Value Realization (BVR) motion, a new experience and funding motion for partners who drive customer adoption and business outcomes after deploying strategic AWS services. BVR helps partners drive business outcomes for their customers by structuring the AWS service adoption journey across defined stages, with funding tied to proven demonstrated value realization.\n  Partners can now enroll in BVR through a self-service registration flow in AWS Partner Central, nominate customer opportunities, and track customer progress towards value realization. The new experience enables partners to track customer progression across structured adoption stages, with guided activities to help customers achieve desired outcomes. As partners drive customer adoption, AI agents in AWS Partner Central generate weekly adoption reports that surface highlights, risks, and recommendations, helping partners identify where customer users drop off and how tooling adoption is accelerating. When partners complete stages, funding is automatically disbursed through the AWS Partner Funding Portal without requiring separate requests.\n  BVR is available in AWS Partner Central for consulting, system integrator, and managed services partners with advance or premier tier status and a qualifying domain competency. Learn more in the APN blog or visit AWS Partner Central guide for Business Value Realization.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-partner-business-value-realization/",
-      "pubDate": "2026-06-16T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ec768f96f56f",
-      "title": "Amazon RDS for SQL Server now supports X2m instances",
-      "description": "Amazon Relational Database Service (Amazon RDS) for SQL Server launches memory-optimized X2m database instances. Based on the Amazon EC2 X2iedn instance, X2m database instances provide the Amazon RDS Optimize CPU feature, which allows customers to reduce SQL Server software licensing costs by 50% or more compared to Amazon RDS x2iedn database instances for memory-intensive database workloads. X2m instances offer up to 64 vCPUs, up to 4 TB memory, up to 256K IOPS, and up to 32:1 memory to vCPU ratio. \n  To use the X2m instances, you can modify your existing RDS database instance or create a new RDS database instance from the RDS Management Console, or using the AWS SDK or CLI. X2m instances can be purchased using On-Demand pricing, and qualify for AWS Database Savings Plan. See Amazon RDS for SQL Server Pricing for up-to-date pricing of instances, storage, data transfer and regional availability.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/rds-sqlserver-supports-x2m/",
-      "pubDate": "2026-06-16T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2134c8681ea3",
-      "title": "Amazon S3 Vectors reduces query charges by up to 80% for large vector indexes",
-      "description": "Amazon S3 Vectors has reduced data processed charges for queries on vector indexes with over 10 million vectors by up to 80%. This reduction lowers costs for customers running similarity search across large-scale AI, RAG, and semantic search workloads. The new pricing applies automatically with no application changes required. While this change reduces costs for large indexes, we continue to recommend distributing vectors across multiple indexes for improved query performance.\n \nS3 Vectors query pricing reductions are effective today in all AWS Regions where S3 Vectors is available. For updated pricing information, visit the S3 pricing page. To learn more about S3 Vectors, visit the product page and S3 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/s3-vectors-reduces-query-charges-80-percent-large-indexes/",
-      "pubDate": "2026-06-16T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3 vectors",
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3 vectors",
-        "s3",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-5e8dcb7ca8d2",
-      "title": "AWS announces Amazon Connect Customer Services Competency",
-      "description": "AWS announces the Amazon Connect Customer Competency, a new AWS Specialization that helps customers identify Services Partners with proven expertise in transforming enterprise-wide customer experience on Amazon Connect Customer.\n \nToday's customers expect seamless, personalized experiences at every touchpoint, but legacy contact centers fall short — relying on queues, manual routing, and handle-time metrics, with AI added as a separate layer rather than built in from the start.\n \nThe Amazon Connect Customer Competency recognizes Services Partners across two categories: Contact Center Transformation and AI-Powered Customer Experience. Partners validated in this Competency have demonstrated technical depth and proven success in migrating legacy contact centers and operationalizing AI at scale on Amazon Connect. Customers gain confidence working with validated Partners who can deliver AI-native transformations spanning voice, chat, email, SMS, and social channels.\n \nThis is the first AWS Competency directly aligned to an AWS service, replacing the Amazon Connect Service Delivery Program designation, which will be deprecated on June 1, 2027.\n \nAWS Partners on the Services Path who are validated or differentiated members and have demonstrated customer success with Amazon Connect are encouraged to apply. To learn more and discover validated Partners, visit the Amazon Connect Customer Competency page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-announces-amazon-connect-customer-services-competency",
-      "pubDate": "2026-06-16T04:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "personalize"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "personalize",
-        "ga"
       ]
     },
     {

@@ -1,8 +1,66 @@
 {
-  "lastUpdated": "2026-06-30T08:52:36.482Z",
+  "lastUpdated": "2026-07-01T09:25:27.247Z",
   "category": "general",
-  "totalItems": 35,
+  "totalItems": 36,
   "items": [
+    {
+      "id": "aws-news-e401a8c8d84b",
+      "title": "Amazon CloudWatch Logs enriches log events with AWS resource tags",
+      "description": "Amazon CloudWatch Logs now enriches log events with resource tags, making it easier to filter, search, and analyze logs by the metadata that matters most to your organization, such as  team ownership, environment, cost center, or application name, without requiring changes to your logging instrumentation.\n \nWith tag enrichment, Amazon CloudWatch Logs adds resource tags directly to your log events at ingestion time. You can immediately use tags in log queries, to scope your analysis without building custom pipelines or manually adding context to your application logs. For example, you can quickly filter all logs from production resources owned by a specific team, or filter by cost center during an incident investigation.\n \nTag enrichment for logs is available in all commercial AWS Regions except Middle East (UAE), Middle East (Bahrain), and Israel (Tel Aviv). To get started, enable resource tags on telemetry in the Amazon CloudWatch Settings, or through the AWS Command Line Interface (AWS CLI), and AWS SDKs to use your existing AWS resource tags to enrich your log events. Tag enrichment is available for no additional cost. Learn more on the Amazon CloudWatch documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-logs-resource-tags/",
+      "pubDate": "2026-06-30T21:15:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f0873a2107f7",
+      "title": "Amazon ElastiCache T4g nodes now available in additional AWS Regions",
+      "description": "Amazon ElastiCache now supports T4g node types in the following AWS Regions: Africa (Cape Town), Asia Pacific (Jakarta), Asia Pacific (Osaka), AWS GovCloud (US-East), and AWS GovCloud (US-West). T4g nodes are powered by AWS Graviton2 processors and provide a baseline level of CPU performance with the ability to burst CPU usage at any time, making them ideal for applications that experience temporary spikes in usage.\n \nFor complete information on pricing and regional availability, please refer to the Amazon ElastiCache pricing page. To get started, create a new cluster or modify an existing cluster using the AWS Management Console, AWS CLI, or API. To learn more, see Supported node types in the Amazon ElastiCache User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-elasticache-t4g-additional-aws-regions/",
+      "pubDate": "2026-06-30T19:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "graviton",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cf3ab64f06f0",
+      "title": "IAM Identity Center now enables programmatic AWS account access for customer managed applications",
+      "description": "IAM Identity Center now enables customer managed applications to programmatically access AWS accounts on behalf of their users, including the ability to discover accounts and roles assigned to a user and retrieve temporary credentials required for AWS account access.\n \nIf you have a customer managed application that authenticates users through an external identity provider (IdP), you can configure that IdP as a trusted token issuer (TTI) in IAM Identity Center. With this launch, you can now enable AWS account access for this application. Users who have already signed in through the IdP can access their assigned AWS accounts and obtain temporary security credentials for their authorized roles without a separate authentication flow. This eliminates redundant sign-in prompts that previously required users to re-authenticate even after signing in through their external identity provider.\n \nThis feature is available for organization instances of IAM Identity Center. IAM Identity Center administrators must explicitly enable AWS account access for each customer managed application. Only management account administrators or delegated administrators can enable this capability, ensuring centralized governance over which applications can access account-level resources.\n \nThis feature is available in all commercial AWS Regions, the AWS GovCloud (US) Regions, and the China Regions. To get started, navigate to the IAM Identity Center console, select your customer managed application, and enable AWS account access. For more information, see Enable AWS account access for customer managed applications in the IAM Identity Center User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-iam-identity-center-account-access-customer-managed-apps/",
+      "pubDate": "2026-06-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "launch",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-da87679be1f0",
       "title": "Amazon Redshift delivers faster performance for BI dashboards and real-time analytics",
@@ -446,44 +504,6 @@
         "generally-available",
         "now-available",
         "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-795445485990",
-      "title": "AWS Security Agent adds Kiro Power, Claude Code, simulated validations and new integrations support",
-      "description": "AWS Security Agent (now part of AWS Continuum) adds support for Kiro and Claude Code, enabling developers to trigger security scans directly from their development environment. AWS Security Agent now also validates code scanner findings by simulating exploits in a sandbox environment and providing proof of exploit, so teams can trust their results, minimize false positives, and prioritize remediation with confidence. Additionally, this release adds integrations with GitLab.com, GitLab Self Managed, GitHub Enterprise, Bitbucket, and Confluence.\n \nWith simulated validations, the code scanner goes beyond detection as it executes findings in an isolated environment and returns evidence demonstrating how a vulnerability can be exploited. Security teams no longer need to spend cycles triaging unverified alerts; they get legitimate, proven findings with the context needed to make the right prioritization decisions.\n \nKiro power and Claude Code plugin for AWS Security Agent lets developers connect their existing source control platforms and build threat models, run code scans and remediate validated findings from code review and penetration tests without leaving their IDE.\n \nThese features are available in all regions where AWS Security Agent is supported. \n \nTo learn more, visit our blog post or our documentation page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-kiro-power-claude-code/",
-      "pubDate": "2026-06-17T04:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-17adbf6a1515",
-      "title": "Amazon S3 Vectors now supports up to 10,000 similarity search results per query",
-      "description": "Amazon S3 Vectors can now return up to 10,000 similarity search results per query, a 100x increase from the previous limit. The higher result limit helps you retrieve a larger, more comprehensive set of candidates during similarity queries. This is especially valuable for applications with multi-stage retrieval pipelines that need to apply additional processing such as reranking, aggregations, or deduplication to produce a more relevant final result set.\n \nTo get started with the higher limit, use the latest AWS SDK and update your application code to specify up to 10,000 relevant results (topK nearest neighbors) when making a QueryVectors API request. Query results are now returned across multiple pages, and you can start processing the first page immediately while retrieving additional pages as needed. For queries that return larger result sets, you pay a small data-returned fee based on the total size of results returned. The first 512 KB of data returned per query is free. For full pricing details, visit the S3 pricing page.\n \nS3 Vectors supports retrieving up to 10,000 results per query in all AWS Regions where it is available. To learn more about S3 Vectors, visit the product page and S3 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/s3-vectors-supports-10000-search-results-per-query",
-      "pubDate": "2026-06-16T21:22:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3 vectors",
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3 vectors",
-        "s3",
-        "ga",
-        "update",
         "support"
       ]
     },
