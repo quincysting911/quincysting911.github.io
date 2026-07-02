@@ -1,8 +1,75 @@
 {
-  "lastUpdated": "2026-07-01T09:25:27.247Z",
+  "lastUpdated": "2026-07-02T08:38:36.236Z",
   "category": "natural-language",
-  "totalItems": 4,
+  "totalItems": 6,
   "items": [
+    {
+      "id": "aws-news-abc6ba3239b0",
+      "title": "Amazon ECS Express Mode now supports custom task definitions",
+      "description": "Amazon Elastic Container Service (Amazon ECS) Express Mode now supports custom task definitions, giving you the flexibility to use existing ECS application configurations and advanced task-level customizations with Express Mode’s simplified deployment experience. This also enables you to reuse task definitions from your existing CI/CD pipelines and infrastructure-as-code workflows, allowing you to retain established operational practices while taking advantage of Express Mode’s streamlined application deployment and infrastructure automation.\n \nECS Express Mode makes it easy to deploy containerized web applications and APIs by automatically handling load balancing, networking, auto scaling, monitoring, and deployments. Now you can get the same simplicity for your own custom task definitions. With this update, you can extend Express Mode services with advanced task definition capabilities, including observability and security sidecars, custom container health checks, ulimits and Linux runtime settings, and FireLens for custom log routing. Once you associate a custom task definition with an Express Mode service, you can continue managing your application either through task definition updates or directly through Express Mode, whichever you prefer.\n  \nThis feature is available in all AWS Regions. To get started, create or update your ECS Express Mode service by passing your task definition using the AWS Management Console, AWS CLI, AWS SDKs, or infrastructure-as-code tools. To learn more, see the Amazon ECS Express Mode documentation and getting started walkthrough.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-express-mode-custom-task-def/",
+      "pubDate": "2026-07-01T16:05:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ecs"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ecs",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-db3af116f970",
+      "title": "Amazon RDS for Db2 now supports self-managed Active Directory",
+      "description": "Amazon Relational Database Service (Amazon RDS) for Db2 now allows customers to directly join their RDS for Db2 DB instances to the domains of self-managed Microsoft Active Directory (AD). Self-managed AD can be on-premises, on AWS, or in another cloud. Customers use Kerberos as the authentication protocol to enable single sign-on for their database users.\n  Previously, to use Kerberos authentication against a self-managed AD with their RDS for Db2 instances, customers were required to deploy AWS Managed Microsoft AD and establish a trust between the AWS managed domain and the self-managed domain. Now, customers can use their existing self-managed AD directly to authenticate and authorize database users without the additional complexity of a managed directory or a directory trust — helping them meet compliance requirements with their existing identity infrastructure. Customers can domain-join their RDS for Db2 instance by either creating a new instance or modifying an existing one, supplying the credentials of a delegated AD service account stored in AWS Secrets Manager and encrypted with AWS KMS. Customers can use self-managed AD free of charge.\n  Self-managed Active Directory with Amazon RDS for Db2 is now generally available in all AWS Regions where Amazon RDS for Db2 is available, including the AWS GovCloud (US) Regions.\n  To learn more and get started with self-managed Active Directory, visit the Amazon RDS for Db2 User Guide and the Amazon RDS for Db2 product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-db2-supports-self-managed-active-directory",
+      "pubDate": "2026-07-01T07:28:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds",
+        "secrets manager"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "secrets manager",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8429a05c32bd",
+      "title": "AWS announces AWS Interconnect - last mile new partner with AT&T in gated preview",
+      "description": "AWS launches AWS Interconnect - last mile, a fully managed connectivity offering that allows customers to connect their branch offices, data centers, and remote locations to AWS with just a few clicks, eliminating the friction and complexity of network setup. Now with AT&T in gated preview, AWS Interconnect - last mile combines AWS cloud innovation with AT&T’s extensive network footprint to redefine how businesses connect to the cloud.\n \nCustomers can instantly establish private, high-speed connections to AWS by simply choosing their preferred AWS Region, bandwidth speed, Direct Connect Gateway ID and partner subscriber ID. Once initiated, AWS generates an activation key to complete provisioning with AT&T. The launch simplifies the connectivity experience by pre-provisioning capacity and automating complex network configuration including BGP peering, VLAN configuration, and ASN assignment. Customers can benefit from zero down-time maintenance. The service is designed for high availability and backed by SLA.\n \nAWS Interconnect - last mile is available as a gated preview with AT&T for customers in the US starting today. Partners can also easily adopt via a published open API package on GitHub. For more information, see the AWS Interconnect - last mile documentation and request access here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-announces-AWS-interconnect-last-mile-ATT-gated-preview/",
+      "pubDate": "2026-06-30T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "nova",
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "nova",
+        "lex",
+        "launch",
+        "preview",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-865aceb50eff",
       "title": "Amazon GameLift Servers announces DDoS Protection client SDKs for C# and Unity",
@@ -41,28 +108,6 @@
         "redshift",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-fc1ac20a742f",
-      "title": "Amazon GameLift Servers adds new container fleet improvements",
-      "description": "Amazon GameLift Servers now supports two significant container fleet improvements that enhance flexibility and inter-container communication for game server deployments. These new capabilities address common challenges faced by game developers using containerized architectures, providing greater control over container permissions and enabling seamless discovery of co-located containers on the same instance.\n \nYou can now customize Linux capabilities for containers in your container group definitions, giving you finer control beyond Docker's default capability set. This is particularly valuable for game servers requiring specialized capabilities such as NET_RAW for custom networking protocols or SYS_PTRACE for attaching debuggers and profiling tools. Additionally, game servers can now call the new ListContainersNetworkInfo() server SDK action to retrieve comprehensive network information, including container name, ID, local IP address, and container group type for all containers running on the same instance. This enables automatic service discovery and simplified communication between game servers and auxiliary services like metrics collectors, logging agents, or caching systems.\n \nThese improvements are available through the Amazon GameLift Servers console, AWS CLI, AWS SDK, and AWS CloudFormation. The ListContainersNetworkInfo() action is supported in server SDK 5.x for Go, C++, and C#, as well as in plugins for Unreal Engine and Unity. Both features are available in all AWS regions where Amazon GameLift Servers is supported, except China. To learn more, visit the Amazon GameLift Servers documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-gamelift-servers-container-fleet-improvements",
-      "pubDate": "2026-06-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "cloudformation"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "cloudformation",
-        "ga",
-        "improvement",
-        "support"
       ]
     },
     {

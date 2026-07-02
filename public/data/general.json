@@ -1,8 +1,160 @@
 {
-  "lastUpdated": "2026-07-01T09:25:27.247Z",
+  "lastUpdated": "2026-07-02T08:38:36.236Z",
   "category": "general",
-  "totalItems": 36,
+  "totalItems": 40,
   "items": [
+    {
+      "id": "aws-news-80dbf43ac41b",
+      "title": "Amazon CloudWatch supports creating alarms from log queries",
+      "description": "Amazon CloudWatch allows you to create alarms on log data using log queries, and get alerted on anomalies without leaving your log analysis workflow.\n \nWith today's launch, you can configure an alarm on log query and specify the alarm threshold directly, thereby eliminating the need to first create metric filters or custom metrics as intermediate steps. This streamlines the path to actively monitoring the data in your logs, and monitoring and alerting on it. For example, you can write a query to count error rates by service, set a threshold, and receive an alarm notification with log context when errors spike - all in a single workflow. Alarms created from log queries support all standard CloudWatch Alarm actions, including Amazon SNS notifications, and Amazon EventBridge integrations.\n \nThis feature is available in all commercial AWS Regions except Middle East (UAE), and Middle East (Bahrain). You can create log query-based alarms using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS CloudFormation, and AWS SDKs. For pricing details and documentation, see the Amazon CloudWatch pricing and visit the Amazon CloudWatch documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-cloudwatch-log-alarms/",
+      "pubDate": "2026-07-01T21:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "eventbridge",
+        "sns",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "eventbridge",
+        "sns",
+        "cloudwatch",
+        "launch",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-514e974707f9",
+      "title": "ECS Service Connect now supports Zone-Aware routing",
+      "description": "Amazon Elastic Container Service (Amazon ECS) introduces zone-aware routing for ECS Service Connect, enabling customers to reduce cross Availability Zone (AZ) data transfer costs and latency by automatically prioritizing service-to-service traffic within the same AZ.\n  With this launch, ECS Service Connect preferentially routes requests to endpoints in the same AZ as the originating task while dynamically adjusting traffic weights as endpoints scale to maintain balanced load across target services. Previously, as customers distributed their applications across AZs for resiliency, service-to-service traffic led to significant cross-zone data transfer, requiring trade-offs between cost and resilience. Zone-aware routing eliminates this trade-off, and when local endpoints become unhealthy or fall below capacity thresholds, traffic automatically redistributes across healthy AZs to maintain availability without overloading any single zones.\n  Zone-aware routing is enabled by default for all new and existing services and requires no additional infrastructure or application code changes. Existing services require a one-time redeployment to enable the new routing behavior. You can use Amazon VPC Flow Logs with AZ metadata to monitor cross-AZ traffic patterns and validate routing effectiveness. This feature is available in all AWS commercial and AWS GovCloud (US) Regions, where ECS Service Connect is supported at no additional cost. For more details, refer to our documentation and launch blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ecs-service-connect-zone-aware/",
+      "pubDate": "2026-07-01T21:28:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f8b6b70cbf05",
+      "title": "Amazon ECS now provides real-time deployment observability in the AWS Management Console",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now provides real-time deployment observability in the Amazon ECS Console. With this launch, customers can track deployment progress, monitor deployment health, and diagnose failures directly from the console, and understand exactly what is happening during a deployment, identify issues as they occur, and reduce the time it takes to troubleshoot and resolve deployment failures.\n \nThe enhanced deployment observability introduces a live deployment timeline that shows each phase, service events, and task launch and termination progress with automatic refresh. You can monitor deployment health in real time using circuit breaker status with live task failure proximity and threshold tracking, deployment alarm state, and health checks at both the container and load-balancer level. To diagnose deployment failures faster, you can view failed tasks directly in the deployment timeline with diagnostic context and deep links to related services such as AWS CloudTrail, reducing the need to navigate across multiple tools to pinpoint the root cause of a failure.\n \nThese capabilities are available at no additional charge in all AWS commercial Regions, and AWS GovCloud (US) Regions for all Amazon ECS services using the rolling update deployment type. To get started, navigate to any Amazon ECS service in the Amazon ECS Console and select the Deployments tab.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-aws-management-console/",
+      "pubDate": "2026-07-01T20:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "launch",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-2021ca36240d",
+      "title": "Amazon RDS announces Cross-Region Automated Backups in four additional AWS Regions",
+      "description": "Cross-Region Automated Backup replication for Amazon RDS is now available in four additional AWS Regions. This launch allows you to setup automated backup replication between Mexico (Central) and Europe (Ireland) or US West (N. California); between Asia Pacific (Taipei) and Asia Pacific (Singapore) or Asia Pacific (Tokyo); between Asia Pacific (New Zealand) and Asia Pacific (Singapore), Asia Pacific (Sydney), or Asia Pacific (Melbourne); and between Asia Pacific (Thailand) and Asia Pacific (Singapore) or Asia Pacific (Jakarta) Regions.\n \nAutomated Backups enable recovery capability for mission-critical databases by providing you the ability to restore your database to a specific point in time within your backup retention period. With Cross-Region Automated Backup replication, RDS will replicate snapshots and transaction logs to the chosen destination AWS Region. In the event that your primary AWS Region becomes unavailable, you can restore the automated backup to a point in time in the secondary AWS Region and quickly resume operations. As transaction logs are uploaded to the target AWS Region frequently, you can achieve a Recovery Point Objective (RPO) of within the last few minutes.\n \nYou can setup Cross-Region Automated Backup replication with just a few clicks on the Amazon RDS Management Console or using the AWS SDK or CLI. Cross-Region Automated Backup replication is available on Amazon RDS for PostgreSQL, Amazon RDS for MariaDB, Amazon RDS for MySQL, Amazon RDS for Db2, Amazon RDS for Oracle, and Amazon RDS for Microsoft SQL Server. For more information, including instructions on getting started, read the Amazon RDS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
+      "pubDate": "2026-07-01T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-0d6fbbdaca40",
+      "title": "Amazon ECS now supports configurable deployment circuit breaker settings",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now gives you more control over when a service deployment is considered failed and automatically rolled back. You can now customize deployment circuit breaker settings to match your application's startup behavior, deployment needs, and tolerance for task failures, so rollback works the way you need across different applications and environments.\n  The ECS deployment circuit breaker automatically detects failed deployments and rolls them back to the last successful deployment once a failure threshold is reached. With this launch, you can set the deployment circuit breaker threshold using either a fixed task failure count or a percentage of your service's desired task count, and choose how failures are counted using either a consecutive model, where the counter resets when a healthy task starts, or a cumulative model, where failures keep adding up throughout the deployment. For example, you can set lower thresholds for faster rollbacks in development and test environments, or allow more tolerance for applications that experience expected startup failures before stabilizing.\n  This feature is available in all AWS Regions where Amazon ECS is available. You can configure deployment circuit breaker settings for new and existing ECS services using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, AWS CDK, and Terraform. To learn more, see the ECS deployment circuit breaker documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-circuit-breaker-settings/",
+      "pubDate": "2026-07-01T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudformation",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4de36c672ed4",
+      "title": "AWS AppConfig launches managed experimentation tools for A/B testing",
+      "description": "Today, AWS announces the general availability of experimentation tools in AWS AppConfig, a new capability that enables you to run A/B tests and feature experiments without building or managing separate experimentation infrastructure. Built on 25+ years of Amazon experimentation best practices, AWS AppConfig experimentation tools use AI-driven guidance to help you build robust experiments while providing exposure control and locked treatment allocations so you can make confident, data-driven decisions about what to ship to your customers.\n \nUsing AWS AppConfig experimentation tools, you can run A/B tests and multivariate experiments across your application stack, from UI changes and recommendation algorithms to AI model selections and prompt experiments. Define feature variations, target granular audiences using a rule builder, and set traffic allocation percentages through the AWS Management Console, CLI, API, or AWS CDK. AI-assisted experiment design can validate your setup against Amazon's best practices, helping you build experiments with sufficient statistical power. Customers set up and run the experiment in AWS AppConfig, and then analyze results using Amazon CloudWatch or existing analytics tools. At the end of the experiment, you promote the winning treatment to production through a standard AWS AppConfig safe rollout. Experiments work across workloads on Amazon EC2, AWS Lambda, Amazon ECS, Amazon EKS, and on-premises servers through AWS AppConfig Agent.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/6/aws-appconfig-experimentation/",
+      "pubDate": "2026-07-01T16:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "ecs",
+        "eks",
+        "cloudwatch",
+        "launch",
+        "ga",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-c703c0c51b40",
+      "title": "Amazon EKS now supports Kubernetes version rollback",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports Kubernetes version rollback, enabling you to revert to the previous Kubernetes minor version within 7 days if any issues arise after an upgrade. This provides an additional safety net for your upgrade workflow, allowing you to validate the new version under real production conditions and rollback if needed.\n  You can initiate a rollback using the Amazon EKS console, AWS CLI, or AWS SDKs. Before proceeding, Amazon EKS evaluates your cluster rollback readiness insights that include automated checks covering API compatibility, version skew, add-on compatibility, cluster health, and more. For clusters running EKS Auto Mode, EKS automatically manages the rollback of worker nodes before reverting the control plane, honoring your configured disruption controls.\n  Amazon EKS version rollback is available at no additional cost in all AWS Regions where Amazon EKS is available. To get started, see version rollback in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-version-rollback",
+      "pubDate": "2026-07-01T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-e401a8c8d84b",
       "title": "Amazon CloudWatch Logs enriches log events with AWS resource tags",
@@ -437,73 +589,6 @@
         "kafka",
         "msk",
         "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2df0530772e7",
-      "title": "Amazon SNS now supports sending SMS in the Asia Pacific (Seoul) Region",
-      "description": "Customers that use Amazon Simple Notification Service (Amazon SNS) in the Asia Pacific (Seoul) Region can now send text messages (SMS) to subscribers in more than 200 countries and territories.\n \nAmazon SNS is a fully managed pub/sub messaging service that enables message delivery to multiple endpoints including AWS Lambda, Amazon SQS, Amazon Data Firehose, mobile devices, and email. With this launch, customers using SNS in the Asia Pacific (Seoul) Region can subscribe phone numbers to SNS topics and broadcast SMS messages via AWS End User Messaging. \n \nTo learn more about sending SMS messages with SNS, visit Mobile text messaging with Amazon SNS. For the list of supported countries and regions, visit Supported countries and regions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sns-supports-sending-sms-seoul-region/",
-      "pubDate": "2026-06-18T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "sns",
-        "sqs",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9c80e6ed91fe",
-      "title": "AWS HealthOmics now streams workflow engine logs to Amazon CloudWatch in real time",
-      "description": "AWS HealthOmics now streams workflow engine logs to Amazon CloudWatch in real time, enabling customers to monitor workflow execution progress as it happens. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n \nReal-time engine log streaming accelerates iterative workflow development and debugging by giving researchers, bioinformaticians, and workflow developers immediate access to execution details during a run. The streamed engine logs provide visibility into workflow orchestration events, task scheduling details, import/export activity, and full stack traces on errors — all routed into the engine log stream in real time. Customers can set up CloudWatch alarms on log patterns to detect anomalies early, build dashboards for ongoing monitoring, and integrate with existing observability tooling.\n \nReal-time engine log streaming is now available for Nextflow, WDL, and CWL workflow runs in all AWS HealthOmics regions: US East (N. Virginia), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Singapore, Seoul). To learn more, visit the Monitoring HealthOmics with CloudWatch Logs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-healthomics-real-time-engine-log-streaming/",
-      "pubDate": "2026-06-17T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-720c4550cee6",
-      "title": "Amazon RDS for PostgreSQL, MySQL, and MariaDB now supports M9g database instances",
-      "description": "AWS Graviton5-based M9g database (DB) instances are now generally available for Amazon Relational Database Service (RDS) for PostgreSQL, MySQL, and MariaDB. Graviton5-based instances provide up to a 30% performance improvement and up to a 23% price/performance improvement for on-demand pricing over Graviton4-based instances of equivalent sizes on Amazon RDS open source databases, depending on database engine, version, and workload.\n  AWS Graviton5 processors are the latest generation of custom-designed AWS Graviton processors built on the AWS Nitro System. M9g DB instances are available with new 24xlarge and 48xlarge sizes. With these new sizes, M9g DB instances offer up to 192 vCPU, up to 100Gbps enhanced networking bandwidth, and up to 72Gbps of bandwidth to the Amazon Elastic Block Store (Amazon EBS).\n  These instances are now available in the US East (N. Virginia, Ohio), US West (Oregon), and Europe (Frankfurt) Regions. For complete information on pricing and regional availability, please refer to the Amazon RDS pricing page. For information on specific engine versions that support these DB instance types, please see the Amazon RDS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-postgresql-mysql-mariadb-m9g-instances/",
-      "pubDate": "2026-06-17T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "graviton",
-        "generally-available",
-        "now-available",
-        "improvement",
         "support"
       ]
     },
