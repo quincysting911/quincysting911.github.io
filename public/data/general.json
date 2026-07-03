@@ -1,8 +1,26 @@
 {
-  "lastUpdated": "2026-07-02T08:38:36.236Z",
+  "lastUpdated": "2026-07-03T08:44:38.713Z",
   "category": "general",
   "totalItems": 40,
   "items": [
+    {
+      "id": "aws-news-fcf15f47da06",
+      "title": "Amazon EC2 X8i instances are now available in additional regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8i instances are available in the Asia Pacific (Seoul), Asia Pacific (Malaysia) and Asia Pacific (Tokyo) regions. These instances are powered by custom Intel Xeon 6 processors available only on AWS. X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. They deliver up to 43% higher performance, 1.5x more memory capacity (up to 6TB), and 3.3x more memory bandwidth compared to previous generation X2i instances.\n  X8i instances are designed for memory-intensive workloads like SAP HANA, large databases, data analytics, and Electronic Design Automation (EDA). Compared to X2i instances, X8i instances offer up to 50% higher SAPS performance, up to 47% faster PostgreSQL performance, 88% faster Memcached performance, and 46% faster AI inference performance. X8i instances come in 14 sizes, from large to 96xlarge, including two bare metal options.\n  To get started, visit the AWS Management Console. X8i instances can be purchased via Savings Plans, On-Demand instances, and Spot instances. For more information visit X8i instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-x8i-instances-ICN-KUL-NRT-region/",
+      "pubDate": "2026-07-02T20:48:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-80dbf43ac41b",
       "title": "Amazon CloudWatch supports creating alarms from log queries",
@@ -30,25 +48,6 @@
       ]
     },
     {
-      "id": "aws-news-514e974707f9",
-      "title": "ECS Service Connect now supports Zone-Aware routing",
-      "description": "Amazon Elastic Container Service (Amazon ECS) introduces zone-aware routing for ECS Service Connect, enabling customers to reduce cross Availability Zone (AZ) data transfer costs and latency by automatically prioritizing service-to-service traffic within the same AZ.\n  With this launch, ECS Service Connect preferentially routes requests to endpoints in the same AZ as the originating task while dynamically adjusting traffic weights as endpoints scale to maintain balanced load across target services. Previously, as customers distributed their applications across AZs for resiliency, service-to-service traffic led to significant cross-zone data transfer, requiring trade-offs between cost and resilience. Zone-aware routing eliminates this trade-off, and when local endpoints become unhealthy or fall below capacity thresholds, traffic automatically redistributes across healthy AZs to maintain availability without overloading any single zones.\n  Zone-aware routing is enabled by default for all new and existing services and requires no additional infrastructure or application code changes. Existing services require a one-time redeployment to enable the new routing behavior. You can use Amazon VPC Flow Logs with AZ metadata to monitor cross-AZ traffic patterns and validate routing effectiveness. This feature is available in all AWS commercial and AWS GovCloud (US) Regions, where ECS Service Connect is supported at no additional cost. For more details, refer to our documentation and launch blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ecs-service-connect-zone-aware/",
-      "pubDate": "2026-07-01T21:28:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ecs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ecs",
-        "launch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-f8b6b70cbf05",
       "title": "Amazon ECS now provides real-time deployment observability in the AWS Management Console",
       "description": "Amazon Elastic Container Service (Amazon ECS) now provides real-time deployment observability in the Amazon ECS Console. With this launch, customers can track deployment progress, monitor deployment health, and diagnose failures directly from the console, and understand exactly what is happening during a deployment, identify issues as they occur, and reduce the time it takes to troubleshoot and resolve deployment failures.\n \nThe enhanced deployment observability introduces a live deployment timeline that shows each phase, service events, and task launch and termination progress with automatic refresh. You can monitor deployment health in real time using circuit breaker status with live task failure proximity and threshold tracking, deployment alarm state, and health checks at both the container and load-balancer level. To diagnose deployment failures faster, you can view failed tasks directly in the deployment timeline with diagnostic context and deep links to related services such as AWS CloudTrail, reducing the need to navigate across multiple tools to pinpoint the root cause of a failure.\n \nThese capabilities are available at no additional charge in all AWS commercial Regions, and AWS GovCloud (US) Regions for all Amazon ECS services using the rolling update deployment type. To get started, navigate to any Amazon ECS service in the Amazon ECS Console and select the Deployments tab.",
@@ -66,26 +65,6 @@
         "launch",
         "ga",
         "update"
-      ]
-    },
-    {
-      "id": "aws-news-2021ca36240d",
-      "title": "Amazon RDS announces Cross-Region Automated Backups in four additional AWS Regions",
-      "description": "Cross-Region Automated Backup replication for Amazon RDS is now available in four additional AWS Regions. This launch allows you to setup automated backup replication between Mexico (Central) and Europe (Ireland) or US West (N. California); between Asia Pacific (Taipei) and Asia Pacific (Singapore) or Asia Pacific (Tokyo); between Asia Pacific (New Zealand) and Asia Pacific (Singapore), Asia Pacific (Sydney), or Asia Pacific (Melbourne); and between Asia Pacific (Thailand) and Asia Pacific (Singapore) or Asia Pacific (Jakarta) Regions.\n \nAutomated Backups enable recovery capability for mission-critical databases by providing you the ability to restore your database to a specific point in time within your backup retention period. With Cross-Region Automated Backup replication, RDS will replicate snapshots and transaction logs to the chosen destination AWS Region. In the event that your primary AWS Region becomes unavailable, you can restore the automated backup to a point in time in the secondary AWS Region and quickly resume operations. As transaction logs are uploaded to the target AWS Region frequently, you can achieve a Recovery Point Objective (RPO) of within the last few minutes.\n \nYou can setup Cross-Region Automated Backup replication with just a few clicks on the Amazon RDS Management Console or using the AWS SDK or CLI. Cross-Region Automated Backup replication is available on Amazon RDS for PostgreSQL, Amazon RDS for MariaDB, Amazon RDS for MySQL, Amazon RDS for Db2, Amazon RDS for Oracle, and Amazon RDS for Microsoft SQL Server. For more information, including instructions on getting started, read the Amazon RDS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
-      "pubDate": "2026-07-01T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "ga",
-        "now-available"
       ]
     },
     {
@@ -107,6 +86,26 @@
         "cloudformation",
         "launch",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-2021ca36240d",
+      "title": "Amazon RDS announces Cross-Region Automated Backups in four additional AWS Regions",
+      "description": "Cross-Region Automated Backup replication for Amazon RDS is now available in four additional AWS Regions. This launch allows you to setup automated backup replication between Mexico (Central) and Europe (Ireland) or US West (N. California); between Asia Pacific (Taipei) and Asia Pacific (Singapore) or Asia Pacific (Tokyo); between Asia Pacific (New Zealand) and Asia Pacific (Singapore), Asia Pacific (Sydney), or Asia Pacific (Melbourne); and between Asia Pacific (Thailand) and Asia Pacific (Singapore) or Asia Pacific (Jakarta) Regions.\n \nAutomated Backups enable recovery capability for mission-critical databases by providing you the ability to restore your database to a specific point in time within your backup retention period. With Cross-Region Automated Backup replication, RDS will replicate snapshots and transaction logs to the chosen destination AWS Region. In the event that your primary AWS Region becomes unavailable, you can restore the automated backup to a point in time in the secondary AWS Region and quickly resume operations. As transaction logs are uploaded to the target AWS Region frequently, you can achieve a Recovery Point Objective (RPO) of within the last few minutes.\n \nYou can setup Cross-Region Automated Backup replication with just a few clicks on the Amazon RDS Management Console or using the AWS SDK or CLI. Cross-Region Automated Backup replication is available on Amazon RDS for PostgreSQL, Amazon RDS for MariaDB, Amazon RDS for MySQL, Amazon RDS for Db2, Amazon RDS for Oracle, and Amazon RDS for Microsoft SQL Server. For more information, including instructions on getting started, read the Amazon RDS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
+      "pubDate": "2026-07-01T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "ga",
+        "now-available"
       ]
     },
     {
