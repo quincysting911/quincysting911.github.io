@@ -1,8 +1,44 @@
 {
-  "lastUpdated": "2026-07-06T09:51:13.042Z",
+  "lastUpdated": "2026-07-07T09:19:44.810Z",
   "category": "generative-ai",
-  "totalItems": 50,
+  "totalItems": 45,
   "items": [
+    {
+      "id": "aws-news-0c7586f82904",
+      "title": "Run MiniMax models on Amazon Bedrock",
+      "description": "In this post, we walk through how to get started with MiniMax models on Amazon Bedrock, including the capabilities supported by these models, the service tiers available, how on-demand inference scales to handle your workloads, and the different APIs you can use to access them. Using these models, customers can build agentic applications, long-context document analysis pipelines, and software engineering workflows, all backed by the security and operational guarantees of AWS.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/",
+      "pubDate": "2026-07-06T17:00:44.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-127d228187e1",
+      "title": "Uncover new performance insights using Amazon detailed performance statistics on Windows",
+      "description": "The primary storage solutions for EC2 Windows instances, Amazon EC2 Instance Store and Amazon Elastic Block Store (Amazon EBS) , now provide detailed performance statistics for real-time monitoring. Real-time monitoring enables you to gain visibility into key performance metrics, such as latency, throughput, and IOPS, allowing you to detect and address potential bottlenecks or issues […]",
+      "link": "https://aws.amazon.com/blogs/compute/uncover-new-performance-insights-using-amazon-detailed-performance-statistics-on-windows/",
+      "pubDate": "2026-07-06T17:00:08.000Z",
+      "source": "computeBlog",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-a71e276120cb",
       "title": "How Amazon Bedrock catches AI-generated phishing",
@@ -339,23 +375,6 @@
       ]
     },
     {
-      "id": "aws-news-17ba60bcf469",
-      "title": "Building bilingual NER for cargo logistics with Amazon Bedrock",
-      "description": "In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the Amazon Bedrock knowledge distillation capabilities.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/",
-      "pubDate": "2026-06-30T16:33:46.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-8a0d19126d3d",
       "title": "Amazon SageMaker AI cuts generative AI inference scale-out time by up to half with automatic container image caching",
       "description": "Amazon SageMaker Inference now supports container image caching, enabling up to 2x faster end-to-end scaling for generative AI models during scale-out events. When your endpoint scales out, the service pre-caches your container image so new instances can start serving traffic faster, without waiting for large container images to be pulled from Amazon ECR.\n  Generative AI workloads typically use large container images (10 GB or more) for deep learning frameworks and model serving. Previously, every new instance launched during scale-out had to pull the full image from ECR, adding several minutes of cold-start latency. Container image caching eliminates this bottleneck by pre-pulling the image so new instances launch with the container already available locally. Customers don't need to make any changes. The service automatically caches whatever image URI is specified in your endpoint or inference component configuration. This capability supports accelerator instance types, single-model endpoints, and inference component-based endpoints.\n  With this launch, SageMaker Inference now offers a comprehensive scaling optimization suite for generative AI: sub-minute concurrency metrics for up to 6x faster load detection, instance-store container caching for faster scaling on existing instances, and container image caching for up to 2x faster scaling on new instances.\n  Container image caching is available in all AWS commercial regions where SageMaker Inference is supported. To learn more, visit the launch blog.",
@@ -371,6 +390,25 @@
       "tags": [
         "sagemaker",
         "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6b659067de97",
+      "title": "CloudWatch Application Signals now supports Dynamic Instrumentation",
+      "description": "Today, AWS announces Dynamic Instrumentation for Amazon CloudWatch Application Signals, a capability that captures runtime state from live applications without requiring restarts or redeployments. Developers debugging production issues can now inspect variable values, method arguments, return values, and stack traces at specific code locations. Dynamic Instrumentation eliminates the need to add logging statements, redeploy, and wait to reproduce a problem, making it practical to investigate issues that are difficult to replicate locally.\n \nCustomers start by instrumenting their application with the AWS Distro for OpenTelemetry (ADOT) SDKs. Customers then configure which code locations to monitor using the CloudWatch Application Signals MCP server or manually via the AWS CLI and SDK. When execution reaches an instrumented location, the agent captures a snapshot containing the runtime context and delivers it to CloudWatch Logs, correlated with the active trace. Customers can tune how much data to capture, including which arguments and local variables to collect.\n \nDynamic Instrumentation is available in all commercial AWS regions. Supported languages are Java, Python, and JavaScript/TypeScript. The feature is disabled by default in the ADOT SDKs and must be enabled via a flag, see documentation for more.\n \nTo learn more, see Debug applications with Dynamic Instrumentation in the Amazon CloudWatch User Guide. Dynamic instrumentation data is captured as logs. Standard CloudWatch Logs ingestion and storage rates apply. For details, see CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-dynamic-instrumentation/",
+      "pubDate": "2026-06-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga",
         "support"
       ]
     },
@@ -467,40 +505,6 @@
         "launch",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-ed62f8b2f77d",
-      "title": "Implement a backup strategy for Amazon Quick Sight BI assets",
-      "description": "In this post, we cover best practices for implementing an effective backup strategy for BI assets in Quick Sight. We start by covering the options for selecting the assets to include in your backup, then explain the high-level APIs available for that purpose, and finalize with sample code to help you get started quickly.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/",
-      "pubDate": "2026-06-29T18:15:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q"
-      ]
-    },
-    {
-      "id": "aws-news-f265e50944b7",
-      "title": "Multi-tenant LLM analytics with row-level security: How we built a secure agent on AWS",
-      "description": "In this post, we show you how PAR built a production-ready multi-tenant LLM analytics system that enforces row-level security through a three-layer architecture: cryptographic request signing with AWS SigV4, semantic validation on Amazon Bedrock, and programmatic data isolation via Split-Plane SQL. We demonstrate how each layer operates independently to reduce the risk of cross-tenant data exposure, even when the LLM itself is compromised or manipulated.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/multi-tenant-llm-analytics-with-row-level-security-how-we-built-a-secure-agent-on-aws/",
-      "pubDate": "2026-06-29T17:39:29.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -771,110 +775,6 @@
         "opensearch",
         "opensearch service",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f5d37b207e9f",
-      "title": "Amazon MSK now offers AI Agent Skills to help developers operate MSK efficiently and accelerate migrations to MSK",
-      "description": "Amazon MSK now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for operating Amazon MSK. The skills provide expert guidance for common operational tasks such as troubleshooting, sizing, configuring, monitoring, and migration from external Kafka clusters.\n  Teams can leverage these skills to keep their clusters healthy and performant, and to migrate their external Kafka workloads to MSK Express to take advantage of up to 3 times more throughput per broker, scale up to 20 times faster, and reduced recovery time by 90 percent as compared to Standard brokers running Apache Kafka. The skills turn tasks that once required specialized knowledge into a guided experience developers can complete quickly, on their own.\n  You can use the MSK skills with your existing AI coding agent - Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"What broker type and size should I use for my MSK cluster?\" or \"Is my Kafka cluster compatible with MSK Express?\"",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-ai-agent-skills",
-      "pubDate": "2026-06-22T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "kafka",
-        "msk"
-      ]
-    },
-    {
-      "id": "aws-news-97dd31c2fcc4",
-      "title": "Announcing the general availability of a new AWS Local Zone in Hanoi, Vietnam",
-      "description": "Today, AWS announces the general availability of a new Local Zone in Hanoi, Vietnam, bringing AWS infrastructure closer to end users. This new Local Zone is one of the first AWS Local Zones in the Asia Pacific with support for Amazon Simple Storage Service (Amazon S3) and Amazon Elastic Block Store (Amazon EBS) Local Snapshots, enabling customers to meet data residency requirements by storing and backing up data locally.\n \nAWS Local Zones are AWS infrastructure deployments that extend core services, such as compute, storage, networking, and other select services, closer to metropolitan areas worldwide. AWS Local Zones help you achieve single-digit millisecond latency for end-user workloads, meet data residency requirements, support AI/ML inference workloads, and accelerate migration and modernization of legacy applications to the cloud, all while maintaining consistent AWS APIs, tools, and services as AWS Regions. AWS Local Zones are available in more than 30 metropolitan areas worldwide. \n \nThe Hanoi Local Zone supports Amazon Elastic Compute Cloud (Amazon EC2) with C7i, M7i, and R7i instances, Amazon S3 with the One Zone-Infrequent Access storage class, Amazon EBS with Local Snapshots and volume types gp3, gp2, io1, sc1, and st1, Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Virtual Private Cloud (Amazon VPC), AWS Direct Connect, and Application Load Balancer. \n \nTo get started, enable the Hanoi Local Zone (ap-southeast-1-han-1a) from the Regions and Zones tab in the AWS Global View or by using the ModifyAvailabilityZoneGroup API. For pricing information, visit the AWS Local Zones pricing page. To learn more, visit the AWS Local Zones overview page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-local-zones-hanoi-vietnam/",
-      "pubDate": "2026-06-19T01:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "ec2",
-        "ecs",
-        "eks"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "ec2",
-        "ecs",
-        "eks",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ef5cf5b2147c",
-      "title": "Amazon CloudWatch Synthetics now supports multilocation canaries",
-      "description": "Today, Amazon CloudWatch Synthetics announces support for multilocation canaries, allowing developers and site reliability engineers to run the same canary across multiple AWS Regions simultaneously from a single point of management. Previously, monitoring application availability from multiple geographic locations required creating and managing separate canaries in each Region, adding operational overhead and increasing the risk of configuration drift. With multilocation canaries, you create and manage a canary in one primary Region, and CloudWatch Synthetics automatically replicates it to the additional Regions you choose, consolidating all run data, metrics, and artifacts in the primary Region.\n \nMultilocation canaries help you ensure consistent user experience worldwide, identify region-specific performance bottlenecks, and validate that third-party dependencies like CDNs and payment processors work across all locations. Replica canaries run independently, giving you resilient monitoring coverage across geographic locations. You can also configure alarms that activate only when issues are detected from multiple locations, increasing alert confidence and helping your team focus on real customer-impacting problems. Amazon CloudWatch Synthetics multilocation canaries are available in all AWS commercial Regions that support CloudWatch Synthetics. You can upgrade existing single-region canaries to multilocation by adding replica Regions without recreating them. For more information about regional availability, see the AWS Region table.\n \nTo learn more about CloudWatch Synthetics, see Using synthetic monitoring in the Amazon CloudWatch User Guide. To get started, visit the Amazon CloudWatch product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-synthetics-multilocation/",
-      "pubDate": "2026-06-18T22:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-881716587a17",
-      "title": "Amazon MQ for RabbitMQ now supports private networking connectivity",
-      "description": "Amazon MQ for RabbitMQ now supports private networking, enabling your brokers to connect to private resources in your VPC without exposing those resources publicly.. This helps you meet your security and compliance requirements when your brokers need to reach private identity providers (such as LDAP and OAuth 2.0), other Amazon MQ for RabbitMQ brokers, or self-hosted RabbitMQ brokers. Previously, this connectivity for RabbitMQ Federation, Shovel, or authentication required Network Load Balancer and NAT Gateway workarounds.\n  Amazon MQ establishes this connectivity using Amazon VPC Lattice, AWS Resource Access Manager (AWS RAM), and AWS PrivateLink, and manages the underlying infrastructure on your behalf. To get started, create a VPC Lattice resource gateway, package your resource configurations into an AWS RAM resource share, and associate it with your broker.\n  Private networking is available only for Amazon MQ for RabbitMQ brokers, in all AWS Regions where Amazon VPC Lattice is available. To learn more, see Private networking in the Amazon MQ Developer Guide and the Amazon MQ pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-mq-private-network-connectivity/",
-      "pubDate": "2026-06-18T20:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "q developer"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "q developer",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4bb7079c8e94",
-      "title": "Building AI shopping agent using Amazon Bedrock AgentCore Runtime and Amazon OpenSearch Service",
-      "description": "In this post, we explore how to build an online shopping AI agent. We focus on its architecture and implementation with Amazon OpenSearch Service, Amazon Bedrock AgentCore, and Strands Agents. Amazon Bedrock AgentCore is an agentic platform for deploying and operating those agents and tools securely at scale without managing infrastructure.",
-      "link": "https://aws.amazon.com/blogs/big-data/building-ai-shopping-agent-using-amazon-bedrock-agentcore-runtime-and-amazon-opensearch-service/",
-      "pubDate": "2026-06-11T15:27:16.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "opensearch",
-        "opensearch service"
       ]
     },
     {

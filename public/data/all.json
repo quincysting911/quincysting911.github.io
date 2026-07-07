@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-07-06T09:51:13.042Z",
-  "totalItems": 193,
+  "lastUpdated": "2026-07-07T09:19:44.810Z",
+  "totalItems": 191,
   "sources": {
-    "whatsNew": 91,
+    "whatsNew": 89,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 19,
@@ -11,6 +11,305 @@
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-a39827bc77b1",
+      "title": "From Hugging Face to Amazon SageMaker Studio in one click",
+      "description": "Today, we’re excited to announce a deep-link integration between Hugging Face and Amazon SageMaker AI. Developers can now go from model discovery to hands-on experimentation in SageMaker Studio with a single selection.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/",
+      "pubDate": "2026-07-06T22:35:55.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-3b2a2fb82205",
+      "title": "Teaching models to forget: Selective unlearning with Amazon Nova",
+      "description": "In this post, we introduce Reverse Direct Preference Optimization (rDPO), the novel unlearning technique behind Amazon Nova Customizable Content Moderation Settings (CCMS), and show how it reduces over-deflection while preserving model quality. We also provide pointers for customers who want to apply these preference optimization techniques to their own experiments.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/teaching-models-to-forget-selective-unlearning-with-amazon-nova/",
+      "pubDate": "2026-07-06T22:23:45.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-75ff5f9f4e07",
+      "title": "Amazon SageMaker HyperPod now supports disaggregated prefill and decode",
+      "description": "Amazon SageMaker HyperPod now supports Disaggregated Prefill and Decode (DPD), an inference optimization that separates the two phases of large language model (LLM) inference — prefill and decode — onto dedicated GPU pools and transfers the key-value (KV) cache between them over Elastic Fabric Adapter (EFA) using GPU-Direct RDMA. Customers running LLMs in production for chat assistants, agentic pipelines, retrieval-augmented generation, and long-document analysis need consistent per-token latency and predictable throughput under mixed traffic, but when prefill and decode share the same GPU, a single long-context request can stall token generation for every concurrent request and force customers to over-provision one phase to protect the other.\n  With DPD, customers run compute-bound prefill on one set of GPUs and memory-bandwidth-bound decode on another, so the two phases no longer contend for the same resources. This delivers more consistent per-token latency under sustained concurrency, higher goodput at strict latency SLOs, and the ability to scale prefill and decode capacity independently to match the input and output distribution of the workload. An intelligent router automatically directs long-context requests through the disaggregated path and sends shorter prompts directly to the decoder, so customers get the benefit on the traffic that needs it without paying transfer overhead on short prompts. Customers enable DPD by adding a `pdSpec` section to the same `InferenceEndpointConfig` custom resource they already use for inference endpoints on the HyperPod Inference Operator, and DPD is composable with the existing KV cache offloading and intelligent routing features on HyperPod.\n  DPD is available for SageMaker HyperPod clusters using the EKS orchestrator on EFA-capable instance types in all AWS Regions where Amazon SageMaker HyperPod is available. To learn more, see Disaggregated Prefill and Decode for HyperPod inference in the Amazon SageMaker AI Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-sagemaker-hyperpod-dpd/",
+      "pubDate": "2026-07-06T21:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ae1d8af613dc",
+      "title": "Amazon SageMaker Studio now integrates with Hugging Face for one-click model deployment and customization",
+      "description": "Amazon SageMaker Studio now supports direct integration from Hugging Face, letting you go from discovering a model to working with it inside a fully configured Studio environment in a single click. Select any supported model on Hugging Face and choose \"Customize on SageMaker AI\" or \"Deploy on SageMaker AI\" to land directly on the corresponding workflow page with the model pre-loaded and ready to use.\n \nPreviously, getting from model discovery to a working environment required navigating the AWS Console to find SageMaker AI, configuring an environment, setting up IAM permissions for serverless model customization, and in many cases requesting GPU quota increases through Service Quotas before running a first job. Now, new customers complete a standard AWS sign-up and receive a SageMaker Studio environment created in seconds with pre-configured permissions for serverless model customization jobs including fine-tuning with custom reward functions for reinforcement learning, model evaluation, and deployment to SageMaker or Bedrock endpoints. Verified customers receive default GPU access to G5, G6, and G4dn instances across endpoint deployments, training jobs, and notebooks without requesting quota increases, and quota limit and utilization information is visible for each instance type directly inside the Studio environment. Returning customers signing in from Hugging Face or SageMaker product pages select their environment and land directly inside SageMaker Studio with the model ready to use.\n \nThis feature is available in all AWS Commercial Regions where Amazon SageMaker Studio is supported. To get started, visit any supported model on Hugging Face and select \"Customize on SageMaker AI\" or \"Deploy on SageMaker AI,\" or click Get Started from the SageMaker Studio page. To learn more, see Service quotas for Studio in the Amazon SageMaker documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/sagemaker-studio-hugging-face-integration/ ",
+      "pubDate": "2026-07-06T20:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "sagemaker",
+        "iam"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "sagemaker",
+        "iam",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6a3e8273da71",
+      "title": "Amazon EVS VCF 9.0 and 9.1 support",
+      "description": "Today, we are announcing that Amazon Elastic VMware Service (EVS) now supports VMware Cloud Foundation (VCF) 9.0 and 9.1.\n \nAmazon EVS lets you run the latest VCF software directly within your Amazon Virtual Private Cloud (VPC) on EC2 bare-metal instances. With this latest announcement, you now have complete control of the installation, operations, and management of the VMware virtualization solution running the VCF 9.0 and recently released VCF 9.1 versions. You can continue to use the same tools, processes, and skills on Amazon EVS that you use in your data center today, managing your VCF environment yourself or with an experienced AWS partner. With this, we’re also launching the Solutions for EVS GitHub repository with examples, templates, and infrastructure as code artifacts to help you get started.\n \nThis release is available in all regions where Amazon EVS is offered.\n \nFor more details, visit the launch blog, the Amazon EVS product detail page and user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-evs-vcf9",
+      "pubDate": "2026-07-06T17:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "support",
+        "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-0c7586f82904",
+      "title": "Run MiniMax models on Amazon Bedrock",
+      "description": "In this post, we walk through how to get started with MiniMax models on Amazon Bedrock, including the capabilities supported by these models, the service tiers available, how on-demand inference scales to handle your workloads, and the different APIs you can use to access them. Using these models, customers can build agentic applications, long-context document analysis pipelines, and software engineering workflows, all backed by the security and operational guarantees of AWS.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/",
+      "pubDate": "2026-07-06T17:00:44.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-127d228187e1",
+      "title": "Uncover new performance insights using Amazon detailed performance statistics on Windows",
+      "description": "The primary storage solutions for EC2 Windows instances, Amazon EC2 Instance Store and Amazon Elastic Block Store (Amazon EBS) , now provide detailed performance statistics for real-time monitoring. Real-time monitoring enables you to gain visibility into key performance metrics, such as latency, throughput, and IOPS, allowing you to detect and address potential bottlenecks or issues […]",
+      "link": "https://aws.amazon.com/blogs/compute/uncover-new-performance-insights-using-amazon-detailed-performance-statistics-on-windows/",
+      "pubDate": "2026-07-06T17:00:08.000Z",
+      "source": "computeBlog",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-bfaa4e55fb17",
+      "title": "Deploying Multi-Turn RL Infrastructure for Amazon Nova on Amazon SageMaker HyperPod",
+      "description": "In this post, you deploy a two-phase infrastructure for multi-turn RL using Amazon Nova Forge on Amazon SageMaker HyperPod. By the end, you have an event-driven pipeline that starts training when you upload data to Amazon Simple Storage Service (Amazon S3). The training job teaches the model to play Wordle, a placeholder for your own RL task.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/",
+      "pubDate": "2026-07-06T16:58:13.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova",
+        "sagemaker",
+        "hyperpod",
+        "s3"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "sagemaker",
+        "hyperpod",
+        "s3"
+      ]
+    },
+    {
+      "id": "aws-news-ba8d79876145",
+      "title": "Automatically redact PII in images with Amazon Nova",
+      "description": "In this post, we present a multi-step pipeline directed by Amazon Nova, which uses its contextual vision reasoning to coordinate complementary tools, including Meta’s open-source Segment Anything Model (SAM 3) deployed on Amazon SageMaker AI for pixel-level segmentation, and Amazon Textract for optical character recognition (OCR). This pipeline is designed to provide comprehensive and compliant PII redaction even for challenging edge cases such as fingerprints, ID cards, or license plates in arbitrary orientations.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/automatically-redact-pii-in-images-with-amazon-nova/",
+      "pubDate": "2026-07-06T16:55:02.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova",
+        "sagemaker",
+        "textract",
+        "rds"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova",
+        "sagemaker",
+        "textract",
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-d7e43ac8887f",
+      "title": "Streaming benchmark and recommendation results to MLflow with Amazon SageMaker AI",
+      "description": "In this post, you learn how to use the new MLflow integration with Amazon SageMaker AI optimized inference recommendation jobs and Amazon SageMaker AI benchmark jobs to automatically stream experiment data into a unified tracking interface. This integration streams metrics, parameters, and charts into your serverless Amazon SageMaker MLflow App in real time and you get a unified experiment tracking experience.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/streaming-benchmark-and-recommendation-results-to-mlflow-with-amazon-sagemaker-ai/",
+      "pubDate": "2026-07-06T16:53:38.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "integration"
+      ]
+    },
+    {
+      "id": "aws-news-c4087c24daf3",
+      "title": "How BigBasket uses the Iceberg based lakehouse architecture on AWS to power lightning-fast grocery delivery across India",
+      "description": "In this post, we demonstrate how BigBasket implemented the lakehouse architecture on AWS, including their architecture decisions, implementation approach, and the measurable business results you can expect from a similar modernization. Whether you’re facing scalability challenges or planning your own lakehouse implementation, this blueprint provides actionable insights you can adapt for your organization.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-bigbasket-uses-the-iceberg-based-lakehouse-architecture-on-aws-to-power-lightning-fast-grocery-delivery-across-india/",
+      "pubDate": "2026-07-06T16:50:17.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-b7983eb26316",
+      "title": "AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)",
+      "description": "A couple of editions ago I wrote about what I find so energizing about working with startups. Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving. One story that stayed with me came […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/",
+      "pubDate": "2026-07-06T15:46:43.000Z",
+      "source": "newsBlog",
+      "services": [],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-dccca72fd4ba",
+      "title": "AWS Certificate Manager now supports the ACME protocol for public certificates",
+      "description": "AWS Certificate Manager (ACM) now allows you to provision a fully managed ACME server endpoint that issues public TLS certificates with a 45 day validity from Amazon Trust Services using any ACMEv2-compatible client, including Certbot, cert-manager for Kubernetes, and acme.sh. With the CA/Browser Forum mandating 47-day certificate lifetimes by 2029, manual management of public certificates becomes untenable. ACME support in ACM gives developers a standards-based path to fully automate certificate issuance and renewal.\n  PKI administrators can create managed ACME endpoints with centralized governance controls: define domain scopes to restrict which certificates each client can issue, enforce policies on wildcard usage, and delegate certificate requests to application teams without distributing DNS credentials. Domain validation is performed once at the endpoint level, while application owners use standard ACME clients to request certificates. All activity is visible in the ACM console with AWS CloudTrail logging and Amazon CloudWatch metrics for auditability.\n  ACME support in ACM is available in all commercial AWS Regions. For pricing details, see the ACM pricing page. To get started, visit the AWS News blog post or read the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-certificate-manager-acme/",
+      "pubDate": "2026-07-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-94acc578ea52",
+      "title": "CloudWatch Application Signals now automatically captures errors, performance anomalies, and deployment events",
+      "description": "Today, AWS announces Service Events for Amazon CloudWatch Application Signals, which automatically captures exception and latency event snapshots, function-level performance data, and deployment events from instrumented services without additional code changes. Customers can now quickly identify whether a deployment has introduced new exceptions by navigating to CloudWatch > Application Signals > [Service] > Errors in the CloudWatch console.\n \nService Events is available to any application with CloudWatch Application Signals enabled. Customers instrument their applications with the ADOT SDKs or the Amazon CloudWatch Observability EKS add-on. Once Application Signals is active, Service Events begins capturing exception and latency event snapshots and deployment events automatically. Optionally, customers can gain deeper performance visibility by turning on function-call metrics.\n \nService Events is available in all commercial AWS Regions. Supported languages are Java, Python, and JavaScript.\n \nTo get started, see Monitor service events in the Amazon CloudWatch User Guide. Service Events data is captured as logs. Function call metrics are captured as OpenTelemetry metrics. Standard CloudWatch pricing applies. For details, see CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-service-events/",
+      "pubDate": "2026-07-06T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "cloudwatch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b5d7dc7bf3b9",
+      "title": "AWS CodePipeline now available in Asia Pacific (New Zealand) region",
+      "description": "Starting today, AWS CodePipeline is now available in Asia Pacific (New Zealand) Region (ap-southeast-6). AWS CodePipeline is a continuous delivery service that enables you to model, visualize, and automate the steps required to release your software. With CodePipeline, you model the full release process for building your code, deploying to pre-production environments, testing your application and releasing it to production. CodePipeline then builds, tests, and deploys your application according to the defined workflow every time there is a code change. You can integrate partner tools and your own custom tools into any stage of the release process to form an end-to-end continuous delivery solution.\n \nCodePipeline integrates natively with other AWS services (such as CodeBuild, CodeDeploy, and CloudFormation) and supports third-party integrations, such as GitHub or with your own custom plugin, offering a comprehensive solution for orchestrating end-to-end CI/CD pipelines. By integrating manual approval gates, IAM-based access controls, and encryption of artifacts at rest and in transit, CodePipeline helps teams enforce governance policies and maintain a robust security posture throughout the software delivery lifecycle. CodePipeline enables organizations to automate security scans and compliance checks directly within their CI/CD workflows, ensuring consistent and reliable validation against industry frameworks.\n \nTo get started, you can sign in to the AWS Management Console and create a pipeline to start using the service. If you want an introduction to CodePipeline, see Getting Started, which includes step-by-step tutorials.  With CodePipeline, you only pay for what you use. There are no upfront fees or long-term commitments. See the pricing page for additional details on CodePipeline.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-codepipeline-new-zealand/",
+      "pubDate": "2026-07-06T09:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "cloudformation",
+        "iam",
+        "organizations",
+        "ga",
+        "now-available",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-dfa3ddf2f619",
       "title": "Amazon SageMaker Unified Studio now supports Terraform for provisioning",
@@ -1129,36 +1428,6 @@
       ]
     },
     {
-      "id": "aws-news-3ae89aa9d53a",
-      "title": "How Outpost VFX Uses AWS to Accelerate AI Model Training for Visual Effects",
-      "description": "In this post, we explore how Outpost VFX achieved 8x faster training speeds using AWS infrastructure to transform their face replacement workflow, the technical architecture they implemented to overcome single-GPU limitations, and the measurable results achieved through AWS multi-GPU training.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/",
-      "pubDate": "2026-06-30T16:37:09.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-17ba60bcf469",
-      "title": "Building bilingual NER for cargo logistics with Amazon Bedrock",
-      "description": "In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the Amazon Bedrock knowledge distillation capabilities.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/",
-      "pubDate": "2026-06-30T16:33:46.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-8a0d19126d3d",
       "title": "Amazon SageMaker AI cuts generative AI inference scale-out time by up to half with automatic container image caching",
       "description": "Amazon SageMaker Inference now supports container image caching, enabling up to 2x faster end-to-end scaling for generative AI models during scale-out events. When your endpoint scales out, the service pre-caches your container image so new instances can start serving traffic faster, without waiting for large container images to be pulled from Amazon ECR.\n  Generative AI workloads typically use large container images (10 GB or more) for deep learning frameworks and model serving. Previously, every new instance launched during scale-out had to pull the full image from ECR, adding several minutes of cold-start latency. Container image caching eliminates this bottleneck by pre-pulling the image so new instances launch with the container already available locally. Customers don't need to make any changes. The service automatically caches whatever image URI is specified in your endpoint or inference component configuration. This capability supports accelerator instance types, single-model endpoints, and inference component-based endpoints.\n  With this launch, SageMaker Inference now offers a comprehensive scaling optimization suite for generative AI: sub-minute concurrency metrics for up to 6x faster load detection, instance-store container caching for faster scaling on existing instances, and container image caching for up to 2x faster scaling on new instances.\n  Container image caching is available in all AWS commercial regions where SageMaker Inference is supported. To learn more, visit the launch blog.",
@@ -1175,25 +1444,6 @@
         "sagemaker",
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-7587bb1a8a15",
-      "title": "Fine-tune Amazon Nova models for accurate email data extraction",
-      "description": "In this post, you'll learn how fine-tuning Amazon Nova models using Amazon SageMaker AI addresses these specific issues by teaching the models to recognize your exact data patterns, distinguish between similar fields, and process information more efficiently—achieving up to 94.77% extraction accuracy while reducing costs 50%.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/",
-      "pubDate": "2026-06-30T16:26:48.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "sagemaker"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "sagemaker"
       ]
     },
     {
@@ -1240,6 +1490,25 @@
         "iam identity center",
         "launch",
         "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6b659067de97",
+      "title": "CloudWatch Application Signals now supports Dynamic Instrumentation",
+      "description": "Today, AWS announces Dynamic Instrumentation for Amazon CloudWatch Application Signals, a capability that captures runtime state from live applications without requiring restarts or redeployments. Developers debugging production issues can now inspect variable values, method arguments, return values, and stack traces at specific code locations. Dynamic Instrumentation eliminates the need to add logging statements, redeploy, and wait to reproduce a problem, making it practical to investigate issues that are difficult to replicate locally.\n \nCustomers start by instrumenting their application with the AWS Distro for OpenTelemetry (ADOT) SDKs. Customers then configure which code locations to monitor using the CloudWatch Application Signals MCP server or manually via the AWS CLI and SDK. When execution reaches an instrumented location, the agent captures a snapshot containing the runtime context and delivers it to CloudWatch Logs, correlated with the active trace. Customers can tune how much data to capture, including which arguments and local variables to collect.\n \nDynamic Instrumentation is available in all commercial AWS regions. Supported languages are Java, Python, and JavaScript/TypeScript. The feature is disabled by default in the ADOT SDKs and must be enabled via a flag, see documentation for more.\n \nTo learn more, see Debug applications with Dynamic Instrumentation in the Amazon CloudWatch User Guide. Dynamic instrumentation data is captured as logs. Standard CloudWatch Logs ingestion and storage rates apply. For details, see CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-dynamic-instrumentation/",
+      "pubDate": "2026-06-30T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudwatch",
+        "ga",
+        "support"
       ]
     },
     {
@@ -1507,59 +1776,6 @@
         "enhancement",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-ed62f8b2f77d",
-      "title": "Implement a backup strategy for Amazon Quick Sight BI assets",
-      "description": "In this post, we cover best practices for implementing an effective backup strategy for BI assets in Quick Sight. We start by covering the options for selecting the assets to include in your backup, then explain the high-level APIs available for that purpose, and finalize with sample code to help you get started quickly.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/",
-      "pubDate": "2026-06-29T18:15:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q"
-      ]
-    },
-    {
-      "id": "aws-news-356590f32335",
-      "title": "Pair Nova 2 Lite with Claude for cost-optimized document processing",
-      "description": "In this post, we show how pairing Amazon Nova 2 Lite with Anthropic’s Claude Sonnet 4.6 delivers an efficient solution for digitizing scanned documents at scale. We built a two-model pipeline on Amazon Bedrock for digitizing scanned yearbook pages. Amazon Nova 2 Lite handles native multimodal extraction in a single call: detecting photos, extracting visible names with coordinates, and returning page-level metadata. Claude Sonnet 4.6 then performs spatial reasoning to match names to faces based on page layout.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/pair-nova-2-lite-with-claude-for-cost-optimized-document-processing/",
-      "pubDate": "2026-06-29T17:52:33.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "nova"
-      ]
-    },
-    {
-      "id": "aws-news-f265e50944b7",
-      "title": "Multi-tenant LLM analytics with row-level security: How we built a secure agent on AWS",
-      "description": "In this post, we show you how PAR built a production-ready multi-tenant LLM analytics system that enforces row-level security through a three-layer architecture: cryptographic request signing with AWS SigV4, semantic validation on Amazon Bedrock, and programmatic data isolation via Split-Plane SQL. We demonstrate how each layer operates independently to reduce the risk of cross-tenant data exposure, even when the LLM itself is compromised or manipulated.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/multi-tenant-llm-analytics-with-row-level-security-how-we-built-a-secure-agent-on-aws/",
-      "pubDate": "2026-06-29T17:39:29.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -2673,47 +2889,6 @@
       ]
     },
     {
-      "id": "aws-news-f5d37b207e9f",
-      "title": "Amazon MSK now offers AI Agent Skills to help developers operate MSK efficiently and accelerate migrations to MSK",
-      "description": "Amazon MSK now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for operating Amazon MSK. The skills provide expert guidance for common operational tasks such as troubleshooting, sizing, configuring, monitoring, and migration from external Kafka clusters.\n  Teams can leverage these skills to keep their clusters healthy and performant, and to migrate their external Kafka workloads to MSK Express to take advantage of up to 3 times more throughput per broker, scale up to 20 times faster, and reduced recovery time by 90 percent as compared to Standard brokers running Apache Kafka. The skills turn tasks that once required specialized knowledge into a guided experience developers can complete quickly, on their own.\n  You can use the MSK skills with your existing AI coding agent - Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"What broker type and size should I use for my MSK cluster?\" or \"Is my Kafka cluster compatible with MSK Express?\"",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-ai-agent-skills",
-      "pubDate": "2026-06-22T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "kafka",
-        "msk"
-      ]
-    },
-    {
-      "id": "aws-news-d8a1d4cf09d6",
-      "title": "MSK Replicator now supports mutual TLS (mTLS) authentication for replication from external Apache Kafka clusters to MSK Express brokers",
-      "description": "Amazon MSK Replicator now supports mutual TLS (mTLS) authentication for data replication from external Apache Kafka clusters - including on-premises, self-managed on AWS, or other cloud providers - to Amazon MSK Express brokers. With this capability, external Apache Kafka clusters configured with mTLS authentication can now use MSK Replicator to migrate workloads to MSK Express brokers, support disaster recovery by using MSK Express-based clusters as a failover or backup target, and enable data distribution across hybrid and multi-cloud environments.\n  MSK Replicator is a feature of Amazon MSK that automates data replication between Kafka clusters, eliminating the need to manage custom replication infrastructure or configure open-source tools. Previously, MSK Replicator supported SASL/SCRAM authentication only for connecting to external Apache Kafka clusters. With this launch, you can now also use mTLS authentication with MSK Replicator to replicate data from external Kafka clusters to Express brokers on Amazon MSK. Unlike self-managed replication tools, MSK Replicator lets you retain your original Kafka topic names during replication while automatically avoiding infinite replication loops. It also synchronizes consumer group offsets bidirectionally, enabling you to move producers and consumers across clusters independently, in any order, without coordination constraints or the risk of data loss.\n  This new capability is supported in all AWS Regions where MSK Express brokers are available. Visit the MSK Replicator documentation, product page, pricing page, and this AWS blog post to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-replicator-mtls-support",
-      "pubDate": "2026-06-22T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
       "id": "aws-news-5195e58471bc",
       "title": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
       "description": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation. Dr. Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote, all built around one thesis: agents that compound value […]",
@@ -2731,26 +2906,6 @@
         "bedrock",
         "nova",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-355bd2c17007",
-      "title": "Introducing self-service lifecycle management capabilities for AWS Outposts",
-      "description": "AWS Outposts now provides self-service capabilities for configuration, quoting, ordering, subscription management, renewal, and decommissioning directly from the AWS Management Console, CLI, and API. Previously, customers relied on AWS teams for managing their Outposts lifecycle, from evaluation through end of term.\n  A new configuration and quoting tool generates real-time cost estimates across payment options and term lengths, and proactively surfaces account and regional constraints before order submission. Quotes are generated in seconds and can be converted to orders directly in the console, for both new deployments and capacity additions. Subscription details, including term dates and billing, are now available in the console and programmatically, eliminating the need to contact AWS for contract information. When your term approaches its end date, self-service workflows let you renew with a new term and payment option, or decommission your Outpost through a guided workflow that handles resource cleanup.\n  These features are available in all commercial AWS Regions that support AWS Outposts. To learn more, refer to the Launch Blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-outposts-self-service-lifecycle-management",
-      "pubDate": "2026-06-22T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "outposts"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "outposts",
-        "launch",
-        "now-available",
-        "support"
       ]
     },
     {
@@ -2772,70 +2927,6 @@
       ]
     },
     {
-      "id": "aws-news-97dd31c2fcc4",
-      "title": "Announcing the general availability of a new AWS Local Zone in Hanoi, Vietnam",
-      "description": "Today, AWS announces the general availability of a new Local Zone in Hanoi, Vietnam, bringing AWS infrastructure closer to end users. This new Local Zone is one of the first AWS Local Zones in the Asia Pacific with support for Amazon Simple Storage Service (Amazon S3) and Amazon Elastic Block Store (Amazon EBS) Local Snapshots, enabling customers to meet data residency requirements by storing and backing up data locally.\n \nAWS Local Zones are AWS infrastructure deployments that extend core services, such as compute, storage, networking, and other select services, closer to metropolitan areas worldwide. AWS Local Zones help you achieve single-digit millisecond latency for end-user workloads, meet data residency requirements, support AI/ML inference workloads, and accelerate migration and modernization of legacy applications to the cloud, all while maintaining consistent AWS APIs, tools, and services as AWS Regions. AWS Local Zones are available in more than 30 metropolitan areas worldwide. \n \nThe Hanoi Local Zone supports Amazon Elastic Compute Cloud (Amazon EC2) with C7i, M7i, and R7i instances, Amazon S3 with the One Zone-Infrequent Access storage class, Amazon EBS with Local Snapshots and volume types gp3, gp2, io1, sc1, and st1, Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Virtual Private Cloud (Amazon VPC), AWS Direct Connect, and Application Load Balancer. \n \nTo get started, enable the Hanoi Local Zone (ap-southeast-1-han-1a) from the Regions and Zones tab in the AWS Global View or by using the ModifyAvailabilityZoneGroup API. For pricing information, visit the AWS Local Zones pricing page. To learn more, visit the AWS Local Zones overview page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-local-zones-hanoi-vietnam/",
-      "pubDate": "2026-06-19T01:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "ec2",
-        "ecs",
-        "eks"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "ec2",
-        "ecs",
-        "eks",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ef5cf5b2147c",
-      "title": "Amazon CloudWatch Synthetics now supports multilocation canaries",
-      "description": "Today, Amazon CloudWatch Synthetics announces support for multilocation canaries, allowing developers and site reliability engineers to run the same canary across multiple AWS Regions simultaneously from a single point of management. Previously, monitoring application availability from multiple geographic locations required creating and managing separate canaries in each Region, adding operational overhead and increasing the risk of configuration drift. With multilocation canaries, you create and manage a canary in one primary Region, and CloudWatch Synthetics automatically replicates it to the additional Regions you choose, consolidating all run data, metrics, and artifacts in the primary Region.\n \nMultilocation canaries help you ensure consistent user experience worldwide, identify region-specific performance bottlenecks, and validate that third-party dependencies like CDNs and payment processors work across all locations. Replica canaries run independently, giving you resilient monitoring coverage across geographic locations. You can also configure alarms that activate only when issues are detected from multiple locations, increasing alert confidence and helping your team focus on real customer-impacting problems. Amazon CloudWatch Synthetics multilocation canaries are available in all AWS commercial Regions that support CloudWatch Synthetics. You can upgrade existing single-region canaries to multilocation by adding replica Regions without recreating them. For more information about regional availability, see the AWS Region table.\n \nTo learn more about CloudWatch Synthetics, see Using synthetic monitoring in the Amazon CloudWatch User Guide. To get started, visit the Amazon CloudWatch product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-synthetics-multilocation/",
-      "pubDate": "2026-06-18T22:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0835a8ff9339",
-      "title": "Amazon MSK Express brokers now support Intelligent Rebalancing on existing clusters",
-      "description": "Amazon MSK Provisioned clusters with Express brokers now support Intelligent Rebalancing on all existing clusters, at no additional cost. Previously available only on newly created clusters, Intelligent Rebalancing is now available on all MSK Provisioned clusters running Express brokers, making it effortless for customers to benefit from automatic partition balancing when scaling their Express-based clusters up or down.\n \nIntelligent Rebalancing maximizes the capacity utilization of MSK Express-based clusters by optimally rebalancing Kafka resources for better performance, eliminating the need for customers to manage partitions themselves or via third-party tools. Intelligent Rebalancing performs these operations up to 180 times faster compared to Standard brokers. Clusters are continuously monitored for resource imbalance or overload based on intelligent Amazon MSK defaults to maximize cluster performance. When required, brokers are efficiently scaled without affecting cluster availability for clients to produce and consume data.\n \nIntelligent Rebalancing is now available on all MSK Provisioned clusters with Express brokers in all AWS Regions where Express brokers are available. To learn more, see the Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-express-intelligent/",
-      "pubDate": "2026-06-18T22:36:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-112dad5223da",
       "title": "Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs",
       "description": "Announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads.",
@@ -2850,72 +2941,6 @@
       ],
       "tags": [
         "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-e15cf08ce46b",
-      "title": "Amazon ECS announces faster service auto scaling",
-      "description": "Amazon ECS service auto scaling now detects and responds to load changes faster with support for high resolution (20-second) metrics and metric publishing optimizations. In AWS benchmarking tests, time to trigger scale-out improved from 363 seconds to 86 seconds (76% faster, 4.2x), and total time to scale and provision new tasks improved from 386 seconds to 109 seconds (72% faster, 3.5x). Faster service auto scaling also enables you to reduce baseline capacity and lower compute costs while maintaining service reliability and performance as workload demand fluctuates.\n  Amazon ECS service auto scaling automatically adjusts task counts to meet workload demand with comprehensive scaling policies, including predictive scaling for recurring traffic patterns, scheduled scaling for planned events, and target tracking to scale dynamically on real-time metrics. With today's launch, target tracking policies for CPU and memory utilization now support 20-second metric resolution, in addition to the default 60-second resolution, for faster scaling signal detection. To get started, use the AWS Console, CLI, CloudFormation, or AWS SDKs to configure 20-second resolution for CPU or memory utilization metrics when creating or updating your ECS service, then configure a target tracking policy selecting the corresponding high-resolution predefined metric.\n  This feature is available in all AWS commercial and AWS GovCloud (US) Regions, across all ECS compute options: AWS Fargate, Amazon ECS Managed Instances, and Amazon EC2. High-resolution metrics are subject to standard CloudWatch charges; for a pricing example, see Amazon CloudWatch pricing. To learn more, see our documentation and the launch blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ecs-faster-autoscaling/",
-      "pubDate": "2026-06-18T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "cloudformation",
-        "cloudwatch"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "cloudformation",
-        "cloudwatch",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-68f7d60d60df",
-      "title": "Amazon EC2 G7 instances are now generally available",
-      "description": "Today, AWS announces the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances deliver up to 4.6x AI inference performance and up to 2.1x graphics performance compared to G6.\n \nYou can use G7 instances for AI inference workloads such as language translation, video and image analysis, speech recognition, and recommender systems. Additionally, G7 instances also accelerate graphics workloads such as creating and rendering real-time, cinematic-quality graphics, and game streaming, as well as data analytics workloads such as large-scale data processing pipelines. G7 instances feature up to 8 NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs with 32 GB of memory per GPU, custom Intel Xeon 6 processors, and up to 700 Gbps of Elastic Fabric Adapter (EFA) networking bandwidth.\n \nYou can start using Amazon EC2 G7 instances today in two AWS Regions: US East (Ohio) and US West (Oregon). You can purchase G7 instances as On-Demand Instances, as part of Savings Plans, or Spot Instances. \n \nTo get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, visit this blog post and the G7 instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-g7-generally-available",
-      "pubDate": "2026-06-18T20:59:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "ec2",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-881716587a17",
-      "title": "Amazon MQ for RabbitMQ now supports private networking connectivity",
-      "description": "Amazon MQ for RabbitMQ now supports private networking, enabling your brokers to connect to private resources in your VPC without exposing those resources publicly.. This helps you meet your security and compliance requirements when your brokers need to reach private identity providers (such as LDAP and OAuth 2.0), other Amazon MQ for RabbitMQ brokers, or self-hosted RabbitMQ brokers. Previously, this connectivity for RabbitMQ Federation, Shovel, or authentication required Network Load Balancer and NAT Gateway workarounds.\n  Amazon MQ establishes this connectivity using Amazon VPC Lattice, AWS Resource Access Manager (AWS RAM), and AWS PrivateLink, and manages the underlying infrastructure on your behalf. To get started, create a VPC Lattice resource gateway, package your resource configurations into an AWS RAM resource share, and associate it with your broker.\n  Private networking is available only for Amazon MQ for RabbitMQ brokers, in all AWS Regions where Amazon VPC Lattice is available. To learn more, see Private networking in the Amazon MQ Developer Guide and the Amazon MQ pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-mq-private-network-connectivity/",
-      "pubDate": "2026-06-18T20:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "q developer"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "q developer",
-        "ga",
-        "support"
       ]
     },
     {
@@ -3184,29 +3209,6 @@
       ]
     },
     {
-      "id": "aws-news-4bb7079c8e94",
-      "title": "Building AI shopping agent using Amazon Bedrock AgentCore Runtime and Amazon OpenSearch Service",
-      "description": "In this post, we explore how to build an online shopping AI agent. We focus on its architecture and implementation with Amazon OpenSearch Service, Amazon Bedrock AgentCore, and Strands Agents. Amazon Bedrock AgentCore is an agentic platform for deploying and operating those agents and tools securely at scale without managing infrastructure.",
-      "link": "https://aws.amazon.com/blogs/big-data/building-ai-shopping-agent-using-amazon-bedrock-agentcore-runtime-and-amazon-opensearch-service/",
-      "pubDate": "2026-06-11T15:27:16.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "opensearch",
-        "opensearch service"
-      ]
-    },
-    {
       "id": "aws-news-f8ee876fb653",
       "title": "Introducing the Snowflake and AWS Custom Lens for the AWS Well-Architected Framework",
       "description": "The Snowflake and AWS Custom Well-Architected Framework Lens brings together AWS Well-Architected best practices and Snowflake guidance into a single review experience, with integrated recommendations that reflect how the two services compose in production. In this post, we walk through each pillar, the three access points (AWS Management Console, Kiro, and Snowflake Cortex Code), and how to run your first review.",
@@ -3237,26 +3239,6 @@
         "ec2",
         "graviton",
         "launch",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-2b523c40c0cb",
-      "title": "Anthropic Claude Fable 5 on AWS: Mythos-class capabilities with built-in safeguards now available",
-      "description": "AWS announces the availability of Claude Fable 5 on Amazon Bedrock and Claude Platform on AWS. Claude Fable 5 delivers Mythos-level capabilities available to all customers, with strong safeguards designed to make it safe for broader use.",
-      "link": "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/",
-      "pubDate": "2026-06-09T17:40:31.000Z",
-      "source": "newsBlog",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
         "now-available"
       ]
     },
@@ -3673,23 +3655,6 @@
       ],
       "tags": [
         "generally-available"
-      ]
-    },
-    {
-      "id": "aws-news-d9bc1a87be7c",
-      "title": "Accelerate CPU-based AI inference workloads using Intel AMX on Amazon EC2",
-      "description": "This post shows you how to accelerate your AI inference workloads by up to 76% using Intel Advanced Matrix Extensions (AMX) – an accelerator that uses specialized hardware and instructions to perform matrix operations directly on processor cores – on Amazon Elastic Compute Cloud (Amazon EC2) 8th generation instances. You'll learn when CPU-based inference is cost-effective, how to enable AMX with minimal code changes, and which configurations deliver optimal performance for your models.",
-      "link": "https://aws.amazon.com/blogs/compute/accelerate-cpu-based-ai-inference-workloads-using-intel-amx-on-amazon-ec2/",
-      "pubDate": "2026-03-30T16:43:10.000Z",
-      "source": "computeBlog",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2"
       ]
     },
     {
