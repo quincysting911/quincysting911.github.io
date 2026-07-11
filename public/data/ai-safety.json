@@ -1,8 +1,49 @@
 {
-  "lastUpdated": "2026-07-10T08:57:06.694Z",
+  "lastUpdated": "2026-07-11T07:29:32.777Z",
   "category": "ai-safety",
-  "totalItems": 34,
+  "totalItems": 29,
   "items": [
+    {
+      "id": "aws-news-a7344b53546a",
+      "title": "AWS DMS Schema Conversion now supports offline SQL Server conversion",
+      "description": "AWS Database Migration Service (DMS) Schema Conversion now supports offline source conversion for Microsoft SQL Server, enabling you to convert SQL Server schemas and code without direct connectivity to your source databases. You extract metadata using standard database commands in your own environment, then upload it to DMS Schema Conversion for processing. This eliminates security reviews, firewall changes, and VPN setup that delay migration projects, while delivering the same conversion results as the connected approach.\n \nOffline Source is ideal for organizations with security policies that restrict external tool access to production SQL Server databases. Database administrators generate human-readable metadata files within their existing environment, and security teams can review the commands and output before uploading, making approval straightforward. By removing the connectivity requirement, Offline Source transforms weeks of security reviews into a simple command-and-upload workflow.\n \nOffline Source supports all DMS Schema Conversion targets at no additional conversion charge. For regional availability, see the Supported AWS Regions page. To get started, see Using Offline Source in the DMS Schema Conversion documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-dms-schema-conversion-offline-source/",
+      "pubDate": "2026-07-10T15:09:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "eks",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-090b790fb932",
+      "title": "AWS Organizations now applies account departure security controls by default for new organizations created via AWS Organizations console",
+      "description": "AWS Organizations now automatically applies security controls by default when you create a new organization via AWS Organizations console, simplifying initial security configuration by automatically applying core security controls. This approach safeguards multi-account environments by protecting against unintended member account departures from your organization. CloudOps administrators and central security teams get immediate protection in their new organizations from day one.\n \nWhen you create a new organization using the AWS Organizations console, the service automatically applies service control policies (SCPs) that prevent member accounts from leaving the organization or closing themselves. These controls help enterprises migrating to AWS or starting a new organization establish strong governance patterns without requiring deep security expertise. The security defaults are intentionally lightweight to provide protection without impeding legitimate operations. You maintain full control to modify or disable these settings at any time.\n \nThis feature is available in US East (N. Virginia), AWS GovCloud (US-East), AWS GovCloud (US-West), China (Beijing), and China (Ningxia). To learn more, visit the AWS Organizations documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-organizations-security-controls-new-orgs-console",
+      "pubDate": "2026-07-10T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-7dc0dc079d39",
       "title": "Amazon Timestream for InfluxDB now publishes database state change events to Amazon EventBridge",
@@ -543,78 +584,6 @@
       ]
     },
     {
-      "id": "aws-news-1b905e5ed9f8",
-      "title": "AWS Clean Rooms now supports intermediate tables for SQL",
-      "description": "AWS Clean Rooms now supports intermediate tables for SQL queries, offering increased flexibility for organizations running complex, multi-step analytical workflows with their partners.  With this launch, customers can write the results of a SQL query to an intermediate table within a collaboration for reuse in subsequent analyses. Intermediate tables enable multi-step analytical workflows — from reusing complex joins to building shared ID mapping tables for downstream analyses — all within the privacy boundary of the collaboration. For example, a publisher and an advertiser can join their first-party data to build an ID mapping table in a collaboration, then reuse it across reach, frequency, and attribution analyses, reducing costs and optimizing performance for the subsequent analyses.\n \nAWS Clean Rooms helps companies and their partners easily analyze and collaborate on their collective datasets without revealing or copying one another’s underlying data. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-clean-rooms-intermediate-tables",
-      "pubDate": "2026-06-30T06:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "organizations",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fe72df261114",
-      "title": "AWS WAF adds support for Amazon Bedrock AgentCore Gateway",
-      "description": "Today, AWS announces general availability of AWS Web Application Firewall (AWS WAF) protection for Amazon Bedrock AgentCore Gateway, enabling you to protect your agentic AI workloads from common web exploits and abuse. As enterprises move agentic applications from prototype to production, this launch gives security and platform teams ability to apply consistent, customizable web protections at the Gateway layer.\n \nYou can now associate an AWS WAF protection pack with your AgentCore Gateway to enforce IP-based access controls, rate-based rules that throttle abusive traffic, and AWS Managed Rule Groups including common rule sets, known bad inputs, and Bot Control. You configure the protection pack once at the Gateway level and AWS WAF applies it consistently to every target behind that Gateway, so a single configuration protects all downstream tools, agents, and integrations.\n \nSupport for AWS WAF on AgentCore Gateway is available in all AWS Regions where both AWS WAF and Amazon Bedrock AgentCore Gateway are available.\n \nTo learn more, see the AWS WAF Developer Guide and the Amazon Bedrock AgentCore documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-waf-amazon-bedrock-agentcore/",
-      "pubDate": "2026-06-29T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "waf"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "waf",
-        "launch",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-64f3aae5afd8",
-      "title": "Amazon MWAA Serverless now supports shared VPC configurations",
-      "description": "Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless now supports shared VPC subnets. Previously, customers using subnets shared via AWS Resource Access Manager (AWS RAM) received a validation error when creating MWAA Serverless workflows. With this update, MWAA Serverless correctly validates subnet ownership in shared VPC configurations, consistent with MWAA Provisioned environments.\n Sharing VPC subnets across accounts using AWS RAM is a common pattern in multi-account landing zone architectures. Organizations that centrally manage networking can now launch MWAA Serverless workflows in member accounts using shared subnets — no workarounds required. Customers using Amazon SageMaker Unified Studio Workflows also benefit from this update when their projects are configured with shared VPC networking.\n This update is available in all AWS Regions where Amazon MWAA Serverless is supported. To learn more, see the Networking section of the Amazon MWAA Serverless User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-mwaa-serverless-vpc/",
-      "pubDate": "2026-06-29T17:19:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "organizations",
-        "launch",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-167a37b1cf0d",
       "title": "Preventing data exfiltration in machine learning environments with Amazon SageMaker AI",
       "description": "In this post, we demonstrate how iBusiness implemented a three-layered security architecture using Amazon SageMaker AI, virtual private cloud (VPC) endpoints, and Amazon WorkSpaces Secure Browser to prevent data exfiltration while maintaining data scientist productivity. You can adapt this approach to build secure machine learning environments that balance strict data protection with team scalability.",
@@ -647,74 +616,6 @@
       "tags": [
         "redshift",
         "integration"
-      ]
-    },
-    {
-      "id": "aws-news-f9a587cde93b",
-      "title": "OpenAI GPT, OpenAI GPT OSS, and NVIDIA Nemotron models on Amazon Bedrock receive FedRAMP High and DoD IL-4/5 approval in AWS GovCloud (US)",
-      "description": "OpenAI GPT, OpenAI GPT OSS, and NVIDIA Nemotron models are now FedRAMP High and Department of Defense Cloud Computing Security Requirements Guide (DoD CC SRG) Impact Level (IL) 4 and 5 approved within Amazon Bedrock in the AWS GovCloud (US) Regions.\n \nFederal agencies, public sector organizations, and other enterprises with FedRAMP High and DoD CC SRG IL-4/5 compliance requirements can now use these models on Amazon Bedrock to build and scale generative AI applications with confidence that they meet the security and compliance standards required for government workloads. These models are powered by Mantle, a next-generation distributed inference engine on Amazon Bedrock, which provides high-performance serverless inference with zero operator access, automated capacity management, and out-of-the-box compatibility with OpenAI API specifications.\n \nTo learn more, visit the Amazon Bedrock product page, Amazon Bedrock documentation, and the AWS GovCloud (US) compliance page. To get started, visit the Amazon Bedrock console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/addl-bedrock-model-fedramp-il-5-govcloud",
-      "pubDate": "2026-06-25T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-9f629c132881",
-      "title": "AWS Network Firewall now supports managed threat intelligence rules from VisionHeight",
-      "description": "AWS Network Firewall now supports two new managed rule groups from VisionHeight, available through AWS Marketplace: Zero-Day Threat Protection, and Noisy Scanners and Tor Protection. These rule groups expand the managed rules offerings for AWS Network Firewall, giving customers access to proprietary threat intelligence built on VisionHeight's Pulse telemetry.\n  Zero-Day Threat Protection proactively blocks malicious IP infrastructure before it appears on public blocklists. This rule group helps organizations get ahead of emerging threats by weeks, strengthening defense for workloads facing targeted attacks. Tor Protection reduces firewall log noise by blocking communication with active Tor exit nodes and filtering traffic from known high-volume scanning sources. With daily refresh cycles, this rule group suppresses noise at first packet —before events are generated—lowering SOC alert volume, reducing SIEM ingestion costs, and removing Tor as a path into or out of your environment.\n  Managed rules for AWS Network Firewall are available from AWS Marketplace sellers including Check Point, Fortinet, Infoblox, Lumen, Rapid7, ThreatSTOP, Trend Micro, and VisionHeight. For a full list of supported regions, visit the AWS Regional Services page.\n  To get started, visit the AWS Network Firewall console or browse available managed rules in AWS Marketplace. For more information, see the AWS Network Firewall product page and the service documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/network-firewall-visionheight-managed-rules",
-      "pubDate": "2026-06-25T20:18:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eks",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0fd5f7f376fb",
-      "title": "Kiro achieves FedRAMP High and DoD IL-4/5 authorization in AWS GovCloud (US)",
-      "description": "Kiro is now FedRAMP High and Department of Defense Cloud Computing Security Requirements Guide (DoD CC SRG) Impact Level (IL) 4 and 5 authorized in the AWS GovCloud (US) Regions.\n  Federal agencies, public sector organizations, and other enterprises with FedRAMP High and DoD CC SRG IL-4/5 compliance requirements can now use Kiro as their agentic engineering partner with confidence that it meets the security and compliance standards required for sensitive workloads.\n  Kiro is an agentic AI with an integrated development environment (IDE) and command-line interface (CLI) that helps you build applications from prototype to production with spec-driven development. From simple to complex tasks, Kiro works alongside you to turn prompts into detailed specs, then into working code, docs, and tests — so what you build is exactly what you want and ready to share with your team. With native Model Context Protocol (MCP) support, Kiro connects to documentation, databases, APIs, and other enterprise resources, providing capability for mission-critical development workflows.\n  For more details about Kiro in AWS GovCloud (US), visit the GovCloud documentation or contact your AWS account team for more information. To learn more about Kiro, visit the Kiro product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/kiro-fedramp-high-dod-il-4-5-govcloud-us/",
-      "pubDate": "2026-06-25T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds",
-        "ecs",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "ecs",
-        "organizations",
-        "ga",
-        "support"
       ]
     },
     {
@@ -779,28 +680,6 @@
       ],
       "tags": [
         "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-097979bc3b7f",
-      "title": "AWS Outposts monitoring and reporting: A comprehensive Amazon EventBridge solution",
-      "description": "Organizations using AWS Outposts racks commonly manage capacity from a single AWS account and share resources through AWS Resource Access Manager (AWS RAM) with other AWS accounts (consumer accounts) within AWS Organizations. In this post, we demonstrate one approach to create a multi-account serverless solution to surface costs in shared AWS Outposts environments using Amazon […]",
-      "link": "https://aws.amazon.com/blogs/compute/aws-outposts-monitoring-and-reporting-a-comprehensive-amazon-eventbridge-solution/",
-      "pubDate": "2026-04-14T16:18:12.000Z",
-      "source": "computeBlog",
-      "services": [
-        "eventbridge",
-        "organizations",
-        "outposts"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eventbridge",
-        "organizations",
-        "outposts",
         "ga"
       ]
     }

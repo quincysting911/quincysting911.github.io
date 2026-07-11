@@ -1,8 +1,122 @@
 {
-  "lastUpdated": "2026-07-10T08:57:06.694Z",
+  "lastUpdated": "2026-07-11T07:29:32.777Z",
   "category": "machine-learning",
-  "totalItems": 14,
+  "totalItems": 17,
   "items": [
+    {
+      "id": "aws-news-48b4e28714cd",
+      "title": "Amazon EMR on EKS now supports Apache Spark troubleshooting agent",
+      "description": "Amazon EMR on EKS now supports the Apache Spark troubleshooting agent. Data engineers can now diagnose EMR on EKS job failures through natural language, receiving automated root cause analysis and PySpark code recommendations without manually navigating distributed logs and Spark History Server data.\n  The agent analyzes Spark History Server data, distributed executor logs, and cluster configurations to identify issues such as memory errors, data skew, resource contention, and connectivity failures. With this launch, the Spark troubleshooting agent now covers all EMR deployment options: EMR on EC2, EMR Serverless, and EMR on EKS. The agent is accessible directly from the EMR on EKS console through a \"Troubleshoot with AI\" option on failed jobs. Additionally, the agent is available through MCP (Model Context Protocol) using any compatible AI coding agent, including Kiro, Claude Code, and Cursor. All operations are read-only, authenticated with IAM roles, and logged in AWS CloudTrail.\n  The Spark troubleshooting agent for Amazon EMR on EKS is available in all AWS Regions where the SageMaker Unified Studio is available. To get started, go to EMR on EKS console, or set up the MCP server in your preferred AI coding agent. For detailed guidance, see the EMR troubleshooting agent documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-emr-eks-spark-troubleshooting/",
+      "pubDate": "2026-07-10T18:16:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "ec2",
+        "emr",
+        "eks",
+        "iam"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "ec2",
+        "emr",
+        "eks",
+        "iam",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d13682126a16",
+      "title": "Amazon SageMaker HyperPod now supports AMI-based node lifecycle configuration for Slurm clusters using continuous provisioning",
+      "description": "Amazon SageMaker HyperPod now supports AMI-based configuration for Slurm clusters that use continuous provisioning. Continuous provisioning adds nodes to the cluster as capacity becomes available, and this launch extends AMI-based configuration to clusters using this mode. With this support, clusters using continuous provisioning can be created without downloading, configuring, or uploading lifecycle configuration scripts to Amazon S3.\n  AMI-based configuration provisions nodes with the software and configurations needed for a production-ready environment to run AI/ML training workloads, including required software such as Docker, Enroot, and Pyxis, and configurations such as Slurm accounting, SSH key generation, and log rotation. When using continuous provisioning, each node is configured from the AMI as it is added to the cluster, without the need to manage lifecycle configuration scripts, so nodes become available to schedule jobs sooner. To enable AMI-based configuration, omit the LifeCycleConfig block from the instance group configuration when creating clusters via the API, or select \"None\" under Lifecycle scripts in Custom setup when using the SageMaker AI console. For additional customization on top of the AMI-based configuration baseline, an extension script can be provided by specifying the OnInitComplete parameter and SourceS3Uri in the LifeCycleConfig block via the API, or by providing the S3 URI in the \"Extension script file in S3\" field in Custom setup when using the console. Custom lifecycle configuration scripts remain fully supported for use cases that require full control over provisioning.\n  AMI-based node lifecycle configuration for Slurm clusters using continuous provisioning is available in all AWS Regions where SageMaker HyperPod is available. To get started, see Getting started with SageMaker HyperPod using the AWS CLI or Getting started with SageMaker HyperPod using the SageMaker AI console in the SageMaker user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/06/ami-configuration-continuous-slurm/",
+      "pubDate": "2026-07-10T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "s3"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "s3",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-46c3c2ac0c26",
+      "title": "Real-time dental image verification with Amazon SageMaker AI at Henry Schein One",
+      "description": "This post describes how Henry Schein One closed that gap by building Image Verify, an AI-powered quality verification system on Amazon SageMaker AI that evaluates dental X-ray quality at the point of capture, in real time, across thousands of locations. The system went from concept to over 10,000 active locations within months and has already processed over 11 million X-rays and growing at 1.5 million per week. Henry Schein One is now scaling toward 40,000 locations globally across four regions.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/real-time-dental-image-verification-with-amazon-sagemaker-ai-at-henry-schein-one/",
+      "pubDate": "2026-07-10T15:33:47.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-11eb993f24c1",
+      "title": "Deploying quantized models on Amazon SageMaker AI with Unsloth",
+      "description": "In this post, you will learn four deployment patterns for taking models that have already been quantized with Unsloth and deploying them on AWS infrastructure. The patterns use Amazon Elastic Compute Cloud (Amazon EC2) for direct instance access, Amazon SageMaker AI inference endpoints for managed serving, and Amazon Elastic Kubernetes Service (Amazon EKS) or Amazon Elastic Container Service (Amazon ECS) when inference needs to fit into an existing container framework. You also learn operational practices for production deployments.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/deploying-quantized-models-on-amazon-sagemaker-ai-with-unsloth/",
+      "pubDate": "2026-07-10T15:26:05.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "ec2",
+        "ecs",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-e1954e41b5bb",
+      "title": "Disaggregated prefill and decode for LLM inference on SageMaker HyperPod",
+      "description": "In this post, we show how to implement DPD with vLLM on Amazon SageMaker HyperPod using the HyperPod Inference Operator.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/disaggregated-prefill-and-decode-for-llm-inference-on-sagemaker-hyperpod/",
+      "pubDate": "2026-07-10T15:20:16.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "hyperpod"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-2ab8d9c72c37",
       "title": "Enhancing enterprise inference on Amazon SageMaker HyperPod with data capture, Hugging Face, NVMe, and Route 53 integration",
@@ -128,24 +242,6 @@
       ]
     },
     {
-      "id": "aws-news-0479cd0f58ab",
-      "title": "Monitoring discriminative ML models using Amazon SageMaker AI with MLflow",
-      "description": "Implementing a data and model monitoring solution is necessary to maintain prediction accuracy and help achieve the best outcome for your machine learning use case. This post shows how you can use open source Evidently together with Amazon SageMaker AI to generate monitoring reports, organize and compare the results in MLflow, scale through pipelines, and trigger drift notifications.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-discriminative-ml-models-using-amazon-sagemaker-ai-with-mlflow/",
-      "pubDate": "2026-07-07T16:49:09.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-4bcd440f8271",
       "title": "Introducing Apache Spark Connect support in AWS Glue interactive sessions",
       "description": "Apache Spark Connect bridges the gap between these two worlds: you develop in local Python, but execute on AWS Glue against actual data. Today, AWS Glue interactive sessions support Spark Connect natively. You can connect from any environment that supports the PySpark remote() API, including VS Code, PyCharm, Amazon SageMaker Unified Studio notebooks, and standalone Python applications. You don’t need to install specialized kernels or manage cluster infrastructure.",
@@ -166,24 +262,6 @@
         "glue",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-a39827bc77b1",
-      "title": "From Hugging Face to Amazon SageMaker Studio in one click",
-      "description": "Today, we’re excited to announce a deep-link integration between Hugging Face and Amazon SageMaker AI. Developers can now go from model discovery to hands-on experimentation in SageMaker Studio with a single selection.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/",
-      "pubDate": "2026-07-06T22:35:55.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "integration"
       ]
     },
     {
