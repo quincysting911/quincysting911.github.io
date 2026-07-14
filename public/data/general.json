@@ -1,8 +1,41 @@
 {
-  "lastUpdated": "2026-07-13T08:42:12.405Z",
+  "lastUpdated": "2026-07-14T07:43:19.010Z",
   "category": "general",
-  "totalItems": 36,
+  "totalItems": 37,
   "items": [
+    {
+      "id": "aws-news-a99683f22579",
+      "title": "Eliminating Java cold starts with AWS Lambda Managed Instances",
+      "description": "A single cold start can push your Java Lambda function’s response time from milliseconds to seconds, enough to violate your p99 SLA, timeout a downstream service, and page your on-call. The Java Virtual Machine (JVM) performs best in long-running processes. Its Just-In-Time (JIT) compiler progressively optimizes code over thousands of invocations. Standard serverless execution environments […]",
+      "link": "https://aws.amazon.com/blogs/compute/eliminating-java-cold-starts-with-aws-lambda-managed-instances/",
+      "pubDate": "2026-07-13T20:23:19.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda"
+      ]
+    },
+    {
+      "id": "aws-news-b94b9d2b1f4e",
+      "title": "Amazon DocumentDB (with MongoDB compatibility) adds support for 46 new MongoDB operators in version 8.0.1",
+      "description": "Amazon DocumentDB (with MongoDB compatibility) now supports 46 additional MongoDB aggregation operators and cursor methods starting from minor version 8.0.1. This release significantly expands query API compatibility, making it easier to migrate MongoDB workloads to Amazon DocumentDB without application code changes.\n \nNew capabilities span seven categories:\n \n \n \nAccumulators (13): $top, $topN, $bottom, $bottomN, $firstN, $lastN, $maxN, $minN, $count, $median, $percentile, $stdDevPop, $stdDevSamp\n  \n \n \n \nTrigonometry (15): $sin, $cos, $tan, $asin, $acos, $atan, $atan2, $sinh, $cosh, $tanh, $asinh, $acosh, $atanh, $degreesToRadians, $radiansToDegrees \n  \n \n \n \nBitwise aggregation (4): $bitAnd, $bitOr, $bitXor, $bitNot\n  \n \n \n \nArithmetic (3): $round, $trunc, $sigmoid\n  \n \n \n \nData size and type (4): $binarySize, $bsonSize, $isNumber, $toUUID\n  \n \n \n \nTimestamp (2): $tsIncrement, $tsSecond \n  \n \n \n \nStages and other (5): $sortByCount, $listSearchIndexes, $sampleRate, cursor.min(), cursor.max()\n  \n \nThese operators are available starting from Amazon DocumentDB 8.0.1 in all regions where Amazon DocumentDB is available. To learn more, see Supported MongoDB APIs, operations, and data types and Amazon DocumentDB release notes.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-documentdb-mongodb-8-0-1-mongo-api",
+      "pubDate": "2026-07-13T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a5d83dc1f2b3",
       "title": "Announcing Lambda MicroVMs: serverless compute environments with VM-level isolation and near-instant startup",
@@ -19,6 +52,25 @@
       "tags": [
         "lambda",
         "launch"
+      ]
+    },
+    {
+      "id": "aws-news-cf7b54151c43",
+      "title": "Amazon EKS Auto Mode now supports Application Recovery Controller zonal shift",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports Amazon Application Recovery Controller (ARC) zonal shift and autoshift for clusters using EKS Auto Mode. ARC helps you manage and coordinate recovery across AWS Regions and Availability Zones (AZs). With this launch, EKS Auto Mode automatically protects your compute during a zonal shift at no additional cost or configuration, helping you maintain Kubernetes application availability by shifting in-cluster network traffic away from an impaired AZ.\n \nCustomers run highly available applications across multiple AZs in Amazon EKS to eliminate a single point of failure. Because EKS Auto Mode manages compute on your behalf, you get zonal shift support without setting flags, granting permissions, or managing Karpenter versions; simply enable ARC zonal shift on your cluster. When a zonal shift is activated, EKS Auto Mode stops provisioning new capacity in the impaired AZ and halts voluntary disruptions such as consolidation and drift for nodes in that zone. It also prevents voluntary disruptions in healthy zones if they depend on scheduling pods to the impaired zone. When the shift expires or is canceled, normal operations resume. You can start a shift manually, or authorize AWS to manage it using zonal autoshift, with practice runs to verify your cluster functions with one less AZ.\n \nARC zonal shift support for EKS Auto Mode is available in all AWS Regions where EKS Auto Mode is offered. To learn more, visit the Amazon EKS product page, the ARC zonal shift documentation, and the Amazon EKS Auto Mode documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/eks-auto-mode-arc-zonal-shift",
+      "pubDate": "2026-07-10T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "launch",
+        "support"
       ]
     },
     {
@@ -364,26 +416,6 @@
       ]
     },
     {
-      "id": "aws-news-2021ca36240d",
-      "title": "Amazon RDS announces Cross-Region Automated Backups in four additional AWS Regions",
-      "description": "Cross-Region Automated Backup replication for Amazon RDS is now available in four additional AWS Regions. This launch allows you to setup automated backup replication between Mexico (Central) and Europe (Ireland) or US West (N. California); between Asia Pacific (Taipei) and Asia Pacific (Singapore) or Asia Pacific (Tokyo); between Asia Pacific (New Zealand) and Asia Pacific (Singapore), Asia Pacific (Sydney), or Asia Pacific (Melbourne); and between Asia Pacific (Thailand) and Asia Pacific (Singapore) or Asia Pacific (Jakarta) Regions.\n \nAutomated Backups enable recovery capability for mission-critical databases by providing you the ability to restore your database to a specific point in time within your backup retention period. With Cross-Region Automated Backup replication, RDS will replicate snapshots and transaction logs to the chosen destination AWS Region. In the event that your primary AWS Region becomes unavailable, you can restore the automated backup to a point in time in the secondary AWS Region and quickly resume operations. As transaction logs are uploaded to the target AWS Region frequently, you can achieve a Recovery Point Objective (RPO) of within the last few minutes.\n \nYou can setup Cross-Region Automated Backup replication with just a few clicks on the Amazon RDS Management Console or using the AWS SDK or CLI. Cross-Region Automated Backup replication is available on Amazon RDS for PostgreSQL, Amazon RDS for MariaDB, Amazon RDS for MySQL, Amazon RDS for Db2, Amazon RDS for Oracle, and Amazon RDS for Microsoft SQL Server. For more information, including instructions on getting started, read the Amazon RDS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
-      "pubDate": "2026-07-01T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-0d6fbbdaca40",
       "title": "Amazon ECS now supports configurable deployment circuit breaker settings",
       "description": "Amazon Elastic Container Service (Amazon ECS) now gives you more control over when a service deployment is considered failed and automatically rolled back. You can now customize deployment circuit breaker settings to match your application's startup behavior, deployment needs, and tolerance for task failures, so rollback works the way you need across different applications and environments.\n  The ECS deployment circuit breaker automatically detects failed deployments and rolls them back to the last successful deployment once a failure threshold is reached. With this launch, you can set the deployment circuit breaker threshold using either a fixed task failure count or a percentage of your service's desired task count, and choose how failures are counted using either a consecutive model, where the counter resets when a healthy task starts, or a cumulative model, where failures keep adding up throughout the deployment. For example, you can set lower thresholds for faster rollbacks in development and test environments, or allow more tolerance for applications that experience expected startup failures before stabilizing.\n  This feature is available in all AWS Regions where Amazon ECS is available. You can configure deployment circuit breaker settings for new and existing ECS services using the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, AWS CDK, and Terraform. To learn more, see the ECS deployment circuit breaker documentation.",
@@ -402,6 +434,26 @@
         "cloudformation",
         "launch",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-2021ca36240d",
+      "title": "Amazon RDS announces Cross-Region Automated Backups in four additional AWS Regions",
+      "description": "Cross-Region Automated Backup replication for Amazon RDS is now available in four additional AWS Regions. This launch allows you to setup automated backup replication between Mexico (Central) and Europe (Ireland) or US West (N. California); between Asia Pacific (Taipei) and Asia Pacific (Singapore) or Asia Pacific (Tokyo); between Asia Pacific (New Zealand) and Asia Pacific (Singapore), Asia Pacific (Sydney), or Asia Pacific (Melbourne); and between Asia Pacific (Thailand) and Asia Pacific (Singapore) or Asia Pacific (Jakarta) Regions.\n \nAutomated Backups enable recovery capability for mission-critical databases by providing you the ability to restore your database to a specific point in time within your backup retention period. With Cross-Region Automated Backup replication, RDS will replicate snapshots and transaction logs to the chosen destination AWS Region. In the event that your primary AWS Region becomes unavailable, you can restore the automated backup to a point in time in the secondary AWS Region and quickly resume operations. As transaction logs are uploaded to the target AWS Region frequently, you can achieve a Recovery Point Objective (RPO) of within the last few minutes.\n \nYou can setup Cross-Region Automated Backup replication with just a few clicks on the Amazon RDS Management Console or using the AWS SDK or CLI. Cross-Region Automated Backup replication is available on Amazon RDS for PostgreSQL, Amazon RDS for MariaDB, Amazon RDS for MySQL, Amazon RDS for Db2, Amazon RDS for Oracle, and Amazon RDS for Microsoft SQL Server. For more information, including instructions on getting started, read the Amazon RDS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
+      "pubDate": "2026-07-01T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "ga",
+        "now-available"
       ]
     },
     {
@@ -485,27 +537,6 @@
         "graviton",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-cf3ab64f06f0",
-      "title": "IAM Identity Center now enables programmatic AWS account access for customer managed applications",
-      "description": "IAM Identity Center now enables customer managed applications to programmatically access AWS accounts on behalf of their users, including the ability to discover accounts and roles assigned to a user and retrieve temporary credentials required for AWS account access.\n \nIf you have a customer managed application that authenticates users through an external identity provider (IdP), you can configure that IdP as a trusted token issuer (TTI) in IAM Identity Center. With this launch, you can now enable AWS account access for this application. Users who have already signed in through the IdP can access their assigned AWS accounts and obtain temporary security credentials for their authorized roles without a separate authentication flow. This eliminates redundant sign-in prompts that previously required users to re-authenticate even after signing in through their external identity provider.\n \nThis feature is available for organization instances of IAM Identity Center. IAM Identity Center administrators must explicitly enable AWS account access for each customer managed application. Only management account administrators or delegated administrators can enable this capability, ensuring centralized governance over which applications can access account-level resources.\n \nThis feature is available in all commercial AWS Regions, the AWS GovCloud (US) Regions, and the China Regions. To get started, navigate to the IAM Identity Center console, select your customer managed application, and enable AWS account access. For more information, see Enable AWS account access for customer managed applications in the IAM Identity Center User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-iam-identity-center-account-access-customer-managed-apps/",
-      "pubDate": "2026-06-30T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center",
-        "launch",
-        "ga"
       ]
     },
     {
@@ -640,21 +671,6 @@
       ],
       "tags": [
         "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-3d32b82e3b6b",
-      "title": "Sharing Capacity Blocks for ML Across Your AWS Organization",
-      "description": "When your data science team reserves GPU instances for a two-week training job but completes it in four days, that capacity has the potential to sit unused while your computer vision team waits another week to start their project. Now you can eliminate this GPU waste and scheduling conflict by sharing Capacity Blocks for ML […]",
-      "link": "https://aws.amazon.com/blogs/compute/sharing-capacity-blocks-for-ml-across-your-aws-organization/",
-      "pubDate": "2026-05-18T15:47:16.000Z",
-      "source": "computeBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga"
       ]
     },
     {
