@@ -1,8 +1,109 @@
 {
-  "lastUpdated": "2026-07-16T07:51:54.735Z",
+  "lastUpdated": "2026-07-17T07:49:12.884Z",
   "category": "general",
   "totalItems": 37,
   "items": [
+    {
+      "id": "aws-news-8920f9631524",
+      "title": "Amazon EC2 now surfaces the public SSM parameters associated with public AMIs",
+      "description": "Amazon EC2 now surfaces the AWS Systems Manager (SSM) Parameter Store parameters associated with public AMIs directly in the AMI metadata. When you describe a public AMI, the response includes the associated public SSM parameter, making it easy to discover and reference in your configurations.\n \nPreviously, finding the SSM parameter associated with a public AMI required searching through SSM parameter namespaces manually. Now, when you describe a public AMI, the response includes the public SSM parameter it is associated with. This allows you to discover the SSM parameter for a public AMI easily and use it as an alias that always resolves to the latest version, simplifying AMI updates across your infrastructure.\n  This capability is available to all customers at no additional cost in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, and AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions. To learn more, please visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters",
+      "pubDate": "2026-07-16T18:20:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-9b7fcf28c0b7",
+      "title": "Amazon S3 Event Notifications now include system-generated tags",
+      "description": "Amazon S3 Event Notifications now include system-generated tags in events delivered to all destinations including Amazon EventBridge, Amazon SQS, Amazon SNS, and AWS Lambda. System-generated tags are metadata labels attached to your bucket by AWS services. You can use these tags to filter events from thousands of buckets with a single EventBridge rule, instead of listing each bucket name individually.\n  To get started, enable S3 Event Notifications on your general purpose buckets through the AWS Management Console, AWS SDK, or AWS CLI. If AWS services like AWS CloudFormation have already applied system-generated tags to your buckets, S3 automatically includes them in new event notifications. System-generated tags in S3 Event Notifications are available at no additional cost in all AWS Regions and require no changes to existing configurations. To learn more, visit the S3 Event Notifications documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-event-notifications-system-generated-tags/",
+      "pubDate": "2026-07-16T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "eventbridge",
+        "sns",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "eventbridge",
+        "sns",
+        "sqs"
+      ]
+    },
+    {
+      "id": "aws-news-8532d2b148f2",
+      "title": "Amazon EC2 High Memory U7in-24TB instances now available in AWS Europe (Paris) region",
+      "description": "Amazon EC2 High Memory U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Europe (Paris) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-europe/",
+      "pubDate": "2026-07-16T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-dbfbc14a2a11",
+      "title": "AWS Backup extends logically air-gapped vault support to six additional AWS Regions",
+      "description": "AWS Backup logically air-gapped vaults are now available in six additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Mexico (Central), and Canada West (Calgary).\n \nWith logically air-gapped vaults now available in these Regions, you can store immutable, isolated backups that are locked by default and encrypted using AWS owned keys or customer-managed keys. You can back up directly to logically air-gapped vaults, copy backups across accounts and Regions, share vaults for recovery using AWS Resource Access Manager (RAM), and safeguard vault access during account compromise using Multi-party approval.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the feature documentation and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-logically-air-gapped-vault-regions/",
+      "pubDate": "2026-07-16T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4161d305f9c1",
+      "title": "Amazon CloudWatch Logs Insights adds 25 new query commands and functions",
+      "description": "Amazon CloudWatch Logs Insights query language now supports 25 new commands and functions that expand your ability to query, transform, correlate, and analyze logs. Customers analyzing logs in CloudWatch Logs Insights often need to perform statistical aggregation, handle null values in time-series data, compare logs across time windows, detect outliers, and enrich events with lookup data.\n  With this launch, CloudWatch Logs Insights adds type conversion and encoding functions (hexToAscii, hexToDec, decToHex), date and time functions (parseDate, formatDate, queryStartTime, queryEndTime, queryTimeRange), string functions (messageSize), JSON inspection functions (jsonArraySize, jsonArrayContains), and a conditional validation function (isNumeric). It also introduces statistical commands (variance, topk, countFrequent), row-sequencing and null-handling commands (autoregress, accum, filldown, fillmissing), sessionization and time-comparison commands (sessionize, logcompare), a data analysis command (outlier), query-composition and join commands (where, appendcols), and a lookup enrichment command (cidrlookup).\n  These commands and functions are available today in all commercial AWS Regions. To learn more, see the Amazon CloudWatch Logs documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-cloudwatch-logs-insights-ql/",
+      "pubDate": "2026-07-15T21:56:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-fba09b18c629",
       "title": "Amazon RDS and Aurora now support R8g and M8g database instances in additional AWS Regions",
@@ -500,112 +601,6 @@
       "tags": [
         "iam",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-6a3e8273da71",
-      "title": "Amazon EVS VCF 9.0 and 9.1 support",
-      "description": "Today, we are announcing that Amazon Elastic VMware Service (EVS) now supports VMware Cloud Foundation (VCF) 9.0 and 9.1.\n \nAmazon EVS lets you run the latest VCF software directly within your Amazon Virtual Private Cloud (VPC) on EC2 bare-metal instances. With this latest announcement, you now have complete control of the installation, operations, and management of the VMware virtualization solution running the VCF 9.0 and recently released VCF 9.1 versions. You can continue to use the same tools, processes, and skills on Amazon EVS that you use in your data center today, managing your VCF environment yourself or with an experienced AWS partner. With this, we’re also launching the Solutions for EVS GitHub repository with examples, templates, and infrastructure as code artifacts to help you get started.\n \nThis release is available in all regions where Amazon EVS is offered.\n \nFor more details, visit the launch blog, the Amazon EVS product detail page and user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-evs-vcf9",
-      "pubDate": "2026-07-06T17:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch",
-        "support",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-dccca72fd4ba",
-      "title": "AWS Certificate Manager now supports the ACME protocol for public certificates",
-      "description": "AWS Certificate Manager (ACM) now allows you to provision a fully managed ACME server endpoint that issues public TLS certificates with a 45 day validity from Amazon Trust Services using any ACMEv2-compatible client, including Certbot, cert-manager for Kubernetes, and acme.sh. With the CA/Browser Forum mandating 47-day certificate lifetimes by 2029, manual management of public certificates becomes untenable. ACME support in ACM gives developers a standards-based path to fully automate certificate issuance and renewal.\n  PKI administrators can create managed ACME endpoints with centralized governance controls: define domain scopes to restrict which certificates each client can issue, enforce policies on wildcard usage, and delegate certificate requests to application teams without distributing DNS credentials. Domain validation is performed once at the endpoint level, while application owners use standard ACME clients to request certificates. All activity is visible in the ACM console with AWS CloudTrail logging and Amazon CloudWatch metrics for auditability.\n  ACME support in ACM is available in all commercial AWS Regions. For pricing details, see the ACM pricing page. To get started, visit the AWS News blog post or read the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-certificate-manager-acme/",
-      "pubDate": "2026-07-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-94acc578ea52",
-      "title": "CloudWatch Application Signals now automatically captures errors, performance anomalies, and deployment events",
-      "description": "Today, AWS announces Service Events for Amazon CloudWatch Application Signals, which automatically captures exception and latency event snapshots, function-level performance data, and deployment events from instrumented services without additional code changes. Customers can now quickly identify whether a deployment has introduced new exceptions by navigating to CloudWatch > Application Signals > [Service] > Errors in the CloudWatch console.\n \nService Events is available to any application with CloudWatch Application Signals enabled. Customers instrument their applications with the ADOT SDKs or the Amazon CloudWatch Observability EKS add-on. Once Application Signals is active, Service Events begins capturing exception and latency event snapshots and deployment events automatically. Optionally, customers can gain deeper performance visibility by turning on function-call metrics.\n \nService Events is available in all commercial AWS Regions. Supported languages are Java, Python, and JavaScript.\n \nTo get started, see Monitor service events in the Amazon CloudWatch User Guide. Service Events data is captured as logs. Function call metrics are captured as OpenTelemetry metrics. Standard CloudWatch pricing applies. For details, see CloudWatch pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-service-events/",
-      "pubDate": "2026-07-06T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fcf15f47da06",
-      "title": "Amazon EC2 X8i instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8i instances are available in the Asia Pacific (Seoul), Asia Pacific (Malaysia) and Asia Pacific (Tokyo) regions. These instances are powered by custom Intel Xeon 6 processors available only on AWS. X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. They deliver up to 43% higher performance, 1.5x more memory capacity (up to 6TB), and 3.3x more memory bandwidth compared to previous generation X2i instances.\n  X8i instances are designed for memory-intensive workloads like SAP HANA, large databases, data analytics, and Electronic Design Automation (EDA). Compared to X2i instances, X8i instances offer up to 50% higher SAPS performance, up to 47% faster PostgreSQL performance, 88% faster Memcached performance, and 46% faster AI inference performance. X8i instances come in 14 sizes, from large to 96xlarge, including two bare metal options.\n  To get started, visit the AWS Management Console. X8i instances can be purchased via Savings Plans, On-Demand instances, and Spot instances. For more information visit X8i instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-x8i-instances-ICN-KUL-NRT-region/",
-      "pubDate": "2026-07-02T20:48:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-80dbf43ac41b",
-      "title": "Amazon CloudWatch supports creating alarms from log queries",
-      "description": "Amazon CloudWatch allows you to create alarms on log data using log queries, and get alerted on anomalies without leaving your log analysis workflow.\n \nWith today's launch, you can configure an alarm on log query and specify the alarm threshold directly, thereby eliminating the need to first create metric filters or custom metrics as intermediate steps. This streamlines the path to actively monitoring the data in your logs, and monitoring and alerting on it. For example, you can write a query to count error rates by service, set a threshold, and receive an alarm notification with log context when errors spike - all in a single workflow. Alarms created from log queries support all standard CloudWatch Alarm actions, including Amazon SNS notifications, and Amazon EventBridge integrations.\n \nThis feature is available in all commercial AWS Regions except Middle East (UAE), and Middle East (Bahrain). You can create log query-based alarms using the Amazon CloudWatch console, AWS Command Line Interface (AWS CLI), AWS CloudFormation, and AWS SDKs. For pricing details and documentation, see the Amazon CloudWatch pricing and visit the Amazon CloudWatch documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-cloudwatch-log-alarms/",
-      "pubDate": "2026-07-01T21:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "cloudwatch",
-        "launch",
-        "integration",
-        "support"
       ]
     },
     {
