@@ -1,8 +1,31 @@
 {
-  "lastUpdated": "2026-07-17T07:49:12.884Z",
+  "lastUpdated": "2026-07-18T07:23:52.127Z",
   "category": "machine-learning",
   "totalItems": 13,
   "items": [
+    {
+      "id": "aws-news-ec6c93cf15e9",
+      "title": "Amazon SageMaker HyperPod now supports partition-level topology for Slurm orchestrated clusters",
+      "description": "Amazon SageMaker HyperPod now supports network topology configuration at the partition level for Slurm orchestrated clusters. A single cluster can now run tree topology in one partition and block topology in another, with each partition using the topology best suited to its instance types. This improves distributed training performance by keeping job placement aligned with the interconnect characteristics of each instance type, so GPU-to-GPU communication is faster, NCCL collective operations are more efficient, and training throughput improves.\n  HyperPod determines the topology for each partition based on the instance types of its compute instance groups. Partitions with Amazon EC2 UltraServer instance types such as ml.p6e-gb200.36xlarge use block topology, and those with hierarchical-interconnect instance types such as ml.p5.48xlarge, ml.p5e.48xlarge, and ml.p5en.48xlarge use tree topology, while partitions with instance types that don't provide network topology information remain fully schedulable. HyperPod maintains this configuration automatically as the cluster changes through scale-up, scale-down, and node replacement events, so each partition's topology always reflects the current state of the cluster.\n  To get started, create or update a SageMaker HyperPod Slurm cluster running Slurm 25.11 or later with supported GPU instance types. Topology-aware scheduling is enabled by default and requires no configuration. This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see Using topology-aware scheduling in Amazon SageMaker HyperPod.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/hyperpod-partition-topology-slurm/",
+      "pubDate": "2026-07-17T15:16:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "ec2",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-9e0257b66528",
       "title": "Monitor Amazon SageMaker Pipelines cross-account with custom Amazon CloudWatch dashboards",
@@ -240,29 +263,6 @@
         "sagemaker",
         "unified studio",
         "glue",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-75ff5f9f4e07",
-      "title": "Amazon SageMaker HyperPod now supports disaggregated prefill and decode",
-      "description": "Amazon SageMaker HyperPod now supports Disaggregated Prefill and Decode (DPD), an inference optimization that separates the two phases of large language model (LLM) inference — prefill and decode — onto dedicated GPU pools and transfers the key-value (KV) cache between them over Elastic Fabric Adapter (EFA) using GPU-Direct RDMA. Customers running LLMs in production for chat assistants, agentic pipelines, retrieval-augmented generation, and long-document analysis need consistent per-token latency and predictable throughput under mixed traffic, but when prefill and decode share the same GPU, a single long-context request can stall token generation for every concurrent request and force customers to over-provision one phase to protect the other.\n  With DPD, customers run compute-bound prefill on one set of GPUs and memory-bandwidth-bound decode on another, so the two phases no longer contend for the same resources. This delivers more consistent per-token latency under sustained concurrency, higher goodput at strict latency SLOs, and the ability to scale prefill and decode capacity independently to match the input and output distribution of the workload. An intelligent router automatically directs long-context requests through the disaggregated path and sends shorter prompts directly to the decoder, so customers get the benefit on the traffic that needs it without paying transfer overhead on short prompts. Customers enable DPD by adding a `pdSpec` section to the same `InferenceEndpointConfig` custom resource they already use for inference endpoints on the HyperPod Inference Operator, and DPD is composable with the existing KV cache offloading and intelligent routing features on HyperPod.\n  DPD is available for SageMaker HyperPod clusters using the EKS orchestrator on EFA-capable instance types in all AWS Regions where Amazon SageMaker HyperPod is available. To learn more, see Disaggregated Prefill and Decode for HyperPod inference in the Amazon SageMaker AI Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-sagemaker-hyperpod-dpd/",
-      "pubDate": "2026-07-06T21:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "eks"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "eks",
         "ga",
         "support"
       ]

@@ -1,8 +1,53 @@
 {
-  "lastUpdated": "2026-07-17T07:49:12.884Z",
+  "lastUpdated": "2026-07-18T07:23:52.127Z",
   "category": "general",
   "totalItems": 37,
   "items": [
+    {
+      "id": "aws-news-a2533f7c0e38",
+      "title": "Amazon GameLift Streams now supports IAM role credentials for stream sessions",
+      "description": "Amazon GameLift Streams now supports assigning an IAM role to a stream session, enabling your application to securely access resources in your AWS account, such as Amazon S3 buckets and DynamoDB tables. With this launch, you can pass a RoleArn parameter when starting a stream session, and your application automatically receives short-lived, auto-refreshing AWS credentials through the standard AWS SDK credential resolution chain — no application code changes required.\n \nPreviously, customers who needed their streamed applications to access AWS services had to embed long-lived access keys in application bundles or pass them as environment variables, creating security and operational challenges. Now, Amazon GameLift Streams handles credential vending and automatic refresh using the same container credential provider mechanism trusted by Amazon ECS task roles and Amazon EKS Pod Identity. Role misconfigurations are validated at session start, surfacing clear errors immediately rather than during runtime.\n \nYou can also configure IAM roles directly in the Amazon GameLift Streams console, which provides a pre-filled trust policy template to simplify role setup.\n \nIAM role support for stream sessions is available in all AWS Regions where Amazon GameLift Streams is available.\n \nTo learn more, see Session Credentials Setup in the Amazon GameLift Streams Developer Guide: https://docs.aws.amazon.com/gameliftstreams/latest/developerguide/session-credentials-setup.html",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams-iam/",
+      "pubDate": "2026-07-17T17:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "dynamodb",
+        "ecs",
+        "eks",
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "dynamodb",
+        "ecs",
+        "eks",
+        "iam",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-52de1ac24cf0",
+      "title": "Eclipse Dataspace Components on AWS: Architecture patterns in production",
+      "description": "Running Eclipse Dataspace Components (EDC) connectors in production on AWS requires deliberate architecture decisions around isolation, managed services, and security layering. In Part 1 of this series, we covered the fundamentals of data space architectures and EDC per the International Data Space Association’s (IDSA) standards. If you are new to EDC, we recommend starting there. […]",
+      "link": "https://aws.amazon.com/blogs/architecture/eclipse-dataspace-components-on-aws-architecture-patterns-in-production/",
+      "pubDate": "2026-07-17T16:03:44.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds"
+      ]
+    },
     {
       "id": "aws-news-8920f9631524",
       "title": "Amazon EC2 now surfaces the public SSM parameters associated with public AMIs",
@@ -70,7 +115,7 @@
     {
       "id": "aws-news-dbfbc14a2a11",
       "title": "AWS Backup extends logically air-gapped vault support to six additional AWS Regions",
-      "description": "AWS Backup logically air-gapped vaults are now available in six additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Mexico (Central), and Canada West (Calgary).\n \nWith logically air-gapped vaults now available in these Regions, you can store immutable, isolated backups that are locked by default and encrypted using AWS owned keys or customer-managed keys. You can back up directly to logically air-gapped vaults, copy backups across accounts and Regions, share vaults for recovery using AWS Resource Access Manager (RAM), and safeguard vault access during account compromise using Multi-party approval.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the feature documentation and pricing page.",
+      "description": "AWS Backup logically air-gapped vaults are now available in six additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Mexico (Central), and Canada West (Calgary).\n \nWith logically air-gapped vaults now available in these Regions, you can store immutable, isolated backups that are locked by default and encrypted using AWS owned keys or customer-managed keys. You can back up directly to logically air-gapped vaults, copy backups across accounts and Regions, share vaults for recovery using AWS Resource Access Manager (RAM), and safeguard vault access during account compromise using Multi-party approval.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the feature documentation and pricing page.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-logically-air-gapped-vault-regions/",
       "pubDate": "2026-07-16T10:00:00.000Z",
       "source": "whatsNew",
@@ -586,24 +631,6 @@
       ]
     },
     {
-      "id": "aws-news-ea7b491b0ffd",
-      "title": "AWS Security Hub adds impact analysis for exposure findings",
-      "description": "Today, AWS Security Hub adds impact analysis to exposure findings, helping security teams understand the full scope of what an attacker could reach if an exposure is exploited. Impact analysis extends exposure findings by mapping the downstream resources that could be compromised beyond the initially exposed resource, giving teams deeper visibility into organizational risk.\n  Security Hub analyzes the effective permissions of IAM principals associated with exposed resources to identify privilege escalation paths to other resources in your account. The resulting scope of impact is displayed in the potential attack path graph, and a new Impact Assessment tab shows the prioritized chains of resources an attacker could traverse along with the specific permissions at each step. Security Hub factors the scope of impact into its severity scoring for exposure findings, and adjusts existing exposures as their scope of impact is identified or changes, so that exposures with greater downstream reach are prioritized appropriately.\n  To learn more, see Understanding exposure findings in the AWS Security Hub User Guide and the AWS Security Hub product page. For the full list of AWS Regions where Security Hub is available, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/impact-analysis-aws-security-hub/",
-      "pubDate": "2026-07-06T21:45:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-da87679be1f0",
       "title": "Amazon Redshift delivers faster performance for BI dashboards and real-time analytics",
       "description": "Today, we’re excited to announce a new performance optimization in Amazon Redshift that improves the response times of low-latency SQL queries, such as those used in real-time analytics applications or generated by BI dashboards. With this enhancement, you can experience improved query latencies because of a reduction in the time Amazon Redshift spends preparing SQL queries for execution. SQL queries start faster, so they return results quicker.",
@@ -685,22 +712,6 @@
       ],
       "tags": [
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-414ab402c5c5",
-      "title": "Scaling oncology patient support: How New York Cancer and Blood Specialists transformed customer experience with AWS and Pronetx, now part of Caylent",
-      "description": "This post details how NYCBS partnered with Amazon Web Services (AWS) and AWS partner Pronetx (now part of Caylent) to migrate to Amazon Connect Customer, the AWS cloud contact center service. The migration delivered a 54 percent improvement in patient enrollment and transformed the way NYCBS connects with the patients who need them most.",
-      "link": "https://aws.amazon.com/blogs/architecture/scaling-oncology-patient-support-how-new-york-cancer-and-blood-specialists-transformed-customer-experience-with-aws-and-pronetx-now-part-of-caylent/",
-      "pubDate": "2026-06-01T21:45:52.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "improvement",
-        "support"
       ]
     },
     {
