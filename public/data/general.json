@@ -1,8 +1,64 @@
 {
-  "lastUpdated": "2026-07-20T08:34:33.845Z",
+  "lastUpdated": "2026-07-21T08:03:59.607Z",
   "category": "general",
   "totalItems": 37,
   "items": [
+    {
+      "id": "aws-news-92ad8b1897ae",
+      "title": "Selectively log network activity events by identity in AWS CloudTrail",
+      "description": "Today, AWS launches enhanced event filtering for network activity events for VPC end points, a CloudTrail event type that captures actions transmitted through a Virtual Private Cloud Endpoint. Customers can now control which network activity events are logged based on the IAM user identity making the API call. For example, you can configure selectors to log only access denied events when the calling user identity is not on a known safe list. This lets you capture unauthorized access attempts while excluding routine traffic from trusted identities, reducing both logging costs and noise.\n \nWith UserIdentity filtering, customers building a data perimeter strategy can focus on network activity event logging for scenarios that matter most in security. You can configure selectors to log only VpceAccessDenied events from identities outside a trusted set of IAM roles. This enables detection of potential data exfiltration attempts through VPC endpoints without the cost of logging every successful API call from approved principals. You can combine UserIdentity conditions with existing fields like eventName or vpcEndpointId for fine-grained control over what gets recorded.\n \nYou can use this feature via the AWS Management Console, AWS Command Line Interface, and AWS SDKs. This feature is available in all AWS Regions where CloudTrail network activity events are supported. To learn more about Network Activity events, visit the AWS CloudTrail user guide or read AWS Blog on how to enable Network Activity Events.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-cloudtrail-filter-useridentity-advance-selectors/",
+      "pubDate": "2026-07-20T17:34:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-221f9c3e243b",
+      "title": "Serverless ICYMI Q2 2026",
+      "description": "In this 33rd quarterly recap post, discover the most impactful AWS serverless launches, features, and resources from Q2 2026 that you might have missed. Stay current with the latest serverless innovations that can improve your applications. In case you missed our last ICYMI, read about what happened in Q1 2026. AWS Lambda MicroVMs AWS Lambda […]",
+      "link": "https://aws.amazon.com/blogs/compute/serverless-icymi-q2-2026/",
+      "pubDate": "2026-07-20T16:40:00.000Z",
+      "source": "computeBlog",
+      "services": [
+        "nova",
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "nova",
+        "lambda",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-2bd6f7b9d749",
+      "title": "Amazon Managed Service for Apache Flink now supports Apache Flink 2.3",
+      "description": "Amazon Managed Service for Apache Flink now supports Apache Flink version 2.3. This release includes adaptive partition selection for improved backpressure handling, so applications run more smoothly under uneven load. It also introduces better handling of out-of-order updates in change data capture (CDC) pipelines that improves data correctness, and new SQL functions make it easier to convert between changelog and standard streams. For a full list of improvements, see the Amazon Managed Service for Apache Flink release notes.\n  Amazon Managed Service for Apache Flink makes it easier to transform and analyze streaming data in real time, by simplifying the setup, operation, and scaling of Apache Flink applications. Developers and data engineers can focus on building and running their streaming applications without managing the underlying infrastructure.\n  To get started, create a new application on Apache Flink 2.3, or use in-place version upgrades to move compatible applications to the Flink 2.3 runtime for a simpler and faster upgrade. Apache Flink 2.3 is available across all AWS Regions where Amazon Managed Service for Apache Flink is offered. To learn more, see the Amazon Managed Service for Apache Flink Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-service-flink-2-3/",
+      "pubDate": "2026-07-20T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a2533f7c0e38",
       "title": "Amazon GameLift Streams now supports IAM role credentials for stream sessions",
@@ -568,66 +624,6 @@
       "tags": [
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-6f6758f8fa48",
-      "title": "AWS Security Hub extends unified security management to Microsoft Azure",
-      "description": "Today, AWS announces that AWS Security Hub now monitors Microsoft Azure resources, extending risk analytics, cloud security posture management, vulnerability management, and security response management across both clouds. Many AWS customers running workloads in AWS and Azure have had to operate separate security tools for each environment, making it difficult to prioritize risks holistically or respond consistently. Security Hub now provides a single, unified experience to detect and respond to risks across your AWS and Azure environments.\n  Security Hub automatically discovers Azure resources, including Azure Virtual Machines (VMs), Azure Container Registry (ACR) container images, Azure Function Apps, and Azure identities, and evaluates them for misconfigurations, internet exposure, and software vulnerabilities. You receive posture checks against security standards including the CIS Benchmarks™ for Microsoft Azure Foundations, unified resource inventory, risk and exposure analysis, and automated response through existing EventBridge integrations. AWS and Azure findings appear in the same prioritized view with the same finding formats and automation workflows, so security teams can operate from one console rather than switching between tools.\n  Security Hub includes an independent 30-day free trial to monitor Azure resources that begins once you create your integration with Microsoft Azure. After the trial, you pay the same price for monitoring Azure resources and equivalent AWS resources. You can create an integration to Azure from all AWS Regions where Security Hub is available except Middle East (UAE), Middle East (Bahrain), Asia Pacific (Taipei), and Asia Pacific (New Zealand). You can also create integrations to Microsoft Azure for AWS Security Hub CSPM for posture management checks and Amazon Inspector for vulnerability management independently from AWS Security Hub. To learn more, see AWS Security Hub Pricing and AWS Security Hub documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-security-hub-supports-monitoring-microsoft-azure/",
-      "pubDate": "2026-07-07T18:21:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "eventbridge",
-        "ga",
-        "integration"
-      ]
-    },
-    {
-      "id": "aws-news-7d2d801e322d",
-      "title": "Amazon EMR Serverless now supports larger worker sizes to run more compute and memory intensive workloads",
-      "description": "Amazon EMR Serverless now offers larger worker configurations of 32 vCPUs with up to 244 GB of memory, allowing you to run more compute and memory-intensive workloads. Previously, the largest worker configuration available on EMR Serverless was 16 vCPUs with up to 120 GB of memory. Larger workers can help you improve the runtime performance as well as cost profiles for your workloads.\n \nFor shuffle-heavy workloads, larger workers reduce inefficient data transfers between executors. For jobs with data skew, larger workers reduce the chances of out-of-memory failures. For jobs that need to cache data, larger workers allow holding more data in memory, boosting job performance. To take advantage of these benefits, we recommend using larger workers for your compute and memory-intensive Spark and Hive workloads.\n \nTo learn more about different worker configurations, please visit EMR Serverless documentation. Larger workers are available in all AWS Regions where EMR Serverless is available.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-emr-serverless/",
-      "pubDate": "2026-07-07T17:06:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "emr"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "emr",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-39880ffee608",
-      "title": "Amazon EC2 C8ine instances are now available in AWS Europe (Frankfurt) region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8ine instances are available in the AWS Europe (Frankfurt) region. C8ine instances are powered by custom sixth generation Intel Xeon Scalable processors, available only on AWS. These instances feature the latest sixth generation AWS Nitro cards, delivering up to 43% higher performance compared to previous generation C6in instances.\n \nC8ine instances offer up to 2.5 times higher packet performance per vCPU versus prior generation network optimized instances, providing up to 2x higher network throughput for traffic going through Internet gateways compared to existing C6in network optimized instances. C8ine instances are designed for security and network virtual appliances, including virtual firewalls, load balancers, and Telco 5G UPF workloads.\n \nAmazon EC2 C8ine instances are available in US East (N. Virginia), US West (Oregon), Asia Pacific (Tokyo), and Europe (Frankfurt) regions. C8ine instances are available via Savings Plans and On-Demand instances. For more information, visit the Amazon EC2 C8i instance pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-c8ine-aws-frankfurt/",
-      "pubDate": "2026-07-07T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "ga",
-        "now-available"
       ]
     },
     {

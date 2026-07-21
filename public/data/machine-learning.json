@@ -1,8 +1,30 @@
 {
-  "lastUpdated": "2026-07-20T08:34:33.845Z",
+  "lastUpdated": "2026-07-21T08:03:59.607Z",
   "category": "machine-learning",
-  "totalItems": 13,
+  "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-5c538a5e0371",
+      "title": "Govern Amazon Redshift Data Warehouses Data Across Accounts using Amazon SageMaker Unified Studio",
+      "description": "In this post, we show you how to use Amazon SageMaker Unified Studio to implement cross-account data sharing in Amazon Redshift using data mesh principles. We demonstrate how to build a scalable data mesh architecture that supports secure, auditable data sharing across AWS accounts while reducing operational burden.",
+      "link": "https://aws.amazon.com/blogs/big-data/govern-amazon-redshift-data-across-accounts-with-sagemaker-unified-studio/",
+      "pubDate": "2026-07-20T16:48:33.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "redshift"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "redshift",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-ec6c93cf15e9",
       "title": "Amazon SageMaker HyperPod now supports partition-level topology for Slurm orchestrated clusters",
@@ -127,24 +149,6 @@
       ]
     },
     {
-      "id": "aws-news-46c3c2ac0c26",
-      "title": "Real-time dental image verification with Amazon SageMaker AI at Henry Schein One",
-      "description": "This post describes how Henry Schein One closed that gap by building Image Verify, an AI-powered quality verification system on Amazon SageMaker AI that evaluates dental X-ray quality at the point of capture, in real time, across thousands of locations. The system went from concept to over 10,000 active locations within months and has already processed over 11 million X-rays and growing at 1.5 million per week. Henry Schein One is now scaling toward 40,000 locations globally across four regions.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/real-time-dental-image-verification-with-amazon-sagemaker-ai-at-henry-schein-one/",
-      "pubDate": "2026-07-10T15:33:47.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-1d1ce9fe8fcd",
       "title": "Amazon SageMaker HyperPod now supports deep health checks for Slurm clusters with continuous provisioning",
       "description": "Amazon SageMaker HyperPod now supports deep health checks for Slurm-orchestrated clusters created with continuous provisioning, enabling you to proactively verify GPU accelerator health on running instances at any time. Continuous provisioning lets you start training quickly and scale instance groups asynchronously without all-or-nothing failures, and you can now pair that flexibility with comprehensive hardware validation as instances come online. This capability addresses a critical challenge where even a single unhealthy node can waste hours of compute time and delay critical workloads.\n  With deep health checks, you can target entire instance groups or specific instances to run comprehensive hardware stress tests and connectivity tests before committing compute resources to a job. Because continuous provisioning adds worker nodes to your Slurm cluster asynchronously as capacity becomes available, you can run deep health checks on each new node as it comes online, validating hardware before scheduling jobs on it and without interrupting workloads already running on healthy nodes. Progress and results are visible at both the instance group and instance level through the SageMaker console and APIs, providing complete visibility into GPU health, network connectivity, and multi-node communication performance. Instances undergoing checks are automatically isolated from workload scheduling and returned to service upon passing. When paired with HyperPod's automatic node recovery capability, instances that fail are automatically rebooted or replaced, ensuring cluster health.\n  This capability is available in all regions where Amazon SageMaker HyperPod is available. To learn more about on-demand deep health checks and continuous provisioning, see the Amazon SageMaker HyperPod User Guide.",
@@ -185,62 +189,6 @@
         "sagemaker",
         "rds",
         "glue",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5b607c5fd560",
-      "title": "Amazon ECS Managed Instances reduces GPU management fees by up to 60%",
-      "description": "Amazon Elastic Container Service (Amazon ECS) Managed Instances now offers significantly reduced management fees for GPU and accelerated instance types. Beginning July 1, 2026, G-series ECS management fees are reduced by 35%, and P-series and AWS Trainium fees are reduced by 60%. These reductions apply automatically and no action is required from customers already using GPU instances with ECS Managed Instances.\n  With ECS Managed Instances, you get the application performance you want and the simplicity you need. Simply define your task requirements such as the number of vCPUs, memory size, and CPU architecture, and Amazon ECS automatically provisions, configures and operates most optimal EC2 instances within your AWS account using AWS-controlled access. You can also specify desired instance types, including GPU-accelerated, network-optimized, and burstable performance, to run your workloads on the instance families you prefer. ECS Managed Instances includes capabilities built specifically for accelerated workloads: GPU metrics (utilization, memory, and temperature) through Amazon CloudWatch Container Insights, and automatic health monitoring that detects GPU-specific hardware failures and replaces unhealthy instances to minimize workload disruption. With today's pricing update, customers running GPU workloads on ECS Managed Instances can now benefit from fully managed infrastructure at lower management fees.\n  This pricing update is available in all AWS Regions where ECS Managed Instances is available. For the complete updated rate table, see ECS Managed Instances pricing. Amazon EKS is implementing identical management fee reductions for GPU instances on EKS Auto Mode. See the EKS What's New Post for details. To learn more about ECS Managed Instances, visit the feature page, documentation, and AWS News launch blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-managed-instances-gpu-price/",
-      "pubDate": "2026-07-07T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "trainium",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudwatch"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "trainium",
-        "ec2",
-        "ecs",
-        "eks",
-        "cloudwatch",
-        "launch",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-f6ed62fa8328",
-      "title": "Amazon SageMaker now supports data lineage in IAM-based domains",
-      "description": "Amazon SageMaker Unified Studio now supports OpenLineage compatible data lineage in IAM-based domains, capturing lineage events from Apache Spark jobs run on Amazon EMR, AWS Glue, SageMaker Visual ETL, and notebooks. This capability is already available in IAM Identity Center-based domains. The interactive lineage graph provides an aggregate visual representation of how data moves from source to consumption, with configurable graph depth, event timestamp mode for detailed column-level lineage, and a dataset-only view for simplified visualization. For both IAM-based and IAM Identity Center-based domains, you can programmatically publish, query, and manage data lineage from OpenLineage compatible applications. You can now also remove published events using the DeleteLineageEvent API.\n \nThis feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available. To get started, visit the Amazon SageMaker Unified Studio documentation and API reference.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-sagemaker-data-lineage-iam-domain",
-      "pubDate": "2026-07-07T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "emr",
-        "iam",
-        "iam identity center",
-        "glue"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "emr",
-        "iam",
-        "iam identity center",
-        "glue",
-        "ga",
         "support"
       ]
     },
