@@ -1,8 +1,37 @@
 {
-  "lastUpdated": "2026-07-22T08:04:42.998Z",
+  "lastUpdated": "2026-07-23T08:07:36.222Z",
   "category": "industry-cases",
-  "totalItems": 28,
+  "totalItems": 27,
   "items": [
+    {
+      "id": "aws-news-62bd1aa1b21d",
+      "title": "AWS Secrets Manager now publishes secret update notifications to Amazon EventBridge",
+      "description": "AWS Secrets Manager now automatically publishes events to Amazon EventBridge whenever your secret values change, enabling you to build event-driven workflows that respond in real time to secret updates.\n  Until now, you had to rely on AWS CloudTrail events parsed into EventBridge to know when a secret value changed — requiring you to match multiple API events such as rotation success, PutSecretValue, and UpdateSecretValue. With this launch, Secrets Manager publishes events directly into EventBridge whenever your secret value changes. You can use EventBridge rules to detect when the active secret value changes — such as during rotation — and route notifications to targets like AWS Lambda, Amazon SNS, Amazon SQS, or Amazon Step Functions. This enables you to proactively refresh cached credentials in your applications, restart dependent services, or update compliance reports for secret rotation.\n  Secret update notifications are published to your default event bus automatically with no additional configuration or opt-in required. This feature is available in all AWS Regions where AWS Secrets Manager is available at no additional cost. To get started, see secret event notifications in the AWS Secrets Manager User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/secrets-manager-update-notifications",
+      "pubDate": "2026-07-22T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "sqs",
+        "secrets manager"
+      ],
+      "categories": [
+        "industry-cases"
+      ],
+      "tags": [
+        "lambda",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "sqs",
+        "secrets manager",
+        "launch",
+        "update"
+      ]
+    },
     {
       "id": "aws-news-c0cded329ff8",
       "title": "Custom OS installation now available on AWS DeepRacer devices",
@@ -179,7 +208,7 @@
     {
       "id": "aws-news-51489c2bcec8",
       "title": "Amazon Location Service enhances Places APIs with new address and search options",
-      "description": "Today, Amazon Location Service announced new enhancements to its Places APIs that give developers greater control over address name formatting, multilingual address, travel-optimized POI search, and drive-through data. These capabilities span the Geocode, ReverseGeocode, GetPlace, Suggest, Autocomplete, SearchNearby, and SearchText APIs.\n \n \n \nDevelopers can now control how address component names are returned using the new AddressNamesMode parameter. By default, addresses are returned with normalized (canonical) names; developers can instead request matched names (echoing input) or administrative (government hierarchy) names. The new AddressTranslations parameter returns place name translations in 50+ languages, making it easier to build multilingual applications. A TravelMode parameter optimizes Suggest and SearchText results for users on the move, improving relevance for navigation and in-vehicle scenarios. Additionally, GetPlace, Suggest, SearchNearby, and SearchText now return a DriveThrough attribute indicating whether a place offers drive-through service — useful for logistics, food delivery, and navigation applications. The Geocode API also now supports a new Parsing.AdditionalInfo response field with additional detail about how the input address was interpreted.\n \n\n Amazon Location Service is available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), South America (São Paulo), and AWS GovCloud (US-West).\n  To get started, see the Amazon Location Service Places API reference, or learn more about Places in the Amazon Location Service Developer Guide.",
+      "description": "Today, Amazon Location Service announced new enhancements to its Places APIs that give developers greater control over address name formatting, multilingual address, travel-optimized POI search, and drive-through data. These capabilities span the Geocode, ReverseGeocode, GetPlace, Suggest, Autocomplete, SearchNearby, and SearchText APIs.\n \nDevelopers can now control how address component names are returned using the new AddressNamesMode parameter. By default, addresses are returned with normalized (canonical) names; developers can instead request matched names (echoing input) or administrative (government hierarchy) names. The new AddressTranslations parameter returns place name translations in 50+ languages, making it easier to build multilingual applications. A TravelMode parameter optimizes Suggest and SearchText results for users on the move, improving relevance for navigation and in-vehicle scenarios. Additionally, GetPlace, Suggest, SearchNearby, and SearchText now return a DriveThrough attribute indicating whether a place offers drive-through service — useful for logistics, food delivery, and navigation applications. The Geocode API also now supports a new Parsing.AdditionalInfo response field with additional detail about how the input address was interpreted.\n \nAmazon Location Service is available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), South America (São Paulo), and AWS GovCloud (US-West).\n  To get started, see the Amazon Location Service Places API reference, or learn more about Places in the Amazon Location Service Developer Guide.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-location-service-enhanced-address-search",
       "pubDate": "2026-07-10T17:26:00.000Z",
       "source": "whatsNew",
@@ -386,24 +415,6 @@
       "tags": []
     },
     {
-      "id": "aws-news-9a8147ee0c61",
-      "title": "How Samsung achieved real-time pricing with AWS Lambda Response Streaming",
-      "description": "In this post, we walk through the legacy architecture challenges, the stateless streaming solution, key implementation patterns, and performance results—a pattern you can apply if you’re building high-traffic APIs that aggregate data from multiple backend sources.",
-      "link": "https://aws.amazon.com/blogs/architecture/how-samsung-achieved-real-time-pricing-with-aws-lambda-response-streaming/",
-      "pubDate": "2026-06-15T14:13:36.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "lambda",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-51ce6a79ab08",
       "title": "AWS Nitro Isolation Engine: Formally verifying the hypervisor in the AWS Nitro System",
       "description": "Ali Saidi is a VP and Distinguished Engineer at AWS Millions of customers use the AWS Nitro System to protect their most sensitive workloads, and AWS is an industry leader in innovation to secure customer data. Helping our customers keep their data secure and confidential is our highest priority, and we continue to make investments […]",
@@ -418,21 +429,6 @@
       ],
       "tags": [
         "nova"
-      ]
-    },
-    {
-      "id": "aws-news-305a3a394fed",
-      "title": "Align your architecture backlog with Tech Roadmap Prioritization (TRP)",
-      "description": "In this post, we show you how to run a one-hour prioritization session with your stakeholders, plot competing initiatives on a shared matrix by cost and impact and turn the result into an actionable architecture backlog - using a framework called Tech Roadmap Prioritization (TRP).",
-      "link": "https://aws.amazon.com/blogs/architecture/align-your-architecture-backlog-with-tech-roadmap-prioritization-trp/",
-      "pubDate": "2026-06-03T18:08:51.000Z",
-      "source": "architectureBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "roadmap"
       ]
     },
     {

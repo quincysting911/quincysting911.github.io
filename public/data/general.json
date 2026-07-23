@@ -1,8 +1,118 @@
 {
-  "lastUpdated": "2026-07-22T08:04:42.998Z",
+  "lastUpdated": "2026-07-23T08:07:36.222Z",
   "category": "general",
-  "totalItems": 37,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-2640d7ac1cd3",
+      "title": "Amazon EC2 C7a instances are now available in the US West (N. California) Region",
+      "description": "Starting today, the compute optimized Amazon EC2 C7a instances are now available in AWS US West (N. California) Region. C7a instances, powered by 4th Gen AMD EPYC processors (code-named Genoa) with a maximum frequency of 3.7 GHz, deliver up to 50% higher performance compared to C6a instances.\n  C7a instances offer new processor capabilities such as AVX-512, VNNI, and bfloat16. They feature Double Data Rate 5 (DDR5) memory to enable high-speed access to data in memory and 2.25x more memory bandwidth compared to C6a instances, making these instances ideal for even latency sensitive workloads. C7a instances offer 12 sizes from medium to 48xlarge, including a bare-metal size. And with the launch of C7a instances, customers can attach up to 128 EBS volumes to an EC2 instance — by comparison, C6a instances allow up to 28 EBS volume attachments to an EC2 instance. These instances are built on the AWS Nitro System and ideal for high performance, compute-intensive workloads such as batch processing, distributed analytics, high performance computing (HPC), ad serving, highly-scalable multiplayer gaming, and video encoding.\n  C7a instances are available through On-Demand, Spot Instances, and Savings Plans. To get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, see C7a instances.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-c7a-instances-us-west-ncalifornia-region/",
+      "pubDate": "2026-07-22T21:42:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-a993196d32f2",
+      "title": "Amazon EC2 M8a instances now available in the Asia Pacific (Hyderabad) region",
+      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Asia Pacific (Hyderabad) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements.\n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-m8a-instances-asia-pacific-hyderabad-region/",
+      "pubDate": "2026-07-22T20:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-08b6784d744d",
+      "title": "AWS Network Load Balancer now supports Listener Rules for custom traffic routing",
+      "description": "Network Load Balancer (NLB) now supports listener rules allowing you to route connections to different target groups based on the source IP address type. With listener rules, a single dual-stack NLB sends IPv6 client traffic to IPv6 targets and IPv4 client traffic to IPv4 targets, preserving the original client IP address end to end for both address families.\n  Previously, serving both IPv4 and IPv6 clients from one NLB meant accepting a tradeoff: either run two separate load balancers (one per IP version) and split clients with DNS, or send all traffic to one target group and lose the original client IP through protocol translation. Listener rules remove that tradeoff by enabling conditional routing at Layer 3, directing each connection to a same-family target group with no translation and no additional infrastructure.\n  You can add listener rules to existing dual-stack NLBs without recreating them. Rules are supported on TCP, UDP, TCP_UDP, and TLS listeners and work alongside existing NLB features including connection draining, target group stickiness, cross-zone load balancing, weighted target groups, and client IP preservation.\n  Listener rules for Network Load Balancer are available in all AWS commercial Regions and the AWS GovCloud (US) Regions at no additional charge. Standard NLB pricing for load balancer hours and LCUs applies. To get started, see this AWS blog, and the Network Load Balancer User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-network-load-balancer-supports-listener-rules/",
+      "pubDate": "2026-07-22T19:13:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-48d22db75b87",
+      "title": "AWS Lambda durable functions now supports customer managed key encryption",
+      "description": "AWS Lambda durable functions now supports encryption of durable execution data with an AWS Key Management Service (AWS KMS) customer managed key. Lambda durable functions lets you build long-running, reliable workflows directly in your Lambda function code with automatic state management. Lambda encrypts execution state at rest by default with an AWS owned key. Now with support for AWS KMS, you can choose and manage the encryption key yourself.\n \nIf you operate in regulated industries such as financial services or healthcare, your data governance policies may require customer-owned encryption keys. You can now configure a customer managed key for durable execution data, giving you control over key rotation and who can access execution history and state. The durable execution key operates independently of the function-level key that protects environment variables and SnapStart snapshots, so you can manage access to execution data separately from function configuration.\n \nThis feature is available in all AWS Regions where Lambda durable functions is available. Standard AWS KMS charges apply for customer managed keys. There are no additional Lambda charges for this feature.\n \nTo learn more, see Encrypting Lambda durable execution data in the AWS Lambda Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/durablefunctions-cmk/",
+      "pubDate": "2026-07-22T18:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-aef8cdbdd771",
+      "title": "Amazon EKS now supports EFA and placement groups on Amazon EKS Auto Mode and Karpenter",
+      "description": "Amazon Elastic Kubernetes Service (EKS) now supports Amazon EC2 placement groups and Elastic Fabric Adapter (EFA) network device configuration for node pools on EKS Auto Mode and the open-source Karpenter project, enabling you to optimize EKS workloads for performance and availability. These capabilities allow you to control EFA network interface configuration and how EC2 instances are physically distributed across AWS infrastructure for distributed training and inference workloads.\n  With EKS Auto Mode and Karpenter’s EFA configuration, you can configure network interfaces as EFA-only or standard ENI on EFA-capable instances with both dynamic and static capacity node pools. EFA-only interfaces do not consume IP addresses, giving you fine-grained control over IP utilization in your VPC while achieving full interconnect bandwidth. With placement group support, you can launch EC2 instances using cluster, spread, or partition strategies directly from your EKS Auto Mode or Karpenter node pool configuration, giving you control over how instances are physically distributed without additional operational workarounds. Together, these capabilities let you optimize for the performance, availability, and fault isolation characteristics your workloads require, whether that's maximizing throughput for distributed training jobs or minimizing blast radius for critical production services.\n  These features are available in all AWS Regions where Amazon EKS is available. To get started and learn more, see the EKS Auto Mode User Guide and Karpenter documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-efa-placement-groups/",
+      "pubDate": "2026-07-22T14:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "eks",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-39aea34f6d1f",
+      "title": "AWS Direct Connect announces 100G expansion in Lima, Peru",
+      "description": "Today, AWS announced the expansion of 100 Gbps dedicated connections at the existing AWS Direct Connect location within the Cirion data center in Lima, Peru. You can now establish private, direct network access to all public AWS Regions (except those in China), AWS GovCloud Regions, and AWS Local Zones from this location. This is the first AWS Direct Connect location in Peru to provide 100 Gbps connections with MACsec encryption capabilities.\n \nThe Direct Connect service enables you to establish a private, physical network connection between AWS and your data center, office, or colocation environment. These private connections can provide a more consistent network experience than those made over the public internet.\n \nFor more information on the over 150 Direct Connect locations worldwide, visit the locations section of the Direct Connect product detail pages. Or, visit our getting started page to learn more about how to purchase and deploy Direct Connect.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-direct-connect-100g-lima/",
+      "pubDate": "2026-07-22T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-e1cc568c5e33",
       "title": "Amazon EC2 C6in instances are now available in Asia Pacific (Taipei) Region",
@@ -418,6 +528,23 @@
       ]
     },
     {
+      "id": "aws-news-3452e8fd026e",
+      "title": "Amazon Aurora DSQL is now available in Europe (Spain)",
+      "description": "Starting today, Amazon Aurora DSQL is available for single-Region clusters in the Europe (Spain) Region. Aurora DSQL is the fastest serverless, distributed SQL database, with active-active high availability and multi-Region strong consistency. It enables you to build always-available applications with virtually unlimited scalability, the highest availability, and zero infrastructure management, making scaling and resilience effortless for your applications.\n  \nWith this launch, Aurora DSQL is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Canada West (Calgary), South America (São Paulo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Spain), Europe (Stockholm), Asia Pacific (Hong Kong), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-available-in-spain/",
+      "pubDate": "2026-07-14T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
       "id": "aws-news-8f4b6b78c85c",
       "title": "Amazon WorkSpaces Personal simplifies bulk PCoIP to DCV protocol migration",
       "description": "Amazon WorkSpaces Personal now provides automated rollback and support for PCoIP to DCV protocol migration of stopped WorkSpaces, building on the recently launched console-based migration workflow and checkpoint snapshot support. These new capabilities enable administrators to migrate WorkSpaces at scale with minimal manual intervention.\n  Amazon DCV is a high-performance streaming protocol built by AWS that powers Amazon WorkSpaces services. By migrating to DCV, customers gain access to broader operating system support including Windows 11 and Windows Server 2025, enhanced security features such as certificate-based authentication and WebAuthN redirection, and improved streaming performance. With this launch, if a protocol modification fails, the WorkSpace automatically rolls back to the pre-migration snapshot, ensuring it returns to a known healthy state without manual intervention. Additionally, administrators can now initiate migration for WorkSpaces in a stopped state, removing the need to manually start each stopped WorkSpace before modifying its protocol. This helps customers significantly speed up large scale migrations.\n  These enhancements are available in all AWS commercial and AWS GovCloud (US) Regions where Amazon WorkSpaces Personal is supported.\n  To get started, sign in to the Amazon WorkSpaces console. For more information, see Modify protocols section in the Amazon WorkSpaces Administration Guide. To learn more about Amazon WorkSpaces, visit the Amazon WorkSpaces product page.",
@@ -433,23 +560,6 @@
         "ga",
         "enhancement",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-3452e8fd026e",
-      "title": "Amazon Aurora DSQL is now available in Europe (Spain)",
-      "description": "Starting today, Amazon Aurora DSQL is available for single-Region clusters in the Europe (Spain) Region. Aurora DSQL is the fastest serverless, distributed SQL database, with active-active high availability and multi-Region strong consistency. It enables you to build always-available applications with virtually unlimited scalability, the highest availability, and zero infrastructure management, making scaling and resilience effortless for your applications.\n  \nWith this launch, Aurora DSQL is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Canada West (Calgary), South America (São Paulo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Spain), Europe (Stockholm), Asia Pacific (Hong Kong), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-available-in-spain/",
-      "pubDate": "2026-07-14T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "now-available"
       ]
     },
     {
@@ -563,46 +673,6 @@
         "eks",
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-01b1a09c1eb0",
-      "title": "Amazon EC2 now supports using an EBS volume for Replace Root Volume",
-      "description": "Today, AWS announces Replace Root Volume using an existing EBS volume, a new option for replacing the root volume of a running Amazon EC2 instance. Customers can now use an EBS volume as the target for a root volume replacement, in addition to the existing options of replacing from a snapshot or an AMI. This option supports customers running stateful workloads who need to include specific metadata or software on the root volume before the application boots.\n  Many customers use Replace Root Volume today to apply operating system patches and configuration changes without stopping the instance. However, customers who needed specific metadata or software on the root volume had to first capture an volume with data as a snapshot or register it as an AMI before they could replace the root volume. These intermediate steps added time and operational overhead. Customers can now configure the volume directly and use it as the new root volume, removing the snapshot and AMI creation steps. This reduces operational overhead and speeds up root volume patching for stateful workloads where downtime is costly.\n  Using an EBS volume when replacing a root volume of an EC2 instance is available in all commercial AWS Regions and AWS GovCloud (US) regions. To get started, see Replace an EC2 instance root volume in the Amazon EC2 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-replace-root-volume-ebs-volume/",
-      "pubDate": "2026-07-09T18:06:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4f2039fe43ba",
-      "title": "Amazon MSK Replicator now supports replication from external Apache Kafka clusters to MSK Standard brokers",
-      "description": "Amazon MSK Replicator now supports data replication from external Apache Kafka clusters - including on-premises, self-managed on AWS, or other cloud providers to Amazon MSK Standard brokers. This capability extends replication support to MSK Standard brokers, in addition to the existing support for MSK Express brokers. With this launch, you can migrate workloads to MSK Standard brokers, support disaster recovery by using MSK clusters as a failover or backup target, and enable data distribution across hybrid and multi-cloud environments.\n  MSK Replicator is a feature of Amazon MSK that automates data replication between Kafka clusters, eliminating the need to manage custom replication infrastructure or configure open-source tools. Previously, MSK Replicator supported replication from external Apache Kafka clusters to MSK Express brokers only. With this launch, you can now also replicate data from external Kafka clusters to MSK Standard brokers, using either SASL/SCRAM or mutual TLS (mTLS) authentication to connect to your external clusters. You can also use MSK Replicator to replicate data from Amazon MSK Standard to external Kafka clusters for reliable failback or multi-cloud data distribution. Unlike self-managed replication tools, MSK Replicator lets you retain your original Kafka topic names during replication while automatically avoiding infinite replication loops. It also synchronizes consumer group offsets bidirectionally, enabling you to move producers and consumers across clusters independently, in any order, without coordination constraints or the risk of data loss.\n  This new capability is supported in all AWS Regions where Amazon MSK Replicator is available. Visit the MSK Replicator documentation, product page, pricing page, and this AWS blog post to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-msk-replicator-external-kafka-standard-broker-support",
-      "pubDate": "2026-07-09T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "support",
-        "new-capability"
       ]
     },
     {
