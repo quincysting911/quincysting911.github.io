@@ -1,8 +1,95 @@
 {
-  "lastUpdated": "2026-07-23T08:07:36.222Z",
+  "lastUpdated": "2026-07-24T08:03:47.361Z",
   "category": "ai-safety",
-  "totalItems": 23,
+  "totalItems": 25,
   "items": [
+    {
+      "id": "aws-news-279185d1bdad",
+      "title": "Best practices for applying Amazon Bedrock Guardrails to code generation workflows",
+      "description": "In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-applying-amazon-bedrock-guardrails-to-code-generation-workflows/",
+      "pubDate": "2026-07-23T23:03:44.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-0cee570460ce",
+      "title": "Amazon Bedrock AgentCore now delivers unified observability with traces and logs in a single log group",
+      "description": "Amazon Bedrock AgentCore now delivers agent traces and prompts to the same log group as your agent's logs, giving you unified observability for AI agents in a single Amazon CloudWatch log group.\n \nPreviously, AgentCore split agent telemetry across multiple destinations trace spans went to the shared `aws/spans` log group while event logs containing prompts, inputs, and outputs went to a separate resource-specific log group. This meant debugging an agent invocation required searching across multiple log groups, and customers could not apply fine-grained access control or customer-managed key (CMK) encryption at the individual agent level. With today's launch, all of an agent's telemetry traces, prompts, structured logs, and standard output is delivered to a single per-agent log group (`/aws/bedrock-agentcore/runtimes/<agent_id>-<endpoint_name>`). You can now correlate traces and logs in one place, scope IAM policies and CMK encryption to individual agents, and export all telemetry by subscribing to a single log group. For multi-agent systems, each agent's complete execution history stays together, making end-to-end debugging straightforward.\n \nAll newly created agents starting July 20, 2026 in supported AWS Regions use unified observability by default starting no configuration needed. For existing agents, set the `UNIFIED_TRACES_DESTINATION_ENABLED=true` environment variable on your agent runtime and upgrade ADOT to version 0.17.1 or later. This feature is available in all AWS commercial regions where AgentCore runtime is supported. Learn more in the AgentCore Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-bedrock-agentcore-unified-observability-single-log-group/",
+      "pubDate": "2026-07-23T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "iam",
+        "cloudwatch",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f183c4885742",
+      "title": "Announcing region expansion of G6 instances on SageMaker AI Inference",
+      "description": "We are pleased to announce the availability of Amazon EC2 G6 instances in the AWS GovCloud (US-East) region on Amazon SageMaker AI inference. G6 instances are powered by up to 8 NVIDIA L4 Tensor Core GPUs, each with 24 GB of memory, and third-generation AMD EPYC processors, delivering up to 2x the deep learning inference performance compared to G4dn instances.\n  With this region expansion, government agencies and organizations operating in GovCloud can deploy inference endpoints on G6 instances to serve generative AI workloads—including small-to-medium language models, image generation, and computer vision tasks—while meeting strict compliance and data residency requirements. G6 instances offer strong price-performance for production inference workloads that fit within 24 GB of GPU memory.\n  G6 instances for SageMaker AI inference are now available in AWS GovCloud (US-East), in addition to previously supported regions. For pricing information on these instances, please visit our pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/g6-sagemaker-ai-inference/",
+      "pubDate": "2026-07-23T14:51:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "ec2",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2",
+        "organizations",
+        "ga",
+        "now-available",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-36c6307be0a6",
+      "title": "AWS Wickr announces Data Retention Service feature",
+      "description": "AWS Wickr now offers a managed Data Retention Service feature for Premium users, enabling organizations to retain conversations across their network for data archiving purposes. AWS Wickr is an enterprise-grade, secure collaboration product that provides end-to-end encrypted messaging, file management, screen sharing, and voice/video conferencing capabilities. The Data Retention Service feature provides a cloud-native alternative to traditional container-based data retention methods.\n \nThe Data Retention Service can retain conversations in your network, including direct messages and conversations in Groups or Rooms between internal members and external federated teams. The serverless architecture offers simplified deployment, managed infrastructure, automatic scaling, and comprehensive monitoring while maintaining Wickr's end-to-end encryption standards. This feature is particularly valuable for organizations that require comprehensive data archiving capabilities and maintaining audit trails.\n \nAWS Wickr Premium customers can opt in to enable data retention for their networks. To learn more, visit the AWS Wickr documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-wickr-data/",
+      "pubDate": "2026-07-23T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-d9fc031f3cd3",
       "title": "Building a serverless AI assistant at Pelago: concept to care in two weeks",
@@ -120,6 +207,24 @@
       ],
       "tags": [
         "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9306fc9ad551",
+      "title": "AWS HealthOmics now available in two additional AWS Regions",
+      "description": "AWS HealthOmics private workflows are now available in the Asia Pacific (Tokyo) and US East (Ohio) Regions, expanding access to fully-managed bioinformatics workflows for research, drug discovery, and agriculture science initiatives with regional compliance requirements. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs with fully managed bioinformatics workflows.\n \nWith HealthOmics private workflows, customers can build and scale genomics data analysis pipelines using familiar domain-specific languages including Nextflow, WDL, and CWL, enabling healthcare and life sciences customers to focus on scientific discovery rather than infrastructure management. HealthOmics provides built-in features, such as Git integrations for version-controlled workflow development and third-party container registry support through Amazon ECR, to make it easy to migrate existing pipelines and accelerate development of new genomics workflows while maintaining full data provenance and compliance requirements.  \n \nPrivate workflows are now available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Seoul, Singapore, Tokyo). To learn more, visit the AWS HealthOmics User Guide. For more information on pricing, visit AWS HealthOmics pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/healthomics-tokyo-ohio/",
+      "pubDate": "2026-07-20T18:54:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga",
+        "now-available",
+        "integration",
         "support"
       ]
     },
@@ -371,47 +476,6 @@
       ]
     },
     {
-      "id": "aws-news-a7344b53546a",
-      "title": "AWS DMS Schema Conversion now supports offline SQL Server conversion",
-      "description": "AWS Database Migration Service (DMS) Schema Conversion now supports offline source conversion for Microsoft SQL Server, enabling you to convert SQL Server schemas and code without direct connectivity to your source databases. You extract metadata using standard database commands in your own environment, then upload it to DMS Schema Conversion for processing. This eliminates security reviews, firewall changes, and VPN setup that delay migration projects, while delivering the same conversion results as the connected approach.\n \nOffline Source is ideal for organizations with security policies that restrict external tool access to production SQL Server databases. Database administrators generate human-readable metadata files within their existing environment, and security teams can review the commands and output before uploading, making approval straightforward. By removing the connectivity requirement, Offline Source transforms weeks of security reviews into a simple command-and-upload workflow.\n \nOffline Source supports all DMS Schema Conversion targets at no additional conversion charge. For regional availability, see the Supported AWS Regions page. To get started, see Using Offline Source in the DMS Schema Conversion documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-dms-schema-conversion-offline-source/",
-      "pubDate": "2026-07-10T15:09:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "eks",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-090b790fb932",
-      "title": "AWS Organizations now applies account departure security controls by default for new organizations created via AWS Organizations console",
-      "description": "AWS Organizations now automatically applies security controls by default when you create a new organization via AWS Organizations console, simplifying initial security configuration by automatically applying core security controls. This approach safeguards multi-account environments by protecting against unintended member account departures from your organization. CloudOps administrators and central security teams get immediate protection in their new organizations from day one.\n \nWhen you create a new organization using the AWS Organizations console, the service automatically applies service control policies (SCPs) that prevent member accounts from leaving the organization or closing themselves. These controls help enterprises migrating to AWS or starting a new organization establish strong governance patterns without requiring deep security expertise. The security defaults are intentionally lightweight to provide protection without impeding legitimate operations. You maintain full control to modify or disable these settings at any time.\n \nThis feature is available in US East (N. Virginia), AWS GovCloud (US-East), AWS GovCloud (US-West), China (Beijing), and China (Ningxia). To learn more, visit the AWS Organizations documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-organizations-security-controls-new-orgs-console",
-      "pubDate": "2026-07-10T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-167a37b1cf0d",
       "title": "Preventing data exfiltration in machine learning environments with Amazon SageMaker AI",
       "description": "In this post, we demonstrate how iBusiness implemented a three-layered security architecture using Amazon SageMaker AI, virtual private cloud (VPC) endpoints, and Amazon WorkSpaces Secure Browser to prevent data exfiltration while maintaining data scientist productivity. You can adapt this approach to build secure machine learning environments that balance strict data protection with team scalability.",
@@ -426,24 +490,6 @@
       ],
       "tags": [
         "sagemaker"
-      ]
-    },
-    {
-      "id": "aws-news-f4b9c2424c8b",
-      "title": "Optimize your Tableau integration with Amazon Redshift Serverless",
-      "description": "In this post, we provide a guide to help you use Tableau’s Relationships and Amazon Redshift Serverless architecture to deliver sub-second insights while maximizing every Redshift Processing Unit (RPU). We also provide guidance on five key areas: data model architecture for optimal query performance, security configuration and access control, performance optimization through smart configuration, cost management strategies, and query and join optimization techniques.",
-      "link": "https://aws.amazon.com/blogs/big-data/optimize-your-tableau-integration-with-amazon-redshift-serverless/",
-      "pubDate": "2026-06-29T17:00:00.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "redshift"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "redshift",
-        "integration"
       ]
     },
     {

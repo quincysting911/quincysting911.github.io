@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-07-23T08:07:36.222Z",
+  "lastUpdated": "2026-07-24T08:03:47.361Z",
   "category": "machine-learning",
-  "totalItems": 11,
+  "totalItems": 8,
   "items": [
     {
       "id": "aws-news-ac94a53b5b4a",
@@ -117,85 +117,6 @@
         "sagemaker",
         "rds",
         "cloudwatch"
-      ]
-    },
-    {
-      "id": "aws-news-d2c06baff000",
-      "title": "Amazon SageMaker HyperPod now supports custom AMIs (Amazon Machine Images) for Slurm clusters",
-      "description": "Amazon SageMaker HyperPod now supports custom AMIs for Slurm-orchestrated clusters, enabling customers to deploy clusters with pre-configured, security-hardened environments that meet their specific organizational requirements. Customers deploying AI/ML workloads on HyperPod Slurm clusters need customized environments that meet strict security, compliance, and operational requirements while maintaining fast cluster startup times, but often struggle with complex lifecycle configuration scripts that slow deployment and create inconsistencies across cluster nodes.\n  This capability allows customers to build upon HyperPod's performance-optimized base AMIs while incorporating customized security agents, compliance tools, proprietary libraries, and specialized drivers directly into the image, delivering faster startup times, improved reliability, and enhanced security compliance. Security teams can embed organizational policies directly into base images, allowing AI/ML teams to use pre-approved environments that accelerate time-to-training while meeting enterprise security standards. You can specify custom AMIs when creating new HyperPod Slurm clusters using the CreateCluster API, adding instance groups with the UpdateCluster API, or patching existing clusters with the UpdateClusterSoftware API. Custom AMIs must be built using HyperPod's public base AMIs to maintain compatibility with distributed training libraries and cluster management capabilities.\n  This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more about custom AMI support for Slurm clusters, see the Amazon SageMaker HyperPod User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/hyperpod-custom-ami-slurm/",
-      "pubDate": "2026-07-13T14:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "lex",
-        "rds",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-48b4e28714cd",
-      "title": "Amazon EMR on EKS now supports Apache Spark troubleshooting agent",
-      "description": "Amazon EMR on EKS now supports the Apache Spark troubleshooting agent. Data engineers can now diagnose EMR on EKS job failures through natural language, receiving automated root cause analysis and PySpark code recommendations without manually navigating distributed logs and Spark History Server data.\n  The agent analyzes Spark History Server data, distributed executor logs, and cluster configurations to identify issues such as memory errors, data skew, resource contention, and connectivity failures. With this launch, the Spark troubleshooting agent now covers all EMR deployment options: EMR on EC2, EMR Serverless, and EMR on EKS. The agent is accessible directly from the EMR on EKS console through a \"Troubleshoot with AI\" option on failed jobs. Additionally, the agent is available through MCP (Model Context Protocol) using any compatible AI coding agent, including Kiro, Claude Code, and Cursor. All operations are read-only, authenticated with IAM roles, and logged in AWS CloudTrail.\n  The Spark troubleshooting agent for Amazon EMR on EKS is available in all AWS Regions where the SageMaker Unified Studio is available. To get started, go to EMR on EKS console, or set up the MCP server in your preferred AI coding agent. For detailed guidance, see the EMR troubleshooting agent documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-emr-eks-spark-troubleshooting/",
-      "pubDate": "2026-07-10T18:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "ec2",
-        "emr",
-        "eks",
-        "iam"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "ec2",
-        "emr",
-        "eks",
-        "iam",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-d13682126a16",
-      "title": "Amazon SageMaker HyperPod now supports AMI-based node lifecycle configuration for Slurm clusters using continuous provisioning",
-      "description": "Amazon SageMaker HyperPod now supports AMI-based configuration for Slurm clusters that use continuous provisioning. Continuous provisioning adds nodes to the cluster as capacity becomes available, and this launch extends AMI-based configuration to clusters using this mode. With this support, clusters using continuous provisioning can be created without downloading, configuring, or uploading lifecycle configuration scripts to Amazon S3.\n  AMI-based configuration provisions nodes with the software and configurations needed for a production-ready environment to run AI/ML training workloads, including required software such as Docker, Enroot, and Pyxis, and configurations such as Slurm accounting, SSH key generation, and log rotation. When using continuous provisioning, each node is configured from the AMI as it is added to the cluster, without the need to manage lifecycle configuration scripts, so nodes become available to schedule jobs sooner. To enable AMI-based configuration, omit the LifeCycleConfig block from the instance group configuration when creating clusters via the API, or select \"None\" under Lifecycle scripts in Custom setup when using the SageMaker AI console. For additional customization on top of the AMI-based configuration baseline, an extension script can be provided by specifying the OnInitComplete parameter and SourceS3Uri in the LifeCycleConfig block via the API, or by providing the S3 URI in the \"Extension script file in S3\" field in Custom setup when using the console. Custom lifecycle configuration scripts remain fully supported for use cases that require full control over provisioning.\n  AMI-based node lifecycle configuration for Slurm clusters using continuous provisioning is available in all AWS Regions where SageMaker HyperPod is available. To get started, see Getting started with SageMaker HyperPod using the AWS CLI or Getting started with SageMaker HyperPod using the SageMaker AI console in the SageMaker user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/06/ami-configuration-continuous-slurm/",
-      "pubDate": "2026-07-10T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "s3"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "s3",
-        "launch",
-        "support"
       ]
     },
     {

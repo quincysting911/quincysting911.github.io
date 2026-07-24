@@ -1,8 +1,82 @@
 {
-  "lastUpdated": "2026-07-23T08:07:36.222Z",
+  "lastUpdated": "2026-07-24T08:03:47.361Z",
   "category": "general",
-  "totalItems": 41,
+  "totalItems": 43,
   "items": [
+    {
+      "id": "aws-news-57d4d835a4cb",
+      "title": "Amazon ECS Service Connect now supports Zone-Aware routing",
+      "description": "Amazon Elastic Container Service (Amazon ECS) introduces zone-aware routing for ECS Service Connect, enabling customers to reduce cross Availability Zone (AZ) data transfer costs and latency by automatically prioritizing service-to-service traffic within the same AZ.\n \nWith this launch, ECS Service Connect preferentially routes requests to endpoints in the same AZ as the originating task while dynamically adjusting traffic weights as endpoints scale to maintain balanced load across target services. Previously, as customers distributed their applications across AZs for resiliency, service-to-service traffic led to significant cross-zone data transfer, requiring trade-offs between cost and resilience. Zone-aware routing eliminates this trade-off, and when local endpoints become unhealthy or fall below capacity thresholds, traffic automatically redistributes across healthy AZs to maintain availability without overloading any single zones.\n \nZone-aware routing is enabled by default for all new and existing services and requires no additional infrastructure or application code changes. Existing services require a one-time redeployment to enable the new routing behavior. You can use Amazon VPC Flow Logs with AZ metadata to monitor cross-AZ traffic patterns and validate routing effectiveness. This feature is available in all AWS commercial and AWS GovCloud (US) Regions, where ECS Service Connect is supported at no additional cost. For more details, refer to our documentation and launch blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ecs-service-connect-zone-aware/",
+      "pubDate": "2026-07-23T23:46:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-97dd637025b0",
+      "title": "AWS now supports automatic credit memo application preferences",
+      "description": "AWS now enables customers who pay through electronic funds transfer to configure preferences for how credit memos are automatically applied to outstanding invoices. Customers can choose from different application preferences directly on the Billing and Cost Management console to match their internal payment processes. These options include combinations of applying credit memos to the original invoice, next eligible invoice, and oldest unpaid invoice. By default, credit memos are applied to the original invoice first, then to future invoices, unless a different preference is selected.\n  Automatic credit memo application preferences are available in all commercial AWS Regions. To get started, visit the Payment Preferences page in the AWS Billing and Cost Management console. To learn more, see Managing balance application preferences.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/credit-memo-applications/",
+      "pubDate": "2026-07-23T18:16:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c8a47cca223f",
+      "title": "Amazon RDS for MySQL supports MySQL 9.7 in Amazon RDS Database Preview Environment",
+      "description": "Amazon RDS for MySQL now supports version community MySQL 9.7 in the Amazon RDS Database Preview Environment, allowing you to evaluate the latest Release on Amazon RDS for MySQL. This preview environment provides a sandbox where you can test applications and explore new MySQL 9.7 capabilities before they become generally available.\n  MySQL 9.7 is the latest Long-Term Support release for community MySQL. MySQL Long-Term Support releases include bug fixes, security patches, as well as new features. Please refer to the MySQL 9.7 release notes for more details about this release.\n  Amazon RDS Database Preview Environment database instances are retained for a maximum of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots created in the preview environment can only be used to create or restore database instances within the preview environment. Amazon RDS Database Preview Environment database instances are priced the same as production RDS instances created in the US East (Ohio) Region. For further information, see Working with the Database Preview Environment.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-mysql-long-term-9-7-rds-database-preview/",
+      "pubDate": "2026-07-23T18:05:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "preview",
+        "generally-available",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fe694c67effb",
+      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
+      "description": "Amazon EC2 High Memory U7in-16TB instances (u7in-16tb.224xlarge) are now available in AWS South America (São Paulo) region, and U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Europe (Ireland) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-16TB instances offer 16 TiB of DDR5 memory, and U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nBoth U7in-16TB and U7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-u7i/",
+      "pubDate": "2026-07-23T00:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-2640d7ac1cd3",
       "title": "Amazon EC2 C7a instances are now available in the US West (N. California) Region",
@@ -617,28 +691,6 @@
       ]
     },
     {
-      "id": "aws-news-4a1688d65110",
-      "title": "Amazon Redshift Serverless now preserves zero-ETL and Amazon S3 event integrations during snapshot restores",
-      "description": "Amazon Redshift Serverless now automatically preserves zero-ETL and Amazon S3 event integrations when restoring a namespace from a snapshot or recovery point to the same serverless namespace. Previously, restoring a snapshot marked associated integrations as failed, requiring you to manually recreate them after the restore completed. This meant additional time reconfiguring data pipelines and potential data ingestion gaps during the rebuild process.\n  With this enhancement, integrations are automatically maintained and resume operating after the restore completes, simplifying data ingestion workflows and reducing administrative overhead. This streamlines disaster recovery and testing workflows by reducing manual configuration steps and potential errors. This applies to restores within the same serverless namespace only. Restoring to a different namespace or restoring provisioned clusters does not maintain integrations.\n  This feature is available in all AWS regions where Amazon Redshift Serverless is available. To learn more about restoring Amazon Redshift Serverless namespaces, please visit our documentation or the Redshift behaviour change page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/redshift-serverless-zetl-autocopy-restore/",
-      "pubDate": "2026-07-13T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "ga",
-        "enhancement",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-a5d83dc1f2b3",
       "title": "Announcing Lambda MicroVMs: serverless compute environments with VM-level isolation and near-instant startup",
       "description": "We recently announced the launch of AWS Lambda MicroVMs, a new serverless compute primitive that provides VM-level isolation, near-instant startup performance, and state retention. You can now give each user or job their own execution environment to securely run just-in-time code – either user or AI generated – without managing virtualization infrastructure or choosing between […]",
@@ -654,25 +706,6 @@
       "tags": [
         "lambda",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-cf7b54151c43",
-      "title": "Amazon EKS Auto Mode now supports Application Recovery Controller zonal shift",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports Amazon Application Recovery Controller (ARC) zonal shift and autoshift for clusters using EKS Auto Mode. ARC helps you manage and coordinate recovery across AWS Regions and Availability Zones (AZs). With this launch, EKS Auto Mode automatically protects your compute during a zonal shift at no additional cost or configuration, helping you maintain Kubernetes application availability by shifting in-cluster network traffic away from an impaired AZ.\n \nCustomers run highly available applications across multiple AZs in Amazon EKS to eliminate a single point of failure. Because EKS Auto Mode manages compute on your behalf, you get zonal shift support without setting flags, granting permissions, or managing Karpenter versions; simply enable ARC zonal shift on your cluster. When a zonal shift is activated, EKS Auto Mode stops provisioning new capacity in the impaired AZ and halts voluntary disruptions such as consolidation and drift for nodes in that zone. It also prevents voluntary disruptions in healthy zones if they depend on scheduling pods to the impaired zone. When the shift expires or is canceled, normal operations resume. You can start a shift manually, or authorize AWS to manage it using zonal autoshift, with practice runs to verify your cluster functions with one less AZ.\n \nARC zonal shift support for EKS Auto Mode is available in all AWS Regions where EKS Auto Mode is offered. To learn more, visit the Amazon EKS product page, the ARC zonal shift documentation, and the Amazon EKS Auto Mode documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/eks-auto-mode-arc-zonal-shift",
-      "pubDate": "2026-07-10T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
-        "support"
       ]
     },
     {
