@@ -1,8 +1,73 @@
 {
-  "lastUpdated": "2026-07-24T08:03:47.361Z",
+  "lastUpdated": "2026-07-25T07:47:19.449Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 42,
   "items": [
+    {
+      "id": "aws-news-45f237e66de3",
+      "title": "Amazon MWAA now supports Apache Airflow version 2.11.2",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 2.11.2. Amazon MWAA is a managed service that runs Apache Airflow at scale without the operational overhead of managing the underlying infrastructure. Apache Airflow 2.11.2 is a maintenance release that includes security improvements, bug fixes, and dependency upgrades.\n  This release upgrades core dependencies with security patches and stability improvements to the Airflow webserver and task execution layers. It also includes fixes to task lifecycle management for queued tasks, enhanced secrets masking in logs, UI corrections in the Task Instances list view, and provider package updates for S3 and CloudWatch log delivery.\n  You can create a new Apache Airflow 2.11.2 environment on Amazon MWAA or upgrade your existing environments with a few clicks in the AWS Management Console in all currently available Amazon MWAA regions. To learn more, visit the Amazon MWAA documentation, review the Apache Airflow 2.11.2 release notes, and explore the list of available Airflow versions on MWAA.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-mwaa-now-supports-apache-airflow-version-2-11-2",
+      "pubDate": "2026-07-24T21:57:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "cloudwatch",
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4901ab494c83",
+      "title": "Amazon Kinesis Data Streams now supports scaling down ingest capacity with warm throughput",
+      "description": "Amazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale. On-demand streams automatically increase ingest capacity in response to rising data ingest usage. With On-demand Advantage mode, you can proactively manage stream capacity using warm throughput to prepare streams for sudden changes in data traffic. We are extending warm throughput with the ability to also scale down ingest capacity, giving you full control to scale your stream's write throughput up or down. \n \nTo scale down, simply set a lower warm throughput value on your on-demand stream. The stream adjusts to the requested capacity or the amount needed to support peak data ingest usage in the last hour, whichever is higher. This ensures your stream always retains sufficient capacity for current traffic while releasing excess capacity you no longer need. As a result, you get optimal stream-processing performance and cost efficiency. \n \nWarm throughput scale-down is available at no additional cost for all on-demand streams with On-demand Advantage mode enabled.  For more information about On-demand Advantage, see Choose the right mode to stream in in the Amazon Kinesis Data Streams Developer Guide. To get started with the feature, see Update a stream. For pricing details, see Amazon Kinesis Data Streams pricing.\n \nThe feature is available in all AWS Regions where Amazon Kinesis Data Streams On-demand Advantage is supported.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/kinesis/on-demand-scale-down",
+      "pubDate": "2026-07-24T18:55:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kinesis"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "kinesis",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f08d94001974",
+      "title": "AWS Lambda now publishes logs for Lambda Managed Instances capacity providers",
+      "description": "AWS Lambda now publishes logs for Lambda Managed Instances (LMI) capacity providers to Amazon CloudWatch Logs, giving you visibility into scaling activity and instance lifecycle operations. LMI enables you to run Lambda functions on Amazon EC2 instances while maintaining serverless operational simplicity. Capacity providers are resources that let you define compute resources that Lambda provisions on your behalf. With capacity provider logs, you can monitor, troubleshoot, and optimize these managed EC2 instances, helping you quickly diagnose provisioning issues and understand scaling behavior.\n \nCustomers use LMI to operate high-volume, predictable workloads with specialized compute configurations and achieve cost efficiency through EC2 pricing options like Savings Plans and Reserved Instances. With this launch, Lambda automatically generates logs for compute resources managed by capacity providers and delivers them to CloudWatch Logs. Lambda publishes structured JSON logs capturing instance lifecycle events like launches, terminations, and health checks. This structured format lets you identify failed operations and provisioning errors through CloudWatch Logs filtering, helping you resolve issues quickly and shorten debugging cycles.\n \nThe capacity provider logs are available in all AWS Commercial Regions where LMI is available. The logs are enabled by default for all capacity providers. You can view your capacity provider logs by visiting the Lambda console's capacity provider page. You can use the Lambda API, Lambda console, AWS CLI, AWS SAM, or AWS CloudFormation to change capacity provider log configuration. Standard Amazon CloudWatch Logs charges apply. To learn more, visit the AWS Lambda Managed Instances product page and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-lambda-managed-instances-logs/",
+      "pubDate": "2026-07-24T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "ec2",
+        "cloudformation",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "ec2",
+        "cloudformation",
+        "cloudwatch",
+        "launch"
+      ]
+    },
     {
       "id": "aws-news-57d4d835a4cb",
       "title": "Amazon ECS Service Connect now supports Zone-Aware routing",
@@ -602,23 +667,6 @@
       ]
     },
     {
-      "id": "aws-news-3452e8fd026e",
-      "title": "Amazon Aurora DSQL is now available in Europe (Spain)",
-      "description": "Starting today, Amazon Aurora DSQL is available for single-Region clusters in the Europe (Spain) Region. Aurora DSQL is the fastest serverless, distributed SQL database, with active-active high availability and multi-Region strong consistency. It enables you to build always-available applications with virtually unlimited scalability, the highest availability, and zero infrastructure management, making scaling and resilience effortless for your applications.\n  \nWith this launch, Aurora DSQL is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), Canada West (Calgary), South America (São Paulo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Spain), Europe (Stockholm), Asia Pacific (Hong Kong), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-available-in-spain/",
-      "pubDate": "2026-07-14T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-8f4b6b78c85c",
       "title": "Amazon WorkSpaces Personal simplifies bulk PCoIP to DCV protocol migration",
       "description": "Amazon WorkSpaces Personal now provides automated rollback and support for PCoIP to DCV protocol migration of stopped WorkSpaces, building on the recently launched console-based migration workflow and checkpoint snapshot support. These new capabilities enable administrators to migrate WorkSpaces at scale with minimal manual intervention.\n  Amazon DCV is a high-performance streaming protocol built by AWS that powers Amazon WorkSpaces services. By migrating to DCV, customers gain access to broader operating system support including Windows 11 and Windows Server 2025, enhanced security features such as certificate-based authentication and WebAuthN redirection, and improved streaming performance. With this launch, if a protocol modification fails, the WorkSpace automatically rolls back to the pre-migration snapshot, ensuring it returns to a known healthy state without manual intervention. Additionally, administrators can now initiate migration for WorkSpaces in a stopped state, removing the need to manually start each stopped WorkSpace before modifying its protocol. This helps customers significantly speed up large scale migrations.\n  These enhancements are available in all AWS commercial and AWS GovCloud (US) Regions where Amazon WorkSpaces Personal is supported.\n  To get started, sign in to the Amazon WorkSpaces console. For more information, see Modify protocols section in the Amazon WorkSpaces Administration Guide. To learn more about Amazon WorkSpaces, visit the Amazon WorkSpaces product page.",
@@ -637,27 +685,6 @@
       ]
     },
     {
-      "id": "aws-news-7d056d6c7b37",
-      "title": "Amazon CloudFront Functions now supports logging to CloudFront access logs",
-      "description": "You can now write custom data directly into CloudFront access logs using a new helper method available from within CloudFront Functions. CloudFront Functions run lightweight JavaScript at the edge for tasks like URL rewrites, header manipulation, and request routing. Previously, you could only emit log data to Amazon CloudWatch Logs as a separate log file from your CloudFront access logs. With this launch, you no longer need to correlate function decisions with CloudFront access log data across separate logging systems.\n \nYou can call cf.logCustomData() from viewer request or viewer response functions to log values such as A/B test variant assignments, authentication outcomes, or routing decisions directly into the CloudFront access log record for that request. This works with both CloudFront real time log configurations and standard logging (v2), so you can analyze function behavior and request outcomes in a single query. The existing console.log() functionality remains available and the two methods can be used together in the same function.\n \nAmazon CloudFront Functions custom log data is available today in all CloudFront edge locations. There is no additional charge for using cf.logCustomData(). Standard CloudFront Functions invocation pricing and access log delivery charges apply. To get started, visit CloudFront Functions helper methods.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/cloudfront-functions-access-logs/",
-      "pubDate": "2026-07-14T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudfront",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudfront",
-        "cloudwatch",
-        "launch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a99683f22579",
       "title": "Eliminating Java cold starts with AWS Lambda Managed Instances",
       "description": "A single cold start can push your Java Lambda function’s response time from milliseconds to seconds, enough to violate your p99 SLA, timeout a downstream service, and page your on-call. The Java Virtual Machine (JVM) performs best in long-running processes. Its Just-In-Time (JIT) compiler progressively optimizes code over thousands of invocations. Standard serverless execution environments […]",
@@ -672,22 +699,6 @@
       ],
       "tags": [
         "lambda"
-      ]
-    },
-    {
-      "id": "aws-news-b94b9d2b1f4e",
-      "title": "Amazon DocumentDB (with MongoDB compatibility) adds support for 46 new MongoDB operators in version 8.0.1",
-      "description": "Amazon DocumentDB (with MongoDB compatibility) now supports 46 additional MongoDB aggregation operators and cursor methods starting from minor version 8.0.1. This release significantly expands query API compatibility, making it easier to migrate MongoDB workloads to Amazon DocumentDB without application code changes.\n \nNew capabilities span seven categories:\n \n \n \nAccumulators (13): $top, $topN, $bottom, $bottomN, $firstN, $lastN, $maxN, $minN, $count, $median, $percentile, $stdDevPop, $stdDevSamp\n  \n \n \n \nTrigonometry (15): $sin, $cos, $tan, $asin, $acos, $atan, $atan2, $sinh, $cosh, $tanh, $asinh, $acosh, $atanh, $degreesToRadians, $radiansToDegrees \n  \n \n \n \nBitwise aggregation (4): $bitAnd, $bitOr, $bitXor, $bitNot\n  \n \n \n \nArithmetic (3): $round, $trunc, $sigmoid\n  \n \n \n \nData size and type (4): $binarySize, $bsonSize, $isNumber, $toUUID\n  \n \n \n \nTimestamp (2): $tsIncrement, $tsSecond \n  \n \n \n \nStages and other (5): $sortByCount, $listSearchIndexes, $sampleRate, cursor.min(), cursor.max()\n  \n \nThese operators are available starting from Amazon DocumentDB 8.0.1 in all regions where Amazon DocumentDB is available. To learn more, see Supported MongoDB APIs, operations, and data types and Amazon DocumentDB release notes.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-documentdb-mongodb-8-0-1-mongo-api",
-      "pubDate": "2026-07-13T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
       ]
     },
     {
@@ -721,26 +732,6 @@
       ],
       "tags": [
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-da87679be1f0",
-      "title": "Amazon Redshift delivers faster performance for BI dashboards and real-time analytics",
-      "description": "Today, we’re excited to announce a new performance optimization in Amazon Redshift that improves the response times of low-latency SQL queries, such as those used in real-time analytics applications or generated by BI dashboards. With this enhancement, you can experience improved query latencies because of a reduction in the time Amazon Redshift spends preparing SQL queries for execution. SQL queries start faster, so they return results quicker.",
-      "link": "https://aws.amazon.com/blogs/big-data/amazon-redshift-delivers-faster-performance-for-bi-dashboards-and-real-time-analytics/",
-      "pubDate": "2026-06-29T17:05:12.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "redshift",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "redshift",
-        "rds",
-        "enhancement"
       ]
     },
     {
