@@ -1,8 +1,42 @@
 {
-  "lastUpdated": "2026-07-27T09:23:28.129Z",
+  "lastUpdated": "2026-07-28T08:10:51.915Z",
   "category": "generative-ai",
-  "totalItems": 61,
+  "totalItems": 59,
   "items": [
+    {
+      "id": "aws-news-4deb9771ff53",
+      "title": "AWS Glue Data Quality now supports anomaly detection and writing results to the AWS Glue Data Catalog",
+      "description": "AWS Glue Data Quality now supports anomaly detection for Catalog-based data quality evaluations and the ability to write evaluation results to AWS Glue Data Catalog (GDC) tables. These capabilities work across both ETL jobs and Catalog evaluations, giving you a consistent data quality experience regardless of workflow type.\n  With anomaly detection support for GDC, you can identify unexpected changes in data statistics such as sudden drops in distinct values or row count spikes in your GDC tables using ML-powered time-series forecasting, without writing rules with explicit thresholds. This is especially valuable for data engineers monitoring hundreds of tables in the GDC who need to surface issues automatically.\n  With results storage in GDC, Data Quality rule outcomes, profiling metrics, and anomaly predictions (with confidence bounds) are written back to GDC tables, creating a queryable record of all quality evaluations. Whether the evaluation runs in an ETL job or directly on a Catalog table, results can be queried at any time using standard SQL.\n  AWS Glue Data Quality anomaly detection and Catalog results storage are available in all AWS commercial regions and AWS GovCloud (US) regions.\n  To get started, visit the AWS Glue Data Quality documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-data-quality-catalog-anomaly-detection-write-results",
+      "pubDate": "2026-07-27T20:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "forecast",
+        "glue"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "forecast",
+        "glue",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e42084c172fe",
+      "title": "Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS",
+      "description": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/",
+      "pubDate": "2026-07-27T16:11:32.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": []
+    },
     {
       "id": "aws-news-f760f9411684",
       "title": "Get started with OpenAI GPT-5.6 Sol, Terra, and Luna on Amazon Bedrock",
@@ -618,23 +652,6 @@
       ]
     },
     {
-      "id": "aws-news-701952ffd608",
-      "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
-      "description": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
-      "pubDate": "2026-07-16T21:29:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-6458b50f3856",
       "title": "Amazon CloudWatch Synthetics now supports customer managed encryption keys",
       "description": "Amazon CloudWatch Synthetics now supports customer managed AWS Key Management Service (KMS) keys for encrypting canary environment variables, giving you full control over the encryption of sensitive configuration data such as API keys, credentials, and tokens. Previously, environment variables were encrypted at rest using only an AWS owned key. Now, in addition to the default AWS owned key, you can specify your own symmetric KMS key for encryption at rest, and you can also encrypt individual values client-side before they are stored.\n \nWith encryption at rest, you specify a customer managed KMS key when creating or updating a canary, and CloudWatch Synthetics uses a grant on the key to handle encryption and decryption transparently. With client-side encryption, you encrypt values before storage, and your canary script decrypts them at runtime using the AWS KMS Decrypt API. This benefits teams in regulated industries that require organizational key management policies, auditability, or key rotation controls across all services.\n \nAmazon CloudWatch Synthetics customer managed key encryption is available in all commercial AWS Regions. Multi-location canaries can use a different KMS key per replica Region.\n \nTo learn more, see Encrypting environment variables in the Amazon CloudWatch User Guide.",
@@ -651,23 +668,6 @@
         "cloudwatch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-0bd209927c48",
-      "title": "Introducing Grok on Amazon Bedrock",
-      "description": "This post covers what makes Grok 4.3 a great fit for agentic and enterprise workloads, how you access it through Amazon Bedrock, and how to use the capabilities most teams reach for first: a basic chat request, configurable reasoning effort, tool calling, structured output, image input, and stateful multi-turn conversations.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/",
-      "pubDate": "2026-07-16T19:29:26.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -932,39 +932,6 @@
         "update",
         "support"
       ]
-    },
-    {
-      "id": "aws-news-e83af3c032b0",
-      "title": "Amazon EC2 M8in, M8idn, M8ib, M8idb instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M8in, M8idn network optimized, and M8ib, M8idb EBS optimized instances are available in the AWS US East (Ohio), Europe (Ireland), and Asia Pacific (Tokyo) regions. The new instances are powered by custom sixth generation Intel Xeon Scalable processors available only on AWS and deliver up to 43% higher performance compared to previous generation instances. These instances also feature the latest sixth generation AWS Nitro cards.\n \nM8in, M8idn instances deliver 600 Gbps network bandwidth, the highest network bandwidth among enhanced networking EC2 instances, and are ideal for workloads such as real-time big data analytics, distributed web scale in-memory caches, caching fleets for AI/ML clusters, and Telco applications such as 5G User Plane Function (UPF). \n  \n M8ib, M8idb instances deliver up to 300Gbps EBS bandwidth, the highest among non-accelerated compute EC2 instances, and are best suited for workloads that benefit from high block storage performance, such as high-performance file systems and NoSQL databases.\n \nM8idn instances are ideal for network-intensive workloads that benefit from low-latency local storage, such as distributed compute, data analytics, and high-performance file systems. M8idb instances are ideal for storage-intensive workloads such as large commercial databases, data lakes, and NoSQL databases that benefit from both high EBS throughput and low-latency local NVMe storage. \n \nM8in, M8idn, M8ib, M8idb instances are available in US East (N. Virginia, Ohio), US West (Oregon), Europe (Ireland), Asia Pacific (Tokyo), and Europe (Spain) regions, via Savings Plans, On-Demand, and Spot instances. For more information, visit the Amazon EC2 M8i instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/m8in-m8idn-m8ib-m8idb-new-regions",
-      "pubDate": "2026-07-14T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-2f9ac12816c2",
-      "title": "Amazon Managed Service for Apache Flink now offers AI Agent Skills to simplify building and operating Flink applications",
-      "description": "Amazon Managed Service for Apache Flink now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for building and operating Flink applications. The skills provide expert guidance for common tasks such as creating applications, troubleshooting, scaling, monitoring, networking configuration, and cost optimization.\n \nCustomers can leverage these skills to keep Flink applications healthy and performant, accelerate development of new streaming applications, and easily upgrade to latest versions of Apache Flink like Flink 2.2. The skills turn tasks that once required specialized Apache Flink knowledge into a guided experience developers can complete on their own.\n \nYou can use the Managed Service for Apache Flink skills with your existing AI coding agent, including Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"How do I create a new Flink application on MSF?\" or \"My Flink application is unhealthy — what's wrong?\"",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-service-flink-agent-skills/",
-      "pubDate": "2026-07-14T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-83ea8809e072",

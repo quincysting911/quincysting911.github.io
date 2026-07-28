@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-07-27T09:23:28.129Z",
-  "totalItems": 196,
+  "lastUpdated": "2026-07-28T08:10:51.915Z",
+  "totalItems": 194,
   "sources": {
-    "whatsNew": 97,
+    "whatsNew": 95,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 19,
@@ -11,6 +11,195 @@
     "developersAndDevOps": 10
   },
   "items": [
+    {
+      "id": "aws-news-66101f6459cf",
+      "title": "Amazon Neptune now supports tag-based access control for IAM",
+      "description": "Amazon Neptune Database now supports tag-based access control (TBAC) for IAM, enabling customers to use AWS resource tags and IAM principal tags as conditions in IAM policies and Service Control Policies (SCPs) to control access to Neptune data-plane operations. Neptune already provides robust security through VPC isolation, TLS encryption, and IAM authentication, but customers managing multiple clusters at scale needed a dynamic, attribute-based mechanism to enforce organizational access boundaries. TBAC addresses this by allowing administrators to govern cluster access without enumerating specific cluster ARNs in every policy.\n  With TBAC, IAM principals can only perform `neptune-db:*` actions against Neptune clusters whose tags match their own — for example, a principal tagged `Project=FraudDetection` is automatically restricted to clusters sharing that same tag. This eliminates lateral access risk within shared VPC environments, enforces team and environment-level isolation across projects, and supports federated identity workflows using SAML or OIDC session tags from external identity providers. Granular permissions like neptune-db:QueryLanguage can be used alongside TBAC for more fine-grained access control.\n  This feature is available in all AWS Regions where Amazon Neptune is available and requires Neptune engine version 1.2.0.0 or later with IAM authentication enabled.\n  To learn more about configuring tag-based access control for Amazon Neptune, including how to tag your DB clusters and IAM principals and deploy organization-wide guardrails using SCPs, visit the Amazon Neptune documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-neptune-tbac/",
+      "pubDate": "2026-07-27T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4deb9771ff53",
+      "title": "AWS Glue Data Quality now supports anomaly detection and writing results to the AWS Glue Data Catalog",
+      "description": "AWS Glue Data Quality now supports anomaly detection for Catalog-based data quality evaluations and the ability to write evaluation results to AWS Glue Data Catalog (GDC) tables. These capabilities work across both ETL jobs and Catalog evaluations, giving you a consistent data quality experience regardless of workflow type.\n  With anomaly detection support for GDC, you can identify unexpected changes in data statistics such as sudden drops in distinct values or row count spikes in your GDC tables using ML-powered time-series forecasting, without writing rules with explicit thresholds. This is especially valuable for data engineers monitoring hundreds of tables in the GDC who need to surface issues automatically.\n  With results storage in GDC, Data Quality rule outcomes, profiling metrics, and anomaly predictions (with confidence bounds) are written back to GDC tables, creating a queryable record of all quality evaluations. Whether the evaluation runs in an ETL job or directly on a Catalog table, results can be queried at any time using standard SQL.\n  AWS Glue Data Quality anomaly detection and Catalog results storage are available in all AWS commercial regions and AWS GovCloud (US) regions.\n  To get started, visit the AWS Glue Data Quality documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-data-quality-catalog-anomaly-detection-write-results",
+      "pubDate": "2026-07-27T20:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "forecast",
+        "glue"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "forecast",
+        "glue",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-af641e255a09",
+      "title": "AWS Glue Data Quality now supports distribution statistics for data profiling",
+      "description": "AWS Glue Data Quality now supports a new Distribution Analyzer that generates frequency distribution profiles for your data. Using this new Distribution Analyzer in the Data Quality Definition Language (DQDL), you can generate histograms for numeric columns and value distributions for categorical, date, and boolean columns. With support for custom bin counts, you can explore the shape and patterns of your data at the granularity that matters most to your use case.\n  Understanding how data is distributed is foundational to building reliable data pipelines. Distribution statistics help you quickly identify skewness, outliers, and unexpected patterns across your datasets, without writing custom code. The capability integrates directly with your existing DQDL rulesets, so you can add distribution profiling alongside your current data quality checks in a single evaluation run. Distribution statistics are stored in Amazon S3 for future querying through services like Amazon Athena, and are also surfaced through APIs, making it easy to integrate distribution insights into monitoring workflows and visualization tools, including SageMaker Unified Studio.\n  AWS Glue Data Quality distribution statistics are available in all AWS commercial regions and AWS GovCloud (US) regions.\n  To learn more about Glue Data Quality, visit the AWS Glue Data Quality documentation. To get started with using Distribution Analyzer, visit the Analyzers documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-data-quality-distribution-profiling",
+      "pubDate": "2026-07-27T20:23:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "s3",
+        "glue",
+        "athena",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c75e1035646c",
+      "title": "Amazon GameLift Streams now supports Custom Aspect Ratio and Dynamic Resolution",
+      "description": "Amazon GameLift Streams now supports Custom Aspect Ratio and Dynamic Resolution, giving you greater control over the streaming experience across diverse player devices and network conditions.\n \nWith Custom Aspect Ratio, you can configure a specific resolution per stream session to match your player's device — including portrait, landscape, ultra-wide, and square aspect ratios. This eliminates letterboxing or pillarboxing, delivering native full-screen experiences on mobile phones, tablets, and non-standard displays. Specify any resolution from 320 to 4096 pixels per dimension (up to 1080p total pixel budget) using the DisplayConfiguration parameter in the StartStreamSession API. You can also try custom resolution from the AWS Console.\n \nDynamic Resolution automatically adapts stream quality when a player's network bandwidth fluctuates. When bandwidth drops, the stream gracefully reduces resolution to maintain smooth playback without frame drops or disconnections — and automatically recovers to full quality when conditions improve. Dynamic Resolution is enabled by default for all new stream groups with no configuration required. Customers will need to download the new Web SDK.\n \nBoth features are available in all AWS Regions where Amazon GameLift Streams is offered. To learn more, see Custom stream resolution in the Amazon GameLift Streams Developer Guide. \n  \n https://docs.aws.amazon.com/gameliftstreams/latest/developerguide/custom-stream-resolution.html",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams/",
+      "pubDate": "2026-07-27T18:58:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7e7a13259966",
+      "title": "AWS Security Hub MCP App brings exposure findings into your AI-assisted workflow (Preview)",
+      "description": "AWS announces the preview of the AWS Security Hub MCP App, a local Model Context Protocol (MCP) server that brings your Security Hub exposure findings directly into Claude Desktop.  This capability can help accelerates your security investigations by reducing context switching and manual triage, letting you explore and act on your exposures without leaving your AI-assisted workflow.\n \nWith the Security Hub MCP App, you can investigate your security posture in natural language: view your top exposure findings, drill into a finding’s attack path and expanded network path, examine correlated findings and affected resource configurations, and get remediation recommendations. Each tool call returns both a text summary for your AI agent to reason overover and an interactive visualization for you to verify in the same conversation. The MCP server runs locally on your machine using your existing AWS credentials, and every tool is read-only,-- no changes are made to your environment.\n \nThe Security Hub MCP App is available at no additional cost to Security Hub customers. This feature is available in preview in all AWS commercial Regions that support Security Hub. To learn more, see the AWS Security Hub User Guide and the AWS Security Hub product page. For the full list of Regions, see the AWS Regional Services List.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-security-hub-mcp-app/",
+      "pubDate": "2026-07-27T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "preview",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e42084c172fe",
+      "title": "Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS",
+      "description": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/",
+      "pubDate": "2026-07-27T16:11:32.000Z",
+      "source": "mlBlog",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-7df6d5f5b2a4",
+      "title": "Building a scalable personalized recommendation system on AWS: From batch to real-time",
+      "description": "Learn how the Everyday Essentials team built a scalable personalized recommendation platform on AWS using a batch-first architecture with Amazon MWAA for orchestration, Amazon SageMaker for training and vector search, and AWS Lake Formation for governed data access, then extended it to real-time with Amazon MemoryDB.",
+      "link": "https://aws.amazon.com/blogs/big-data/building-a-scalable-personalized-recommendation-system-on-aws-from-batch-to-real-time/",
+      "pubDate": "2026-07-27T16:09:17.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker",
+        "personalize"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "personalize"
+      ]
+    },
+    {
+      "id": "aws-news-49c158b3a4da",
+      "title": "Deepgram enhances Amazon SageMaker AI support with AWS IAM Temporary Delegation",
+      "description": "In this post, we cover why Deepgram built on IAM temporary delegation, how the integration works end-to-end, and what it unlocks for customers running Deepgram speech models on SageMaker AI. With this integration, Deepgram has reduced the time for initial investigation on a SageMaker AI support ticket from days to minutes.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/deepgram-enhances-amazon-sagemaker-ai-support-with-aws-iam-temporary-delegation/",
+      "pubDate": "2026-07-27T16:07:44.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "iam"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "iam",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9cf2c8d36673",
+      "title": "How Guardoc transforms medical document processing with Amazon Nova models",
+      "description": "In this post, we explore how Guardoc Health uses the Amazon Nova family of models, available through Amazon Bedrock, to transform clinical documentation in long-term care.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-guardoc-transforms-medical-document-processing-with-amazon-nova-models/",
+      "pubDate": "2026-07-27T16:05:00.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-5434c2cd3cb3",
+      "title": "AWS Weekly Roundup: Local Zone in Athens, Claude Opus 5 on AWS, Lambda durable execution for .NET, and more (July 27, 2026)",
+      "description": "Last week I had the privilege of spending three days in São Paulo with technical builders from across Latin America, brought together for a regional tech event full of deep-dive sessions, hands-on workshops, and conversations with customers and partners. What struck me most wasn’t any single session, it was the energy of a technical community […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/",
+      "pubDate": "2026-07-27T14:54:41.000Z",
+      "source": "newsBlog",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "lambda"
+      ]
+    },
     {
       "id": "aws-news-45f237e66de3",
       "title": "Amazon MWAA now supports Apache Airflow version 2.11.2",
@@ -233,6 +422,26 @@
         "preview",
         "ga",
         "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-7f1071e9542d",
+      "title": "AWS Clean Rooms supports larger worker types up to 32 vCPUs for SQL",
+      "description": "AWS Clean Rooms now supports larger worker types of 32 vCPUs with 244 GB of memory for SQL analyses, allowing you to run more compute and memory-intensive workloads. Previously, the largest worker type available was 16 vCPUs with 120 GB of memory. Larger workers can help improve performance for complex queries on large datasets, optimizing costs for customers. For example, an advertiser collaborating with a publisher can use larger workers to run complex feature engineering across billions of records to train their multi-touch attribution model, accelerating time-to-value and optimizing costs.\n \nAWS Clean Rooms helps companies and their partners easily analyze and collaborate on their collective datasets without revealing or copying one another’s underlying data. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-clean-rooms-32-vcpu-worker-types-sql",
+      "pubDate": "2026-07-24T12:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "support"
       ]
     },
     {
@@ -531,7 +740,7 @@
     {
       "id": "aws-news-4f021d9a83ba",
       "title": "Claude Sonnet 5 is now available on Amazon Bedrock in AWS GovCloud (US)",
-      "description": "AWS GovCloud (US) now offers Claude Sonnet 5 on Amazon Bedrock. Claude Sonnet 5 delivers strong performance across coding, professional work, and agentic tasks while maintaining the balance of capability, cost, and speed. For coding, it navigates large codebases, lands multi-file changes, and carries debugging and refactoring tasks through to completion with fewer rounds of correction. For agents, it calls tools precisely, holds state across many steps, and recovers from errors so more runs finish correctly the first time. For knowledge work, it builds spreadsheets, drafts documents, and turns unstructured material into structured analysis. \n \nWith this launch, Claude Opus 4.8 and Claude Sonnet 5 are available on bedrock-runtime endpoints in AWS GovCloud (US-West and US-East) and bedrock-mantle endpoints in AWS GovCloud (US-West) for performing inference. Bedrock Mantle, Amazon Bedorck's next-generation inference engine, supports the Anthropic Messages API. Amazon Bedrock keeps your data within AWS infrastructure and provides access to Claude Sonnet 5 through a unified service with AWS-managed features like Guardrails, Knowledge Bases, and regional data residency. To learn more, see the Amazon Bedrock documentation and regional availability.",
+      "description": "AWS GovCloud (US) now offers Claude Sonnet 5 on Amazon Bedrock. Claude Sonnet 5 delivers strong performance across coding, professional work, and agentic tasks while maintaining the balance of capability, cost, and speed. For coding, it navigates large codebases, lands multi-file changes, and carries debugging and refactoring tasks through to completion with fewer rounds of correction. For agents, it calls tools precisely, holds state across many steps, and recovers from errors so more runs finish correctly the first time. For knowledge work, it builds spreadsheets, drafts documents, and turns unstructured material into structured analysis. \n \nWith this launch, Claude Opus 4.8 and Claude Sonnet 5 are available on bedrock-runtime endpoints in AWS GovCloud (US-West and US-East) and bedrock-mantle endpoints in AWS GovCloud (US-West) for performing inference. Bedrock Mantle, Amazon's next-generation inference engine, supports the Anthropic Messages API. Amazon Bedrock keeps your data within AWS infrastructure and provides access to Claude Sonnet 5 through a unified service with AWS-managed features like Guardrails, Knowledge Bases, and regional data residency. To learn more, see the Amazon Bedrock documentation and regional availability.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/",
       "pubDate": "2026-07-23T16:02:00.000Z",
       "source": "whatsNew",
@@ -1762,19 +1971,6 @@
       ]
     },
     {
-      "id": "aws-news-777b20b8ce5f",
-      "title": "How Smartsheet built a remote MCP server on AWS",
-      "description": "In this post, we cover a high-level view of the Smartsheet remote MCP architecture, with a focus on the AWS infrastructure behind it. This includes security, governance, scaling and deployment, and the AI-specific optimizations Smartsheet built on AWS.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-smartsheet-built-a-remote-mcp-server-on-aws/",
-      "pubDate": "2026-07-17T16:32:06.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": []
-    },
-    {
       "id": "aws-news-917c92c8b1a1",
       "title": "Eclipse Dataspace Components on AWS: Cost optimization strategies",
       "description": "When you deploy Eclipse Dataspace Components (EDC) connectors on AWS, one of the first challenges you face is predicting and controlling the cost of the required infrastructure. Without clear benchmarks, it is difficult to make informed decisions about workload sizing, environment configuration, and long-term investment. Part 1 of this 3-part blog series covered the fundamentals […]",
@@ -1866,23 +2062,6 @@
       ]
     },
     {
-      "id": "aws-news-701952ffd608",
-      "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
-      "description": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
-      "pubDate": "2026-07-16T21:29:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-6458b50f3856",
       "title": "Amazon CloudWatch Synthetics now supports customer managed encryption keys",
       "description": "Amazon CloudWatch Synthetics now supports customer managed AWS Key Management Service (KMS) keys for encrypting canary environment variables, giving you full control over the encryption of sensitive configuration data such as API keys, credentials, and tokens. Previously, environment variables were encrypted at rest using only an AWS owned key. Now, in addition to the default AWS owned key, you can specify your own symmetric KMS key for encryption at rest, and you can also encrypt individual values client-side before they are stored.\n \nWith encryption at rest, you specify a customer managed KMS key when creating or updating a canary, and CloudWatch Synthetics uses a grant on the key to handle encryption and decryption transparently. With client-side encryption, you encrypt values before storage, and your canary script decrypts them at runtime using the AWS KMS Decrypt API. This benefits teams in regulated industries that require organizational key management policies, auditability, or key rotation controls across all services.\n \nAmazon CloudWatch Synthetics customer managed key encryption is available in all commercial AWS Regions. Multi-location canaries can use a different KMS key per replica Region.\n \nTo learn more, see Encrypting environment variables in the Amazon CloudWatch User Guide.",
@@ -1922,23 +2101,6 @@
       ]
     },
     {
-      "id": "aws-news-0bd209927c48",
-      "title": "Introducing Grok on Amazon Bedrock",
-      "description": "This post covers what makes Grok 4.3 a great fit for agentic and enterprise workloads, how you access it through Amazon Bedrock, and how to use the capabilities most teams reach for first: a basic chat request, configurable reasoning effort, tool calling, structured output, image input, and stateful multi-turn conversations.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/",
-      "pubDate": "2026-07-16T19:29:26.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-2d0708e193f5",
       "title": "Track cost efficiency trends directly in Billing and Cost Management Dashboards with the new Cost Efficiency widget",
       "description": "Today, AWS Billing and Cost Management (BCM) announces support for Cost Efficiency widget in BCM Dashboards. You can now view cost efficiency trends alongside Cost Explorer, Budgets, and reports for Savings Plans and Reserved Instance coverage and utilization reports. This provides a unified view of your spending, commitments, and optimization performance in a single, tailored dashboard.\n \nThe Cost Efficiency widget displays your efficiency score over time, showing how your efficiency across your AWS environment changes over time. You can view efficiency by AWS account, region, or overall, and adjust granularity to analyze trends at the level that matters most to your team. By adding one or more Cost Efficiency widget to a BCM Dashboard, you can monitor your optimization performance from your existing cost management workflows. The widget links directly to the Cost Optimization Hub console so you can easily take actions when you have recommendations for savings opportunities.\n \nWith the Cost Efficiency widget, you can create a unified view of your spending, commitments, budgets, and optimization performance. The widget is fully integrated with dashboard exports and can be included in scheduled email reports or downloaded as a CSV or PDF for offline analysis. They are also included with cross-account dashboard sharing.\n \nThe Cost Efficiency widget for BCM Dashboards is available in all AWS commercial Regions at no additional charge. To learn more, visit our User Guide.",
@@ -1975,6 +2137,28 @@
       ]
     },
     {
+      "id": "aws-news-49d0566035ea",
+      "title": "PostgreSQL 19 Beta 2 is now available in Amazon RDS Database Preview Environment",
+      "description": "Amazon RDS for PostgreSQL 19 Beta 2 is now available in the Amazon RDS Database Preview Environment, allowing you to evaluate the pre-release of PostgreSQL 19 on Amazon RDS for PostgreSQL. You can deploy PostgreSQL 19 Beta 2 in the Amazon RDS Database Preview Environment that has the benefits of a fully managed database.\n  PostgreSQL 19 introduces parallel autovacuum with configurable worker limits, so routine maintenance no longer bottlenecks large databases. The new REPACK CONCURRENTLY command rebuilds tables and reclaims storage online, keeping production databases accessible without third-party extensions. Native SQL Property Graph Queries (SQL/PGQ) let you express relationship traversals directly in standard SQL, eliminating separate application logic. Logical replication now synchronizes sequence values automatically and can be enabled dynamically without a server restart, reducing planned downtime. Beta 2 adds bug fixes and stability improvements from the Beta 1 testing period, including refinements to parallel autovacuum worker coordination and REPACK CONCURRENTLY lock handling. Please refer to PostgreSQL community announcement for more details.\n  Amazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the preview environment can only be used to create or restore database instances within the preview environment. You can use the PostgreSQL dump and load functionality to import or export your databases from the preview environment.\n  Amazon RDS Database Preview Environment database instances are priced as per the pricing in the US East (Ohio) Region.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/postgresql-19-beta-2-amazon-rds-database-preview-environment/",
+      "pubDate": "2026-07-16T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "preview",
+        "beta",
+        "now-available",
+        "improvement",
+        "announcement"
+      ]
+    },
+    {
       "id": "aws-news-9b7fcf28c0b7",
       "title": "Amazon S3 Event Notifications now include system-generated tags",
       "description": "Amazon S3 Event Notifications now include system-generated tags in events delivered to all destinations including Amazon EventBridge, Amazon SQS, Amazon SNS, and AWS Lambda. System-generated tags are metadata labels attached to your bucket by AWS services. You can use these tags to filter events from thousands of buckets with a single EventBridge rule, instead of listing each bucket name individually.\n  To get started, enable S3 Event Notifications on your general purpose buckets through the AWS Management Console, AWS SDK, or AWS CLI. If AWS services like AWS CloudFormation have already applied system-generated tags to your buckets, S3 automatically includes them in new event notifications. System-generated tags in S3 Event Notifications are available at no additional cost in all AWS Regions and require no changes to existing configurations. To learn more, visit the S3 Event Notifications documentation.",
@@ -1999,28 +2183,6 @@
         "eventbridge",
         "sns",
         "sqs"
-      ]
-    },
-    {
-      "id": "aws-news-49d0566035ea",
-      "title": "PostgreSQL 19 Beta 2 is now available in Amazon RDS Database Preview Environment",
-      "description": "Amazon RDS for PostgreSQL 19 Beta 2 is now available in the Amazon RDS Database Preview Environment, allowing you to evaluate the pre-release of PostgreSQL 19 on Amazon RDS for PostgreSQL. You can deploy PostgreSQL 19 Beta 2 in the Amazon RDS Database Preview Environment that has the benefits of a fully managed database.\n  PostgreSQL 19 introduces parallel autovacuum with configurable worker limits, so routine maintenance no longer bottlenecks large databases. The new REPACK CONCURRENTLY command rebuilds tables and reclaims storage online, keeping production databases accessible without third-party extensions. Native SQL Property Graph Queries (SQL/PGQ) let you express relationship traversals directly in standard SQL, eliminating separate application logic. Logical replication now synchronizes sequence values automatically and can be enabled dynamically without a server restart, reducing planned downtime. Beta 2 adds bug fixes and stability improvements from the Beta 1 testing period, including refinements to parallel autovacuum worker coordination and REPACK CONCURRENTLY lock handling. Please refer to PostgreSQL community announcement for more details.\n  Amazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the preview environment can only be used to create or restore database instances within the preview environment. You can use the PostgreSQL dump and load functionality to import or export your databases from the preview environment.\n  Amazon RDS Database Preview Environment database instances are priced as per the pricing in the US East (Ohio) Region.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/postgresql-19-beta-2-amazon-rds-database-preview-environment/",
-      "pubDate": "2026-07-16T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "preview",
-        "beta",
-        "now-available",
-        "improvement",
-        "announcement"
       ]
     },
     {
@@ -2530,27 +2692,6 @@
       ]
     },
     {
-      "id": "aws-news-f4771c520051",
-      "title": "Amazon CloudWatch announces lookup processor for log enrichment",
-      "description": "Amazon CloudWatch now supports lookup processor, enabling you to enrich log events with additional context by matching fields in your logs against a lookup table directly within your CloudWatch Pipeline.\n \nWith the lookup processor, you can upload CSV files containing reference data and configure your pipeline to match incoming log fields against this data to add enriched metadata. For example, you can upload a CSV mapping IP addresses to application teams and automatically tag VPC Flow Logs with team ownership information as logs are ingested. The lookup processor matches fields in your log events against fields in a lookup table and adds specified fields from matching rows to your log events. This enables data enrichment scenarios such as mapping user IDs to user details, product codes to product information, or error codes to human-readable error descriptions, thereby eliminating the need to build and maintain custom enrichment logic outside of CloudWatch. By enriching logs at ingestion time, your queries, dashboards, and alarms immediately benefit from the added context without any post-processing.\n \nThe lookup table processor is available in all AWS commercial regions that support Amazon CloudWatch pipelines. You can add a lookup processor to your pipeline using the AWS Management Console, AWS CLI, or AWS SDKs. To get started, see the Amazon CloudWatch Logs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-cloudwatch-lookup-processor/",
-      "pubDate": "2026-07-14T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-062bbc7a5da3",
       "title": "How Mapfre Insurance modernized fraud claims with Amazon EMR Serverless",
       "description": "Insurance fraud remains a significant challenge for the insurance industry because fraudulent claims can increase loss costs, reduce trust, and consume investigation capacity that could otherwise be focused on serving customers. Traditional fraud detection approaches typically rely on rules-based controls, manual investigation triggers, historical claim patterns, and structured-data-only analysis. These approaches are useful for known […]",
@@ -2566,140 +2707,6 @@
       "tags": [
         "emr",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-e83af3c032b0",
-      "title": "Amazon EC2 M8in, M8idn, M8ib, M8idb instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) M8in, M8idn network optimized, and M8ib, M8idb EBS optimized instances are available in the AWS US East (Ohio), Europe (Ireland), and Asia Pacific (Tokyo) regions. The new instances are powered by custom sixth generation Intel Xeon Scalable processors available only on AWS and deliver up to 43% higher performance compared to previous generation instances. These instances also feature the latest sixth generation AWS Nitro cards.\n \nM8in, M8idn instances deliver 600 Gbps network bandwidth, the highest network bandwidth among enhanced networking EC2 instances, and are ideal for workloads such as real-time big data analytics, distributed web scale in-memory caches, caching fleets for AI/ML clusters, and Telco applications such as 5G User Plane Function (UPF). \n  \n M8ib, M8idb instances deliver up to 300Gbps EBS bandwidth, the highest among non-accelerated compute EC2 instances, and are best suited for workloads that benefit from high block storage performance, such as high-performance file systems and NoSQL databases.\n \nM8idn instances are ideal for network-intensive workloads that benefit from low-latency local storage, such as distributed compute, data analytics, and high-performance file systems. M8idb instances are ideal for storage-intensive workloads such as large commercial databases, data lakes, and NoSQL databases that benefit from both high EBS throughput and low-latency local NVMe storage. \n \nM8in, M8idn, M8ib, M8idb instances are available in US East (N. Virginia, Ohio), US West (Oregon), Europe (Ireland), Asia Pacific (Tokyo), and Europe (Spain) regions, via Savings Plans, On-Demand, and Spot instances. For more information, visit the Amazon EC2 M8i instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/m8in-m8idn-m8ib-m8idb-new-regions",
-      "pubDate": "2026-07-14T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-7909465ce771",
-      "title": "AWS Lambda console provides a one-click setup prompt for coding agents",
-      "description": "AWS Lambda console now provides a one-click setup prompt for coding agents that configures your agent with AWS Serverless skills and the Serverless Model Context Protocol (MCP) server, embedding serverless best practices from the start. This setup is available on the Lambda console wherever the developers start their Lambda journey: whether they are getting started with Lambda, exploring its capabilities, or have created their first function.\n \nDevelopers use coding agents to build, test, and deploy Lambda functions, but setting up an agent for serverless development previously required navigating across multiple documentation pages to find the right configuration. The one-click setup prompt eliminates this friction as it provides a prompt that instructs the agent to install AWS Serverless skills (hosted in Agent Toolkit for AWS) and the Serverless MCP server directly in the developer's preferred coding agent. The prompt references the Lambda agent setup guide, which includes installation commands for Claude Code, Kiro, Cursor, GitHub Copilot, Codex, Devin Desktop, and OpenCode, for the AWS Serverless skills, three specialized Lambda skills (MicroVM, Managed Instances, durable functions), and Serverless MCP server configuration. If a developer does not have local AWS authentication configured, the prompt guides them to connect using the signing-in-to-aws skill.\n \nThis capability is available in all commercial AWS Regions (except Middle East (Bahrain) and Middle East (UAE)) and AWS GovCloud (US) Regions where Lambda is available. Get started by visiting the AWS Lambda console or learn more in the Lambda agent setup guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-lambda-prompt-coding-agents/",
-      "pubDate": "2026-07-14T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "lambda",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-c9056e6d1789",
-      "title": "AWS IAM Identity Center achieves FedRAMP Class C Certification",
-      "description": "AWS IAM Identity Center is now in scope for FedRAMP Class C in the US East (Ohio), US East (N. Virginia), US West (N. California), and US West (Oregon) Regions. You can now use IAM Identity Center to enable workforce access to AWS accounts and applications that are subject to FedRAMP Class C compliance.\n \nThe Federal Risk and Authorization Management Program (FedRAMP) is a US government-wide program that delivers a standard approach to the security assessment, certification, and continuous monitoring for cloud products and services. AWS IAM Identity Center is the recommended service for managing your workforce access to AWS accounts and applications.\n \nTo learn more about FedRAMP, visit the AWS services compliance page and AWS compliance resources page. To learn more about IAM Identity Center, visit the User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-identity-center-fedramp/",
-      "pubDate": "2026-07-14T19:10:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center"
-      ]
-    },
-    {
-      "id": "aws-news-01027eab66a8",
-      "title": "Introducing Amazon GuardDuty AI Protection for AWS AI workloads",
-      "description": "Amazon GuardDuty now offers AI Protection, expanding threat detection to AWS AI services including Amazon Bedrock and Amazon SageMaker. As organizations rapidly adopt AI, security teams may lack visibility into threats specifically targeting AI workloads, such as anomalous model invocations, cost harvesting attacks, and prompt injection attempts. GuardDuty AI Protection continuously monitors these workloads so security teams can detect and respond to AI-specific threats without manual configuration or custom tooling.\n \nGuardDuty AI Protection analyzes both CloudTrail management and data events from AWS AI services to identify suspicious activity, including unusual invocation patterns, cost harvesting attacks where threat actors force AI resources to consume excessive GPU time and tokens, and prompt injection attempts through integration with Amazon Bedrock Guardrails. Threat findings flow directly into AWS Security Hub, giving teams a single view of AI assets and threats for prioritized response. GuardDuty AI Protection can be enabled with a few steps in the GuardDuty or Security Hub console, and using AWS Organizations, can be centrally enabled for all accounts in an organization.\n \nGuardDuty AI Protection is available to GuardDuty customers with a 30-day free trial. For pricing details, visit the Amazon GuardDuty pricing page. To learn more, see the Amazon GuardDuty User Guide and the Amazon GuardDuty product page. For the full list of supported Regions, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-guardduty-ai-protection-aws/",
-      "pubDate": "2026-07-14T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "sagemaker",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker",
-        "organizations",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4846668ae168",
-      "title": "Connect Customer Outbound Campaigns now in Cape Town Africa",
-      "description": "Connect Customer Outbound Campaigns digital channels (SMS, WhatsApp, and email) are now available in the Africa (Cape Town) Region. Businesses in the Region can now use Connect Customer's proactive outreach capabilities to create targeted, personalized engagement campaigns for service updates, promotional offers, appointment reminders, and product usage tips. Organizations configure and manage these campaigns through the Connect Customer admin website and Outbound Campaigns APIs.\n \nA retail business in the Region can segment customers by purchase behavior, then run a coordinated campaign that sends promotional offers over SMS, appointment reminders over WhatsApp, and product usage tips over email, with each message personalized to the recipient. Built-in analytics show which messages drove engagement, and event-based triggers start campaigns automatically from customer actions such as a completed purchase or a missed appointment.\n \nTo learn more, see Outbound campaigns in the Amazon Connect Administrator Guide. To get started, visit the Amazon Connect Customer product page. For all Regions where Connect Customer Outbound Campaigns is available, see the AWS Region table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/connect-africa-cape-town/",
-      "pubDate": "2026-07-14T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "personalize",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "personalize",
-        "organizations",
-        "ga",
-        "now-available",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-2f9ac12816c2",
-      "title": "Amazon Managed Service for Apache Flink now offers AI Agent Skills to simplify building and operating Flink applications",
-      "description": "Amazon Managed Service for Apache Flink now offers AI Agent Skills that give AI coding assistants expert, up-to-date guidance for building and operating Flink applications. The skills provide expert guidance for common tasks such as creating applications, troubleshooting, scaling, monitoring, networking configuration, and cost optimization.\n \nCustomers can leverage these skills to keep Flink applications healthy and performant, accelerate development of new streaming applications, and easily upgrade to latest versions of Apache Flink like Flink 2.2. The skills turn tasks that once required specialized Apache Flink knowledge into a guided experience developers can complete on their own.\n \nYou can use the Managed Service for Apache Flink skills with your existing AI coding agent, including Kiro, Claude Code, or Cursor. To get started, configure the Agent Toolkit for AWS using the AWS CLI, then ask your coding agent a question, such as \"How do I create a new Flink application on MSF?\" or \"My Flink application is unhealthy — what's wrong?\"",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-service-flink-agent-skills/",
-      "pubDate": "2026-07-14T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-8f4b6b78c85c",
-      "title": "Amazon WorkSpaces Personal simplifies bulk PCoIP to DCV protocol migration",
-      "description": "Amazon WorkSpaces Personal now provides automated rollback and support for PCoIP to DCV protocol migration of stopped WorkSpaces, building on the recently launched console-based migration workflow and checkpoint snapshot support. These new capabilities enable administrators to migrate WorkSpaces at scale with minimal manual intervention.\n  Amazon DCV is a high-performance streaming protocol built by AWS that powers Amazon WorkSpaces services. By migrating to DCV, customers gain access to broader operating system support including Windows 11 and Windows Server 2025, enhanced security features such as certificate-based authentication and WebAuthN redirection, and improved streaming performance. With this launch, if a protocol modification fails, the WorkSpace automatically rolls back to the pre-migration snapshot, ensuring it returns to a known healthy state without manual intervention. Additionally, administrators can now initiate migration for WorkSpaces in a stopped state, removing the need to manually start each stopped WorkSpace before modifying its protocol. This helps customers significantly speed up large scale migrations.\n  These enhancements are available in all AWS commercial and AWS GovCloud (US) Regions where Amazon WorkSpaces Personal is supported.\n  To get started, sign in to the Amazon WorkSpaces console. For more information, see Modify protocols section in the Amazon WorkSpaces Administration Guide. To learn more about Amazon WorkSpaces, visit the Amazon WorkSpaces product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-workspaces-personal-pcoip/",
-      "pubDate": "2026-07-14T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
-        "enhancement",
-        "support"
       ]
     },
     {
@@ -3165,28 +3172,6 @@
       ]
     },
     {
-      "id": "aws-news-53df24418a23",
-      "title": "Scale analytics with Amazon Redshift multi-warehouse enhancements",
-      "description": "In this post, we introduce new capabilities of Amazon Redshift that enhance our multi-warehouse and scaling capabilities: remote materialized view (MV) operations, remote table DDL support, and concurrency scaling enhancements for zero-ETL and S3 event integration. These features help you build more scalable, performant decentralized analytics architectures on Amazon Redshift.",
-      "link": "https://aws.amazon.com/blogs/big-data/scale-analytics-with-amazon-redshift-multi-warehouse-enhancements/",
-      "pubDate": "2026-06-29T19:59:42.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "s3",
-        "redshift"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "enhancement",
-        "integration",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a98ddc797b39",
       "title": "Lessons learned from scaling to 1 million Lambda functions",
       "description": "In this post, we share our journey and the lessons learned from building and running a fully serverless, multi-account software as a service (SaaS) platform at scale. We’ll explore why true scale-to-zero is critical, how we handle quota management, why engaging AWS service teams early saved us from outages, and which unexpected practices emerged once we scaled from thousands to over a million functions.",
@@ -3567,23 +3552,6 @@
         "industry-cases"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-0b3730c9787e",
-      "title": "Amazon S3 annotations: attach rich, queryable context directly to your objects",
-      "description": "Amazon S3 now lets you attach up to 1 GB of rich, mutable, and queryable context directly to your objects using annotations, purpose-built for AI agents and autonomous workflows that need to discover, understand, and act on data at scale without maintaining separate metadata systems.",
-      "link": "https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/",
-      "pubDate": "2026-06-16T23:13:10.000Z",
-      "source": "newsBlog",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "s3"
-      ]
     },
     {
       "id": "aws-news-51ce6a79ab08",

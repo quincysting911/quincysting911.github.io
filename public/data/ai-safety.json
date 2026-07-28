@@ -1,8 +1,27 @@
 {
-  "lastUpdated": "2026-07-27T09:23:28.129Z",
+  "lastUpdated": "2026-07-28T08:10:51.915Z",
   "category": "ai-safety",
-  "totalItems": 24,
+  "totalItems": 22,
   "items": [
+    {
+      "id": "aws-news-66101f6459cf",
+      "title": "Amazon Neptune now supports tag-based access control for IAM",
+      "description": "Amazon Neptune Database now supports tag-based access control (TBAC) for IAM, enabling customers to use AWS resource tags and IAM principal tags as conditions in IAM policies and Service Control Policies (SCPs) to control access to Neptune data-plane operations. Neptune already provides robust security through VPC isolation, TLS encryption, and IAM authentication, but customers managing multiple clusters at scale needed a dynamic, attribute-based mechanism to enforce organizational access boundaries. TBAC addresses this by allowing administrators to govern cluster access without enumerating specific cluster ARNs in every policy.\n  With TBAC, IAM principals can only perform `neptune-db:*` actions against Neptune clusters whose tags match their own — for example, a principal tagged `Project=FraudDetection` is automatically restricted to clusters sharing that same tag. This eliminates lateral access risk within shared VPC environments, enforces team and environment-level isolation across projects, and supports federated identity workflows using SAML or OIDC session tags from external identity providers. Granular permissions like neptune-db:QueryLanguage can be used alongside TBAC for more fine-grained access control.\n  This feature is available in all AWS Regions where Amazon Neptune is available and requires Neptune engine version 1.2.0.0 or later with IAM authentication enabled.\n  To learn more about configuring tag-based access control for Amazon Neptune, including how to tag your DB clusters and IAM principals and deploy organization-wide guardrails using SCPs, visit the Amazon Neptune documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-neptune-tbac/",
+      "pubDate": "2026-07-27T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "iam",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d54987315fd3",
       "title": "Build an explainable next-best-product recommendation system for banking on AWS",
@@ -363,71 +382,6 @@
         "ai-safety"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-c9056e6d1789",
-      "title": "AWS IAM Identity Center achieves FedRAMP Class C Certification",
-      "description": "AWS IAM Identity Center is now in scope for FedRAMP Class C in the US East (Ohio), US East (N. Virginia), US West (N. California), and US West (Oregon) Regions. You can now use IAM Identity Center to enable workforce access to AWS accounts and applications that are subject to FedRAMP Class C compliance.\n \nThe Federal Risk and Authorization Management Program (FedRAMP) is a US government-wide program that delivers a standard approach to the security assessment, certification, and continuous monitoring for cloud products and services. AWS IAM Identity Center is the recommended service for managing your workforce access to AWS accounts and applications.\n \nTo learn more about FedRAMP, visit the AWS services compliance page and AWS compliance resources page. To learn more about IAM Identity Center, visit the User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-identity-center-fedramp/",
-      "pubDate": "2026-07-14T19:10:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center"
-      ]
-    },
-    {
-      "id": "aws-news-01027eab66a8",
-      "title": "Introducing Amazon GuardDuty AI Protection for AWS AI workloads",
-      "description": "Amazon GuardDuty now offers AI Protection, expanding threat detection to AWS AI services including Amazon Bedrock and Amazon SageMaker. As organizations rapidly adopt AI, security teams may lack visibility into threats specifically targeting AI workloads, such as anomalous model invocations, cost harvesting attacks, and prompt injection attempts. GuardDuty AI Protection continuously monitors these workloads so security teams can detect and respond to AI-specific threats without manual configuration or custom tooling.\n \nGuardDuty AI Protection analyzes both CloudTrail management and data events from AWS AI services to identify suspicious activity, including unusual invocation patterns, cost harvesting attacks where threat actors force AI resources to consume excessive GPU time and tokens, and prompt injection attempts through integration with Amazon Bedrock Guardrails. Threat findings flow directly into AWS Security Hub, giving teams a single view of AI assets and threats for prioritized response. GuardDuty AI Protection can be enabled with a few steps in the GuardDuty or Security Hub console, and using AWS Organizations, can be centrally enabled for all accounts in an organization.\n \nGuardDuty AI Protection is available to GuardDuty customers with a 30-day free trial. For pricing details, visit the Amazon GuardDuty pricing page. To learn more, see the Amazon GuardDuty User Guide and the Amazon GuardDuty product page. For the full list of supported Regions, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-guardduty-ai-protection-aws/",
-      "pubDate": "2026-07-14T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "sagemaker",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "sagemaker",
-        "organizations",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4846668ae168",
-      "title": "Connect Customer Outbound Campaigns now in Cape Town Africa",
-      "description": "Connect Customer Outbound Campaigns digital channels (SMS, WhatsApp, and email) are now available in the Africa (Cape Town) Region. Businesses in the Region can now use Connect Customer's proactive outreach capabilities to create targeted, personalized engagement campaigns for service updates, promotional offers, appointment reminders, and product usage tips. Organizations configure and manage these campaigns through the Connect Customer admin website and Outbound Campaigns APIs.\n \nA retail business in the Region can segment customers by purchase behavior, then run a coordinated campaign that sends promotional offers over SMS, appointment reminders over WhatsApp, and product usage tips over email, with each message personalized to the recipient. Built-in analytics show which messages drove engagement, and event-based triggers start campaigns automatically from customer actions such as a completed purchase or a missed appointment.\n \nTo learn more, see Outbound campaigns in the Amazon Connect Administrator Guide. To get started, visit the Amazon Connect Customer product page. For all Regions where Connect Customer Outbound Campaigns is available, see the AWS Region table.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/connect-africa-cape-town/",
-      "pubDate": "2026-07-14T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "personalize",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "personalize",
-        "organizations",
-        "ga",
-        "now-available",
-        "update"
-      ]
     },
     {
       "id": "aws-news-cb1f60f75cb0",
