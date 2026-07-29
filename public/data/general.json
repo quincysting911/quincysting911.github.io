@@ -1,8 +1,45 @@
 {
-  "lastUpdated": "2026-07-28T08:10:51.915Z",
+  "lastUpdated": "2026-07-29T08:15:06.740Z",
   "category": "general",
-  "totalItems": 41,
+  "totalItems": 40,
   "items": [
+    {
+      "id": "aws-news-b1373fae9e62",
+      "title": "Amazon EKS Provisioned Control Plane now delivers faster pod autoscaling",
+      "description": "Amazon EKS now delivers faster pod autoscaling across all Provisioned Control Plane clusters by increasing Horizontal Pod Autoscaler (HPA) sync concurrency to up to 40 times the default Kubernetes value. This reduces the time it takes for HPA-driven workloads to scale in response to increased load, enabling faster responsiveness to demand.\n  The Kubernetes Horizontal Pod Autoscaler (HPA) continuously monitors workload metrics and adjusts pod counts to match demand. In clusters running hundreds or thousands of HPA objects, the speed at which the Kubernetes control plane processes these objects determines how quickly workloads scale in response to changing demand. The HPA sync concurrency setting controls how many HPA objects the control plane evaluates in parallel. By increasing this value, Provisioned Control Plane clusters now process more HPA objects simultaneously, reducing the time between detecting increased load and scaling out pods.\n  This enhancement is available to all customers using EKS Provisioned Control Plane and requires no configuration changes. To learn more about this enhancement, see EKS Provisioned Control Plane in the EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-provisioned-control/",
+      "pubDate": "2026-07-28T17:18:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "enhancement"
+      ]
+    },
+    {
+      "id": "aws-news-27911d1f2536",
+      "title": "Amazon S3 Tables now support the Variant data type for Apache Iceberg V3",
+      "description": "Amazon S3 Tables now support the Variant data type as defined in the Apache Iceberg Version 3 (V3) specification. You can now write semi-structured data like JSON directly to S3 Tables without defining a fixed schema in advance, allowing you to land data faster while still getting efficient analytical query performance.\n  With the Variant data type, Apache Iceberg V3-compatible engines shred your semi-structured data into hidden columns as you write it, generating Parquet column statistics that query engines use for optimizations like file pruning, which reduces the data your analytical queries scan. S3 Tables also provide ongoing table maintenance, including compaction, for Variant columns, so you can consolidate data from small files into large files that Iceberg engines can read.\n  Variant support in S3 Tables is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To learn more, see Amazon S3 Tables and the AWS Prescriptive Guidance for working with Iceberg table format specification version 3.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-tables-variant-iceberg-v3/",
+      "pubDate": "2026-07-28T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c75e1035646c",
       "title": "Amazon GameLift Streams now supports Custom Aspect Ratio and Dynamic Resolution",
@@ -16,6 +53,26 @@
       ],
       "tags": [
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c545542ce5b9",
+      "title": "Amazon EKS now supports AWS PrivateLink for the cluster OIDC endpoint",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports AWS PrivateLink for the cluster OIDC discovery and JWKS endpoint. You can now reach the endpoint used by IAM roles for service accounts (IRSA) privately from your VPC without requiring internet egress.\n  Each EKS cluster publishes public signing keys at its OIDC endpoint for IRSA. With AWS PrivateLink for the cluster OIDC endpoint, tools running inside your VPC, such as eksctl, Terraform, or custom token validators, can now reach the OIDC discovery document and JWKS privately by creating an interface VPC endpoint for the com.amazonaws.<region>.oidc-eks service. This enables IRSA setup and token validation in VPCs without internet egress and ensures correct DNS resolution when the EKS management VPC endpoint is enabled with private DNS.\n  AWS PrivateLink for the cluster OIDC endpoint is available at no additional cost beyond standard AWS PrivateLink pricing in all AWS Regions where Amazon EKS is available. To get started, see Access the cluster OIDC endpoint using AWS PrivateLink in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-oidc-endpoint-privatelink",
+      "pubDate": "2026-07-27T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "iam",
         "support"
       ]
     },
@@ -569,96 +626,6 @@
         "ga",
         "improvement",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-1e9ec0ff42f0",
-      "title": "Amazon MSK Express Brokers adds support for Apache Kafka version 4.2",
-      "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) Express Brokers now supports Apache Kafka version 4.2. This release includes Eligible Leader Replicas (ELR) enhancements that strengthen availability with improved leader election correctness. It also introduces a new consumer rebalance protocol that helps ensure smoother and faster group rebalances, and a new Streams Rebalance Protocol that extends broker coordination capabilities to Kafka Streams for optimized task assignments. For a complete list of improvements and bug fixes, please refer to the Apache Kafka release notes for version 4.2.\n  MSK Express Brokers are designed to deliver up to three times more throughput per broker, scale up to 20 times faster, and reduce recovery time by 90 percent. This launch brings the latest open-source reliability and performance improvements to MSK Express.\n  To get started, simply select version 4.2.x when creating a new cluster with Express Brokers via the AWS Management Console, AWS CLI, or AWS SDKs. You can also upgrade existing MSK Express Brokers with an in-place rolling update. Amazon MSK orchestrates broker restarts to maintain availability and protect your data during the upgrade. Kafka version 4.2 support is available today across all AWS regions where Amazon MSK Express Brokers is offered. To learn how to get started, see the Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-express-version-42/",
-      "pubDate": "2026-07-15T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "update",
-        "improvement",
-        "enhancement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-283a147bc9de",
-      "title": "AWS Glue SAP OData connector and zero-ETL integrations are now available in AWS GovCloud (US) regions",
-      "description": "AWS Glue SAP OData connector and zero-ETL integrations are now available in AWS GovCloud (US-West) and AWS GovCloud (US-East) Regions, with support for Amazon DynamoDB, Salesforce, and SAP OData as sources. Customers operating in regulated environments can now replicate data from these sources into Amazon Redshift, Amazon S3, or other supported destinations without building or maintaining custom data pipelines.\n  The SAP OData connector allows you to extract data from SAP systems exposing OData services, eliminating the need for custom extraction logic or third-party middleware. The zero-ETL integrations are fully managed by AWS and minimize the need to build ETL data pipelines. With this new zero-ETL integration, you can efficiently extract and load valuable data from your Amazon DynamoDB databases or Salesforce and SAP applications into your data lake and data warehouse for analysis. Zero-ETL integration reduces your operational burden and saves the weeks of engineering effort needed to design, build, and test data pipelines. By selecting a few settings in the no-code interface, you can quickly set up your zero-ETL integration to automatically ingest and continually maintain an up-to-date replica of your data in the data lake and data warehouse. Zero-ETL integrations help you focus on deriving insights from your application data, breaking down data silos in your organization and improving operational efficiency.\n  To get started, navigate to the AWS Glue console and create a new zero-ETL integration. For more information, visit the AWS Glue zero-ETL integrations documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-sap-zero-etl-govcloud",
-      "pubDate": "2026-07-15T15:51:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "redshift",
-        "dynamodb",
-        "eks",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "redshift",
-        "dynamodb",
-        "eks",
-        "glue",
-        "ga",
-        "now-available",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c3b98e151956",
-      "title": "Amazon RDS for Db2 is now available in additional AWS Commercial regions",
-      "description": "Amazon Relational Database Service (Amazon RDS) for Db2 is now available in the Asia Pacific (Thailand), Asia Pacific (Malaysia), Asia Pacific (Taipei), Mexico (Central), and Canada West (Calgary) Regions. Amazon RDS for Db2 makes it easy to set up, operate, and scale Db2 databases in the cloud. Customers can deploy a Db2 database in minutes with automatically configured parameters for optimal performance. For databases setup with Multi-AZ configuration, Amazon RDS performs synchronous replication to a standby instance in a different Availability Zone to provide high availability. \n  To use Amazon RDS for Db2, customers can purchase a Db2 license from the AWS Marketplace for hourly, pay-as-you-go pricing, or use Bring Your Own License (BYOL). Both hourly and BYOL licensing are available in Standard and Advanced Editions. You can also choose to use the latest Db2 Community Edition that provides all the features available in Standard and Advanced Editions, with no commercial software licensing charges for development and test applications. This allows you to easily start developing and testing Db2 applications with a managed database service without worrying about software licensing. \n  To learn more about Amazon RDS for Db2, refer to documentation and pricing pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-db2-available-additional-aws-commercial-regions",
-      "pubDate": "2026-07-15T07:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-00283e691d51",
-      "title": "AWS Elastic Disaster Recovery reduces recovery time for AWS-to-AWS workloads",
-      "description": "AWS Elastic Disaster Recovery (AWS DRS) now recovers your AWS-based workloads faster. For source servers running on Amazon EC2, DRS can now skip preparation steps that these workloads no longer need, reducing recovery time by up to 65% for Windows and up to 40% for Linux.\n \nDuring a disaster or a drill, every minute matters. Because workloads already running on AWS come with AWS-compatible drivers and configuration, DRS can launch them with fewer steps — helping you bring applications back online sooner and with greater confidence. Networking, drivers, and licensing are still applied automatically, so recovery stays simple and hands-off. You remain in control: turn on faster recovery across your whole account or for individual servers and change the setting whenever your needs change.\n \nThis capability is available in all AWS Regions where AWS DRS is offered, at no additional cost. To learn more, visit the AWS Elastic Disaster Recovery User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-drs-fast-recovery/",
-      "pubDate": "2026-07-14T22:05:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch"
       ]
     },
     {
