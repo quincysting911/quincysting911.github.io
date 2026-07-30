@@ -1,8 +1,74 @@
 {
-  "lastUpdated": "2026-07-29T08:15:06.740Z",
+  "lastUpdated": "2026-07-30T08:03:36.287Z",
   "category": "natural-language",
-  "totalItems": 8,
+  "totalItems": 11,
   "items": [
+    {
+      "id": "aws-news-02eb51cfbaf8",
+      "title": "Amazon Redshift Data API announces long polling, session management, and flexible batch execution",
+      "description": "Amazon Redshift Data API introduces new capabilities that reduce the number of API calls to retrieve SQL statement metadata or results, provide visibility into sessions, and allow batch statements to execute on separate transactions.\n  Long polling: Long polling enables you to retrieve SQL statement metadata or results without polling repeatedly until the SQL statement reaches a terminal state, by delaying returning a synchronous response until the SQL statement finishes. To use this feature, specify the WaitTimeSeconds parameter on ExecuteStatement, BatchExecuteStatement, DescribeStatement, GetStatementResult, or GetStatementResultV2.\n  ListSessions: Applications that reuse sessions across multiple queries can now enumerate active sessions and filter by status, compute target, or database, eliminating the need to track session identifiers externally.\n  Flexible batch execution: BatchExecuteStatement now supports an ExecutionMode parameter with AUTO_COMMIT mode, allowing each SQL statement in a batch to execute independently so a single failure no longer rolls back the entire batch — useful for ETL pipelines and administrative scripts where partial completion is acceptable. In addition, BatchExecuteStatement now accepts an array of SqlParameter, enabling parameter reuse across all statements in a batch: define parameters once and reference them in any statement, eliminating the need to embed literal values in each query.\n  These features are generally available for Amazon Redshift Provisioned and Amazon Redshift Serverless in all AWS commercial and AWS GovCloud (US) Regions that support Amazon Redshift Data API. To get started, visit the Amazon Redshift Data API developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-data-api-longpolling-listsession-flexiblebatchexecute/",
+      "pubDate": "2026-07-29T20:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "redshift"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "redshift",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b9479602cf51",
+      "title": "AWS Glue announces VPC support, filter pushdown, and partition support for the REST API connector",
+      "description": "AWS Glue now supports VPC connections, filter pushdown, and partition support for the REST API connector. The REST API connector enables you to ingest data from any source that exposes a REST-based API, including proprietary systems and emerging platforms without native AWS Glue connectors. With this launch, you can operate your ETL pipelines from data sources with REST API endpoints by securely connecting to private endpoints, transfering only the data they need, and parallelizing reads for faster ingestion, all without writing custom code\n  With VPC support, you can use the REST API connector to access data sources hosted in private subnets or connected through VPNs or AWS PrivateLink, without exposing traffic to the public internet. Filter pushdown translates your query predicates into API-native parameters, so only matching records leave the source, reducing data transfer costs and improving job performance. Partition support splits large datasets across multiple Spark workers using field-based or record-count strategies, providing parallel reads that reduce ingestion time for high-volume, paginated APIs.\n  These capabilities are available in all AWS commercial regions where AWS Glue is available.\n  To get started, visit the AWS Glue REST API connector documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-rest-connector-filtering-partitioning-vpc",
+      "pubDate": "2026-07-29T20:18:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "translate",
+        "rds",
+        "glue"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "translate",
+        "rds",
+        "glue",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e84b404edb0a",
+      "title": "AWS announces AWS Interconnect - multicloud connectivity with Oracle Cloud Infrastructure in GA",
+      "description": "AWS announces the general availability (GA) of AWS Interconnect — multicloud with Oracle Cloud Infrastructure (OCI).\n \nCustomers have been adopting multicloud strategies while migrating more applications to the cloud. They do so for many reasons including interoperability requirements, the freedom to choose technology that best suits their needs, and the ability to build and deploy applications on any environment with greater ease and speed. Previously, when interconnecting workloads across multiple cloud providers (CSPs), customers had to go the route of a ‘do-it-yourself’ multicloud approach, leading to complexities of building and managing global multi-layered networks at scale. AWS Interconnect - multicloud is the first purpose-built product of its kind and a new way of how clouds connect and talk to each other, allowing customers to quickly provision resilient, scalable private connections to other cloud providers.\n \nIn May, OCI launched support for AWS Interconnect in public preview and became the latest CSP to adopt the open specification that powers the service. With today’s GA launch, AWS customers can now rely on the same consistent, simple experience to interconnect their workloads on OCI and Google Cloud. Microsoft Azure will launch later in 2026.\n  Interconnect - multicloud is available with OCI in the us-east-1 (N. Virginia) AWS Region. You can create an Interconnect using the AWS Management Console, Command Line Interface (CLI), or API. For more information, see the AWS Interconnect - multicloud documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-announces-AWS-interconnect-multicloud-OCI-GA/",
+      "pubDate": "2026-07-29T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "preview",
+        "ga",
+        "support",
+        "public-preview"
+      ]
+    },
     {
       "id": "aws-news-fed7d37b3386",
       "title": "Amazon EC2 Dedicated Hosts now support host resource groups without self-managed licenses",

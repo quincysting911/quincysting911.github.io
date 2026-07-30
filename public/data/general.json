@@ -1,8 +1,52 @@
 {
-  "lastUpdated": "2026-07-29T08:15:06.740Z",
+  "lastUpdated": "2026-07-30T08:03:36.287Z",
   "category": "general",
   "totalItems": 40,
   "items": [
+    {
+      "id": "aws-news-07a9a3d6ee78",
+      "title": "Amazon EC2 Auto Scaling now supports Instance Refresh in CloudFormation",
+      "description": "Amazon EC2 Auto Scaling now supports Instance Refresh as a new AWS CloudFormation update policy. When you configure the new AutoScalingInstanceRefresh update policy and update properties that require instance replacement, CloudFormation automatically triggers an Instance Refresh.\n \nWith this integration, you can now access Instance Refresh capabilities including replace root volume for in-place updates, launch-before-terminate, alarm-based monitoring, and checkpoints with bake time for controlled rollouts. Auto Scaling features such as scaling policies and health checks remain active throughout the update, so your service health is not at risk during deployments. Rollback is handled through CloudFormation stack rollback.\n \nThis feature is available in all AWS Regions at no additional cost. To learn more, see AutoScalingInstanceRefresh update policy in the AWS CloudFormation Template Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-auto-scaling-instance-refresh-cloudformation",
+      "pubDate": "2026-07-29T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "cloudformation",
+        "launch",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-9031ce965a5c",
+      "title": "AWS IAM Identity Center extends multi-Region support to Identity Center directory",
+      "description": "IAM Identity Center helps you configure the single sign-on experience of your workforce to AWS accounts and applications. You can now replicate IAM Identity Center from the primary AWS Region where you first enabled it to additional Regions of your choice when using Identity Center directory as your identity source. This extends the multi-Region support capability, previously available for Identity Center organization instances connected to external identity providers, to instances that use the Identity Center directory to manage and authenticate their workforce. This feature enhances resilience of user access to AWS accounts and helps you deploy AWS applications in the AWS Regions that best align with your business needs such as application data residency and proximity to users.\n \nWhen you enable this feature, IAM Identity Center automatically replicates your identities, entitlements, and other information from the primary Region to additional Regions. If IAM Identity Center is affected by a disruption in the primary Region, IAM Identity Center users continue to have access to their AWS accounts using the already provisioned entitlements in the additional Regions. \n \nAWS application administrators can use the standard application deployment workflow to deploy their application in an additional Region while you continue to administer IAM Identity Center in the primary Region.\n \nIAM Identity Center multi-Region support is currently available in the 17 enabled-by-default commercial AWS Regions for organization instances of IAM Identity Center. The IAM Identity Center organization instance must be configured with a multi-Region customer managed KMS key (CMK). To find out which AWS applications support deployment in additional Regions, visit AWS applications that you can use with IAM Identity Center. Standard AWS KMS charges apply for storing and using CMKs. IAM Identity Center is provided at no additional cost. To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-iam-identity-center-extends-multi-region-support-to-identity-center-directory",
+      "pubDate": "2026-07-29T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b1373fae9e62",
       "title": "Amazon EKS Provisioned Control Plane now delivers faster pod autoscaling",
@@ -581,50 +625,6 @@
       "tags": [
         "ga",
         "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-4161d305f9c1",
-      "title": "Amazon CloudWatch Logs Insights adds 25 new query commands and functions",
-      "description": "Amazon CloudWatch Logs Insights query language now supports 25 new commands and functions that expand your ability to query, transform, correlate, and analyze logs. Customers analyzing logs in CloudWatch Logs Insights often need to perform statistical aggregation, handle null values in time-series data, compare logs across time windows, detect outliers, and enrich events with lookup data.\n  With this launch, CloudWatch Logs Insights adds type conversion and encoding functions (hexToAscii, hexToDec, decToHex), date and time functions (parseDate, formatDate, queryStartTime, queryEndTime, queryTimeRange), string functions (messageSize), JSON inspection functions (jsonArraySize, jsonArrayContains), and a conditional validation function (isNumeric). It also introduces statistical commands (variance, topk, countFrequent), row-sequencing and null-handling commands (autoregress, accum, filldown, fillmissing), sessionization and time-comparison commands (sessionize, logcompare), a data analysis command (outlier), query-composition and join commands (where, appendcols), and a lookup enrichment command (cidrlookup).\n  These commands and functions are available today in all commercial AWS Regions. To learn more, see the Amazon CloudWatch Logs documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-cloudwatch-logs-insights-ql/",
-      "pubDate": "2026-07-15T21:56:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fba09b18c629",
-      "title": "Amazon RDS and Aurora now support R8g and M8g database instances in additional AWS Regions",
-      "description": "AWS Graviton4-based R8g database instances are now generally available for Amazon Aurora (MySQL and PostgreSQL compatibility) and Amazon RDS for PostgreSQL, MySQL, and MariaDB in Asia Pacific (Hyderabad, Melbourne, Malaysia), Europe (London, Paris, Zurich), AWS GovCloud (US-East), South America (Sao Paulo), and Mexico (Central) regions. Additionally, M8g instances are now supported for Amazon RDS for PostgreSQL, MySQL, and MariaDB in US West (N. California), Asia Pacific (Mumbai, Sydney, Hong Kong, Seoul, Malaysia, Singapore), Canada West (Calgary), Europe (Zurich, Milan, Paris), South America (Sao Paulo) and Africa (Cape Town) regions. \n  AWS Graviton4-based instances provide up to 40% performance improvement and up to 29% price/performance improvement for on-demand pricing over Graviton3-based instances of equivalent sizes on Amazon Aurora and Amazon RDS databases, depending on database engine, version, and workload. Built on the AWS Nitro System, the new R8g database instances introduce 24xlarge and 48xlarge sizes, delivering up to 192 vCPUs, an 8:1 ratio of memory to vCPU with the latest DDR5 memory, up to 50Gbps enhanced networking bandwidth, and up to 40Gbps of bandwidth to Amazon Elastic Block Store (Amazon EBS).\n  You can easily launch R8g or M8g database instances through the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI). For detailed information about specific engine versions that support these database instance types, please refer to the Aurora and RDS documentation. For complete information on pricing and regional availability, please refer to the Amazon RDS pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-rds-aurora-r8g-m8g-regions/",
-      "pubDate": "2026-07-15T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "graviton",
-        "launch",
-        "generally-available",
-        "ga",
-        "improvement",
         "support"
       ]
     },
