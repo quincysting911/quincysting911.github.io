@@ -1,8 +1,52 @@
 {
-  "lastUpdated": "2026-07-30T08:03:36.287Z",
+  "lastUpdated": "2026-07-31T08:29:21.771Z",
   "category": "ai-safety",
-  "totalItems": 24,
+  "totalItems": 23,
   "items": [
+    {
+      "id": "aws-news-fbc3d3c5a220",
+      "title": "IAM Policy Simulator moves to the IAM console and adds additional capabilities",
+      "description": "AWS Identity and Access Management (IAM) announces a major update to IAM Policy Simulator, the tool you use to test and validate the permissions your IAM policies grant before you deploy them. This update changes the simulator in three ways: it now lives in the IAM console, it can test service control policies (SCPs), and it adds flexibility to model more of the scenarios that security and platform teams simulate in practice.\n \nIAM Policy Simulator is now part of the IAM console, replacing the standalone simulator site, so you can test policies in the same place you manage your identities and policies. You can also now include SCPs in your simulation to test how your organization's SCP hierarchy interacts with identity and resource policies, and through the API, test how condition keys such as Region restrictions and tag requirements affect the outcome. Finally, new flexibility lets you exclude specific policies to model \"what if I remove this policy?\" scenarios, and cross-account simulations now report per-policy decisions for identity and resource-based policies, with the matched statements returned for a denied request reflecting only the policies that drove the decision. Together, these changes help teams automate policy unit testing, detect over-permissive access, and validate guardrails with greater confidence.\n \nThese features are available in all AWS Regions where IAM Policy Simulator is available. You can access IAM Policy Simulator in the IAM console by choosing Policy simulator in the navigation pane.\n \nTo learn more, see the following resources:\n \n \n \nTesting IAM policies with the IAM policy simulator\n  \n \nAPI reference on SimulatePrincipalPolicy and SimulateCustomPolicy",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/iam-policy-simulator-iam-console/",
+      "pubDate": "2026-07-30T17:43:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "iam",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-fd373753b608",
+      "title": "AWS Managed Microsoft AD now supports Standard to Enterprise Edition upgrade",
+      "description": "AWS Directory Service now allows you to upgrade your AWS Managed Microsoft AD directory from Standard Edition to Enterprise Edition directly through the AWS Management Console, AWS CLI, and API without migrating to a new directory or re-joining your existing workloads.\n \nStandard Edition is designed for organizations with up to 5,000 users and objects, while Enterprise Edition supports up to 500,000 objects and provides greater scalability for larger deployments. Customers who have outgrown Standard Edition limits can now upgrade in place, preserving existing trust relationships, application integrations, and group policies. The upgrade requires no changes to your DNS configuration or connected AWS workloads.\n \nThis new capability is available in all AWS Regions where AWS Directory Service is available. To get started, navigate to the AWS Directory Service console, select your Standard Edition directory, and choose Upgrade Edition from the directory actions menu. See the administrator guide for step-by-step instructions. For pricing details, go to the AWS Directory Service pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-microsoft-ad-edition-upgrade/",
+      "pubDate": "2026-07-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "directory service",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "directory service",
+        "organizations",
+        "ga",
+        "integration",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-39cd8e39e775",
       "title": "Generate Autonomous Business Insights with AI Agent and MCP Servers",
@@ -82,6 +126,31 @@
       "tags": [
         "iam",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7e8713de0e3f",
+      "title": "AWS HealthLake identifies and links duplicate patient, provider, and organization records (Preview)",
+      "description": "Duplicate patient records are one of the costliest problems in healthcare data management, scattering a patient's information, leading to redundant tests, missed diagnoses, billing errors, manual reconciliation, and broken analytics that count one patient as many.\n  AWS HealthLake now supports resource matching, which automatically identifies and links duplicate records in a datastore. Healthcare organizations can build accurate longitudinal patient records and trustworthy population health datasets without specialized master data management tooling.\n Resource matching works across seven Fast Healthcare Interoperability Resources (FHIR) resource types: Patient, Practitioner, Organization, Location, Device, RelatedPerson, and PractitionerRole. It matches high-confidence healthcare identifiers such as Social Security, medical record, and national provider numbers, applying each identifier's real-world scope and filtering out placeholder values to avoid false matches.\n  Once enabled, every record that is created or updated is automatically evaluated and matches are connected through FHIR Linkage resources. Resource matching requires no configuration, matching rules, or third-party tools. Original records are never modified or deleted, preserving full provenance. Linkages are automatically re-evaluated as source records change and removed when records no longer match.\n  AWS HealthLake resource matching is available in gated preview in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Europe (London), Europe (Ireland), Asia Pacific SouthEast (Sydney), and Canada (Central) Regions. To turn it on for your datastore during the preview period, request to be added to the allowlist here.\n  To learn more, see Matching duplicate FHIR resources documentation in the AWS HealthLake developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-healthlake/",
+      "pubDate": "2026-07-24T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "healthlake",
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "healthlake",
+        "rds",
+        "organizations",
+        "preview",
+        "ga",
+        "update",
         "support"
       ]
     },
@@ -234,26 +303,6 @@
       ]
     },
     {
-      "id": "aws-news-eceb45b9c815",
-      "title": "AI Teammates: how monday.com runs production AI agents on Amazon Bedrock",
-      "description": "AI Teammates are agentic AI on Amazon Bedrock, and few engineering organizations run them in production at the scale that monday.com does. Nine in ten Builders use AI coding tools every month, up from roughly half a year ago. Per-engineer PR throughput is up by more than half. Every figure in this post comes from monday’s own internal production data. In this post, we share the architecture behind those numbers, the retrofits that made it work in a decade-old code base, and the confidence-scored merge play closing the gap to full autonomy.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/ai-teammates-how-monday-com-runs-production-ai-agents-on-amazon-bedrock/",
-      "pubDate": "2026-07-22T15:54:28.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-16753692c111",
       "title": "Building multi-Region resiliency for AWS CloudFormation custom resource deployment",
       "description": "AWS CloudFormation is the foundational tool of infrastructure-as-code for thousands of organizations running workloads on AWS. But as teams push the boundaries of what CloudFormation can do natively, custom resources have emerged as a powerful extension mechanism that unlocks a broad range of possibilities. Yet, when it comes to building resilient, multi-Region deployments with custom […]",
@@ -369,67 +418,6 @@
         "launch",
         "ga",
         "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-eb1852a82d95",
-      "title": "Amazon Managed Grafana achieves FedRAMP High authorization in AWS GovCloud (US)",
-      "description": "Amazon Managed Grafana is now a FedRAMP High authorized service in the AWS GovCloud (US-East) and AWS GovCloud (US-West) regions. Federal agencies, public sector organizations, and other enterprises with FedRAMP High compliance requirements can now use Amazon Managed Grafana to visualize, query, and alert on operational metrics across their AWS and hybrid environments while meeting their strict security and compliance requirements.\n \nAmazon Managed Grafana is a fully managed service based on open-source Grafana that makes it easier for you to visualize and analyze your operational data at scale. The Federal Risk and Authorization Management Program (FedRAMP) is a US government-wide program that delivers a standard approach to the security assessment, authorization, and continuous monitoring for cloud products and services. \n \nFor more details about Amazon Managed Grafana in AWS GovCloud (US), visit the Amazon Managed Grafana GovCloud documentation or contact your AWS account team for more information. To learn more, visit the Amazon Managed Grafana product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-grafana-fedramp-high/",
-      "pubDate": "2026-07-16T19:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "grafana",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "grafana",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-fad9cd648051",
-      "title": "AWS Sustainability service now includes water withdrawals data",
-      "description": "Customers can now view annual water withdrawals data associated with their AWS workloads in AWS Sustainability, alongside existing carbon emissions data. This enhancement helps organizations gain comprehensive visibility into their environmental impact across carbon and water.\n \nWater withdrawals data is available by AWS Region, service, and AWS account on an annual basis through the AWS Sustainability console and API. The data represents the total volume of water withdrawn for data center operations, with efficiency improvements reflected as lower withdrawal volumes.\n \nAWS Sustainability water withdrawals data is available at no additional charge in all AWS Regions where the service is available.\n \nTo get started visit the AWS Sustainability user guide. For more information, see the AWS Sustainability console page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-sustainability-water-withdrawals/",
-      "pubDate": "2026-07-16T16:43:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "improvement",
-        "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-ee150270eff2",
-      "title": "AWS Control Tower Account Factory for Terraform now re-applies customizations when accounts move between OUs",
-      "description": "AWS Control Tower Account Factory for Terraform (AFT) can now automatically re-apply an account's customizations when that account moves to a different Organizational Unit (OU). Previously, moving an enrolled account between OUs required manually triggering customization re-application, creating operational overhead and risk of configuration drift. With this capability, you can opt in to automatic re-application in your AFT deployment, so accounts stay consistent with their OU-specific configuration as soon as they're moved.\n \nTo enable this capability, set aft_customization_triggers = [\"account_move\"] in your AFT configuration. The re-application workflow skips the bootstrap and provisioning phases, running only global and account-level customizations for faster execution. Individual accounts can be excluded from this behavior by setting account_skip_customization_triggers = \"true\", giving teams precise control over which accounts participate in automated re-application.\n \nThis release also includes additional improvements: support for custom Terraform Cloud and Enterprise workspace naming variables, tighter access controls on the AFT logging bucket, and improved scaling for large-scale AWS Enterprise Support enrollment. Organizations enforcing compliance or security baselines tied to OU membership will benefit most from these combined enhancements.\n \nThis capability is available today across all AWS regions where AWS Control Tower Account Factory for Terraform is offered. To learn more about enabling automatic customization re-application and upgrading to the latest AFT release, visit the AFT documentation and review the AFT release notes on GitHub.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-control-tower-account/",
-      "pubDate": "2026-07-16T04:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "improvement",
-        "enhancement",
         "support"
       ]
     },

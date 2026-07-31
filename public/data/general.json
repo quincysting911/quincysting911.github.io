@@ -1,8 +1,75 @@
 {
-  "lastUpdated": "2026-07-30T08:03:36.287Z",
+  "lastUpdated": "2026-07-31T08:29:21.771Z",
   "category": "general",
-  "totalItems": 40,
+  "totalItems": 39,
   "items": [
+    {
+      "id": "aws-news-c24bed4bca58",
+      "title": "Amazon Redshift RG large and 12xlarge instances now available on the trailing track",
+      "description": "Amazon Redshift now supports Graviton-based RG instances on the trailing track. Starting today, rg.large and rg.12xlarge instance types are available for customers running workloads on the trailing track on patch P202 and onwards.\n  The trailing track is designed for customers who prioritize stability for production workloads, running on a version already validated through the leading track. With RG instances now available on both tracks, customers can take advantage of AWS Graviton-powered performance - delivering up to 2.4x faster query performance than RA3 instances at 30% lower price per vCPU.\n  Customers on the trailing maintenance track (patch P202 and later) can now create Amazon Redshift RG clusters in all AWS regions where RG is generally available. To get started, customers can provision a new cluster or resize an existing cluster to an rg.large or rg.12xlarge instance type using the AWS Management Console, AWS CLI, or AWS SDKs.For more information, see Amazon Redshift cluster versions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-rg-large-12xlarge-trailing-track",
+      "pubDate": "2026-07-30T20:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "rds",
+        "graviton",
+        "generally-available",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e43bd650fcdc",
+      "title": "Deliver Apache Kafka data to streaming tables for Apache Iceberg with Amazon MSK Express brokers",
+      "description": "Announcing delivery to streaming tables on Apache Iceberg for Amazon MSK Express brokers, a fully managed capability that continuously materializes your Kafka streaming data as queryable Iceberg tables on Amazon S3 Tables. No connectors, Flink jobs, or custom consumers to manage, and no code to write.",
+      "link": "https://aws.amazon.com/blogs/big-data/deliver-apache-kafka-data-to-streaming-tables-for-apache-iceberg-with-amazon-msk-express-brokers/",
+      "pubDate": "2026-07-30T17:25:15.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "kafka",
+        "msk"
+      ]
+    },
+    {
+      "id": "aws-news-0ef211b10e01",
+      "title": "Lowering AWS KMS decrypt API costs in EMR Spark jobs",
+      "description": "Processing encrypted data in Amazon S3 with Amazon EMR and Apache Spark can drive up AWS KMS decrypt API costs as the number of objects grows. This post shows three techniques to reduce those costs without compromising encryption: optimizing file formats (including Apache Iceberg), aggregating data, and using AWS Glue Data Catalog partition indexes.",
+      "link": "https://aws.amazon.com/blogs/big-data/lowering-aws-kms-decrypt-api-costs-in-emr-spark-jobs/",
+      "pubDate": "2026-07-30T16:12:41.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "emr",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "emr",
+        "glue",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-07a9a3d6ee78",
       "title": "Amazon EC2 Auto Scaling now supports Instance Refresh in CloudFormation",
@@ -545,87 +612,6 @@
       ],
       "tags": [
         "rds"
-      ]
-    },
-    {
-      "id": "aws-news-8920f9631524",
-      "title": "Amazon EC2 now surfaces the public SSM parameters associated with public AMIs",
-      "description": "Amazon EC2 now surfaces the AWS Systems Manager (SSM) Parameter Store parameters associated with public AMIs directly in the AMI metadata. When you describe a public AMI, the response includes the associated public SSM parameter, making it easy to discover and reference in your configurations.\n \nPreviously, finding the SSM parameter associated with a public AMI required searching through SSM parameter namespaces manually. Now, when you describe a public AMI, the response includes the public SSM parameter it is associated with. This allows you to discover the SSM parameter for a public AMI easily and use it as an alias that always resolves to the latest version, simplifying AMI updates across your infrastructure.\n  This capability is available to all customers at no additional cost in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, and AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions. To learn more, please visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters",
-      "pubDate": "2026-07-16T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-9b7fcf28c0b7",
-      "title": "Amazon S3 Event Notifications now include system-generated tags",
-      "description": "Amazon S3 Event Notifications now include system-generated tags in events delivered to all destinations including Amazon EventBridge, Amazon SQS, Amazon SNS, and AWS Lambda. System-generated tags are metadata labels attached to your bucket by AWS services. You can use these tags to filter events from thousands of buckets with a single EventBridge rule, instead of listing each bucket name individually.\n  To get started, enable S3 Event Notifications on your general purpose buckets through the AWS Management Console, AWS SDK, or AWS CLI. If AWS services like AWS CloudFormation have already applied system-generated tags to your buckets, S3 automatically includes them in new event notifications. System-generated tags in S3 Event Notifications are available at no additional cost in all AWS Regions and require no changes to existing configurations. To learn more, visit the S3 Event Notifications documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-event-notifications-system-generated-tags/",
-      "pubDate": "2026-07-16T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "s3",
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "s3",
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "sqs"
-      ]
-    },
-    {
-      "id": "aws-news-8532d2b148f2",
-      "title": "Amazon EC2 High Memory U7in-24TB instances now available in AWS Europe (Paris) region",
-      "description": "Amazon EC2 High Memory U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Europe (Paris) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-europe/",
-      "pubDate": "2026-07-16T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dbfbc14a2a11",
-      "title": "AWS Backup extends logically air-gapped vault support to six additional AWS Regions",
-      "description": "AWS Backup logically air-gapped vaults are now available in six additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Mexico (Central), and Canada West (Calgary).\n \nWith logically air-gapped vaults now available in these Regions, you can store immutable, isolated backups that are locked by default and encrypted using AWS owned keys or customer-managed keys. You can back up directly to logically air-gapped vaults, copy backups across accounts and Regions, share vaults for recovery using AWS Resource Access Manager (RAM), and safeguard vault access during account compromise using Multi-party approval.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the feature documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-logically-air-gapped-vault-regions/",
-      "pubDate": "2026-07-16T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {

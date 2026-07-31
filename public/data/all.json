@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30T08:03:36.287Z",
+  "lastUpdated": "2026-07-31T08:29:21.771Z",
   "totalItems": 190,
   "sources": {
     "whatsNew": 93,
@@ -11,6 +11,416 @@
     "developersAndDevOps": 9
   },
   "items": [
+    {
+      "id": "aws-news-4efe6bda6711",
+      "title": "Amazon SageMaker Unified Studio brings richer Git version control to all project tools",
+      "description": "Amazon SageMaker Unified Studio gives project members full Git version control directly within the tools you already use - Query Editor, Visual ETL, Workflows, and Notebooks. The enhanced Repositories experience replaces the previous automatic sync approach with flexible, file-level version control. This brings a consistent source control experience across all project tools, including Notebooks, which previously had no Git support.\n \nYou choose exactly which files to track in Git by adding them to a repository on GitHub, GitLab, or Bitbucket - source control is not enforced at the project level, so you decide what gets versioned and when. When you're ready, you commit and push all your changes in a single action. Repositories are decoupled from project creation, meaning you can add a repository to a project at any point after the project is created, as your needs evolve. Projects can connect to any number of repositories and branches at the same time, and you can create branches, pull updates, and resolve conflicts without ever leaving your project. If you use JupyterLab or Code Editor, you also retain full Git CLI access through the built-in terminal. \n \nThis feature is available in all AWS Regions where Amazon SageMaker Unified Studio is supported, for both IAM and IAM Identity Center domains. If your project uses the previous Git experience, you can opt in to the richer model by updating your project. To get started, see Working with repositories in the User Guide and Configuring Git connections in the Admin Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-sagemaker-unified-studio-git/",
+      "pubDate": "2026-07-30T22:37:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "lex",
+        "iam",
+        "iam identity center",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0d3cf4782045",
+      "title": "AWS Direct Connect now supports BGP route visibility on Virtual Interfaces",
+      "description": "AWS Direct Connect now provides Border Gateway Protocol (BGP) route visibility, allowing you to view the routes exchanged between AWS and your on-premises routers across your private, transit, and public virtual interfaces (VIFs). You can now see which routes AWS accepted from your router and which routes AWS is advertising to your router, along with their AS path and BGP community values. This visibility helps network administrators troubleshoot routing issues, verify route propagation, and monitor their hybrid network connectivity.\n \nWith this feature, you can view accepted routes (routes AWS received from your router) and advertised routes (routes AWS sends to your router) directly in the Direct Connect console or programmatically using the ListVirtualInterfaceRoutes API action. Each route displays its prefix, address family, AS path, community values, and installation timestamp, giving you comprehensive insight into your routing topology. You can filter routes by prefix, AS path, community, or address family to quickly identify specific routing behaviors. This capability is particularly valuable when managing complex multi-region architectures, validating BGP policy configurations, or diagnosing unexpected traffic patterns.\n \nThis feature is available in all AWS commercial Regions and the AWS China Regions (Beijing, operated by Sinnet, and Ningxia, operated by NWCD).\n \nTo learn more about BGP route visibility, visit the AWS Direct Connect documentation or access the feature through the Direct Connect console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-direct-connect-bgp-visibility/",
+      "pubDate": "2026-07-30T20:21:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c24bed4bca58",
+      "title": "Amazon Redshift RG large and 12xlarge instances now available on the trailing track",
+      "description": "Amazon Redshift now supports Graviton-based RG instances on the trailing track. Starting today, rg.large and rg.12xlarge instance types are available for customers running workloads on the trailing track on patch P202 and onwards.\n  The trailing track is designed for customers who prioritize stability for production workloads, running on a version already validated through the leading track. With RG instances now available on both tracks, customers can take advantage of AWS Graviton-powered performance - delivering up to 2.4x faster query performance than RA3 instances at 30% lower price per vCPU.\n  Customers on the trailing maintenance track (patch P202 and later) can now create Amazon Redshift RG clusters in all AWS regions where RG is generally available. To get started, customers can provision a new cluster or resize an existing cluster to an rg.large or rg.12xlarge instance type using the AWS Management Console, AWS CLI, or AWS SDKs.For more information, see Amazon Redshift cluster versions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-rg-large-12xlarge-trailing-track",
+      "pubDate": "2026-07-30T20:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "rds",
+        "graviton",
+        "generally-available",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fbc3d3c5a220",
+      "title": "IAM Policy Simulator moves to the IAM console and adds additional capabilities",
+      "description": "AWS Identity and Access Management (IAM) announces a major update to IAM Policy Simulator, the tool you use to test and validate the permissions your IAM policies grant before you deploy them. This update changes the simulator in three ways: it now lives in the IAM console, it can test service control policies (SCPs), and it adds flexibility to model more of the scenarios that security and platform teams simulate in practice.\n \nIAM Policy Simulator is now part of the IAM console, replacing the standalone simulator site, so you can test policies in the same place you manage your identities and policies. You can also now include SCPs in your simulation to test how your organization's SCP hierarchy interacts with identity and resource policies, and through the API, test how condition keys such as Region restrictions and tag requirements affect the outcome. Finally, new flexibility lets you exclude specific policies to model \"what if I remove this policy?\" scenarios, and cross-account simulations now report per-policy decisions for identity and resource-based policies, with the matched statements returned for a denied request reflecting only the policies that drove the decision. Together, these changes help teams automate policy unit testing, detect over-permissive access, and validate guardrails with greater confidence.\n \nThese features are available in all AWS Regions where IAM Policy Simulator is available. You can access IAM Policy Simulator in the IAM console by choosing Policy simulator in the navigation pane.\n \nTo learn more, see the following resources:\n \n \n \nTesting IAM policies with the IAM policy simulator\n  \n \nAPI reference on SimulatePrincipalPolicy and SimulateCustomPolicy",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/iam-policy-simulator-iam-console/",
+      "pubDate": "2026-07-30T17:43:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "iam",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-e43bd650fcdc",
+      "title": "Deliver Apache Kafka data to streaming tables for Apache Iceberg with Amazon MSK Express brokers",
+      "description": "Announcing delivery to streaming tables on Apache Iceberg for Amazon MSK Express brokers, a fully managed capability that continuously materializes your Kafka streaming data as queryable Iceberg tables on Amazon S3 Tables. No connectors, Flink jobs, or custom consumers to manage, and no code to write.",
+      "link": "https://aws.amazon.com/blogs/big-data/deliver-apache-kafka-data-to-streaming-tables-for-apache-iceberg-with-amazon-msk-express-brokers/",
+      "pubDate": "2026-07-30T17:25:15.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "kafka",
+        "msk"
+      ]
+    },
+    {
+      "id": "aws-news-993c34abcffe",
+      "title": "Deploying Kimi K3 on AWS",
+      "description": "This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and  Amazon Elastic Kubernetes Service (Amazon EKS) cluster.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/deploying-kimi-k3-on-aws/",
+      "pubDate": "2026-07-30T17:22:32.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-7676ca08858e",
+      "title": "How Yahoo enhances search retargeting using Amazon Bedrock",
+      "description": "In this post, we demonstrate how Yahoo implemented Amazon Bedrock to enhance their Search Retargeting (SRT) capabilities in the Yahoo DSP ad tech suite. SRT is a core audience targeting solution that helps advertisers reach users based on their historical search behavior, bridging search intent with display, video, and native advertising. Beyond targeting keywords entered on Yahoo Search, SRT uses AI to identify and engage users who demonstrate intent through search activity both on Yahoo and across integrated partner systems.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-yahoo-enhances-search-retargeting-using-amazon-bedrock/",
+      "pubDate": "2026-07-30T16:40:36.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "rds",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-bb844e9ad18f",
+      "title": "Amazon Bedrock announces up to 80% lower prices for OpenAI GPT‑5.6 models",
+      "description": "Today, OpenAI announced lower prices for GPT‑5.6 Luna and GPT‑5.6 Terra. Effective July 30, 2026, on-demand inference prices on Amazon Bedrock for GPT‑5.6 Luna are reduced by 80%, while prices for GPT‑5.6 Terra are reduced by 20%. These reductions are in-line with OpenAI's first-party pricing changes for these models. \n \nGPT‑5.6 Luna is optimized for fast, high-volume workloads and can use tools to complete multi-step workflows, making it well suited for content processing, classification, customer-service automation, and routine implementation tasks. GPT‑5.6 Terra balances intelligence, speed, and cost for everyday production workloads requiring more sophisticated reasoning. These price reductions enable customers to apply their capabilities across more applications, process larger workloads, and lower the cost per completed task. Pricing for GPT‑5.6 Sol remains unchanged. The new prices apply automatically, with no changes required from customers.\n \nGPT‑5.6 Luna and Terra are available in US East (N. Virginia), US East (Ohio), and US West (Oregon) through the OpenAI Responses API on the bedrock-mantle endpoint. To get started, see the Amazon Bedrock OpenAI model documentation. For the latest pricing information for GPT-5.6 models on Amazon Bedrock, please visit the Amazon Bedrock pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/openai-gpt-terra-luna-pricing-bedrock/",
+      "pubDate": "2026-07-30T16:18:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-0ef211b10e01",
+      "title": "Lowering AWS KMS decrypt API costs in EMR Spark jobs",
+      "description": "Processing encrypted data in Amazon S3 with Amazon EMR and Apache Spark can drive up AWS KMS decrypt API costs as the number of objects grows. This post shows three techniques to reduce those costs without compromising encryption: optimizing file formats (including Apache Iceberg), aggregating data, and using AWS Glue Data Catalog partition indexes.",
+      "link": "https://aws.amazon.com/blogs/big-data/lowering-aws-kms-decrypt-api-costs-in-emr-spark-jobs/",
+      "pubDate": "2026-07-30T16:12:41.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "emr",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "emr",
+        "glue",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f9c3219d7815",
+      "title": "Inference meta-monitoring for Amazon SageMaker AI endpoints with Amazon Quick",
+      "description": "Learn how to build an inference meta-monitoring system for Amazon SageMaker AI endpoints using Amazon Quick. This governance layer sits above production ML inference pipelines to continuously track prediction and data quality, detect drift, integrate delayed ground truth, and surface automated performance dashboards.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/inference-meta-monitoring-for-amazon-sagemaker-ai-endpoints-with-amazon-quick/",
+      "pubDate": "2026-07-30T16:10:10.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "sagemaker",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "sagemaker",
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-750d88fafcde",
+      "title": "Introducing explicit prompt caching for OpenAI GPT-5.6 models on Amazon Bedrock",
+      "description": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock, along with explicit prompt caching that gives you precise control over which parts of your prompt are cached and reused. Learn how to get started, set up explicit caching, and migrate existing GPT workloads to reduce inference cost.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-explicit-prompt-caching-for-openai-gpt-5-6-models-on-amazon-bedrock/",
+      "pubDate": "2026-07-30T16:02:32.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "generally-available"
+      ]
+    },
+    {
+      "id": "aws-news-6e7308dbad32",
+      "title": "Migrate your prompts to new models and optimize them on Amazon Bedrock",
+      "description": "Amazon Bedrock Advanced Prompt Optimization optimizes your prompts for up to 5 models at once and compares original versus optimized performance across quality, latency, and cost. Migrate to a new model or improve your current one in minutes instead of weeks.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/migrate-your-prompts-to-new-models-and-optimize-them-on-amazon-bedrock/",
+      "pubDate": "2026-07-30T15:58:32.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "eks",
+        "new-model"
+      ]
+    },
+    {
+      "id": "aws-news-0e60a5fbfa35",
+      "title": "AWS announces general availability of Policy-Based Routing on AWS Transit Gateway",
+      "description": "AWS Transit Gateway now supports Policy-Based Routing (PBR), giving network administrators granular control over how traffic is forwarded across their AWS network. With PBR, forwarding decisions can be based on a combination of packet attributes including source and destination IP addresses, ports, and protocol rather than destination IP address alone.\n  Previously, customers needing traffic steering or workload isolation had to build multi-VPC architectures with additional routing hops, adding complexity and operational overhead. PBR eliminates this by extending Transit Gateway's native routing capabilities, enabling security architects and enterprise network teams to classify and direct traffic inline without extra infrastructure. Customers associate a policy table with a Transit Gateway attachment and define an ordered set of rules. Each rule classifies traffic and directs matching packets to a specified route table using first-match-wins logic. This supports use cases such as steering sensitive workloads through AWS Network Firewall or third-party inspection appliances, routing application traffic over AWS Direct Connect or AWS VPN paths based on source, port, or protocol, and isolating production and development environments into separate routing domains to limit lateral movement.\n  Policy-Based Routing for AWS Transit Gateway is available in all commercial AWS Regions where Transit Gateway is available. You can configure PBR using the AWS Management Console, AWS Command Line Interface (CLI), and the AWS Software Development Kit (SDK). PBR incurs no additional charge beyond standard Transit Gateway fees. To learn more about Policy-Based Routing for AWS Transit Gateway, visit the AWS Transit Gateway product page .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-transit-gateway-policy-based-routing/",
+      "pubDate": "2026-07-30T15:39:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cc34489d50b1",
+      "title": "Amazon MSK Express brokers now delivers Apache Kafka data to Amazon S3",
+      "description": "Amazon MSK Express brokers now delivers data to Amazon S3 general purpose buckets, providing a fully managed capability to deliver Apache Kafka data in Amazon S3 for downstream processing in the easiest and most reliable way. This capability automatically scales to deliver high-throughput Kafka data to S3 with end-to-end reliability for mission-critical workloads, while reducing ingestion and delivery costs by up to 60% compared to self-managed alternatives.\n \nCustomers deliver Apache Kafka data to Amazon S3 for use cases such as log archival, compliance retention, Kafka replay, and training AI/ML models, and typically build these pipelines with self-managed connectors that grow costly and operationally complex as workloads scale, forcing teams to build or source S3 connector plugins, secure approvals to deploy them, and continually scale capacity, and apply security updates across connector fleet. With this capability, MSK Express automatically handles scaling, retries, and backpressure so customers no longer manage connector fleets or coordinate across teams. MSK Express  supports throughput of up to 10 GB/s for data delivery to Amazon S3, and manages routine operations such as capacity scaling and version upgrades without introducing delivery gaps. Additionally, customers add this delivery capability without provisioning additional broker egress throughput, which eliminates the incremental infrastructure costs that scaling connector-based pipelines typically incurs, so customers scale delivery to actual workload demand rather than provisioning for peak, achieving reliable, high-throughput delivery to Amazon S3 while removing operational overhead and lowering costs.\n \nAmazon MSK data delivery to Amazon S3 is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-express-brokers-delivers-to-amazon-s3",
+      "pubDate": "2026-07-30T14:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-11d30e1d0102",
+      "title": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg",
+      "description": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg, a new capability that continuously materializes Apache Kafka topics as Apache Iceberg tables on Amazon S3 Tables. Amazon MSK data delivery to streaming tables can reduce the cost of ingesting and delivering Apache Kafka data into Amazon S3 Tables by up to 60% versus self-managed deployments and reduces downstream query costs by up to 30% versus self-managed Apache Kafka deployments.\n \nCustomers rely on Apache Kafka to ingest real-time data for use cases like fraud detection and personalization and increasingly want to unify that data with Apache Iceberg tables for near real-time analytics but integrating the two forces them to operate complex custom pipelines, manage format conversions, and contend with the small-file problem, where high-volume ingestion creates many small parquet files that slow downstream queries and increase costs. With this capability, intelligent inline compaction eliminates the performance impact of small files and keeps query performance predictable without sacrificing data freshness, while built-in coordination resolves concurrent writer conflicts across high-throughput consumers. Amazon MSK supports throughput of up to 10 GB/s for delivery to Apache Iceberg on Amazon S3 Tables, and because this native capability adds no broker egress throughput, customers avoid the incremental infrastructure costs of scaling connector pipelines and match capacity to actual demand rather than peak. Customers deliver data to streaming tables and query or transform the data with any engine of their choice, including Apache Spark, Trino, or Apache Flink. \n \nTo get started, customers open the Amazon MSK console, select the Express cluster, and enable the capability in a few clicks, or use the MSK APIs or MCP server. Amazon MSK data delivery to streaming tables is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-streaming-tables-for-apache-iceberg",
+      "pubDate": "2026-07-30T14:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-2c0d3d94072e",
+      "title": "Grok 4.3 from xAI is now available on Amazon Bedrock in AWS GovCloud (US-West)",
+      "description": "xAI's Grok 4.3 model is now available on Amazon Bedrock in AWS GovCloud (US-West). With this launch, xAI joins Amazon Bedrock as a model provider in AWS GovCloud (US-West), giving you even more choice as you build generative AI applications across reasoning, agentic, and enterprise workflows.\n \nGrok 4.3 is a reasoning-first model that offers configurable reasoning effort (none, low, medium, high). It also offers strong tool use and instruction-following capabilities for building reliable agents, and token efficiency to help keep high-volume inference cost-effective. Grok 4.3 is especially well suited to enterprise workloads such as customer support, web development, case law research, and financial document Q&A, while delivering consistent, high-quality results across conversational Al, search, chat, and multi-turn workflows. Grok 4.3 runs on Mantle, a new inference engine in Amazon Bedrock designed for price performance, with support for tool calling, structured output, and response streaming.\n \nSee region availability of Grok 4.3 for list of supported regions. To get started, visit the Grok 4.3 model detail page in our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/grok-4-3-bedrock-govcloud/",
+      "pubDate": "2026-07-30T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "launch",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-05d766aa58e1",
+      "title": "Gemma 4 models are now available on Amazon Bedrock in AWS GovCloud (US-West)",
+      "description": "The Gemma 4 family of open-weight models from Google DeepMind on Amazon Bedrock in AWS GovCloud (US-West). With Gemma 4, you can build generative AI applications across reasoning, multimodal understanding, agentic, and software engineering workflows.\n \nThe Gemma 4 family on Amazon Bedrock includes three variants - Gemma 4 31B, Gemma 4 26B-A4B, and Gemma 4 E2B - spanning dense and mixture-of-experts (MoE) architectures with built-in reasoning, native function calling, support for 35+ languages and multimodal input across text, image, video and audio. Gemma 4 31B is suited for reasoning- and coding-heavy workloads with a 256K-token context window, Gemma 4 26B-A4B targets cost- and latency-sensitive workloads, and Gemma 4 E2B is the smallest variant, designed for low-latency interactive use cases. Gemma 4 runs on a new innovation in Amazon Bedrock designed for price performance, with improved support for tool calling, structured output, reasoning, and response streaming, so customers can build reliable generative AI applications with open-source models.\n \nTo get started, visit Gemma 4 model detail pages in our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/gemma-4-bedrock-govcloud/",
+      "pubDate": "2026-07-30T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "nova"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "nova",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fd373753b608",
+      "title": "AWS Managed Microsoft AD now supports Standard to Enterprise Edition upgrade",
+      "description": "AWS Directory Service now allows you to upgrade your AWS Managed Microsoft AD directory from Standard Edition to Enterprise Edition directly through the AWS Management Console, AWS CLI, and API without migrating to a new directory or re-joining your existing workloads.\n \nStandard Edition is designed for organizations with up to 5,000 users and objects, while Enterprise Edition supports up to 500,000 objects and provides greater scalability for larger deployments. Customers who have outgrown Standard Edition limits can now upgrade in place, preserving existing trust relationships, application integrations, and group policies. The upgrade requires no changes to your DNS configuration or connected AWS workloads.\n \nThis new capability is available in all AWS Regions where AWS Directory Service is available. To get started, navigate to the AWS Directory Service console, select your Standard Edition directory, and choose Upgrade Edition from the directory actions menu. See the administrator guide for step-by-step instructions. For pricing details, go to the AWS Directory Service pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-microsoft-ad-edition-upgrade/",
+      "pubDate": "2026-07-30T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "directory service",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "directory service",
+        "organizations",
+        "ga",
+        "integration",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-2da669911850",
+      "title": "Amazon OpenSearch Service now supports OpenSearch version 3.7",
+      "description": "You can now run OpenSearch version 3.7 on Amazon OpenSearch Service. OpenSearch 3.7 introduces improvements in vector search performance, search relevance, and Query Insights.\n \nWith this launch, 1-bit scalar quantization on the Faiss and Lucene engines compresses vectors, reducing the storage and memory required by vector workloads while maintaining search accuracy. You can now retrieve vectors faster using doc values instead of document source, with no reindexing required. Search Relevance Workbench adds new evaluation metrics, CSV judgment uploads, and expanded hybrid search optimization, helping you measure and improve search quality.\n \nThis launch also introduces new Query Insights capabilities, including automated query recommendations, a finished-queries cache for observing recently completed queries, and the option to export top query data to Amazon S3, helping you identify expensive queries and analyze trends over time.\n \nFor information on upgrading to OpenSearch 3.7, please see the documentation. OpenSearch 3.7 is now available in all AWS Regions where Amazon OpenSearch Service is available.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-opensearch-service/",
+      "pubDate": "2026-07-30T02:30:15.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "opensearch",
+        "opensearch service",
+        "launch",
+        "now-available",
+        "improvement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-07a9a3d6ee78",
       "title": "Amazon EC2 Auto Scaling now supports Instance Refresh in CloudFormation",
@@ -646,6 +1056,31 @@
       ]
     },
     {
+      "id": "aws-news-7e8713de0e3f",
+      "title": "AWS HealthLake identifies and links duplicate patient, provider, and organization records (Preview)",
+      "description": "Duplicate patient records are one of the costliest problems in healthcare data management, scattering a patient's information, leading to redundant tests, missed diagnoses, billing errors, manual reconciliation, and broken analytics that count one patient as many.\n  AWS HealthLake now supports resource matching, which automatically identifies and links duplicate records in a datastore. Healthcare organizations can build accurate longitudinal patient records and trustworthy population health datasets without specialized master data management tooling.\n Resource matching works across seven Fast Healthcare Interoperability Resources (FHIR) resource types: Patient, Practitioner, Organization, Location, Device, RelatedPerson, and PractitionerRole. It matches high-confidence healthcare identifiers such as Social Security, medical record, and national provider numbers, applying each identifier's real-world scope and filtering out placeholder values to avoid false matches.\n  Once enabled, every record that is created or updated is automatically evaluated and matches are connected through FHIR Linkage resources. Resource matching requires no configuration, matching rules, or third-party tools. Original records are never modified or deleted, preserving full provenance. Linkages are automatically re-evaluated as source records change and removed when records no longer match.\n  AWS HealthLake resource matching is available in gated preview in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Europe (London), Europe (Ireland), Asia Pacific SouthEast (Sydney), and Canada (Central) Regions. To turn it on for your datastore during the preview period, request to be added to the allowlist here.\n  To learn more, see Matching duplicate FHIR resources documentation in the AWS HealthLake developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-healthlake/",
+      "pubDate": "2026-07-24T21:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "healthlake",
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "healthlake",
+        "rds",
+        "organizations",
+        "preview",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-4901ab494c83",
       "title": "Amazon Kinesis Data Streams now supports scaling down ingest capacity with warm throughput",
       "description": "Amazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale. On-demand streams automatically increase ingest capacity in response to rising data ingest usage. With On-demand Advantage mode, you can proactively manage stream capacity using warm throughput to prepare streams for sudden changes in data traffic. We are extending warm throughput with the ability to also scale down ingest capacity, giving you full control to scale your stream's write throughput up or down. \n \nTo scale down, simply set a lower warm throughput value on your on-demand stream. The stream adjusts to the requested capacity or the amount needed to support peak data ingest usage in the last hour, whichever is higher. This ensures your stream always retains sufficient capacity for current traffic while releasing excess capacity you no longer need. As a result, you get optimal stream-processing performance and cost efficiency. \n \nWarm throughput scale-down is available at no additional cost for all on-demand streams with On-demand Advantage mode enabled.  For more information about On-demand Advantage, see Choose the right mode to stream in in the Amazon Kinesis Data Streams Developer Guide. To get started with the feature, see Update a stream. For pricing details, see Amazon Kinesis Data Streams pricing.\n \nThe feature is available in all AWS Regions where Amazon Kinesis Data Streams On-demand Advantage is supported.",
@@ -1082,25 +1517,6 @@
       ]
     },
     {
-      "id": "aws-news-44892a97b966",
-      "title": "Detecting silent agent failures with Amazon Bedrock AgentCore optimization",
-      "description": "Amazon Bedrock AgentCore optimization surfaces silent behavioral failures in production AI agents: the ones that pass every health check but still deliver wrong outcomes. Learn how insights discovers, explains, and ranks failure patterns across sessions so you can fix the highest-impact issues first.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/",
-      "pubDate": "2026-07-23T16:38:34.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
       "id": "aws-news-08d4054caf0e",
       "title": "Efficient log management with Amazon OpenSearch Service data streams",
       "description": "In this post, we show you how to implement data streams with Index State Management (ISM) in Amazon OpenSearch Service. This approach automatically manages your time series data lifecycle and optimizes both performance and costs. Data streams distribute incoming data across multiple backing indices, helping to reduce single-index bottlenecks, while ISM policies automate rollover, retention, and storage tiering to help manage costs.",
@@ -1117,23 +1533,6 @@
       "tags": [
         "opensearch",
         "opensearch service"
-      ]
-    },
-    {
-      "id": "aws-news-cedcd31356ee",
-      "title": "Agentic retrieval for Amazon Bedrock Managed Knowledge Base",
-      "description": "This post focuses on why classic retrieval falls short on multi-part questions, how the AgenticRetrieveStream API works (including request construction and trace parsing), and when to choose it over the standard Retrieve API.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/",
-      "pubDate": "2026-07-23T16:30:20.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -1225,6 +1624,27 @@
         "now-available",
         "support",
         "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-6e29818c696f",
+      "title": "AWS Parallel Computing Service now supports node lifecycle actions",
+      "description": "Today, AWS announces the general availability of node lifecycle actions in AWS Parallel Computing Service (PCS). With node lifecycle actions, you can run custom scripts automatically at defined points in a compute node's lifecycle. You can use them to prepare your nodes for work. For example, you can mount shared storage, join a directory service, install software, or set up monitoring.\n \nYou define node lifecycle actions in your PCS compute node group configuration when you create or update the group, and you can reuse the same script across multiple compute node groups and clusters. For each script, you set its location as an Amazon S3 or HTTPS URI, the arguments to pass, which lifecycle stage it runs in, whether it re-runs on reboot, and its error-handling behavior. AWS PCS writes the output to a dedicated log file, giving you visibility into what ran.\n \nAWS PCS is a managed service that simplifies running and scaling high performance computing (HPC) workloads on AWS using Slurm. You can build complete, elastic environments that integrate compute, storage, networking, and visualization tools, and the service manages cluster updates and provides built-in observability.\n \nNode lifecycle actions are available in all AWS Regions that support AWS PCS. To learn more, see the AWS PCS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-pcs-node-lifecycle-actions/",
+      "pubDate": "2026-07-23T12:28:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "directory service"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "directory service",
+        "update",
+        "support"
       ]
     },
     {
@@ -1442,26 +1862,6 @@
         "organizations",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-eceb45b9c815",
-      "title": "AI Teammates: how monday.com runs production AI agents on Amazon Bedrock",
-      "description": "AI Teammates are agentic AI on Amazon Bedrock, and few engineering organizations run them in production at the scale that monday.com does. Nine in ten Builders use AI coding tools every month, up from roughly half a year ago. Per-engineer PR throughput is up by more than half. Every figure in this post comes from monday’s own internal production data. In this post, we share the architecture behind those numbers, the retrofits that made it work in a decade-old code base, and the confidence-scored merge play closing the gap to full autonomy.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/ai-teammates-how-monday-com-runs-production-ai-agents-on-amazon-bedrock/",
-      "pubDate": "2026-07-22T15:54:28.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "organizations",
-        "ga"
       ]
     },
     {
@@ -1752,23 +2152,6 @@
       ]
     },
     {
-      "id": "aws-news-f83fa2ecf7ac",
-      "title": "Exploring self-distilled reasoning for supervised fine-tuning with Amazon Nova",
-      "description": "In this post, we explore an idea for generating thinking tokens for datasets that lack reasoning traces in SFT customization. We first examine the reasoning suppression problem, then introduce Self-Distilled Reasoning (SDR), validate it across three benchmarks, and provide practical recommendations.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova/",
-      "pubDate": "2026-07-21T16:23:12.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova"
-      ]
-    },
-    {
       "id": "aws-news-d17c25154e00",
       "title": "Amazon ECS now provides Action Logs for deployment and orchestration visibility",
       "description": "Today, Amazon Elastic Container Service (Amazon ECS) introduces Action Logs, a new observability feature that delivers detailed, timestamped records of the actions Amazon ECS performs on behalf of customers during service deployments and ECS Managed Daemon updates. By surfacing service-side operations that were previously invisible, Action Logs help you monitor and troubleshoot your workloads directly, without contacting AWS Support or manually correlating data from multiple sources.\n \nWith Action Logs, you gain visibility into key deployment state transitions of service deployments, Managed Daemon updates. Each log entry includes the event name, log level(INFO, WARN, OR ERROR), relevant resource ARNs, and a status reason, helping you reduce mean time to resolution when issues arise. You can opt in at the cluster level through the Amazon ECS console or by using Amazon CloudWatch vended logs APIs, and choose to deliver logs to Amazon CloudWatch Logs, Amazon S3, or Amazon Kinesis Data Firehose depending on your operational needs. At launch, Amazon Q in the Amazon ECS console integrates with Action Logs to automatically detect deployment issues such as circuit breaker rollbacks and unstable service revisions, providing customers with root cause analysis, resource-level comparisons, and step-by-step remediation guidance without leaving the console. Standard CloudWatch Logs, Amazon S3, or Amazon Data Firehose pricing applies for log ingestion and storage. For pricing details, see Amazon CloudWatch Pricing.\n \nAmazon ECS Action Logs are available in all AWS Regions, including the AWS GovCloud (US) Regions. To learn more, refer Monitor Amazon ECS operations with Action Logs in Amazon ECS Developer Guide.",
@@ -1956,21 +2339,6 @@
         "iam",
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-c0cded329ff8",
-      "title": "Custom OS installation now available on AWS DeepRacer devices",
-      "description": "With the stock firmware and software, developers couldn't modify their AWS DeepRacer devices to use the latest operating systems. Now, developers can upgrade or install a custom operating system (OS) by using a newly released bootloader, which extends the life of these hardware devices. In this post, we introduce the bootloader, discuss how to use it, and share links to a community distribution that uses it.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/custom-os-installation-now-available-on-aws-deepracer-devices/",
-      "pubDate": "2026-07-20T17:25:24.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "now-available"
       ]
     },
     {
@@ -2352,29 +2720,6 @@
       ]
     },
     {
-      "id": "aws-news-ec6c93cf15e9",
-      "title": "Amazon SageMaker HyperPod now supports partition-level topology for Slurm orchestrated clusters",
-      "description": "Amazon SageMaker HyperPod now supports network topology configuration at the partition level for Slurm orchestrated clusters. A single cluster can now run tree topology in one partition and block topology in another, with each partition using the topology best suited to its instance types. This improves distributed training performance by keeping job placement aligned with the interconnect characteristics of each instance type, so GPU-to-GPU communication is faster, NCCL collective operations are more efficient, and training throughput improves.\n  HyperPod determines the topology for each partition based on the instance types of its compute instance groups. Partitions with Amazon EC2 UltraServer instance types such as ml.p6e-gb200.36xlarge use block topology, and those with hierarchical-interconnect instance types such as ml.p5.48xlarge, ml.p5e.48xlarge, and ml.p5en.48xlarge use tree topology, while partitions with instance types that don't provide network topology information remain fully schedulable. HyperPod maintains this configuration automatically as the cluster changes through scale-up, scale-down, and node replacement events, so each partition's topology always reflects the current state of the cluster.\n  To get started, create or update a SageMaker HyperPod Slurm cluster running Slurm 25.11 or later with supported GPU instance types. Topology-aware scheduling is enabled by default and requires no configuration. This feature is available in all AWS Regions where Amazon SageMaker HyperPod is supported. To learn more, see Using topology-aware scheduling in Amazon SageMaker HyperPod.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/hyperpod-partition-topology-slurm/",
-      "pubDate": "2026-07-17T15:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "hyperpod",
-        "ec2"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod",
-        "ec2",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-567fabebdf30",
       "title": "Introducing self-managed Amazon S3 buckets for AWS Lambda function code",
       "description": "If you manage Lambda functions at scale, you’ve likely hit the 75 GB code storage limit or explained to your security team why deployment artifacts live in an S3 bucket you don’t control. Today, we’re announcing self-managed Amazon S3 buckets for AWS Lambda deployment packages. Lambda reads your code directly from your bucket, eliminating quota […]",
@@ -2394,192 +2739,6 @@
       ]
     },
     {
-      "id": "aws-news-6458b50f3856",
-      "title": "Amazon CloudWatch Synthetics now supports customer managed encryption keys",
-      "description": "Amazon CloudWatch Synthetics now supports customer managed AWS Key Management Service (KMS) keys for encrypting canary environment variables, giving you full control over the encryption of sensitive configuration data such as API keys, credentials, and tokens. Previously, environment variables were encrypted at rest using only an AWS owned key. Now, in addition to the default AWS owned key, you can specify your own symmetric KMS key for encryption at rest, and you can also encrypt individual values client-side before they are stored.\n \nWith encryption at rest, you specify a customer managed KMS key when creating or updating a canary, and CloudWatch Synthetics uses a grant on the key to handle encryption and decryption transparently. With client-side encryption, you encrypt values before storage, and your canary script decrypts them at runtime using the AWS KMS Decrypt API. This benefits teams in regulated industries that require organizational key management policies, auditability, or key rotation controls across all services.\n \nAmazon CloudWatch Synthetics customer managed key encryption is available in all commercial AWS Regions. Multi-location canaries can use a different KMS key per replica Region.\n \nTo learn more, see Encrypting environment variables in the Amazon CloudWatch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/synthetics-customer-managed-keys/",
-      "pubDate": "2026-07-16T20:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-eb1852a82d95",
-      "title": "Amazon Managed Grafana achieves FedRAMP High authorization in AWS GovCloud (US)",
-      "description": "Amazon Managed Grafana is now a FedRAMP High authorized service in the AWS GovCloud (US-East) and AWS GovCloud (US-West) regions. Federal agencies, public sector organizations, and other enterprises with FedRAMP High compliance requirements can now use Amazon Managed Grafana to visualize, query, and alert on operational metrics across their AWS and hybrid environments while meeting their strict security and compliance requirements.\n \nAmazon Managed Grafana is a fully managed service based on open-source Grafana that makes it easier for you to visualize and analyze your operational data at scale. The Federal Risk and Authorization Management Program (FedRAMP) is a US government-wide program that delivers a standard approach to the security assessment, authorization, and continuous monitoring for cloud products and services. \n \nFor more details about Amazon Managed Grafana in AWS GovCloud (US), visit the Amazon Managed Grafana GovCloud documentation or contact your AWS account team for more information. To learn more, visit the Amazon Managed Grafana product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-grafana-fedramp-high/",
-      "pubDate": "2026-07-16T19:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "grafana",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "grafana",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-2d0708e193f5",
-      "title": "Track cost efficiency trends directly in Billing and Cost Management Dashboards with the new Cost Efficiency widget",
-      "description": "Today, AWS Billing and Cost Management (BCM) announces support for Cost Efficiency widget in BCM Dashboards. You can now view cost efficiency trends alongside Cost Explorer, Budgets, and reports for Savings Plans and Reserved Instance coverage and utilization reports. This provides a unified view of your spending, commitments, and optimization performance in a single, tailored dashboard.\n \nThe Cost Efficiency widget displays your efficiency score over time, showing how your efficiency across your AWS environment changes over time. You can view efficiency by AWS account, region, or overall, and adjust granularity to analyze trends at the level that matters most to your team. By adding one or more Cost Efficiency widget to a BCM Dashboard, you can monitor your optimization performance from your existing cost management workflows. The widget links directly to the Cost Optimization Hub console so you can easily take actions when you have recommendations for savings opportunities.\n \nWith the Cost Efficiency widget, you can create a unified view of your spending, commitments, budgets, and optimization performance. The widget is fully integrated with dashboard exports and can be included in scheduled email reports or downloaded as a CSV or PDF for offline analysis. They are also included with cross-account dashboard sharing.\n \nThe Cost Efficiency widget for BCM Dashboards is available in all AWS commercial Regions at no additional charge. To learn more, visit our User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/monitor-cost-efficiency-using-dashboards",
-      "pubDate": "2026-07-16T18:56:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8920f9631524",
-      "title": "Amazon EC2 now surfaces the public SSM parameters associated with public AMIs",
-      "description": "Amazon EC2 now surfaces the AWS Systems Manager (SSM) Parameter Store parameters associated with public AMIs directly in the AMI metadata. When you describe a public AMI, the response includes the associated public SSM parameter, making it easy to discover and reference in your configurations.\n \nPreviously, finding the SSM parameter associated with a public AMI required searching through SSM parameter namespaces manually. Now, when you describe a public AMI, the response includes the public SSM parameter it is associated with. This allows you to discover the SSM parameter for a public AMI easily and use it as an alias that always resolves to the latest version, simplifying AMI updates across your infrastructure.\n  This capability is available to all customers at no additional cost in all AWS regions including AWS China (Beijing) Region, operated by Sinnet, and AWS China (Ningxia) Region, operated by NWCD, and AWS GovCloud (US) Regions. To learn more, please visit the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters",
-      "pubDate": "2026-07-16T18:20:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-9b7fcf28c0b7",
-      "title": "Amazon S3 Event Notifications now include system-generated tags",
-      "description": "Amazon S3 Event Notifications now include system-generated tags in events delivered to all destinations including Amazon EventBridge, Amazon SQS, Amazon SNS, and AWS Lambda. System-generated tags are metadata labels attached to your bucket by AWS services. You can use these tags to filter events from thousands of buckets with a single EventBridge rule, instead of listing each bucket name individually.\n  To get started, enable S3 Event Notifications on your general purpose buckets through the AWS Management Console, AWS SDK, or AWS CLI. If AWS services like AWS CloudFormation have already applied system-generated tags to your buckets, S3 automatically includes them in new event notifications. System-generated tags in S3 Event Notifications are available at no additional cost in all AWS Regions and require no changes to existing configurations. To learn more, visit the S3 Event Notifications documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-event-notifications-system-generated-tags/",
-      "pubDate": "2026-07-16T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "s3",
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "s3",
-        "cloudformation",
-        "eventbridge",
-        "sns",
-        "sqs"
-      ]
-    },
-    {
-      "id": "aws-news-49d0566035ea",
-      "title": "PostgreSQL 19 Beta 2 is now available in Amazon RDS Database Preview Environment",
-      "description": "Amazon RDS for PostgreSQL 19 Beta 2 is now available in the Amazon RDS Database Preview Environment, allowing you to evaluate the pre-release of PostgreSQL 19 on Amazon RDS for PostgreSQL. You can deploy PostgreSQL 19 Beta 2 in the Amazon RDS Database Preview Environment that has the benefits of a fully managed database.\n  PostgreSQL 19 introduces parallel autovacuum with configurable worker limits, so routine maintenance no longer bottlenecks large databases. The new REPACK CONCURRENTLY command rebuilds tables and reclaims storage online, keeping production databases accessible without third-party extensions. Native SQL Property Graph Queries (SQL/PGQ) let you express relationship traversals directly in standard SQL, eliminating separate application logic. Logical replication now synchronizes sequence values automatically and can be enabled dynamically without a server restart, reducing planned downtime. Beta 2 adds bug fixes and stability improvements from the Beta 1 testing period, including refinements to parallel autovacuum worker coordination and REPACK CONCURRENTLY lock handling. Please refer to PostgreSQL community announcement for more details.\n  Amazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the preview environment can only be used to create or restore database instances within the preview environment. You can use the PostgreSQL dump and load functionality to import or export your databases from the preview environment.\n  Amazon RDS Database Preview Environment database instances are priced as per the pricing in the US East (Ohio) Region.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/postgresql-19-beta-2-amazon-rds-database-preview-environment/",
-      "pubDate": "2026-07-16T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "preview",
-        "beta",
-        "now-available",
-        "improvement",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-fad9cd648051",
-      "title": "AWS Sustainability service now includes water withdrawals data",
-      "description": "Customers can now view annual water withdrawals data associated with their AWS workloads in AWS Sustainability, alongside existing carbon emissions data. This enhancement helps organizations gain comprehensive visibility into their environmental impact across carbon and water.\n \nWater withdrawals data is available by AWS Region, service, and AWS account on an annual basis through the AWS Sustainability console and API. The data represents the total volume of water withdrawn for data center operations, with efficiency improvements reflected as lower withdrawal volumes.\n \nAWS Sustainability water withdrawals data is available at no additional charge in all AWS Regions where the service is available.\n \nTo get started visit the AWS Sustainability user guide. For more information, see the AWS Sustainability console page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-sustainability-water-withdrawals/",
-      "pubDate": "2026-07-16T16:43:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "improvement",
-        "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-fe9a8577d043",
-      "title": "Amazon Redshift adds rg.large and rg.12xlarge instance sizes",
-      "description": "Amazon Redshift announces the general availability of two new RG instance sizes - rg.large and rg.12xlarge. These new sizes deliver the same Graviton-powered performance benefits as existing RG instances, including up to 2.4x faster query performance than previous-generation RA3 instances at 30% lower price per vCPU, giving you more flexibility to right-size your provisioned clusters for any workload.\n  rg.large and rg.12xlarge instance sizes are available on the current track (P202) only. Customers on the trailing track (P201) can continue to use rg.xlarge and rg.4xlarge. Existing RA3 clusters can migrate to RG instances using Snapshot and Restore, Elastic Resize, or Classic Resize. RG instances are available with flexible pricing options, including On-Demand, and 1-year and 3-year Reserved Instances with No Upfront payment.\n \nThe new rg.large and rg.12xlarge instance sizes are now available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), US West (N. California), Canada (Central), Mexico (Central), South America (São Paulo), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Europe (Stockholm), Europe (Spain), Africa (Cape Town), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Mumbai), Asia Pacific (Jakarta), Asia Pacific (Hong Kong), Asia Pacific (Osaka), Asia Pacific (Malaysia), Asia Pacific (Hyderabad), Asia Pacific (Taiwan), Asia Pacific (Thailand), and Asia Pacific (Melbourne).\n  To get started, refer to the following resources:\n  \n \n \nAmazon Redshift node types\n \n \nRA3 to RG upgrade guide\n \n \nAmazon Redshift cluster versions\n \n \nAmazon Redshift pricing",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-adds-rg-large-12xlarge-instance-sizes",
-      "pubDate": "2026-07-16T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift",
-        "graviton"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
-        "graviton",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-8532d2b148f2",
-      "title": "Amazon EC2 High Memory U7in-24TB instances now available in AWS Europe (Paris) region",
-      "description": "Amazon EC2 High Memory U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Europe (Paris) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-europe/",
-      "pubDate": "2026-07-16T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-a147791d386e",
       "title": "Migrate from Apache Solr to Amazon OpenSearch Serverless",
       "description": "In this post, you will learn why now is the time to take advantage of the ease of operations and native AI capabilities of OpenSearch Serverless, and migrate from Solr.",
@@ -2594,79 +2753,6 @@
       ],
       "tags": [
         "opensearch"
-      ]
-    },
-    {
-      "id": "aws-news-4982e200b9ca",
-      "title": "Amazon S3 removes 30-day minimum for transitions to S3 Standard-IA and S3 One Zone-IA",
-      "description": "You can now transition objects to S3 Standard-Infrequent Access (S3 Standard-IA) and S3 One Zone-Infrequent Access (S3 One Zone-IA) as soon as the day they are created, without the previous 30-day minimum retention in S3 Standard. These storage classes offer up to 40% lower storage costs than S3 Standard while still providing millisecond access when needed, making them ideal for backups, log analytics, and compliance workloads where data becomes cold within hours or days.\n  To get started, create new S3 Lifecycle rules to transition objects to S3 Standard-IA and S3 One Zone-IA as soon as 0 days after creation. You can configure these rules using the S3 console, AWS CLI, or SDKs. This update is available in all AWS Regions where S3 Standard-IA and S3 One Zone-IA are available. For pricing details, visit the Amazon S3 pricing page. To learn more, visit the overview page and documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/s3-removes-30-day-transitions-standard-ia-one-zone-ia",
-      "pubDate": "2026-07-16T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-dbfbc14a2a11",
-      "title": "AWS Backup extends logically air-gapped vault support to six additional AWS Regions",
-      "description": "AWS Backup logically air-gapped vaults are now available in six additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Mexico (Central), and Canada West (Calgary).\n \nWith logically air-gapped vaults now available in these Regions, you can store immutable, isolated backups that are locked by default and encrypted using AWS owned keys or customer-managed keys. You can back up directly to logically air-gapped vaults, copy backups across accounts and Regions, share vaults for recovery using AWS Resource Access Manager (RAM), and safeguard vault access during account compromise using Multi-party approval.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the feature documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-logically-air-gapped-vault-regions/",
-      "pubDate": "2026-07-16T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2bec73dffbbc",
-      "title": "AWS Backup extends restore testing support to seven additional AWS Regions",
-      "description": "AWS Backup restore testing is now available in seven additional AWS Regions: Asia Pacific (Taipei), Asia Pacific (Malaysia), Asia Pacific (New Zealand), Asia Pacific (Thailand), Israel (Tel Aviv), Mexico (Central), and Canada West (Calgary).\n \nRestore testing helps you automate and periodically run restore tests of supported AWS resources across storage, compute, and database services. You can create restore testing plans that automatically select recovery points, run restores on a schedule, and measure restore job completion time against your recovery time objectives (RTO). This helps you evaluate recovery readiness and meet regulatory and compliance requirements for disaster recovery and business continuity.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation To learn more about restore testing, visit the feature documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-restore-testing-regions/",
-      "pubDate": "2026-07-16T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ee150270eff2",
-      "title": "AWS Control Tower Account Factory for Terraform now re-applies customizations when accounts move between OUs",
-      "description": "AWS Control Tower Account Factory for Terraform (AFT) can now automatically re-apply an account's customizations when that account moves to a different Organizational Unit (OU). Previously, moving an enrolled account between OUs required manually triggering customization re-application, creating operational overhead and risk of configuration drift. With this capability, you can opt in to automatic re-application in your AFT deployment, so accounts stay consistent with their OU-specific configuration as soon as they're moved.\n \nTo enable this capability, set aft_customization_triggers = [\"account_move\"] in your AFT configuration. The re-application workflow skips the bootstrap and provisioning phases, running only global and account-level customizations for faster execution. Individual accounts can be excluded from this behavior by setting account_skip_customization_triggers = \"true\", giving teams precise control over which accounts participate in automated re-application.\n \nThis release also includes additional improvements: support for custom Terraform Cloud and Enterprise workspace naming variables, tighter access controls on the AFT logging bucket, and improved scaling for large-scale AWS Enterprise Support enrollment. Organizations enforcing compliance or security baselines tied to OU membership will benefit most from these combined enhancements.\n \nThis capability is available today across all AWS regions where AWS Control Tower Account Factory for Terraform is offered. To learn more about enabling automatic customization re-application and upgrading to the latest AFT release, visit the AFT documentation and review the AFT release notes on GitHub.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-control-tower-account/",
-      "pubDate": "2026-07-16T04:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "improvement",
-        "enhancement",
-        "support"
       ]
     },
     {
@@ -3020,36 +3106,6 @@
         "glue",
         "cloudwatch"
       ]
-    },
-    {
-      "id": "aws-news-d5a2cc91592f",
-      "title": "Serverless analytics pipelines using the Apache Spark engine in Amazon Athena",
-      "description": "This post shows how developers, data engineers, and analysts can connect to a secure Spark Connect endpoint in Athena with Apache Spark. You can use your preferred tools, such as Jupyter notebooks, VS Code, or dbt with Apache Airflow, without managing cluster lifecycle or scaling.",
-      "link": "https://aws.amazon.com/blogs/big-data/serverless-analytics-pipelines-using-the-apache-spark-engine-in-amazon-athena/",
-      "pubDate": "2026-07-02T16:27:58.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "athena"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "athena"
-      ]
-    },
-    {
-      "id": "aws-news-74d0162c4a81",
-      "title": "Deploy modern data platforms in minutes with MDAA",
-      "description": "In this post, we explore how MDAA transforms data architecture development from months of manual coding to production-ready deployment through configuration-driven infrastructure and embedded governance, examine a real customer transformation, and provide a clear implementation pathway for your own data modernization journey.",
-      "link": "https://aws.amazon.com/blogs/big-data/deploy-modern-data-platforms-in-minutes-with-mdaa/",
-      "pubDate": "2026-07-02T16:26:28.000Z",
-      "source": "bigDataBlog",
-      "services": [],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-d2e4b2db9915",

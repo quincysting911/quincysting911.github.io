@@ -1,8 +1,97 @@
 {
-  "lastUpdated": "2026-07-30T08:03:36.287Z",
+  "lastUpdated": "2026-07-31T08:29:21.771Z",
   "category": "natural-language",
-  "totalItems": 11,
+  "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-0d3cf4782045",
+      "title": "AWS Direct Connect now supports BGP route visibility on Virtual Interfaces",
+      "description": "AWS Direct Connect now provides Border Gateway Protocol (BGP) route visibility, allowing you to view the routes exchanged between AWS and your on-premises routers across your private, transit, and public virtual interfaces (VIFs). You can now see which routes AWS accepted from your router and which routes AWS is advertising to your router, along with their AS path and BGP community values. This visibility helps network administrators troubleshoot routing issues, verify route propagation, and monitor their hybrid network connectivity.\n \nWith this feature, you can view accepted routes (routes AWS received from your router) and advertised routes (routes AWS sends to your router) directly in the Direct Connect console or programmatically using the ListVirtualInterfaceRoutes API action. Each route displays its prefix, address family, AS path, community values, and installation timestamp, giving you comprehensive insight into your routing topology. You can filter routes by prefix, AS path, community, or address family to quickly identify specific routing behaviors. This capability is particularly valuable when managing complex multi-region architectures, validating BGP policy configurations, or diagnosing unexpected traffic patterns.\n \nThis feature is available in all AWS commercial Regions and the AWS China Regions (Beijing, operated by Sinnet, and Ningxia, operated by NWCD).\n \nTo learn more about BGP route visibility, visit the AWS Direct Connect documentation or access the feature through the Direct Connect console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-direct-connect-bgp-visibility/",
+      "pubDate": "2026-07-30T20:21:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0e60a5fbfa35",
+      "title": "AWS announces general availability of Policy-Based Routing on AWS Transit Gateway",
+      "description": "AWS Transit Gateway now supports Policy-Based Routing (PBR), giving network administrators granular control over how traffic is forwarded across their AWS network. With PBR, forwarding decisions can be based on a combination of packet attributes including source and destination IP addresses, ports, and protocol rather than destination IP address alone.\n  Previously, customers needing traffic steering or workload isolation had to build multi-VPC architectures with additional routing hops, adding complexity and operational overhead. PBR eliminates this by extending Transit Gateway's native routing capabilities, enabling security architects and enterprise network teams to classify and direct traffic inline without extra infrastructure. Customers associate a policy table with a Transit Gateway attachment and define an ordered set of rules. Each rule classifies traffic and directs matching packets to a specified route table using first-match-wins logic. This supports use cases such as steering sensitive workloads through AWS Network Firewall or third-party inspection appliances, routing application traffic over AWS Direct Connect or AWS VPN paths based on source, port, or protocol, and isolating production and development environments into separate routing domains to limit lateral movement.\n  Policy-Based Routing for AWS Transit Gateway is available in all commercial AWS Regions where Transit Gateway is available. You can configure PBR using the AWS Management Console, AWS Command Line Interface (CLI), and the AWS Software Development Kit (SDK). PBR incurs no additional charge beyond standard Transit Gateway fees. To learn more about Policy-Based Routing for AWS Transit Gateway, visit the AWS Transit Gateway product page .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-transit-gateway-policy-based-routing/",
+      "pubDate": "2026-07-30T15:39:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-cc34489d50b1",
+      "title": "Amazon MSK Express brokers now delivers Apache Kafka data to Amazon S3",
+      "description": "Amazon MSK Express brokers now delivers data to Amazon S3 general purpose buckets, providing a fully managed capability to deliver Apache Kafka data in Amazon S3 for downstream processing in the easiest and most reliable way. This capability automatically scales to deliver high-throughput Kafka data to S3 with end-to-end reliability for mission-critical workloads, while reducing ingestion and delivery costs by up to 60% compared to self-managed alternatives.\n \nCustomers deliver Apache Kafka data to Amazon S3 for use cases such as log archival, compliance retention, Kafka replay, and training AI/ML models, and typically build these pipelines with self-managed connectors that grow costly and operationally complex as workloads scale, forcing teams to build or source S3 connector plugins, secure approvals to deploy them, and continually scale capacity, and apply security updates across connector fleet. With this capability, MSK Express automatically handles scaling, retries, and backpressure so customers no longer manage connector fleets or coordinate across teams. MSK Express  supports throughput of up to 10 GB/s for data delivery to Amazon S3, and manages routine operations such as capacity scaling and version upgrades without introducing delivery gaps. Additionally, customers add this delivery capability without provisioning additional broker egress throughput, which eliminates the incremental infrastructure costs that scaling connector-based pipelines typically incurs, so customers scale delivery to actual workload demand rather than provisioning for peak, achieving reliable, high-throughput delivery to Amazon S3 while removing operational overhead and lowering costs.\n \nAmazon MSK data delivery to Amazon S3 is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-express-brokers-delivers-to-amazon-s3",
+      "pubDate": "2026-07-30T14:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-11d30e1d0102",
+      "title": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg",
+      "description": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg, a new capability that continuously materializes Apache Kafka topics as Apache Iceberg tables on Amazon S3 Tables. Amazon MSK data delivery to streaming tables can reduce the cost of ingesting and delivering Apache Kafka data into Amazon S3 Tables by up to 60% versus self-managed deployments and reduces downstream query costs by up to 30% versus self-managed Apache Kafka deployments.\n \nCustomers rely on Apache Kafka to ingest real-time data for use cases like fraud detection and personalization and increasingly want to unify that data with Apache Iceberg tables for near real-time analytics but integrating the two forces them to operate complex custom pipelines, manage format conversions, and contend with the small-file problem, where high-volume ingestion creates many small parquet files that slow downstream queries and increase costs. With this capability, intelligent inline compaction eliminates the performance impact of small files and keeps query performance predictable without sacrificing data freshness, while built-in coordination resolves concurrent writer conflicts across high-throughput consumers. Amazon MSK supports throughput of up to 10 GB/s for delivery to Apache Iceberg on Amazon S3 Tables, and because this native capability adds no broker egress throughput, customers avoid the incremental infrastructure costs of scaling connector pipelines and match capacity to actual demand rather than peak. Customers deliver data to streaming tables and query or transform the data with any engine of their choice, including Apache Spark, Trino, or Apache Flink. \n \nTo get started, customers open the Amazon MSK console, select the Express cluster, and enable the capability in a few clicks, or use the MSK APIs or MCP server. Amazon MSK data delivery to streaming tables is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-streaming-tables-for-apache-iceberg",
+      "pubDate": "2026-07-30T14:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "s3",
+        "kafka",
+        "msk",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-02eb51cfbaf8",
       "title": "Amazon Redshift Data API announces long polling, session management, and flexible batch execution",
@@ -197,29 +286,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-fe9a8577d043",
-      "title": "Amazon Redshift adds rg.large and rg.12xlarge instance sizes",
-      "description": "Amazon Redshift announces the general availability of two new RG instance sizes - rg.large and rg.12xlarge. These new sizes deliver the same Graviton-powered performance benefits as existing RG instances, including up to 2.4x faster query performance than previous-generation RA3 instances at 30% lower price per vCPU, giving you more flexibility to right-size your provisioned clusters for any workload.\n  rg.large and rg.12xlarge instance sizes are available on the current track (P202) only. Customers on the trailing track (P201) can continue to use rg.xlarge and rg.4xlarge. Existing RA3 clusters can migrate to RG instances using Snapshot and Restore, Elastic Resize, or Classic Resize. RG instances are available with flexible pricing options, including On-Demand, and 1-year and 3-year Reserved Instances with No Upfront payment.\n \nThe new rg.large and rg.12xlarge instance sizes are now available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), US West (N. California), Canada (Central), Mexico (Central), South America (São Paulo), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Europe (Stockholm), Europe (Spain), Africa (Cape Town), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Mumbai), Asia Pacific (Jakarta), Asia Pacific (Hong Kong), Asia Pacific (Osaka), Asia Pacific (Malaysia), Asia Pacific (Hyderabad), Asia Pacific (Taiwan), Asia Pacific (Thailand), and Asia Pacific (Melbourne).\n  To get started, refer to the following resources:\n  \n \n \nAmazon Redshift node types\n \n \nRA3 to RG upgrade guide\n \n \nAmazon Redshift cluster versions\n \n \nAmazon Redshift pricing",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-adds-rg-large-12xlarge-instance-sizes",
-      "pubDate": "2026-07-16T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift",
-        "graviton"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
-        "graviton",
-        "ga",
-        "now-available"
       ]
     },
     {
