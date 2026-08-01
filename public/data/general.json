@@ -1,8 +1,77 @@
 {
-  "lastUpdated": "2026-07-31T08:29:21.771Z",
+  "lastUpdated": "2026-08-01T07:58:56.816Z",
   "category": "general",
-  "totalItems": 39,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-d74ca56e8d3e",
+      "title": "Amazon Aurora DSQL adds multi-Region cluster support in four more Regions",
+      "description": "Starting today, Amazon Aurora DSQL supports multi-Region clusters in four additional AWS Regions: Europe (Stockholm), Europe (Spain), Asia Pacific (Mumbai), and Asia Pacific (Singapore). Aurora DSQL is the fastest serverless, distributed SQL database, with active-active high availability and multi-Region strong consistency. Each multi-Region cluster provides a writable endpoint in both peered Regions, presenting a single logical database that remains available even if one Region becomes unavailable.\n \nWith this launch, Aurora DSQL multi-Region clusters are available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Spain), and Europe (Stockholm). Aurora DSQL single-Region clusters are available in all of these Regions and in Asia Pacific (Hong Kong), Asia Pacific (Melbourne), Asia Pacific (Sydney), and South America (São Paulo).\n  Get started with Aurora DSQL for free with the AWS Free Tier. To learn more, visit the Aurora DSQL webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-adds-multi-region-clusters-four-more-regions/",
+      "pubDate": "2026-07-31T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d70b45904783",
+      "title": "Amazon CloudWatch announces managed Prometheus collectors",
+      "description": "Amazon CloudWatch now supports collecting Prometheus metrics from your AWS infrastructure using fully managed collectors — enabling you to monitor Amazon EKS, Amazon EC2, Amazon ECS, Amazon MSK, and Amazon OpenSearch Service workloads without deploying or managing any agents.\n \nPreviously, getting Prometheus metrics into CloudWatch required deploying, scaling, and maintaining a self-managed OpenTelemetry Collector. Managed Prometheus collectors eliminate that overhead. You provide a scrape configuration and a connection to your resources, and CloudWatch handles provisioning, scaling, and collection automatically. Metrics are delivered in OpenTelemetry format and can be queried alongside your AWS vended metrics using PromQL — providing unified alarming, dashboarding, and cross-service correlation in a single view.\n \nManaged collectors support Kubernetes service discovery (EKS), DNS-based service discovery via AWS Cloud Map (ECS), direct instance scraping (EC2), and open monitoring endpoints (MSK, OpenSearch). Metrics for EKS, MSK and Open Search can be visualized in automatic dashboards, queried with PromQL and used in CloudWatch alarms.\n \nThis feature is available in all AWS Regions where the CloudWatch OTLP endpoint is available, except Asia Pacific (New Zealand). Managed Prometheus collectors are charged by the hour and standard CloudWatch OpenTelemetry metric ingestion pricing applies. To get started, see the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/cloudwatch-managed-collectors/",
+      "pubDate": "2026-07-31T13:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "opensearch",
+        "opensearch service",
+        "rds",
+        "ecs",
+        "eks",
+        "msk",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "opensearch",
+        "opensearch service",
+        "rds",
+        "ecs",
+        "eks",
+        "msk",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b3de57ce3d83",
+      "title": "Amazon EC2 C7i instances now available in additional regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in Europe (Milan) and Canada West (Calgary) regions. These custom processors, available only on AWS, offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers.\n  C7i instances deliver up to 15% better price-performance versus C6i instances and are a great choice for all compute-intensive workloads, such as batch processing, distributed analytics, ad-serving, and video encoding. C7i instances offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads. To learn more, visit the EC2 C7i instances Page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-c7i-instances-mxp-yyc-region/",
+      "pubDate": "2026-07-31T00:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c24bed4bca58",
       "title": "Amazon Redshift RG large and 12xlarge instances now available on the trailing track",
@@ -566,34 +635,6 @@
       "tags": [
         "update",
         "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a2533f7c0e38",
-      "title": "Amazon GameLift Streams now supports IAM role credentials for stream sessions",
-      "description": "Amazon GameLift Streams now supports assigning an IAM role to a stream session, enabling your application to securely access resources in your AWS account, such as Amazon S3 buckets and DynamoDB tables. With this launch, you can pass a RoleArn parameter when starting a stream session, and your application automatically receives short-lived, auto-refreshing AWS credentials through the standard AWS SDK credential resolution chain — no application code changes required.\n \nPreviously, customers who needed their streamed applications to access AWS services had to embed long-lived access keys in application bundles or pass them as environment variables, creating security and operational challenges. Now, Amazon GameLift Streams handles credential vending and automatic refresh using the same container credential provider mechanism trusted by Amazon ECS task roles and Amazon EKS Pod Identity. Role misconfigurations are validated at session start, surfacing clear errors immediately rather than during runtime.\n \nYou can also configure IAM roles directly in the Amazon GameLift Streams console, which provides a pre-filled trust policy template to simplify role setup.\n \nIAM role support for stream sessions is available in all AWS Regions where Amazon GameLift Streams is available.\n \nTo learn more, see Session Credentials Setup in the Amazon GameLift Streams Developer Guide: https://docs.aws.amazon.com/gameliftstreams/latest/developerguide/session-credentials-setup.html",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams-iam/",
-      "pubDate": "2026-07-17T17:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "dynamodb",
-        "ecs",
-        "eks",
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "dynamodb",
-        "ecs",
-        "eks",
-        "iam",
-        "launch",
-        "ga",
         "support"
       ]
     },
