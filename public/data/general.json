@@ -1,8 +1,109 @@
 {
-  "lastUpdated": "2026-08-03T08:57:45.821Z",
+  "lastUpdated": "2026-08-04T08:13:44.089Z",
   "category": "general",
   "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-b8d259750c24",
+      "title": "Announcing General Availability of DynamoDB Mapper for Kotlin",
+      "description": "DynamoDB Mapper for Kotlin is now generally available, giving Kotlin developers a fully idiomatic way to read, write, and query Amazon DynamoDB using natural Kotlin data types without managing low-level API details. Since the Developer Preview launch in October 2024, we’ve added significant new capabilities based on community feedback including the updateItem operation, batch and […]",
+      "link": "https://aws.amazon.com/blogs/developer/announcing-general-availability-of-dynamodb-mapper-for-kotlin/",
+      "pubDate": "2026-08-03T21:03:09.000Z",
+      "source": "developersAndDevOps",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "launch",
+        "preview",
+        "generally-available",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-efd001679d84",
+      "title": "Amazon GameLift Streams now supports sharing streams with stream URLs",
+      "description": "Amazon GameLift Streams now offers stream URLs, which give end users temporary, unauthenticated access to a playable stream session in a supported web browser. Recipients need no AWS account, no credentials, and no software install.\n \nTo share a playable stream, create a stream URL for a stream group and one of its applications, set how long the stream URL stays valid and how many sessions it can start, and send the link. Each person who opens the link starts an independent stream session, and Amazon GameLift Streams routes them to a nearby streaming location from the locations you selected. No client integration or backend service is required. You can create, monitor, and revoke stream URLs in the Amazon GameLift Streams console or with the new CreateStreamUrl, GetStreamUrl, ListStreamUrls, and RevokeStreamUrl APIs.\n \nThere is no additional charge for stream URLs. You are charged for the stream capacity that sessions started from a stream URL consume, as described on the Amazon GameLift Streams pricing page. For a full list of supported Regions, see the AWS Region table.\n \nTo get started, see Share stream sessions with stream URLs in the Amazon GameLift Streams Developer Guide and the CreateStreamUrl API Reference. To learn more about the service, see the Amazon GameLift Streams product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-gamelift-streams/",
+      "pubDate": "2026-08-03T20:24:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4e92c2cf4a2c",
+      "title": "AWS Lambda Provisioned Mode for Amazon SQS event source mappings now supports up to 10,000 event pollers",
+      "description": "AWS Lambda now supports a maximum of 10,000 event pollers for Provisioned Mode for Amazon SQS event source mappings (ESMs), a 5x increase from the previous limit of 2,000. This enables you to reach up to 100,000 concurrent invocations, so you can build highly responsive and scalable event-driven applications with stringent performance requirements.\n \n \nCustomers use Amazon SQS as an event source for Lambda to build mission-critical applications such as real-time order processing, financial transaction pipelines, IoT telemetry ingestion, and large-scale fan-out workloads, where delays in event processing can directly impact business outcomes. Provisioned Mode for SQS ESM allows you to configure a minimum and maximum number of event pollers and optimize the throughput for your application. However, the maximum number of pollers was previously limited to 2,000, which constrained the number of concurrent invocations that could be reached per ESM, and required customers to split their workload across multiple ESMs. With this launch, customers can reach up to 10,000 event pollers and 100,000 concurrent invocations per ESM, enabling them to build at-scale workloads with stringent latency and throughput requirements.\n \n \nThis feature is generally available in all AWS Commercial Regions. You can activate Provisioned Mode for SQS ESM by configuring a minimum and maximum number of event pollers using the ESM API, AWS Console, AWS CLI, AWS SDK, AWS CloudFormation, and AWS SAM. You pay for the usage of event pollers based on a billing unit called Event Poller Unit (EPU). To learn more, read the Lambda ESM documentation and AWS Lambda pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-Lambda-provisioned-sqs-esm-max-pollers/",
+      "pubDate": "2026-08-03T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "sqs",
+        "launch",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7a93d07960c4",
+      "title": "AWS Durable Execution SDK for .NET now Generally Available",
+      "description": "The AWS Lambda Durable Execution SDK for .NET is now generally available. AWS Lambda now supports durable executions for .NET, joining the existing Python, TypeScript, and Java SDKs. You install the SDK from NuGet, write your workflows in familiar C#, and deploy them with the AWS Extensions for .NET CLI – the same tools you […]",
+      "link": "https://aws.amazon.com/blogs/developer/aws-durable-execution-sdk-for-net-now-generally-available/",
+      "pubDate": "2026-08-03T16:36:23.000Z",
+      "source": "developersAndDevOps",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-786246f49cb7",
+      "title": "AWS WAF now supports Miggo Security managed rule groups for emerging threats and AI/ML application protection",
+      "description": "AWS WAF now supports two new partner managed rule groups from Miggo Security, available through AWS Marketplace: Miggo Rules for AWS WAF – High Emerging Application Threats, and Miggo Rules for AWS WAF – AI/ML Application Protection. These rule groups give AWS WAF customers continuously updated protection against vulnerabilities that are being actively exploited, have public proof-of-concept code, or appear in the CISA Known Exploited Vulnerabilities (KEV) catalog, without writing or maintaining custom rules.\n  The High Emerging Application Threats rule group focuses on vulnerabilities under active exploitation, and the AI/ML Application Protection rule group focuses on generative-AI application stacks such as AI agent frameworks, LLM gateways, and model-serving infrastructure. You can subscribe to either rule group and add it to a web ACL directly in the AWS WAF console through AWS Marketplace, with no additional configuration. Both rule groups support versioning, and pricing is set by Miggo through AWS Marketplace.\n  To get started, visit the AWS WAF console or find the Miggo rule groups in AWS Marketplace. For more information, see the AWS WAF Developer Guide. For a full list of supported Regions, visit the AWS Regional Services page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-waf-miggo-managed-rule-groups",
+      "pubDate": "2026-08-03T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "waf"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "waf",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d74ca56e8d3e",
       "title": "Amazon Aurora DSQL adds multi-Region cluster support in four more Regions",
@@ -542,64 +643,6 @@
       ]
     },
     {
-      "id": "aws-news-01588056e098",
-      "title": "Amazon ECS advanced deployment strategies now available in AWS European Sovereign Cloud",
-      "description": "Amazon Elastic Container Service (Amazon ECS) now supports built-in blue/green, linear, and canary deployment strategies in the AWS European Sovereign Cloud, making software updates for containerized applications safer and allowing you to release new application versions faster with greater confidence. Built directly into Amazon ECS, these capabilities eliminate the need for custom deployment tooling while providing production-ready controls including deployment lifecycle hooks, bake time, and quick rollback.\n \nWith these strategies, Amazon ECS provisions a new application version alongside the existing version and allows you to validate it before shifting production traffic. Blue/green deployments shift traffic in a single step, linear deployments shift traffic in equal increments over a specified period, and canary deployments shift a small percentage initially before shifting the remainder. You can use deployment lifecycle hooks, including Lambda hooks and pause hooks, to run custom validation logic and approval workflows at specific deployment stages. You can also configure bake time to evaluate the new version after traffic has shifted, and roll back without downtime if regressions are identified. To automatically detect failures, configure Amazon CloudWatch alarms or Amazon ECS deployment circuit breaker, or initiate a rollback directly using the StopServiceDeployment API.\n \nThese capabilities are available for Amazon ECS services using Application Load Balancers (ALB), Network Load Balancers (NLB), and Amazon ECS Service Connect. You can configure deployments using the AWS Management Console, AWS CLI, AWS SDKs, or infrastructure-as-code tools on new or existing Amazon ECS services. To learn more, see our documentation for Amazon ECS blue/green, linear, and canary deployments, and deployment lifecycle hooks.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ecs-adv-deployments-eu-sovereign-cloud/",
-      "pubDate": "2026-07-21T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ecs",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ecs",
-        "cloudwatch",
-        "now-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-04d6960bc053",
-      "title": "Amazon SES introduces pricing plans",
-      "description": "Today, Amazon Simple Email Service (SES) introduced pricing plans, making it easy to purchase and access SES capabilities without evaluating them individually. Amazon SES pricing plans include three hierarchical options: Essentials, Pro, and Enterprise. Each plan builds on the one before it, offering progressively more capability at a discount compared to à-la-carte pricing.\n \nBusinesses depend on email reaching the inbox and getting read, but the capabilities needed to ensure this have traditionally been sold as individual add-ons that must be evaluated and purchased independently. With pricing plans, customers pick a plan and have access to the right capabilities at no additional cost. Essentials provides deliverability insights, Pro adds managed dedicated IPs, email validation, and global inbox placement visibility to proactively prevent problems, and Enterprise adds multi-region resilience, workload-level reputation isolation, and an annual deliverability assessment.\n \nPricing plans are available in all AWS Regions where Amazon SES is available, except the Middle East (UAE) and Middle East (Bahrain) Regions.\n \nTo get started, sign in to the Amazon SES console and navigate to the pricing plan section. To learn more, visit the Amazon SES Pricing page or the Amazon SES Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ses-pricing-plans/",
-      "pubDate": "2026-07-21T16:35:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-92ad8b1897ae",
-      "title": "Selectively log network activity events by identity in AWS CloudTrail",
-      "description": "Today, AWS launches enhanced event filtering for network activity events for VPC end points, a CloudTrail event type that captures actions transmitted through a Virtual Private Cloud Endpoint. Customers can now control which network activity events are logged based on the IAM user identity making the API call. For example, you can configure selectors to log only access denied events when the calling user identity is not on a known safe list. This lets you capture unauthorized access attempts while excluding routine traffic from trusted identities, reducing both logging costs and noise.\n \nWith UserIdentity filtering, customers building a data perimeter strategy can focus on network activity event logging for scenarios that matter most in security. You can configure selectors to log only VpceAccessDenied events from identities outside a trusted set of IAM roles. This enables detection of potential data exfiltration attempts through VPC endpoints without the cost of logging every successful API call from approved principals. You can combine UserIdentity conditions with existing fields like eventName or vpcEndpointId for fine-grained control over what gets recorded.\n \nYou can use this feature via the AWS Management Console, AWS Command Line Interface, and AWS SDKs. This feature is available in all AWS Regions where CloudTrail network activity events are supported. To learn more about Network Activity events, visit the AWS CloudTrail user guide or read AWS Blog on how to enable Network Activity Events.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-cloudtrail-filter-useridentity-advance-selectors/",
-      "pubDate": "2026-07-20T17:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "launch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-221f9c3e243b",
       "title": "Serverless ICYMI Q2 2026",
       "description": "In this 33rd quarterly recap post, discover the most impactful AWS serverless launches, features, and resources from Q2 2026 that you might have missed. Stay current with the latest serverless innovations that can improve your applications. In case you missed our last ICYMI, read about what happened in Q1 2026. AWS Lambda MicroVMs AWS Lambda […]",
@@ -616,24 +659,6 @@
       "tags": [
         "nova",
         "lambda",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-e121257ad7b0",
-      "title": "Amazon Connect Customer launches metrics for agent queues on analytics dashboards",
-      "description": "Amazon Connect Customer dashboards now display real-time and historical metrics for agent queues. Agent queues are used to directly route contacts to a specific agent. Now, supervisors can track how these agents perform in their own queues. For example, a supervisor notices a spike in contacts queued to a specific agent queue following a series of scheduled callbacks, and reassigns them to avoid long wait times.\n  Agent queue metrics are available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect Customer is offered. To learn more about analytics dashboards, see the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, the AWS cloud-based contact center, please visit the Amazon Connect Customer website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-connect/",
-      "pubDate": "2026-07-20T15:28:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
         "launch"
       ]
     },
@@ -766,21 +791,6 @@
       ],
       "tags": [
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-7ccb09747da6",
-      "title": "Announcing new output formats in AWS CLI v2",
-      "description": "Amazon Web Services (AWS) is announcing two new features for the AWS Command Line Interface (AWS CLI) v2: structured error output and the “off” output format.",
-      "link": "https://aws.amazon.com/blogs/developer/announcing-new-output-formats-in-aws-cli-v2/",
-      "pubDate": "2026-02-28T02:22:30.000Z",
-      "source": "developersAndDevOps",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "new-feature"
       ]
     }
   ]

@@ -1,8 +1,51 @@
 {
-  "lastUpdated": "2026-08-03T08:57:45.821Z",
+  "lastUpdated": "2026-08-04T08:13:44.089Z",
   "category": "ai-safety",
-  "totalItems": 21,
+  "totalItems": 20,
   "items": [
+    {
+      "id": "aws-news-341b93b291f4",
+      "title": "AWS Transform continuous modernization is now generally available",
+      "description": "AWS Transform continuous modernization is now generally available in all AWS Regions where AWS Transform is supported. This capability helps engineering teams analyze and remediate technical debt across source code repositories at scale. Teams can connect GitHub organizations, GitLab groups, and Bitbucket workspaces, run analyses on demand or on a recurring schedule, and prioritize findings across technical debt, security, agentic readiness, modernization readiness, and custom analysis criteria.\n  With today's launch, you can connect source code providers, initiate and schedule analyses, review findings, and create remediations directly from the AWS Transform web application. For findings with an associated remediation, continuous modernization creates branches and opens pull requests or merge requests containing validated code changes for review. Analysis and remediation run in your AWS account using your credentials, while your source code remains under your control.\n  You can also use the AWS Transform Kiro Power, agent plugins, or AWS Transform CLI to work from your IDE or terminal, analyze local repositories, organize repositories using labels, and run analyses locally or remotely using Amazon EC2 or AWS Batch. To get started, open the AWS Transform web application or use the AWS Transform Kiro Power and agent plugins. To learn more, see AWS Transform continuous modernization in the AWS Transform User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/7/aws-transform-continuous-general-available",
+      "pubDate": "2026-08-03T21:15:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ec2",
+        "organizations",
+        "launch",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-98dc9d882852",
+      "title": "AWS Organizations now provides maximum account quota visibility in Service Quotas",
+      "description": "AWS Organizations customers can now view their maximum number of accounts quota and its utilization directly through AWS Service Quotas instead of relying on AWS Support or AWS account teams to determine their current account limit.\n  Customers can now proactively plan account growth with ease by monitoring their current account quota utilization and requesting increases before reaching their limit. They can view this quota by logging into management account and accessing the Service Quotas console or calling the Service Quotas GetServiceQuota API.\n  This quota visibility is available now available in US East (N. Virginia). To learn more, see viewing service quotas in the AWS Service Quotas documentation. For more information about AWS Organizations quotas and service limits, see the AWS Organizations documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-organizations/",
+      "pubDate": "2026-08-03T18:54:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-fbc3d3c5a220",
       "title": "IAM Policy Simulator moves to the IAM console and adds additional capabilities",
@@ -172,23 +215,6 @@
       ]
     },
     {
-      "id": "aws-news-279185d1bdad",
-      "title": "Best practices for applying Amazon Bedrock Guardrails to code generation workflows",
-      "description": "In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-applying-amazon-bedrock-guardrails-to-code-generation-workflows/",
-      "pubDate": "2026-07-23T23:03:44.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock"
-      ]
-    },
-    {
       "id": "aws-news-0cee570460ce",
       "title": "Amazon Bedrock AgentCore now delivers unified observability with traces and logs in a single log group",
       "description": "Amazon Bedrock AgentCore now delivers agent traces and prompts to the same log group as your agent's logs, giving you unified observability for AI agents in a single Amazon CloudWatch log group.\n \nPreviously, AgentCore split agent telemetry across multiple destinations trace spans went to the shared `aws/spans` log group while event logs containing prompts, inputs, and outputs went to a separate resource-specific log group. This meant debugging an agent invocation required searching across multiple log groups, and customers could not apply fine-grained access control or customer-managed key (CMK) encryption at the individual agent level. With today's launch, all of an agent's telemetry traces, prompts, structured logs, and standard output is delivered to a single per-agent log group (`/aws/bedrock-agentcore/runtimes/<agent_id>-<endpoint_name>`). You can now correlate traces and logs in one place, scope IAM policies and CMK encryption to individual agents, and export all telemetry by subscribing to a single log group. For multi-agent systems, each agent's complete execution history stays together, making end-to-end debugging straightforward.\n \nAll newly created agents starting July 20, 2026 in supported AWS Regions use unified observability by default starting no configuration needed. For existing agents, set the `UNIFIED_TRACES_DESTINATION_ENABLED=true` environment variable on your agent runtime and upgrade ADOT to version 0.17.1 or later. This feature is available in all AWS commercial regions where AgentCore runtime is supported. Learn more in the AgentCore Developer Guide.",
@@ -340,40 +366,6 @@
         "step functions",
         "organizations",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-3ae3b99b4cf1",
-      "title": "AWS Marketplace now supports self-service seller signature management for India-based sellers",
-      "description": "AWS Marketplace now enables India-based sellers to upload and manage their seller signatures directly through AWS Partner Central, eliminating the previous manual, email-based submission process. Sellers located in India are required to provide a valid seller signature for tax invoicing and regulatory compliance. This launch consolidates Goods and Services Tax Identification Number (GSTIN) registration and seller signature management into a single, centralized location purpose-built for India-based sellers transacting on AWS Marketplace.\n  Once uploaded, AWS Marketplace securely stores your signature and uses it for applicable buyer tax invoices generated on your behalf for transactions in India. This launch introduces automated real-time validation and a new tax summary container providing at-a-glance visibility into GSTIN registration and seller signature verification status. Sellers are notified by email when their signature is verified or rejected, and can resolve rejections independently by resubmitting directly in the console using the displayed rejection reason, ensuring real-time compliance visibility.\n  To learn more about managing your tax compliance and seller signature in AWS Partner Central, visit the AWS Marketplace Seller Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-marketplace-india/",
-      "pubDate": "2026-07-21T07:18:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9306fc9ad551",
-      "title": "AWS HealthOmics now available in two additional AWS Regions",
-      "description": "AWS HealthOmics private workflows are now available in the Asia Pacific (Tokyo) and US East (Ohio) Regions, expanding access to fully-managed bioinformatics workflows for research, drug discovery, and agriculture science initiatives with regional compliance requirements. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs with fully managed bioinformatics workflows.\n \nWith HealthOmics private workflows, customers can build and scale genomics data analysis pipelines using familiar domain-specific languages including Nextflow, WDL, and CWL, enabling healthcare and life sciences customers to focus on scientific discovery rather than infrastructure management. HealthOmics provides built-in features, such as Git integrations for version-controlled workflow development and third-party container registry support through Amazon ECR, to make it easy to migrate existing pipelines and accelerate development of new genomics workflows while maintaining full data provenance and compliance requirements.  \n \nPrivate workflows are now available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Seoul, Singapore, Tokyo). To learn more, visit the AWS HealthOmics User Guide. For more information on pricing, visit AWS HealthOmics pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/healthomics-tokyo-ohio/",
-      "pubDate": "2026-07-20T18:54:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "integration",
-        "support"
       ]
     },
     {
