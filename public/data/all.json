@@ -1,16 +1,277 @@
 {
-  "lastUpdated": "2026-08-05T08:12:32.811Z",
-  "totalItems": 187,
+  "lastUpdated": "2026-08-06T08:11:10.058Z",
+  "totalItems": 188,
   "sources": {
-    "whatsNew": 92,
+    "whatsNew": 91,
     "mlBlog": 20,
     "newsBlog": 17,
     "bigDataBlog": 16,
     "architectureBlog": 18,
     "computeBlog": 15,
-    "developersAndDevOps": 9
+    "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-cd2310ef20e1",
+      "title": "AWS Lambda announces scalable network bandwidth up to 3,000 Mbps for functions outside a VPC",
+      "description": "AWS Lambda now supports scalable network bandwidth for Lambda functions, enabling faster data transfer to and from your execution environment for latency-sensitive workloads. This feature enables functions outside a VPC configured with 2 GB of memory or more to access network bandwidth that scales proportionally, from 625 Mbps at 2 GB up to 3,000 Mbps at 10 GB.\n  Customers use Lambda to build latency-sensitive data processing workloads, which need to transfer large volumes of data - up to several terabytes - from external data sources into the function’s execution environment for processing. As data volume and performance requirements grow, the existing limit of 625 Mbps can constrain data transfer speeds to and from an execution environment. With this launch, network throughput increases proportionally from 625 Mbps at 2 GB up to 3,000 Mbps at 10 GB, helping reduce function execution times and per-invocation costs while improving end-user experience.\n  To get started, submit a request through AWS Service Quotas under the Network bandwidth per execution environment quota to enable scalable network bandwidth on your account. Once enabled, bandwidth will scale automatically based on your function's memory configuration for all functions outside a VPC in your account.\n  Scalable network bandwidth for functions outside a VPC is available at no additional charge in all commercial AWS Regions. To learn more, visit the Lambda quotas page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-network-bandwidth/",
+      "pubDate": "2026-08-05T21:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lambda",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4ef1b4335f9e",
+      "title": "Announcing response streaming for .NET on AWS Lambda",
+      "description": "Today, we are announcing support for AWS Lambda response streaming for .NET Lambda functions. With response streaming, functions can be more responsive by sending data back to the caller incrementally as it becomes available, rather than buffering the entire response in memory before returning it. Why response streaming? With the traditional Lambda invocation model, the […]",
+      "link": "https://aws.amazon.com/blogs/developer/announcing-response-streaming-for-net-on-aws-lambda/",
+      "pubDate": "2026-08-05T20:08:43.000Z",
+      "source": "developersAndDevOps",
+      "services": [
+        "lambda"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-29e11a346ce7",
+      "title": "Amazon Keyspaces (for Apache Cassandra) is now available in the Canada West (Calgary) Region (ca-west-1)",
+      "description": "Amazon Keyspaces (for Apache Cassandra) is now available in the Canada West (Calgary) Region (ca-west-1), allowing customers in the Canada West Region to build Cassandra-compatible applications with lower latency while keeping their data within the Region to meet data residency requirements. \n \nAmazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. Amazon Keyspaces is serverless, so you pay for only the resources that you use and you can build applications that serve thousands of requests per second with virtually unlimited throughput and storage. \n \nThis regional expansion enables organizations in Canada to build highly scalable, low-latency applications using familiar Cassandra Query Language (CQL) without the operational burden of managing Cassandra clusters.\n \nTo learn more about on Keyspaces, visit the Amazon Keyspaces documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-keyspaces-apache-cassandra-canada-west/",
+      "pubDate": "2026-08-05T20:06:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "now-available",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-e9864c090f6c",
+      "title": "How LendingTree built a multi-agent mortgage assistant on Amazon Bedrock",
+      "description": "Learn how LendingTree built a production multi-agent mortgage assistant on Amazon Bedrock. Three coordinated agents use LangGraph, the Model Context Protocol, and Amazon Nova models with built-in guardrails to deliver 24/7 personalized mortgage guidance while meeting strict financial-services compliance.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-lendingtree-built-a-multi-agent-mortgage-assistant-on-amazon-bedrock/",
+      "pubDate": "2026-08-05T18:50:02.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "nova",
+        "personalize"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "nova",
+        "personalize",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-a64221581d52",
+      "title": "AWS Glue Data Quality makes ETL anomaly detection free and improves anomaly predictions",
+      "description": "AWS Glue Data Quality now offers improved anomaly detection with a new observation mode that reduces detection of false anomalies and removes pricing for anomaly detection in ETL jobs. Customers using notebook-based or exploratory workflows now benefit from smarter anomaly detection that gracefully handles irregular data arrival intervals. This new capability avoids over-extrapolating trends by using a constant baseline instead of a linear trend, delivering more accurate alerts and reducing noise so teams can focus on genuine anomalies.\n  The new anomaly detection observation mode is particularly useful for exploratory data analysis, datasets with flat or random patterns, workloads without predictable trends and cases where you run data quality checks on varying schedules or in interactive environments like notebooks. Additionally, anomaly detection for AWS Glue ETL jobs is now available at no additional cost, so you can monitor data quality anomalies across all your Glue pipelines without worrying about pricing.\n  These improvements are available in all AWS commercial regions and AWS GovCloud (US) regions.\n  To get started, visit the AWS Glue Data Quality documentation. To learn more about pricing, see the AWS Glue pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-glue-data-quality-anomaly-detection-free",
+      "pubDate": "2026-08-05T18:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "glue",
+        "now-available",
+        "improvement",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-c8e7b796fdb5",
+      "title": "How Mobileye transformed support operations using Amazon Bedrock AgentCore",
+      "description": "In this post, we'll explore how Mobileye deployed an AI support agentic solution on Amazon Bedrock AgentCore - from the support bottleneck that sparked the idea, through the proof of concept that validated it, to the hybrid architecture that bridges on-premises systems with AWS cloud services. This approach is relevant for enterprises struggling to scale AI Agents while maintaining enterprise grade governance and security standards.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-mobileye-transformed-support-operations-using-amazon-bedrock-agentcore/",
+      "pubDate": "2026-08-05T18:09:03.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "rds",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-999e9647e314",
+      "title": "How we built an MCP bridge to give our AgentCore-hosted AI agent access to local MCP tools",
+      "description": "AI agents on Amazon Bedrock AgentCore run in the cloud, but users' tools and files live on their laptops. Learn how to build a secure MCP bridge that lets a cloud-hosted agent call local MCP servers by tunneling signed messages over the existing WebSocket connection through a browser extension and Chrome native messaging, with no open ports or VPN required.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-we-built-an-mcp-bridge-to-give-our-agentcore-hosted-ai-agent-access-to-local-mcp-tools/",
+      "pubDate": "2026-08-05T18:02:23.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-0b5e17d5dd19",
+      "title": "Run production AI agents in n8n with Amazon Bedrock AgentCore harness",
+      "description": "Amazon Bedrock AgentCore harness is now generally available. Learn how to add it as an agent step in n8n workflows using a new open-source community node, and build agents with persistent memory, real tools, code execution, and VPC isolation — all from the n8n editor with no infrastructure or agent code.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/run-production-ai-agents-in-n8n-with-amazon-bedrock-agentcore-harness/",
+      "pubDate": "2026-08-05T18:00:57.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "generally-available"
+      ]
+    },
+    {
+      "id": "aws-news-a01a7cd7be33",
+      "title": "Amazon DynamoDB now supports real-time vector search",
+      "description": "Today, AWS announces the general availability of vector search for Amazon DynamoDB, a new feature to index and search vectors in real time. As vector datasets grow into the billions or trillions, vector search at scale traditionally trades off search speed, scale, and accuracy: latency climbs with vector count unless you accept lower recall or throughput. DynamoDB now supports native vector search with single-digit millisecond latency at 99%+ recall and is designed for any scale, even trillions of vectors.\n  With DynamoDB vector search, you store vector embeddings alongside your other attributes and generate them using a model of your choice, including models available on Amazon Bedrock. You create a vector index and run approximate nearest neighbor searches, pick the vector index partition key to scale, and filter on attributes to scope results. You get the same serverless benefits you rely on today: zero infrastructure management, zero downtime, zero maintenance windows, and pay for only what you use. You can already use DynamoDB to store memory for AI agents, and with vector search you can now add semantic retrieval over that memory for agentic grounding, along with product similarity search, personalized advertising, retrieval augmented generation, and recommendation systems, with predictable performance.\n  To learn more, visit the AWS News Blog, Amazon DynamoDB product page, and Amazon DynamoDB Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-dynamodb-vector-search",
+      "pubDate": "2026-08-05T16:59:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "personalize",
+        "dynamodb"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "personalize",
+        "dynamodb",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ec9aec2bc0b0",
+      "title": "Building and Deploying .NET AI Agents with Amazon Bedrock AgentCore",
+      "description": "Amazon Bedrock AgentCore is a managed service for running AI agents in production. You bring your agent code packaged as a container, and Bedrock AgentCore handles the operational concerns: scaling, session routing, health checking, and providing managed capabilities like conversation memory. AWS.AgentCore.Hosting is the .NET library that connects your agent code to this service. It […]",
+      "link": "https://aws.amazon.com/blogs/developer/building-and-deploying-net-ai-agents-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-08-05T16:56:46.000Z",
+      "source": "developersAndDevOps",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-7a29c553638f",
+      "title": "AWS IAM Identity Center makes management of AWS account access optional for new organization instances",
+      "description": "AWS IAM Identity Center now lets you decide whether to enable management of AWS account access when you create a new organization instance. This allows you to use IAM Identity Center to manage access to AWS applications only, without the need to manage access to AWS accounts. This feature is available at the time of initial configuration of an IAM Identity Center instance and does not affect existing IAM Identity Center instances.\n \nIAM Identity Center enables you to connect your workforce identities to AWS once and offer AWS application owners across your organization streamlined access management. Application end users benefit from single sign-on, user awareness, and consistent authentication experience across AWS applications. Previously, this meant you also needed to manage access to AWS accounts. With this release, account management is now optional. When you choose not to enable management of AWS accounts, IAM Identity Center does not provision its service-linked role into your member accounts, which reduces the access surface in your environment. You can enable account management permissions later through instance settings or the UpdateInstance API. \n \nThis capability is available in all AWS Regions where IAM Identity Center is available. To get started, see Configure instance settings in the IAM Identity Center User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-identity-center-accounts-optional/",
+      "pubDate": "2026-08-05T15:12:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-d1b4c61b6190",
+      "title": "Amazon Aurora serverless now scales faster to support agentic AI and other bursty workloads",
+      "description": "Amazon Aurora serverless now delivers higher initial capacity during scale-up events, reaching up to 12 ACUs within a second and continuing to scale up to 256 ACUs as your workload grows. When the workload finishes, Aurora serverless automatically scales down to zero. This makes it especially well-suited for agentic AI applications, which typically have bursts of activity, long idle windows, and unpredictable traffic patterns. Aurora serverless handles all of it automatically, scaling capacity with your agents, so you only pay for what you use.\n  This enhancement is enabled by default on all Aurora serverless clusters running on platform version 3 or 4, with no configuration changes required. Existing clusters on platform versions 1 and 2 can upgrade directly to the latest platform version 4 to benefit from these improvements. You can verify your cluster's platform version in the AWS Management Console under the instance configuration section, or via the RDS API's ServerlessV2PlatformVersion parameter.\n  For pricing details and Region availability, visit Amazon Aurora Pricing. To learn more, read the Aurora serverless scaling documentation, and get started by creating an Aurora serverless database in just a few steps in the AWS Management Console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aurora-serverless-instant-12-acu-scaling",
+      "pubDate": "2026-08-05T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "improvement",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-882d9f8687d2",
+      "title": "Amazon DynamoDB now supports real-time vector search at any scale",
+      "description": "DynamoDB now supports native vector search with single-digit millisecond latency at 99%+ recall. It is designed for any scale, even trillions of vectors and requires zero infrastructure management.",
+      "link": "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/",
+      "pubDate": "2026-08-05T14:45:10.000Z",
+      "source": "newsBlog",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "dynamodb",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-944d6d4c5bef",
       "title": "AWS Tools Installer V2 is Now Generally Available",
@@ -172,7 +433,7 @@
     {
       "id": "aws-news-047baea95756",
       "title": "Amazon S3 Vectors is now available in the AWS European Sovereign Cloud (Germany) Region",
-      "description": "Amazon S3 Vectors is now available in the AWS European Sovereign Cloud (Germany) Region. Amazon S3 Vectors is purpose-built vector storage for AI agents, inference, Retrieval Augmented Generation (RAG), and semantic search at billion-vector scale. S3 Vectors is designed to provide the same elasticity, durability, and availability as Amazon S3, with a dedicated set of APIs that let you store, access, and query vectors without provisioning any infrastructure.\n \nFor a full list of AWS Regions where Amazon S3 Vectors is available, see AWS Regions and endpoints. To learn more, visit the product page, documentation, and the Amazon S3 pricing page.",
+      "description": "Amazon S3 Vectors is now available in the AWS European Sovereign Cloud (Germany) Region. Amazon S3 Vectors is purpose-built vector storage for AI agents, inference, Retrieval Augmented Generation (RAG), and semantic search at billion-vector scale. S3 Vectors is designed to provide the same elasticity, durability, and availability as Amazon S3, with a dedicated set of APIs that let you store, access, and query vectors without provisioning any infrastructure.\n \nFor a full list of AWS Regions where Amazon S3 Vectors is available, see AWS Regions and endpoints. To learn more, visit the product and documentation pages.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-s3-vectors-european-sovereign-cloud-germany/",
       "pubDate": "2026-08-04T18:15:00.000Z",
       "source": "whatsNew",
@@ -389,6 +650,22 @@
       "tags": [
         "ga",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-72eb6eeb1dbb",
+      "title": "AWS HealthOmics now supports task-level timeout for WDL workflows",
+      "description": "AWS HealthOmics now supports task-level timeout for Workflow Description Language (WDL) workflows, enabling you to set maximum execution duration for individual tasks. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows. \n \nWith task-level timeout, you can define time bounds on individual WDL tasks to control costs and enable automated error recovery. HealthOmics provides the omicsTimeout runtime attribute that you can add to any task's runtime section to specify the maximum duration a task is allowed to run. When a task exceeds the specified duration, HealthOmics stops the task and sets the task and run statuses to failed. The omicsTimeout attribute accepts duration values with standard time units (such as 90s, 2h, 1d). This prevents tasks from consuming resources and helps you set cost guardrails during workflow development. \n \nTask-level timeout for WDL workflows is available in all supported AWS HealthOmics Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Seoul, Singapore, Tokyo). To learn more, visit the WDL workflow definition specifics documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-healthomics-wdl-task-level-timeout/",
+      "pubDate": "2026-08-03T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "ga",
         "support"
       ]
     },
@@ -633,6 +910,35 @@
       ]
     },
     {
+      "id": "aws-news-1c81a7662163",
+      "title": "AWS Config now supports 15 new resource types",
+      "description": "AWS Config now supports 15 additional AWS resource types across key services including Amazon Bedrock,  Amazon OpenSearch Serverless, and Amazon SageMaker. This expansion provides greater coverage over your AWS environment, enabling you to more effectively discover, assess, audit, and remediate an even broader range of resources.\n  With this launch, if you have enabled recording for all resource types, then AWS Config will automatically track these new additions. The newly supported resource types are also available in Config rules and Config aggregators.\n  You can now use AWS Config to monitor the following newly supported resource types in all AWS Regions where the resources are available:\n  Resource Types:\n \n \n \n  \nAWS::AppSync::DomainName \n   AWS::OpenSearchServerless::AccessPolicy \n  \nAWS::Bedrock::AutomatedReasoningPolicy \n   AWS::OpenSearchServerless::LifecyclePolicy \n  \nAWS::Bedrock::AutomatedReasoningPolicyVersion \n   AWS::SageMaker::ImageVersion \n  \nAWS::Bedrock::Blueprint \n   AWS::SageMaker::InferenceComponent \n  \nAWS::Bedrock::DataAutomationProject \n   AWS::SageMaker::PartnerApp \n  \nAWS::BedrockAgentCore::ApiKeyCredentialProvider \n   AWS::SageMaker::Project \n  \nAWS::Connect::UserHierarchyGroup \n   AWS::SageMaker::Space \n  \nAWS::Glue::Trigger",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-config-new-resource-types",
+      "pubDate": "2026-08-03T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "sagemaker",
+        "opensearch",
+        "glue"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "sagemaker",
+        "opensearch",
+        "glue",
+        "launch",
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
+    {
       "id": "aws-news-786246f49cb7",
       "title": "AWS WAF now supports Miggo Security managed rule groups for emerging threats and AI/ML application protection",
       "description": "AWS WAF now supports two new partner managed rule groups from Miggo Security, available through AWS Marketplace: Miggo Rules for AWS WAF – High Emerging Application Threats, and Miggo Rules for AWS WAF – AI/ML Application Protection. These rule groups give AWS WAF customers continuously updated protection against vulnerabilities that are being actively exploited, have public proof-of-concept code, or appear in the CISA Known Exploited Vulnerabilities (KEV) catalog, without writing or maintaining custom rules.\n  The High Emerging Application Threats rule group focuses on vulnerabilities under active exploitation, and the AI/ML Application Protection rule group focuses on generative-AI application stacks such as AI agent frameworks, LLM gateways, and model-serving infrastructure. You can subscribe to either rule group and add it to a web ACL directly in the AWS WAF console through AWS Marketplace, with no additional configuration. Both rule groups support versioning, and pricing is set by Miggo through AWS Marketplace.\n  To get started, visit the AWS WAF console or find the Miggo rule groups in AWS Marketplace. For more information, see the AWS WAF Developer Guide. For a full list of supported Regions, visit the AWS Regional Services page.",
@@ -669,35 +975,6 @@
         "lex",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-1c81a7662163",
-      "title": "AWS Config now supports 15 new resource types",
-      "description": "AWS Config now supports 15 additional AWS resource types across key services including Amazon Bedrock,  Amazon OpenSearch Serverless, and Amazon SageMaker. This expansion provides greater coverage over your AWS environment, enabling you to more effectively discover, assess, audit, and remediate an even broader range of resources.\n  With this launch, if you have enabled recording for all resource types, then AWS Config will automatically track these new additions. The newly supported resource types are also available in Config rules and Config aggregators.\n  You can now use AWS Config to monitor the following newly supported resource types in all AWS Regions where the resources are available:\n  Resource Types:\n \n \n \n  \nAWS::AppSync::DomainName \n   AWS::OpenSearchServerless::AccessPolicy \n  \nAWS::Bedrock::AutomatedReasoningPolicy \n   AWS::OpenSearchServerless::LifecyclePolicy \n  \nAWS::Bedrock::AutomatedReasoningPolicyVersion \n   AWS::SageMaker::ImageVersion \n  \nAWS::Bedrock::Blueprint \n   AWS::SageMaker::InferenceComponent \n  \nAWS::Bedrock::DataAutomationProject \n   AWS::SageMaker::PartnerApp \n  \nAWS::BedrockAgentCore::ApiKeyCredentialProvider \n   AWS::SageMaker::Project \n  \nAWS::Connect::UserHierarchyGroup \n   AWS::SageMaker::Space \n  \nAWS::Glue::Trigger",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-config-new-resource-types",
-      "pubDate": "2026-08-03T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "sagemaker",
-        "opensearch",
-        "glue"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "sagemaker",
-        "opensearch",
-        "glue",
-        "launch",
-        "ga",
-        "support",
-        "expansion"
       ]
     },
     {
@@ -824,6 +1101,22 @@
       ]
     },
     {
+      "id": "aws-news-22f19c8510ae",
+      "title": "Amazon Location Service adds Search Nearby support for GrabMaps in Southeast Asia",
+      "description": "Amazon Location Service now supports proximity-based point of interest discovery with GrabMaps data in the Asia Pacific (Singapore) and Asia Pacific (Malaysia) AWS Regions. Builders creating local discovery, delivery, and mobility applications in Southeast Asia can surface relevant nearby places using hyperlocal data validated by millions of daily Grab journeys.\n  SearchNearby returns places within a specified radius of a user's location, ranked by distance. Developers can filter results by category (such as fuel stations, hospitals, or restaurants) to narrow responses to what their application needs. This enables a delivery platform to find the closest pickup points, a ride-hailing app to show nearby dining options, or a travel app to locate services within range.\n  GrabMaps delivers hyperlocal mapping data purpose-built for Southeast Asia. Millions of daily journeys across the Grab platform continuously validate road networks, addresses, and points of interest, capturing changes in real time. GrabMaps covers detailed back alleys, narrow side streets, and motorcycle-accessible routes across more than 500 cities in Singapore, Malaysia, Thailand, Vietnam, Indonesia, Philippines, Myanmar, and Cambodia.\n  To get started, see the Search Nearby Developer Guide, API reference, and the GrabMaps Overview page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-location-service-search-nearby-grabmaps",
+      "pubDate": "2026-07-31T14:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-9f43a65c7bb9",
       "title": "AWS Lambda now supports Java 8, 11, and 17 on Amazon Linux 2023",
       "description": "AWS Lambda now supports Java 8, Java 11, and Java 17 runtimes on Amazon Linux 2023 (AL2023), available as both managed runtimes and container base images. These new runtimes enable customers running Lambda functions on Java 8, 11, or 17 to migrate from Amazon Linux 2 (AL2) to AL2023 without requiring a simultaneous Java version upgrade.\n  The existing Lambda runtimes for Java 8, 11 and 17 run on AL2, which reached end of life on June 30, 2026. To maintain support coverage and SLA eligibility, customers must migrate their functions to an AL2023-based runtime. AWS recommends that customers upgrade to Java 21 or Java 25 on AL2023 as the preferred migration path. These runtimes offer the latest language features and performance improvements. For customers who are not yet ready to upgrade their Java version, the new Java 8, 11, and 17 runtimes on AL2023 provide an alternative forward path. In addition, the existing AL2-based Lambda runtimes for Java 8, 11, and 17 will remain supported and continue to receive patches for critical and selected important security issues until June 30, 2027, giving customers a full year after AL2's end of life to complete their migration.\n  The Java 8, 11, and 17 runtimes on AL2023 are available in all AWS Regions where Lambda is available, including the AWS GovCloud (US) Regions and the China Regions.\n  To learn more about AL2023 support in Lambda, see our blog post. For customers ready to upgrade to Java 21 or Java 25, you can use AWS Transform custom to assist with the migration. To learn more about Lambda runtimes, visit the Lambda runtimes documentation.",
@@ -839,22 +1132,6 @@
       "tags": [
         "lambda",
         "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-22f19c8510ae",
-      "title": "Amazon Location Service adds Search Nearby support for GrabMaps in Southeast Asia",
-      "description": "Amazon Location Service now supports proximity-based point of interest discovery with GrabMaps data in the Asia Pacific (Singapore) and Asia Pacific (Malaysia) AWS Regions. Builders creating local discovery, delivery, and mobility applications in Southeast Asia can surface relevant nearby places using hyperlocal data validated by millions of daily Grab journeys.\n  SearchNearby returns places within a specified radius of a user's location, ranked by distance. Developers can filter results by category (such as fuel stations, hospitals, or restaurants) to narrow responses to what their application needs. This enables a delivery platform to find the closest pickup points, a ride-hailing app to show nearby dining options, or a travel app to locate services within range.\n  GrabMaps delivers hyperlocal mapping data purpose-built for Southeast Asia. Millions of daily journeys across the Grab platform continuously validate road networks, addresses, and points of interest, capturing changes in real time. GrabMaps covers detailed back alleys, narrow side streets, and motorcycle-accessible routes across more than 500 cities in Singapore, Malaysia, Thailand, Vietnam, Indonesia, Philippines, Myanmar, and Cambodia.\n  To get started, see the Search Nearby Developer Guide, API reference, and the GrabMaps Overview page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-location-service-search-nearby-grabmaps",
-      "pubDate": "2026-07-31T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
         "support"
       ]
     },
@@ -1895,19 +2172,6 @@
       ]
     },
     {
-      "id": "aws-news-e42084c172fe",
-      "title": "Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS",
-      "description": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/",
-      "pubDate": "2026-07-27T16:11:32.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": []
-    },
-    {
       "id": "aws-news-7df6d5f5b2a4",
       "title": "Building a scalable personalized recommendation system on AWS: From batch to real-time",
       "description": "Learn how the Everyday Essentials team built a scalable personalized recommendation platform on AWS using a batch-first architecture with Amazon MWAA for orchestration, Amazon SageMaker for training and vector search, and AWS Lake Formation for governed data access, then extended it to real-time with Amazon MemoryDB.",
@@ -1924,47 +2188,6 @@
       "tags": [
         "sagemaker",
         "personalize"
-      ]
-    },
-    {
-      "id": "aws-news-49c158b3a4da",
-      "title": "Deepgram enhances Amazon SageMaker AI support with AWS IAM Temporary Delegation",
-      "description": "In this post, we cover why Deepgram built on IAM temporary delegation, how the integration works end-to-end, and what it unlocks for customers running Deepgram speech models on SageMaker AI. With this integration, Deepgram has reduced the time for initial investigation on a SageMaker AI support ticket from days to minutes.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/deepgram-enhances-amazon-sagemaker-ai-support-with-aws-iam-temporary-delegation/",
-      "pubDate": "2026-07-27T16:07:44.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "iam"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "iam",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9cf2c8d36673",
-      "title": "How Guardoc transforms medical document processing with Amazon Nova models",
-      "description": "In this post, we explore how Guardoc Health uses the Amazon Nova family of models, available through Amazon Bedrock, to transform clinical documentation in long-term care.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-guardoc-transforms-medical-document-processing-with-amazon-nova-models/",
-      "pubDate": "2026-07-27T16:05:00.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "nova"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "nova"
       ]
     },
     {
@@ -2069,24 +2292,6 @@
         "kinesis",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-5869c4f7c3dd",
-      "title": "Introducing Claude Opus 5 on AWS: Anthropic’s most capable Opus model",
-      "description": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/",
-      "pubDate": "2026-07-24T17:59:03.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "improvement"
       ]
     },
     {
@@ -2489,165 +2694,6 @@
         "now-available",
         "support",
         "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-6e29818c696f",
-      "title": "AWS Parallel Computing Service now supports node lifecycle actions",
-      "description": "Today, AWS announces the general availability of node lifecycle actions in AWS Parallel Computing Service (PCS). With node lifecycle actions, you can run custom scripts automatically at defined points in a compute node's lifecycle. You can use them to prepare your nodes for work. For example, you can mount shared storage, join a directory service, install software, or set up monitoring.\n \nYou define node lifecycle actions in your PCS compute node group configuration when you create or update the group, and you can reuse the same script across multiple compute node groups and clusters. For each script, you set its location as an Amazon S3 or HTTPS URI, the arguments to pass, which lifecycle stage it runs in, whether it re-runs on reboot, and its error-handling behavior. AWS PCS writes the output to a dedicated log file, giving you visibility into what ran.\n \nAWS PCS is a managed service that simplifies running and scaling high performance computing (HPC) workloads on AWS using Slurm. You can build complete, elastic environments that integrate compute, storage, networking, and visualization tools, and the service manages cluster updates and provides built-in observability.\n \nNode lifecycle actions are available in all AWS Regions that support AWS PCS. To learn more, see the AWS PCS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-pcs-node-lifecycle-actions/",
-      "pubDate": "2026-07-23T12:28:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "directory service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "directory service",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-36c6307be0a6",
-      "title": "AWS Wickr announces Data Retention Service feature",
-      "description": "AWS Wickr now offers a managed Data Retention Service feature for Premium users, enabling organizations to retain conversations across their network for data archiving purposes. AWS Wickr is an enterprise-grade, secure collaboration product that provides end-to-end encrypted messaging, file management, screen sharing, and voice/video conferencing capabilities. The Data Retention Service feature provides a cloud-native alternative to traditional container-based data retention methods.\n \nThe Data Retention Service can retain conversations in your network, including direct messages and conversations in Groups or Rooms between internal members and external federated teams. The serverless architecture offers simplified deployment, managed infrastructure, automatic scaling, and comprehensive monitoring while maintaining Wickr's end-to-end encryption standards. This feature is particularly valuable for organizations that require comprehensive data archiving capabilities and maintaining audit trails.\n \nAWS Wickr Premium customers can opt in to enable data retention for their networks. To learn more, visit the AWS Wickr documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-wickr-data/",
-      "pubDate": "2026-07-23T04:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-fe694c67effb",
-      "title": "Amazon EC2 High Memory U7i instances now available in additional regions",
-      "description": "Amazon EC2 High Memory U7in-16TB instances (u7in-16tb.224xlarge) are now available in AWS South America (São Paulo) region, and U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS Europe (Ireland) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-16TB instances offer 16 TiB of DDR5 memory, and U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nBoth U7in-16TB and U7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-u7i/",
-      "pubDate": "2026-07-23T00:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-2640d7ac1cd3",
-      "title": "Amazon EC2 C7a instances are now available in the US West (N. California) Region",
-      "description": "Starting today, the compute optimized Amazon EC2 C7a instances are now available in AWS US West (N. California) Region. C7a instances, powered by 4th Gen AMD EPYC processors (code-named Genoa) with a maximum frequency of 3.7 GHz, deliver up to 50% higher performance compared to C6a instances.\n  C7a instances offer new processor capabilities such as AVX-512, VNNI, and bfloat16. They feature Double Data Rate 5 (DDR5) memory to enable high-speed access to data in memory and 2.25x more memory bandwidth compared to C6a instances, making these instances ideal for even latency sensitive workloads. C7a instances offer 12 sizes from medium to 48xlarge, including a bare-metal size. And with the launch of C7a instances, customers can attach up to 128 EBS volumes to an EC2 instance — by comparison, C6a instances allow up to 28 EBS volume attachments to an EC2 instance. These instances are built on the AWS Nitro System and ideal for high performance, compute-intensive workloads such as batch processing, distributed analytics, high performance computing (HPC), ad serving, highly-scalable multiplayer gaming, and video encoding.\n  C7a instances are available through On-Demand, Spot Instances, and Savings Plans. To get started, visit the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. To learn more, see C7a instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-c7a-instances-us-west-ncalifornia-region/",
-      "pubDate": "2026-07-22T21:42:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "launch",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-a993196d32f2",
-      "title": "Amazon EC2 M8a instances now available in the Asia Pacific (Hyderabad) region",
-      "description": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Asia Pacific (Hyderabad) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to M7a instances.\n  M8a instances deliver 45% more memory bandwidth compared to M7a instances, making these instances ideal for even latency sensitive workloads. M8a instances deliver even higher performance gains for specific workloads. M8a instances are up to 60% faster for GroovyJVM benchmark, and up to 39% faster for Cassandra benchmark compared to Amazon EC2 M7a instances. M8a instances are SAP-certified and offer 12 sizes including 2 bare metal sizes. This range of instance sizes allows customers to precisely match their workload requirements.\n  M8a instances are built using the latest sixth generation AWS Nitro Cards and ideal for applications that benefit from high performance and high throughput such as financial applications, gaming, rendering, application servers, simulation modeling, mid-size data stores, application development environments, and caching fleets.\n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 M8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-m8a-instances-asia-pacific-hyderabad-region/",
-      "pubDate": "2026-07-22T20:55:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-75c4c563c021",
-      "title": "Amazon EC2 M8id instances are now available in Europe (Ireland) region",
-      "description": "Amazon EC2 M8id instances are now available in (Ireland). These instances are powered by custom Intel Xeon 6 processors and deliver up to 43% higher performance and 3.3x more memory bandwidth compared to previous generation M6id instances.\n  M8id instances offer up to 384 vCPUs, 1.5TiB of memory, and 22.8TB of NVMe SSD storage, 3x more than previous generation instances. These instances deliver up to 46% higher performance for I/O intensive database workloads, and up to 30% faster query results for I/O intensive real-time data analytics than previous sixth-generation instances. Additionally, these instances support Instance Bandwidth Configuration, allowing 25% flexible allocation between network and EBS bandwidth, allocating resources optimally for each workload.\n  M8id instances are well-suited for balanced workloads including application servers, microservices, enterprise applications, and small to medium databases.\n  Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information visit the Amazon EC2 instance type page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-m8id-europe-ireland/",
-      "pubDate": "2026-07-22T19:55:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-08b6784d744d",
-      "title": "AWS Network Load Balancer now supports Listener Rules for custom traffic routing",
-      "description": "Network Load Balancer (NLB) now supports listener rules allowing you to route connections to different target groups based on the source IP address type. With listener rules, a single dual-stack NLB sends IPv6 client traffic to IPv6 targets and IPv4 client traffic to IPv4 targets, preserving the original client IP address end to end for both address families.\n  Previously, serving both IPv4 and IPv6 clients from one NLB meant accepting a tradeoff: either run two separate load balancers (one per IP version) and split clients with DNS, or send all traffic to one target group and lose the original client IP through protocol translation. Listener rules remove that tradeoff by enabling conditional routing at Layer 3, directing each connection to a same-family target group with no translation and no additional infrastructure.\n  You can add listener rules to existing dual-stack NLBs without recreating them. Rules are supported on TCP, UDP, TCP_UDP, and TLS listeners and work alongside existing NLB features including connection draining, target group stickiness, cross-zone load balancing, weighted target groups, and client IP preservation.\n  Listener rules for Network Load Balancer are available in all AWS commercial Regions and the AWS GovCloud (US) Regions at no additional charge. Standard NLB pricing for load balancer hours and LCUs applies. To get started, see this AWS blog, and the Network Load Balancer User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-network-load-balancer-supports-listener-rules/",
-      "pubDate": "2026-07-22T19:13:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-45bf5e39d7a4",
-      "title": "AWS Entity Resolution now supports advanced real-time matching",
-      "description": "AWS Entity Resolution now supports real-time matching with advanced matching workflows, enabling customers to match records in milliseconds using complex rulesets through the GenerateMatchId API. Previously, real-time matching was limited to simple rule-based workflows, while advanced rulesets—which support operators like Exact and ExactManyToMany combined with AND/OR logic—could only be used for batch processing that took minutes to hours. This created a critical gap for customers needing real-time entity resolution with sophisticated matching logic.\n \nWith this launch, customers performing fraud detection, real-time account lookup, or website personalization can define advanced matching rules and get results in real-time without maintaining separate matching infrastructure or re-architecting applications. To enable advanced real-time matching, customers set the enableRealTimeMatching parameter to true on their matching workflow, then call the existing GenerateMatchId API—no new endpoints or migration required.\n \nAdvanced real-time matching is available in all AWS Regions where AWS Entity Resolution is available. \n \nTo get started, see Using GenerateMatchId in the AWS Entity Resolution User Guide.  \n \nFor more information about AWS Entity Resolution, visit the product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-entity-resolution/",
-      "pubDate": "2026-07-22T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "launch",
-        "ga",
-        "support"
       ]
     },
     {
@@ -3519,21 +3565,6 @@
       "description": "AWS Transform – continuous modernization (preview) automatically scans code repositories to detect, prioritize, and remediate technical debt at scale.",
       "link": "https://aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview/",
       "pubDate": "2026-06-17T14:58:00.000Z",
-      "source": "newsBlog",
-      "services": [],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "preview"
-      ]
-    },
-    {
-      "id": "aws-news-4e7fc0b757da",
-      "title": "AWS DevOps Agent adds release management capabilities to assess code changes before production (preview)",
-      "description": "AWS DevOps Agent now offers release management capability in preview, reviewing code changes for release readiness and running autonomous release testing to help you ship code to production safely and with confidence.",
-      "link": "https://aws.amazon.com/blogs/aws/aws-devops-agent-adds-release-management-capabilities-to-assess-code-changes-before-production-preview/",
-      "pubDate": "2026-06-17T14:57:34.000Z",
       "source": "newsBlog",
       "services": [],
       "categories": [
