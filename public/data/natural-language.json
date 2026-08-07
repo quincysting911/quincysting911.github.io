@@ -1,8 +1,76 @@
 {
-  "lastUpdated": "2026-08-06T08:11:10.058Z",
+  "lastUpdated": "2026-08-07T06:57:01.615Z",
   "category": "natural-language",
   "totalItems": 14,
   "items": [
+    {
+      "id": "aws-news-c386df29a088",
+      "title": "Amazon ECS now supports fractional GPU scheduling with Amazon EC2 G6f instances",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now supports fractional GPU scheduling with Amazon EC2 G6f instances, enabling you to run your workloads on GPU partitions as small as one-eighth of an NVIDIA L4 Tensor Core GPU with 3 GB of GPU memory. Fractional GPUs give you the flexibility to right-size your containers for small-model AI inference, model experimentation, graphics rendering, and other workloads that do not require a full GPU, helping reduce infrastructure costs compared to provisioning a full GPU instance.\n \nYou can request a fractional GPU by setting GPU=0.125, GPU=0.25, or GPU=0.5 in the container definition of your Amazon ECS task definition. Amazon ECS then places the task on a G6f instance that satisfies the request. Fractional GPU configuration is supported on both Amazon ECS Managed Instances and Amazon ECS on EC2. With ECS Managed Instances, you get a fully managed experience where ECS automatically handles instance provisioning, scaling, patching, and lifecycle management, so you can focus on your GPU workloads rather than infrastructure operations. ECS Managed Instances also include capabilities built specifically for accelerated workloads, such as GPU metrics through Amazon CloudWatch Container Insights, and automatic health monitoring that detects GPU hardware failures and replaces unhealthy instances to minimize workload disruption.\n \nThis capability is available in all AWS Regions where Amazon EC2 G6f instances are available. To get started, use the AWS Management Console, AWS CLI, AWS SDKs, AWS CloudFormation, or other infrastructure-as-code tools to configure a capacity provider with G6f instances and specify a fractional GPU value in the container definition of your ECS task definition. To learn more, visit the Amazon ECS fractional GPU documentation and the Amazon EC2 G6 instance page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ecs-fractional-gpu/",
+      "pubDate": "2026-08-06T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2",
+        "ecs",
+        "cloudformation",
+        "cloudwatch"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "ecs",
+        "cloudformation",
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-54b2209957ba",
+      "title": "AWS Transform for migrations automates post-launch actions",
+      "description": "AWS Transform now automates the configuration and execution of post-launch actions through the migration workflow. Define actions at the account level and apply them automatically to each source server across your target accounts, including multi-account migrations. Automating these actions removes the slow, error-prone work of configuring them server by server, so your team moves more servers with less hands-on effort.\n \nPost-launch actions run through AWS Systems Manager (SSM) immediately after test or cutover launch. You can use predefined actions or bring your own SSM document. For source server bulk configurations, the migration inventory file now includes a new structure for post-launch actions, making it easier to review and modify actions per source server.\n \nThe AWS Transform for migrations agent automates your migration configuration end to end, including replication templates, EC2 launch templates, EC2 right-sizing, and post-launch actions, with the flexibility to create and edit any of these at the source server level. \n \nThis new capability is available in all AWS Regions where AWS Transform is offered.\n \nTo learn more, please visit the AWS Transform User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-transform-for-migrations-automates-post-launch-actions",
+      "pubDate": "2026-08-06T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "launch",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-83074626115b",
+      "title": "AWS Marketplace now lets sellers configure net payment terms on private offers",
+      "description": "AWS Marketplace now supports configurable net payment terms on private offers, with options including Net 30, Net 45, Net 60, or Net 90. Prior to this launch, net payment terms were uniform across all AWS Marketplace purchases, based on the buyer's payment terms with AWS. This new feature allows sellers to configure when payment is due, so invoice due dates match what buyers and sellers negotiate. This gives buyers upfront clarity on payment due dates, allows them to take advantage of more favorable payment terms, and gives sellers better cash flow predictability by setting net payment terms during private offer creation.\n  Buyers see the configured payment terms on the procurement page before accepting a private offer. The net payment terms apply uniformly to all AWS Marketplace charges within a private offer, including upfront fees, scheduled payments, and usage-based charges. For Channel Partner Private Offers (CPPO), ISVs set maximum payment terms and channel partners can offer terms at or below that ceiling.\n  This capability is generally available in all commercial AWS Regions for sellers creating private offers. No additional setup or onboarding is required. Flexible net payment terms apply to buyers who pay by invoice. The default behavior remains unchanged. If no custom payment terms are set, the buyer's standard AWS payment terms continue to apply.\n  To learn more, see the AWS Marketplace Seller Guide or the AWS Marketplace Buyer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-marketplace-net-payment-terms-for-private-offers",
+      "pubDate": "2026-08-06T14:49:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "generally-available",
+        "new-feature",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-c9cbd62db28f",
       "title": "Amazon RDS for Oracle now offers Reserved Instances for R8i and M8i instances",
@@ -224,67 +292,6 @@
         "ga",
         "support",
         "public-preview"
-      ]
-    },
-    {
-      "id": "aws-news-fed7d37b3386",
-      "title": "Amazon EC2 Dedicated Hosts now support host resource groups without self-managed licenses",
-      "description": "Starting today, customers can create Host Resource Groups (HRGs) for EC2 Dedicated Hosts without the previously required step of creating Self-Managed Licenses (SMLs) and associating AMIs through AWS License Manager.\n \nThis flexibility is particularly valuable for EC2 Mac Instance customers and for customers who need Dedicated Hosts for hardware-level isolation rather than Bring Your Own License (BYOL). Customers with BYOL workloads can continue to create HRGs with SMLs to ensure that only instances from associated AMIs can be launched on the host and track host-level license consumption.\n \nTo create an HRG without SML, uncheck the \"Restrict to AMIs associated with self-managed license\" option when creating a Host Resource Group in the EC2 Console, or set instance-launch-option to license-configuration-required via the AWS CLI.\n \nThis feature is available in all AWS Regions where Host Resource Groups are supported. To learn more, visit the Host Resource Group User Guide",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-dedicated-hosts-hrg/",
-      "pubDate": "2026-07-24T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a522add0678a",
-      "title": "Amazon Redshift Serverless now offers All Upfront pricing for 3-year Serverless Reservations",
-      "description": "Amazon Redshift announces the availability of All Upfront payment option for 3-year Serverless Reservations, providing up to 50% savings over on-demand rates. With All Upfront pricing, you pay for the full reservation term at the start and receive the maximum discount on your Amazon Redshift Serverless compute costs. This new payment option joins the existing 1-year No Upfront, 1-year All Upfront, and 3-year No Upfront options, giving you greater flexibility to optimize costs based on your financial preferences\n  Amazon Redshift Serverless allows you to run and scale analytics without having to provision and manage clusters. Serverless Reservations help you further optimize compute costs and improve cost predictability by committing to a specific number of Redshift Processing Units (RPUs). Managed at the AWS payer account level, Serverless Reservations can be shared between multiple AWS accounts, reducing compute costs across all Amazon Redshift Serverless workloads in your organization. Any usage exceeding the reserved RPU level is charged at standard on-demand rates.\n  This pricing option is available in all AWS commercial and AWS GovCloud (US) Regions where Amazon Redshift Serverless is available. You can purchase Serverless Reservations via the Amazon Redshift console or by invoking the Serverless Reservations API. To learn more, see the Amazon Redshift pricing page or the Amazon Redshift Management Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/redshift-serverless-three-year-auri/",
-      "pubDate": "2026-07-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-7f1071e9542d",
-      "title": "AWS Clean Rooms supports larger worker types up to 32 vCPUs for SQL",
-      "description": "AWS Clean Rooms now supports larger worker types of 32 vCPUs with 244 GB of memory for SQL analyses, allowing you to run more compute and memory-intensive workloads. Previously, the largest worker type available was 16 vCPUs with 120 GB of memory. Larger workers can help improve performance for complex queries on large datasets, optimizing costs for customers. For example, an advertiser collaborating with a publisher can use larger workers to run complex feature engineering across billions of records to train their multi-touch attribution model, accelerating time-to-value and optimizing costs.\n \nAWS Clean Rooms helps companies and their partners easily analyze and collaborate on their collective datasets without revealing or copying one another’s underlying data. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-clean-rooms-32-vcpu-worker-types-sql",
-      "pubDate": "2026-07-24T12:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "support"
       ]
     },
     {
