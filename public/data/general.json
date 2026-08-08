@@ -1,8 +1,89 @@
 {
-  "lastUpdated": "2026-08-07T06:57:01.615Z",
+  "lastUpdated": "2026-08-08T06:30:30.304Z",
   "category": "general",
   "totalItems": 45,
   "items": [
+    {
+      "id": "aws-news-7a608190abe4",
+      "title": "AWS IAM Identity Center supports one-click multi-Region option for new organization instances",
+      "description": "AWS IAM Identity Center now makes it easier to enable multi-Region support when creating a new organization instance. Previously, enabling multi-Region support required multiple steps including creating a customer managed KMS key, configuring key policies, and manually adding Regions. Now, customers creating a new IAM Identity Center instance in supported Regions can enable multi-Region in one click.\n \nWhen enabling a new organization instance, you can choose from three instance configuration options: single-Region instance, multi-Region instance, or custom instance. The multi-Region instance option automatically creates a customer managed multi-Region KMS key in your account and replicates your instance to an additional Region. This enables resilient AWS account and application access — your workforce can continue to access their AWS accounts even if IAM Identity Center experiences a disruption in the primary Region. The custom instance option lets you configure your Region settings individually, including the ability to use an existing customer managed KMS key from your account.\n \nInstance configuration options are available in 17 enabled-by-default commercial AWS Regions for organization instances of IAM Identity Center. Standard AWS KMS charges apply for the customer managed key created with the multi-Region instance option. IAM Identity Center is provided at no additional cost.\n \nTo get started, see the IAM Identity Center User Guide. To learn more about multi-Region support, see Using IAM Identity Center across multiple AWS Regions. To learn more about IAM Identity Center, visit the product detail page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-identity-center-supports-one-click-multi-region-option-new-organization-instances",
+      "pubDate": "2026-08-07T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "iam identity center",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a0f2335dbb96",
+      "title": "Amazon VPC IPAM now supports BGP route protection monitoring and delegated RPKI for BYOIP prefixes",
+      "description": "Amazon Virtual Private Cloud (VPC) IP Address Manager (IPAM) now supports BGP route protection monitoring and delegated Resource Public Key Infrastructure (RPKI) management for Bring Your Own IP (BYOIP) prefixes. Network administrators can centrally monitor BGP route protection and automate Route Origin Authorization (ROA) management across their organization.\n \nUsing BGP route monitoring, you can view RPKI validity status, ROA strength, and route overlap detection for all BYOIP prefixes across accounts and regions from a single dashboard. Administrators can identify prefixes with invalid or missing ROAs, detect route overlaps that may indicate hijacking, and distinguish between strict and permissive ROA configurations. With Delegated RPKI, administrators perform a one-time setup with their Regional Internet Registry (ARIN, RIPE, APNIC, or LACNIC), after which IPAM automatically creates ROAs during BYOIP provisioning, renews them before expiration, and manages ROAs for on-premises prefixes. Before this feature, customers had to manually create and renew ROAs at their Regional Internet Registry (RIR), validate ownership through WHOIS or DNS records, and rely on third-party tools to monitor route security.\n \n \n \nThe feature is available within Amazon VPC IPAM in all commercial AWS Regions, excluding the AWS GovCloud (US) Regions, and China (Beijing, operated by Sinnet) and China (Ningxia, operated by NWCD). To get started, please see the BGP route protection documentation. To learn more about IPAM, view the  IPAM documentation . For details on pricing, refer to the IPAM tab on the  Amazon VPC Pricing Page .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-vpc-ipam-bgp-rpki-byoip/",
+      "pubDate": "2026-08-07T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-dece7bfeb90f",
+      "title": "Amazon GameLift Servers now supports 21 new EC2 instance types",
+      "description": "Amazon GameLift Servers now supports 21 additional Amazon EC2 instance types for managed EC2 fleets and managed container fleets. Amazon GameLift Servers is a fully managed service that enables game developers and studios to deploy, operate, and scale dedicated game servers in the cloud. This expansion gives customer access to the latest compute-optimized and general-purpose instance families.\n \nThe newly supported instance types span six families across two series: compute-optimized C-series (C8a, C8i, C9g) and general-purpose M-series (M8a, M8i, M9g). Customers can now choose between x86 and Arm architectures, selecting from 5th-generation AMD EPYC, custom Intel Xeon 6, or AWS Graviton5 processors to optimize game server workloads for performance, cost, and engine compatibility. Use cases include running CPU-intensive multiplayer game server logic on C-series instances and scaling general-purpose fleets cost-effectively using Graviton5-powered M9g instances.\n \nThese instance types are available in Amazon GameLift Servers supported regions, except AWS China. For more information on launching fleets with these EC2 instances, visit the Amazon GameLift Servers documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/gamelift-ec2-instance-expansion/",
+      "pubDate": "2026-08-07T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "graviton",
+        "launch",
+        "ga",
+        "support",
+        "expansion"
+      ]
+    },
+    {
+      "id": "aws-news-fcc23a398ff0",
+      "title": "Amazon SES now helps identify automated open and click events in event notifications",
+      "description": "Amazon Simple Email Service (SES) now helps you identify automated email interactions. Open and Click event notifications now include an isBotEvent field that indicates whether the event was likely triggered by an automated system or a human recipient.\n  Customers who publish Open or Click events through a configuration set event destination will now see an isBotEvent field with a value of Likely or Unlikely in event notifications. You can use this field as a signal to help you better understand how much of your engagement is driven by human recipients versus automated systems.\n  This feature is available in all AWS Regions where Amazon SES is available. If you already publish Open or Click events to an event destination, the isBotEvent field is automatically included, no additional configuration is needed.\n  To learn more, see Contents of event data that Amazon SES publishes to Amazon SNS and Contents of event data that Amazon SES publishes to Firehose in the Amazon SES Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-automated-email-interactions/",
+      "pubDate": "2026-08-07T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sns"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "sns",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-15f25ba89ae6",
       "title": "AWS Lambda console extends console-to-IDE integration to Kiro and Cursor",
@@ -67,6 +148,24 @@
       ]
     },
     {
+      "id": "aws-news-255252c4ebb0",
+      "title": "Amazon Connect Customer adds one-click drill-down on real-time metrics dashboards",
+      "description": "Amazon Connect Customer dashboards now support drilling down into real-time queue and routing profile performance. With a single click, supervisors can drill from a summary view into pre-filtered routing profile, queue, agent, or routing step widgets. For example, a supervisor who sees a spike in queue wait times can immediately drill down to agent activity for a specific queue and reassign agents to reduce the backlog.\n  One-click drill-down on real-time metrics dashboards is available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect Customer is offered. To learn more about Amazon Connect Customer analytics dashboards, see the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, the AWS cloud-based contact center, please visit the Amazon Connect Customer website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-drill-down-metrics/",
+      "pubDate": "2026-08-06T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-112077fbf074",
       "title": "Event-driven pipeline orchestration with Amazon MWAA and Airflow 3.0",
       "description": "Data engineering teams running Apache Airflow across multiple AWS accounts have no built-in way to coordinate workflows between separate Amazon MWAA environments. With Airflow 3.0 on Amazon MWAA, you can use asset-based scheduling and Asset Watchers with Amazon SQS to build event-driven, cross-account orchestration that replaces polling with near real-time triggers.",
@@ -108,7 +207,7 @@
     {
       "id": "aws-news-8acce7cc4d24",
       "title": "Amazon MSK now delivers Kafka Authorizer Logs to customers",
-      "description": "Amazon Managed Streaming for Apache Kafka (MSK) now supports Authorizer Log Delivery for Provisioned clusters, including both Standard and Express brokers, at no additional cost. With authorizer logs, you get detailed visibility into user and application access, identify and address client authorization issues , and meet your organization's security requirements. Each denied authorization request is captured with the client's IP address and the API it attempted, so you can pinpoint the root cause. You can deliver logs to Amazon CloudWatch Logs, Amazon S3, or Amazon Data Firehose. Authorizer Log Delivery is available for both new and existing Provisioned clusters. You can enable it from the Amazon MSK console or AWS CLI. To learn how to set up Authorizer Log Delivery, see the Amazon MSK Authorizer Logs documentation.\n \nAmazon MSK is a fully managed service for Apache Kafka that makes it easy to ingest and process streaming data in real time. Authorizer Log Delivery is supported in all AWS Regions where Amazon MSK Provisioned clusters are available, except for AWS European Sovereign Cloud (eusc-de-east-1) region. With Amazon MSK, you spend more time innovating on applications and less time managing clusters. To get started, visit the Amazon MSK Developer Guide.",
+      "description": "Amazon Managed Streaming for Apache Kafka (MSK) now supports Authorizer Log Delivery for Provisioned clusters, including both Standard and Express brokers, at no additional cost. With authorizer logs, you get detailed visibility into user and application access, identify and address client authorization issues, and meet your organization's security requirements. Each denied authorization request is captured with the client's IP address and the API it attempted, so you can pinpoint the root cause. You can deliver logs to Amazon CloudWatch Logs, Amazon S3, or Amazon Data Firehose. Authorizer Log Delivery is available for both new and existing Provisioned clusters. You can enable it from the Amazon MSK console or AWS CLI. To learn how to set up Authorizer Log Delivery, see the Amazon MSK Authorizer Logs documentation.\n \nAmazon MSK is a fully managed service for Apache Kafka that makes it easy to ingest and process streaming data in real time. Authorizer Log Delivery is supported in all AWS Regions where Amazon MSK Provisioned clusters are available, except for AWS European Sovereign Cloud (eusc-de-east-1) region. With Amazon MSK, you spend more time innovating on applications and less time managing clusters. To get started, visit the Amazon MSK Developer Guide.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-msk-kafka-authorizer-logs/",
       "pubDate": "2026-08-06T14:00:00.000Z",
       "source": "whatsNew",
@@ -168,24 +267,6 @@
         "now-available",
         "support",
         "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-fcc23a398ff0",
-      "title": "Amazon SES now helps identify automated open and click events in event notifications",
-      "description": "Amazon Simple Email Service (SES) now helps you identify automated email interactions. Open and Click event notifications now include an isBotEvent field that indicates whether the event was likely triggered by an automated system or a human recipient.\n  Customers who publish Open or Click events through a configuration set event destination will now see an isBotEvent field with a value of Likely or Unlikely in event notifications. You can use this field as a signal to help you better understand how much of your engagement is driven by human recipients versus automated systems.\n  This feature is available in all AWS Regions where Amazon SES is available. If you already publish Open or Click events to an event destination, the isBotEvent field is automatically included, no additional configuration is needed.\n  To learn more, see Contents of event data that Amazon SES publishes to Amazon SNS and Contents of event data that Amazon SES publishes to Firehose in the Amazon SES Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-automated-email-interactions/",
-      "pubDate": "2026-08-06T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sns"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "sns",
-        "ga"
       ]
     },
     {
@@ -650,83 +731,6 @@
       "tags": [
         "eks",
         "enhancement"
-      ]
-    },
-    {
-      "id": "aws-news-27911d1f2536",
-      "title": "Amazon S3 Tables now support the Variant data type for Apache Iceberg V3",
-      "description": "Amazon S3 Tables now support the Variant data type as defined in the Apache Iceberg Version 3 (V3) specification. You can now write semi-structured data like JSON directly to S3 Tables without defining a fixed schema in advance, allowing you to land data faster while still getting efficient analytical query performance.\n  With the Variant data type, Apache Iceberg V3-compatible engines shred your semi-structured data into hidden columns as you write it, generating Parquet column statistics that query engines use for optimizations like file pruning, which reduces the data your analytical queries scan. S3 Tables also provide ongoing table maintenance, including compaction, for Variant columns, so you can consolidate data from small files into large files that Iceberg engines can read.\n  Variant support in S3 Tables is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), Europe (Stockholm), and South America (São Paulo).\n  To learn more, see Amazon S3 Tables and the AWS Prescriptive Guidance for working with Iceberg table format specification version 3.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-tables-variant-iceberg-v3/",
-      "pubDate": "2026-07-28T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c75e1035646c",
-      "title": "Amazon GameLift Streams now supports Custom Aspect Ratio and Dynamic Resolution",
-      "description": "Amazon GameLift Streams now supports Custom Aspect Ratio and Dynamic Resolution, giving you greater control over the streaming experience across diverse player devices and network conditions.\n \nWith Custom Aspect Ratio, you can configure a specific resolution per stream session to match your player's device — including portrait, landscape, ultra-wide, and square aspect ratios. This eliminates letterboxing or pillarboxing, delivering native full-screen experiences on mobile phones, tablets, and non-standard displays. Specify any resolution from 320 to 4096 pixels per dimension (up to 1080p total pixel budget) using the DisplayConfiguration parameter in the StartStreamSession API. You can also try custom resolution from the AWS Console.\n \nDynamic Resolution automatically adapts stream quality when a player's network bandwidth fluctuates. When bandwidth drops, the stream gracefully reduces resolution to maintain smooth playback without frame drops or disconnections — and automatically recovers to full quality when conditions improve. Dynamic Resolution is enabled by default for all new stream groups with no configuration required. Customers will need to download the new Web SDK.\n \nBoth features are available in all AWS Regions where Amazon GameLift Streams is offered. To learn more, see Custom stream resolution in the Amazon GameLift Streams Developer Guide. \n  \n https://docs.aws.amazon.com/gameliftstreams/latest/developerguide/custom-stream-resolution.html",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams/",
-      "pubDate": "2026-07-27T18:58:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c545542ce5b9",
-      "title": "Amazon EKS now supports AWS PrivateLink for the cluster OIDC endpoint",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports AWS PrivateLink for the cluster OIDC discovery and JWKS endpoint. You can now reach the endpoint used by IAM roles for service accounts (IRSA) privately from your VPC without requiring internet egress.\n  Each EKS cluster publishes public signing keys at its OIDC endpoint for IRSA. With AWS PrivateLink for the cluster OIDC endpoint, tools running inside your VPC, such as eksctl, Terraform, or custom token validators, can now reach the OIDC discovery document and JWKS privately by creating an interface VPC endpoint for the com.amazonaws.<region>.oidc-eks service. This enables IRSA setup and token validation in VPCs without internet egress and ensures correct DNS resolution when the EKS management VPC endpoint is enabled with private DNS.\n  AWS PrivateLink for the cluster OIDC endpoint is available at no additional cost beyond standard AWS PrivateLink pricing in all AWS Regions where Amazon EKS is available. To get started, see Access the cluster OIDC endpoint using AWS PrivateLink in the Amazon EKS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-oidc-endpoint-privatelink",
-      "pubDate": "2026-07-27T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks",
-        "iam"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "iam",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-45f237e66de3",
-      "title": "Amazon MWAA now supports Apache Airflow version 2.11.2",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 2.11.2. Amazon MWAA is a managed service that runs Apache Airflow at scale without the operational overhead of managing the underlying infrastructure. Apache Airflow 2.11.2 is a maintenance release that includes security improvements, bug fixes, and dependency upgrades.\n  This release upgrades core dependencies with security patches and stability improvements to the Airflow webserver and task execution layers. It also includes fixes to task lifecycle management for queued tasks, enhanced secrets masking in logs, UI corrections in the Task Instances list view, and provider package updates for S3 and CloudWatch log delivery.\n  You can create a new Apache Airflow 2.11.2 environment on Amazon MWAA or upgrade your existing environments with a few clicks in the AWS Management Console in all currently available Amazon MWAA regions. To learn more, visit the Amazon MWAA documentation, review the Apache Airflow 2.11.2 release notes, and explore the list of available Airflow versions on MWAA.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-mwaa-now-supports-apache-airflow-version-2-11-2",
-      "pubDate": "2026-07-24T21:57:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "cloudwatch",
-        "update",
-        "improvement",
-        "support"
       ]
     },
     {
