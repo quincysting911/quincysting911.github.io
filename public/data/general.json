@@ -1,8 +1,79 @@
 {
-  "lastUpdated": "2026-08-10T07:05:16.969Z",
+  "lastUpdated": "2026-08-11T06:43:07.605Z",
   "category": "general",
-  "totalItems": 45,
+  "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-0d479f53fa63",
+      "title": "Amazon EC2 High Memory U7i instances now available in AWS South America (São Paulo) region",
+      "description": "Amazon EC2 High Memory U7in-24TB instances (u7in-24tb.224xlarge) are now available in AWS South America (São Paulo) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7in-24TB instances offer 24 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment.\n \nU7in-24TB instances deliver 896 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 200 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-high-memory-u7i-south-america",
+      "pubDate": "2026-08-10T23:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8f0a96c5a8fe",
+      "title": "Amazon EC2 introduces application status checks",
+      "description": "Amazon EC2 introduces application status checks, a new status check that helps customers detect and respond to application-level issues on their EC2 instances. With application status checks, EC2 monitors applications to detect issues such as a web server that has stopped accepting requests, a Docker daemon that is not running, an incorrect networking configuration, or a network interface that is no longer passing traffic.\n \nCustomers rely on EC2 status checks today to receive alerts when an instance or the underlying system is unreachable. However, to monitor application issues, customers had to build and maintain their own monitoring solution. Now, with application status checks customers can monitor the status of their applications running on EC2 instances alongside existing EC2 instance and system status checks. Customers create a check by specifying the protocol, port, and path to monitor, along with the response codes that indicate a healthy application. After customers associate the check with their instances by instance ID or tag, Amazon EC2 sends HTTP or HTTPS requests to that port and path and reports on the application’s status every 60 seconds. Auto Scaling groups act on application status, initiating recovery by replacing instances when their applications report unhealthy.\n \nApplication status checks are available in all commercial AWS Regions and AWS GovCloud (US) Regions.\n \nTo get started with application status checks and review pricing, see the Amazon EC2 User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-application-status-checks",
+      "pubDate": "2026-08-10T17:47:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2"
+      ]
+    },
+    {
+      "id": "aws-news-b7bfa604abb5",
+      "title": "Low-latency, high-throughput SQS event processing with AWS Lambda provisioned mode",
+      "description": "Customers building event-driven applications on AWS rely on Amazon Simple Queue Service (Amazon SQS) and AWS Lambda event source mappings (ESMs) to process millions of events every day. The fully managed polling infrastructure of ESMs eliminates the need to write and maintain custom code. You can focus on business logic while Lambda handles scaling, batching, […]",
+      "link": "https://aws.amazon.com/blogs/compute/low-latency-high-throughput-sqs-event-processing-with-aws-lambda-provisioned-mode/",
+      "pubDate": "2026-08-10T13:42:03.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "sqs"
+      ]
+    },
+    {
+      "id": "aws-news-255039b3cd6b",
+      "title": "AWS Elastic Disaster Recovery now preserves UEFI boot mode for Linux servers",
+      "description": "AWS Elastic Disaster Recovery (AWS DRS) now preserves UEFI boot mode when recovering Linux source servers that boot with UEFI firmware. Previously, DRS launched these Linux servers in legacy BIOS mode, which could require extra configuration after recovery. Now your recovered Linux instances launch with the same UEFI boot mode as your source servers. This means your recovery instances more closely match your source environment, so applications that depend on UEFI boot behavior come back exactly as you expect — with no additional post-recovery steps. Boot mode preservation is automatic, with nothing to configure.\n \nThis capability is available in all AWS Regions where AWS DRS is offered, at no additional cost. To learn more, visit the AWS Elastic Disaster Recovery User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-drs-linux-uefi",
+      "pubDate": "2026-08-10T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-7a608190abe4",
       "title": "AWS IAM Identity Center supports one-click multi-Region option for new organization instances",
@@ -692,45 +763,6 @@
         "update",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-9031ce965a5c",
-      "title": "AWS IAM Identity Center extends multi-Region support to Identity Center directory",
-      "description": "IAM Identity Center helps you configure the single sign-on experience of your workforce to AWS accounts and applications. You can now replicate IAM Identity Center from the primary AWS Region where you first enabled it to additional Regions of your choice when using Identity Center directory as your identity source. This extends the multi-Region support capability, previously available for Identity Center organization instances connected to external identity providers, to instances that use the Identity Center directory to manage and authenticate their workforce. This feature enhances resilience of user access to AWS accounts and helps you deploy AWS applications in the AWS Regions that best align with your business needs such as application data residency and proximity to users.\n \nWhen you enable this feature, IAM Identity Center automatically replicates your identities, entitlements, and other information from the primary Region to additional Regions. If IAM Identity Center is affected by a disruption in the primary Region, IAM Identity Center users continue to have access to their AWS accounts using the already provisioned entitlements in the additional Regions. \n \nAWS application administrators can use the standard application deployment workflow to deploy their application in an additional Region while you continue to administer IAM Identity Center in the primary Region.\n \nIAM Identity Center multi-Region support is currently available in the 17 enabled-by-default commercial AWS Regions for organization instances of IAM Identity Center. The IAM Identity Center organization instance must be configured with a multi-Region customer managed KMS key (CMK). To find out which AWS applications support deployment in additional Regions, visit AWS applications that you can use with IAM Identity Center. Standard AWS KMS charges apply for storing and using CMKs. IAM Identity Center is provided at no additional cost. To learn more about IAM Identity Center, visit the product detail page. To get started, see the IAM Identity Center User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-iam-identity-center-extends-multi-region-support-to-identity-center-directory",
-      "pubDate": "2026-07-29T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b1373fae9e62",
-      "title": "Amazon EKS Provisioned Control Plane now delivers faster pod autoscaling",
-      "description": "Amazon EKS now delivers faster pod autoscaling across all Provisioned Control Plane clusters by increasing Horizontal Pod Autoscaler (HPA) sync concurrency to up to 40 times the default Kubernetes value. This reduces the time it takes for HPA-driven workloads to scale in response to increased load, enabling faster responsiveness to demand.\n  The Kubernetes Horizontal Pod Autoscaler (HPA) continuously monitors workload metrics and adjusts pod counts to match demand. In clusters running hundreds or thousands of HPA objects, the speed at which the Kubernetes control plane processes these objects determines how quickly workloads scale in response to changing demand. The HPA sync concurrency setting controls how many HPA objects the control plane evaluates in parallel. By increasing this value, Provisioned Control Plane clusters now process more HPA objects simultaneously, reducing the time between detecting increased load and scaling out pods.\n  This enhancement is available to all customers using EKS Provisioned Control Plane and requires no configuration changes. To learn more about this enhancement, see EKS Provisioned Control Plane in the EKS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-provisioned-control/",
-      "pubDate": "2026-07-28T17:18:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "enhancement"
       ]
     },
     {

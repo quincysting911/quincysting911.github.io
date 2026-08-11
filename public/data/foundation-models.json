@@ -1,8 +1,76 @@
 {
-  "lastUpdated": "2026-08-10T07:05:16.969Z",
+  "lastUpdated": "2026-08-11T06:43:07.605Z",
   "category": "foundation-models",
-  "totalItems": 6,
+  "totalItems": 9,
   "items": [
+    {
+      "id": "aws-news-111432d05d9b",
+      "title": "FLUX.2-small-decoder and gemma-4-12B-it models now available on Amazon SageMaker JumpStart",
+      "description": "Black Forest Labs' FLUX.2-small-decoder and Google's gemma-4-12B-it models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These two models bring specialized capabilities spanning efficient image generation decoding and unified multimodal understanding, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nFLUX.2-small-decoder is optimized for faster image decoding with lower VRAM usage in FLUX.2 image generation pipelines. It is a distilled VAE decoder that serves as a drop-in replacement for the standard FLUX.2 decoder, delivering approximately 1.4× faster decoding speed at 1.4× lower VRAM consumption with minimal to zero quality loss. Benefits increase at higher resolutions where the decoder processes more pixels, making it ideal for production-grade image generation workloads at scale.\n \ngemma-4-12B-it excels in unified multimodal understanding across text, image, and audio inputs with native support for function calling and agentic workflows. It features an encoder-free architecture where all modalities flow directly into a single decoder-only transformer, delivering performance nearing Google's larger 26B MoE model at less than half the memory footprint. Compact enough to run on 16GB of RAM, it enables powerful multimodal and agentic experiences for enterprise deployments.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/flux.2-small-decoder-gemma-4-12B-it-on-sagemaker-jumpstart/",
+      "pubDate": "2026-08-10T23:08:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2e9b3d5002fd",
+      "title": "langcache-embed-v3-small, Mellum2-12B-A2.5B-Thinking, and LightOnOCR-2-1B models now available on Amazon SageMaker JumpStart",
+      "description": "Redis's langcache-embed-v3-small, JetBrains' Mellum2-12B-A2.5B-Thinking, and LightOn's LightOnOCR-2-1B models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These three models bring specialized capabilities spanning semantic caching optimization, code-focused reasoning, and end-to-end document OCR, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nlangcache-embed-v3-small is optimized for semantic caching in LLM applications. It maps sentences and paragraphs into a dense vector space purpose-built for identifying semantically equivalent queries regardless of phrasing, enabling intelligent cache hits that reduce redundant LLM calls and accelerate response times in high-volume inference workloads.\n \nMellum2-12B-A2.5B-Thinking excels in code generation, debugging, multi-step reasoning, and agentic coding workflows. It uses a Mixture-of-Experts architecture (64 experts, 8 activated per token), activating only 2.5B of its 12B total parameters per forward pass with a 131,072-token context length. It emits explicit chain-of-thought reasoning traces before final answers, delivering high-throughput, low-latency inference ideal for routing, RAG, sub-agents, and private deployments.\n \nLightOnOCR-2-1B provides end-to-end multilingual document-to-text conversion for PDFs, scans, and images without brittle OCR pipelines. This 1B-parameter vision-language model directly transduces page images into clean, naturally ordered text, achieving state-of-the-art performance on OlmOCR-Bench while being ~9× smaller and significantly faster than competing approaches.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n  To get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/langcache-embed-v3-small-mellum2-12B-A2.5B-thinking-lightOnOCR-2-1B-on-sagemaker-jumpstart/",
+      "pubDate": "2026-08-10T23:05:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "ga",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-8be6169ef474",
+      "title": "GLM-5.2 FP8, NVIDIA-Nemotron-Nano-12B-v2 and GLM-OCR models now available on Amazon SageMaker JumpStart",
+      "description": "Z.ai's GLM-5.2 FP8, NVIDIA's Nemotron-Nano-12B-v2, and Z.ai's GLM-OCR models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These three models bring specialized capabilities spanning long-horizon agentic engineering, efficient hybrid reasoning, and advanced document understanding, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nGLM-5.2 FP8 is optimized for long-horizon tasks and agentic engineering workflows such as full-cycle software development from requirements to deployment. It delivers a substantial leap in long-horizon task capability over its predecessor GLM-5.1 and, for the first time, provides a truly usable 1M-token context window, enabling it to handle project-level engineering context, execute long-running tasks reliably, follow engineering standards consistently, and complete full development workflows in a single task.\n \nNVIDIA-Nemotron-Nano-12B-v2 excels in unified reasoning and non-reasoning tasks with high inference throughput, making it ideal for enterprise applications requiring both accuracy and efficiency. It uses a hybrid Mamba-2 and Transformer architecture with a 128K context length, generating reasoning traces before concluding with final responses. Its compact 12B parameter design achieves comparable or better accuracy than leading open models while delivering up to 6x higher inference throughput.\n \nGLM-OCR provides accurate, fast, and comprehensive document understanding for complex real-world materials including scanned PDFs, handwritten notes, dense academic papers with formulas, multi-column tables, code documentation, and multilingual text. This 0.9B-parameter multimodal model reconstructs structure, tables, and formulas into clean Markdown, JSON, or LaTeX, with latency low enough for real-time services and edge devices—ideal for large-scale document processing and invoice extraction workflows.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/glm-5.2-fp8-nemotron-nano-12b-v2-glm-ocr-on-sagemaker-jumpstart/",
+      "pubDate": "2026-08-10T23:02:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "lex",
+        "rds",
+        "ga",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-e9864c090f6c",
       "title": "How LendingTree built a multi-agent mortgage assistant on Amazon Bedrock",
