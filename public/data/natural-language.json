@@ -1,8 +1,32 @@
 {
-  "lastUpdated": "2026-08-11T06:43:07.605Z",
+  "lastUpdated": "2026-08-12T07:03:47.626Z",
   "category": "natural-language",
-  "totalItems": 14,
+  "totalItems": 10,
   "items": [
+    {
+      "id": "aws-news-746757b09990",
+      "title": "AWS Identity and Access Management streamlines assignment of IAM roles to workforce users with account access manager",
+      "description": "AWS Identity and Access Management (IAM) launched account access manager, a feature that streamlines assignment of IAM roles to workforce users. Administrators use account access manager to assign the IAM roles in their AWS accounts to the workforce users and groups in AWS IAM Identity Center. The feature brings together permissions management flexibility, user awareness, and a single point of federation. It is accessible through the AWS IAM console, the AWS SDK, and CloudFormation/CDK.\n  Previously, customers granting workforce access to AWS accounts could use one of two alternative access management approaches. They could federate users separately into each AWS account and define user permissions narrowly using the IAM roles in each AWS account. Alternatively, they could federate users once through IAM Identity Center, and tailor and manage their access centrally by adjusting and provisioning AWS managed permission sets. The newly released account access manager offers a solution for customers who want the single federation point and user awareness of IAM Identity Center together with the flexibility of IAM roles. \n \nAccount access manager is provided at no additional cost and available in all AWS Commercial Regions enabled by default. To learn more and get started, visit the AWS Identity and Access Management User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-aam/",
+      "pubDate": "2026-08-10T20:07:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "cloudformation",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "cloudformation",
+        "iam",
+        "iam identity center",
+        "launch"
+      ]
+    },
     {
       "id": "aws-news-1d454f593c3b",
       "title": "Amazon EC2 R8i and R8i-Flex instances are now available in Europe (Milan) region",
@@ -176,120 +200,6 @@
       "tags": [
         "lex",
         "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0e60a5fbfa35",
-      "title": "AWS announces general availability of Policy-Based Routing on AWS Transit Gateway",
-      "description": "AWS Transit Gateway now supports Policy-Based Routing (PBR), giving network administrators granular control over how traffic is forwarded across their AWS network. With PBR, forwarding decisions can be based on a combination of packet attributes including source and destination IP addresses, ports, and protocol rather than destination IP address alone.\n  Previously, customers needing traffic steering or workload isolation had to build multi-VPC architectures with additional routing hops, adding complexity and operational overhead. PBR eliminates this by extending Transit Gateway's native routing capabilities, enabling security architects and enterprise network teams to classify and direct traffic inline without extra infrastructure. Customers associate a policy table with a Transit Gateway attachment and define an ordered set of rules. Each rule classifies traffic and directs matching packets to a specified route table using first-match-wins logic. This supports use cases such as steering sensitive workloads through AWS Network Firewall or third-party inspection appliances, routing application traffic over AWS Direct Connect or AWS VPN paths based on source, port, or protocol, and isolating production and development environments into separate routing domains to limit lateral movement.\n  Policy-Based Routing for AWS Transit Gateway is available in all commercial AWS Regions where Transit Gateway is available. You can configure PBR using the AWS Management Console, AWS Command Line Interface (CLI), and the AWS Software Development Kit (SDK). PBR incurs no additional charge beyond standard Transit Gateway fees. To learn more about Policy-Based Routing for AWS Transit Gateway, visit the AWS Transit Gateway product page .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-transit-gateway-policy-based-routing/",
-      "pubDate": "2026-07-30T15:39:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cc34489d50b1",
-      "title": "Amazon MSK Express brokers now delivers Apache Kafka data to Amazon S3",
-      "description": "Amazon MSK Express brokers now delivers data to Amazon S3 general purpose buckets, providing a fully managed capability to deliver Apache Kafka data in Amazon S3 for downstream processing in the easiest and most reliable way. This capability automatically scales to deliver high-throughput Kafka data to S3 with end-to-end reliability for mission-critical workloads, while reducing ingestion and delivery costs by up to 60% compared to self-managed alternatives.\n \nCustomers deliver Apache Kafka data to Amazon S3 for use cases such as log archival, compliance retention, Kafka replay, and training AI/ML models, and typically build these pipelines with self-managed connectors that grow costly and operationally complex as workloads scale, forcing teams to build or source S3 connector plugins, secure approvals to deploy them, and continually scale capacity, and apply security updates across connector fleet. With this capability, MSK Express automatically handles scaling, retries, and backpressure so customers no longer manage connector fleets or coordinate across teams. MSK Express  supports throughput of up to 10 GB/s for data delivery to Amazon S3, and manages routine operations such as capacity scaling and version upgrades without introducing delivery gaps. Additionally, customers add this delivery capability without provisioning additional broker egress throughput, which eliminates the incremental infrastructure costs that scaling connector-based pipelines typically incurs, so customers scale delivery to actual workload demand rather than provisioning for peak, achieving reliable, high-throughput delivery to Amazon S3 while removing operational overhead and lowering costs.\n \nAmazon MSK data delivery to Amazon S3 is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-express-brokers-delivers-to-amazon-s3",
-      "pubDate": "2026-07-30T14:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "s3",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "s3",
-        "kafka",
-        "msk",
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-11d30e1d0102",
-      "title": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg",
-      "description": "Amazon MSK Express brokers now deliver data to streaming tables for Apache Iceberg, a new capability that continuously materializes Apache Kafka topics as Apache Iceberg tables on Amazon S3 Tables. Amazon MSK data delivery to streaming tables can reduce the cost of ingesting and delivering Apache Kafka data into Amazon S3 Tables by up to 60% versus self-managed deployments and reduces downstream query costs by up to 30% versus self-managed Apache Kafka deployments.\n \nCustomers rely on Apache Kafka to ingest real-time data for use cases like fraud detection and personalization and increasingly want to unify that data with Apache Iceberg tables for near real-time analytics but integrating the two forces them to operate complex custom pipelines, manage format conversions, and contend with the small-file problem, where high-volume ingestion creates many small parquet files that slow downstream queries and increase costs. With this capability, intelligent inline compaction eliminates the performance impact of small files and keeps query performance predictable without sacrificing data freshness, while built-in coordination resolves concurrent writer conflicts across high-throughput consumers. Amazon MSK supports throughput of up to 10 GB/s for delivery to Apache Iceberg on Amazon S3 Tables, and because this native capability adds no broker egress throughput, customers avoid the incremental infrastructure costs of scaling connector pipelines and match capacity to actual demand rather than peak. Customers deliver data to streaming tables and query or transform the data with any engine of their choice, including Apache Spark, Trino, or Apache Flink. \n \nTo get started, customers open the Amazon MSK console, select the Express cluster, and enable the capability in a few clicks, or use the MSK APIs or MCP server. Amazon MSK data delivery to streaming tables is available today in every AWS Region where Amazon MSK Express brokers are offered. For pricing information, visit the pricing page. To learn more, visit the Amazon MSK Developer Guide and Amazon MSK AI skills.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-streaming-tables-for-apache-iceberg",
-      "pubDate": "2026-07-30T14:07:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "s3",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "s3",
-        "kafka",
-        "msk",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-02eb51cfbaf8",
-      "title": "Amazon Redshift Data API announces long polling, session management, and flexible batch execution",
-      "description": "Amazon Redshift Data API introduces new capabilities that reduce the number of API calls to retrieve SQL statement metadata or results, provide visibility into sessions, and allow batch statements to execute on separate transactions.\n  Long polling: Long polling enables you to retrieve SQL statement metadata or results without polling repeatedly until the SQL statement reaches a terminal state, by delaying returning a synchronous response until the SQL statement finishes. To use this feature, specify the WaitTimeSeconds parameter on ExecuteStatement, BatchExecuteStatement, DescribeStatement, GetStatementResult, or GetStatementResultV2.\n  ListSessions: Applications that reuse sessions across multiple queries can now enumerate active sessions and filter by status, compute target, or database, eliminating the need to track session identifiers externally.\n  Flexible batch execution: BatchExecuteStatement now supports an ExecutionMode parameter with AUTO_COMMIT mode, allowing each SQL statement in a batch to execute independently so a single failure no longer rolls back the entire batch — useful for ETL pipelines and administrative scripts where partial completion is acceptable. In addition, BatchExecuteStatement now accepts an array of SqlParameter, enabling parameter reuse across all statements in a batch: define parameters once and reference them in any statement, eliminating the need to embed literal values in each query.\n  These features are generally available for Amazon Redshift Provisioned and Amazon Redshift Serverless in all AWS commercial and AWS GovCloud (US) Regions that support Amazon Redshift Data API. To get started, visit the Amazon Redshift Data API developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-data-api-longpolling-listsession-flexiblebatchexecute/",
-      "pubDate": "2026-07-29T20:45:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "redshift"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "redshift",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b9479602cf51",
-      "title": "AWS Glue announces VPC support, filter pushdown, and partition support for the REST API connector",
-      "description": "AWS Glue now supports VPC connections, filter pushdown, and partition support for the REST API connector. The REST API connector enables you to ingest data from any source that exposes a REST-based API, including proprietary systems and emerging platforms without native AWS Glue connectors. With this launch, you can operate your ETL pipelines from data sources with REST API endpoints by securely connecting to private endpoints, transfering only the data they need, and parallelizing reads for faster ingestion, all without writing custom code\n  With VPC support, you can use the REST API connector to access data sources hosted in private subnets or connected through VPNs or AWS PrivateLink, without exposing traffic to the public internet. Filter pushdown translates your query predicates into API-native parameters, so only matching records leave the source, reducing data transfer costs and improving job performance. Partition support splits large datasets across multiple Spark workers using field-based or record-count strategies, providing parallel reads that reduce ingestion time for high-volume, paginated APIs.\n  These capabilities are available in all AWS commercial regions where AWS Glue is available.\n  To get started, visit the AWS Glue REST API connector documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-glue-rest-connector-filtering-partitioning-vpc",
-      "pubDate": "2026-07-29T20:18:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "translate",
-        "rds",
-        "glue"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "translate",
-        "rds",
-        "glue",
-        "launch",
         "support"
       ]
     },
