@@ -1,8 +1,64 @@
 {
-  "lastUpdated": "2026-08-14T07:04:32.931Z",
+  "lastUpdated": "2026-08-15T06:17:31.810Z",
   "category": "general",
-  "totalItems": 47,
+  "totalItems": 48,
   "items": [
+    {
+      "id": "aws-news-98d6eabccea3",
+      "title": "How Autodesk migrated 2.3 billion documents to Amazon OpenSearch Service using Migration Assistant and intelligent routing",
+      "description": "This post walks through how Autodesk re-architected a single-index Elasticsearch 7.1.1 domain on Amazon OpenSearch Service into four multi-index OpenSearch Service domains, using Migration Assistant for Amazon OpenSearch Service and a routing layer that directs each query to the shards that hold the data for that query.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-autodesk-migrated-2-3-billion-documents-to-amazon-opensearch-service-using-migration-assistant-and-intelligent-routing/",
+      "pubDate": "2026-08-14T14:40:11.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "opensearch",
+        "opensearch service",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "rds"
+      ]
+    },
+    {
+      "id": "aws-news-6c20f7e7c449",
+      "title": "Observability best practices for Lambda durable functions",
+      "description": "Learn observability best practices for AWS Lambda durable functions, including CloudWatch metrics, custom alarms, structured logging, and X-Ray tracing for debugging callback timeouts end-to-end.",
+      "link": "https://aws.amazon.com/blogs/compute/observability-best-practices-for-lambda-durable-functions-2/",
+      "pubDate": "2026-08-14T12:49:49.000Z",
+      "source": "computeBlog",
+      "services": [
+        "lambda",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudwatch"
+      ]
+    },
+    {
+      "id": "aws-news-6204d783f881",
+      "title": "Amazon SES click tracking now supports custom URL paths for mobile app deep linking",
+      "description": "Amazon Simple Email Service (SES) now makes it easier to support mobile deep linking with the new ses:custom-path HTML attribute. When you add this attribute to an <a> tag, SES carries your path segment through to the tracking URL, so mobile operating systems can match it to your app's Universal Links (iOS) or App Links (Android) configuration. This enables you to use mobile deep linking without disabling engagement tracking.\n \nThis feature is available in all AWS Regions where Amazon SES is available. To use this feature, you need a custom redirect domain for click tracking with an Apple App Site Association (AASA) or Digital Asset Links verification file hosted on that domain. Then, add the ses:custom-path attribute to links in your HTML emails.\n \nTo learn more, see Configuring custom domains to handle open and click tracking and the Amazon SES email sending metrics FAQs in the Amazon SES Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-supports-customurl-deeplinking",
+      "pubDate": "2026-08-14T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-6307e537f47e",
       "title": "AWS Client VPN now supports CLI, administration controls, and faster connections",
@@ -662,30 +718,6 @@
       ]
     },
     {
-      "id": "aws-news-4e92c2cf4a2c",
-      "title": "AWS Lambda Provisioned Mode for Amazon SQS event source mappings now supports up to 10,000 event pollers",
-      "description": "AWS Lambda now supports a maximum of 10,000 event pollers for Provisioned Mode for Amazon SQS event source mappings (ESMs), a 5x increase from the previous limit of 2,000. This enables you to reach up to 100,000 concurrent invocations, so you can build highly responsive and scalable event-driven applications with stringent performance requirements.\n \n \nCustomers use Amazon SQS as an event source for Lambda to build mission-critical applications such as real-time order processing, financial transaction pipelines, IoT telemetry ingestion, and large-scale fan-out workloads, where delays in event processing can directly impact business outcomes. Provisioned Mode for SQS ESM allows you to configure a minimum and maximum number of event pollers and optimize the throughput for your application. However, the maximum number of pollers was previously limited to 2,000, which constrained the number of concurrent invocations that could be reached per ESM, and required customers to split their workload across multiple ESMs. With this launch, customers can reach up to 10,000 event pollers and 100,000 concurrent invocations per ESM, enabling them to build at-scale workloads with stringent latency and throughput requirements.\n \n \nThis feature is generally available in all AWS Commercial Regions. You can activate Provisioned Mode for SQS ESM by configuring a minimum and maximum number of event pollers using the ESM API, AWS Console, AWS CLI, AWS SDK, AWS CloudFormation, and AWS SAM. You pay for the usage of event pollers based on a billing unit called Event Poller Unit (EPU). To learn more, read the Lambda ESM documentation and AWS Lambda pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-Lambda-provisioned-sqs-esm-max-pollers/",
-      "pubDate": "2026-08-03T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudformation",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "cloudformation",
-        "sqs",
-        "launch",
-        "generally-available",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-7a93d07960c4",
       "title": "AWS Durable Execution SDK for .NET now Generally Available",
       "description": "The AWS Lambda Durable Execution SDK for .NET is now generally available. AWS Lambda now supports durable executions for .NET, joining the existing Python, TypeScript, and Java SDKs. You install the SDK from NuGet, write your workflows in familiar C#, and deploy them with the AWS Extensions for .NET CLI – the same tools you […]",
@@ -850,24 +882,6 @@
       "tags": [
         "ec2",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-ae71c74ce9b4",
-      "title": "Upgrading Lambda function runtimes at scale with AWS Transform custom",
-      "description": "When you create an AWS Lambda function, you choose the runtime that Lambda will use to run your code. This includes the base language version and supporting libraries. Lambda runtimes follow a published deprecation schedule. This means that you must periodically upgrade your function’s runtime. Running on a deprecated runtime means potential security exposure, loss […]",
-      "link": "https://aws.amazon.com/blogs/compute/upgrading-lambda-function-runtimes-at-scale-with-aws-transform-custom/",
-      "pubDate": "2026-06-20T12:35:50.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "support"
       ]
     },
     {
