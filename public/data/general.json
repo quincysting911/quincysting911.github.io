@@ -1,8 +1,64 @@
 {
-  "lastUpdated": "2026-08-17T06:28:44.531Z",
+  "lastUpdated": "2026-08-18T06:21:29.761Z",
   "category": "general",
-  "totalItems": 49,
+  "totalItems": 46,
   "items": [
+    {
+      "id": "aws-news-0619e722502d",
+      "title": "Amazon EC2 Auto Scaling now supports batch instance termination",
+      "description": "Amazon EC2 Auto Scaling now supports batch instance termination in a single API call. You can now pass up to 100 instance IDs to the TerminateInstanceInAutoScalingGroup API to terminate them as a batch, reducing the number of API calls needed to scale down your Auto Scaling groups.\n \nBatch termination is designed for workloads that need to rapidly scale down, such as AI/ML training jobs, container orchestrators, or event-driven architectures that spin up large fleets temporarily. All instances in a batch are validated atomically before termination begins, and existing Auto Scaling behaviors such as lifecycle hooks and load balancer connection draining are preserved for each instance in the batch.\n \nThis feature is available in all AWS Regions at no additional cost.\n \nTo learn more, visit Amazon EC2 Auto Scaling User Guide and Amazon EC2 Auto Scaling API Reference Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-auto-scaling-batch-termination",
+      "pubDate": "2026-08-17T18:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0ab40a9322a9",
+      "title": "Amazon MSK now supports configuring custom domain names for MSK Provisioned clusters",
+      "description": "You can now easily configure custom domain names on Amazon MSK Provisioned clusters, on either ZooKeeper or KRaft mode for metadata management. This capability helps client applications maintain the same connection endpoints, simplifying cluster migrations, disaster recovery failovers, and scaling operations without reconfiguration.\n \nPreviously, customers configured custom domain names manually on each broker. Additionally, on KRaft-based clusters, customers could not configure custom domain names. With this launch, you can now easily define a custom domain once at the cluster level, and Amazon MSK automatically applies it to every broker in the cluster, eliminating the need to configure each broker individually. The configuration persists through scaling operations and works identically on both ZooKeeper and KRaft-based clusters. This is particularly useful for customers who route traffic through Network Load Balancers, require persistent endpoints across cluster operations, or must adhere to organizational naming conventions for security and compliance.\n \nYou can configure custom domain names on all new and existing MSK Provisioned clusters, in all AWS Regions where Amazon MSK Provisioned is available, at no additional cost. To learn more, see the Amazon MSK Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/17/amazon-msk-custom-domain-names/",
+      "pubDate": "2026-08-17T18:01:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "msk",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fbfae286aa63",
+      "title": "Amazon Connect Customer dashboards now support reporting on routing steps and agent proficiencies",
+      "description": "Amazon Connect Customer dashboards now support reporting on routing steps and agent proficiencies enabling supervisors to monitor and optimize how contacts are matched to agents based on agent proficiencies. Managers can filter agents by their assigned proficiencies, group metrics by routing steps, and track new metrics including number of contacts queued in a routing step. For example, a supervisor notices a spike in queued contacts at a routing step requiring highly skilled agents, then relaxes the routing criteria to expand the agent pool and reduce wait times.\n  Routing steps and agent proficiencies reporting on analytics dashboards is available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect Customer is offered. To learn more about Amazon Connect Customer analytics dashboards, see the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, the AWS cloud-based contact center, please visit the Amazon Connect Customer website.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-routing-steps/",
+      "pubDate": "2026-08-17T17:23:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d64227939dcd",
       "title": "Introducing public preview runtimes on AWS Lambda, starting with Node.js 26 and Python 3.15",
@@ -642,64 +698,6 @@
       ]
     },
     {
-      "id": "aws-news-3c5a86ba8628",
-      "title": "Amazon Connect Customer now supports capacity planning in 15 or 30 minute intervals",
-      "description": "Amazon Connect Customer now lets you generate capacity plans at the interval level (15-minute or 30-minute intervals), giving workforce planners visibility into more granular staffing requirements across Voice, Chat, Task, and Email channels. Interval-level plans capture how demand shifts throughout the day — such as a lunchtime surge in chat contacts or an end-of-day change in call volume — so you can align agent capacity with demand as it changes and staff precisely for each part of the day. You can also provide shrinkage assumptions and available headcount at the interval level for more accurate plans. Together, these capabilities improve planning accuracy and help you reduce over- and under-staffing, improving service levels and operational efficiency.\n  This feature is available in all AWS Regions where Amazon Connect Customer agent scheduling is available. To learn more about Amazon Connect Customer agent scheduling, click here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-interval-capacity-plan",
-      "pubDate": "2026-08-04T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8e10d70a431c",
-      "title": "Amazon RDS for SQL Server supports Developer Edition in additional AWS regions",
-      "description": "Amazon Relational Database Service (Amazon RDS) for SQL Server Developer Edition is now available in 13 additional AWS Regions: Asia Pacific (Hong Kong, Taipei, Hyderabad, Jakarta, Malaysia, Melbourne, New Zealand, Thailand), Canada West (Calgary), Europe (Milan, Spain), Israel (Tel Aviv), and Mexico (Central).\n  SQL Server Developer Edition includes all the functionality of Enterprise Edition and is free of license charges for use as a development and test system. With this expansion, you can build and test applications in more regions closer to your data and end users, reducing latency and simplifying your development workflows.\n  For more information about these features and region availability, see Working with SQL Server Developer Edition on RDS for SQL Server. For pricing details, see Amazon RDS for SQL Server Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/rds-sql-server-supports-developer-edition-in-additional-aws-regions/",
-      "pubDate": "2026-08-04T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "now-available",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-d3ca1cd58e70",
-      "title": "RDS SQL Server now supports publishing SQL Server Audit logs to CloudWatch",
-      "description": "Amazon Relational Database Service (Amazon RDS) for SQL Server now supports publishing SQL Server Audit logs to CloudWatch. SQL Server Audit is a native SQL Server feature that allows tracking and logging events that occur on the Database Engine. On Amazon RDS, you can create audits and audit specifications in the same way that you create them for on-premises SQL Server database servers.\n \nNow you can publish the audit logs to S3, CloudWatch, or both. If you enable both S3 and CloudWatch options, the audit log publication will be marked as \"completed\" only after the audit log files are uploaded to both S3 and CloudWatch. Once the audit logs are in CloudWatch, you can perform real-time analysis of the log data. If you enable retention, RDS keeps your audit logs on your DB instance for the configured period of time.\n \nFor more information, see SQL Server Audit (database engine) in the SQL Server documentation. For detailed configuration instructions, see the Amazon RDS for SQL Server User Guide. This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon RDS for SQL Server is available.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/rds-sqlserver-publish-sql-audit-to-cw/",
-      "pubDate": "2026-08-04T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "rds",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b8d259750c24",
       "title": "Announcing General Availability of DynamoDB Mapper for Kotlin",
       "description": "DynamoDB Mapper for Kotlin is now generally available, giving Kotlin developers a fully idiomatic way to read, write, and query Amazon DynamoDB using natural Kotlin data types without managing low-level API details. Since the Developer Preview launch in October 2024, we’ve added significant new capabilities based on community feedback including the updateItem operation, batch and […]",
@@ -721,23 +719,6 @@
       ]
     },
     {
-      "id": "aws-news-efd001679d84",
-      "title": "Amazon GameLift Streams now supports sharing streams with stream URLs",
-      "description": "Amazon GameLift Streams now offers stream URLs, which give end users temporary, unauthenticated access to a playable stream session in a supported web browser. Recipients need no AWS account, no credentials, and no software install.\n \nTo share a playable stream, create a stream URL for a stream group and one of its applications, set how long the stream URL stays valid and how many sessions it can start, and send the link. Each person who opens the link starts an independent stream session, and Amazon GameLift Streams routes them to a nearby streaming location from the locations you selected. No client integration or backend service is required. You can create, monitor, and revoke stream URLs in the Amazon GameLift Streams console or with the new CreateStreamUrl, GetStreamUrl, ListStreamUrls, and RevokeStreamUrl APIs.\n \nThere is no additional charge for stream URLs. You are charged for the stream capacity that sessions started from a stream URL consume, as described on the Amazon GameLift Streams pricing page. For a full list of supported Regions, see the AWS Region table.\n \nTo get started, see Share stream sessions with stream URLs in the Amazon GameLift Streams Developer Guide and the CreateStreamUrl API Reference. To learn more about the service, see the Amazon GameLift Streams product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-gamelift-streams/",
-      "pubDate": "2026-08-03T20:24:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-7a93d07960c4",
       "title": "AWS Durable Execution SDK for .NET now Generally Available",
       "description": "The AWS Lambda Durable Execution SDK for .NET is now generally available. AWS Lambda now supports durable executions for .NET, joining the existing Python, TypeScript, and Java SDKs. You install the SDK from NuGet, write your workflows in familiar C#, and deploy them with the AWS Extensions for .NET CLI – the same tools you […]",
@@ -754,49 +735,6 @@
         "lambda",
         "generally-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-e43bd650fcdc",
-      "title": "Deliver Apache Kafka data to streaming tables for Apache Iceberg with Amazon MSK Express brokers",
-      "description": "Announcing delivery to streaming tables on Apache Iceberg for Amazon MSK Express brokers, a fully managed capability that continuously materializes your Kafka streaming data as queryable Iceberg tables on Amazon S3 Tables. No connectors, Flink jobs, or custom consumers to manage, and no code to write.",
-      "link": "https://aws.amazon.com/blogs/big-data/deliver-apache-kafka-data-to-streaming-tables-for-apache-iceberg-with-amazon-msk-express-brokers/",
-      "pubDate": "2026-07-30T17:25:15.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "s3",
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "kafka",
-        "msk"
-      ]
-    },
-    {
-      "id": "aws-news-0ef211b10e01",
-      "title": "Lowering AWS KMS decrypt API costs in EMR Spark jobs",
-      "description": "Processing encrypted data in Amazon S3 with Amazon EMR and Apache Spark can drive up AWS KMS decrypt API costs as the number of objects grows. This post shows three techniques to reduce those costs without compromising encryption: optimizing file formats (including Apache Iceberg), aggregating data, and using AWS Glue Data Catalog partition indexes.",
-      "link": "https://aws.amazon.com/blogs/big-data/lowering-aws-kms-decrypt-api-costs-in-emr-spark-jobs/",
-      "pubDate": "2026-07-30T16:12:41.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "s3",
-        "emr",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "emr",
-        "glue",
-        "ga"
       ]
     },
     {
