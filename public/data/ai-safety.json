@@ -1,8 +1,39 @@
 {
-  "lastUpdated": "2026-08-19T06:22:28.581Z",
+  "lastUpdated": "2026-08-20T06:22:57.685Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 19,
   "items": [
+    {
+      "id": "aws-news-a63a7615d648",
+      "title": "Amazon SageMaker notebooks now support trusted identity propagation",
+      "description": "Amazon SageMaker Notebooks now support Trusted Identity Propagation (TIP) with Amazon Athena, Amazon Redshift, and Amazon EMR Serverless, enabling per-user access control for data analytics.\n \nWhen connected to a TIP-enabled compute in a TIP-enabled Project, each notebook user's IAM Identity Center identity flows through to AWS Lake Formation, ensuring they see only the tables, columns, and rows their permissions allow, without sharing a single broad execution role. With TIP, enterprises get per-user data boundaries enforced based on who is running the query, full audit attribution with CloudTrail recording which user accessed data, and reduced admin friction since identity propagates automatically through the existing compute connection with no extra login, token, or role management required.\n \nTo get started, use a notebook in a TIP enabled Project with the supported engines.  This feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available. To learn more, see Trusted identity propagation in the Amazon SageMaker Unified Studio Administrator Guide and Notebooks in the Amazon SageMaker Unified Studio User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker/",
+      "pubDate": "2026-08-19T20:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "emr",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "emr",
+        "redshift",
+        "iam",
+        "iam identity center",
+        "athena",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-1321712842a3",
       "title": "AWS IAM identity federation to external services is now available in AWS European Sovereign Cloud Region",
@@ -313,65 +344,6 @@
       ]
     },
     {
-      "id": "aws-news-280d4af93176",
-      "title": "Amazon RDS now provides visibility into storage volume initialization status",
-      "description": "Amazon RDS now provides visibility into the initialization status of database storage volumes created from snapshots. You can use this status to determine when your storage is fully initialized after a restore and is ready to support latency-sensitive database workloads at fully provisioned performance.\n  When you restore a database instance to a point-in-time, or create a read replica creation, or convert from Single-AZ to Multi-AZ conversion, Amazon RDS creates storage volumes from a snapshot. These volumes undergo initialization, during which storage blocks are downloaded from Amazon S3 and written to the volume before they can be accessed. The initialization rate varies depending on the workload and which blocks are accessed and during this period you may notice increased I/O latency. Previously, Amazon RDS reported the instance as available throughout initialization, giving you no direct signal for when performance would stabilize. The new StorageOperationStatus and StorageOperationPercentProgress fields on the RDS Console and DescribeDBInstances API let you monitor your storage initialization progress in real time, so you can validate when all blocks have been written. You can use the information to time your workloads to align with its completion. The fields also report storage optimization progress so you can plan for full provisioned performance after a storage modification.\n  Storage volume initialization status is accessible by default for all Amazon RDS database instances in all commercial AWS Regions and US GovCloud Regions. You can start using it today through the Amazon RDS Management Console, the AWS Command Line Interface (CLI), or the AWS SDKs. To learn more, see Amazon RDS storage in the Amazon RDS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-storage-volume-initialization-visibility",
-      "pubDate": "2026-08-06T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-cd2310ef20e1",
-      "title": "AWS Lambda announces scalable network bandwidth up to 3,000 Mbps for functions outside a VPC",
-      "description": "AWS Lambda now supports scalable network bandwidth for Lambda functions, enabling faster data transfer to and from your execution environment for latency-sensitive workloads. This feature enables functions outside a VPC configured with 2 GB of memory or more to access network bandwidth that scales proportionally, from 625 Mbps at 2 GB up to 3,000 Mbps at 10 GB.\n  Customers use Lambda to build latency-sensitive data processing workloads, which need to transfer large volumes of data - up to several terabytes - from external data sources into the function’s execution environment for processing. As data volume and performance requirements grow, the existing limit of 625 Mbps can constrain data transfer speeds to and from an execution environment. With this launch, network throughput increases proportionally from 625 Mbps at 2 GB up to 3,000 Mbps at 10 GB, helping reduce function execution times and per-invocation costs while improving end-user experience.\n  To get started, submit a request through AWS Service Quotas under the Network bandwidth per execution environment quota to enable scalable network bandwidth on your account. Once enabled, bandwidth will scale automatically based on your function's memory configuration for all functions outside a VPC in your account.\n  Scalable network bandwidth for functions outside a VPC is available at no additional charge in all commercial AWS Regions. To learn more, visit the Lambda quotas page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-network-bandwidth/",
-      "pubDate": "2026-08-05T21:35:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lambda",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-29e11a346ce7",
-      "title": "Amazon Keyspaces (for Apache Cassandra) is now available in the Canada West (Calgary) Region (ca-west-1)",
-      "description": "Amazon Keyspaces (for Apache Cassandra) is now available in the Canada West (Calgary) Region (ca-west-1), allowing customers in the Canada West Region to build Cassandra-compatible applications with lower latency while keeping their data within the Region to meet data residency requirements. \n \nAmazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. Amazon Keyspaces is serverless, so you pay for only the resources that you use and you can build applications that serve thousands of requests per second with virtually unlimited throughput and storage. \n \nThis regional expansion enables organizations in Canada to build highly scalable, low-latency applications using familiar Cassandra Query Language (CQL) without the operational burden of managing Cassandra clusters.\n \nTo learn more about on Keyspaces, visit the Amazon Keyspaces documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-keyspaces-apache-cassandra-canada-west/",
-      "pubDate": "2026-08-05T20:06:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "now-available",
-        "expansion"
-      ]
-    },
-    {
       "id": "aws-news-d9fc031f3cd3",
       "title": "Building a serverless AI assistant at Pelago: concept to care in two weeks",
       "description": "Healthcare organizations face a critical scaling challenge – how to maintain deeply personalized patient interactions as member bases grow, without overwhelming care teams or compromising quality. At Pelago, a digital health company specializing in substance use disorder support, the engineering team found a way to build an AI-powered solution to address this challenge using AWS […]",
@@ -430,24 +402,6 @@
       ],
       "tags": [
         "step functions",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-cb1f60f75cb0",
-      "title": "Unlocking the future of video data: March Networks cloud storage on AWS",
-      "description": "Enterprise video surveillance is operating at an unprecedented scale as organizations across retail, banking, quick-service restaurants (QSR), convenience stores, and transportation networks generate petabytes of video data across thousands of distributed locations. As retention requirements grow and organizations seek to extract more operational insights from video, traditional on-premise storage models are becoming increasingly difficult and […]",
-      "link": "https://aws.amazon.com/blogs/architecture/unlocking-the-future-of-video-data-march-networks-cloud-storage-on-aws/",
-      "pubDate": "2026-07-13T10:06:18.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
         "organizations",
         "ga"
       ]

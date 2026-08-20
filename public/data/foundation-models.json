@@ -1,8 +1,47 @@
 {
-  "lastUpdated": "2026-08-19T06:22:28.581Z",
+  "lastUpdated": "2026-08-20T06:22:57.685Z",
   "category": "foundation-models",
-  "totalItems": 14,
+  "totalItems": 15,
   "items": [
+    {
+      "id": "aws-news-7ab488d7c1ec",
+      "title": "Launching External Web Access for Web Search on Amazon Bedrock",
+      "description": "Earlier this month, we announced Web Search on Amazon Bedrock, a built-in server-side tool that allows you to ground model responses with current web knowledge, while maintaining data within your secured AWS environment with zero data egress. Today, we are expanding Web Search to enable the external_web_access parameter allowing Web Search to retrieve content directly from the public web so models can ground responses in the latest information.\n \nTo enable external_web_access, grant the bedrock-websearch:ExternalWebAccess IAM permission to the request identity and leave the external_web_access parameter at its default of true.  In doing so, Web Search can then fetch content live from the public web for use cases that need the freshest possible information, such as latest sports score, live pricing, or newly released documentation. If handling sensitive data, to keep retrieval entirely within your AWS boundary, set external_web_access: false. By setting it false, Web Search serves results only from Amazon's in-AWS web index and knowledge graph, with no request data leaving the AWS boundary.  \n \nEnabling External Web Access is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), and US West (Oregon). To learn more, read our blog post Introducing Web Search on Amazon Bedrock for foundation model grounding, review Controlling external web access in the Amazon Bedrock User Guide, and visit the Amazon Bedrock pricing page for cost details.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-web-access-web-search/",
+      "pubDate": "2026-08-19T23:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "iam"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "iam",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-33de7f66fc6b",
+      "title": "AWS Cost Anomaly Detection supports third-party models on Amazon Bedrock",
+      "description": "AWS Cost Anomaly Detection now monitors spend on third-party foundation models running on Amazon Bedrock, such as Anthropic Claude and other provider-hosted models. Cost Anomaly Detection uses machine learning to detect and alert on unusual spend, and this launch extends that coverage to third-party model usage on Amazon Bedrock. Teams running production generative AI workloads now get automatic anomaly detection on their Amazon Bedrock model spend alongside the rest of their AWS costs.\n \nWith this launch, Cost Anomaly Detection automatically evaluates your third-party Amazon Bedrock model costs through your AWS managed service monitor, with no setup required. When spend on a model changes unexpectedly, you receive an alert and a root-cause breakdown ranked by dollar impact across AWS service, account, Region, and usage type, so you can understand and act on generative AI cost changes as quickly as you do for any other AWS spend.\n \nThis feature is available in all AWS commercial regions, except the AWS GovCloud and the China Regions.\n \nTo learn more, see Detecting unusual spend with AWS Cost Anomaly Detection in the AWS Billing and Cost Management User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-cost-anomaly-detection-bedrock-3P/",
+      "pubDate": "2026-08-19T17:57:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-41555c9f6978",
       "title": "AgentCore payments is now generally available in Amazon Bedrock AgentCore",
@@ -168,28 +207,6 @@
         "bedrock",
         "iam",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-84f810f9ed40",
-      "title": "How ONESTRUCTION built the Ishigaki-IDS foundation model with AWS GenAIIC",
-      "description": "ONESTRUCTION, with technical advisory from the AWS Generative AI Innovation Center, built Ishigaki-IDS, a foundation model specialized for construction and BIM workflows. This architectural case study shows how they combined synthetic data, a three-stage training pipeline, and verifiable rewards on Amazon EC2 to build a domain model in a data-scarce field.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic/",
-      "pubDate": "2026-08-11T16:14:33.000Z",
-      "source": "mlBlog",
-      "services": [
-        "nova",
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "nova",
-        "ec2",
-        "rds",
-        "ga"
       ]
     },
     {
