@@ -1,8 +1,72 @@
 {
-  "lastUpdated": "2026-08-20T06:22:57.685Z",
+  "lastUpdated": "2026-08-21T06:23:50.427Z",
   "category": "general",
-  "totalItems": 48,
+  "totalItems": 45,
   "items": [
+    {
+      "id": "aws-news-a83c7668b84e",
+      "title": "Amazon EKS now supports certificate authority (CA) rotation with automated lifecycle management",
+      "description": "Today, Amazon Elastic Kubernetes Service (Amazon EKS) announced certificate authority (CA) rotation, enabling customers to rotate their cluster's CA through a managed lifecycle with automated safeguards. Each Amazon EKS cluster has its own CA that allows encrypted connections to the cluster's Kubernetes API, and now you can rotate the CA before it expires to ensure your cluster remains operational and secure.\n \nAmazon EKS clusters created since launch in 2018 have CAs with a 10-year validity period, and clusters from that era are now approaching the point where CA rotation activities should begin. CA rotation in Amazon EKS is a shared responsibility. Amazon EKS manages the rotation lifecycle and automatically updates AWS-managed components to trust the successor CA. Customers are responsible for replacing their worker nodes and updating external clients to trust the successor CA before it is activated. EKS Auto Mode instances and AWS Fargate nodes are updated automatically by AWS, but customers are still responsible for updating any external clients that connect to the cluster's API server. Amazon EKS provides automated safeguards to support customers through this process, including advance notifications before CA expiration, automatic appending of a successor CA if one is not created by the customer, and automatic activation if the customer does not activate on their own schedule. A rollback capability allows customers to revert to the previous CA to resolve any issues that may arise with their updates during the transition to the successor CA.\n \nAmazon EKS CA rotation is available at no additional cost in all commercial AWS Regions. To get started with CA rotation, you can use the AWS CLI, EKS APIs, CloudFormation, and the AWS console. For more information, see the Amazon EKS documentation and Deep dive into Amazon EKS certificate authority rotation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-certificate-authority-ca-rotation-automated-lifecycle-management",
+      "pubDate": "2026-08-20T18:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "eks",
+        "fargate",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "eks",
+        "fargate",
+        "cloudformation",
+        "launch",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6ec94e381893",
+      "title": "ARC Region switch adds Amazon RDS Switchover Read Replica execution block",
+      "description": "Today, we are launching the Amazon RDS Switchover Read Replica execution block in ARC Region switch, which automates recovery orchestration for Amazon RDS databases running Oracle Data Guard in multi-Region workloads. Amazon Application Recovery Controller (ARC) Region switch helps customers orchestrate the failover of their multi-Region applications to achieve a bounded recovery time in the event of a Regional impairment.\n \nTo recover an Amazon RDS database running Oracle Data Guard during a Regional failover, customers perform manual steps to reverse the roles of the primary database and its read replica or to promote a read replica to a primary database instance. Region switch now allows you to automate this recovery with the RDS Switchover Read Replica execution block. The same execution block automates the role transition between the primary database and read replica with zero data loss during a planned failover scenario, or promotion of the read replica to a primary database during an unplanned failover where recovery speed is of the essence. With native cross-account support, you can orchestrate recovery of Amazon RDS instances that are hosted in a different account from your Region switch plan, enabling centralized management of recovery across your organization.\n \nTo get started, see the documentation for Amazon RDS Switchover Read Replica execution block . To learn more about ARC Region switch, visit the Application Recovery Controller page .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/region-switch-rds-switchover-execution-block/",
+      "pubDate": "2026-08-20T17:45:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e011abd5b737",
+      "title": "AWS Direct Connect introduces inbound prefix controls and higher prefix scale",
+      "description": "Today, AWS Direct Connect announced inbound prefix controls, a new capability that lets you allocate and manage inbound route-prefix allocations for your private and transit virtual interfaces (VIFs) based on your workload's needs. You can now allocate up to 1,000 prefixes each for IPv4 and IPv6 on your VIFs on dedicated and hosted connections.\n \nPreviously, Direct Connect VIFs accepted a maximum of 100 route prefixes advertised from your on-premises network to AWS on a private or transit VIF. If you had a larger or growing network, you had to architect around this ceiling, for example, by summarizing routes or segmenting across multiple VIFs or connections. With inbound prefix controls, you can allocate up to 1,000 prefixes to a single VIF and advertise your routes directly.\n \nInbound prefix controls introduce new prefix capacity pools at the dedicated connection level and at the Direct Connect gateway (DXGW) level. When you create or update a VIF, you allocate a specific number of prefixes to it, and that allocation draws from the dedicated connection's pool and the DXGW's pool when you attach it. This lets you right-size prefix capacity per workload—for example, a large allocation for a transit VIF carrying many routes and a smaller allocation for a private VIF on the same connection. Connection pool sizes scale with connection speed, and link aggregation group (LAG) pools scale with the number of member connections.\n \nYou can configure prefix allocations using the AWS Direct Connect console or CLI/API. Inbound prefix controls are available at no additional cost in all commercial AWS Regions where AWS Direct Connect is available, AWS GovCloud Regions (US-East and US-West), as well as the Amazon Web Services China (Beijing) Region, operated by Sinnet, and the Amazon Web Services China (Ningxia) Region, operated by NWCD.\n \nTo learn more, see Inbound prefix controls for AWS Direct Connect in the AWS Direct Connect User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-direct-connect-new-prefix-controls",
+      "pubDate": "2026-08-20T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-557383ec3d20",
       "title": "Amazon CloudWatch log Centralization now supports log group tag propagation",
@@ -21,6 +85,22 @@
         "iam",
         "cloudwatch",
         "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a9af7041c837",
+      "title": "AWS Security Agent (now part of AWS Continuum) now supports budget controls and finding revalidation",
+      "description": "AWS Security Agent (now part of AWS Continuum) has a on-demand penetration testing service that uses an AI agent to autonomously test web applications for vulnerabilities, billing based on cumulative task hours consumed across parallel testing tasks. Security teams and DevSecOps engineers previously had no built-in way to cap test costs or efficiently confirm that a remediated vulnerability had been resolved. These two new capabilities address these use cases. \n \nYou can now set a maximum task-hours limit on any penetration test, choosing a preset value (for example, 20 or 30 hours), a custom value, or no limit at all. When the limit is reached, the test stops gracefully and preserves all findings discovered up to that point and because billing reflects only task hours actually used, a higher limit does not increase cost unless the test requires that additional time. You can also revalidate individual findings after deploying a fix, without re-running a full penetration test. Select one or more findings from a completed run and AWS Security Agent re-tests only those specific findings against your live application, returning a clear Active (still exploitable) or Resolved (fix confirmed) status with full revalidation history linked to the original finding.\n \nTo learn more about revalidating findings, visit the AWS Security Agent Revalidation documentation. To learn more about setting a maximum task-hours limit, visit the AWS Security Agent Penetration Test documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-security-agent/",
+      "pubDate": "2026-08-19T18:27:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
         "ga",
         "support"
       ]
@@ -292,6 +372,23 @@
       ],
       "tags": [
         "rds",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fb1c6ba09646",
+      "title": "Amazon Location Service now supports POI category and density filtering in map styles",
+      "description": "Today, Amazon Location Service adds per-category and density-based Point of Interest (POI) filtering to its maps. Developers gain server-side control over the density of POIs and which categories of places appear on a map. Developers control this behavior through the GetStyleDescriptor API. Amazon Location Service is a fully managed service that helps developers add maps, places, routing, and tracking to applications using high-quality geospatial data. Previously, every map style rendered all POI categories, and developers who wanted to tailor POIs to their use case relied on a client-side workaround tied to internal style layer identifiers.\n \nWith this launch, the developer provides new poi-categories and poi-density query parameters. The poi-categories parameter takes an allowlist of categories - such as Food & Drink, Transit, or Accommodations—and the poi-density parameter tunes how many POIs appear on the map. Amazon Location Service returns a style descriptor that renders only the requested categories at the chosen density. Filtering is configured server-side, so maps display correctly with no additional code required on the client side, on web, mobile, and headless server-side renderers alike. A property-listing site can surface only accommodations, a logistics fleet app can show only transit and fuel, and a tourist map can highlight sights and dining. \n \nAmazon Location Service is available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), South America (São Paulo), and AWS GovCloud (US-West).\n \nTo get started, see Map features in the Amazon Location Service Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-location-service/amazon-location-poi-categorization-density-map-styles",
+      "pubDate": "2026-08-17T14:25:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
         "support"
       ]
     },
@@ -578,167 +675,6 @@
       "tags": [
         "launch",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-7a608190abe4",
-      "title": "AWS IAM Identity Center supports one-click multi-Region option for new organization instances",
-      "description": "AWS IAM Identity Center now makes it easier to enable multi-Region support when creating a new organization instance. Previously, enabling multi-Region support required multiple steps including creating a customer managed KMS key, configuring key policies, and manually adding Regions. Now, customers creating a new IAM Identity Center instance in supported Regions can enable multi-Region in one click.\n \nWhen enabling a new organization instance, you can choose from three instance configuration options: single-Region instance, multi-Region instance, or custom instance. The multi-Region instance option automatically creates a customer managed multi-Region KMS key in your account and replicates your instance to an additional Region. This enables resilient AWS account and application access — your workforce can continue to access their AWS accounts even if IAM Identity Center experiences a disruption in the primary Region. The custom instance option lets you configure your Region settings individually, including the ability to use an existing customer managed KMS key from your account.\n \nInstance configuration options are available in 17 enabled-by-default commercial AWS Regions for organization instances of IAM Identity Center. Standard AWS KMS charges apply for the customer managed key created with the multi-Region instance option. IAM Identity Center is provided at no additional cost.\n \nTo get started, see the IAM Identity Center User Guide. To learn more about multi-Region support, see Using IAM Identity Center across multiple AWS Regions. To learn more about IAM Identity Center, visit the product detail page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-identity-center-supports-one-click-multi-region-option-new-organization-instances",
-      "pubDate": "2026-08-07T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "iam",
-        "iam identity center",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a0f2335dbb96",
-      "title": "Amazon VPC IPAM now supports BGP route protection monitoring and delegated RPKI for BYOIP prefixes",
-      "description": "Amazon Virtual Private Cloud (VPC) IP Address Manager (IPAM) now supports BGP route protection monitoring and delegated Resource Public Key Infrastructure (RPKI) management for Bring Your Own IP (BYOIP) prefixes. Network administrators can centrally monitor BGP route protection and automate Route Origin Authorization (ROA) management across their organization.\n \nUsing BGP route monitoring, you can view RPKI validity status, ROA strength, and route overlap detection for all BYOIP prefixes across accounts and regions from a single dashboard. Administrators can identify prefixes with invalid or missing ROAs, detect route overlaps that may indicate hijacking, and distinguish between strict and permissive ROA configurations. With Delegated RPKI, administrators perform a one-time setup with their Regional Internet Registry (ARIN, RIPE, APNIC, or LACNIC), after which IPAM automatically creates ROAs during BYOIP provisioning, renews them before expiration, and manages ROAs for on-premises prefixes. Before this feature, customers had to manually create and renew ROAs at their Regional Internet Registry (RIR), validate ownership through WHOIS or DNS records, and rely on third-party tools to monitor route security.\n \n \n \nThe feature is available within Amazon VPC IPAM in all commercial AWS Regions, excluding the AWS GovCloud (US) Regions, and China (Beijing, operated by Sinnet) and China (Ningxia, operated by NWCD). To get started, please see the BGP route protection documentation. To learn more about IPAM, view the  IPAM documentation . For details on pricing, refer to the IPAM tab on the  Amazon VPC Pricing Page .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-vpc-ipam-bgp-rpki-byoip/",
-      "pubDate": "2026-08-07T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dece7bfeb90f",
-      "title": "Amazon GameLift Servers now supports 21 new EC2 instance types",
-      "description": "Amazon GameLift Servers now supports 21 additional Amazon EC2 instance types for managed EC2 fleets and managed container fleets. Amazon GameLift Servers is a fully managed service that enables game developers and studios to deploy, operate, and scale dedicated game servers in the cloud. This expansion gives customer access to the latest compute-optimized and general-purpose instance families.\n \nThe newly supported instance types span six families across two series: compute-optimized C-series (C8a, C8i, C9g) and general-purpose M-series (M8a, M8i, M9g). Customers can now choose between x86 and Arm architectures, selecting from 5th-generation AMD EPYC, custom Intel Xeon 6, or AWS Graviton5 processors to optimize game server workloads for performance, cost, and engine compatibility. Use cases include running CPU-intensive multiplayer game server logic on C-series instances and scaling general-purpose fleets cost-effectively using Graviton5-powered M9g instances.\n \nThese instance types are available in Amazon GameLift Servers supported regions, except AWS China. For more information on launching fleets with these EC2 instances, visit the Amazon GameLift Servers documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/gamelift-ec2-instance-expansion/",
-      "pubDate": "2026-08-07T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "graviton",
-        "launch",
-        "ga",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-fcc23a398ff0",
-      "title": "Amazon SES now helps identify automated open and click events in event notifications",
-      "description": "Amazon Simple Email Service (SES) now helps you identify automated email interactions. Open and Click event notifications now include an isBotEvent field that indicates whether the event was likely triggered by an automated system or a human recipient.\n  Customers who publish Open or Click events through a configuration set event destination will now see an isBotEvent field with a value of Likely or Unlikely in event notifications. You can use this field as a signal to help you better understand how much of your engagement is driven by human recipients versus automated systems.\n  This feature is available in all AWS Regions where Amazon SES is available. If you already publish Open or Click events to an event destination, the isBotEvent field is automatically included, no additional configuration is needed.\n  To learn more, see Contents of event data that Amazon SES publishes to Amazon SNS and Contents of event data that Amazon SES publishes to Firehose in the Amazon SES Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-automated-email-interactions/",
-      "pubDate": "2026-08-07T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sns"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "sns",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-c152dd25dc66",
-      "title": "Amazon Connect Customer now provides schedule adherence metrics on dashboards",
-      "description": "Amazon Connect Customer now gives supervisors visibility into how well agents followed their schedules with historical agent adherence metrics on dashboards. The new metrics include scheduled time, adherent time, non-adherent time, and adherence percentage. You can group these metrics by shift activity to understand adherence patterns across different parts of an agent's day, such as work, break, or training. For example, a supervisor reviewing weekly performance identifies that an agent consistently returns late from lunch, enabling a targeted coaching conversation.\n  Historical agent adherence metrics are available in all AWS Regions where Amazon Connect Customer agent scheduling is available. To learn more about analytics dashboards, see the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, visit the Amazon Connect Customer website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/schedule-adherence-metrics/",
-      "pubDate": "2026-08-06T23:38:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds"
-      ]
-    },
-    {
-      "id": "aws-news-15f25ba89ae6",
-      "title": "AWS Lambda console extends console-to-IDE integration to Kiro and Cursor",
-      "description": "AWS Lambda console now extends its console-to-IDE integration to support Kiro and Cursor IDEs. This expansion builds on the existing console-to-IDE transition for Visual Studio Code (VS Code), providing a seamless transition between cloud and local development environments for serverless developers using these popular IDEs.\n \nWith the expanded console-to-IDE integration, developers can start from the Lambda console and follow a guided setup to begin local development in Kiro or Cursor while preserving their existing code and configurations. This capability also enables developers to easily convert their applications to an AWS Serverless Application Model (AWS SAM) template using Kiro and Cursor, simplifying their Infrastructure as Code (IaC) practices and CI/CD pipeline integration.\n \nThis feature is available in all commercial AWS Regions where Lambda is available, at no additional cost.\n \nTo get started, click the \"Open in Kiro\" or \"Open in Cursor\" button in the Lambda console's Code tab or in the Getting Started popup when creating a new function. This will automatically open your function in the selected IDE on your local device. To learn more about this experience, visit the Lambda developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-ide-kiro-cursor/",
-      "pubDate": "2026-08-06T21:53:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "integration",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-16c44fcf9087",
-      "title": "Amazon ElastiCache now supports Graviton4-based M8g, R8g, and C8gn nodes",
-      "description": "Amazon ElastiCache now supports Graviton4-based M8g, R8g, and C8gn node families for Valkey and Memcached. Graviton4-based nodes provide up to 47% higher throughput, up to 43% lower P99 latency, and up to 31% better price-performance for on-demand pricing over Graviton3-based nodes of equivalent sizes on Amazon ElastiCache for Valkey, depending on node family, size, and workload configuration.\n \nGraviton4-based nodes also offer more memory per node compared to equivalent Graviton3-based nodes. As an example, an m8g.8xlarge provides 124.65 GiB versus 103.68 GiB on m7g.8xlarge, up to 20% more memory at the same node size. C8gn nodes offer up to 200 Gbps of network bandwidth, enabling you to scale performance and throughput while optimizing the cost of running network-intensive workloads.\n \nM8g, R8g, and C8gn nodes are available in sizes from large to 16xlarge in over 30 AWS Regions, including the AWS GovCloud (US) Regions and the China Regions. For complete information on pricing and regional availability, please refer to the Amazon ElastiCache pricing page. To get started, create a new cluster or modify an existing cluster using the AWS Management Console, AWS SDK, or AWS CLI. To work with ElastiCache using AI coding agents, see Agent tools for ElastiCache. To learn more, see Supported node types in the Amazon ElastiCache User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-elasticache-graviton4-m8g-r8g-c8gn/",
-      "pubDate": "2026-08-06T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "graviton",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-91a4a838536e",
-      "title": "AWS Glue Schema Registry is now available in ten more AWS regions",
-      "description": "You can now use the AWS Glue Schema Registry, a serverless and free feature of AWS Glue, in the Asia Pacific (New Zealand), Asia Pacific (Thailand), Asia Pacific (Hyderabad), Asia Pacific (Osaka), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Mexico (Central), Israel (Tel Aviv), Asia Pacific (Taipei), Canada West (Calgary) regions to validate and control the evolution of streaming data using registered Apache Avro, JSON, and Protobuf schema formats.\n  The Schema Registry acts as a centralized repository for managing data format and structure between decoupled applications in data streaming systems. By using it, you can eliminate data validation logic and cross-team coordination, improve streaming data quality, and reduce downstream application failures. Through Apache-licensed serializers and deserializers, the Schema Registry integrates with C# and Java applications developed for Apache Kafka/Amazon Managed Streaming for Apache Kafka, Amazon Kinesis Data Streams, Apache Flink/Amazon Managed Service for Apache Flink, and AWS Lambda.\n  To get started, visit the AWS Glue Schema Registry documentation. For a full list of AWS Regions where AWS Glue Schema Registry is available, see the AWS Regional Services List.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-gsr-10-more-regions",
-      "pubDate": "2026-08-06T18:56:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "kinesis",
-        "kafka",
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "kinesis",
-        "kafka",
-        "glue",
-        "ga",
-        "now-available"
       ]
     },
     {

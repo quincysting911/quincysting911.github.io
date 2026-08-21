@@ -1,8 +1,57 @@
 {
-  "lastUpdated": "2026-08-20T06:22:57.685Z",
+  "lastUpdated": "2026-08-21T06:23:50.427Z",
   "category": "ai-safety",
-  "totalItems": 19,
+  "totalItems": 16,
   "items": [
+    {
+      "id": "aws-news-4b76b49639a0",
+      "title": "Amazon CloudFront now supports Origin Access Control (OAC) for Amazon S3 Multi-Region Access Points",
+      "description": "Starting today, customers can protect their origins using Amazon S3 Multi-Region Access Points (MRAP) by using CloudFront Origin Access Control (OAC) to only allow access from designated CloudFront distributions.\n \nCustomers use Amazon S3 MRAP with CloudFront to serve content from a single global endpoint that automatically routes to the closest available replicated bucket across regions during a cache miss, improving performance and resilience for globally distributed users. Previously, customers had to compute and forward their own Asymmetric Signature Version 4 (SigV4a) Authorization header using a custom Lambda@Edge Function. Now, CloudFront natively signs requests to S3 MRAP origins. Customers get faster cache-miss fills from the nearest region and restricted, OAC-secured MRAP access without  custom Authorization header computation.\n \nCloudFront OAC support for Amazon S3 MRAP origins is available worldwide, except in the CloudFront China region. To get started, use the CloudFront Console, SDK, CLI, or CloudFormation to enable OAC when configuring your Amazon S3 MRAP endpoint with CloudFront. For more information, refer to the CloudFront Developer Guide. There are no additional fees associated with this feature",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cloudfront-oac-s3-mrap",
+      "pubDate": "2026-08-20T18:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "cloudfront"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "cloudfront",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-185bd4d7e7a4",
+      "title": "Amazon DynamoDB Streams now supports attribute-based access control",
+      "description": "Amazon DynamoDB Streams now supports attribute-based access control (ABAC), enabling you to use tag-based conditions in your Identity and Access Management (IAM) policies to control access to your data streams. ABAC is an authorization strategy that simplifies access management by allowing you to enforce different access levels for multiple teams and applications using fewer IAM policies. This capability is built for teams that manage DynamoDB Streams access across multiple applications and environments and need finer-grained, scalable access control.\n \nWith ABAC for DynamoDB Streams, you can attach up to 50 tags to each stream and use these tags in IAM policy conditions to grant or deny access to specific actions. For example, you can allow users to read records only from streams tagged with \"environment:production\" while restricting access to other environments. Stream tags are managed independently from their parent table tags, giving you flexibility to implement environment segregation, team-based isolation, and compliance requirements without creating numerous individual IAM policies.\n \nABAC for DynamoDB Streams is in all commercial AWS Regions and AWS GovCloud (US) Regions where Amazon DynamoDB Streams is available. There is no additional cost to use ABAC for DynamoDB Streams. To learn more, visit the Amazon DynamoDB page and see the Amazon DynamoDB Streams ABAC.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-dynamodb-streams-abac/",
+      "pubDate": "2026-08-19T21:03:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "dynamodb",
+        "rds",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "dynamodb",
+        "rds",
+        "iam",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a63a7615d648",
       "title": "Amazon SageMaker notebooks now support trusted identity propagation",
@@ -97,25 +146,6 @@
       ]
     },
     {
-      "id": "aws-news-2fd4cc87ab9b",
-      "title": "Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments",
-      "description": "Give an autonomous agent a wallet and spending guardrails so it can pay for paywalled APIs, MCP servers, and web content. This post connects OpenClaw to Amazon Bedrock AgentCore payments and the x402 protocol, using the aws-agents-pay plugin to make bounded, human-approved testnet payments.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/",
-      "pubDate": "2026-08-17T16:19:56.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
       "id": "aws-news-6666eb5b4177",
       "title": "Amazon Quick now supports data loss prevention with Microsoft Purview",
       "description": "Amazon Quick now integrates with Microsoft Purview to enforce data loss prevention (DLP) policies across your Quick environment. Organizations need to ensure that sensitive files aren't shared outside approved channels. With this integration, IT administrators and security teams can apply their existing Purview sensitivity labels to automatically control how files are handled in Quick capabilities such as chat, spaces, and knowledge bases.\n \nAdministrators can configure enforcement actions (block, warn, or allow) for each sensitivity label, giving organizations granular control over sensitive file sharing across Quick. For example, a financial services company can block files labeled \"Highly Confidential\" from being uploaded to shared spaces while allowing \"Internal\" files with a warning notification. With this integration, customers can extend their existing Microsoft Purview governance policies into Quick without additional tools.\n \nThis feature is available in all AWS Regions where Amazon Quick agentic capabilities are supported. For more information, see the AWS Region table. To learn more, see Data loss prevention in the Amazon Quick User Guide.",
@@ -175,26 +205,6 @@
         "bedrock",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-fc90b685cd04",
-      "title": "Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool",
-      "description": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/",
-      "pubDate": "2026-08-13T15:56:07.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga"
       ]
     },
     {
@@ -276,71 +286,6 @@
         "lambda",
         "iam",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-4ec72fee4d08",
-      "title": "AWS Parallel Computing Service is now in scope for FedRAMP, SOC, ISO, CSA STAR, and PCI",
-      "description": "AWS Parallel Computing Service (PCS), a managed service that simplifies running and scaling high performance computing (HPC) workloads on AWS using Slurm, has expanded its security and compliance coverage. Federal agencies, public sector organizations, and enterprises in regulated industries can now use PCS to run sensitive and mission-critical HPC workloads while meeting their governance, security, and compliance obligations.\n \nPCS is now in scope for FedRAMP Class C (formerly Moderate baseline) in the US East (Ohio), US East (N. Virginia), and US West (Oregon) Regions, and FedRAMP Class D (formerly High baseline) in the AWS GovCloud (US) Regions. PCS is included in the System and Organization Controls (SOC) 1, 2, and 3 reports, which provide independent third-party assurance over the effectiveness of its controls. PCS is certified under International Organization for Standardization (ISO). PCS holds Cloud Security Alliance Security, Trust & Assurance Registry (CSA STAR) certification under CCM 4.0. PCS is included in the AWS PCI DSS and PCI 3DS attestations of compliance for workloads that handle payment card data. PCS is also HIPAA eligible.\n \nTo learn more, review the AWS services in scope by compliance program for FedRAMP, SOC, ISO , CSA STAR, PCI, and HIPAA. For more information about PCS and how to get started, visit the product page and review the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-pcs-august/",
-      "pubDate": "2026-08-07T04:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-7f9e149ecd4d",
-      "title": "Amazon OpenSearch UI now supports Network Access Control",
-      "description": "Amazon OpenSearch Service now supports network access controls for OpenSearch UI applications. OpenSearch UI is the fully managed web service for search, analytics, and unified observability across multiple AWS data sources. With network access controls, you can restrict access to your OpenSearch UI applications to approved networks using the same IAM condition keys (aws:SourceVpce, aws:SourceVpc, and aws:SourceIp) that you already use elsewhere in AWS, helping you establish a consistent data perimeter across your environment.\n \nYou can enforce network restrictions at three levels: identity-based policies for specific principals, VPC endpoint policies to control which applications users reach through an endpoint, and resource control policies (RCPs) to enforce access uniformly across every account in your AWS organization. With RCPs, you can block off-network users before they authenticate, preventing anyone outside your corporate network or VPC from reaching the login page.\n \nNetwork access controls are available in all AWS Regions where OpenSearch UI is available. To learn more, see Restricting network access to OpenSearch UI applications in the Amazon OpenSearch Service Developer Guide. For more information about Amazon OpenSearch Service, see the Amazon OpenSearch Service product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/opensearch-ui-network-access-control",
-      "pubDate": "2026-08-06T18:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service",
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "iam",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e0ba10c42a00",
-      "title": "Scaling fine-grained access control for enterprise lakehouse using SageMaker Unified Studio and AWS Lake Formation",
-      "description": "As enterprise lakehouses grow to thousands of tables across business domains and regions, fine-grained access control becomes a governance bottleneck. This post shows how to combine AWS IAM Identity Center, AWS Lake Formation tag-based access control, and trusted identity propagation in Amazon SageMaker Unified Studio for automated, auditable, least-privilege access.",
-      "link": "https://aws.amazon.com/blogs/big-data/scaling-fine-grained-access-control-for-enterprise-lakehouse-using-sagemaker-unified-studio-and-aws-lake-formation/",
-      "pubDate": "2026-08-06T16:17:59.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "iam identity center"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "iam",
-        "iam identity center",
-        "ga"
       ]
     },
     {
