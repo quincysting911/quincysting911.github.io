@@ -1,8 +1,43 @@
 {
-  "lastUpdated": "2026-08-21T06:23:50.427Z",
+  "lastUpdated": "2026-08-22T06:18:36.101Z",
   "category": "general",
   "totalItems": 45,
   "items": [
+    {
+      "id": "aws-news-e2cd6f0e1462",
+      "title": "AWS Deadline Cloud now tracks automatic download status in the Deadline Cloud Monitor",
+      "description": "The AWS Deadline Cloud monitor now shows the progress, status, and health of your automatic file downlaods from jobs running in the cloud. Deadline Cloud is a fully managed service that helps teams run compute-intensive workloads in the cloud for visual effects, animation, product design, simulation, and gaming. The Deadline Cloud Monitor (DCM) desktop app provides customers with visibility into their render environments, jobs, resources, and costs. Now, customers can also use the monitor to confirm that automatically configured job outputs successfully downloaded to their destination drive.\n \nWith this update, the monitor app introduces a new Download status column at both the job and task level, showing download progress and confirming when all output files are available on your drive. An indicator displays how current that status is. If files are unavailable for any reason, the app surfaces clear guidance on next steps. This eliminates manual drive verification and helps teams confidently confirm output availability before downstream tasks begin, particularly valuable in large-scale render pipelines where manual file checking is impractical.\n \nTo learn more about AWS Deadline Cloud and the new automatic download status feature in the Deadline Cloud Monitor desktop app, visit https://aws.amazon.com/deadline-cloud/.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-deadline-cloud-auto-download-status-tracking/",
+      "pubDate": "2026-08-21T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update"
+      ]
+    },
+    {
+      "id": "aws-news-22742ef6b874",
+      "title": "Amazon EKS Capability for Argo CD now supports custom configuration",
+      "description": "The Amazon Elastic Kubernetes Service (Amazon EKS) Capability for Argo CD now supports custom configuration through a standard argocd-cm ConfigMap in your cluster. This capability gives you a fully managed GitOps continuous delivery experience, and you can now tune it to fit how your teams work. You can define custom health checks for your Custom Resources, customize the Argo CD UI banner content, adjust how the capability watches and compares the resources it manages, and more. You configure these settings the same way you do in upstream Argo CD, and AWS applies them to your managed capability.\n \nWith this launch, cluster administrators now have more control over how Argo CD reports application health. By default, Argo CD has no built-in health logic for Custom Resources, so an Application can report as healthy while its resources are still provisioning, and sync waves can advance before those resources are ready. With a custom health check, you define this logic yourself. For example, a health check for a database resource can hold an Application at progressing until the database is ready. The capability also includes built-in health checks for AWS Controllers for Kubernetes (ACK) and kro (Kube Resource Orchestrator) resources, so these report accurate health with no additional configuration.\n \nYou can configure the EKS Capability for Argo CD in all AWS Regions where the capability is available. To learn more, see Amazon EKS and Configure Argo CD settings in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-argo-cd-configuration",
+      "pubDate": "2026-08-21T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a83c7668b84e",
       "title": "Amazon EKS now supports certificate authority (CA) rotation with automated lifecycle management",
@@ -47,6 +82,24 @@
         "rds",
         "launch",
         "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-78a81eda1512",
+      "title": "Amazon Aurora DSQL now supports Amazon CloudWatch Database Insights",
+      "description": "Amazon Aurora DSQL now features a new Amazon CloudWatch Database Insights metric that delivers per-statement, cluster-level performance monitoring details. Aurora DSQL database insights captures sampled wait states and normalized SQL statements for all active cluster sessions. You can use it to diagnose performance issues with your clusters, and identify the queries consuming the most resources.\n \nAurora DSQL database insights metrics can be used to analyze your cluster performance using Amazon CloudWatch Database Insights, Amazon CloudWatch PromQL, and Aurora DSQL system diagnostics AI skill. The metric, captured at 1-minute interval, is available by default at no additional cost.\n \nThis feature is available in all AWS Regions where Aurora DSQL is available. To learn more about Aurora DSQL database insights, read the blog and see getting started. To learn more about CloudWatch Database Insights, see pricing and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aurora-dsql-cloudwatch-database-insights/",
+      "pubDate": "2026-08-20T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
         "support"
       ]
     },
@@ -605,44 +658,6 @@
       ]
     },
     {
-      "id": "aws-news-8f0a96c5a8fe",
-      "title": "Amazon EC2 introduces application status checks",
-      "description": "Amazon EC2 introduces application status checks, a new status check that helps customers detect and respond to application-level issues on their EC2 instances. With application status checks, EC2 monitors applications to detect issues such as a web server that has stopped accepting requests, a Docker daemon that is not running, an incorrect networking configuration, or a network interface that is no longer passing traffic.\n \nCustomers rely on EC2 status checks today to receive alerts when an instance or the underlying system is unreachable. However, to monitor application issues, customers had to build and maintain their own monitoring solution. Now, with application status checks customers can monitor the status of their applications running on EC2 instances alongside existing EC2 instance and system status checks. Customers create a check by specifying the protocol, port, and path to monitor, along with the response codes that indicate a healthy application. After customers associate the check with their instances by instance ID or tag, Amazon EC2 sends HTTP or HTTPS requests to that port and path and reports on the application’s status every 60 seconds. Auto Scaling groups act on application status, initiating recovery by replacing instances when their applications report unhealthy.\n \nApplication status checks are available in all commercial AWS Regions and AWS GovCloud (US) Regions.\n \nTo get started with application status checks and review pricing, see the Amazon EC2 User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-application-status-checks",
-      "pubDate": "2026-08-10T17:47:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2"
-      ]
-    },
-    {
-      "id": "aws-news-ae3ce6736b66",
-      "title": "Amazon MSK now supports in-place migration from Apache ZooKeeper to KRaft",
-      "description": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) now supports in-place migration from Apache ZooKeeper to KRaft, enabling customers to migrate existing clusters to KRaft without provisioning new infrastructure, migrating data, or reconfiguring client applications.\n  KRaft is Apache Kafka's consensus protocol that eliminates the dependency on Apache ZooKeeper for metadata management. KRaft shifts metadata management from external ZooKeeper nodes to a group of controllers within Kafka itself, allowing metadata to be stored and replicated as topics within Kafka brokers, resulting in faster metadata propagation, improved scalability, and a simplified cluster architecture. Kafka 3.9.x is the last version to support ZooKeeper, and Kafka 4.x only supports KRaft. This in-place migration gives customers an easy path to move to KRaft on their existing clusters and upgrade to Kafka 4.x.\n  To get started, customers first upgrade to Kafka 3.9.x if they are on an older version, then customers can initiate the migration and the cluster remains available throughout the process. All steps can be performed through the MSK console, AWS CLI, or APIs. The in-place migration from Apache Zookeeper to Kraft is available today across all AWS regions where Amazon MSK provisioned is offered except European Sovereign Cloud (Germany). To learn how to get started, see the Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-msk-zk-kraft-migration/",
-      "pubDate": "2026-08-10T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b7bfa604abb5",
       "title": "Low-latency, high-throughput SQS event processing with AWS Lambda provisioned mode",
       "description": "Customers building event-driven applications on AWS rely on Amazon Simple Queue Service (Amazon SQS) and AWS Lambda event source mappings (ESMs) to process millions of events every day. The fully managed polling infrastructure of ESMs eliminates the need to write and maintain custom code. You can focus on business logic while Lambda handles scaling, batching, […]",
@@ -659,22 +674,6 @@
       "tags": [
         "lambda",
         "sqs"
-      ]
-    },
-    {
-      "id": "aws-news-255039b3cd6b",
-      "title": "AWS Elastic Disaster Recovery now preserves UEFI boot mode for Linux servers",
-      "description": "AWS Elastic Disaster Recovery (AWS DRS) now preserves UEFI boot mode when recovering Linux source servers that boot with UEFI firmware. Previously, DRS launched these Linux servers in legacy BIOS mode, which could require extra configuration after recovery. Now your recovered Linux instances launch with the same UEFI boot mode as your source servers. This means your recovery instances more closely match your source environment, so applications that depend on UEFI boot behavior come back exactly as you expect — with no additional post-recovery steps. Boot mode preservation is automatic, with nothing to configure.\n \nThis capability is available in all AWS Regions where AWS DRS is offered, at no additional cost. To learn more, visit the AWS Elastic Disaster Recovery User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-drs-linux-uefi",
-      "pubDate": "2026-08-10T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga"
       ]
     },
     {
