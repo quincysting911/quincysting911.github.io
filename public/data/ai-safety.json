@@ -1,8 +1,116 @@
 {
-  "lastUpdated": "2026-08-24T06:32:44.788Z",
+  "lastUpdated": "2026-08-25T06:23:34.101Z",
   "category": "ai-safety",
-  "totalItems": 16,
+  "totalItems": 20,
   "items": [
+    {
+      "id": "aws-news-aa23ae5238f4",
+      "title": "SageMaker MLflow now supports customer managed keys",
+      "description": "SageMaker MLflow now enables customers to encrypt their data using customer-managed keys (CMK) through AWS Key Management Service (KMS).\n \nThis enhancement allows organizations with strict security and compliance requirements to manage their own encryption keys. With customer-managed keys, you gain enhanced security control and comprehensive audit capabilities through AWS CloudTrail integration. You can encrypt your data with your own KMS keys, trace all data access for security auditing.\n \nCustomer-managed keys must be created in the same AWS account and region as your MLflow App, and only symmetric AWS KMS keys are supported.\n \nThis feature is generally available in all AWS Regions where MLflow App is available. To learn more, visit the SageMaker MLflow detail page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/sagemaker-mlflow-custom-keys",
+      "pubDate": "2026-08-24T19:26:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "sagemaker",
+        "organizations",
+        "generally-available",
+        "ga",
+        "enhancement",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-15ef359f8f80",
+      "title": "Amazon EKS now supports multiple external OIDC identity providers per cluster",
+      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports multiple external OpenID Connect (OIDC) identity providers per cluster. You can associate up to 10 OIDC identity providers with a single cluster, giving you more flexibility in how you authenticate users and workloads to your Kubernetes clusters.\n  Many organizations use different identity providers for different user populations, such as employees, contractors, and CI/CD systems. You can now associate each of these providers directly with your cluster, without consolidating users into a single provider or running an intermediary identity broker. Each provider is configured and managed independently, so each population authenticates through its own provider and identity mapping. Your existing IAM authentication continues to work alongside every configured provider. You add each provider the same way as before, using the AWS Management Console or the AssociateIdentityProviderConfig API through the AWS CLI and AWS SDKs.\n  This capability is available at no additional cost in all AWS Regions where Amazon EKS is available. To learn more, see Grant users access to Kubernetes with an external OIDC provider in the Amazon EKS User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-multiple-oidc-providers",
+      "pubDate": "2026-08-24T18:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "eks",
+        "iam",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "eks",
+        "iam",
+        "organizations",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-58a04d75212b",
+      "title": "Amazon Aurora now supports PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23",
+      "description": "Amazon Aurora PostgreSQL-Compatible Edition now supports PostgreSQL versions 18.4, 17.10, 16.14, 15.18, and 14.23 which include bug fixes from the PostgreSQL community and Aurora-specific enhancements. We recommend upgrading to the latest minor versions to address known Common Vulnerabilities and Exposures (CVEs) and benefit from these improvements, as detailed in the release notes. \n \nYou can upgrade your databases during scheduled maintenance windows using automatic minor version upgrades. To simplify operations at scale, enable automatic minor version upgrades and use the AWS Organizations Upgrade Rollout Policy to orchestrate multiple upgrades in phases, validating on lower-priority environments before upgrading your most critical ones. For more information, see Upgrading Amazon Aurora PostgreSQL DB clusters.\n \nAmazon Aurora is designed for high performance and availability at global scale with full PostgreSQL compatibility. It provides scale-to-zero serverless compute, Aurora Global Database for multi-Region resilience, Aurora I/O-Optimized for improved price performance on I/O-intensive workloads, and built-in security and continuous backups. To get started, take a look at our getting started page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-aurora-postgresql-18-4-17-10-16-14-15-18-14-23/",
+      "pubDate": "2026-08-24T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga",
+        "improvement",
+        "enhancement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6e99e5f0f73a",
+      "title": "How a global payment processor preserved AWS RAM shares and Lake Formation permissions during an AWS Organizations migration",
+      "description": "When AWS accounts move between organizations, organization-bound AWS RAM resource shares break and control-plane access is lost. Learn how a global payment processor used temporary bridge shares to preserve AWS Lake Formation permissions across a 382-account AWS Organizations migration, then restored the original shares as the durable source of truth.",
+      "link": "https://aws.amazon.com/blogs/architecture/how-a-global-payment-processor-preserved-aws-ram-shares-and-lake-formation-permissions-during-an-aws-organizations-migration/",
+      "pubDate": "2026-08-24T15:23:21.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "organizations",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-8be7ed57606c",
+      "title": "Amazon Connect Customer now supports information extraction for agent voice and chat conversations",
+      "description": "Amazon Connect Customer now supports information extraction, which automatically captures key data from voice and chat interactions, reducing manual data capture and improving agent and supervisor productivity. Information extraction captures verbatim values like account numbers, reservation IDs, and product names, as well as derived insights inferred from the conversation such as reason for contact, resolution provided, and next steps promised.\n \nYou define conversational analytics rules for what to extract and when. Extraction operates on raw contact content before redaction, so you can capture specific data points while still redacting sensitive values from recordings and transcripts. Agents see extracted values during After Contact Work, supervisors use them to search and review contacts, and developers access them programmatically through APIs, Kinesis Data Streams, and S3 output files. You can also feed extracted values directly into rule actions like email notifications, task creation, and case creation, turning unstructured conversations into automated experiences. For example, a travel company can automatically extract \"Hotel Name,\" \"Reservation ID,\" and \"Reason for call\" from interactions, then populate outbound emails and create follow-up tasks, eliminating manual data entry and reducing handle time.\n  To learn more, see Information extraction in the Amazon Connect Customer Administrator Guide, or visit the Amazon Connect Customer website. For a complete list of conversational analytics capabilities available by AWS Region, refer to Availability of Connect Customer features by Region.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-information/",
+      "pubDate": "2026-08-24T14:46:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "kinesis"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "kinesis",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-3bcdd027db55",
       "title": "How AgentFlo built AI sales agents with Amazon Bedrock AgentCore – Part 2",
@@ -137,26 +245,6 @@
         "iam",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-a77e9bd058da",
-      "title": "Amazon Bedrock AgentCore payments is now generally available: Enabling agents to transact safely and autonomously at scale",
-      "description": "Amazon Bedrock AgentCore payments is now generally available, enabling AI agents to autonomously transact at scale with built-in spending guardrails, protocol-agnostic payment orchestration, and production-ready observability.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-payments-is-now-generally-available-enabling-agents-to-transact-safely-and-autonomously-at-scale/",
-      "pubDate": "2026-08-18T18:56:14.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "generally-available"
       ]
     },
     {

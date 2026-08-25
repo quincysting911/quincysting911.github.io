@@ -1,8 +1,80 @@
 {
-  "lastUpdated": "2026-08-24T06:32:44.788Z",
+  "lastUpdated": "2026-08-25T06:23:34.101Z",
   "category": "machine-learning",
-  "totalItems": 5,
+  "totalItems": 7,
   "items": [
+    {
+      "id": "aws-news-94474981fe41",
+      "title": "Introducing new Ray capabilities on SageMaker HyperPod",
+      "description": "Amazon SageMaker HyperPod now offers managed Ray support on Amazon EKS. Create and monitor Ray clusters, connect JupyterLab and Code Editor notebooks to live clusters, get out-of-the-box observability, and run resilient distributed training and accelerated inference from SageMaker Studio, all with open-source KubeRay and standard Ray APIs.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/",
+      "pubDate": "2026-08-24T19:32:14.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b0bc92e26d10",
+      "title": "Amazon SageMaker HyperPod enhances support for Ray",
+      "description": "Amazon SageMaker HyperPod now enhances support for Ray with built-in observability, resilient training, accelerated inference and managed development environments. Ray is a popular open-source framework for scaling AI workloads on a unified compute layer, from data processing and distributed training to reinforcement learning and model serving. Running Ray on Kubernetes at production scale can be an operational burden: job hangs, low GPU utilization from static team allocations, and multi-step observability setup. Also, lack of interactive development environment means every code change needs another job submission and familiarity with kubectl.\n \nHyperPod now brings easier development, resilient training, and accelerated inference to Ray. Data scientists create, edit, monitor, and delete Ray clusters from a web-based interface in Amazon SageMaker Studio, then attach JupyterLab, Code Editor, or a local IDE to a running Ray cluster and iterate interactively against cluster-scale compute. A multi-node Ray cluster behaves like a local development environment, so you test each change immediately, without waiting for a new job to queue and start. For Observability, HyperPod provisions Grafana dashboards with metrics in Amazon Managed Service for Prometheus and allows one-click access to the Ray Dashboard through a secure browser link, giving you visibility into your workloads from the first run. For training at scale, HyperPod node auto recovery and hung job detection handle GPU faults, job hangs, loss spikes, and degraded throughput. Tiered checkpointing restores state from cluster memory to maximize goodput, and task governance improves compute utilization through quotas, priorities, and preemption. Together, these keep your long training runs progressing through failures and maximize the useful work done per GPU-hour. For inference with Ray Serve, a tiered KV cache reuses cached prefixes to reduce time to first token, and you can deploy Amazon SageMaker JumpStart models directly.\n \nOpen-source Ray code runs unchanged and you can either adopt the purpose-built experience in SageMaker Studio or take individual capabilities to integrate into your own ML platform.\n \nRay support is available for HyperPod clusters orchestrated by Amazon EKS, in AWS Regions where SageMaker HyperPod is supported. To learn more, see the SageMaker HyperPod documentation, and explore the interactive demo.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker-hyperpod-ray",
+      "pubDate": "2026-08-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "rds",
+        "eks",
+        "grafana"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "rds",
+        "eks",
+        "grafana",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-08e0a8dd6d6e",
+      "title": "AWS Neuron 2.32 introduces expanded NKI programming, MXFP8 training kernels, and variable-size collectives for Trn2 and Trn",
+      "description": "AWS Neuron 2.32.0 is now available, introducing NKI 0.6.0 with an on-device top-K instruction, a variable-length `all-gather `for kernels whose ranks hold differently sized tensors, and new loop constructs for data-dependent iteration.  \n \nThis release also introduces 13 new NKI Library kernels for Mixture of Experts (MoE) training and sparse attention, and a new Neuron Agentic Development skill that ports transformer models to the vLLM Neuron plugin. The NKI Library kernels cover context encoding for DeepSeek-V3.2 sparse multi-head latent attention, MXFP8 attention for the decode step, and a matched MXFP8 forward and backward pass that lets blockwise MoE layers train end to end in MXFP8, with PyTorch reference implementations for 22 additional kernels.  \n \nThe Neuron Runtime adds variable-size all-gather, reduce-scatter, and all-to-all collectives on Trn2 and Trn3, letting each rank contribute or receive a different number of elements. The vLLM Neuron plugin moves to vLLM 0.24.0 and is included in all Neuron Deep Learning AMIs and Deep Learning Containers. The Neuron Compiler adds explicit control over 64-bit integer compilation, and Neuron Explorer adds per-core host CPU utilization to the System Trace Viewer.\n \nAWS Neuron is available in all AWS Regions where Amazon EC2 Trn1, Trn2, Trn3, Inf2, and Inf1 instances are available. For more information about Regional availability, see the AWS Region table.\n \nTo get started, see the following resources:\n \n \n \nAWS Neuron 2.32.0 Release Notes\n  \n \n \n \nNeuron Kernel Interface (NKI) Documentation\n  \n \n \n \nNeuron Agentic Development\n  \n \n \n \nAWS Neuron",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-announce-neuron-2-32-0",
+      "pubDate": "2026-08-21T21:11:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "neuron",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "neuron",
+        "ec2",
+        "ga",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-e6a9c8eea50b",
       "title": "Secure SageMaker Unified Studio access with SAML and conditional policies",
@@ -82,41 +154,6 @@
       ],
       "tags": [
         "s3"
-      ]
-    },
-    {
-      "id": "aws-news-20f0cdaefc03",
-      "title": "AWS Glue adds one-click access to SageMaker Unified Studio from the AWS console",
-      "description": "AWS Glue now provides direct access to Amazon SageMaker Unified Studio, helping data engineers and analysts move from viewing the catalog in the Glue console to querying their data, running data quality checks, and building data pipelines in SageMaker Unified Studio with a single click. This new integration helps customers who already work in the Glue console access data and AI capabilities in SageMaker Unified Studio. With this launch, SageMaker Unified Studio can now be accessed by a single click from S3 Tables, Athena, EMR, Redshift and Glue consoles.\n \nWhen working in the AWS Glue console to browse catalog tables or build ETL jobs, you now have one-click access to open SageMaker Unified Studio, and can immediately begin working with your data in the catalog or query your data using SageMaker Notebooks using the same IAM role. For Glue console customers who have not yet set up SageMaker Unified Studio, a new inline permissions panel helps you create and configure the required IAM policies directly within the setup workflow, without navigating to the IAM console and switching browser tabs. You can use your existing IAM role and customize the permissions in-context, reducing the steps required to get started.\n \nThis feature is available in all AWS Regions where Amazon SageMaker Unified Studio is supported. To get started, navigate to the AWS Glue console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/smus-glue-access",
-      "pubDate": "2026-08-11T14:57:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "emr",
-        "redshift",
-        "iam",
-        "glue",
-        "athena"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "emr",
-        "redshift",
-        "iam",
-        "glue",
-        "athena",
-        "launch",
-        "ga",
-        "integration",
-        "support"
       ]
     }
   ]
