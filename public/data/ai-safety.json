@@ -1,8 +1,93 @@
 {
-  "lastUpdated": "2026-08-25T06:23:34.101Z",
+  "lastUpdated": "2026-08-26T06:25:47.056Z",
   "category": "ai-safety",
-  "totalItems": 20,
+  "totalItems": 22,
   "items": [
+    {
+      "id": "aws-news-c942e79b33d8",
+      "title": "Enable cross-cloud analytics with Amazon S3 Tables and Google BigQuery, Part 1: IAM-based access control",
+      "description": "Your Google BigQuery users need to query data that lives in Amazon S3 Tables on AWS without copying it across clouds. This post shows how to connect BigQuery to Amazon S3 Tables through the AWS Glue Iceberg REST Catalog using IAM-based access control, so you keep one governed dataset and query it live from BigQuery.",
+      "link": "https://aws.amazon.com/blogs/big-data/enable-cross-cloud-analytics-with-amazon-s3-tables-and-google-bigquery-part-1-iam-based-access-control/",
+      "pubDate": "2026-08-25T16:38:49.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "iam",
+        "glue"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "iam",
+        "glue"
+      ]
+    },
+    {
+      "id": "aws-news-703bf0bdccb7",
+      "title": "Enable cross-cloud analytics with Amazon S3 Tables and Google BigQuery, Part 2: access control with Lake Formation",
+      "description": "In Part 2 of this series, connect Google BigQuery to Amazon S3 Tables using AWS Lake Formation credential vending. Lake Formation manages fine-grained permissions and issues short-lived, scoped credentials to external engines, so you can centrally govern which teams and query engines read your Iceberg tables on AWS without managing IAM policies for every consumer.",
+      "link": "https://aws.amazon.com/blogs/big-data/enable-cross-cloud-analytics-with-amazon-s3-tables-and-google-bigquery-part-2-access-control-with-lake-formation/",
+      "pubDate": "2026-08-25T16:38:46.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "s3",
+        "iam"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "iam"
+      ]
+    },
+    {
+      "id": "aws-news-4201b00c1d8f",
+      "title": "Amazon RDS for PostgreSQL supports minor versions 18.6, 17.11, 16.15, 15.19, and 14.24",
+      "description": "Amazon Relational Database Service (RDS) for PostgreSQL now supports the latest minor versions 18.6, 17.11, 16.15, 15.19, and 14.24. We recommend that you upgrade to the latest minor versions to address Common Vulnerabilities and Exposures (CVEs) in prior versions of PostgreSQL, and to benefit from the bug fixes and improvements added by the PostgreSQL community.\n \nYou can upgrade your databases during scheduled maintenance windows using automatic minor version upgrades. To simplify operations at scale, enable automatic minor version upgrades and use the AWS Organizations Upgrade Rollout Policy to orchestrate multiple upgrades in phases, validating on lower-priority environments before upgrading your most critical ones. You can also use Amazon RDS Blue/Green deployments to minimize downtime for minor version upgrades. For more information, see Upgrading RDS for PostgreSQL DB engine. \n \nAmazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. See Amazon RDS for PostgreSQL Pricing for pricing details and regional availability. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console or by using the AWS Command Line Interface (CLI).",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-postgresql-18-6-17-11-16-15-15-19-14-24/",
+      "pubDate": "2026-08-25T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga",
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-044deee6806a",
+      "title": "Amazon RDS for Oracle now supports July 2026 Release Update",
+      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports the Oracle July 2026 Release Update (RU) for Oracle Database versions 19c, 21c and 26ai. We recommend upgrading to the July 2026 RU as it includes security updates for Oracle database products.\n \nStarting with July 2026 releases, the naming format for an RU in Oracle Database 19c changes to <version>.ru-<YYYY-MM>.mrp-<YYYY-MM>.r<N>. For example, the RDS for Oracle July 2026 quarterly RU for Oracle Database 19c is named 19.0.0.0.ru-2026-07.mrp-2026-07.r1. When Oracle releases a monthly Critical Security Patch Update (CSPU) for Oracle Database 19c and 26ai, Amazon RDS will make it available as an MRP version that bundles the CSPU with additional Oracle-recommended fixes. Oracle Database 21c RUs retain their existing naming format. For details, see Release updates and monthly recommended patches. \n \nYou can apply the July 2026 RU from the Amazon RDS Management Console, or by using the AWS SDK or CLI. To automatically apply updates to your database instance during your maintenance window, enable Automatic Minor Version Upgrade.\n \nYou can also use AWS Organizations upgrade rollout policy to stagger automatic minor version upgrades for your Amazon RDS database instances. This feature allows you to automatically apply updates to non-production environments, validate the updates, and then automatically apply the same update to production environments. For additional details about using AWS Organizations upgrade rollout policy for automatic minor version upgrades, refer to Amazon RDS for Oracle documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-oracle-july-2026-release-update",
+      "pubDate": "2026-08-25T07:24:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-aa23ae5238f4",
       "title": "SageMaker MLflow now supports customer managed keys",
@@ -328,48 +413,6 @@
         "bedrock",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-00d451febf9f",
-      "title": "Amazon S3 adds additional policy details to access denied error messages",
-      "description": "Amazon S3 now includes the specific AWS Identity and Access Management (IAM) and AWS Organizations policy Amazon Resource Name (ARN) in HTTP 403 Access Denied error messages for same-account and same-organization requests. This helps you quickly identify the exact policy responsible for a denied request and remediate the issue directly.\n \nPreviously, S3 access denied error messages included the policy type and reason for denial, but when multiple policies of the same type existed, you still had to manually inspect each one to pinpoint the root cause. Now the error message includes the specific policy ARN for explicit deny cases, covering Service Control Policies (SCPs), Resource Control Policies (RCPs), identity-based policies, session policies, and permission boundaries.\n \nThis capability is available in all AWS Regions, including the AWS GovCloud (US) Regions and the AWS China Regions. To learn more about how to troubleshoot access denied errors in Amazon S3, visit the S3 User Guide and the IAM troubleshooting documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/s3-additional-policy-details-access-denied-error-messages/",
-      "pubDate": "2026-08-13T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "iam",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "s3",
-        "iam",
-        "organizations",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-a40a95fb6067",
-      "title": "AWS Clean Rooms supports minimum aggregation thresholds in custom analysis rules",
-      "description": "AWS Clean Rooms now supports minimum aggregation thresholds for the Custom analysis rule type. Minimum aggregation helps protect the privacy of individual data subjects by preventing queries from returning results about individuals or small groups. With this launch, organizations can enforce minimum aggregation on custom SQL queries, ensuring that every row a query outputs represents at least the specified number of distinct values (e.g., user IDs). Data providers in a collaboration can specify their identity column and a minimum identity count to enforce on a query’s output, with the option to set a higher threshold for specific columns.\n \nPreviously, enforcing minimum aggregation thresholds on custom SQL required data providers to rely on pre-approved analysis templates and manual code reviews before queries could run. Now, data providers can configure the minimum aggregation threshold for custom SQL using the Custom analysis rule type, without using pre-structured queries or manual approval processes. Additionally, data providers can specify which columns can be filtered or joined across datasets. For example, a publisher collaborating with an advertiser for media planning use cases can enable ad-hoc queries to run on their data—and small, rural zip codes with fewer than 1,000 common users can be automatically filtered out from the result to help protect user privacy. \n \nAWS Clean Rooms helps companies and their partners easily analyze and collaborate on their collective datasets without revealing or copying one another’s underlying data. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-clean-rooms-minimum-aggregation-custom-analysis-rules",
-      "pubDate": "2026-08-13T12:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "launch",
-        "ga",
-        "support"
       ]
     },
     {

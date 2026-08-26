@@ -1,8 +1,52 @@
 {
-  "lastUpdated": "2026-08-25T06:23:34.101Z",
+  "lastUpdated": "2026-08-26T06:25:47.056Z",
   "category": "generative-ai",
-  "totalItems": 69,
+  "totalItems": 66,
   "items": [
+    {
+      "id": "aws-news-fa23341f73e4",
+      "title": "Governed reports with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP",
+      "description": "Build a governed weekly reporting workflow with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP. An Amazon S3 access point exposes an approved folder to a Quick knowledge base, and a custom skill drafts cited weekly reports and Slack summaries with human review before anything is shared.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/governed-reports-with-amazon-quick-desktop-and-amazon-fsx-for-netapp-ontap/",
+      "pubDate": "2026-08-25T16:35:01.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "s3"
+      ]
+    },
+    {
+      "id": "aws-news-a17a80e5f118",
+      "title": "AWS Lambda functions now support full IAM resource-based policies",
+      "description": "AWS Lambda functions now support full Identity and Access Management (IAM) resource-based policies, enabling platform admins and security teams to define granular access permissions using the full capabilities of AWS IAM. With full IAM resource-based policies, you can define permissions for multiple principals and actions in a single policy document and leverage the full range of IAM condition keys.\n  Previously, Lambda functions required customers to add permissions individually per principal. This provided limited flexibility for platform admins and security teams who want to manage permissions at scale. Now, Lambda functions support full IAM resource-based policies, including the full range of IAM condition keys. This provides a broader range of policy capabilities and streamlines policy management for teams operating multi-account architectures or managing multiple resources. For example, you can now use IAM condition keys to restrict access based on source IP or principal tag, and platform teams can now allow multiple services to invoke a function by using a single policy, rather than maintaining multiple statements to add permissions.\n  You can update resource-based policies in one step using the JSON editor in the AWS Lambda console, AWS CLI, AWS SDK, or infrastructure as code tools such as AWS CloudFormation and AWS SAM. To learn more, explore the Lambda resource-based policy examples in the AWS Lambda Developer Guide. \n  Full IAM resource-based policies are available in all AWS commerical Regions at no additional charge.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-full-iam-resource-based-policies/",
+      "pubDate": "2026-08-25T02:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "lambda",
+        "cloudformation",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lex",
+        "lambda",
+        "cloudformation",
+        "iam",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-2367b03c8967",
       "title": "Upgrade AWS Glue jobs to Glue 6.0 with AI-powered Spark upgrades",
@@ -392,6 +436,28 @@
       ]
     },
     {
+      "id": "aws-news-067374839335",
+      "title": "Amazon Redshift now supports concurrency scaling of streaming ingestion workloads from Amazon Kinesis data streams",
+      "description": "Amazon Redshift, starting with patch P203, supports concurrency scaling for refreshes of Amazon Kinesis Data Streams (KDS)-connected streaming materialized views (MVs).\n  Amazon Web Services (AWS) Redshift Streaming Ingestion enables low-latency, high-speed data ingestion from Amazon KDS to Amazon Redshift data warehouses. The data lands in a Redshift streaming materialized view, providing fast access to external data, lowering data-access time, and reducing storage costs. Users can configure streaming ingestion for their Amazon Redshift cluster or Redshift Serverless workgroup using SQL commands. Once set up, each streaming materialized-view refresh can ingest hundreds of megabytes of data per second. If you have concurrency scaling enabled, your streaming workloads will now automatically scale by freeing-up your main Amazon Redshift cluster or workgroup to run other higher priority workloads.\n  You can start using this new capability immediately in all AWS regions where Amazon Redshift is available to scale your workload and build resilient analytics applications with predictable Service Level Agreements. To get started, refer to the Concurrency Scaling, Materialized Views and streaming ingestion sections of the Amazon Redshift documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-concurrencyscaling-for-kds-streams/",
+      "pubDate": "2026-08-20T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "kinesis"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "redshift",
+        "kinesis",
+        "ga",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
       "id": "aws-news-b99d836d620d",
       "title": "Amazon Bedrock AgentCore Memory now supports extracting memories from non-conversational JSON payloads",
       "description": "Amazon Bedrock AgentCore memory now accepts a JSON payload type on the CreateEvent API, so agents can extract and consolidate long-term memories from structured data as well as from multi-turn conversations. Developers can pass behavioral events, activity logs, system events, and other JSON data (up to 100 KB per payload) straight into the extraction pipeline. There is no need to reshape it into synthetic conversation messages first.\n  The extraction pipeline treats a JSON payload the same way it treats a conversation, generating long-term memories across all four extraction strategies: semantic, user preference, summarization, and episodic.\n \nNon-conversational JSON payload ingestion is available today in all regions where AgentCore Memory is supported. It is fully compatible with existing features. To get started, just add json payloads to your events.",
@@ -430,28 +496,6 @@
         "graviton",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-067374839335",
-      "title": "Amazon Redshift now supports concurrency scaling of streaming ingestion workloads from Amazon Kinesis data streams",
-      "description": "Amazon Redshift, starting with patch P203, supports concurrency scaling for refreshes of Amazon Kinesis Data Streams (KDS)-connected streaming materialized views (MVs).\n  Amazon Web Services (AWS) Redshift Streaming Ingestion enables low-latency, high-speed data ingestion from Amazon KDS to Amazon Redshift data warehouses. The data lands in a Redshift streaming materialized view, providing fast access to external data, lowering data-access time, and reducing storage costs. Users can configure streaming ingestion for their Amazon Redshift cluster or Redshift Serverless workgroup using SQL commands. Once set up, each streaming materialized-view refresh can ingest hundreds of megabytes of data per second. If you have concurrency scaling enabled, your streaming workloads will now automatically scale by freeing-up your main Amazon Redshift cluster or workgroup to run other higher priority workloads.\n  You can start using this new capability immediately in all AWS regions where Amazon Redshift is available to scale your workload and build resilient analytics applications with predictable Service Level Agreements. To get started, refer to the Concurrency Scaling, Materialized Views and streaming ingestion sections of the Amazon Redshift documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-concurrencyscaling-for-kds-streams/",
-      "pubDate": "2026-08-20T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "kinesis"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "redshift",
-        "kinesis",
-        "ga",
-        "support",
-        "new-capability"
       ]
     },
     {
@@ -671,44 +715,6 @@
         "launch",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f0a26ff45025",
-      "title": "Domain and publish date filters for Web Search on AgentCore",
-      "description": "Web Search on Amazon Bedrock AgentCore now supports runtime domain and published-date filtering. New per-request filters give developers per-call control over which web sources their agents consult and how fresh those sources must be, all enforced server-side. This release also expands Web Search to the Europe (Ireland) and Asia Pacific (Tokyo) Regions.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/",
-      "pubDate": "2026-08-19T22:13:20.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fc01f1e6caa0",
-      "title": "Automate Document Processing with Quick Automate and the IDP Accelerator",
-      "description": "Classifying, extracting, and validating high volumes of documents is a challenge across banking, insurance, healthcare, and the public sector. See how a mid-size mortgage lender automates its entire document intake pipeline, from email to validated data, using the AWS GAIIC IDP Accelerator and Amazon Quick Automate.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automate-document-processing-with-quick-automate-and-the-idp-accelerator/",
-      "pubDate": "2026-08-19T22:09:56.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "ga"
       ]
     },
     {
@@ -1044,27 +1050,6 @@
       ]
     },
     {
-      "id": "aws-news-887404b163a4",
-      "title": "Trace cascading decision failures with a blame graph on Amazon OpenSearch Service",
-      "description": "When multiple AI agents collaborate on a decision and get it wrong, standard logs can't tell you which agent caused it. This post shows how to build a blame graph on Amazon OpenSearch Service and Amazon Bedrock that measures influence between agents and walks backward from a failed decision to find the root cause.",
-      "link": "https://aws.amazon.com/blogs/big-data/trace-cascading-decision-failures-with-a-blame-graph-on-amazon-opensearch-service/",
-      "pubDate": "2026-08-14T14:32:13.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "bedrock",
-        "opensearch",
-        "opensearch service"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "opensearch",
-        "opensearch service"
-      ]
-    },
-    {
       "id": "aws-news-216620132657",
       "title": "Serverless vehicle tracking at scale: Bosch L.OS on AWS",
       "description": "Learn how Bosch Mobility Platform Solutions built L.OS, a serverless vehicle tracking platform on AWS that unifies India's fragmented spot logistics market into a single real-time visibility layer using Amazon ECS, AWS Lambda, and Amazon MSK.",
@@ -1120,39 +1105,6 @@
       ],
       "tags": [
         "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-b6aab0e79208",
-      "title": "How AppFolio transformed its data streaming architecture with Amazon MSK Express brokers",
-      "description": "Learn how AppFolio transformed its data streaming architecture by adopting Amazon MSK Express brokers, replacing hours-long rebalances and manual storage planning with a platform that scales automatically across workload-isolated clusters.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-appfolio-transformed-its-data-streaming-architecture-with-amazon-msk-express-brokers/",
-      "pubDate": "2026-08-13T15:50:30.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "msk"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "msk"
-      ]
-    },
-    {
-      "id": "aws-news-a55d35c2d23f",
-      "title": "AWS Deadline Cloud Now Supports EBS Persistent Volume Cost Tracking",
-      "description": "AWS Deadline Cloud now surfaces costs related to Amazon Elastic Block Store (Amazon EBS) persistent volumes in the Usage Explorer in the Deadline Cloud Monitor app. AWS Deadline Cloud is a fully managed service that helps teams run compute-intensive workloads in the cloud for visual effects, animation, product design, simulation, and gaming.\n \nCustomers have historically been able to see compute and license costs related to Deadline Cloud. With the recent release of support for persistent EBS volumes, customers needed a way to see storage costs as well. Now, Deadline Cloud tracks the cost for each EBS volume from creation until deletion, independent of any job or session. These costs appear as a new persistent volume usage type in Usage Explorer and the statistics APIs. These are attributed to the fleet that owns the volume so customers can aggregate spend by fleet, farm, or time period. This helps customers spot idle volumes and decide whether to adjust a time-to-live or let it expire. Cost tracking is enabled automatically, so no action is required.\n \nPersistent volume cost tracking is available in all AWS Regions where Deadline Cloud is offered. Cost tracking introduces no additional charges. To learn more, visit the AWS Deadline Cloud product page or our user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-deadline-cloud-now-supports-ebs-persistent-volume-cost-tracking/",
-      "pubDate": "2026-08-12T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ga",
-        "support"
       ]
     },
     {

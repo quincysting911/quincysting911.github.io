@@ -1,8 +1,146 @@
 {
-  "lastUpdated": "2026-08-25T06:23:34.101Z",
+  "lastUpdated": "2026-08-26T06:25:47.056Z",
   "category": "general",
-  "totalItems": 47,
+  "totalItems": 51,
   "items": [
+    {
+      "id": "aws-news-b52a1aedb1ea",
+      "title": "AWS IoT Core now supports native InfluxDB routing for time-series data",
+      "description": "AWS IoT Core now supports InfluxDB rule action that routes time-series data from your Internet of Things (IoT) devices directly to InfluxDB databases, without writing custom device-side code or using intermediate cloud services. AWS IoT Core is a fully managed service that securely connects billions of IoT devices to the AWS cloud, and routes IoT device data to AWS and third-party services.\n \nThe new InfluxDB rule action automatically converts time-series data from your device to InfluxDB’s line protocol format and writes it to either an Amazon Timestream managed or a self-hosted InfluxDB cluster. The new rule action also supports the following two batching modes to help you optimize cost and throughput: device-side batching, where your devices send pre-batched payloads to AWS IoT Core; and server-side batching, where IoT rules engine aggregates individual messages before writing to InfluxDB. For example, a life sciences company can batch thousands of telemetry readings from scientific instruments at millisecond granularity and write directly to InfluxDB for monitoring, without building a custom data pipeline.\n \nTo get started, connect your IoT devices to AWS IoT Core and define an InfluxDB rule action specifying the destination database, along with authentication and batching parameters. The InfluxDB rule action is available in all AWS Global Regions where Amazon Timestream for InfluxDB is available. To learn more, visit the AWS IoT Core developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iot-core-influxdb/",
+      "pubDate": "2026-08-25T19:42:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a98fba5d0924",
+      "title": "AWS Batch now supports Amazon ECS Managed Instances",
+      "description": "AWS Batch now supports Amazon ECS Managed Instances (ECS MI) as a new compute option, enabling you to run GPU-accelerated and compute-intensive batch workloads on AWS-managed infrastructure. With AWS Batch on ECS MI you can now access GPU-accelerated instances while AWS handles AMI updates, security patching, and instance lifecycle automatically, eliminating the operational overhead of customer-managed Amazon EC2 infrastructure.\n  To get started, create an AWS Batch on ECS MI compute environment using the AWS Batch CreateComputeEnvironment API or the AWS Batch Management Console. You can specify your allowed instance types and networking configuration in the managedInstancesProvider block, associate the compute environment with a job queue, and submit jobs using On-Demand, Spot, or reserved capacity.\n  AWS Batch on ECS Managed Instances is supported in all AWS Regions where AWS Batch is available. For more information, see the AWS Batch User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-batch-on-ecs-managed-instances/",
+      "pubDate": "2026-08-25T19:36:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "ecs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "ecs",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1bca99208074",
+      "title": "PythonOperator and BashOperator Now Available on Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless",
+      "description": "You can now use PythonOperator and BashOperator to run custom Python functions and shell scripts directly in the Amazon MWAA Serverless runtime, without provisioning additional infrastructure. This post walks through building a serverless pipeline that converts CSV files to JSON using a PythonOperator and verifies the output with a BashOperator.",
+      "link": "https://aws.amazon.com/blogs/big-data/pythonoperator-and-bashoperator-now-available-on-amazon-managed-workflows-for-apache-airflow-amazon-mwaa-serverless/",
+      "pubDate": "2026-08-25T19:28:00.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-5c64c56eeae9",
+      "title": "Agentic observability with Amazon OpenSearch Service MCP Apps",
+      "description": "Amazon OpenSearch Service now supports MCP Apps, which return interactive visualizations alongside your AI agent's text responses. Learn how a single, locally run MCP server lets your agent move from alert to trace to logs to root cause in one conversation, and how you can verify every step inline without leaving your IDE.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/",
+      "pubDate": "2026-08-25T19:00:09.000Z",
+      "source": "mlBlog",
+      "services": [
+        "opensearch",
+        "opensearch service"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch service",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bfbaea9702cc",
+      "title": "AWS Lambda MicroVMs now supports AWS PrivateLink",
+      "description": "AWS Lambda MicroVMs now supports AWS PrivateLink, enabling private connectivity to Lambda MicroVMs directly from Amazon Virtual Private Cloud (VPC) resources without exposing traffic to the public internet. This launch helps regulated workloads in financial services, healthcare, and government meet strict network isolation requirements when building with Lambda MicroVMs. \n \nPrivateLink VPC Endpoints deliver private connectivity to AWS services from your VPC, ensuring that your traffic does not travel over the public internet when communicating with AWS services. Today's launch extends this capability to Lambda MicroVMs. Developers and IT teams needing private connectivity to Lambda MicroVMs can now create PrivateLink VPC Endpoints in their VPC to call MicroVM APIs (for example, to create MicroVM images or launch MicroVMs) and to connect to each MicroVM’s HTTP endpoint.\n \nPrivateLink VPC Endpoints for Lambda MicroVMs can be created using the AWS Management Console, AWS CLI, AWS CloudFormation, or the AWS SDKs. This feature is supported in all Regions where Lambda MicroVMs is available. Visit the AWS Capabilities by Region page for the latest region availability.  \n \nTo learn more about using PrivateLink with Lambda MicroVMs, see the developer guide. For pricing details, see AWS PrivateLink Pricing. To learn more about configuring private connectivity for AWS services, visit the AWS PrivateLink developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/lambda-microvms-supports-privatelink",
+      "pubDate": "2026-08-25T16:34:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1f3f83bc5dd2",
+      "title": "GPU-accelerated Apache Spark with Amazon EMR and NVIDIA RTX PRO 4500 on Amazon EC2 G7 instances runs up to 3.7x faster",
+      "description": "Amazon EMR on EKS now runs Apache Spark up to 3.7x faster on Amazon EC2 G7 instances with NVIDIA RTX PRO 4500 Blackwell GPUs than on comparable CPU instances, with no changes to existing Spark code. See the TPC-DS benchmark results, the cost comparison, and how to get started.",
+      "link": "https://aws.amazon.com/blogs/big-data/gpu-accelerated-apache-spark-with-amazon-emr-and-nvidia-rtx-pro-4500-on-amazon-ec2-g7-instances-runs-up-to-3-7x-faster/",
+      "pubDate": "2026-08-25T16:17:45.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "ec2",
+        "emr",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "emr",
+        "eks"
+      ]
+    },
+    {
+      "id": "aws-news-e97fef2ef1c6",
+      "title": "AWS Lambda introduces managed runtimes in public preview for Node.js 26 and Python 3.15",
+      "description": "Today, AWS Lambda introduces managed runtimes in public preview, starting with Node.js 26 and Python 3.15. This gives customers, partners and upstream language communities the opportunity to try upcoming managed runtimes before their general availability (GA) release and to share their feedback with the Lambda team.\n \nPreviously, Lambda managed runtimes were launched directly as GA releases. Since the runtimes could immediately be used by production workloads, the Lambda team couldn’t make changes post-GA that might impact existing functions. Managed runtimes in public preview give you a chance to test your workloads and report issues before GA—while breaking changes are still possible, so we can act on your feedback. Third-party observability providers, infrastructure-as-code tools and deployment frameworks also get time to validate compatibility before GA. Because public preview managed runtimes may receive breaking changes during the preview period, they are not covered by the Lambda SLA or AWS Technical Support plans and should not be used for production workloads. Managed runtimes in public preview use the same runtime identifier as the eventual GA runtime, so your functions graduate automatically when the runtime reaches GA with no action required.\n \nTo get started, select \"Node.js 26 (Preview)\" or \"Python 3.15 (Preview)\" from the runtime dropdown in the Lambda console, or specify nodejs26.x or python3.15 as the runtime identifier in the AWS CLI, CloudFormation, AWS SAM, or AWS CDK.\n \nNode.js 26 and Python 3.15 managed runtimes in public preview are available in all AWS commercial Regions, AWS GovCloud (US) Regions, and China Regions. There is no additional cost—functions using preview runtimes are billed at standard Lambda rates.  To learn more, see our blog post. To share feedback, visit the dedicated GitHub issues for Node.js 26 and Python 3.15.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-node-js-python-public-preview/",
+      "pubDate": "2026-08-25T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "cloudformation",
+        "launch",
+        "preview",
+        "ga",
+        "support",
+        "public-preview"
+      ]
+    },
     {
       "id": "aws-news-378592e46036",
       "title": "Amazon ECS now automatically detects and repairs container instances with impaired agent connectivity",
@@ -58,6 +196,28 @@
       ],
       "tags": [
         "ga"
+      ]
+    },
+    {
+      "id": "aws-news-2777a8ba167c",
+      "title": "MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for replication from external Apache Kafka clusters to Amazon MSK",
+      "description": "Amazon MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for data replication from external Apache Kafka clusters - including on-premises, self-managed on AWS, or other cloud providers - to Amazon MSK Provisioned clusters. With this capability, external Apache Kafka clusters configured with OAuth/OIDC authentication can now use MSK Replicator to migrate workloads to Amazon MSK, support disaster recovery by using MSK-based clusters as a failover or backup target and enable data distribution across hybrid and multi-cloud environments.\n \nMSK Replicator is a feature of Amazon MSK that automates data replication between Kafka clusters, eliminating the need to manage custom replication infrastructure or configure open-source tools. Previously, MSK Replicator supported SASL/SCRAM and mTLS authentication for connecting to external Apache Kafka clusters. With this launch, you can now also use OAuth 2.0 authentication with MSK Replicator to replicate data from external Kafka clusters to Amazon MSK. Unlike self-managed replication tools, MSK Replicator lets you retain your original Kafka topic names during replication while automatically avoiding infinite replication loops. It also synchronizes consumer group offsets bidirectionally, enabling you to move producers and consumers across clusters independently, in any order, without coordination constraints or the risk of data loss.\n \nThis new capability is supported in all AWS Regions where MSK Replicator is available. Visit the MSK Replicator documentation, product page, pricing page, and this AWS blog post to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-msk-replicator-OAuth-support",
+      "pubDate": "2026-08-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "kafka",
+        "msk",
+        "launch",
+        "support",
+        "new-capability"
       ]
     },
     {
@@ -615,83 +775,6 @@
         "new-feature",
         "update",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-7e3cf64ffbf8",
-      "title": "AWS Global View now offers an interactive map view for AWS Regions and AWS Local Zones",
-      "description": "Today, AWS announces the addition of an interactive map view to AWS Global View in the AWS Management Console, providing a visual way to explore AWS Global Infrastructure.\n \nPreviously, customers had to scan through a list of AWS locations in AWS Global View. With this new capability, customers can toggle between the interactive map view and the existing list view, making it easier to visualize their global AWS infrastructure footprint. \n \nWhen customers select the map view, they will see all AWS Regions and AWS Local Zones plotted on an interactive map. This capability helps customers make informed infrastructure planning decisions by visualizing already enabled AWS locations and the full range of AWS locations available to them, all in a single glance.\n \nThis capability is available across all public AWS Regions. To get started, navigate to the Regions and Zones page in AWS Global View console. For more information, see the AWS Global View documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-global-view-map-view/",
-      "pubDate": "2026-08-12T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-1bfec895b8c6",
-      "title": "AWS IAM now provides role manager to set up IAM roles automatically",
-      "description": "Today, AWS announces the general availability of role manager, a capability in AWS Identity and Access Management (IAM) that automatically sets up the IAM roles your AWS services need. When you set up a supported service in the console, role manager creates a default role on your behalf, or reuses one that already exists in your account if it already matches the required permissions. You can enable or disable role manager at any time, as well as inspect the AWS-managed templates that role manager deploys on your behalf.\n \nRole manager supports 6 AWS service consoles at launch, including AWS Lambda and Amazon EventBridge. For example, when you create an AWS Lambda function, role manager applies the AWS-managed template for that workflow. Roles created via role manager appear in the IAM console as standard IAM roles that you fully control, and you can identify the ones role manager created. When you are ready to tighten permissions, you can disable role manager and use IAM Access Analyzer to refine each role to only the permissions it needs.\n \nRole manager is available in all AWS Regions, except the AWS GovCloud (US) Regions and the China Regions.\n \nTo learn more, see How AWS IAM role manager rethinks the starting point for IAM roles on the AWS Security Blog, or Create roles automatically with role manager in the IAM User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-role-manager",
-      "pubDate": "2026-08-12T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "iam",
-        "eventbridge"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "iam",
-        "eventbridge",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8217f86ce1bd",
-      "title": "Amazon EKS now supports advanced Kubernetes control plane configuration parameters",
-      "description": "Amazon Elastic Kubernetes Service (Amazon EKS) now supports configuring parameters for Kubernetes control plane components including the scheduler, controller manager, and API server. You can tune pod placement strategies to improve resource utilization, adjust how quickly horizontal pod autoscaling responds to changes in demand, set resource lifecycle parameters such as event retention duration, and more.\n  Cluster administrators now have more control over Kubernetes control plane parameters beyond the defaults. For example, you can set the scheduler's node resource fit strategy parameter to MostAllocated, which packs pods onto nodes that are already well utilized and helps you run the same workloads on fewer nodes. The default LeastAllocated strategy spreads pods across nodes, and you can keep it where headroom matters more than density.\n  You can configure Kubernetes control plane parameters in any AWS Region where Amazon EKS is available. For the full list of configurable parameters and to learn more, see Control plane configuration in the Amazon EKS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-control-plane-configuration-parameters",
-      "pubDate": "2026-08-12T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-150757a81f1e",
-      "title": "Amazon EC2 R8a instances are now available in Canada (Central) region",
-      "description": "Starting today, Amazon EC2 R8a instances are now available in Canada (Central) Region. These instances, feature 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-performance compared to R7a instances.\n \nR8a instances deliver 45% more memory bandwidth compared to R7a instances, making these instances ideal for latency sensitive workloads. Compared to Amazon EC2 R7a instances, R8a instances provide up to 60% faster performance for GroovyJVM, allowing higher request throughput and better response times for business-critical applications.\n \nBuilt on the AWS Nitro System using sixth generation Nitro Cards, R8a instances are ideal for high performance, memory-intensive workloads, such as SQL and NoSQL databases, distributed web scale in-memory caches, in-memory databases, real-time big data analytics, and Electronic Design Automation (EDA) applications. R8a instances offer 12 sizes including 2 bare metal sizes. Amazon EC2 R8a instances are SAP-certified, and providing 38% more SAPS compared to R7a instances.\n \nTo get started, sign in to the AWS Management Console. For more information about the new instances, visit the Amazon EC2 R8a instance page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-r8a-instances-canada-central/",
-      "pubDate": "2026-08-11T22:03:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "now-available"
       ]
     },
     {
