@@ -1,8 +1,141 @@
 {
-  "lastUpdated": "2026-08-26T06:25:47.056Z",
+  "lastUpdated": "2026-08-27T16:58:54.370Z",
   "category": "general",
-  "totalItems": 51,
+  "totalItems": 55,
   "items": [
+    {
+      "id": "aws-news-dc13600b86f8",
+      "title": "Amazon Cognito adds admin API operation to reset user TOTP configurations",
+      "description": "Amazon Cognito now provides a new admin API operation to reset a user's time-based one-time Password (TOTP) multi-factor authentication (MFA) configuration. When users lose access to their TOTP device, administrators can remove the device association, allowing the user to enroll a new device on their next sign-in.\n \nThis removes the need to recreate accounts to recover locked-out users if they lose access to their TOTP device. Customers can maintain MFA enforcement while providing a recovery path.\n \nThis new capability is available in all AWS Regions where Amazon Cognito is available. To get started, access the AdminDeleteSoftwareToken API using the AWS CLI, SDKs, or APIs. See the developer guide for instructions.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cognito-totp-reset/",
+      "pubDate": "2026-08-26T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-d3e3648d1c0f",
+      "title": "Amazon Connect Customer now supports unplanned shrinkage in agent schedules",
+      "description": "Amazon Connect Customer now enables managers to input unplanned shrinkage in agent schedules, providing a more accurate picture of staffing due to unscheduled agent absences such as late logins or unplanned sick leave. Managers can upload unplanned shrinkage assumptions directly into agent schedules and immediately see updated scheduling metrics such as scheduled headcount, net staffing, and projected service level — each adjusted for unplanned shrinkage. For example, if 10% of the agents scheduled to work at 8 AM next Monday are expected to be unavailable due to late logins, then projected service level falls from 90% to 85% with unplanned shrinkage. This enables workforce managers to proactively address gaps in staffing that may arise due to unplanned agent unavailability, thus improving scheduling accuracy and their ability to maintain target service levels.\n \n \n \nThis feature is available in all  AWS Regions  where Amazon Connect Customer agent scheduling is available. To learn more about Amazon Connect Customer agent scheduling, click  here .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-unplanned-shrinkage/",
+      "pubDate": "2026-08-26T20:16:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f8ff2f3f7cbd",
+      "title": "Migrate an OAuth 2.0 authenticated Apache Kafka cluster to Amazon MSK with MSK Replicator",
+      "description": "MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication to external Apache Kafka clusters. This post walks through the three supported grant types, how to configure Replicator for each, the network and TLS prerequisites that are commonly missed, and how to handle identity providers behind an additional federation layer.",
+      "link": "https://aws.amazon.com/blogs/big-data/migrate-an-oauth-2-0-authenticated-apache-kafka-cluster-to-amazon-msk-with-msk-replicator/",
+      "pubDate": "2026-08-26T19:11:40.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "kafka",
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "kafka",
+        "msk",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c15de6473f3d",
+      "title": "Announcing in-place ZooKeeper-to-KRaft cluster upgrades for Amazon MSK",
+      "description": "Amazon MSK now supports in-place upgrades from ZooKeeper to KRaft metadata mode. You can modernize your existing cluster's metadata management through the familiar version upgrade workflow, with no new cluster to provision and no data migration. This post covers the prerequisites and the step-by-step upgrade process.",
+      "link": "https://aws.amazon.com/blogs/big-data/announcing-in-place-zookeeper-to-kraft-cluster-upgrades-for-amazon-msk/",
+      "pubDate": "2026-08-26T18:59:47.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "msk"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "msk",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-fbb6d56eac0a",
+      "title": "Get started with the Agent Toolkit for AWS in the AWS CLI",
+      "description": "AI coding agents such as Kiro, Claude Code, Codex, Cursor, and others play an increasingly important role in developer workflows. They write code, fix bugs, scaffold projects, and build infrastructure. By default, these agents have general knowledge of AWS. The Agent Toolkit for AWS gives them specialized, up-to-date expertise, so they’re more likely to pick […]",
+      "link": "https://aws.amazon.com/blogs/developer/get-started-with-the-agent-toolkit-for-aws-in-the-aws-cli/",
+      "pubDate": "2026-08-26T18:14:37.000Z",
+      "source": "developersAndDevOps",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-4a5791a140ee",
+      "title": "Mountpoint for Amazon S3 adds memory usage controls",
+      "description": "Mountpoint for Amazon S3 can now limit memory usage, either automatically based on the environment it runs in or with a limit that you define. This lets you run Mountpoint alongside memory-intensive applications, for example, in machine learning training or analytics workloads where applications share a memory budget.\n \nPreviously, Mountpoint’s memory usage could expand over time based on usage patterns, potentially causing performance or stability issues when competing with other memory-intensive applications. With this launch, you can define a memory target for Mountpoint to reserve memory for your applications. Alternatively, Mountpoint can automatically determine a safe default based on the environment it runs in. For example, when running in Amazon EKS, Mountpoint can automatically detect a container's assigned memory budget. Under memory pressure, Mountpoint slows down operations to stay within this budget, enabling you to run Mountpoint in containers with strict memory allocations.  \n \nMountpoint is available in all AWS Regions. To upgrade to the latest version, visit the Mountpoint GitHub repository. To learn more about Mountpoint, see the overview page and the configuration guide in the Mountpoint GitHub repository.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/mountpoint-for-S3-adds-memory-usage-controls",
+      "pubDate": "2026-08-26T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "eks",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-6014a5a7d032",
+      "title": "AWS and DuckLabs: Building the future of analytics together",
+      "description": "Today we are announcing that Amazon has signed a definitive agreement to acquire DuckLabs, the Amsterdam-based company behind the open-source analytical database DuckDB. We expect the transaction to close shortly, subject to customary closing conditions. Hannes Mühleisen and Mark Raasveldt, who created DuckDB and co-founded DuckLabs, will continue leading the team and the open-source project's technical direction as part of AWS. The DuckDB open-source project will also continue to be driven by the DuckLabs team, remain open source under the independent Foundation (the non-profit that oversees DuckDB), and available under the MIT license as it does today.",
+      "link": "https://aws.amazon.com/blogs/big-data/aws-and-ducklabs-building-the-future-of-analytics-together/",
+      "pubDate": "2026-08-26T13:28:34.000Z",
+      "source": "bigDataBlog",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-b819fdff7377",
+      "title": "AWS Backup adds cross-Region backup copy and logically air-gapped vault support for Amazon DocumentDB in nine additional AWS Regions",
+      "description": "AWS Backup now supports copying Amazon DocumentDB backups across AWS Regions and storing them in logically air-gapped vaults in nine additional AWS Regions: Asia Pacific (Hong Kong, Jakarta, Melbourne, Osaka), Europe (Spain, Stockholm, Zurich), Africa (Cape Town), and Israel (Tel Aviv).\n \nWith cross-Region copy now available in these Regions, you can copy DocumentDB backups into and out of them using backup plans or on-demand copy jobs. This helps you meet disaster recovery, business continuity, and compliance requirements. You can also copy DocumentDB backups to a logically air-gapped vault in these Regions to store immutable, isolated backups that are locked by default and encrypted using AWS owned or customer-managed keys. Share vaults for recovery using AWS Resource Access Manager (RAM) and protect vault access during account compromise with Multi-party approval, reducing recovery time from a data loss event.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the product page and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-backup-cross-region-air-gapped-docdb/",
+      "pubDate": "2026-08-26T10:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-b52a1aedb1ea",
       "title": "AWS IoT Core now supports native InfluxDB routing for time-series data",
@@ -701,27 +834,6 @@
       ]
     },
     {
-      "id": "aws-news-98d6eabccea3",
-      "title": "How Autodesk migrated 2.3 billion documents to Amazon OpenSearch Service using Migration Assistant and intelligent routing",
-      "description": "This post walks through how Autodesk re-architected a single-index Elasticsearch 7.1.1 domain on Amazon OpenSearch Service into four multi-index OpenSearch Service domains, using Migration Assistant for Amazon OpenSearch Service and a routing layer that directs each query to the shards that hold the data for that query.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-autodesk-migrated-2-3-billion-documents-to-amazon-opensearch-service-using-migration-assistant-and-intelligent-routing/",
-      "pubDate": "2026-08-14T14:40:11.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "opensearch",
-        "opensearch service",
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "rds"
-      ]
-    },
-    {
       "id": "aws-news-6c20f7e7c449",
       "title": "Observability best practices for Lambda durable functions",
       "description": "Learn observability best practices for AWS Lambda durable functions, including CloudWatch metrics, custom alarms, structured logging, and X-Ray tracing for debugging callback timeouts end-to-end.",
@@ -738,43 +850,6 @@
       "tags": [
         "lambda",
         "cloudwatch"
-      ]
-    },
-    {
-      "id": "aws-news-6204d783f881",
-      "title": "Amazon SES click tracking now supports custom URL paths for mobile app deep linking",
-      "description": "Amazon Simple Email Service (SES) now makes it easier to support mobile deep linking with the new ses:custom-path HTML attribute. When you add this attribute to an <a> tag, SES carries your path segment through to the tracking URL, so mobile operating systems can match it to your app's Universal Links (iOS) or App Links (Android) configuration. This enables you to use mobile deep linking without disabling engagement tracking.\n \nThis feature is available in all AWS Regions where Amazon SES is available. To use this feature, you need a custom redirect domain for click tracking with an Apple App Site Association (AASA) or Digital Asset Links verification file hosted on that domain. Then, add the ses:custom-path attribute to links in your HTML emails.\n \nTo learn more, see Configuring custom domains to handle open and click tracking and the Amazon SES email sending metrics FAQs in the Amazon SES Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-supports-customurl-deeplinking",
-      "pubDate": "2026-08-14T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-6307e537f47e",
-      "title": "AWS Client VPN now supports CLI, administration controls, and faster connections",
-      "description": "AWS Client VPN introduces a rebuilt AWS VPN Client v6.0.x which offers new features like command-line interface (CLI) support, enterprise administrative controls, and faster connection establishment time, making it easier you to automate VPN connectivity and centralize device management across your organization.\n  The AWS VPN Client CLI provides full feature parity with the GUI. You can now script VPN connections into your automation workflows and infrastructure-as-code deployments. Previously, integrating VPN connectivity into automated environments required third-party tooling or manual intervention. This feature eliminates that by supporting background CLI operations. Previously, you had to distribute VPN profiles among all users in your organization, which could be managed by any user without permissions. Now, with administration controls on AWS client, you can centralize VPN policy enforcement by scoping profiles to specific users, manage global profiles available to all users on a device, and enforce approved VPN configurations across your organization.\n  The client is rebuilt with OpenVPN3, delivering faster connection establishment across all supported operating systems. You can use both the GUI and CLI together as both run concurrently and VPN connections persist independently of either interface. The rebuilt client v6.0 onwards maintains full backward compatibility with existing AWS Client VPN endpoints, so no endpoint changes are required. The updated AWS VPN Client is available today for Windows (x64/ARM), macOS (x64/ARM), and Linux (x64). There are no additional charges beyond standard pricing of AWS Client VPN. Download the latest client version 6.0.x for macOS, Windows and Linux to start using it. \n  To learn more about Client VPN, visit the AWS Client VPN product page or read the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-client-vpn-cli/",
-      "pubDate": "2026-08-13T20:49:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "ga",
-        "new-feature",
-        "update",
-        "support"
       ]
     },
     {
@@ -872,23 +947,6 @@
         "nova",
         "lambda",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-52de1ac24cf0",
-      "title": "Eclipse Dataspace Components on AWS: Architecture patterns in production",
-      "description": "Running Eclipse Dataspace Components (EDC) connectors in production on AWS requires deliberate architecture decisions around isolation, managed services, and security layering. In Part 1 of this series, we covered the fundamentals of data space architectures and EDC per the International Data Space Association’s (IDSA) standards. If you are new to EDC, we recommend starting there. […]",
-      "link": "https://aws.amazon.com/blogs/architecture/eclipse-dataspace-components-on-aws-architecture-patterns-in-production/",
-      "pubDate": "2026-07-17T16:03:44.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds"
       ]
     },
     {

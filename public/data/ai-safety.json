@@ -1,8 +1,31 @@
 {
-  "lastUpdated": "2026-08-26T06:25:47.056Z",
+  "lastUpdated": "2026-08-27T16:58:54.370Z",
   "category": "ai-safety",
-  "totalItems": 22,
+  "totalItems": 21,
   "items": [
+    {
+      "id": "aws-news-74a6133fc405",
+      "title": "AWS Glue 5.1 is now available in AWS European Sovereign Cloud Region",
+      "description": "AWS Glue 5.1 is now available in the AWS European Sovereign Cloud Region.\n  AWS Glue is a serverless, scalable data integration service that simplifies discovering, preparing, moving, and integrating data from multiple sources. AWS Glue 5.1 upgrades core engines to Apache Spark 3.5.6, Python 3.11, and Scala 2.12.18, bringing performance and security enhancements. This release also updates support for open table format libraries, including Apache Hudi 1.0.2, Apache Iceberg 1.10.0, and Delta Lake 3.3.2. Additionally, AWS Glue 5.1 introduces support for Apache Iceberg format version 3.0, adding default column values, deletion vectors for merge-on-read tables, multi-argument transforms, and row lineage tracking. This release extends AWS Lake Formation fine-grained access control to write operations - both DML and DDL - for Spark DataFrames and Spark SQL. Previously, this capability was limited to read operations only. AWS Glue 5.1 also adds full-table access control in Apache Spark for Apache Hudi and Delta Lake tables, providing more comprehensive security options for your data.\n  With this expansion, AWS Glue 5.1 is now available all AWS commercial and AWS GovCloud (US) Regions.\n  You can get started with AWS Glue 5.1 using AWS APIs, AWS CLI, AWS SDK, or AWS Glue Studio. To learn more, visit the AWS Glue product page and our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-glue-5-1-european-sovereign-cloud",
+      "pubDate": "2026-08-26T16:26:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "glue"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "glue",
+        "now-available",
+        "update",
+        "enhancement",
+        "integration",
+        "support",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-c942e79b33d8",
       "title": "Enable cross-cloud analytics with Amazon S3 Tables and Google BigQuery, Part 1: IAM-based access control",
@@ -85,6 +108,34 @@
         "organizations",
         "ga",
         "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b6629ef54605",
+      "title": "AWS Glue now supports catalog federation for remote Apache Iceberg catalogs in AWS GovCloud (US) regions",
+      "description": "AWS Glue now supports catalog federation for remote Iceberg REST catalogs in AWS GovCloud (US) Regions. This capability provides direct and secure access to Iceberg tables, stored in Amazon S3 and cataloged in remote catalogs, using AWS analytics engines.\n \nWith catalog federation, you can federate to Iceberg tables in remote catalogs using your preferred AWS analytics engines, without moving or copying tables. It synchronizes metadata real-time between AWS Glue Data Catalog and the remote catalog when data teams query Iceberg tables, which means that query results are always up-to-date with latest metadata. You can now choose the best price-performance for your workloads when analyzing remote Iceberg tables using your preferred AWS analytics engines, while maintaining consistent security controls when discovering or querying data. Catalog federation is supported by a wide variety of analytics engines, including Amazon Redshift, Amazon EMR, Amazon Athena, AWS Glue, and third-party engines like Apache Spark.\n \nCatalog federation uses AWS Lake Formation for access controls, allowing you to use fine-grained access controls, cross-account sharing, and trusted identity propagation when sharing remote catalog tables with other data consumers. Catalog federation integrates with catalog implementations that support the Iceberg REST specifications.\n \nCatalog federation is available in Lake Formation console and using AWS Glue and Lake Formation SDKs and APIs. This feature is generally available AWS GovCloud (US-East) and AWS GovCloud (US-West) regions. To learn more, visit the documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-glue-catalog-federation-iceberg-govcloud/",
+      "pubDate": "2026-08-24T20:50:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "emr",
+        "redshift",
+        "glue",
+        "athena"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "s3",
+        "emr",
+        "redshift",
+        "glue",
+        "athena",
+        "generally-available",
+        "ga",
         "support"
       ]
     },
@@ -351,68 +402,6 @@
         "iam",
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-6666eb5b4177",
-      "title": "Amazon Quick now supports data loss prevention with Microsoft Purview",
-      "description": "Amazon Quick now integrates with Microsoft Purview to enforce data loss prevention (DLP) policies across your Quick environment. Organizations need to ensure that sensitive files aren't shared outside approved channels. With this integration, IT administrators and security teams can apply their existing Purview sensitivity labels to automatically control how files are handled in Quick capabilities such as chat, spaces, and knowledge bases.\n \nAdministrators can configure enforcement actions (block, warn, or allow) for each sensitivity label, giving organizations granular control over sensitive file sharing across Quick. For example, a financial services company can block files labeled \"Highly Confidential\" from being uploaded to shared spaces while allowing \"Internal\" files with a warning notification. With this integration, customers can extend their existing Microsoft Purview governance policies into Quick without additional tools.\n \nThis feature is available in all AWS Regions where Amazon Quick agentic capabilities are supported. For more information, see the AWS Region table. To learn more, see Data loss prevention in the Amazon Quick User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-quick-dlp-purview/",
-      "pubDate": "2026-08-14T21:04:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "organizations",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-47f961d1a876",
-      "title": "Amazon Quick now supports approval policies for sharing",
-      "description": "Amazon Quick now offers approval policies, giving administrators governance controls over how assets are shared within their organization. With approval policies, administrators can require designated approvers to review and approve share requests before access is granted, helping organizations ensure that sharing of sensitive assets is deliberate, compliant, and auditable.\n \nAdministrators can create approval policies scoped to specific asset types, including knowledge bases, spaces, and custom chat agents. When a user submits a share request for an asset covered by a policy, it is routed to the assigned approver group for review. Approvers can evaluate the asset directly before approving or denying the request, and all workflow events are captured in AWS CloudTrail for full auditability. For custom chat agents, approvers can review and act on the entire dependency package in a single request.\n \nThis feature is available for Professional and Enterprise plans, in all AWS Regions where Amazon Quick agentic capabilities are supported. For more information, see the AWS Region table.\n \nLearn more about Amazon Quick by visiting the Quick website. To learn more about approval policies, see Approval policies in the Amazon Quick User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-quick-approval-policies-sharing/",
-      "pubDate": "2026-08-14T21:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "organizations",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-d0cc91eb8b9c",
-      "title": "Daybreak Red and Daybreak Blue from OpenAI are now available to eligible customers on Amazon Bedrock",
-      "description": "Security teams can now access Daybreak Red and Daybreak Blue from OpenAI on Amazon Bedrock. Both are part of Daybreak, the cyber defense initiative from OpenAI that gives defenders governed access to frontier AI for cybersecurity work.\n \nDaybreak Blue is the starting point for most security teams across defensive workflows including vulnerability discovery, detection engineering, and incident response. Daybreak Red is designed for advanced, authorized tasks such as vulnerability research, exploit reproduction, and mitigation development. For these tasks, a lower refusal threshold matched by stronger identity verification, monitoring, and access controls improves the speed and depth of an investigation. Both models run on Bedrock's next-generation inference engine with zero-operator access (ZOA) enforced at the chip. Your inference data is not used for model training, and neither model requires you to opt into sharing your data with OpenAI.\n \nDaybreak Red: GPT-5.6 Cyber and Daybreak Blue: GPT-5.6 Sol are now available to eligible customers on Amazon Bedrock in the following AWS Region: US East (Ohio). Access to the models requires enrollment in Daybreak access from OpenAI. To enroll, contact OpenAI or reach out to your AWS account team for guidance on eligibility. Once approved, work with your account team to request access on AWS. To learn more, read the blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/openai-daybreak-red-and-blue-on-amazon-bedrock/",
-      "pubDate": "2026-08-13T16:12:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "ga",
-        "now-available"
       ]
     },
     {
