@@ -1,8 +1,65 @@
 {
-  "lastUpdated": "2026-08-27T16:58:54.370Z",
+  "lastUpdated": "2026-08-28T17:48:39.077Z",
   "category": "general",
-  "totalItems": 55,
+  "totalItems": 54,
   "items": [
+    {
+      "id": "aws-news-96ecb5ad08d0",
+      "title": "Amazon Redshift streaming can now ingest 10MiB records from Amazon Kinesis Data Streams",
+      "description": "Amazon Redshift  now supports Amazon Kinesis Data Streams (KDS) record sizes up to 10 MiB—a 10x increase from the previous 1 MiB limit—fully matching the expanded maximum record size in Amazon KDS. This means you can stream significantly larger payloads directly into Amazon Redshift without splitting records, simplifying your ingestion pipelines and unlocking new use cases for high-volume, large-record workloads.\n \nAmazon Redshift support for 10MiB record size in Amazon KDS streams is now available in all commercial AWS regions where Amazon Redshift is available. For more information on direct streaming ingestion into Amazon Redshift, see the Amazon Redshift streaming documentation. For more information on 10MiB record support in Amazon KDS, see the Amazon KDS documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-streaming-supports-kds-10mib-records",
+      "pubDate": "2026-08-27T21:41:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "rds",
+        "kinesis"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "rds",
+        "kinesis",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-62b3137c499d",
+      "title": "Amazon EC2 X8i instances are now available in additional regions",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8i instances are available in the Europe (Milan) and Europe (Spain) regions. These instances are powered by custom Intel Xeon 6 processors available only on AWS. X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. They deliver up to 43% higher performance, 1.5x more memory capacity (up to 6TB), and 3.3x more memory bandwidth compared to previous generation X2i instances. \n  \n X8i instances are designed for memory-intensive workloads like SAP HANA, large databases, data analytics, and Electronic Design Automation (EDA). Compared to X2i instances, X8i instances offer up to 50% higher SAPS performance, up to 47% faster PostgreSQL performance, 88% faster Memcached performance, and 46% faster AI inference performance. X8i instances come in 14 sizes, from large to 96xlarge, including two bare metal options. \n  \n To get started, visit the AWS Management Console. X8i instances can be purchased via Savings Plans, On-Demand instances, and Spot instances. For more information visit X8i instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-x8i-europe-milan-spain/",
+      "pubDate": "2026-08-27T18:40:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-560127db2d29",
+      "title": "AWS Elastic Disaster Recovery introduces Recovery Plans for orchestrated application recovery",
+      "description": "AWS Elastic Disaster Recovery (AWS DRS) now offers Recovery Plans, a capability that automates the sequential launch of multi-server applications during recovery and drills. Instead of launching servers one at a time and tracking dependencies manually, you define the recovery sequence once and run it with a single action when you need it. This addresses a common challenge for customers running applications made up of databases, application tiers, and supporting services that must come up in a specific order.\n \nRecovery Plans let you group servers into sequential steps with configurable wait times between them, so your application recovers predictably and consistently every time. You can run plans in a non-disruptive drill mode to validate your procedures, add approval steps where you want a person in the loop, and monitor progress in real time. This automation reduces recovery time and eliminates common errors that occur when coordinating server launch order during high-stress disaster scenarios.\n \nRecovery Plans are available in all AWS Regions where AWS DRS is offered, at no additional cost beyond standard DRS usage. To learn more, visit the AWS Elastic Disaster Recovery User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/elastic-disaster-recovery-plans/",
+      "pubDate": "2026-08-27T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-dc13600b86f8",
       "title": "Amazon Cognito adds admin API operation to reset user TOTP configurations",
@@ -737,79 +794,6 @@
         "general"
       ],
       "tags": [
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0619e722502d",
-      "title": "Amazon EC2 Auto Scaling now supports batch instance termination",
-      "description": "Amazon EC2 Auto Scaling now supports batch instance termination in a single API call. You can now pass up to 100 instance IDs to the TerminateInstanceInAutoScalingGroup API to terminate them as a batch, reducing the number of API calls needed to scale down your Auto Scaling groups.\n \nBatch termination is designed for workloads that need to rapidly scale down, such as AI/ML training jobs, container orchestrators, or event-driven architectures that spin up large fleets temporarily. All instances in a batch are validated atomically before termination begins, and existing Auto Scaling behaviors such as lifecycle hooks and load balancer connection draining are preserved for each instance in the batch.\n \nThis feature is available in all AWS Regions at no additional cost.\n \nTo learn more, visit Amazon EC2 Auto Scaling User Guide and Amazon EC2 Auto Scaling API Reference Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-auto-scaling-batch-termination",
-      "pubDate": "2026-08-17T18:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0ab40a9322a9",
-      "title": "Amazon MSK now supports configuring custom domain names for MSK Provisioned clusters",
-      "description": "You can now easily configure custom domain names on Amazon MSK Provisioned clusters, on either ZooKeeper or KRaft mode for metadata management. This capability helps client applications maintain the same connection endpoints, simplifying cluster migrations, disaster recovery failovers, and scaling operations without reconfiguration.\n \nPreviously, customers configured custom domain names manually on each broker. Additionally, on KRaft-based clusters, customers could not configure custom domain names. With this launch, you can now easily define a custom domain once at the cluster level, and Amazon MSK automatically applies it to every broker in the cluster, eliminating the need to configure each broker individually. The configuration persists through scaling operations and works identically on both ZooKeeper and KRaft-based clusters. This is particularly useful for customers who route traffic through Network Load Balancers, require persistent endpoints across cluster operations, or must adhere to organizational naming conventions for security and compliance.\n \nYou can configure custom domain names on all new and existing MSK Provisioned clusters, in all AWS Regions where Amazon MSK Provisioned is available, at no additional cost. To learn more, see the Amazon MSK Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/17/amazon-msk-custom-domain-names/",
-      "pubDate": "2026-08-17T18:01:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "msk",
-        "launch",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fbfae286aa63",
-      "title": "Amazon Connect Customer dashboards now support reporting on routing steps and agent proficiencies",
-      "description": "Amazon Connect Customer dashboards now support reporting on routing steps and agent proficiencies enabling supervisors to monitor and optimize how contacts are matched to agents based on agent proficiencies. Managers can filter agents by their assigned proficiencies, group metrics by routing steps, and track new metrics including number of contacts queued in a routing step. For example, a supervisor notices a spike in queued contacts at a routing step requiring highly skilled agents, then relaxes the routing criteria to expand the agent pool and reduce wait times.\n  Routing steps and agent proficiencies reporting on analytics dashboards is available in all AWS commercial and AWS GovCloud (US-West) regions where Amazon Connect Customer is offered. To learn more about Amazon Connect Customer analytics dashboards, see the Amazon Connect Customer Administrator Guide. To learn more about Amazon Connect Customer, the AWS cloud-based contact center, please visit the Amazon Connect Customer website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-routing-steps/",
-      "pubDate": "2026-08-17T17:23:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-fb1c6ba09646",
-      "title": "Amazon Location Service now supports POI category and density filtering in map styles",
-      "description": "Today, Amazon Location Service adds per-category and density-based Point of Interest (POI) filtering to its maps. Developers gain server-side control over the density of POIs and which categories of places appear on a map. Developers control this behavior through the GetStyleDescriptor API. Amazon Location Service is a fully managed service that helps developers add maps, places, routing, and tracking to applications using high-quality geospatial data. Previously, every map style rendered all POI categories, and developers who wanted to tailor POIs to their use case relied on a client-side workaround tied to internal style layer identifiers.\n \nWith this launch, the developer provides new poi-categories and poi-density query parameters. The poi-categories parameter takes an allowlist of categories - such as Food & Drink, Transit, or Accommodations—and the poi-density parameter tunes how many POIs appear on the map. Amazon Location Service returns a style descriptor that renders only the requested categories at the chosen density. Filtering is configured server-side, so maps display correctly with no additional code required on the client side, on web, mobile, and headless server-side renderers alike. A property-listing site can surface only accommodations, a logistics fleet app can show only transit and fuel, and a tourist map can highlight sights and dining. \n \nAmazon Location Service is available in the following AWS Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), South America (São Paulo), and AWS GovCloud (US-West).\n \nTo get started, see Map features in the Amazon Location Service Developer Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-location-service/amazon-location-poi-categorization-density-map-styles",
-      "pubDate": "2026-08-17T14:25:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "ga",
         "support"
       ]
     },

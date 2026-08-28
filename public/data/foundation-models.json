@@ -1,8 +1,55 @@
 {
-  "lastUpdated": "2026-08-27T16:58:54.370Z",
+  "lastUpdated": "2026-08-28T17:48:39.077Z",
   "category": "foundation-models",
-  "totalItems": 6,
+  "totalItems": 7,
   "items": [
+    {
+      "id": "aws-news-88d24157ee15",
+      "title": "Cosmos3-Edge, Cosmos3-Nano, and Cosmos3-Super models now available on Amazon SageMaker JumpStart",
+      "description": "NVIDIA's Cosmos3-Edge, Cosmos3-Nano, and Cosmos3-Super models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These three models form the Cosmos 3 family of open, frontier omnimodal world models for physical AI, enabling customers to build robots, autonomous vehicles, and vision AI that perceive, reason, plan, and act in the physical world.\n \nThese models address different physical AI challenges with specialized capabilities:\n \nCosmos3-Edge is engineered for on-device robot control and real-time visual reasoning on edge hardware. This 4B-parameter omni-model (with a 2B Nemotron-based reasoner) operates at robot-control resolution (640×360), delivering real-time reasoning and generating 32 actions per inference at 15 Hz on NVIDIA Jetson Thor. It supports 256p and 480p video at 12–30 FPS, bringing frontier physical AI capabilities directly to embedded systems.\n \nCosmos3-Nano excels in physics-aware world generation and physical reasoning as a compact 16B-parameter omnimodal model. It processes combinations of text, image, video, audio, and action trajectories to produce corresponding outputs, enabling robots and vision AI agents to reason using prior knowledge, physics understanding, and common sense. It supports chain-of-thought reasoning over text, images, and video with resolutions up to 720p.\n \nCosmos3-Super provides the highest-fidelity world generation and simulation in the Cosmos 3 family at 64B parameters. It jointly processes and generates language, images, video, audio, and action sequences within a unified Mixture-of-Transformers architecture, supporting resolutions up to 720p across multiple aspect ratios. Ideal for large-scale simulation, synthetic data generation, and policy learning workflows.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/cosmos3-edge-cosmos3-nano-cosmos3-super-on-sagemaker-jumpstart/",
+      "pubDate": "2026-08-27T22:41:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "s3"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "s3",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8b0843007eb0",
+      "title": "Muse-Glimmer-30B and Qwen 3.8-27B models now available on Amazon SageMaker JumpStart",
+      "description": "Meta's Muse-Glimmer-30B and Alibaba's Qwen 3.8-27B models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These two models bring specialized capabilities spanning autonomous local agentic workflows and multimodal long-horizon reasoning, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nThese models address different enterprise AI challenges with specialized capabilities:\n \nMuse-Glimmer-30B is engineered for autonomous agentic tasks with multi-step reasoning, tool use, and failure recovery. This 30B-parameter dense model from Meta Superintelligence Lab combines a dedicated ~1.8B ViT-G/14 perception encoder with interleaved text and image inputs, a 131K+ context window, and selectable reasoning strength (low through extra-high). Released under Apache 2.0, it handles sequential tool calls, recovers from failures, and operates entirely without cloud infrastructure which is ideal for always-on enterprise agents.\n \nQwen 3.8-27B excels in coding, multi-step agentic tasks, and multimodal understanding across text, images, and video. A dense 27B-parameter native vision-language model with a 262K context window (extendable to ~1M via YaRN scaling), it delivers substantial gains over its predecessor with adjustable reasoning effort levels. Scoring 61.7 on SWE-bench Pro and running at ~17GB quantized, it carries complex multi-step tasks through to completion with greater reliability.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/muse-glimmer-30b-qwen-3.8-27b-on-sagemaker-jumpstart/",
+      "pubDate": "2026-08-27T22:39:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "lex"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "lex",
+        "ga",
+        "now-available"
+      ]
+    },
     {
       "id": "aws-news-46bfe702790d",
       "title": "Bring your own model with Amazon SageMaker AI: Script mode in SDK v3",
@@ -96,31 +143,6 @@
         "agentcore",
         "generally-available",
         "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-ade62b32dd32",
-      "title": "Amazon Bedrock expands API support and introduces Cross Region Inferencing for OpenAI models",
-      "description": "Amazon Bedrock now supports the OpenAI GPT-5.6 models (Sol, Terra, and Luna) on the bedrock-runtime endpoint, with support for the Responses, Converse, and Chat Completions APIs. It also adds support for cross-Region inference, allowing customers to use Global and Geo cross-Region inference to access higher throughput and lower inference costs.  \n \nCross-Region inference automatically routes inference requests across multiple AWS Regions to give you higher throughput, without you needing to manage capacity across multiple Regions. Geo cross region inference routes requests within a predefined geography—including new US Geo (US CRIS) support with this launch—so you can scale while keeping data processed within that geography, while Global cross region inference serve requests from any commercial AWS Region where the model is available, giving you the broadest access to Bedrock capacity and the highest throughput during demand spikes. With Global cross-Region inference you also get lower costs as Global inferencing is priced lower per token for OpenAI models than in-Region and Geo inferencing. This launch also expands API support—you can also use OpenAI GPT models with the Responses API, Chat Completions API, and the Converse API on the bedrock-runtime endpoint. Because these native OpenAI APIs now run on bedrock-runtime, the models work with the same account-level controls you already use for other models on Bedrock: usage appears in Bedrock model invocation logging (deliverable to Amazon S3 or Amazon CloudWatch Logs) and in Amazon CloudWatch metrics covering invocation counts, token counts, latency, throttles, and errors, and it is itemized in AWS Cost Explorer and the AWS Cost and Usage Report so you can attribute spend by model.\n \nCross-Region inference for OpenAI models is available in all AWS Regions where OpenAI models on Amazon Bedrock are offered. To get started, review the model cards for GPT 5.6 (Sol, Tera and Luna) in the Amazon Bedrock User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-cross-region-openai-v2/",
-      "pubDate": "2026-08-17T20:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "s3",
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "foundation-models"
-      ],
-      "tags": [
-        "bedrock",
-        "s3",
-        "rds",
-        "cloudwatch",
-        "launch",
         "support"
       ]
     }
