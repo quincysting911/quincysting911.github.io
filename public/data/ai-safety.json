@@ -1,8 +1,44 @@
 {
-  "lastUpdated": "2026-08-28T17:48:39.077Z",
+  "lastUpdated": "2026-08-29T11:52:56.660Z",
   "category": "ai-safety",
-  "totalItems": 25,
+  "totalItems": 26,
   "items": [
+    {
+      "id": "aws-news-5b981ff5ea6d",
+      "title": "Amazon Bedrock AgentCore Memory now supports fine-grained access control",
+      "description": "Amazon Bedrock AgentCore Memory now supports fine-grained access control (FGAC), enabling you to enforce per-user and per-tenant memory isolation through AgentCore Gateway without building custom authorization logic.\n \n\n With FGAC, you can front your Memory resource with an AgentCore Gateway configured for OAuth (JWT) authentication and attach Cedar policies that restrict access based on the authenticated caller's identity. You can enforce that each user only accesses their own actor's data, restrict memory records to namespaces derived from the user's token claims, and allow or deny specific Memory operations per caller. This lets you move access control enforcement from application code to the infrastructure layer using cryptographic proof of identity. FGAC for Memory is built on the AgentCore Memory connector, a managed gateway connector that wires a gateway target to the Memory data plane and exposes 12 Memory operations as Cedar actions with their request attributes available for policy conditions.\n \nTo get started, see Fine-grained access control for Memory in the Amazon Bedrock AgentCore Developer Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/agentcorememory-fine-grained-access-control",
+      "pubDate": "2026-08-28T20:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "rds"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-41a7d4a546aa",
+      "title": "AWS Transform now in scope for FedRAMP Class C",
+      "description": "AWS Transform is now in scope for FedRAMP Class C (formerly Moderate baseline) in the US East (Ohio) Region. You can now use AWS Transform to build applications and run workloads that are subject to FedRAMP Class C compliance requirements.\n \nThe Federal Risk and Authorization Management Program (FedRAMP) is a US government-wide program that delivers a standard approach to the security assessment, authorization, and continuous monitoring for cloud products and services. AWS Transform is an agentic migration and modernization service designed to compress enterprise timelines from years to months — handling everything from large-scale infrastructure migrations to continuous tech debt reduction, without the manual handoffs and lost context that commonly stall these programs.\n \nTo learn more about FedRAMP, visit the AWS services in scope page. To learn more about AWS Transform, visit the webpage and documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-transform-fedramp-class-c/",
+      "pubDate": "2026-08-28T19:45:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": []
+    },
     {
       "id": "aws-news-581fe692946f",
       "title": "Amazon Aurora MySQL 3.13 (compatible with MySQL 8.0.45) is generally available",
@@ -463,27 +499,6 @@
         "iam",
         "ga",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-c97d40ad0438",
-      "title": "IAM Policy Autopilot now supports Terraform plan files",
-      "description": "IAM Policy Autopilot can now generate baseline IAM policies directly from a Terraform plan file. IAM Policy Autopilot is an open source tool, launched at re:Invent 2025, that analyzes your code to deterministically create scoped-down IAM policies you can refine as your application evolves, reducing the time you spend writing IAM policies and troubleshooting access issues. Until now the tool analyzed application source code, but it was not possible to generate policies for deploying AWS infrastructure defined via Infrastructure as Code.\n \nNow you can pass a Terraform plan file as input, and IAM Policy Autopilot applies a deterministic analysis to produce a policy scoped to the CRUD functions of the resources in that plan. The generated policies reference specific resource ARNs rather than wildcards, when possible. Supporting policy generation for deploying AWS infrastructure defined via Terraform has been the most requested capability since IAM Policy Autopilot launched, and it complements the existing Terraform-aware analysis, which cross-references Terraform resource definitions with SDK calls in your application code to resolve ARNs.\n \nIAM Policy Autopilot is available at no additional cost and runs on your own machine. To get started, visit the IAM Policy Autopilot GitHub repository.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/iam-policy-autopilot-now-supports-terraform-plan-files",
-      "pubDate": "2026-08-18T17:19:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "rds",
-        "iam",
-        "launch",
-        "support"
       ]
     },
     {

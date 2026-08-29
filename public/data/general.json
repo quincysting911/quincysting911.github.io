@@ -1,8 +1,52 @@
 {
-  "lastUpdated": "2026-08-28T17:48:39.077Z",
+  "lastUpdated": "2026-08-29T11:52:56.660Z",
   "category": "general",
-  "totalItems": 54,
+  "totalItems": 51,
   "items": [
+    {
+      "id": "aws-news-378e6e7afdc9",
+      "title": "Amazon EC2 C8gn instances are now available in AWS Europe (Paris) region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C8gn instances, powered by the latest-generation AWS Graviton4 processors, are available in the AWS Europe (Paris) region. The C8gn instances provide up to 30% better compute performance than Graviton3-based Amazon EC2 C7gn instances. Amazon EC2 C8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network optimized EC2 instances. \n \nTake advantage of the enhanced networking capabilities of C8gn to scale performance and throughput, while optimizing the cost of running network-intensive workloads such as network virtual appliances, data analytics, CPU-based artificial intelligence and machine learning (AI/ML) inference. \n \nFor increased scalability, C8gn instances offer instance sizes up to 48xlarge, up to 384 GiB of memory, and up to 120 Gbps of bandwidth to Amazon Elastic Block Store (EBS). C8gn instances support Elastic Fabric Adapter (EFA) networking on the 16xlarge, 24xlarge, 48xlarge, metal-24xl, and metal-48xl sizes, which enables lower latency and improved cluster performance for workloads deployed on tightly coupled clusters. \n \nC8gn instances are available in the following AWS Regions: US East (N. Virginia, Ohio), US West (Oregon, N.California), Europe (Frankfurt, Stockholm, Ireland, London, Spain, Zurich, Milan, Paris), Asia Pacific (Singapore, Malaysia, Sydney, Thailand, Mumbai, Seoul, Melbourne, Jakarta, Hyderabad, Tokyo, Hong Kong), Middle East (UAE), Africa (Cape Town), Canada West (Calgary, Central), South America (Sao Paulo), AWS GovCloud (US-East, US-West).\n  \n To learn more, see Amazon C8gn Instances. To begin your Graviton journey, visit the Level up your compute with AWS Graviton page. To get started, see AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-c8gn-europe-paris/",
+      "pubDate": "2026-08-28T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "graviton",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-25f3b573b57d",
+      "title": "Amazon CloudWatch agent adds support for journald logs",
+      "description": "AWS announces support for collecting systemd journal (journald) logs with the Amazon CloudWatch agent. You can now configure the CloudWatch agent to read log entries directly from the systemd journal on Linux instances and send them to Amazon CloudWatch Logs, without first writing those logs to files on disk.\n \nMany modern Linux distributions, including Amazon Linux 2023, use systemd journal as the primary logging system and no longer write traditional text log files such as /var/log/messages by default. Previously, collecting these logs with the CloudWatch agent required additional configuration to export the journal to files on disk. With this launch, the CloudWatch agent reads journald entries natively, preserving the structured metadata that journald captures, such as the systemd unit, priority, and process information. You can filter log entries using systemd units, journal priority levels, and journal field matches, and you can apply regular expression filters before logs are published to CloudWatch Logs. This helps you reduce noise and control log volume and costs.\n \nSupport for journald in the CloudWatch agent is available in all AWS Commercial Regions and GovCloud(US) regions. Standard Amazon CloudWatch Logs pricing applies for ingested logs. For more information, see Amazon CloudWatch Pricing page.\n \nTo get started, update to the latest version of the CloudWatch agent and add a journald section to your agent configuration file. To learn more, see Manually create or edit the CloudWatch agent configuration file in the Amazon CloudWatch User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cloudwatch-agent-journald/",
+      "pubDate": "2026-08-28T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "launch",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-96ecb5ad08d0",
       "title": "Amazon Redshift streaming can now ingest 10MiB records from Amazon Kinesis Data Streams",
@@ -686,44 +730,6 @@
       ]
     },
     {
-      "id": "aws-news-8470b2f85338",
-      "title": "Amazon MWAA Serverless now supports PythonOperator and BashOperator",
-      "description": "Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless now supports running custom Python functions and shell scripts directly in the serverless runtime using PythonOperator and BashOperator. With this launch, data engineering teams can execute the code patterns they rely on daily, including data transformations, format conversions, and data quality checks, without provisioning additional infrastructure.\n \nPackage your Python modules or shell scripts as code packages, upload them to Amazon S3, and reference them when creating or updating a workflow. The service snapshots your code at workflow creation time and uses that snapshot for all subsequent runs, ensuring consistency across executions.\n \nThis feature is available in all AWS Regions where Amazon MWAA Serverless is available. To learn more, visit Using Python and Bash operators.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/mwaa-serverless-pythonoperator-bashoperator/",
-      "pubDate": "2026-08-18T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-7e3ffec9472e",
-      "title": "Amazon EC2 R8i instances are now available in Israel (Tel Aviv) region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) R8i instances are available in the Israel (Tel Aviv) region. These instances are powered by custom Intel Xeon 6 processors, available only on AWS, delivering the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. The R8i instances offer up to 15% better price-performance, and 2.5x more memory bandwidth compared to previous generation Intel-based instances. They deliver 20% higher performance than R7i instances, with even higher gains for specific workloads. They are up to 30% faster for PostgreSQL databases, up to 60% faster for NGINX web applications, and up to 40% faster for AI deep learning recommendation models compared to R7i.  \n  R8i instances are a great choice for all memory-intensive workloads, especially for workloads that need the largest instance sizes or continuous high CPU usage. R8i instances offer 13 sizes including 2 bare metal sizes and the new 96xlarge size for the largest applications. R8i instances are SAP-certified and deliver 142,100 aSAPS, the highest among all comparable machines in on-premises and cloud environments, delivering exceptional performance for mission-critical SAP workloads.  \n  To get started, sign in to the AWS Management Console. Customers can purchase these instances via Savings Plans, On-Demand instances, and Spot instances. For more information about the new R8i instances visit the AWS News blog.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-r8i-israel-tel-aviv/",
-      "pubDate": "2026-08-18T17:24:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ga",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-4a745ed0db20",
       "title": "Amazon MSK simplifies configuring custom domain names",
       "description": "With Amazon MSK, you can now configure custom domain names for provisioned clusters using a single configuration property that works identically on ZooKeeper and KRaft. Define the domain once and Amazon MSK applies it across every broker, so custom domain names keep working as the cluster scales.",
@@ -738,63 +744,6 @@
       ],
       "tags": [
         "msk"
-      ]
-    },
-    {
-      "id": "aws-news-dce602555ef0",
-      "title": "PostgreSQL 19 Beta 3 is now available in Amazon RDS Database Preview Environment",
-      "description": "Starting today, Amazon RDS for PostgreSQL 19 Beta 3 is available in the Amazon RDS Database Preview Environment, allowing you to evaluate the pre-release of PostgreSQL 19 on Amazon RDS for PostgreSQL.\n \nPostgreSQL 19 Beta 3 adds new capabilities for query performance and autovacuum management. The new pg_stat_autovacuum_scores view helps you monitor and tune autovacuum prioritization. Parallel autovacuum can now use multiple workers to speed up maintenance on large tables. The new pg_plan_advice module lets you lock in efficient query plans to avoid unexpected slowdowns. Eager aggregation improves analytical queries by grouping data earlier, so queries process fewer rows and complete faster. Beta 3 also includes bug fixes and stability improvements from the Beta 2 testing period. Refer to the PostgreSQL community announcement for more details.\n \nAmazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the Preview Environment can only be used to create or restore database instances within the Preview Environment. You can use the PostgreSQL dump and load functionality to import or export your databases from the Preview Environment. Amazon RDS Database Preview Environment database instances are priced as per the pricing in the US East (Ohio) Region.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/postgresql-19-beta-3-amazon-rds-database-preview-environment/",
-      "pubDate": "2026-08-18T16:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "preview",
-        "beta",
-        "ga",
-        "now-available",
-        "improvement",
-        "announcement"
-      ]
-    },
-    {
-      "id": "aws-news-c59cf65c31ad",
-      "title": "Amazon EC2 High Memory U7i instances now available in AWS Europe (Zurich) region",
-      "description": "Amazon EC2 High Memory U7i-6TB instances (u7i-6tb.112xlarge) are now available in AWS Europe (Zurich) region. U7i instances are part of the AWS 7th generation and are powered by custom fourth-generation Intel Xeon Scalable processors (Sapphire Rapids). U7i-6TB instances offer 6 TiB of DDR5 memory, enabling customers to scale transaction processing throughput in a fast-growing data environment. U7i instances offer up to 45% better price performance over existing U-1 instances.\n \nU7i-6TB instances deliver 448 vCPUs and support up to 100 Gbps of Amazon EBS bandwidth for faster data loading and backups, 100 Gbps of network bandwidth, and ENA Express. U7i instances are ideal for customers running mission-critical in-memory databases like SAP HANA, Oracle, and SQL Server.\n \nTo learn more about U7i instances, visit the High Memory instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-high-memory-u7i-aws-europe/",
-      "pubDate": "2026-08-18T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-7fb6824be974",
-      "title": "Amazon WorkSpaces now supports Nested Virtualization",
-      "description": "Amazon WorkSpaces now supports nested virtualization for Amazon WorkSpaces Personal and Amazon WorkSpaces Core Managed Bundles. With nested virtualization enabled, developers can run Docker Desktop, Windows Subsystem for Linux (WSL2), and other hypervisor-dependent tools directly on their Windows WorkSpaces, and KVM-based workloads, Android emulators, and nested containers on their Linux WorkSpaces - without needing separate physical hardware or workaround environments.\n \nNested virtualization is supported on license-included (public and custom) bundles, Bring Your Own License (BYOL) bundles, and Bring Your Own Protocol (BYOP) bundles running Windows Server 2019, Windows Server 2022, Windows Server 2025, Windows 11, Ubuntu 22.04, Ubuntu 24.04, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 9, Rocky Linux 8, or Rocky Linux 9 with DCV protocol. Power (4 vCPU) or higher is recommended. Nested virtualization is not supported on GPU bundles, the PCoIP protocol, or Amazon WorkSpaces based on Windows Server 2016 and Windows 10. Administrators can enable or disable nested virtualization at the individual workspace level through the console, API, or CLI.\n \nYou can get started by enabling nested virtualization on your WorkSpaces through the console or CLI. For more information, visit the Amazon WorkSpaces documentation on Nested Virtualization. Nested virtualization is available in all AWS Regions where Amazon WorkSpaces is available, excluding China (Ningxia) Region and Israel (Tel Aviv) Region. For pricing information, visit Amazon WorkSpaces pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/nested-virtualization-workspaces/",
-      "pubDate": "2026-08-18T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "support"
       ]
     },
     {
