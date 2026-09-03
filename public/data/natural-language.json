@@ -1,8 +1,57 @@
 {
-  "lastUpdated": "2026-09-02T10:04:55.360Z",
+  "lastUpdated": "2026-09-03T10:15:13.972Z",
   "category": "natural-language",
-  "totalItems": 6,
+  "totalItems": 8,
   "items": [
+    {
+      "id": "aws-news-2b10e12cb835",
+      "title": "AWS Lambda now supports SnapStart for container image functions",
+      "description": "Starting today, AWS Lambda supports SnapStart for functions packaged as container images, reducing startup times from several seconds to as low as sub-second. Lambda SnapStart is an opt-in capability that makes it easier for you to build highly responsive and scalable applications without provisioning resources or implementing complex performance optimizations.\n \nCustomers deploy Lambda functions with container images to align with their organization's container-based deployment standards, or to package larger dependencies up to 10 GB. However, larger container images can experience startup times of several seconds as Lambda downloads image layers and initializes the runtime and application code. SnapStart addresses this by taking a snapshot of the initialized execution environment during function deployment, caching it, and resuming from it on invocation, instead of initializing from scratch. Previously, SnapStart was only supported for managed runtimes (Python, .NET, and Java). Starting today, customers can use SnapStart for container images to improve startup times for latency-sensitive workloads such as ML inference and interactive APIs.\n \nLambda SnapStart for container images is available in all commercial AWS Regions, except Asia Pacific (New Zealand) and Asia Pacific (Taipei). \n \nYou can activate SnapStart for new or existing container image functions using AWS Lambda API, AWS Console, AWS Command Line Interface (AWS CLI), AWS CloudFormation, AWS Serverless Application Model (AWS SAM), AWS SDK, and AWS Cloud Development Kit (AWS CDK). If you use an AWS base image for Lambda with Java (version 11+), Python (version 3.12+), or .NET (version 8+), the experience remains the same as with functions deployed as .zip file archives. For all other AWS base images for Lambda (for example, Node.js or Ruby) or custom base images, refer to the developer guide. For more information about SnapStart, see Lambda documentation. To learn more about pricing for SnapStart for container image functions, visit AWS Lambda Pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-lambda-snapstart-container/",
+      "pubDate": "2026-09-02T09:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "lambda",
+        "rds",
+        "cloudformation"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "lambda",
+        "rds",
+        "cloudformation",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-8d9cea696de8",
+      "title": "Amazon RDS for SQL Server supports additional SQL trace flags",
+      "description": "Amazon RDS for SQL Server supports 18 additional SQL trace flags that you can enable through database parameter groups. Trace flags are configuration switches that modify SQL Server engine behavior — such as query optimizer cardinality estimation, lock escalation, statistics management, and memory handling — to allow database administrators to fine-tune performance and address workload-specific challenges. With this expansion, you have greater flexibility to optimize and stabilize your SQL Server workloads directly within your managed RDS environment.\n \nThe newly supported trace flags include: 647, 652, 1448, 3654, 4138, 4139, 7745, 8285, 8780, 9432, 9481, 9492, 9592, 11024, 11042, 12502, 12618, and 12656. These trace flags address scenarios such as query plan optimization, DDL performance improvements, availability group replication, Query Store behavior, automatic plan correction, and known engine bug mitigations. Because trace flags modify core SQL Server engine behavior, you should test them in a non-production environment before applying them to production instances. Some trace flags can impact system performance, increase memory usage, or change query execution plans in unexpected ways.\n \nTrace flags are available in all AWS Regions where Amazon RDS for SQL Server is supported. To get started, update your RDS parameter group to enable the desired trace flags and apply it to your DB instance. To learn more, see Amazon RDS for SQL Server User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/rds-sqlserver-supports-additional-trace-flags/",
+      "pubDate": "2026-09-02T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "rds"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "rds",
+        "ga",
+        "update",
+        "improvement",
+        "support",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-d8c1c0f86c6c",
       "title": "Amazon Timestream for InfluxDB is now available in 8 additional AWS Regions",

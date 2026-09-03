@@ -1,8 +1,25 @@
 {
-  "lastUpdated": "2026-09-02T10:04:55.360Z",
+  "lastUpdated": "2026-09-03T10:15:13.972Z",
   "category": "machine-learning",
-  "totalItems": 7,
+  "totalItems": 6,
   "items": [
+    {
+      "id": "aws-news-0d93bea95f0b",
+      "title": "Building medallion architecture with Iceberg materialized views in Amazon SageMaker",
+      "description": "With Apache Iceberg materialized views in Amazon SageMaker, you can build a Bronze, Silver, and Gold medallion architecture as three SQL statements. This declarative approach folds transformation, orchestration, and incremental processing into per-layer definitions, with no ETL jobs, orchestrators, or change-data-capture code to maintain.",
+      "link": "https://aws.amazon.com/blogs/big-data/building-medallion-architecture-with-iceberg-materialized-views-in-amazon-sagemaker/",
+      "pubDate": "2026-09-02T18:34:32.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "sagemaker"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker"
+      ]
+    },
     {
       "id": "aws-news-3745efbcde98",
       "title": "How ZS democratized secure ad-hoc analytics with Amazon SageMaker",
@@ -78,26 +95,6 @@
       ]
     },
     {
-      "id": "aws-news-e415c1e54c0a",
-      "title": "Deepgram deepens Amazon SageMaker AI observability with Enhanced Metrics",
-      "description": "Self-hosted speech AI carries an observability trade-off: the numbers that drive capacity planning and cost management stay locked inside the vendor container. Deepgram closes that gap on Amazon SageMaker AI with two capabilities that land billing, usage, and per-GPU metrics directly in your own Amazon CloudWatch account.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/deepgram-deepens-amazon-sagemaker-ai-observability-with-enhanced-metrics/",
-      "pubDate": "2026-08-27T16:11:27.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "cloudwatch"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "cloudwatch",
-        "ga"
-      ]
-    },
-    {
       "id": "aws-news-b0bc92e26d10",
       "title": "Amazon SageMaker HyperPod enhances support for Ray",
       "description": "Amazon SageMaker HyperPod now enhances support for Ray with built-in observability, resilient training, accelerated inference and managed development environments. Ray is a popular open-source framework for scaling AI workloads on a unified compute layer, from data processing and distributed training to reinforcement learning and model serving. Running Ray on Kubernetes at production scale can be an operational burden: job hangs, low GPU utilization from static team allocations, and multi-step observability setup. Also, lack of interactive development environment means every code change needs another job submission and familiarity with kubectl.\n \nHyperPod now brings easier development, resilient training, and accelerated inference to Ray. Data scientists create, edit, monitor, and delete Ray clusters from a web-based interface in Amazon SageMaker Studio, then attach JupyterLab, Code Editor, or a local IDE to a running Ray cluster and iterate interactively against cluster-scale compute. A multi-node Ray cluster behaves like a local development environment, so you test each change immediately, without waiting for a new job to queue and start. For Observability, HyperPod provisions Grafana dashboards with metrics in Amazon Managed Service for Prometheus and allows one-click access to the Ray Dashboard through a secure browser link, giving you visibility into your workloads from the first run. For training at scale, HyperPod node auto recovery and hung job detection handle GPU faults, job hangs, loss spikes, and degraded throughput. Tiered checkpointing restores state from cluster memory to maximize goodput, and task governance improves compute utilization through quotas, priorities, and preemption. Together, these keep your long training runs progressing through failures and maximize the useful work done per GPU-hour. For inference with Ray Serve, a tiered KV cache reuses cached prefixes to reduce time to first token, and you can deploy Amazon SageMaker JumpStart models directly.\n \nOpen-source Ray code runs unchanged and you can either adopt the purpose-built experience in SageMaker Studio or take individual capabilities to integrate into your own ML platform.\n \nRay support is available for HyperPod clusters orchestrated by Amazon EKS, in AWS Regions where SageMaker HyperPod is supported. To learn more, see the SageMaker HyperPod documentation, and explore the interactive demo.",
@@ -124,27 +121,6 @@
         "grafana",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-08e0a8dd6d6e",
-      "title": "AWS Neuron 2.32 introduces expanded NKI programming, MXFP8 training kernels, and variable-size collectives for Trn2 and Trn",
-      "description": "AWS Neuron 2.32.0 is now available, introducing NKI 0.6.0 with an on-device top-K instruction, a variable-length `all-gather `for kernels whose ranks hold differently sized tensors, and new loop constructs for data-dependent iteration.  \n \nThis release also introduces 13 new NKI Library kernels for Mixture of Experts (MoE) training and sparse attention, and a new Neuron Agentic Development skill that ports transformer models to the vLLM Neuron plugin. The NKI Library kernels cover context encoding for DeepSeek-V3.2 sparse multi-head latent attention, MXFP8 attention for the decode step, and a matched MXFP8 forward and backward pass that lets blockwise MoE layers train end to end in MXFP8, with PyTorch reference implementations for 22 additional kernels.  \n \nThe Neuron Runtime adds variable-size all-gather, reduce-scatter, and all-to-all collectives on Trn2 and Trn3, letting each rank contribute or receive a different number of elements. The vLLM Neuron plugin moves to vLLM 0.24.0 and is included in all Neuron Deep Learning AMIs and Deep Learning Containers. The Neuron Compiler adds explicit control over 64-bit integer compilation, and Neuron Explorer adds per-core host CPU utilization to the System Trace Viewer.\n \nAWS Neuron is available in all AWS Regions where Amazon EC2 Trn1, Trn2, Trn3, Inf2, and Inf1 instances are available. For more information about Regional availability, see the AWS Region table.\n \nTo get started, see the following resources:\n \n \n \nAWS Neuron 2.32.0 Release Notes\n  \n \n \n \nNeuron Kernel Interface (NKI) Documentation\n  \n \n \n \nNeuron Agentic Development\n  \n \n \n \nAWS Neuron",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-announce-neuron-2-32-0",
-      "pubDate": "2026-08-21T21:11:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "neuron",
-        "ec2"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "neuron",
-        "ec2",
-        "ga",
-        "now-available"
       ]
     }
   ]

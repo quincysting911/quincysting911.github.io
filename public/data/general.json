@@ -1,8 +1,27 @@
 {
-  "lastUpdated": "2026-09-02T10:04:55.360Z",
+  "lastUpdated": "2026-09-03T10:15:13.972Z",
   "category": "general",
-  "totalItems": 54,
+  "totalItems": 53,
   "items": [
+    {
+      "id": "aws-news-0bdfd704b971",
+      "title": "AWS User Experience Customization (UXC) is now available in all commercial AWS Regions",
+      "description": "AWS User Experience Customization (UXC) is now available in all commercial AWS Regions. UXC enables account administrators to set a custom account color and control which services and Regions appear in the AWS Management Console.\n \nPreviously, UXC was available only in US East (N. Virginia), requiring customers who manage these settings programmatically to direct API calls to that single Region. With today's expansion, customers can manage account customizations from any commercial AWS Region using the AWS CLI, AWS SDKs, or AWS CloudFormation — making it easier to configure the console experience alongside existing infrastructure automation.\n \nUXC is available at no additional charge. To get started, see the AWS User Experience Customization documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-uxc-aws-regions",
+      "pubDate": "2026-09-02T13:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "now-available",
+        "expansion"
+      ]
+    },
     {
       "id": "aws-news-842288ab28e0",
       "title": "AWS Deadline Cloud now supports sharing job bundles",
@@ -83,9 +102,26 @@
       ]
     },
     {
+      "id": "aws-news-3002ba956dfe",
+      "title": "AWS Marketplace now supports auto-renewals for private offers",
+      "description": "AWS Marketplace now supports auto-renewals for private offers. This capability helps sellers and buyers maintain active software and service subscriptions without re-negotiation or re-purchasing at the end of the term. Negotiated pricing and contract terms carry forward automatically when buyers and sellers agree to renew. This helps reduce procurement overhead and prevent unintended lapses in subscriptions.\n \nWhen creating a private offer, sellers define the renewal terms and choose how pricing carries forward: renewal with no price change, renewal with a fixed price change, or a price change within a defined range. Buyers can opt in or out during initial offer acceptance, and can update their preferences later as their business needs change. Before automatically renewing the subscription, AWS Marketplace notifies both parties and provides a comparison of the current and upcoming terms, including any pricing changes. Either party can opt out of an upcoming renewal before the renewal decision deadline. Buyers can map a purchase order to any renewal to maintain procurement controls. Both parties are notified when a renewal completes successfully.\n \nThis capability is generally available in all commercial AWS Regions for sellers creating direct private offers with contract pricing. No additional setup or onboarding is required. To learn more, see the AWS Marketplace Seller Guide and the AWS Marketplace Buyer Guide . Sellers can configure auto-renewing private offers in the AWS Marketplace Management Portal . Buyers can manage subscriptions and renewals in the AWS Marketplace Console .",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-marketplace-auto-renewals-for-private-offers",
+      "pubDate": "2026-09-01T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "generally-available",
+        "update",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-b970f4b780cc",
       "title": "Deliver real-time data to streaming tables for Apache Iceberg with Amazon Kinesis Data Streams",
-      "description": "Amazon Kinesis Data Streams now supports streaming tables, a fully managed capability that continuously delivers your streaming data as queryable Apache Iceberg tables on Amazon S3 Tables. Streaming tables cut delivery costs by up to 25% and query costs by up to 30% through inline compaction, with no infrastructure to operate.",
+      "description": "Amazon Kinesis Data Streams now supports streaming tables, a fully managed capability that continuously delivers your streaming data as queryable Apache Iceberg tables on Amazon S3 Tables. Streaming tables reduce data delivery costs to S3 Tables by up to 50% compared to self-managed alternatives and reduce downstream query costs by up to 30% through intelligent inline compaction that eliminates the small file problem. You need no custom applications, no self-managed compute, and no operational overhead.",
       "link": "https://aws.amazon.com/blogs/big-data/deliver-real-time-data-to-streaming-tables-for-apache-iceberg-with-amazon-kinesis-data-streams/",
       "pubDate": "2026-08-31T23:03:25.000Z",
       "source": "bigDataBlog",
@@ -694,25 +730,6 @@
       ]
     },
     {
-      "id": "aws-news-8ab9842bd43e",
-      "title": "Introducing AWS Glue 6.0 for faster and more cost-effective data integration",
-      "description": "AWS Glue 6.0 is now available, lowering AWS Glue pricing by 30%, adding an AWS optimized build of Apache Spark 4.1, and introducing Apache Iceberg V3 capabilities suitable for enterprise adoption. This post covers the key capabilities and performance benefits, with code examples to help you get started.",
-      "link": "https://aws.amazon.com/blogs/big-data/introducing-aws-glue-6-0-for-apache-spark/",
-      "pubDate": "2026-08-24T19:06:39.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "glue"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "glue",
-        "now-available",
-        "integration"
-      ]
-    },
-    {
       "id": "aws-news-2777a8ba167c",
       "title": "MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for replication from external Apache Kafka clusters to Amazon MSK",
       "description": "Amazon MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for data replication from external Apache Kafka clusters - including on-premises, self-managed on AWS, or other cloud providers - to Amazon MSK Provisioned clusters. With this capability, external Apache Kafka clusters configured with OAuth/OIDC authentication can now use MSK Replicator to migrate workloads to Amazon MSK, support disaster recovery by using MSK-based clusters as a failover or backup target and enable data distribution across hybrid and multi-cloud environments.\n \nMSK Replicator is a feature of Amazon MSK that automates data replication between Kafka clusters, eliminating the need to manage custom replication infrastructure or configure open-source tools. Previously, MSK Replicator supported SASL/SCRAM and mTLS authentication for connecting to external Apache Kafka clusters. With this launch, you can now also use OAuth 2.0 authentication with MSK Replicator to replicate data from external Kafka clusters to Amazon MSK. Unlike self-managed replication tools, MSK Replicator lets you retain your original Kafka topic names during replication while automatically avoiding infinite replication loops. It also synchronizes consumer group offsets bidirectionally, enabling you to move producers and consumers across clusters independently, in any order, without coordination constraints or the risk of data loss.\n \nThis new capability is supported in all AWS Regions where MSK Replicator is available. Visit the MSK Replicator documentation, product page, pricing page, and this AWS blog post to learn more.",
@@ -750,41 +767,6 @@
         "generally-available",
         "update",
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-e2cd6f0e1462",
-      "title": "AWS Deadline Cloud now tracks automatic download status in the Deadline Cloud Monitor",
-      "description": "The AWS Deadline Cloud monitor now shows the progress, status, and health of your automatic file downloads from jobs running in the cloud. Deadline Cloud is a fully managed service that helps teams run compute-intensive workloads in the cloud for visual effects, animation, product design, simulation, and gaming. The Deadline Cloud Monitor (DCM) desktop app provides customers with visibility into their render environments, jobs, resources, and costs. Now, customers can also use the monitor to confirm that automatically configured job outputs successfully downloaded to their destination drive.\n \nWith this update, the monitor app introduces a new \"Download Status\" column at both the job and task level, showing download progress and confirming when all output files are available on your drive. An indicator displays how current that status is. If files are unavailable for any reason, the app surfaces clear guidance on next steps. This eliminates manual drive verification and helps teams confidently confirm output availability before downstream tasks begin, particularly valuable in large-scale render pipelines where manual file checking is impractical.\n \nTo learn more about AWS Deadline Cloud and the new automatic download status feature in the Deadline Cloud Monitor desktop app, visit https://aws.amazon.com/deadline-cloud/.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-deadline-cloud-auto-download-status-tracking/",
-      "pubDate": "2026-08-21T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "update"
-      ]
-    },
-    {
-      "id": "aws-news-22742ef6b874",
-      "title": "Amazon EKS Capability for Argo CD now supports custom configuration",
-      "description": "The Amazon Elastic Kubernetes Service (Amazon EKS) Capability for Argo CD now supports custom configuration through a standard argocd-cm ConfigMap in your cluster. This capability gives you a fully managed GitOps continuous delivery experience, and you can now tune it to fit how your teams work. You can define custom health checks for your Custom Resources, customize the Argo CD UI banner content, adjust how the capability watches and compares the resources it manages, and more. You configure these settings the same way you do in upstream Argo CD, and AWS applies them to your managed capability.\n \nWith this launch, cluster administrators now have more control over how Argo CD reports application health. By default, Argo CD has no built-in health logic for Custom Resources, so an Application can report as healthy while its resources are still provisioning, and sync waves can advance before those resources are ready. With a custom health check, you define this logic yourself. For example, a health check for a database resource can hold an Application at progressing until the database is ready. The capability also includes built-in health checks for AWS Controllers for Kubernetes (ACK) and kro (Kube Resource Orchestrator) resources, so these report accurate health with no additional configuration.\n \nYou can configure the EKS Capability for Argo CD in all AWS Regions where the capability is available. To learn more, see Amazon EKS and Configure Argo CD settings in the Amazon EKS User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-argo-cd-configuration",
-      "pubDate": "2026-08-21T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
-        "support"
       ]
     },
     {
