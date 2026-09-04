@@ -1,8 +1,216 @@
 {
-  "lastUpdated": "2026-09-03T10:15:13.972Z",
+  "lastUpdated": "2026-09-04T10:07:50.083Z",
   "category": "generative-ai",
-  "totalItems": 56,
+  "totalItems": 62,
   "items": [
+    {
+      "id": "aws-news-046212cf9544",
+      "title": "Amazon ECS Managed Daemons now support non-critical daemons",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now support non-critical Managed Daemons for ECS Managed Instances. You can configure a daemon as non-critical so that your mission-critical application tasks continue running uninterrupted, even when a daemon fails, stops, or becomes unhealthy.\n \nAmazon ECS Managed Daemons lets you centrally deploy and manage software agents independently of application deployments to ensure consistent coverage and compliance across your container infrastructure. For some mission-critical applications, uninterrupted execution of application tasks may matter more than auxiliary daemon functionality like logging or metrics collection. With this launch, you can now configure a managed daemon as non-critical so that its failure does not cause your application tasks to churn. When a non-critical daemon task fails, stops, or becomes unhealthy, the container instance remains active, your existing application tasks continue running uninterrupted, ECS continues placing new application tasks on it, and instance registration is never blocked, so your tasks launch immediately even when the daemon fails to start. Amazon ECS emits an EventBridge event when a daemon task fails to start and records service action logs for both critical and non-critical daemons, giving you full observability into daemon health.\n \nTo get started, you can use AWS Console, CLI, CloudFormation, or AWS SDKs to create a non-critical daemon by setting the critical parameter to false when creating or updating a daemon. Non-critical daemons are available in all AWS Regions where Amazon ECS Managed Daemons are supported. To learn more, refer to our documentation page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/ecs-managed-daemons-non-critical/",
+      "pubDate": "2026-09-03T22:01:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "ecs",
+        "cloudformation",
+        "eventbridge"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "ecs",
+        "cloudformation",
+        "eventbridge",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bb08c8af71b3",
+      "title": "Amazon CloudFront announces API support for flat-rate pricing plans",
+      "description": "Starting today, customers can subscribe and manage flat-rate pricing plans programmatically using the AWS CLI, AWS SDKs, CloudFormation, CDK, or the PricingPlanManager API.\n \nCloudFront flat-rate plans give you one monthly price covering global content delivery, WAF, DDoS, DNS, logging, and edge compute, with no usage-based overage charges regardless of traffic spikes or attacks. Previously, customers could only subscribe to flat-rate pricing plans using the console, which required manual steps when using the API or infrastructure as code (IaC) like CloudFormation to create and manage distributions. Now, customers can programmatically subscribe, upgrade, downgrade, and cancel flat-rate pricing plans using the API or IaC tools.\n \nPaid plans support an optional two-phase activation flow: you first create the plan, then approve it to begin billing. This prevents you from being committed to charges before you confirm, and makes the API well-suited for automated workflows and agents that provision infrastructure on your behalf. Free plans activate immediately and don’t require approval. To learn more, refer to the Getting started with the PricingPlanManager API. There are no additional fees for using the API to manage flat-rate pricing plans.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/cloudfront-flat-rate-pricing-plans-api/",
+      "pubDate": "2026-09-03T18:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "cloudfront",
+        "waf"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "cloudformation",
+        "cloudfront",
+        "waf",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3d68c4145f5c",
+      "title": "Introducing Amazon Quick Max: 5x the usage for power users who want the most out of Quick",
+      "description": "Amazon Quick now offers Quick Max, a new plan for power users who want to get the absolute most out of Quick. With 5x the usage and 5x the storage of Plus, Max gives you the room to do more: more agents, more workflows, more of whatever makes Quick yours. \n \nWith Max, you can run large, concurrent workloads without interruption—all month long. It delivers more value per dollar the more you use it and is available with both monthly and annual billing options.  \n \nNew to Amazon Quick? You can sign up for free in minutes. Already on Plus? Click your name at the bottom of the left navigation bar, then select \"Upgrade plan\" to switch to Max. To compare all available plans—Free, Plus, and Max—visit the Amazon Quick pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-quick-max-5x-usage-power-users/",
+      "pubDate": "2026-09-03T17:17:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-7562428731f6",
+      "title": "AI-driven development lifecycle using Amazon Bedrock AgentCore",
+      "description": "Engineering teams adopting the AI-Driven Development Lifecycle (AI-DLC) often struggle to turn concepts into working code. This post walks through two reference implementations on Amazon Bedrock AgentCore, Kiro, and Claude Code: an SQL-to-ER-diagram generator and a multi-agent code security analyzer that put the AI-DLC construction phase into practice.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/ai-driven-development-lifecycle-using-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-03T16:16:28.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-0fb77bf6cc6e",
+      "title": "Migrate agentic workloads to Amazon Bedrock AgentCore",
+      "description": "An agent that works in a notebook is not an agent in production. This post walks through migrating a LangGraph customer support agent to Amazon Bedrock AgentCore in two stages: onto Runtime, Gateway, and Memory, then to model-driven planning on Strands Agents, retiring operational burdens along the way.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-03T16:14:12.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-47a4dc51b91b",
+      "title": "Integrating Outlook with Amazon Quick for AI-powered email automation",
+      "description": "Integrate Microsoft Outlook with Amazon Quick to automate email management, calendar scheduling, and workflow coordination. This post walks through the end-to-end setup and shows automation scenarios using Amazon Quick chat agents, Amazon Quick Flows, and Amazon Quick Automate.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/",
+      "pubDate": "2026-09-03T16:11:57.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q"
+      ]
+    },
+    {
+      "id": "aws-news-2e6fcf69dc9f",
+      "title": "Set up OpenAI ChatGPT Codex with LiteLLM on Amazon ECS and Amazon Bedrock",
+      "description": "Deploy a customer-operated LiteLLM gateway on Amazon ECS with AWS Fargate, connect it to an OpenAI model on Amazon Bedrock, and configure Codex to route requests through the gateway's Responses API with scoped identities, budgets, rate limits, and telemetry. We also compare direct IAM Identity Center access and a managed Portkey deployment.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/",
+      "pubDate": "2026-09-03T16:10:39.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "ecs",
+        "fargate",
+        "iam",
+        "iam identity center"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "ecs",
+        "fargate",
+        "iam",
+        "iam identity center",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-32d16c163905",
+      "title": "Best practices for building agentic automations with Amazon Quick Automate",
+      "description": "Learn best practices for building production-grade, agent-based business process automations with Amazon Quick Automate: choosing the right process, designing focused agents, combining them with deterministic steps, applying human-in-the-loop review, and building in evaluation and observability.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-building-agentic-automations-with-amazon-quick-automate/",
+      "pubDate": "2026-09-03T16:08:28.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "amazon q"
+      ]
+    },
+    {
+      "id": "aws-news-cd080b52a0df",
+      "title": "Amazon SageMaker Unified Studio Workflows support Python and Bash operators",
+      "description": "Amazon SageMaker Unified Studio Workflows now supports PythonOperator and BashOperator, enabling you to run custom Python functions and shell commands directly in your serverless workflows without provisioning separate compute resources. This eliminates the need to offload custom logic to Lambda or ECS for tasks like data transformations or shell script execution.\nTo get started, open a serverless visual workflow in your SageMaker Unified Studio project, search for PythonOperator or BashOperator in the task panel, and drag the node onto your canvas. Provide your Python or shell script files through the workflow settings, then point each operator to the function or command in your scripts. For example, configure PythonOperator to call a data transformation function or set BashOperator to run a shell command, all without leaving the visual canvas.\nThis feature is available in all AWS Regions where Amazon SageMaker Unified Studio is available. For more information, see Supported Regions for Amazon SageMaker Unified Studio.\nTo learn more, see Supported operators for Amazon MWAA Serverless workflows. To get started, see Serverless visual workflows in the Amazon SageMaker Unified Studio User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/sagemaker-workflows-python-bash/",
+      "pubDate": "2026-09-03T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "canvas",
+        "unified studio",
+        "lambda",
+        "ecs"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "canvas",
+        "unified studio",
+        "lambda",
+        "ecs",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c6dde0cacd0d",
+      "title": "AWS Transform announces general availability of Amazon FSx for NetApp ONTAP support",
+      "description": "AWS Transform for migrations adds Amazon FSx for NetApp ONTAP as a generally available storage target for block storage workloads, alongside Amazon EBS. With AWS Transform, you can now migrate block storage directly to FSx for ONTAP as part of the same migration wave that handles compute and networks, eliminating the need for intermediate storage platforms and separate migration tools.\n \nWhether migrating from NetApp ONTAP, other block storage platforms, or VMware environments, your data access patterns and operational processes remain unchanged with FSx for ONTAP. Now your workloads run on a fully managed, production-ready shared storage service that combines ONTAP's enterprise capabilities with the scalability and resiliency of AWS. What previously required stitching together multiple tools is now a single migration workflow.\n \nThis capability is available in all AWS Transform supported target Regions and where Amazon FSx for NetApp ONTAP is supported. To get started, visit AWS Transform for migrations. To learn more about Amazon FSx for NetApp ONTAP, see the product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-transform-fsx-netapp-ontap-support/",
+      "pubDate": "2026-09-03T03:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "generally-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-a827a7c64dca",
       "title": "Accessing OpenAI models on Amazon Bedrock from Australia with global cross-Region inference",
@@ -198,6 +406,26 @@
       ]
     },
     {
+      "id": "aws-news-ffff1b88544a",
+      "title": "Amazon Bedrock AgentCore Identity now offers a managed consent portal",
+      "description": "Amazon Bedrock AgentCore Identity now offers a managed consent portal that eliminates the need for custom OAuth callback infrastructure when connecting agents to third-party tools and services.\n \nDevelopers using AgentCore Gateway to connect agents with services such as GitHub, Salesforce, and Slack previously had to build, host, and maintain custom OAuth callback infrastructure to complete OAuth 2.0 three-legged authorization (3LO) flows. The new managed consent portal eliminates this undifferentiated heavy lifting for agent developers and platform administrators.\n \nEach AgentCore Gateway receives its own managed consent portal with a dedicated hosted web client and credential provider list. Platform admins can share a portal URL with their team before sessions begin, granting consent for agents to call external tools on their behalf. End users can view their connection status at any time through a self-service interface without contacting an administrator.\n \nDevelopers using agent IDE-based clients, which cannot natively present OAuth consent URLs or handle post-consent session binding, can now use the managed consent portal as a dedicated authorization surface for these workflows.\n \nThis feature is available in all commercial regions where Bedrock AgentCore Identity is available.\n \nTo learn more, visit the Amazon Bedrock AgentCore Identity documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-01T21:29:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
       "id": "aws-news-9d866980e62c",
       "title": "Introducing Claude Fable 5.1 on AWS",
       "description": "Claude Fable 5.1 is now available on Amazon Bedrock and Claude Platform on AWS. This post covers Claude Fable 5.1's improvements, the Enterprise Frontier Safeguards for keeping your data in a cloud environment you control, and how to start building with the model on Amazon Bedrock.",
@@ -358,11 +586,11 @@
       ]
     },
     {
-      "id": "aws-news-09d2ef043ebb",
+      "id": "aws-news-5c936e79ff70",
       "title": "Claude Fable 5.1, Anthropic's new frontier model is now available on AWS",
       "description": "Claude Fable 5.1 is generally available on AWS and brings Anthropic's most capable frontier model to all customers. Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows. A clear improvement over Claude Fable 5, Fable 5.1 is a step up in intelligence on the hardest reasoning tasks, providing better judgement on ambiguous work and fewer confident wrong answers. Claude Mythos 5.1, the same underlying model as Claude Fable 5.1 with its full cyber and bio capabilities retained for cybersecurity and biology research, is available with limited access.\n \nClaude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code review, and performance work over sessions that run for hours. If it gets stuck, it says so instead of reporting success, and it is less likely to take shortcuts like disabling a failing test. It takes analysis from the first question to the finished document, and it is Anthropic's strongest model yet for knowledge work.\n \nAnthropic has designated Fable 5.1 a Covered Model, a category of Claude models that carry additional data retention, safety review, and access policies wherever they're offered. Enterprise Frontier Safeguards (EFS) built in partnership between AWS and Anthropic, will let eligible customers use Covered Models while keeping their data in a cloud environment they control. Read the launch blog to learn more.\n \nCustomers have two ways to access Claude Fable 5.1: Amazon Bedrock and Claude Platform on AWS. To learn more, see the Amazon Bedrock documentation, regional availability, and Claude Platform on AWS documentation..",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws/",
-      "pubDate": "2026-09-01T14:00:00.000Z",
+      "pubDate": "2026-09-01T14:30:00.000Z",
       "source": "whatsNew",
       "services": [
         "bedrock",
@@ -451,44 +679,6 @@
         "integration",
         "support",
         "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-f14211da25a8",
-      "title": "Build observable enterprise agentic retrieval using Managed Amazon Bedrock Knowledge Base with AWS CloudFormation",
-      "description": "This post builds an enterprise agentic retrieval solution on the Amazon Bedrock Managed Knowledge Base and Amazon Bedrock AgentCore. An agent reasons, routes across multiple knowledge bases, and returns cited answers, with seven layers of observability and both on-demand and continuous evaluation, all deployed with a single AWS CloudFormation chain.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-observable-enterprise-agentic-retrieval-using-managed-amazon-bedrock-knowledge-base-with-aws-cloudformation/",
-      "pubDate": "2026-08-31T19:08:45.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore",
-        "cloudformation"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "cloudformation"
-      ]
-    },
-    {
-      "id": "aws-news-42eb316da9dc",
-      "title": "Build multi-tenant agentic chat applications on enterprise data with Amazon Bedrock Managed Knowledge Base",
-      "description": "Learn how to build a multi-tenant agentic document chat application on Amazon Bedrock Managed Knowledge Base, where users upload documents and immediately ask grounded questions. This post covers the ingestion and retrieval flows, the asynchronous indexing lifecycle, per-user data isolation, and best practices for operating the solution at scale.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/build-multi-tenant-agentic-chat-applications-on-enterprise-data-with-amazon-bedrock-managed-knowledge-base/",
-      "pubDate": "2026-08-31T18:56:12.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock"
       ]
     },
     {
@@ -742,73 +932,6 @@
       "tags": [
         "ec2",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-a17a80e5f118",
-      "title": "AWS Lambda functions now support full IAM resource-based policies",
-      "description": "AWS Lambda functions now support full Identity and Access Management (IAM) resource-based policies, enabling platform admins and security teams to define granular access permissions using the full capabilities of AWS IAM. With full IAM resource-based policies, you can define permissions for multiple principals and actions in a single policy document and leverage the full range of IAM condition keys.\n  Previously, Lambda functions required customers to add permissions individually per principal. This provided limited flexibility for platform admins and security teams who want to manage permissions at scale. Now, Lambda functions support full IAM resource-based policies, including the full range of IAM condition keys. This provides a broader range of policy capabilities and streamlines policy management for teams operating multi-account architectures or managing multiple resources. For example, you can now use IAM condition keys to restrict access based on source IP or principal tag, and platform teams can now allow multiple services to invoke a function by using a single policy, rather than maintaining multiple statements to add permissions.\n  You can update resource-based policies in one step using the JSON editor in the AWS Lambda console, AWS CLI, AWS SDK, or infrastructure as code tools such as AWS CloudFormation and AWS SAM. To learn more, explore the Lambda resource-based policy examples in the AWS Lambda Developer Guide. \n  Full IAM resource-based policies are available in all AWS commerical Regions at no additional charge.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-full-iam-resource-based-policies/",
-      "pubDate": "2026-08-25T02:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "lambda",
-        "cloudformation",
-        "iam"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "lex",
-        "lambda",
-        "cloudformation",
-        "iam",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-28fcfcd70e23",
-      "title": "OpenAI GPT-5.6 Terra and Luna now available on Amazon Bedrock in AWS GovCloud (US)",
-      "description": "GPT-5.6 Terra and Luna are now generally available on Amazon Bedrock in AWS GovCloud (US-West) and AWS GovCloud (US-East), bringing the smartest family of models from OpenAI yet to Bedrock's next-generation inference engine built for high-performance, security and reliability. GPT-5.6 sets a new standard for intelligence and efficiency, allowing you to solve harder problems in less time and with more intelligence per token. The two models span capability tiers from balanced performance (Terra) to fast, cost-efficient inference (Luna).\n \nWith GPT-5.6, you can build autonomous coding agents, run long-horizon genomics and biology analyses, and perform advanced cybersecurity research. Terra provides GPT-5.5-level performance at half the cost and Luna brings fast, affordable inference at the lowest price point. GPT-5.6 also supports prompt caching with explicit cache breakpoints, so repeated context across agentic workflows is billed at a 90% discount and doesn't compound cost as you scale. \n \nGPT-5.6 Terra and Luna support 1 million token context windows on Amazon Bedrock, enabling you to process full codebases, lengthy documents, and multi-turn agent histories in a single request. Models reason over broader context and return more accurate, coherent responses without chunking or information loss.\n \nFor regional availability, please see the Amazon Bedrock regional availability page.  Get started with Terra and Luna using the Amazon Bedrock Console or the Responses API on the bedrock-mantle endpoint. To learn more, see the Amazon Bedrock documentation and read the launch blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/openai-gpt-terra-luna-govcloud/",
-      "pubDate": "2026-08-24T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "launch",
-        "generally-available",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e05be9b03632",
-      "title": "Amazon RDS for MySQL now supports new minor version 8.4.11",
-      "description": "Starting today, Amazon Relational Database Service (Amazon RDS) for MySQL supports MySQL minor version 8.4.11, the latest minor released by community MySQL. In addition to operational improvements, MySQL 8.4.11 introduces support for post-quantum TLS (PQ-TLS) key exchange, providing you with post-quantum cryptography options for encrypting your data in-transit. We recommend upgrading to the newer minor versions to accept fixes for CVEs in prior versions of MySQL and to benefit from bug fixes, performance improvements, and new functionality added by the MySQL community. Learn more about the enhancements in RDS for MySQL 8.4.11 in the Amazon RDS user guide and MySQL 8.4.11 release notes.\n  You can leverage automatic minor version upgrades to automatically upgrade your databases to more recent minor versions during scheduled maintenance windows. You can also use Amazon RDS Managed Blue/Green deployments for safer and simpler updates to your MySQL instances. Learn more about upgrading your database instances, including automatic minor version upgrades and Blue/Green Deployments, in the Amazon RDS User Guide.\n  Amazon RDS for MySQL makes it simple to set up, operate, and scale MySQL deployments in the cloud. Learn more about pricing details and regional availability at Amazon RDS for MySQL. Create or update a fully managed Amazon RDS for MySQL database in the Amazon RDS Management Console.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-mysql-8411-available/",
-      "pubDate": "2026-08-24T08:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "update",
-        "improvement",
-        "enhancement",
-        "support"
       ]
     },
     {

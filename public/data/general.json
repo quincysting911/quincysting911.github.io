@@ -1,8 +1,101 @@
 {
-  "lastUpdated": "2026-09-03T10:15:13.972Z",
+  "lastUpdated": "2026-09-04T10:07:50.083Z",
   "category": "general",
-  "totalItems": 53,
+  "totalItems": 52,
   "items": [
+    {
+      "id": "aws-news-bf5cea257dc6",
+      "title": "Amazon EC2 P6-B200 instances are now available in the AWS Asia Pacific (Hyderabad) Region",
+      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) P6-B200 instances accelerated by NVIDIA Blackwell GPUs are available in the AWS Asia Pacific (Hyderabad) Region. These instances offer up to 2x performance compared to P5en instances for AI training and inference.\n \nP6-B200 instances feature 8 Blackwell GPUs with 1440 GB of high-bandwidth GPU memory and a 60% increase in GPU memory bandwidth compared to P5en, 5th Generation Intel Xeon processors (Emerald Rapids), and up to 3.2 terabits per second of Elastic Fabric Adapter (EFAv4) networking. P6-B200 instances are powered by the AWS Nitro System, so you can reliably and securely scale AI workloads within Amazon EC2 UltraClusters to tens of thousands of GPUs.\n \nP6-B200 instances are now available in p6-b200.48xlarge size in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio), AWS GovCloud (US-West, US-East), and Asia Pacific (Hyderabad, Mumbai) Regions. To learn more about P6-B200 instances, visit Amazon EC2 P6 instances.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-p6-b200-instances-available-asia-pacific-hyderabad",
+      "pubDate": "2026-09-03T19:14:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available"
+      ]
+    },
+    {
+      "id": "aws-news-8910ba5acae0",
+      "title": "AWS Gateway Load Balancer now supports TCP Reset for faster failure recovery",
+      "description": "AWS Gateway Load Balancer (GWLB) now supports sending TCP Reset (RST) packets when a target becomes unhealthy, is deregistered, or when a flow's idle timeout expires. This feature helps reduce traffic interruptions from minutes to seconds by enabling TCP endpoints to quickly detect failed connections and establish new TCP flows through healthy targets.\n  Previously, when a GWLB target failed, existing TCP connections would continue to be forwarded to the unhealthy target (aka fail-open behavior). Client and server applications could experience interruptions lasting several minutes due to TCP retry and exponential back-off mechanisms built in the TCP stacks of clients or servers. When this capability is enabled, GWLB sends TCP Resets in response to the incoming traffic, indicating to the sender that a TCP connection is no longer viable. This allows TCP endpoints to recover in quickly.\n  TCP Reset is not enabled by default to ensure backward compatibility. You can enable it per target group using the AWS Management Console, AWS CLI, or API. Three triggers are supported independently for generating TCP Reset: target becomes unhealthy, target deregistration (after connection draining), and TCP idle timeout expiry.\n  This feature is available for all new and existing Gateway Load Balancers in all AWS Regions where GWLB is available. There is no additional charge for using this feature.\n  To learn more, visit this AWS blog, and GWLB User Guide here and here.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-gateway-load-balancer-tcp-reset/",
+      "pubDate": "2026-09-03T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-91aaf0512a80",
+      "title": "Amazon Redshift rg.large instances now support single-node clusters",
+      "description": "Amazon Redshift rg.large instances, powered by AWS Graviton processors, now support single-node clusters. Single-node support for rg.large clusters is available on P204 or later patch versions. Customers can now create a single-node rg.large cluster for smaller workloads that do not require high availability, offering a cost-effective option to conduct proofs of concept and tests quickly.\n \nRG instances deliver up to 2.4x faster performance running data warehouse and data lake workloads when compared to previous generation RA3 instances, at 30% lower price per vCPU. RG instances include Redshift's custom-built vectorized data lake query engine that processes Apache Iceberg and Parquet data on your cluster nodes, turning on SQL analytics across your data warehouse and data lake using a single engine.\n \nThese RG instances are available in the following AWS Regions: Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Osaka), Asia Pacific (Mumbai), Asia Pacific (Hyderabad), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Malaysia), Asia Pacific (Taipei), Asia Pacific (Thailand), Canada (Central), Europe (Frankfurt), Europe (Stockholm), Europe (Spain), Europe (Ireland), Europe (London), Europe (Paris), South America (São Paulo), US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), AWS GovCloud (US-East), AWS GovCloud (US-West) and Mexico (Central).\n \nTo learn more, visit the Amazon Redshift RG Instance Documentation, the RA3 to RG Upgrade Guide, and the Amazon Redshift pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/redshift-rg-large-single-node",
+      "pubDate": "2026-09-03T16:03:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "redshift",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "redshift",
+        "graviton",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-bc06a78933e3",
+      "title": "Amazon MWAA adds built-in monitoring with Amazon CloudWatch",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now includes a built-in monitoring experience on the environment detail page in the AWS Management Console. A new metrics dashboard displays key Amazon CloudWatch metrics for your environment in one place, and each graph includes an optional toggle to overlay suggested warning ranges, helping you quickly identify conditions that may affect your environment's health and performance.\n \nThe environment detail page also now shows an alarms table that lists all Amazon CloudWatch alarms associated with your MWAA environment. You can use the one-click Create Recommended Alarms action to provision a curated set of alarms from an AWS-managed template, so you can start monitoring critical metrics without having to configure each alarm manually. This feature is available for Amazon MWAA Provisioned environments in all regions where Amazon MWAA is available. Standard Amazon CloudWatch pricing applies for metric queries and alarms.\n \nTo get started, open the AWS Management Console, review the Amazon MWAA supported regions, or visit the Amazon MWAA documentation to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-cloudwatch-monitoring/",
+      "pubDate": "2026-09-03T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudwatch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d3863a3e77fd",
+      "title": "Amazon S3 now supports PrivateLink for FIPS endpoints",
+      "description": "Amazon S3 now supports AWS PrivateLink for endpoints that have been validated under the Federal Information Processing Standard (FIPS) 140-3 program.\n  Customers with security and compliance requirements can use FIPS-validated cryptographic modules when connecting to S3 while keeping their traffic within their Virtual Private Cloud (VPC). To get started, create a new or edit an existing interface VPC endpoint for S3 and configure it to use the FIPS S3 endpoint.\n  AWS PrivateLink support for FIPS S3 endpoints is now available in the AWS US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary), and AWS GovCloud (US) Regions, at no additional cost. To learn more, visit accessing AWS services through AWS PrivateLink, FIPS 140-3 Compliance, and S3 documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-s3-privatelink-fips-endpoints",
+      "pubDate": "2026-09-03T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-0bdfd704b971",
       "title": "AWS User Experience Customization (UXC) is now available in all commercial AWS Regions",
@@ -192,22 +285,6 @@
       "tags": [
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-08964f9ee1ab",
-      "title": "Manage agents, tools and skills at scale with AWS Agent Registry",
-      "description": "AWS Agent Registry is now generally available: a single, searchable, governed catalog for the agents, tools, skills, and custom resources across your organization. This post explains what Registry is and walks through its publishing, curation, and discovery workflows, plus enterprise considerations and what's next.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/",
-      "pubDate": "2026-08-31T19:18:09.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "ga"
       ]
     },
     {
@@ -659,114 +736,6 @@
         "cloudformation",
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-1f3f83bc5dd2",
-      "title": "GPU-accelerated Apache Spark with Amazon EMR and NVIDIA RTX PRO 4500 on Amazon EC2 G7 instances runs up to 3.7x faster",
-      "description": "Amazon EMR on EKS now runs Apache Spark up to 3.7x faster on Amazon EC2 G7 instances with NVIDIA RTX PRO 4500 Blackwell GPUs than on comparable CPU instances, with no changes to existing Spark code. See the TPC-DS benchmark results, the cost comparison, and how to get started.",
-      "link": "https://aws.amazon.com/blogs/big-data/gpu-accelerated-apache-spark-with-amazon-emr-and-nvidia-rtx-pro-4500-on-amazon-ec2-g7-instances-runs-up-to-3-7x-faster/",
-      "pubDate": "2026-08-25T16:17:45.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "ec2",
-        "emr",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "emr",
-        "eks"
-      ]
-    },
-    {
-      "id": "aws-news-e97fef2ef1c6",
-      "title": "AWS Lambda introduces managed runtimes in public preview for Node.js 26 and Python 3.15",
-      "description": "Today, AWS Lambda introduces managed runtimes in public preview, starting with Node.js 26 and Python 3.15. This gives customers, partners and upstream language communities the opportunity to try upcoming managed runtimes before their general availability (GA) release and to share their feedback with the Lambda team.\n \nPreviously, Lambda managed runtimes were launched directly as GA releases. Since the runtimes could immediately be used by production workloads, the Lambda team couldn’t make changes post-GA that might impact existing functions. Managed runtimes in public preview give you a chance to test your workloads and report issues before GA—while breaking changes are still possible, so we can act on your feedback. Third-party observability providers, infrastructure-as-code tools and deployment frameworks also get time to validate compatibility before GA. Because public preview managed runtimes may receive breaking changes during the preview period, they are not covered by the Lambda SLA or AWS Technical Support plans and should not be used for production workloads. Managed runtimes in public preview use the same runtime identifier as the eventual GA runtime, so your functions graduate automatically when the runtime reaches GA with no action required.\n \nTo get started, select \"Node.js 26 (Preview)\" or \"Python 3.15 (Preview)\" from the runtime dropdown in the Lambda console, or specify nodejs26.x or python3.15 as the runtime identifier in the AWS CLI, CloudFormation, AWS SAM, or AWS CDK.\n \nNode.js 26 and Python 3.15 managed runtimes in public preview are available in all AWS commercial Regions, AWS GovCloud (US) Regions, and China Regions. There is no additional cost—functions using preview runtimes are billed at standard Lambda rates.  To learn more, see our blog post. To share feedback, visit the dedicated GitHub issues for Node.js 26 and Python 3.15.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-node-js-python-public-preview/",
-      "pubDate": "2026-08-25T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "cloudformation",
-        "launch",
-        "preview",
-        "ga",
-        "support",
-        "public-preview"
-      ]
-    },
-    {
-      "id": "aws-news-378592e46036",
-      "title": "Amazon ECS now automatically detects and repairs container instances with impaired agent connectivity",
-      "description": "Amazon Elastic Container Service (Amazon ECS) now automatically detects and repairs container instances, enabling customers to reduce undetected workload failures and improve application availability without manual intervention.\n \nWith this launch, Amazon ECS continuously monitors agent connectivity across container instances. Infrastructure events such as EBS volume degradation, host thermal events, or network connectivity failures can sever the ECS agent's connection to the ECS control plane. Amazon ECS now surfaces a new type of container instance health change event (AGENT_CONNECTIVITY) for all compute options: AWS Fargate, Amazon ECS Managed Instances, and Amazon ECS on EC2. For ECS Managed Instances and AWS Fargate, ECS automatically performs recovery - automatically draining running tasks and launching replacement capacity while deregistering impaired instances. Customers running workloads on Amazon ECS on EC2, can use this health change event to drive instance replacement workflows.\n \nThis capability is available at no additional cost in all AWS Commercial and AWS GovCloud (US) Regions. To learn more, see Monitor Amazon ECS Container Instance Health.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ecs-agent-connectivity-health",
-      "pubDate": "2026-08-24T22:42:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs",
-        "fargate"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "fargate",
-        "launch",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-2777a8ba167c",
-      "title": "MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for replication from external Apache Kafka clusters to Amazon MSK",
-      "description": "Amazon MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication for data replication from external Apache Kafka clusters - including on-premises, self-managed on AWS, or other cloud providers - to Amazon MSK Provisioned clusters. With this capability, external Apache Kafka clusters configured with OAuth/OIDC authentication can now use MSK Replicator to migrate workloads to Amazon MSK, support disaster recovery by using MSK-based clusters as a failover or backup target and enable data distribution across hybrid and multi-cloud environments.\n \nMSK Replicator is a feature of Amazon MSK that automates data replication between Kafka clusters, eliminating the need to manage custom replication infrastructure or configure open-source tools. Previously, MSK Replicator supported SASL/SCRAM and mTLS authentication for connecting to external Apache Kafka clusters. With this launch, you can now also use OAuth 2.0 authentication with MSK Replicator to replicate data from external Kafka clusters to Amazon MSK. Unlike self-managed replication tools, MSK Replicator lets you retain your original Kafka topic names during replication while automatically avoiding infinite replication loops. It also synchronizes consumer group offsets bidirectionally, enabling you to move producers and consumers across clusters independently, in any order, without coordination constraints or the risk of data loss.\n \nThis new capability is supported in all AWS Regions where MSK Replicator is available. Visit the MSK Replicator documentation, product page, pricing page, and this AWS blog post to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-msk-replicator-OAuth-support",
-      "pubDate": "2026-08-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "kafka",
-        "msk"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "kafka",
-        "msk",
-        "launch",
-        "support",
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-8de1e037cb1f",
-      "title": "AWS ParallelCluster 3.16 adds an on-node diagnostics tool",
-      "description": "AWS ParallelCluster 3.16 is now generally available with a new on-node diagnostics tool, cluster stability improvements, and an updated HPC and AI/ML software stack.\n \npcluster-diag is a diagnostics tool built into the ParallelCluster AMIs that lets you run diagnostic checks on any cluster node with a single command, and get a structured report that makes it easier to identify issues. This release also hardens the cluster lifecycle with more resilient cluster creation, updates, and image builds. The software stack is refreshed, with updated NVIDIA driver, CUDA, EFA installer, and Slurm versions. To get started with pcluster-diag, see Troubleshooting with pcluster-diag. For more details, review the AWS ParallelCluster 3.16.0 release notes.\n \nAWS ParallelCluster is an open-source cluster management tool that makes it possible for R&D customers and IT administrators to operate high-performance computing (HPC) clusters on AWS. ParallelCluster is designed to automatically and securely provision cloud resources into elastically-scaling HPC clusters capable of running scientific and engineering workloads at scale on AWS. ParallelCluster is available at no additional charge in the AWS Regions listed here, and you pay only for the AWS resources needed to run your applications.\n  To learn more about launching HPC clusters on AWS, visit the ParallelCluster User Guide. To start using ParallelCluster, see the installation instructions for ParallelCluster UI and CLI.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-parallelcluster/",
-      "pubDate": "2026-08-24T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "generally-available",
-        "update",
-        "improvement"
       ]
     },
     {

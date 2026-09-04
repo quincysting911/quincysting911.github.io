@@ -1,8 +1,51 @@
 {
-  "lastUpdated": "2026-09-03T10:15:13.972Z",
+  "lastUpdated": "2026-09-04T10:07:50.083Z",
   "category": "machine-learning",
-  "totalItems": 6,
+  "totalItems": 5,
   "items": [
+    {
+      "id": "aws-news-7e4953da8a8e",
+      "title": "How Moovit achieved 33% cost optimization through architectural modernization",
+      "description": "Learn how Moovit modernized its data platform with a multi-engine lakehouse architecture: offloading heavy aggregation workloads from Amazon Redshift to Amazon EMR with Spark SQL, isolating workloads with Amazon Redshift Serverless, and cutting overall data pipeline cost by 33%.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-moovit-achieved-33-cost-optimization-through-architectural-modernization/",
+      "pubDate": "2026-09-03T16:23:46.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "emr",
+        "redshift"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "emr",
+        "redshift",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6aedfef90ec1",
+      "title": "Amazon Linux 2027 is now available in public preview",
+      "description": "Today, AWS announces the public preview of Amazon Linux 2027 (AL2027), the next version of the Amazon Linux operating system, purpose-built for cloud-native workloads on AWS with performance, scale, and security in mind. Built on AL2023's baseline, AL2027 is designed for customers running web applications, databases, containerized microservices, AI/ML workloads, and large-scale infrastructure who need a secure, stable, and AWS-native operating system.\n \nAL2027 runs on kernel 7.1+, enables SELinux in enforcing mode as default, accelerates cryptographic performance with AWS-LC, and keeps builders current with the latest toolchains and language runtimes. For AI and machine learning workloads, it delivers access to accelerator drivers, including AWS Neuron driver support. The public preview gives customers hands-on access before general availability (GA) to experiment with new features, validate their applications, and provide direct feedback to the Amazon Linux team.\n \nAL2027 Preview AMIs are available through the AWS Management Console across all commercial AWS Regions, with both x86-64 and ARM variants. Container base images are available on Amazon ECR Public Gallery. Customers can submit feedback through the AL2027 GitHub repository. For a full list of changes relative to AL2023, see the AL2027 documentation. To learn more, visit the Amazon Linux product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/announcing-amazon-linux-2027/",
+      "pubDate": "2026-09-03T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "neuron"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "neuron",
+        "preview",
+        "ga",
+        "now-available",
+        "new-feature",
+        "support",
+        "public-preview"
+      ]
+    },
     {
       "id": "aws-news-0d93bea95f0b",
       "title": "Building medallion architecture with Iceberg materialized views in Amazon SageMaker",
@@ -38,26 +81,6 @@
       ]
     },
     {
-      "id": "aws-news-369c23a765f6",
-      "title": "Batch write and discover records in Amazon SageMaker Feature Store",
-      "description": "Amazon SageMaker Feature Store now supports two new APIs: BatchWriteRecord writes up to 25 records across multiple feature groups in a single call, and ListRecords enumerates record identifiers within a feature group. In this post, we walk through each API with code examples you can use to get started.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
-      "pubDate": "2026-08-28T19:31:05.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "rds"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "rds",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b66038acc1aa",
       "title": "Razor Group’s journey to a modern data lakehouse on AWS",
       "description": "Razor Group, one of Europe's leading ecommerce aggregators managing 250+ brands, migrated from always-on Amazon Redshift clusters to an open lakehouse on Apache Iceberg, Amazon S3 Tables, and Apache Spark. Learn the architectural decisions, the five-phase migration, and the results: 65% faster P95 queries and a 63% infrastructure cost reduction.",
@@ -75,52 +98,6 @@
         "s3",
         "redshift",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-48d786e7972b",
-      "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
-      "description": "Learn how Salesforce used Amazon SageMaker AI Inference Component placement (the SchedulingConfig parameter) to distribute model copies across multiple Availability Zones, meeting their Multi-AZ high availability compliance requirements without sacrificing the cost efficiency of multi-model co-hosting.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
-      "pubDate": "2026-08-28T16:20:40.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
-      ]
-    },
-    {
-      "id": "aws-news-b0bc92e26d10",
-      "title": "Amazon SageMaker HyperPod enhances support for Ray",
-      "description": "Amazon SageMaker HyperPod now enhances support for Ray with built-in observability, resilient training, accelerated inference and managed development environments. Ray is a popular open-source framework for scaling AI workloads on a unified compute layer, from data processing and distributed training to reinforcement learning and model serving. Running Ray on Kubernetes at production scale can be an operational burden: job hangs, low GPU utilization from static team allocations, and multi-step observability setup. Also, lack of interactive development environment means every code change needs another job submission and familiarity with kubectl.\n \nHyperPod now brings easier development, resilient training, and accelerated inference to Ray. Data scientists create, edit, monitor, and delete Ray clusters from a web-based interface in Amazon SageMaker Studio, then attach JupyterLab, Code Editor, or a local IDE to a running Ray cluster and iterate interactively against cluster-scale compute. A multi-node Ray cluster behaves like a local development environment, so you test each change immediately, without waiting for a new job to queue and start. For Observability, HyperPod provisions Grafana dashboards with metrics in Amazon Managed Service for Prometheus and allows one-click access to the Ray Dashboard through a secure browser link, giving you visibility into your workloads from the first run. For training at scale, HyperPod node auto recovery and hung job detection handle GPU faults, job hangs, loss spikes, and degraded throughput. Tiered checkpointing restores state from cluster memory to maximize goodput, and task governance improves compute utilization through quotas, priorities, and preemption. Together, these keep your long training runs progressing through failures and maximize the useful work done per GPU-hour. For inference with Ray Serve, a tiered KV cache reuses cached prefixes to reduce time to first token, and you can deploy Amazon SageMaker JumpStart models directly.\n \nOpen-source Ray code runs unchanged and you can either adopt the purpose-built experience in SageMaker Studio or take individual capabilities to integrate into your own ML platform.\n \nRay support is available for HyperPod clusters orchestrated by Amazon EKS, in AWS Regions where SageMaker HyperPod is supported. To learn more, see the SageMaker HyperPod documentation, and explore the interactive demo.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker-hyperpod-ray",
-      "pubDate": "2026-08-24T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "jumpstart",
-        "hyperpod",
-        "rds",
-        "eks",
-        "grafana"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "jumpstart",
-        "hyperpod",
-        "rds",
-        "eks",
-        "grafana",
-        "ga",
-        "support"
       ]
     }
   ]
