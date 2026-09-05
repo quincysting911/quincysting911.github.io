@@ -1,8 +1,40 @@
 {
-  "lastUpdated": "2026-09-04T10:07:50.083Z",
+  "lastUpdated": "2026-09-05T09:34:21.688Z",
   "category": "general",
-  "totalItems": 52,
+  "totalItems": 49,
   "items": [
+    {
+      "id": "aws-news-4c69f4c2393e",
+      "title": "AWS MCP Server adds a serverless capability for AWS Lambda functions",
+      "description": "Today, AWS Model Context Protocol Server (AWS MCP Server) added a serverless capability so that coding agents such as Claude Code and Kiro can efficiently diagnose issues with your Lambda functions. The serverless capability helps you troubleshoot your running Lambda functions and their connected resources.\n \nThe AWS MCP Server, available through the Agent Toolkit for AWS or as a standalone installation, is a managed service that gives AI coding agents secure access to AWS services. With the new serverless capability in the AWS MCP Server, your coding agent inspects your Lambda function and its connected resources across Amazon API Gateway, Amazon EventBridge, Amazon S3, Amazon DynamoDB, Amazon SNS, Amazon SQS, and AWS Step Functions. The agent can correlate error signals against a 7-day baseline to pinpoint what changed, surface recurring errors to identify trends, retrieve the deployed configuration of your function and connected resources, provide a timeline of recent changes to track what happened, and analyze service latency across connected resources. As the agent gets comprehensive data in a single call, it consumes fewer tokens compared to orchestrating multiple API calls.\n \nTo get started, configure the Agent toolkit for AWS by running ‘aws configure agent-toolkit’ from the AWS CLI, or enable the AWS MCP Server directly.\n \nThe AWS MCP Server can access services in all commercial AWS Regions, while the AWS MCP Server itself runs in the US East (N. Virginia) and Europe (Frankfurt) Regions. The serverless diagnostic capabilities in the AWS MCP Server are available at no additional cost. To learn more, see the user guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-mcp-server-serverless/",
+      "pubDate": "2026-09-04T16:31:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "dynamodb",
+        "api gateway",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "sqs"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "dynamodb",
+        "api gateway",
+        "eventbridge",
+        "step functions",
+        "sns",
+        "sqs",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-bf5cea257dc6",
       "title": "Amazon EC2 P6-B200 instances are now available in the AWS Asia Pacific (Hyderabad) Region",
@@ -649,60 +681,6 @@
       "tags": []
     },
     {
-      "id": "aws-news-b819fdff7377",
-      "title": "AWS Backup adds cross-Region backup copy and logically air-gapped vault support for Amazon DocumentDB in nine additional AWS Regions",
-      "description": "AWS Backup now supports copying Amazon DocumentDB backups across AWS Regions and storing them in logically air-gapped vaults in nine additional AWS Regions: Asia Pacific (Hong Kong, Jakarta, Melbourne, Osaka), Europe (Spain, Stockholm, Zurich), Africa (Cape Town), and Israel (Tel Aviv).\n \nWith cross-Region copy now available in these Regions, you can copy DocumentDB backups into and out of them using backup plans or on-demand copy jobs. This helps you meet disaster recovery, business continuity, and compliance requirements. You can also copy DocumentDB backups to a logically air-gapped vault in these Regions to store immutable, isolated backups that are locked by default and encrypted using AWS owned or customer-managed keys. Share vaults for recovery using AWS Resource Access Manager (RAM) and protect vault access during account compromise with Multi-party approval, reducing recovery time from a data loss event.\n \nTo get started, visit the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. For a complete list of supported Regions and features, visit the AWS Backup documentation. To learn more about logically air-gapped vaults, visit the product page and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-backup-cross-region-air-gapped-docdb/",
-      "pubDate": "2026-08-26T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b52a1aedb1ea",
-      "title": "AWS IoT Core now supports native InfluxDB routing for time-series data",
-      "description": "AWS IoT Core now supports InfluxDB rule action that routes time-series data from your Internet of Things (IoT) devices directly to InfluxDB databases, without writing custom device-side code or using intermediate cloud services. AWS IoT Core is a fully managed service that securely connects billions of IoT devices to the AWS cloud, and routes IoT device data to AWS and third-party services.\n \nThe new InfluxDB rule action automatically converts time-series data from your device to InfluxDB’s line protocol format and writes it to either an Amazon Timestream managed or a self-hosted InfluxDB cluster. The new rule action also supports the following two batching modes to help you optimize cost and throughput: device-side batching, where your devices send pre-batched payloads to AWS IoT Core; and server-side batching, where IoT rules engine aggregates individual messages before writing to InfluxDB. For example, a life sciences company can batch thousands of telemetry readings from scientific instruments at millisecond granularity and write directly to InfluxDB for monitoring, without building a custom data pipeline.\n \nTo get started, connect your IoT devices to AWS IoT Core and define an InfluxDB rule action specifying the destination database, along with authentication and batching parameters. The InfluxDB rule action is available in all AWS Global Regions where Amazon Timestream for InfluxDB is available. To learn more, visit the AWS IoT Core developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iot-core-influxdb/",
-      "pubDate": "2026-08-25T19:42:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a98fba5d0924",
-      "title": "AWS Batch now supports Amazon ECS Managed Instances",
-      "description": "AWS Batch now supports Amazon ECS Managed Instances (ECS MI) as a new compute option, enabling you to run GPU-accelerated and compute-intensive batch workloads on AWS-managed infrastructure. With AWS Batch on ECS MI you can now access GPU-accelerated instances while AWS handles AMI updates, security patching, and instance lifecycle automatically, eliminating the operational overhead of customer-managed Amazon EC2 infrastructure.\n  To get started, create an AWS Batch on ECS MI compute environment using the AWS Batch CreateComputeEnvironment API or the AWS Batch Management Console. You can specify your allowed instance types and networking configuration in the managedInstancesProvider block, associate the compute environment with a job queue, and submit jobs using On-Demand, Spot, or reserved capacity.\n  AWS Batch on ECS Managed Instances is supported in all AWS Regions where AWS Batch is available. For more information, see the AWS Batch User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-batch-on-ecs-managed-instances/",
-      "pubDate": "2026-08-25T19:36:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "ecs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "ecs",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-1bca99208074",
       "title": "PythonOperator and BashOperator Now Available on Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless",
       "description": "You can now use PythonOperator and BashOperator to run custom Python functions and shell scripts directly in the Amazon MWAA Serverless runtime, without provisioning additional infrastructure. This post walks through building a serverless pipeline that converts CSV files to JSON using a PythonOperator and verifies the output with a BashOperator.",
@@ -715,27 +693,6 @@
       ],
       "tags": [
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-bfbaea9702cc",
-      "title": "AWS Lambda MicroVMs now supports AWS PrivateLink",
-      "description": "AWS Lambda MicroVMs now supports AWS PrivateLink, enabling private connectivity to Lambda MicroVMs directly from Amazon Virtual Private Cloud (VPC) resources without exposing traffic to the public internet. This launch helps regulated workloads in financial services, healthcare, and government meet strict network isolation requirements when building with Lambda MicroVMs. \n \nPrivateLink VPC Endpoints deliver private connectivity to AWS services from your VPC, ensuring that your traffic does not travel over the public internet when communicating with AWS services. Today's launch extends this capability to Lambda MicroVMs. Developers and IT teams needing private connectivity to Lambda MicroVMs can now create PrivateLink VPC Endpoints in their VPC to call MicroVM APIs (for example, to create MicroVM images or launch MicroVMs) and to connect to each MicroVM’s HTTP endpoint.\n \nPrivateLink VPC Endpoints for Lambda MicroVMs can be created using the AWS Management Console, AWS CLI, AWS CloudFormation, or the AWS SDKs. This feature is supported in all Regions where Lambda MicroVMs is available. Visit the AWS Capabilities by Region page for the latest region availability.  \n \nTo learn more about using PrivateLink with Lambda MicroVMs, see the developer guide. For pricing details, see AWS PrivateLink Pricing. To learn more about configuring private connectivity for AWS services, visit the AWS PrivateLink developer guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/lambda-microvms-supports-privatelink",
-      "pubDate": "2026-08-25T16:34:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "cloudformation",
-        "launch",
-        "support"
       ]
     },
     {

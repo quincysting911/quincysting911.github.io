@@ -1,8 +1,29 @@
 {
-  "lastUpdated": "2026-09-04T10:07:50.083Z",
+  "lastUpdated": "2026-09-05T09:34:21.688Z",
   "category": "natural-language",
-  "totalItems": 9,
+  "totalItems": 10,
   "items": [
+    {
+      "id": "aws-news-41217f3d437f",
+      "title": "Amazon ECS introduces Early Success Criteria for service deployments",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now supports Early Success Criteria for rolling service deployments, giving you the flexibility to define when a deployment is considered successful based on your confidence level and the operational needs of your workload. This can help you complete deployments sooner and unblock subsequent deployments, CI/CD pipelines, and other dependent operations.\n \nWith Early Success Criteria, you configure the healthy percent - the proportion of desired tasks that must be running and healthy on the target service revision before the deployment is marked successful. For example, with a desired count of 100 and a healthy percent of 90%, Amazon ECS marks the deployment successful after 90 tasks are healthy and continues launching the remaining tasks through regular service scaling, outside the deployment lifecycle. This can benefit workloads running on specialized or constrained capacity, such as GPU-accelerated inference workloads, where hardware availability can extend task launch times. Early Success Criteria also gives you more control over how long deployment rollback monitoring applies, allowing it to protect the deployment until your configured success criteria are met while subsequent scale-out continues through regular service scaling. You can also choose how Amazon ECS handles source service revision cleanup using BLOCKING or DEFERRED. With BLOCKING, Amazon ECS completes source revision cleanup before declaring success. With DEFERRED, Amazon ECS declares success when the criteria are met and drains source revision tasks asynchronously outside the deployment. This benefits services with active long-lived connections or task scale-in protection, where source revision tasks may need to remain running without holding the deployment open.\n \nThe feature is available with the rolling deployment strategy in all AWS Commercial and AWS GovCloud (US) Regions. You can configure Early Success Criteria for new and existing Amazon ECS services using the AWS Management Console, AWS CLI, AWS SDKs, and infrastructure as code (IaC) tools. To learn more, see our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ecs-deployments-early-success/",
+      "pubDate": "2026-09-04T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ecs"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ecs",
+        "launch",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-db93b0aa3576",
       "title": "Amazon WorkSpaces Applications adds support for NVIDIA Blackwell GPU instances",
