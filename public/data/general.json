@@ -1,8 +1,108 @@
 {
-  "lastUpdated": "2026-09-08T10:11:38.972Z",
+  "lastUpdated": "2026-09-09T10:15:33.903Z",
   "category": "general",
-  "totalItems": 49,
+  "totalItems": 47,
   "items": [
+    {
+      "id": "aws-news-e8e8e6a1c970",
+      "title": "Amazon Timestream for InfluxDB 3 now supports custom plugins",
+      "description": "Amazon Timestream for InfluxDB now lets you run your own custom Python plugins on the managed versions of InfluxDB 3 Core and Enterprise editions. You host your plugin code in public or private repositories you control and the engine fetches and runs it in response to triggers, letting you implement logic specific to your workload without standing up separate external infrastructure.\n \nPlugins run on the trigger types the processing engine already supports and with them, you can build custom data transformations, alerting, aggregation, and integrations with your own services, all running close to your data. Plugins execute in a managed Python environment that includes the standard library and Amazon-vetted packages , so you can move workload-specific processing into the database instead of operating a separate pipeline to do it.\n \nTo get started, set a plugin repository on a DB parameter group, apply that parameter group to your cluster, and create triggers that reference your plugin using the influxdb3 CLI or HTTP API; private repositories are authenticated with a token stored in AWS Secrets Manager.  Custom plugins are available in all AWS Regions where Amazon Timestream for InfluxDB is available. To get started with Amazon Timestream for InfluxDB 3, visit the Amazon Timestream for InfluxDB console. For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/timestream-influxdb-custom-plugins/",
+      "pubDate": "2026-09-08T21:58:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "secrets manager"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "secrets manager",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c76c57bc6bd4",
+      "title": "Amazon API Gateway now supports mutual TLS for backend integrations",
+      "description": "You can now configure Amazon API Gateway REST APIs to present an AWS Certificate Manager (ACM) certificate to your backend during the TLS handshake, enabling mutual TLS (mTLS). Previously, API Gateway could present only a self-signed certificate that it generated; now you can use a certificate signed by a certificate authority you trust. Your integration endpoint validates this certificate during the handshake to confirm the connection comes from your API. \n \nYou can import a certificate into ACM from your existing public key infrastructure (PKI), or have ACM issue and manage one for you through AWS Private Certificate Authority. When a certificate is reimported or renewed in ACM, API Gateway propagates the update automatically, with no redeployment and no downtime. Combined with the existing inbound mTLS support for client connections, you can apply mutual authentication across both the client-to-API and API-to-backend connections, which is a common requirement in financial services, healthcare, and other regulated or zero-trust environments.\n \nMutual TLS for backend integrations is available in all commercial AWS Regions and the AWS GovCloud (US) Regions, where API Gateway REST APIs are available. You can configure it through the API Gateway console, AWS CLI, or AWS CloudFormation. To get started, see Amazon API Gateway documentation and AWS blog post.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-api-gateway-mutual-tls-backend/",
+      "pubDate": "2026-09-08T19:16:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation",
+        "api gateway"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "api gateway",
+        "ga",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-10dde79081ce",
+      "title": "AWS HealthOmics introduces resource fallback order for WDL workflows",
+      "description": "Today, AWS HealthOmics introduces the resource fallback directive, enabling you to define an ordered list of preferred accelerator types, including an option to fallback to CPU instances, for tasks in your Workflow Description Language (WDL) workflows. Researchers and bioinformaticians can use this directive to reduce time spent diagnosing and resubmitting runs due to accelerator constraints and keep production workflows running. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows. \n \nWith resource fallback, you can prioritize your preferred accelerator for your task. When your preferred accelerator is unavailable, HealthOmics automatically moves through your specified alternatives in the fallback without resubmission. Each accelerator profile has a configurable timeout, giving you control over how long HealthOmics searches for that accelerator before moving to the next. Shorter timeouts help you move quickly through the fallback order, while longer timeouts increase the probability of reserving your preferred accelerator. You can also include a CPU profile as a final fallback to increase the likelihood of your task reserving an instance. \n \nYou can now use resource fallback for WDL workflows in all AWS HealthOmics Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Seoul, Singapore, Tokyo). To learn more, visit the advanced resource configuration documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-healthomics-resourcefallback-wdl/",
+      "pubDate": "2026-09-08T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-a3b798f7b631",
+      "title": "Dynamic Image Transformation for Amazon CloudFront adds four new features",
+      "description": "Today, AWS announced four new features for Dynamic Image Transformation for Amazon CloudFront (DIT). Customers can now use enhanced smart cropping with custom label detection and advanced composition controls that preserve products, text, logos, and custom objects within cropped images. In addition, customers benefit from enhanced automatic image optimization that delivers appropriately sized images across every browser and device type, from phones and tablets to smart TVs, using CloudFront's multi-tier device detection to maximize optimization reach regardless of how users access content. DIT also introduces an interactive image transformation playground for testing and validating transformations, and achieves full feature parity between it's ECS and Lambda architectures.\n \nDIT's expanded smart cropping enables customers to combine multiple detection methods including faces, labels, text, logos, and custom Amazon Rekognition models, in a single request with configurable aspect ratios, padding, and gravity constraints prioritized by business need. Enhanced automatic optimization now uses a tiered detection approach, layering CloudFront's device classification headers and configurable fallbacks behind Client Hints, to eliminate the browser-support gap that left ~30% of traffic previously served unoptimized and extend right-sized image delivery beyond browsers to all device types. The image transformation playground displays transformed images with extended metrics including original and output dimensions, format, file size, compression ratios, and processing time, enabling customers to validate the performance of their transformation policies.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/dynamic-image-transfromation-adds-new-features/",
+      "pubDate": "2026-09-08T14:32:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rekognition",
+        "lambda",
+        "ecs",
+        "cloudfront"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rekognition",
+        "lambda",
+        "ecs",
+        "cloudfront",
+        "ga",
+        "new-feature",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-67e5f4ba8a4e",
+      "title": "Amazon MWAA Serverless is now available in AWS GovCloud (US)",
+      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) Serverless is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West). Amazon MWAA Serverless eliminates the operational overhead of managing Apache Airflow infrastructure by automatically provisioning and scaling compute resources on demand, with a pay-per-use model that charges only for actual workflow run time.\n \nFor a full list of supported regions, see the Amazon MWAA Serverless regions page. To learn more, see the Amazon MWAA Serverless documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-serverless-aws-govcloud/",
+      "pubDate": "2026-09-04T22:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "now-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-4c69f4c2393e",
       "title": "AWS MCP Server adds a serverless capability for AWS Lambda functions",
@@ -125,6 +225,26 @@
         "s3",
         "ga",
         "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-74d455468480",
+      "title": "AWS CloudFormation now supports contract tests v2 for resource types",
+      "description": "AWS CloudFormation now supports contract tests v2, available through the --v2 flag of the cfn test command in the CloudFormation CLI. Previously, the contract test suite covered only basic scenarios around the CRUD handlers. Contract tests v2 adds deeper test scenarios that exercise your resource type implementation across each handler operation. All new resource types can run contract tests v2 through the test-type API during registry submission, and Java-based resource types can also run them locally with cfn test --v2, requiring only Docker and a built handler package.\n \nContract tests v2 introduces live-state verification that confirms actual resource state matches the requested state after create, update, and delete operations. Developers also benefit from schema backward-compatibility checks, test input linting that flags hardcoded Regions, account IDs, and partitions, and detailed HTML and JUnit XML reports for local contract test execution. These improvements significantly reduce iteration cycles by surfacing issues before registry submission.\n \nContract tests v2 is available in all AWS Regions where AWS CloudFormation is available. To learn more, visit the AWS CloudFormation contract tests documentation and the AWS CloudFormation product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-cloudformation-contract-tests-v2-resource-types/",
+      "pubDate": "2026-09-02T15:23:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudformation"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudformation",
+        "update",
+        "improvement",
         "support"
       ]
     },
@@ -508,95 +628,6 @@
       ]
     },
     {
-      "id": "aws-news-96ecb5ad08d0",
-      "title": "Amazon Redshift streaming can now ingest 10MiB records from Amazon Kinesis Data Streams",
-      "description": "Amazon Redshift  now supports Amazon Kinesis Data Streams (KDS) record sizes up to 10 MiB—a 10x increase from the previous 1 MiB limit—fully matching the expanded maximum record size in Amazon KDS. This means you can stream significantly larger payloads directly into Amazon Redshift without splitting records, simplifying your ingestion pipelines and unlocking new use cases for high-volume, large-record workloads.\n \nAmazon Redshift support for 10MiB record size in Amazon KDS streams is now available in all commercial AWS regions where Amazon Redshift is available. For more information on direct streaming ingestion into Amazon Redshift, see the Amazon Redshift streaming documentation. For more information on 10MiB record support in Amazon KDS, see the Amazon KDS documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-streaming-supports-kds-10mib-records",
-      "pubDate": "2026-08-27T21:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "rds",
-        "kinesis"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "redshift",
-        "rds",
-        "kinesis",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-62b3137c499d",
-      "title": "Amazon EC2 X8i instances are now available in additional regions",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) X8i instances are available in the Europe (Milan) and Europe (Spain) regions. These instances are powered by custom Intel Xeon 6 processors available only on AWS. X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud. They deliver up to 43% higher performance, 1.5x more memory capacity (up to 6TB), and 3.3x more memory bandwidth compared to previous generation X2i instances. \n  \n X8i instances are designed for memory-intensive workloads like SAP HANA, large databases, data analytics, and Electronic Design Automation (EDA). Compared to X2i instances, X8i instances offer up to 50% higher SAPS performance, up to 47% faster PostgreSQL performance, 88% faster Memcached performance, and 46% faster AI inference performance. X8i instances come in 14 sizes, from large to 96xlarge, including two bare metal options. \n  \n To get started, visit the AWS Management Console. X8i instances can be purchased via Savings Plans, On-Demand instances, and Spot instances. For more information visit X8i instances page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-x8i-europe-milan-spain/",
-      "pubDate": "2026-08-27T18:40:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-560127db2d29",
-      "title": "AWS Elastic Disaster Recovery introduces Recovery Plans for orchestrated application recovery",
-      "description": "AWS Elastic Disaster Recovery (AWS DRS) now offers Recovery Plans, a capability that automates the sequential launch of multi-server applications during recovery and drills. Instead of launching servers one at a time and tracking dependencies manually, you define the recovery sequence once and run it with a single action when you need it. This addresses a common challenge for customers running applications made up of databases, application tiers, and supporting services that must come up in a specific order.\n \nRecovery Plans let you group servers into sequential steps with configurable wait times between them, so your application recovers predictably and consistently every time. You can run plans in a non-disruptive drill mode to validate your procedures, add approval steps where you want a person in the loop, and monitor progress in real time. This automation reduces recovery time and eliminates common errors that occur when coordinating server launch order during high-stress disaster scenarios.\n \nRecovery Plans are available in all AWS Regions where AWS DRS is offered, at no additional cost beyond standard DRS usage. To learn more, visit the AWS Elastic Disaster Recovery User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/elastic-disaster-recovery-plans/",
-      "pubDate": "2026-08-27T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-dc13600b86f8",
-      "title": "Amazon Cognito adds admin API operation to reset user TOTP configurations",
-      "description": "Amazon Cognito now provides a new admin API operation to reset a user's time-based one-time Password (TOTP) multi-factor authentication (MFA) configuration. When users lose access to their TOTP device, administrators can remove the device association, allowing the user to enroll a new device on their next sign-in.\n \nThis removes the need to recreate accounts to recover locked-out users if they lose access to their TOTP device. Customers can maintain MFA enforcement while providing a recovery path.\n \nThis new capability is available in all AWS Regions where Amazon Cognito is available. To get started, access the AdminDeleteSoftwareToken API using the AWS CLI, SDKs, or APIs. See the developer guide for instructions.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cognito-totp-reset/",
-      "pubDate": "2026-08-26T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "new-capability"
-      ]
-    },
-    {
-      "id": "aws-news-d3e3648d1c0f",
-      "title": "Amazon Connect Customer now supports unplanned shrinkage in agent schedules",
-      "description": "Amazon Connect Customer now enables managers to input unplanned shrinkage in agent schedules, providing a more accurate picture of staffing due to unscheduled agent absences such as late logins or unplanned sick leave. Managers can upload unplanned shrinkage assumptions directly into agent schedules and immediately see updated scheduling metrics such as scheduled headcount, net staffing, and projected service level — each adjusted for unplanned shrinkage. For example, if 10% of the agents scheduled to work at 8 AM next Monday are expected to be unavailable due to late logins, then projected service level falls from 90% to 85% with unplanned shrinkage. This enables workforce managers to proactively address gaps in staffing that may arise due to unplanned agent unavailability, thus improving scheduling accuracy and their ability to maintain target service levels.\n \n \n \nThis feature is available in all  AWS Regions  where Amazon Connect Customer agent scheduling is available. To learn more about Amazon Connect Customer agent scheduling, click  here .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-unplanned-shrinkage/",
-      "pubDate": "2026-08-26T20:16:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "update",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-f8ff2f3f7cbd",
       "title": "Migrate an OAuth 2.0 authenticated Apache Kafka cluster to Amazon MSK with MSK Replicator",
       "description": "MSK Replicator now supports OAuth 2.0 (SASL/OAUTHBEARER) authentication to external Apache Kafka clusters. This post walks through the three supported grant types, how to configure Replicator for each, the network and TLS prerequisites that are commonly missed, and how to handle identity providers behind an additional federation layer.",
@@ -646,54 +677,6 @@
         "general"
       ],
       "tags": []
-    },
-    {
-      "id": "aws-news-4a5791a140ee",
-      "title": "Mountpoint for Amazon S3 adds memory usage controls",
-      "description": "Mountpoint for Amazon S3 can now limit memory usage, either automatically based on the environment it runs in or with a limit that you define. This lets you run Mountpoint alongside memory-intensive applications, for example, in machine learning training or analytics workloads where applications share a memory budget.\n \nPreviously, Mountpoint’s memory usage could expand over time based on usage patterns, potentially causing performance or stability issues when competing with other memory-intensive applications. With this launch, you can define a memory target for Mountpoint to reserve memory for your applications. Alternatively, Mountpoint can automatically determine a safe default based on the environment it runs in. For example, when running in Amazon EKS, Mountpoint can automatically detect a container's assigned memory budget. Under memory pressure, Mountpoint slows down operations to stay within this budget, enabling you to run Mountpoint in containers with strict memory allocations.  \n \nMountpoint is available in all AWS Regions. To upgrade to the latest version, visit the Mountpoint GitHub repository. To learn more about Mountpoint, see the overview page and the configuration guide in the Mountpoint GitHub repository.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/mountpoint-for-S3-adds-memory-usage-controls",
-      "pubDate": "2026-08-26T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3",
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "eks",
-        "launch"
-      ]
-    },
-    {
-      "id": "aws-news-6014a5a7d032",
-      "title": "AWS and DuckLabs: Building the future of analytics together",
-      "description": "Today we are announcing that Amazon has signed a definitive agreement to acquire DuckLabs, the Amsterdam-based company behind the open-source analytical database DuckDB. We expect the transaction to close shortly, subject to customary closing conditions. Hannes Mühleisen and Mark Raasveldt, who created DuckDB and co-founded DuckLabs, will continue leading the team and the open-source project's technical direction as part of AWS. The DuckDB open-source project will also continue to be driven by the DuckLabs team, remain open source under the independent Foundation (the non-profit that oversees DuckDB), and available under the MIT license as it does today.",
-      "link": "https://aws.amazon.com/blogs/big-data/aws-and-ducklabs-building-the-future-of-analytics-together/",
-      "pubDate": "2026-08-26T13:28:34.000Z",
-      "source": "bigDataBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": []
-    },
-    {
-      "id": "aws-news-1bca99208074",
-      "title": "PythonOperator and BashOperator Now Available on Amazon Managed Workflows for Apache Airflow (Amazon MWAA) Serverless",
-      "description": "You can now use PythonOperator and BashOperator to run custom Python functions and shell scripts directly in the Amazon MWAA Serverless runtime, without provisioning additional infrastructure. This post walks through building a serverless pipeline that converts CSV files to JSON using a PythonOperator and verifies the output with a BashOperator.",
-      "link": "https://aws.amazon.com/blogs/big-data/pythonoperator-and-bashoperator-now-available-on-amazon-managed-workflows-for-apache-airflow-amazon-mwaa-serverless/",
-      "pubDate": "2026-08-25T19:28:00.000Z",
-      "source": "bigDataBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "now-available"
-      ]
     },
     {
       "id": "aws-news-a772be06a225",
