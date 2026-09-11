@@ -1,8 +1,91 @@
 {
-  "lastUpdated": "2026-09-10T10:09:53.235Z",
+  "lastUpdated": "2026-09-11T10:07:05.554Z",
   "category": "ai-services",
-  "totalItems": 2,
+  "totalItems": 5,
   "items": [
+    {
+      "id": "aws-news-ae21045146bd",
+      "title": "How to migrate from Amazon CloudSearch to Amazon OpenSearch Serverless",
+      "description": "Learn how to migrate an Amazon CloudSearch domain to Amazon OpenSearch Serverless: assess your configuration, create a collection with explicit index mappings, convert your documents and queries to the OpenSearch query DSL, configure security, load data with Amazon OpenSearch Ingestion, and validate before cutover.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cloudsearch-to-amazon-opensearch-serverless/",
+      "pubDate": "2026-09-10T16:06:42.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "opensearch",
+        "opensearch ingestion"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "opensearch",
+        "opensearch ingestion"
+      ]
+    },
+    {
+      "id": "aws-news-60643ed0af3e",
+      "title": "AWS Elemental Inference now generates contextual metadata from live video in real time",
+      "description": "AWS Elemental Inference now generates contextual metadata from live video streams in real time, using AI to produce scene-level intelligence without custom machine learning infrastructure. The new capability analyzes live video in parallel with encoding to extract Interactive Advertising Bureau (IAB) content taxonomy categories, Global Alliance for Responsible Media (GARM) brand suitability signals, detected objects and actions, and shot and scene-level descriptions. Broadcasters and content platforms can now power contextual ad decisioning, media asset enrichment, and content discovery workflows using serverless, fully managed AI.\n \nFor contextual advertising, AWS Elemental MediaLive embeds the Elemental Inference feed ID into (Society of Cable Telecommunications Engineers) SCTE-35 ad markers in the live stream. At each ad break, AWS Elemental MediaTailor uses a Monetization Function to retrieve the scene-level signals for that feed ID and translate them into the targeting parameters ad servers expect. This enables context-aware ad decision-making without custom integration work, supporting use cases like contextual deal curation and brand suitability scores, resulting in improved monetization outcomes for publishers. For media asset management, detecting objects and actions, and shot and scene-level descriptions, provide automatic structured metadata generation for every scene and shot, building richer archives that power contextual content discovery, assisted editing workflows, and personalized content recommendations without manual logging or post-production metadata entry.\n \nContextual metadata is available today in the AWS Elemental MediaLive console in all AWS Regions where AWS Elemental Inference is available.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/elemental-inference-contextual-metadata/",
+      "pubDate": "2026-09-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "translate",
+        "personalize"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "translate",
+        "personalize",
+        "ga",
+        "integration",
+        "support",
+        "new-capability"
+      ]
+    },
+    {
+      "id": "aws-news-e05a827844f3",
+      "title": "AWS Elemental MediaTailor now supports Low-Latency HLS ad insertion",
+      "description": "AWS Elemental MediaTailor now supports Low-Latency HTTP Live Streaming (LL-HLS) ad insertion using HLS Interstitials. MediaTailor is a channel assembly and personalized ad insertion service for video providers that monetizes live streams, linear channels, and video-on-demand content. With this launch, video providers can insert ads into low-latency live streams while holding the reduced latency their viewers expect.\n \nLL-HLS reduces live latency by delivering partial segments and letting players hold a playlist request open until the next segment part is ready, which requires media playlists to be cacheable at the content delivery network (CDN) edge. MediaTailor supports this using HLS Interstitials, which reference ads as a separate playlist instead of stitching them into each viewer's media playlist. Every viewer receives the same cacheable playlist, so MediaTailor sustains low-latency playback at scale and moves the ad decision server call off the manifest request path. This capability has been proven in production on live sporting events with multi-million views, and is ideal for live sports, news, betting and wagering, watch-party, and interactive live formats where latency is a product requirement.\n \nLow-Latency HLS ad insertion is available in all AWS Regions where AWS Elemental MediaTailor is available. To learn more, visit the AWS Elemental MediaTailor product page and the MediaTailor server-guided ad insertion documentation. To get started, sign in to the MediaTailor console..",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-elemental-mediatailor-low-latency-hls-ad-insertion",
+      "pubDate": "2026-09-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "personalize"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "personalize",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-c80948d4f888",
+      "title": "AWS Elemental introduces Dynamic Multiview for live video",
+      "description": "AWS Elemental MediaPackage now offers Dynamic Multiview, a server-side capability that composes multiple live video sources into viewer-selected tiled layouts on demand. Content providers can deliver multi-angle, multi-game, and personalized viewing experiences as standard HLS (HTTP Live Streaming) and DASH (Dynamic Adaptive Streaming over HTTP) streams playable on most modern consumer devices, televisions, and set top boxes without custom player development.\n \nDynamic Multiview operates entirely in the compressed domain, combining individually encoded sources without re-encoding or compositing. Customers encode each source once through AWS Elemental MediaLive, and MediaPackage assembles compositions on demand - only when viewers request them, eliminating the need to pre-encode combinations. Because the output is standard HLS and DASH, it plays natively on existing devices and players with no app changes or SDK integration required. The feature supports AVC and HEVC codecs, DRM encryption, SCTE-35 ad marker passthrough, and full-screen ad replacement.\n \nTo learn more, visit the Elemental Dynamic Multiview Reference Guide.\n \nDynamic Multiview is available in all AWS Regions where AWS Elemental MediaPackage and MediaLive are available.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-elemental-dynamic-multiview-video/",
+      "pubDate": "2026-09-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "personalize",
+        "ecs"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "personalize",
+        "ecs",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-deb28b955719",
       "title": "Network connectivity patterns for the next generation of Amazon OpenSearch Serverless",
@@ -18,27 +101,6 @@
       ],
       "tags": [
         "opensearch"
-      ]
-    },
-    {
-      "id": "aws-news-381af45f335b",
-      "title": "Amazon OpenSearch Service adds new Cluster Insights for faster diagnosis of cluster status",
-      "description": "Amazon OpenSearch Service has expanded Cluster Insights with 17 new insights that identify the root causes behind Red and Yellow cluster status and provide actionable recommendations to resolve them. These insights cover resource exhaustion scenarios including JVM out-of-memory, sustained CPU saturation, as well as configuration issues such as zone imbalance, and misconfigured replica counts.\n \nPreviously, when a cluster entered Red or Yellow status due to unassigned shards, diagnosing the underlying cause required manually correlating multiple metrics across nodes and availability zones. With these new insights, OpenSearch Service automatically identifies the specific resource constraint or misconfiguration responsible and provides tailored recommendations — such as scaling up instance types, increasing disk capacity, or correcting shard allocation settings — so you can restore cluster stability faster.\n \nSix new Critical-severity insights detect conditions causing primary shards to become unassigned (Red status), while eleven insights ranging from Medium to Critical severity surface issues preventing replica shard allocation (Yellow status). Each insight identifies affected nodes and provides specific remediation recommendations to help you take targeted corrective action.\n \nThese insights are available at no additional cost for Amazon OpenSearch Service domains running OpenSearch 1.0 and later, and Elasticsearch 6.8 and later, across 11 Regions globally: US East (N. Virginia, Ohio), US West (Oregon), Canada (Central), Asia Pacific (Sydney, Tokyo), and Europe (Frankfurt, Ireland, London, Paris, Stockholm). To learn more, visit the Cluster Insights documentation or view the complete catalog of available insights.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/opensearch-cluster-status-insight/",
-      "pubDate": "2026-08-31T15:41:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "opensearch",
-        "opensearch service",
-        "rds"
-      ],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "opensearch",
-        "opensearch service",
-        "rds"
       ]
     }
   ]
