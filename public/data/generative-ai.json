@@ -1,8 +1,173 @@
 {
-  "lastUpdated": "2026-09-11T10:07:05.554Z",
+  "lastUpdated": "2026-09-12T09:42:07.327Z",
   "category": "generative-ai",
-  "totalItems": 67,
+  "totalItems": 71,
   "items": [
+    {
+      "id": "aws-news-82eddda10ef9",
+      "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
+      "description": "Multi-agent systems fail in ways traditional monitoring misses. This post presents a dual-layer approach to monitoring production agents: Amazon Bedrock AgentCore Evaluations for continuous quality scoring and AWS DevOps Agent for autonomous infrastructure investigation, shown on a four-agent airline reservation system.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+      "pubDate": "2026-09-11T18:26:38.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6ef32612a86b",
+      "title": "Amazon SageMaker HyperPod now supports model caching for faster inference autoscaling and reduced cold starts",
+      "description": "Amazon SageMaker HyperPod now supports model caching, an inference optimization that pre-loads model weights and container images onto cluster nodes so pods start in seconds instead of minutes.\n \nWhen running LLM inference at scale for workloads like chat assistants, agentic pipelines, RAG, and document analysis, cold start is a real bottleneck. Deployments and scale-out events spend most of their time downloading container images and model weights. As model size increases, this gets worse, with large models taking tens of minutes before they can serve traffic.\n \nModel caching solves this with two independent capabilities. The weights cache stores model weights on local NVMe so pods read from fast local storage instead of pulling from S3 or FSx over the network. The image cache pre-pulls the container image so pods skip the ECR download entirely. If a pod lands on a node without a warm cache, it falls back to pulling from the original source automatically, so there is no risk of pods getting stuck or failing.\n \nBenchmarks across models from 57 GB to 145 GB show around 60% faster scale-out, and the image cache cuts over two minutes of image-pull time (97% reduction). The benefit grows with model size while retaining the reliability of the original source path.\n \nCustomers enable model caching through the HyperPod Inference Operator by adding a modelCacheConfig section to their InferenceEndpointConfig or JumpStartModel resource. The operator handles the full lifecycle with no manual setup or cleanup.\n \nModel caching is now generally available in all regions where SageMaker HyperPod is available. To get started, see the SageMaker HyperPod documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/sgm-hyperpod-model-caching-inf/",
+      "pubDate": "2026-09-11T18:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6f70bca341f5",
+      "title": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload",
+      "description": "Comparing models on dollars per million tokens misses what production workloads actually pay for: outcomes. This post shares an open-source benchmarking harness that measures cost per correct answer, agent trajectory cost, and rubric-graded deliverable quality across OpenAI models on Amazon Bedrock.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+      "pubDate": "2026-09-11T18:24:38.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-9bb2887855e7",
+      "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+      "description": "Learn how to build and deploy an MCP App with interactive HTML widgets on Amazon Bedrock AgentCore. Because MCP Apps is a host-agnostic standard, the same server delivers the same rich experience across AI hosts like ChatGPT and Claude that support the extension.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-11T18:23:17.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3eb6affe0db3",
+      "title": "AWS Lambda now supports direct read configuration for Amazon S3 Files",
+      "description": "AWS Lambda now supports direct read configuration for Amazon S3 Files, letting you configure which storage your functions read from: S3 Files high-performance storage or your S3 bucket. With this launch, you can optimize the throughput and latency of file reads for your Lambda functions based on your application requirements.\n \nCustomers use S3 Files with Lambda functions to build scalable data processing pipelines and stateful agentic workloads with the performance and simplicity of a file system, while benefiting from the scalability, durability, and cost-effectiveness of S3. S3 Files serves data from high-performance storage for low latency or directly from your S3 bucket for high throughput on large reads, automatically routing each operation to the storage best suited for it. By default, Lambda supports direct reads from your S3 bucket only for functions configured with 512 MB of memory or higher. However, without control over the direct read configuration, you cannot optimize read performance for your specific application requirements. With this launch, you can explicitly enable or disable direct read for S3 Files on your Lambda functions, independent of function memory size. When you enable direct read, your function reads files 1 MB or larger directly from your S3 bucket for maximum throughput, and smaller files are served through the high-performance storage. When you disable it, all reads are served through the high-performance storage for the lowest latency.\n \nThis capability is available in all AWS commercial Regions, AWS GovCloud (US-East), and AWS GovCloud (US-West) Regions, except Asia Pacific (New Zealand), Middle East (Bahrain), and Middle East (UAE). You can configure direct read for S3 Files using the AWS Management Console, AWS CLI, AWS SDKs, and AWS CloudFormation. There is no additional charge beyond standard Lambda and S3 Files pricing. To learn more about how to use S3 Files with your Lambda function, visit the AWS Lambda developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-direct-read-s3files/",
+      "pubDate": "2026-09-11T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6f5562854c8f",
+      "title": "AWS HealthOmics now publishes real-time run metrics to Amazon CloudWatch",
+      "description": "AWS HealthOmics now publishes real-time run metrics to Amazon CloudWatch, giving you visibility into workflow resource utilization as runs execute. The 14 new run metrics span CPU and GPU usage, memory usage, file system usage and I/O metrics, network throughput, and ephemeral storage usage. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n \nReal-time run metrics can help you identify CPU or GPU bottlenecks, detect memory or storage exhaustion before a task fails, and track file system throughput, all without opening a support case. By comparing actual usage against allocated resources, you can right-size the compute and storage configurations for your workflows. These metrics are emitted using the Amazon CloudWatch OpenTelemetry standard, so you can integrate them with third-party observability tools in addition to native CloudWatch dashboards and alarms.\n \nReal-time run metrics are now available in the following AWS HealthOmics Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), and Asia Pacific (Singapore, Seoul, Tokyo). To learn more, visit the Monitoring run metrics with CloudWatch documentation. Amazon CloudWatch charges for these run metrics based on the volume of metric data ingested. For more information on pricing, visit Amazon CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-healthomics-realtime-run-metrics/",
+      "pubDate": "2026-09-11T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d5a0a87dd297",
+      "title": "AWS DevOps Agent adds support for bidirectional Slack communication",
+      "description": "AWS DevOps Agent now enables engineers to manage production operations across AWS, multicloud, and on-premises environments with the complete investigation lifecycle directly within Slack. Previously, on-call engineers and DevOps teams faced fragmented workflows during high-severity incidents, having to context-switch between communication and investigation platforms. This update consolidates both surfaces into a single, unified location where incident response already happens.\n \nEngineering teams can now initiate and steer investigations by simply @mentioning AWS DevOps Agent in any connected Slack private channel. All investigation activity, including team-contributed context, agent findings, and recommended actions, is captured within a single thread. Ask questions about AWS resources, system metrics, alarm status, deployment history, and incident patterns, reducing cognitive load during critical moments and making production operations significantly more efficient.\n \nThis capability is available in all commercial AWS Regions where AWS DevOps Agent is currently supported.\n \nTo get started, read the user guide. See all the latest AWS DevOps Agent features on the release history page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-devops-agent-bidirectional-slack-communication",
+      "pubDate": "2026-09-11T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-eaffef0d0f6b",
+      "title": "From zero-shot forecast to purchase order with Amazon Bedrock AgentCore",
+      "description": "Combine zero-shot forecasting with Amazon Chronos2 and multi-agent orchestration on Amazon Bedrock AgentCore to turn demand forecasts into validated purchase orders. No per-product model training, with business rules, auditability, and cost that scales to zero.",
+      "link": "https://aws.amazon.com/blogs/architecture/from-zero-shot-forecast-to-purchase-order-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-11T14:08:01.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "forecast"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "forecast"
+      ]
+    },
     {
       "id": "aws-news-c8f0218ffa4e",
       "title": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching",
@@ -497,25 +662,6 @@
       "tags": [
         "nova",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-cb5cacecffa4",
-      "title": "Automated agent evaluation with Amazon Bedrock AgentCore and GitHub Actions",
-      "description": "Wire Amazon Bedrock AgentCore Evaluations into a GitHub Actions pipeline: deploy an AI agent and an OAuth-protected MCP server to AgentCore runtime, invoke the agent with test prompts, score the responses, and automatically block pull requests when agent behavior regresses.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
-      "pubDate": "2026-09-08T16:23:21.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
       ]
     },
     {
@@ -1017,51 +1163,6 @@
       ]
     },
     {
-      "id": "aws-news-5c936e79ff70",
-      "title": "Claude Fable 5.1, Anthropic's new frontier model is now available on AWS",
-      "description": "Claude Fable 5.1 is generally available on AWS and brings Anthropic's most capable frontier model to all customers. Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows. A clear improvement over Claude Fable 5, Fable 5.1 is a step up in intelligence on the hardest reasoning tasks, providing better judgement on ambiguous work and fewer confident wrong answers. Claude Mythos 5.1, the same underlying model as Claude Fable 5.1 with its full cyber and bio capabilities retained for cybersecurity and biology research, is available with limited access.\n \nClaude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code review, and performance work over sessions that run for hours. If it gets stuck, it says so instead of reporting success, and it is less likely to take shortcuts like disabling a failing test. It takes analysis from the first question to the finished document, and it is Anthropic's strongest model yet for knowledge work.\n \nAnthropic has designated Fable 5.1 a Covered Model, a category of Claude models that carry additional data retention, safety review, and access policies wherever they're offered. Enterprise Frontier Safeguards (EFS) built in partnership between AWS and Anthropic, will let eligible customers use Covered Models while keeping their data in a cloud environment they control. Read the launch blog to learn more.\n \nCustomers have two ways to access Claude Fable 5.1: Amazon Bedrock and Claude Platform on AWS. To learn more, see the Amazon Bedrock documentation, regional availability, and Claude Platform on AWS documentation..",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws/",
-      "pubDate": "2026-09-01T14:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "launch",
-        "generally-available",
-        "now-available",
-        "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-a3a5a313888f",
-      "title": "Claude Fable 5.1, Anthropic's new frontier model is now available on AWS GovCloud (US)",
-      "description": "Claude Fable 5.1 is generally available on Amazon Bedrock in AWS GovCloud (US) and brings Anthropic's most capable frontier model to regulated industry customers. Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows.  \n \nClaude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code review, and performance work over sessions that run for hours. If it gets stuck, it says so instead of reporting success, and it is less likely to take shortcuts like disabling a failing test. It takes analysis from the first question to the finished document, and it is Anthropic's strongest model yet for knowledge work.\n \nAnthropic has designated Fable 5.1 a Covered Model, a category of Claude models that carry additional data retention, safety review, and access policies wherever they're offered. Enterprise Frontier Safeguards (EFS) built in partnership between AWS and Anthropic, will let eligible customers use Covered Models while keeping their data in a cloud environment they control. Read the launch blog to learn more.\n \nTo learn more, see the Amazon Bedrock documentation, and regional availability pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws-govcloud/",
-      "pubDate": "2026-09-01T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "launch",
-        "generally-available",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-acf8c0283c7f",
       "title": "MCP went stateless: Is your AWS MCP server deployment well-architected?",
       "description": "On July 28, 2026, MCP made its protocol core stateless, removing the initialize handshake and session header. This post maps the MCP 2026-07-28 specification to the AWS Well-Architected Agentic AI Lens, pillar by pillar, and shows why the stateless design lets you delete the sticky sessions and session stores your MCP servers needed on AWS.",
@@ -1248,26 +1349,6 @@
       ],
       "tags": [
         "bedrock"
-      ]
-    },
-    {
-      "id": "aws-news-ef0ed6a9141c",
-      "title": "Scaling patterns for self-organizing multi-agent clusters with Kiro",
-      "description": "Learn how to coordinate AI agents through shared state in Amazon S3 instead of a central orchestrator. Deploy and observe self-organizing agent clusters on Amazon EC2 with the open-source kiro-flock reference implementation.",
-      "link": "https://aws.amazon.com/blogs/architecture/scaling-patterns-for-self-organizing-multi-agent-clusters-with-kiro/",
-      "pubDate": "2026-08-11T21:17:02.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "s3",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "ec2",
-        "ga"
       ]
     },
     {

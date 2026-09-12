@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-09-11T10:07:05.554Z",
-  "totalItems": 188,
+  "lastUpdated": "2026-09-12T09:42:07.327Z",
+  "totalItems": 190,
   "sources": {
-    "whatsNew": 90,
+    "whatsNew": 92,
     "mlBlog": 20,
     "newsBlog": 18,
     "bigDataBlog": 16,
@@ -11,6 +11,236 @@
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-989be6721eda",
+      "title": "Amazon EC2 X2idn instances are now available in Asia Pacific (Hong Kong)",
+      "description": "Memory-optimized Amazon Elastic Compute Cloud (Amazon EC2) X2idn instances are now available in Asia Pacific (Hong Kong) Region. These instances, powered by 3rd generation Intel Xeon Scalable Processors and built with AWS Nitro System, are designed for memory-intensive workloads and deliver improvements in performance compared to previous generation X1 instances. These instances are SAP-certified for running Business Suite on HANA, SAP S/4HANA, Data Mart Solutions on HANA, Business Warehouse on HANA, SAP BW/4HANA, and SAP NetWeaver workloads on any database.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-x2idn-asia-pacific-hong-kong/",
+      "pubDate": "2026-09-11T18:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "now-available",
+        "improvement"
+      ]
+    },
+    {
+      "id": "aws-news-82eddda10ef9",
+      "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
+      "description": "Multi-agent systems fail in ways traditional monitoring misses. This post presents a dual-layer approach to monitoring production agents: Amazon Bedrock AgentCore Evaluations for continuous quality scoring and AWS DevOps Agent for autonomous infrastructure investigation, shown on a four-agent airline reservation system.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+      "pubDate": "2026-09-11T18:26:38.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-6ef32612a86b",
+      "title": "Amazon SageMaker HyperPod now supports model caching for faster inference autoscaling and reduced cold starts",
+      "description": "Amazon SageMaker HyperPod now supports model caching, an inference optimization that pre-loads model weights and container images onto cluster nodes so pods start in seconds instead of minutes.\n \nWhen running LLM inference at scale for workloads like chat assistants, agentic pipelines, RAG, and document analysis, cold start is a real bottleneck. Deployments and scale-out events spend most of their time downloading container images and model weights. As model size increases, this gets worse, with large models taking tens of minutes before they can serve traffic.\n \nModel caching solves this with two independent capabilities. The weights cache stores model weights on local NVMe so pods read from fast local storage instead of pulling from S3 or FSx over the network. The image cache pre-pulls the container image so pods skip the ECR download entirely. If a pod lands on a node without a warm cache, it falls back to pulling from the original source automatically, so there is no risk of pods getting stuck or failing.\n \nBenchmarks across models from 57 GB to 145 GB show around 60% faster scale-out, and the image cache cuts over two minutes of image-pull time (97% reduction). The benefit grows with model size while retaining the reliability of the original source path.\n \nCustomers enable model caching through the HyperPod Inference Operator by adding a modelCacheConfig section to their InferenceEndpointConfig or JumpStartModel resource. The operator handles the full lifecycle with no manual setup or cleanup.\n \nModel caching is now generally available in all regions where SageMaker HyperPod is available. To get started, see the SageMaker HyperPod documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/sgm-hyperpod-model-caching-inf/",
+      "pubDate": "2026-09-11T18:25:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "hyperpod",
+        "s3",
+        "generally-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6f70bca341f5",
+      "title": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload",
+      "description": "Comparing models on dollars per million tokens misses what production workloads actually pay for: outcomes. This post shares an open-source benchmarking harness that measures cost per correct answer, agent trajectory cost, and rubric-graded deliverable quality across OpenAI models on Amazon Bedrock.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+      "pubDate": "2026-09-11T18:24:38.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock"
+      ]
+    },
+    {
+      "id": "aws-news-9bb2887855e7",
+      "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+      "description": "Learn how to build and deploy an MCP App with interactive HTML widgets on Amazon Bedrock AgentCore. Because MCP Apps is a host-agnostic standard, the same server delivers the same rich experience across AI hosts like ChatGPT and Claude that support the extension.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-11T18:23:17.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-3eb6affe0db3",
+      "title": "AWS Lambda now supports direct read configuration for Amazon S3 Files",
+      "description": "AWS Lambda now supports direct read configuration for Amazon S3 Files, letting you configure which storage your functions read from: S3 Files high-performance storage or your S3 bucket. With this launch, you can optimize the throughput and latency of file reads for your Lambda functions based on your application requirements.\n \nCustomers use S3 Files with Lambda functions to build scalable data processing pipelines and stateful agentic workloads with the performance and simplicity of a file system, while benefiting from the scalability, durability, and cost-effectiveness of S3. S3 Files serves data from high-performance storage for low latency or directly from your S3 bucket for high throughput on large reads, automatically routing each operation to the storage best suited for it. By default, Lambda supports direct reads from your S3 bucket only for functions configured with 512 MB of memory or higher. However, without control over the direct read configuration, you cannot optimize read performance for your specific application requirements. With this launch, you can explicitly enable or disable direct read for S3 Files on your Lambda functions, independent of function memory size. When you enable direct read, your function reads files 1 MB or larger directly from your S3 bucket for maximum throughput, and smaller files are served through the high-performance storage. When you disable it, all reads are served through the high-performance storage for the lowest latency.\n \nThis capability is available in all AWS commercial Regions, AWS GovCloud (US-East), and AWS GovCloud (US-West) Regions, except Asia Pacific (New Zealand), Middle East (Bahrain), and Middle East (UAE). You can configure direct read for S3 Files using the AWS Management Console, AWS CLI, AWS SDKs, and AWS CloudFormation. There is no additional charge beyond standard Lambda and S3 Files pricing. To learn more about how to use S3 Files with your Lambda function, visit the AWS Lambda developer guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-direct-read-s3files/",
+      "pubDate": "2026-09-11T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lambda",
+        "s3",
+        "cloudformation"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "lambda",
+        "s3",
+        "cloudformation",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-22172e69345c",
+      "title": "Amazon Bedrock Managed Knowledge Base now supports multimodal embeddings for video, audio, and image content with TwelveLabs Marengo 3.0",
+      "description": "AWS announces the availability of TwelveLabs Marengo 3.0 as an embedding model in Amazon Bedrock Managed Knowledge Base, enabling customers to create multimodal embeddings for video, audio, and image content. Amazon Bedrock Managed Knowledge Base already supports media search by transcribing audio and video to text and generating text-based embeddings—Marengo 3.0 goes further by encoding visual scenes, speech, and video cues directly into multimodal embeddings, capturing meaning that transcription alone cannot. Simply upload your media assets from data sources such as Amazon S3, sync, and search using natural language—with no infrastructure to manage.\n Marengo 3.0 produces compact 512-dimensional vectors, delivering state-of-the-art retrieval accuracy. Results include segment start and end times, enabling applications to jump directly to the relevant moment in a video. This unlocks use cases across sports analytics, media and entertainment, security, education, and retail—from finding specific plays across seasons of game footage to locating lecture segments by concept rather than keywords. The model offers configurable segmentation options to match your content structure.\n To learn more, see TwelveLabs Marengo 3.0 embedding model integration in the Amazon Bedrock Knowledge Base User Guide. For more information, visit the Amazon Bedrock Knowledge Bases product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-multimodal-embeddings-twelvelabs-marengo/",
+      "pubDate": "2026-09-11T15:13:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "bedrock",
+        "s3",
+        "rds"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "bedrock",
+        "s3",
+        "rds",
+        "ga",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6f5562854c8f",
+      "title": "AWS HealthOmics now publishes real-time run metrics to Amazon CloudWatch",
+      "description": "AWS HealthOmics now publishes real-time run metrics to Amazon CloudWatch, giving you visibility into workflow resource utilization as runs execute. The 14 new run metrics span CPU and GPU usage, memory usage, file system usage and I/O metrics, network throughput, and ephemeral storage usage. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs at scale with fully managed bioinformatics workflows.\n \nReal-time run metrics can help you identify CPU or GPU bottlenecks, detect memory or storage exhaustion before a task fails, and track file system throughput, all without opening a support case. By comparing actual usage against allocated resources, you can right-size the compute and storage configurations for your workflows. These metrics are emitted using the Amazon CloudWatch OpenTelemetry standard, so you can integrate them with third-party observability tools in addition to native CloudWatch dashboards and alarms.\n \nReal-time run metrics are now available in the following AWS HealthOmics Regions: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), and Asia Pacific (Singapore, Seoul, Tokyo). To learn more, visit the Monitoring run metrics with CloudWatch documentation. Amazon CloudWatch charges for these run metrics based on the volume of metric data ingested. For more information on pricing, visit Amazon CloudWatch pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-healthomics-realtime-run-metrics/",
+      "pubDate": "2026-09-11T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d5a0a87dd297",
+      "title": "AWS DevOps Agent adds support for bidirectional Slack communication",
+      "description": "AWS DevOps Agent now enables engineers to manage production operations across AWS, multicloud, and on-premises environments with the complete investigation lifecycle directly within Slack. Previously, on-call engineers and DevOps teams faced fragmented workflows during high-severity incidents, having to context-switch between communication and investigation platforms. This update consolidates both surfaces into a single, unified location where incident response already happens.\n \nEngineering teams can now initiate and steer investigations by simply @mentioning AWS DevOps Agent in any connected Slack private channel. All investigation activity, including team-contributed context, agent findings, and recommended actions, is captured within a single thread. Ask questions about AWS resources, system metrics, alarm status, deployment history, and incident patterns, reducing cognitive load during critical moments and making production operations significantly more efficient.\n \nThis capability is available in all commercial AWS Regions where AWS DevOps Agent is currently supported.\n \nTo get started, read the user guide. See all the latest AWS DevOps Agent features on the release history page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-devops-agent-bidirectional-slack-communication",
+      "pubDate": "2026-09-11T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-eaffef0d0f6b",
+      "title": "From zero-shot forecast to purchase order with Amazon Bedrock AgentCore",
+      "description": "Combine zero-shot forecasting with Amazon Chronos2 and multi-agent orchestration on Amazon Bedrock AgentCore to turn demand forecasts into validated purchase orders. No per-product model training, with business rules, auditability, and cost that scales to zero.",
+      "link": "https://aws.amazon.com/blogs/architecture/from-zero-shot-forecast-to-purchase-order-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-11T14:08:01.000Z",
+      "source": "architectureBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "forecast"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "forecast"
+      ]
+    },
+    {
+      "id": "aws-news-8da8786574e8",
+      "title": "Amazon RDS for Oracle now supports Supplemental Patch Bundle for July 2026 Release Update",
+      "description": "Amazon Relational Database Service (Amazon RDS) for Oracle now supports the Supplemental Patch Bundle (SPB) for the July 2026 Release Update (RU) for Oracle Database version 19c and 26ai. \n \nStarting with April 2026 releases, the Oracle Spatial Patch Bundle has been renamed to Supplemental Patch Bundle (SPB). The SPB includes additional database patches recommended by Oracle for specific use cases, such as Oracle Spatial, Oracle Data Pump, and Oracle GoldenGate. For details, see Release Updates (RUs) and Supplemental Patch Bundles (SPBs).\n \nYou can apply the Supplemental Patch Bundle update for new database instances, or upgrade existing instances to engine version 19.0.0.0.ru-2026-07.spb-1.r1 or 26.0.0.0.ru-2026-07.spb-1.r1 by selecting the \"Supplemental Patch Bundle Engine Versions\" checkbox in the AWS Console. To learn more about Oracle SPBs supported on Amazon RDS for each engine version, see the Amazon RDS for Oracle Release notes.\n \nYou can also use AWS Organizations upgrade rollout policy to stagger automatic minor version upgrades for your Amazon RDS database instances. This feature allows you to automatically apply updates to non-production environments, validate the updates, and then automatically apply the same update to production environments. For additional details about using AWS Organizations upgrade rollout policy for automatic minor version upgrades, refer to Amazon RDS for Oracle documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-rds-oracle-supports-spatial-patch-bundle-jul-2026-ru/",
+      "pubDate": "2026-09-11T07:12:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "organizations"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "rds",
+        "organizations",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-e48b44610424",
       "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
@@ -960,25 +1190,6 @@
       ]
     },
     {
-      "id": "aws-news-94cc09aae7f3",
-      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
-      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
-      "pubDate": "2026-09-09T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "iam"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "iam"
-      ]
-    },
-    {
       "id": "aws-news-ea5b1a4e400e",
       "title": "AWS Private CA EKS add-on and Connector for AD now available in AWS GovCloud (US)",
       "description": "AWS Private Certificate Authority (AWS Private CA) announces the availability of the AWS Private CA Connector for Kubernetes as a managed Amazon EKS add-on and the AWS Private CA Connector for Active Directory in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. These launches expand certificate automation capabilities available to AWS GovCloud (US) customers managing government workloads.\nThe AWS Private CA Connector for Kubernetes EKS add-on provides simplified installation, configuration, and lifecycle management through the EKS console, CLI, and API. The connector works with cert-manager to automate certificate requests, distribution to Kubernetes secrets, and renewal, enabling TLS for ingress controllers and securing service-to-service communication in service meshes such as Istio and Linkerd.\nThe AWS Private CA Connector for Active Directory enables AWS GovCloud (US) customers to use AWS Private CA as their certificate authority for Active Directory-enrolled objects. The connector provides automatic certificate issuance to domain-joined users, computers, and other objects through familiar Microsoft certificate enrollment interfaces, supporting enterprise scenarios including smart card authentication, LDAPS, and network device authentication (802.1x).\nAWS Private CA secures private key material using FIPS 140-3 Level 3 hardware security modules (HSMs).\nTo get started, see the AWS Private CA product page, the Amazon EKS add-ons user guide, and the AWS Private CA Connector for Active Directory documentation.",
@@ -996,6 +1207,25 @@
         "launch",
         "now-available",
         "support"
+      ]
+    },
+    {
+      "id": "aws-news-94cc09aae7f3",
+      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
+      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
+      "pubDate": "2026-09-09T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "iam"
       ]
     },
     {
@@ -1241,27 +1471,6 @@
       ]
     },
     {
-      "id": "aws-news-d5c7a7c7fb5b",
-      "title": "Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 1",
-      "description": "Managed MLflow on Amazon SageMaker AI now syncs richer model metadata (training metrics, evaluation results, inference specs, and lineage) into the SageMaker AI Model Registry, with lifecycle stage promotion. Part 1 shows how to govern candidate models in a single account using IAM guardrails.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-1/",
-      "pubDate": "2026-09-08T17:03:20.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "ecs",
-        "iam"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "sagemaker",
-        "ecs",
-        "iam"
-      ]
-    },
-    {
       "id": "aws-news-899b0364639a",
       "title": "AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year",
       "description": "On September 1, Gartner published its Magic Quadrant for Strategic Cloud Platform Services (SCPS). Amazon Web Services (AWS) is the longest-running Leader in this Magic Quadrant, with Gartner naming AWS a Leader for the sixteenth consecutive year. In the report, Gartner once again placed AWS highest on the Ability to Execute axis. We believe this reflects our commitment to help customers innovate faster, operate more securely, and build at any scale, particularly as agentic AI drives the need for a data foundation that is production-ready.",
@@ -1296,43 +1505,6 @@
       "tags": [
         "emr",
         "kinesis"
-      ]
-    },
-    {
-      "id": "aws-news-cb5cacecffa4",
-      "title": "Automated agent evaluation with Amazon Bedrock AgentCore and GitHub Actions",
-      "description": "Wire Amazon Bedrock AgentCore Evaluations into a GitHub Actions pipeline: deploy an AI agent and an OAuth-protected MCP server to AgentCore runtime, invoke the agent with test prompts, score the responses, and automatically block pull requests when agent behavior regresses.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
-      "pubDate": "2026-09-08T16:23:21.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore"
-      ]
-    },
-    {
-      "id": "aws-news-a0cc1525b33c",
-      "title": "Benchmarking small LLM inference on SageMaker AI: G7 vs G5 and G6",
-      "description": "Benchmark two 30B Mixture-of-Experts models, Qwen3-Coder-30B and NVIDIA Nemotron-3-Nano-30B, across G5, G6, G6e, and G7 GPU instances on Amazon SageMaker AI. Compare throughput, latency, and cost-per-token, and see how G7's NVIDIA Blackwell GPUs deliver measurable price-performance gains for real-time LLM inference.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/benchmarking-small-llm-inference-on-sagemaker-ai-g7-vs-g5-and-g6/",
-      "pubDate": "2026-09-08T16:21:57.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "ga"
       ]
     },
     {
@@ -2531,24 +2703,6 @@
       ]
     },
     {
-      "id": "aws-news-239b4fa530fe",
-      "title": "Amazon Connect Customer dashboards now support compact mode",
-      "description": "Amazon Connect Customer now offers compact mode on the analytics dashboards, increasing data density so supervisors can see more of their operational data without scrolling. Compact mode reduces widget size, font, and minimizes filters to maximize screen space. For example, a supervisor on a 13-inch laptop toggles compact mode, which reduces row height, enabling them to view all team agents on the widget without scrolling and spot non-adherent agents faster.\n \nCompact mode on dashboards is available in all AWS regions where Amazon Connect Customer is offered. To learn more about Amazon Connect Customer analytics dashboards, see the Amazon Connect Customer Administrator Guide.  To learn more about Amazon Connect Customer, visit the Amazon Connect Customer website.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/connect-dashboards-compact-mode/",
-      "pubDate": "2026-09-01T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-c6b8a3ab9d2c",
       "title": "Observing and evaluating production agents using OpenSearch Agent Health",
       "description": "Learn how to observe and evaluate production AI agents by combining an agent running on AWS with OpenSearch Agent Health. This post walks through deploying an agent and its observability pipeline to AWS, then using Agent Health to explore traces and run evaluations that measure and improve agent quality over time.",
@@ -2586,65 +2740,6 @@
       ]
     },
     {
-      "id": "aws-news-e4fa677716a7",
-      "title": "Amazon MWAA supports Apache Airflow version 3.3.1",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now supports Apache Airflow version 3.3.1, the latest release of the popular open-source workflow orchestration framework. Amazon MWAA is a managed orchestration service for Apache Airflow that makes it easier to set up and operate end-to-end data pipelines in the cloud.\n \nApache Airflow 3.3 introduces stateful tasks and multi-language support. With the new Task and Asset State Store, tasks can now persist durable state across retries and reruns, enabling cursor tracking and crash-safe reconnection to long-running jobs. The Language Task SDK (experimental) lets teams write task logic in Java or Go while keeping orchestration in Python. Additional improvements include expanded asset partitioning, pluggable retry policies, and bulk actions for DAG runs and task instances. Apache Airflow 3.3.1 also delivers stability, security, and UI improvements on top of these capabilities.\n \nYou can launch a new Apache Airflow 3.3.1 environment on Amazon MWAA, or upgrade from 3.2 or later, with a few clicks in the AWS Management Console in all currently supported Amazon MWAA regions. To learn more about Apache Airflow 3.3.1, visit the Amazon MWAA documentation and the Apache Airflow 3.3.1 change log in the Apache Airflow documentation.\n \nApache, Apache Airflow, and Airflow are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-apache-airflow-3-3-1/",
-      "pubDate": "2026-09-01T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "launch",
-        "experimental",
-        "ga",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-3002ba956dfe",
-      "title": "AWS Marketplace now supports auto-renewals for private offers",
-      "description": "AWS Marketplace now supports auto-renewals for private offers. This capability helps sellers and buyers maintain active software and service subscriptions without re-negotiation or re-purchasing at the end of the term. Negotiated pricing and contract terms carry forward automatically when buyers and sellers agree to renew. This helps reduce procurement overhead and prevent unintended lapses in subscriptions.\n \nWhen creating a private offer, sellers define the renewal terms and choose how pricing carries forward: renewal with no price change, renewal with a fixed price change, or a price change within a defined range. Buyers can opt in or out during initial offer acceptance, and can update their preferences later as their business needs change. Before automatically renewing the subscription, AWS Marketplace notifies both parties and provides a comparison of the current and upcoming terms, including any pricing changes. Either party can opt out of an upcoming renewal before the renewal decision deadline. Buyers can map a purchase order to any renewal to maintain procurement controls. Both parties are notified when a renewal completes successfully.\n \nThis capability is generally available in all commercial AWS Regions for sellers creating direct private offers with contract pricing. No additional setup or onboarding is required. To learn more, see the AWS Marketplace Seller Guide and the AWS Marketplace Buyer Guide . Sellers can configure auto-renewing private offers in the AWS Marketplace Management Portal . Buyers can manage subscriptions and renewals in the AWS Marketplace Console .",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-marketplace-auto-renewals-for-private-offers",
-      "pubDate": "2026-09-01T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "generally-available",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-5c936e79ff70",
-      "title": "Claude Fable 5.1, Anthropic's new frontier model is now available on AWS",
-      "description": "Claude Fable 5.1 is generally available on AWS and brings Anthropic's most capable frontier model to all customers. Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows. A clear improvement over Claude Fable 5, Fable 5.1 is a step up in intelligence on the hardest reasoning tasks, providing better judgement on ambiguous work and fewer confident wrong answers. Claude Mythos 5.1, the same underlying model as Claude Fable 5.1 with its full cyber and bio capabilities retained for cybersecurity and biology research, is available with limited access.\n \nClaude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code review, and performance work over sessions that run for hours. If it gets stuck, it says so instead of reporting success, and it is less likely to take shortcuts like disabling a failing test. It takes analysis from the first question to the finished document, and it is Anthropic's strongest model yet for knowledge work.\n \nAnthropic has designated Fable 5.1 a Covered Model, a category of Claude models that carry additional data retention, safety review, and access policies wherever they're offered. Enterprise Frontier Safeguards (EFS) built in partnership between AWS and Anthropic, will let eligible customers use Covered Models while keeping their data in a cloud environment they control. Read the launch blog to learn more.\n \nCustomers have two ways to access Claude Fable 5.1: Amazon Bedrock and Claude Platform on AWS. To learn more, see the Amazon Bedrock documentation, regional availability, and Claude Platform on AWS documentation..",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws/",
-      "pubDate": "2026-09-01T14:30:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "launch",
-        "generally-available",
-        "now-available",
-        "improvement"
-      ]
-    },
-    {
       "id": "aws-news-83878546f9f2",
       "title": "Hybrid cloud orchestration: Modernizing on-premises infrastructure management with AWS",
       "description": "Learn how to build a hybrid cloud orchestration solution that manages distributed on-premises infrastructure at scale using AWS serverless technologies and Amazon EKS Anywhere. Part 1 covers the core event-driven architecture patterns for automating server lifecycle and cluster management across hundreds of sites.",
@@ -2659,28 +2754,6 @@
       ],
       "tags": [
         "eks"
-      ]
-    },
-    {
-      "id": "aws-news-a3a5a313888f",
-      "title": "Claude Fable 5.1, Anthropic's new frontier model is now available on AWS GovCloud (US)",
-      "description": "Claude Fable 5.1 is generally available on Amazon Bedrock in AWS GovCloud (US) and brings Anthropic's most capable frontier model to regulated industry customers. Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows.  \n \nClaude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code review, and performance work over sessions that run for hours. If it gets stuck, it says so instead of reporting success, and it is less likely to take shortcuts like disabling a failing test. It takes analysis from the first question to the finished document, and it is Anthropic's strongest model yet for knowledge work.\n \nAnthropic has designated Fable 5.1 a Covered Model, a category of Claude models that carry additional data retention, safety review, and access policies wherever they're offered. Enterprise Frontier Safeguards (EFS) built in partnership between AWS and Anthropic, will let eligible customers use Covered Models while keeping their data in a cloud environment they control. Read the launch blog to learn more.\n \nTo learn more, see the Amazon Bedrock documentation, and regional availability pages.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws-govcloud/",
-      "pubDate": "2026-09-01T14:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "rds"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "rds",
-        "launch",
-        "generally-available",
-        "now-available"
       ]
     },
     {
@@ -3244,26 +3317,6 @@
       ],
       "tags": [
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-ef0ed6a9141c",
-      "title": "Scaling patterns for self-organizing multi-agent clusters with Kiro",
-      "description": "Learn how to coordinate AI agents through shared state in Amazon S3 instead of a central orchestrator. Deploy and observe self-organizing agent clusters on Amazon EC2 with the open-source kiro-flock reference implementation.",
-      "link": "https://aws.amazon.com/blogs/architecture/scaling-patterns-for-self-organizing-multi-agent-clusters-with-kiro/",
-      "pubDate": "2026-08-11T21:17:02.000Z",
-      "source": "architectureBlog",
-      "services": [
-        "s3",
-        "ec2"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "ec2",
-        "ga"
       ]
     },
     {
