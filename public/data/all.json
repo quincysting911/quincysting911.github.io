@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-09-12T09:42:07.327Z",
-  "totalItems": 190,
+  "lastUpdated": "2026-09-13T10:43:58.724Z",
+  "totalItems": 191,
   "sources": {
-    "whatsNew": 92,
+    "whatsNew": 93,
     "mlBlog": 20,
     "newsBlog": 18,
     "bigDataBlog": 16,
@@ -11,6 +11,26 @@
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-7e9c361b3b61",
+      "title": "AWS Elemental MediaLive enables frame-accurate pipeline locking for streams without timecode",
+      "description": "AWS Elemental MediaLive now supports Video Aligned Locking, a new feature to synchronize video pipelines without requiring timecode from the source. Previously, achieving frame-accurate locking across video outputs required investing in specialized hardware or managing complex, external synchronization workflows. While timecode is generally standard for highly produced, traditional broadcast content, it is often unavailable and difficult to manage in typical digital streaming workflows. The new capability uses visual signatures to automatically identify and align specific frames across multiple video streams, enabling customers to achieve frame-accurate input switching across standard pipeline channels, as well as linked, cross-region single-pipeline channels.\n \nVideo Aligned Locking supports outputs including HLS, MediaPackage, CMAF Ingest, UDP and SRT. To learn more about how to configure this feature, visit the Requirements for Video Aligned Locking documentation. For a deeper dive into channel synchronization, visit the guide on Implementing Pipeline Locking.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/medialive-pipeline-locking/",
+      "pubDate": "2026-09-12T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "new-feature",
+        "support",
+        "new-capability"
+      ]
+    },
     {
       "id": "aws-news-989be6721eda",
       "title": "Amazon EC2 X2idn instances are now available in Asia Pacific (Hong Kong)",
@@ -726,6 +746,26 @@
       ]
     },
     {
+      "id": "aws-news-41ce8ed9e92e",
+      "title": "AWS Storage Gateway now supports FIPS-compliant private connectivity for Amazon S3 File Gateway",
+      "description": "AWS Storage Gateway now supports FIPS 140-3 validated endpoints over AWS PrivateLink for Amazon S3 File Gateway. Previously, FIPS endpoints for File Gateway were available only over the public internet. Now you can keep FIPS-compliant traffic on the private AWS network, making it easier to use Storage Gateway for regulated workloads.\n \nWith this launch, your File Gateway can reach the Storage Gateway service endpoints privately through a FIPS interface VPC endpoint in your VPC. You can also create NFS and SMB file shares that reach Amazon S3 through an S3 FIPS interface endpoint, enabling FIPS-compliant private connectivity for your end-to-end file transfer workloads. To get started, create FIPS interface endpoints for Storage Gateway and Amazon S3 in your VPC, then choose the FIPS VPC endpoint option when activating your gateway and configuring your file shares. To activate a gateway with a FIPS PrivateLink endpoint, your gateway must be running software version 2.1.10 or later.\n \nThis launch is available in the eight AWS Regions where Storage Gateway offers FIPS endpoints: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary), AWS GovCloud (US-East), and AWS GovCloud (US-West). To learn more, visit the AWS Storage Gateway User Guide or the product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/storage-gateway-fips-privatelink-s3/",
+      "pubDate": "2026-09-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "s3",
+        "launch",
+        "ga",
+        "support"
+      ]
+    },
+    {
       "id": "aws-news-c80948d4f888",
       "title": "AWS Elemental introduces Dynamic Multiview for live video",
       "description": "AWS Elemental MediaPackage now offers Dynamic Multiview, a server-side capability that composes multiple live video sources into viewer-selected tiled layouts on demand. Content providers can deliver multi-angle, multi-game, and personalized viewing experiences as standard HLS (HTTP Live Streaming) and DASH (Dynamic Adaptive Streaming over HTTP) streams playable on most modern consumer devices, televisions, and set top boxes without custom player development.\n \nDynamic Multiview operates entirely in the compressed domain, combining individually encoded sources without re-encoding or compositing. Customers encode each source once through AWS Elemental MediaLive, and MediaPackage assembles compositions on demand - only when viewers request them, eliminating the need to pre-encode combinations. Because the output is standard HLS and DASH, it plays natively on existing devices and players with no app changes or SDK integration required. The feature supports AVC and HEVC codecs, DRM encryption, SCTE-35 ad marker passthrough, and full-screen ad replacement.\n \nTo learn more, visit the Elemental Dynamic Multiview Reference Guide.\n \nDynamic Multiview is available in all AWS Regions where AWS Elemental MediaPackage and MediaLive are available.",
@@ -744,26 +784,6 @@
         "ecs",
         "ga",
         "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-41ce8ed9e92e",
-      "title": "AWS Storage Gateway now supports FIPS-compliant private connectivity for Amazon S3 File Gateway",
-      "description": "AWS Storage Gateway now supports FIPS 140-3 validated endpoints over AWS PrivateLink for Amazon S3 File Gateway. Previously, FIPS endpoints for File Gateway were available only over the public internet. Now you can keep FIPS-compliant traffic on the private AWS network, making it easier to use Storage Gateway for regulated workloads.\n \nWith this launch, your File Gateway can reach the Storage Gateway service endpoints privately through a FIPS interface VPC endpoint in your VPC. You can also create NFS and SMB file shares that reach Amazon S3 through an S3 FIPS interface endpoint, enabling FIPS-compliant private connectivity for your end-to-end file transfer workloads. To get started, create FIPS interface endpoints for Storage Gateway and Amazon S3 in your VPC, then choose the FIPS VPC endpoint option when activating your gateway and configuring your file shares. To activate a gateway with a FIPS PrivateLink endpoint, your gateway must be running software version 2.1.10 or later.\n \nThis launch is available in the eight AWS Regions where Storage Gateway offers FIPS endpoints: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary), AWS GovCloud (US-East), and AWS GovCloud (US-West). To learn more, visit the AWS Storage Gateway User Guide or the product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/storage-gateway-fips-privatelink-s3/",
-      "pubDate": "2026-09-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "s3",
-        "launch",
-        "ga",
         "support"
       ]
     },
@@ -1190,6 +1210,25 @@
       ]
     },
     {
+      "id": "aws-news-94cc09aae7f3",
+      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
+      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
+      "pubDate": "2026-09-09T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "iam"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "ec2",
+        "iam"
+      ]
+    },
+    {
       "id": "aws-news-ea5b1a4e400e",
       "title": "AWS Private CA EKS add-on and Connector for AD now available in AWS GovCloud (US)",
       "description": "AWS Private Certificate Authority (AWS Private CA) announces the availability of the AWS Private CA Connector for Kubernetes as a managed Amazon EKS add-on and the AWS Private CA Connector for Active Directory in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. These launches expand certificate automation capabilities available to AWS GovCloud (US) customers managing government workloads.\nThe AWS Private CA Connector for Kubernetes EKS add-on provides simplified installation, configuration, and lifecycle management through the EKS console, CLI, and API. The connector works with cert-manager to automate certificate requests, distribution to Kubernetes secrets, and renewal, enabling TLS for ingress controllers and securing service-to-service communication in service meshes such as Istio and Linkerd.\nThe AWS Private CA Connector for Active Directory enables AWS GovCloud (US) customers to use AWS Private CA as their certificate authority for Active Directory-enrolled objects. The connector provides automatic certificate issuance to domain-joined users, computers, and other objects through familiar Microsoft certificate enrollment interfaces, supporting enterprise scenarios including smart card authentication, LDAPS, and network device authentication (802.1x).\nAWS Private CA secures private key material using FIPS 140-3 Level 3 hardware security modules (HSMs).\nTo get started, see the AWS Private CA product page, the Amazon EKS add-ons user guide, and the AWS Private CA Connector for Active Directory documentation.",
@@ -1207,25 +1246,6 @@
         "launch",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-94cc09aae7f3",
-      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
-      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
-      "pubDate": "2026-09-09T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "iam"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "ec2",
-        "iam"
       ]
     },
     {
