@@ -1,16 +1,291 @@
 {
-  "lastUpdated": "2026-09-14T11:06:44.880Z",
-  "totalItems": 191,
+  "lastUpdated": "2026-09-15T10:35:56.028Z",
+  "totalItems": 189,
   "sources": {
-    "whatsNew": 93,
+    "whatsNew": 92,
     "mlBlog": 20,
     "newsBlog": 18,
-    "bigDataBlog": 16,
+    "bigDataBlog": 15,
     "architectureBlog": 18,
     "computeBlog": 15,
     "developersAndDevOps": 11
   },
   "items": [
+    {
+      "id": "aws-news-f9662a1498de",
+      "title": "Abnormal AI: Amazon Bedrock AgentCore for agentic email security at scale",
+      "description": "Learn how Abnormal AI deployed Amazon Bedrock AgentCore Code Interpreter as an ephemeral compute scratch pad for the agents behind its real-time email threat detection at billion-message scale, plus the sandbox design decisions and practical lessons for builders deploying Code Interpreter in production.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/abnormal-ai-amazon-bedrock-agentcore-for-agentic-email-security-at-scale/",
+      "pubDate": "2026-09-14T21:22:45.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore"
+      ]
+    },
+    {
+      "id": "aws-news-007fff47c3e5",
+      "title": "Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore",
+      "description": "Amazon Bedrock AgentCore Identity now offers a Consent portal, a managed web experience and session binding endpoint for AgentCore Gateway. This post walks through provisioning a portal, configuring GitHub and Slack 3LO targets, and the end-user consent flow, and shows how to review activity in AWS CloudTrail.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/",
+      "pubDate": "2026-09-14T20:35:45.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-f91cbc5b7cd5",
+      "title": "Qwen3.6-35B-A3B-NVFP4 and Wan2.1-T2V-1.3B-Diffusers models now available on Amazon SageMaker JumpStart",
+      "description": "NVIDIA's Qwen3.6-35B-A3B-NVFP4 and Alibaba's Wan2.1-T2V-1.3B-Diffusers models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These two models bring specialized capabilities spanning agentic coding with long-context reasoning and lightweight text-to-video generation, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nThese models address different enterprise AI challenges with specialized capabilities:\n \nQwen3.6-35B-A3B-NVFP4 is optimized for agentic coding, multimodal reasoning, and long-context understanding as the NVIDIA-quantized variant of Alibaba's Qwen3.6-35B-A3B. This Mixture-of-Experts model contains 35B total parameters with only 3B activated per token (8 of 256 experts), supporting a 262K-token context window extendable to ~1M via YaRN scaling. Quantized to NVFP4 using NVIDIA's ModelOpt framework, it preserves thinking across conversation turns, multi-token prediction, and tool calling for multi-step agent pipelines—all at a significantly reduced memory footprint.\n \nWan2.1-T2V-1.3B-Diffusers excels in text-to-video generation on consumer-grade hardware. Built on the diffusion transformer paradigm with a novel Video Variational Autoencoder (VAE), this 1.3B-parameter model generates high-quality, physics-consistent video clips from text prompts while requiring only 8.19 GB of VRAM. It can produce a 5-second 480p video on an RTX 4090 in approximately 4 minutes, making it one of the most accessible open-source video generation models available.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/qwen3.6-35b-a3b-nvfp4-wan2.1-t2v-1.3B-diffusers-jumpstart/",
+      "pubDate": "2026-09-14T17:39:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-ad0531820b31",
+      "title": "Ministral-3-3B-Instruct-2512 and Ministral-3-8B-Instruct-2512 models now available on Amazon SageMaker JumpStart",
+      "description": "Mistral AI's Ministral-3-3B-Instruct-2512 and Ministral-3-8B-Instruct-2512 models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These two models from the Ministral 3 family bring compact, vision-capable language models purpose-built for edge deployment and resource-constrained environments, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nThese models address different enterprise AI challenges with specialized capabilities:\n \nMinistral-3-3B-Instruct-2512 is engineered for ultra-lightweight edge deployment with multimodal understanding. Comprising a 3.4B language model and a 0.4B vision encoder, it fits in just 8GB of VRAM in FP8 while supporting a 256K-token context window. It offers vision analysis, multilingual instruction following across dozens of languages (including English, French, Spanish, German, Chinese, Japanese, Korean, and Arabic), strong system-prompt adherence, and native function calling with structured JSON output—all under the Apache 2.0 license.\n \nMinistral-3-8B-Instruct-2512 delivers frontier-class capabilities comparable to its larger Mistral Small 3.2 24B counterpart in a compact 8B form factor. Built with an 8.4B language model and a 0.4B vision encoder, it fits in 12GB of VRAM in FP8 and features an interleaved sliding-window attention pattern for faster, memory-efficient inference. It shares the same vision, multilingual, agentic, and function-calling capabilities as its 3B sibling while offering stronger reasoning and generation performance.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/ministral-3-3b-instruct-2512-ministral-3-8B-Instruct-2512-jumpstart/",
+      "pubDate": "2026-09-14T17:35:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-4f67a539f19f",
+      "title": "Gemma-4-31B-it-assistant and Gemma-4-31B-IT-NVFP4 models now available on Amazon SageMaker JumpStart",
+      "description": "Google DeepMind's Gemma-4-31B-it-assistant and NVIDIA's Gemma-4-31B-IT-NVFP4 models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These two models bring the flagship Gemma 4 31B dense architecture to enterprise workloads in both full-precision and optimized quantized variants, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nThese models address different enterprise AI challenges with specialized capabilities:\n \nGemma-4-31B-it-assistant is built for multimodal reasoning, coding, and agentic workflows as the assistant-tuned variant of Google's flagship 31B dense model. It handles text and image inputs (including video as frame sequences) and generates text output, with a 256K-token context window and support for over 140 languages. Ranked #3 among open models on the Arena AI text leaderboard—outcompeting models 20x its size—it features a hybrid attention mechanism interleaving local sliding-window and full global attention with native function calling for building autonomous agents.\n \nGemma-4-31B-IT-NVFP4 delivers the same Gemma 4 31B capabilities at a fraction of the memory footprint. Quantized with NVIDIA's ModelOpt framework to 4-bit FP4 precision, it reduces memory usage to ~18.5 GB (68% smaller than the base model) and achieves approximately 2.5x faster inference while retaining 97–99% of the original model's quality. Ideal for cost-efficient, high-throughput production deployments on NVIDIA RTX, DGX Spark, and data center GPUs.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/gemma-4-31b-it-assistant-gemma-4-31b-it-nvfp4-jumpstart/",
+      "pubDate": "2026-09-14T17:32:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-49e73e063b54",
+      "title": "granite-speech-4.1-2b, kanana-2-30b-a3b-instruct, and OpenFold3 models now available on Amazon SageMaker JumpStart",
+      "description": "BM's granite-speech-4.1-2b, Kakao's kanana-2-30b-a3b-instruct, and the OpenFold Consortium's OpenFold3 models are now available on Amazon SageMaker JumpStart, expanding the portfolio of foundation models available to AWS customers. These three models bring specialized capabilities spanning multilingual speech recognition, bilingual agentic AI, and biomolecular structure prediction, enabling customers to deploy high-performance, scalable AI solutions on AWS infrastructure.\n \nThese models address different enterprise AI challenges with specialized capabilities:\n \ngranite-speech-4.1-2b is purpose-built for multilingual automatic speech recognition (ASR) and bidirectional speech translation (AST) across English, French, German, Spanish, Portuguese, and Japanese. This compact 2B-parameter speech-language model delivers a word error rate of 5.33% with a real-time factor of ~231, making it one of the most efficient ASR models in its class. Released under Apache 2.0, it integrates seamlessly into enterprise voice workflows for transcription, translation, and audio processing at scale.\n \nkanana-2-30b-a3b-instruct excels in bilingual Korean-English instruction following and agentic AI workflows. Developed by Kakao, it adopts a cutting-edge architecture featuring Multi-head Latent Attention (MLA) and Mixture-of-Experts (MoE), activating only 3B of its 30B total parameters per forward pass for superior throughput. Post-trained with supervised fine-tuning and reinforcement learning, it supports up to 128K tokens via YaRN scaling and is designed to function as an AI collaborator that understands context and acts proactively.\n \nOpenFold3 provides all-atom biomolecular complex structure prediction for proteins, DNA, RNA, and small-molecule ligands. Developed by the OpenFold Consortium and the AlQuraishi Lab at Columbia University, this diffusion-based model extends structure prediction beyond single proteins to model multi-chain complexes and heterogeneous biomolecular interactions. It supports computer-aided drug design and is applicable across academic and pharmaceutical research labs.\n \nWith SageMaker JumpStart, customers can deploy any of these models with just a few clicks to address their specific AI use cases.\n \nTo get started with these models, navigate to the SageMaker JumpStart model catalog in the SageMaker console or use the SageMaker Python SDK to deploy the models to your AWS account. For more information about deploying and using foundation models in SageMaker JumpStart, see the Amazon SageMaker JumpStart documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/01/granite-speech-4.1-2b-edge-kanana-2-30b-a3b-instruct-openfold3-jumpstart/",
+      "pubDate": "2026-09-14T17:30:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "jumpstart",
+        "lex"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "sagemaker",
+        "jumpstart",
+        "lex",
+        "ga",
+        "now-available",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-a059de5c92a9",
+      "title": "Validating multi-agent decisions with Step Functions and Bedrock AgentCore",
+      "description": "Orchestrating specialized Amazon Bedrock AgentCore agents with AWS Step Functions gives you the reasoning power of generative AI with the guardrails of deterministic validation. Agents propose options, and deterministic code validates them before any action is taken, demonstrated here with an airline rebooking workflow.",
+      "link": "https://aws.amazon.com/blogs/compute/validating-multi-agent-decisions-with-step-functions-and-bedrock-agentcore/",
+      "pubDate": "2026-09-14T16:47:23.000Z",
+      "source": "computeBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "step functions"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "step functions"
+      ]
+    },
+    {
+      "id": "aws-news-1c5f84343d27",
+      "title": "How Ninth Wave built AI-powered open finance onboarding on Amazon Bedrock",
+      "description": "Learn how Ninth Wave built Compass, a multi-agent AI onboarding assistant on Amazon Bedrock AgentCore that validates bank APIs against Financial Data Exchange (FDX) standards, scores compliance, and compresses open finance onboarding from weeks to minutes while meeting SOC 2 and PCI DSS requirements.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/",
+      "pubDate": "2026-09-14T15:58:57.000Z",
+      "source": "mlBlog",
+      "services": [
+        "bedrock",
+        "agentcore",
+        "rds",
+        "eks"
+      ],
+      "categories": [
+        "generative-ai"
+      ],
+      "tags": [
+        "bedrock",
+        "agentcore",
+        "rds",
+        "eks",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-59f1e1884942",
+      "title": "AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)",
+      "description": "There’s a particular energy to mid-September in New York. Pumpkin spice lattes are flowing, temperatures are dropping, and it’s nearly sweater weather. The city is back at full speed, and so is the AWS launch calendar. This week that energy showed up in a new frontier model on Amazon Bedrock, a desktop app for Amazon […]",
+      "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/",
+      "pubDate": "2026-09-14T15:56:33.000Z",
+      "source": "newsBlog",
+      "services": [
+        "bedrock",
+        "amazon q"
+      ],
+      "categories": [
+        "news"
+      ],
+      "tags": [
+        "bedrock",
+        "amazon q",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-28e219f112a0",
+      "title": "The generative AI customization spectrum: From prompt engineering to custom models on AWS",
+      "description": "Pick the right generative AI customization approach on AWS with an 8-step decision framework, from prompt engineering and RAG to fine-tuning, continued pre-training, and Amazon Nova Forge. Start simple and escalate only when you must.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/",
+      "pubDate": "2026-09-14T15:47:12.000Z",
+      "source": "mlBlog",
+      "services": [
+        "nova"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "nova"
+      ]
+    },
+    {
+      "id": "aws-news-fb9f59e8d640",
+      "title": "Automate replenishment with MMF, Databricks Genie, and Amazon Quick",
+      "description": "Foundation models made catalog-wide demand forecasting easy; the hard part is now acting on the forecast. This post builds a closed detect-decide-act loop on Databricks and Amazon Quick that reconciles demand surges against live supplier availability and places replenishment orders unattended, escalating to a human only when no supplier can cover a surge.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/",
+      "pubDate": "2026-09-14T15:42:06.000Z",
+      "source": "mlBlog",
+      "services": [
+        "amazon q",
+        "forecast"
+      ],
+      "categories": [
+        "foundation-models"
+      ],
+      "tags": [
+        "amazon q",
+        "forecast",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-d9f4cbeb6c57",
+      "title": "AWS Glue zero-ETL adds target table property ownership and conflict detection",
+      "description": "AWS Glue zero-ETL integrations now detect table property conflicts and track integration ownership. When you configure a source table and target catalog, Glue associates the resulting table properties with the owning integration, so two integrations can no longer be pointed at the same target table without your knowledge. This works across Amazon S3 Tables and SageMaker Lakehouse catalogs.\n \nData teams running multiple zero-ETL integrations gain predictable control over where each source table lands. If you attempt to create or modify an integration whose table properties are owned by another integration, Glue identifies the owning integration and guides you to choose a different target or update the existing one, so your pipelines stay isolated and your data lands exactly where you intend.\n \nThis feature is available in all AWS Commercial and AWS GovCloud (US) Regions where AWS Glue zero-ETL integrations are supported.\n \nTo learn more, refer to the AWS Glue Developer Guide and get started in the AWS Glue console.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/glue-zero-etl-ownership-conflicts/",
+      "pubDate": "2026-09-14T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "s3",
+        "glue"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "s3",
+        "glue",
+        "ga",
+        "update",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-f008d8f02184",
+      "title": "AWS End User Messaging now supports Dynamic Flows in WhatsApp",
+      "description": "AWS End User Messaging now supports dynamic WhatsApp flows so you can turn WhatsApp conversations into rich, interactive experiences that end-users complete directly in WhatsApp.\n  Instead of pushing end-users to a website or a separate form to complete an interactive experience, you can instead guide them through an appointment booking, lead generation, sign-up, survey or a transaction directly in the chat. Customers can start building a flow using one of Meta's stater templates with familiar building blocks like text inputs, date pickers, drop downs, and buttons, or customize the flow from scratch. With dynamic flows, each screen can call your own HTTPS endpoint in real time, so you can show live availability, and personalize each step in the flow for your end-users.\n  You build and manage flows entirely in AWS End User Messaging Social, through the console or APIs. Define a flow with a JSON schema, then deliver it with a message template to reach customers where they are.\n  WhatsApp flows are available in all regions where End User Messaging Social is available. To get started, see the User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-whatsapp-dynamic-flows",
+      "pubDate": "2026-09-14T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "personalize"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "personalize",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-7e9c361b3b61",
       "title": "AWS Elemental MediaLive enables frame-accurate pipeline locking for streams without timecode",
@@ -727,25 +1002,6 @@
       ]
     },
     {
-      "id": "aws-news-e05a827844f3",
-      "title": "AWS Elemental MediaTailor now supports Low-Latency HLS ad insertion",
-      "description": "AWS Elemental MediaTailor now supports Low-Latency HTTP Live Streaming (LL-HLS) ad insertion using HLS Interstitials. MediaTailor is a channel assembly and personalized ad insertion service for video providers that monetizes live streams, linear channels, and video-on-demand content. With this launch, video providers can insert ads into low-latency live streams while holding the reduced latency their viewers expect.\n \nLL-HLS reduces live latency by delivering partial segments and letting players hold a playlist request open until the next segment part is ready, which requires media playlists to be cacheable at the content delivery network (CDN) edge. MediaTailor supports this using HLS Interstitials, which reference ads as a separate playlist instead of stitching them into each viewer's media playlist. Every viewer receives the same cacheable playlist, so MediaTailor sustains low-latency playback at scale and moves the ad decision server call off the manifest request path. This capability has been proven in production on live sporting events with multi-million views, and is ideal for live sports, news, betting and wagering, watch-party, and interactive live formats where latency is a product requirement.\n \nLow-Latency HLS ad insertion is available in all AWS Regions where AWS Elemental MediaTailor is available. To learn more, visit the AWS Elemental MediaTailor product page and the MediaTailor server-guided ad insertion documentation. To get started, sign in to the MediaTailor console..",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-elemental-mediatailor-low-latency-hls-ad-insertion",
-      "pubDate": "2026-09-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "personalize"
-      ],
-      "categories": [
-        "ai-services"
-      ],
-      "tags": [
-        "personalize",
-        "launch",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-41ce8ed9e92e",
       "title": "AWS Storage Gateway now supports FIPS-compliant private connectivity for Amazon S3 File Gateway",
       "description": "AWS Storage Gateway now supports FIPS 140-3 validated endpoints over AWS PrivateLink for Amazon S3 File Gateway. Previously, FIPS endpoints for File Gateway were available only over the public internet. Now you can keep FIPS-compliant traffic on the private AWS network, making it easier to use Storage Gateway for regulated workloads.\n \nWith this launch, your File Gateway can reach the Storage Gateway service endpoints privately through a FIPS interface VPC endpoint in your VPC. You can also create NFS and SMB file shares that reach Amazon S3 through an S3 FIPS interface endpoint, enabling FIPS-compliant private connectivity for your end-to-end file transfer workloads. To get started, create FIPS interface endpoints for Storage Gateway and Amazon S3 in your VPC, then choose the FIPS VPC endpoint option when activating your gateway and configuring your file shares. To activate a gateway with a FIPS PrivateLink endpoint, your gateway must be running software version 2.1.10 or later.\n \nThis launch is available in the eight AWS Regions where Storage Gateway offers FIPS endpoints: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary), AWS GovCloud (US-East), and AWS GovCloud (US-West). To learn more, visit the AWS Storage Gateway User Guide or the product page.",
@@ -784,6 +1040,25 @@
         "ecs",
         "ga",
         "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-e05a827844f3",
+      "title": "AWS Elemental MediaTailor now supports Low-Latency HLS ad insertion",
+      "description": "AWS Elemental MediaTailor now supports Low-Latency HTTP Live Streaming (LL-HLS) ad insertion using HLS Interstitials. MediaTailor is a channel assembly and personalized ad insertion service for video providers that monetizes live streams, linear channels, and video-on-demand content. With this launch, video providers can insert ads into low-latency live streams while holding the reduced latency their viewers expect.\n \nLL-HLS reduces live latency by delivering partial segments and letting players hold a playlist request open until the next segment part is ready, which requires media playlists to be cacheable at the content delivery network (CDN) edge. MediaTailor supports this using HLS Interstitials, which reference ads as a separate playlist instead of stitching them into each viewer's media playlist. Every viewer receives the same cacheable playlist, so MediaTailor sustains low-latency playback at scale and moves the ad decision server call off the manifest request path. This capability has been proven in production on live sporting events with multi-million views, and is ideal for live sports, news, betting and wagering, watch-party, and interactive live formats where latency is a product requirement.\n \nLow-Latency HLS ad insertion is available in all AWS Regions where AWS Elemental MediaTailor is available. To learn more, visit the AWS Elemental MediaTailor product page and the MediaTailor server-guided ad insertion documentation. To get started, sign in to the MediaTailor console..",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-elemental-mediatailor-low-latency-hls-ad-insertion",
+      "pubDate": "2026-09-10T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "personalize"
+      ],
+      "categories": [
+        "ai-services"
+      ],
+      "tags": [
+        "personalize",
+        "launch",
         "support"
       ]
     },
@@ -1114,28 +1389,6 @@
       ]
     },
     {
-      "id": "aws-news-637f9bce3be7",
-      "title": "Automate user-level custom permissions for Amazon Quick",
-      "description": "Amazon Quick custom permissions let you enforce least-privilege access by toggling features per user. This post walks through four patterns to automate custom permissions across the user lifecycle: a RegisterUser API parameter, account and role defaults, event-driven Amazon EventBridge and AWS Lambda automation, and a retroactive batch update script.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/automate-user-level-custom-permissions-for-amazon-quick/",
-      "pubDate": "2026-09-09T15:45:24.000Z",
-      "source": "mlBlog",
-      "services": [
-        "amazon q",
-        "lambda",
-        "eventbridge"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "amazon q",
-        "lambda",
-        "eventbridge",
-        "update"
-      ]
-    },
-    {
       "id": "aws-news-88017a4c4bc9",
       "title": "Amazon Quick activity feed now available on iOS and Android mobile devices",
       "description": "The Amazon Quick activity feed is now available on the Amazon Quick mobile app for iOS and Android, keeping you connected to your most important work from anywhere. \n \nThe activity feed is your single, prioritized view of everything that needs your attention across your enterprise communications and tools, so you don't have to check each one separately. Items requiring your attention populate the top of your feed, and instead of switching between apps, you can take action directly from within Quick.  Never miss something time-sensitive, even when you're away from your desk. Your decide which notifications are important and which are noise. Over time, Quick learns your priorities and surfaces only the things that matter. \n \nYou can also ask Quick to post anything to your feed through a routine, pulling from any connected data source. For example, you can tell Quick “every morning at 7:30, tell me which customer meetings I have that day and give me 3 bullet points to prep”.  \n \nAdditionally, as part of today's announcement, Amazon Quick retains context across the desktop and mobile applications. Any work you do on one surface carries over to the other, so you can start a chat or assign a task to an agent on your desktop, then review progress and continue the chat from your mobile device, picking up right where you left off when you're back at your computer. \n \nThe Amazon Quick mobile app is included with your existing Amazon Quick access at no additional cost. \n \nExisting Quick customers can download the Quick mobile application for iOS from the Apple App Store, and Android from the Google Play Store. If you're new to Quick, visit the Quick Product Page to create an account for free in minutes.",
@@ -1210,22 +1463,21 @@
       ]
     },
     {
-      "id": "aws-news-94cc09aae7f3",
-      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
-      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
+      "id": "aws-news-993e2cfa3871",
+      "title": "AWS Entity Resolution adds record-level confidence scores for ML matching",
+      "description": "AWS Entity Resolution now provides record-level confidence scores for Machine Learning (ML) based matching workflows, giving you a per-record signal of how confident the model is in each individual identity match. Previously, all records within a match group carried the same group-level confidence score regardless of actual match quality — making it impossible to distinguish a near-certain match from a borderline one. This forced customers to apply a single confidence threshold across all records, limiting the number of resolved identities that could be activated downstream.\nWith record-level confidence scores, each resolved record now carries its own score reflecting actual match quality. This gives you the precision to qualify more records for activation by applying differentiated thresholds — using higher confidence for automated merges and lower thresholds to include additional records that still meet quality standards. The result is larger addressable audiences and improved lead conversions, while maintaining compliance-grade match transparency with audit-ready evidence for each resolved record. For incremental ML workflows, the existing RecordConfidenceLevel column now reflects the actual per-record score with no schema changes required.\nYou can start using record-level confidence scores in all AWS Regions where AWS Entity Resolution is available. For more information, see our user guide. For more information about AWS Entity Resolution, visit our product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/entity-resolution-record-confidence/",
       "pubDate": "2026-09-09T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "ec2",
-        "iam"
+        "rds"
       ],
       "categories": [
-        "generative-ai"
+        "ai-safety"
       ],
       "tags": [
-        "ec2",
-        "iam"
+        "rds",
+        "ga"
       ]
     },
     {
@@ -1249,21 +1501,22 @@
       ]
     },
     {
-      "id": "aws-news-993e2cfa3871",
-      "title": "AWS Entity Resolution adds record-level confidence scores for ML matching",
-      "description": "AWS Entity Resolution now provides record-level confidence scores for Machine Learning (ML) based matching workflows, giving you a per-record signal of how confident the model is in each individual identity match. Previously, all records within a match group carried the same group-level confidence score regardless of actual match quality — making it impossible to distinguish a near-certain match from a borderline one. This forced customers to apply a single confidence threshold across all records, limiting the number of resolved identities that could be activated downstream.\nWith record-level confidence scores, each resolved record now carries its own score reflecting actual match quality. This gives you the precision to qualify more records for activation by applying differentiated thresholds — using higher confidence for automated merges and lower thresholds to include additional records that still meet quality standards. The result is larger addressable audiences and improved lead conversions, while maintaining compliance-grade match transparency with audit-ready evidence for each resolved record. For incremental ML workflows, the existing RecordConfidenceLevel column now reflects the actual per-record score with no schema changes required.\nYou can start using record-level confidence scores in all AWS Regions where AWS Entity Resolution is available. For more information, see our user guide. For more information about AWS Entity Resolution, visit our product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/entity-resolution-record-confidence/",
+      "id": "aws-news-94cc09aae7f3",
+      "title": "AWS Systems Manager now diagnoses more issues that cause EC2 instances to be unmanaged",
+      "description": "Today, AWS Systems Manager extends its diagnosis capability to identify six additional categories of issues that can prevent Amazon EC2 instances and hybrid-activated nodes from becoming managed by Systems Manager. An instance must be managed by Systems Manager before you can patch it, run commands, connect with Session Manager, or collect inventory, and when an instance is unmanaged the cause can be difficult to isolate. The diagnosis previously covered network connectivity, and it now also identifies issues with IAM permissions, SSM Agent version, instance status checks, operating system configuration, Default Host Management Configuration, and hybrid activation.\nWith this broader coverage, more of your instances return a specific, actionable cause instead of an unidentified result, so you can bring your fleet under management faster. You run a diagnosis across your instances in the Systems Manager unified console experience, and Systems Manager reports the specific issues it finds in each category. Every diagnosed issue comes with step-by-step guidance to help you resolve it, and for some issues you can also run an AWS Systems Manager Automation runbook from the console to remediate the issue directly.\nAWS Systems Manager diagnosis capability is available in all AWS Regions that are enabled by default. The capability runs as AWS Systems Manager Automation runbooks, so you pay standard Automation usage charges for the runbooks you run; see AWS Systems Manager pricing for details. To learn more, see the AWS Systems Manager User Guide, or visit the AWS Systems Manager product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/systems-manager-diagnoses-ec2-unmanaged/",
       "pubDate": "2026-09-09T08:00:00.000Z",
       "source": "whatsNew",
       "services": [
-        "rds"
+        "ec2",
+        "iam"
       ],
       "categories": [
-        "ai-safety"
+        "generative-ai"
       ],
       "tags": [
-        "rds",
-        "ga"
+        "ec2",
+        "iam"
       ]
     },
     {
@@ -1307,24 +1560,6 @@
         "generally-available",
         "ga",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-ef0428936bf1",
-      "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
-      "description": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built for high performance, security, and scale.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
-      "pubDate": "2026-09-08T22:06:58.000Z",
-      "source": "mlBlog",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "generally-available"
       ]
     },
     {
@@ -1431,63 +1666,6 @@
         "update",
         "integration",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-f71c6ee3b19f",
-      "title": "Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod",
-      "description": "Pathway's Baby Dragon Hatchling (BDH) is a brain-inspired, post-transformer architecture that reasons in latent space instead of emitting chain-of-thought tokens. See how Pathway develops and scales BDH on Amazon SageMaker HyperPod, and how BDH-CQ set a new cost-efficiency mark on the ARC-AGI-1 benchmark.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/pathway-s-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/",
-      "pubDate": "2026-09-08T19:12:51.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "hyperpod"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "sagemaker",
-        "hyperpod"
-      ]
-    },
-    {
-      "id": "aws-news-02d4af5eb23d",
-      "title": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes",
-      "description": "Amazon SageMaker Feature Store now supports feature-level writes. With the new UpdateRecord API, you can update one or more feature values in a single call without reading or rewriting the entire record. It is available for both the Standard (Amazon DynamoDB) and In-Memory (Amazon ElastiCache) online store tiers.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-feature-store-introduces-updaterecord-for-feature-level-writes/",
-      "pubDate": "2026-09-08T18:29:15.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker",
-        "dynamodb"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker",
-        "dynamodb",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-9d4db681b2da",
-      "title": "Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 2",
-      "description": "Governing models across accounts is the next step after automatic model registration. This post extends managed MLflow and Amazon SageMaker AI Model Registry sync to two cross-account governance topologies: a hub-and-spoke pattern that centralizes governance with AWS RAM, and a hybrid pattern that keeps development accounts isolated.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-2/",
-      "pubDate": "2026-09-08T17:03:50.000Z",
-      "source": "mlBlog",
-      "services": [
-        "sagemaker"
-      ],
-      "categories": [
-        "machine-learning"
-      ],
-      "tags": [
-        "sagemaker"
       ]
     },
     {
@@ -2570,159 +2748,6 @@
       ]
     },
     {
-      "id": "aws-news-68018f41bc48",
-      "title": "Amazon SageMaker Unified Studio CI/CD adds notebook promotion and AI-assisted manifest generation",
-      "description": "Amazon SageMaker Unified Studio CI/CD expands its open-source deployment toolkit with two new capabilities: (1) an AI agent skill that automates manifest authoring, and (2) native notebook promotion across environments. Together, they help data teams go from project to production faster while maintaining best-practice defaults across stages.\n \nAI-assisted manifest generation. The new generate-bundle-manifest agent skill inspects a project's connections, storage, and workflows and produces a ready-to-use deployment manifest. It applies least-privilege IAM guidance, substitutes environment variables in place of hardcoded resource identifiers, and sets safe defaults such as opt-in catalog handling. Teams can import the skill into their own agents to standardize how they package and promote SageMaker Unified Studio projects across development, test, and production accounts.\n \nNative notebook promotion. The CI/CD toolkit now supports promoting native SMUS Notebooks alongside code, workflows, and catalog assets. Notebook promotion uses an in-place synchronization model that creates a notebook on first deployment and updates it on subsequent deployments, preserving run history across releases. Teams can promote every notebook in a project or select specific notebooks by ID, and a dry-run mode validates S3 connectivity, IAM permissions, and notebook counts before deployment. Notebook promotion integrates with the existing bundle, deploy, destroy, and dry-run commands and requires no changes to current pipeline structure.\n \nBoth capabilities are open source and available in all AWS Regions where Amazon SageMaker Unified Studio is offered.\n \nTo get started, visit the CICD-for-SageMakerUnifiedStudio repository on GitHub. For more information, see the CI/CD for Amazon SageMaker Unified Studio documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/sagemaker-cicd-notebook-ai-manifest/",
-      "pubDate": "2026-09-02T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "iam"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "sagemaker",
-        "unified studio",
-        "s3",
-        "iam",
-        "update",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-8d9cea696de8",
-      "title": "Amazon RDS for SQL Server supports additional SQL trace flags",
-      "description": "Amazon RDS for SQL Server supports 18 additional SQL trace flags that you can enable through database parameter groups. Trace flags are configuration switches that modify SQL Server engine behavior — such as query optimizer cardinality estimation, lock escalation, statistics management, and memory handling — to allow database administrators to fine-tune performance and address workload-specific challenges. With this expansion, you have greater flexibility to optimize and stabilize your SQL Server workloads directly within your managed RDS environment.\n \nThe newly supported trace flags include: 647, 652, 1448, 3654, 4138, 4139, 7745, 8285, 8780, 9432, 9481, 9492, 9592, 11024, 11042, 12502, 12618, and 12656. These trace flags address scenarios such as query plan optimization, DDL performance improvements, availability group replication, Query Store behavior, automatic plan correction, and known engine bug mitigations. Because trace flags modify core SQL Server engine behavior, you should test them in a non-production environment before applying them to production instances. Some trace flags can impact system performance, increase memory usage, or change query execution plans in unexpected ways.\n \nTrace flags are available in all AWS Regions where Amazon RDS for SQL Server is supported. To get started, update your RDS parameter group to enable the desired trace flags and apply it to your DB instance. To learn more, see Amazon RDS for SQL Server User Guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/rds-sqlserver-supports-additional-trace-flags/",
-      "pubDate": "2026-09-02T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "rds"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "rds",
-        "ga",
-        "update",
-        "improvement",
-        "support",
-        "expansion"
-      ]
-    },
-    {
-      "id": "aws-news-57a7d4267159",
-      "title": "Amazon Quick now lets you build custom apps with natural language  -",
-      "description": "Now generally available, Amazon Quick lets you build custom applications by simply describing them in natural language. Create project trackers, customer dashboards, and training portals in minutes instead of months. Whether you're a product manager, finance lead, HR partner, or ops analyst, you can now turn ideas into fully functional apps without writing any code. Tell Quick what you need, and it builds a live, connected application with real-time data from your existing business systems.\n \nQuick connects directly to the tools and data your business already uses, including Salesforce, Jira, Asana, ServiceNow, Microsoft 365, Google Workspace, databases, and data warehouses. Your apps stay current automatically as underlying data changes, and every connection respects your organization's existing identity, authorization, and access control policies. Once built, you can publish and share apps instantly with specific users or your entire organization. Need to make a change like adding AI, updating the visual style, or connecting to another system? Just describe what you want and Quick handles it.\n \nDuring preview, customers used Quick to replace spreadsheets and disconnected tools with purpose-built applications. New York Life built an e-learning portal for their Institutional Life team that consolidates onboarding, training, and compliance courses into a single experience. The Amazon Quick team tracks pipeline, customer requests, and adoption metrics in a weekly leadership review app that replaced manual data pulls from four different systems.\n \nBuilding apps in Quick is available to Plus, Professional, and Enterprise customers starting September 1, 2026. To learn more, visit the Apps in Quick getting-started guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-quick-custom-apps-natural-language/",
-      "pubDate": "2026-09-01T21:37:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "amazon q",
-        "rds"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "amazon q",
-        "rds",
-        "preview",
-        "generally-available",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-ffff1b88544a",
-      "title": "Amazon Bedrock AgentCore Identity now offers a managed consent portal",
-      "description": "Amazon Bedrock AgentCore Identity now offers a managed consent portal that eliminates the need for custom OAuth callback infrastructure when connecting agents to third-party tools and services.\n \nDevelopers using AgentCore Gateway to connect agents with services such as GitHub, Salesforce, and Slack previously had to build, host, and maintain custom OAuth callback infrastructure to complete OAuth 2.0 three-legged authorization (3LO) flows. The new managed consent portal eliminates this undifferentiated heavy lifting for agent developers and platform administrators.\n \nEach AgentCore Gateway receives its own managed consent portal with a dedicated hosted web client and credential provider list. Platform admins can share a portal URL with their team before sessions begin, granting consent for agents to call external tools on their behalf. End users can view their connection status at any time through a self-service interface without contacting an administrator.\n \nDevelopers using agent IDE-based clients, which cannot natively present OAuth consent URLs or handle post-consent session binding, can now use the managed consent portal as a dedicated authorization surface for these workflows.\n \nThis feature is available in all commercial regions where Bedrock AgentCore Identity is available.\n \nTo learn more, visit the Amazon Bedrock AgentCore Identity documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-agentcore/",
-      "pubDate": "2026-09-01T21:29:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock",
-        "agentcore"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "bedrock",
-        "agentcore",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-842288ab28e0",
-      "title": "AWS Deadline Cloud now supports sharing job bundles",
-      "description": "AWS Deadline Cloud now supports sharing job bundles, giving teams a simple way to distribute and reuse render job templates without manual file distribution. Deadline Cloud is a fully managed service that helps teams run compute-intensive workloads in the cloud for visual effects, animation, product design, simulation, and gaming. \n \nJob bundles define the jobs you submit to Deadline Cloud, including the job template, parameters, and asset references. Previously, sharing a bundle with teammates meant distributing files through shared drives or manual copying. Now, you can publish a bundle to your queue directly from the submitter or the command line, and it immediately becomes available to everyone with access to that queue. Shared bundles are packaged as portable archives and stored in the queue's existing job attachments bucket in Amazon S3, so there is no additional infrastructure or configuration to set up. This makes it easy for pipeline teams to publish standard, ready-to-submit job templates that artists can pick up and use.\n \nYou can browse bundles shared on your queue, on your local filesystem, or from your job submission history. You can preview each bundle's name, description, steps, and parameters before selecting it. New CLI commands let you manage shared bundles from the command line and integrate bundle sharing into pipeline scripts.\n \nThis feature is available in all AWS Regions where Deadline Cloud is available. To get started, visit the AWS Deadline Cloud documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/deadline-cloud/job-bundle-sharing",
-      "pubDate": "2026-09-01T20:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "preview",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-a2c655e29a72",
-      "title": "Amazon CloudWatch Database Insights now supports self-managed PostgreSQL",
-      "description": "Today, AWS announces support for self-managed PostgreSQL databases in Amazon CloudWatch Database Insights. Using CloudWatch Database Insights, you can now monitor your self-managed PostgreSQL instances running on Amazon EC2, alongside Amazon RDS and Amazon Aurora, to give you a complete view of your database fleet in a single console. \n \nAmazon CloudWatch Database Insights is a database observability solution that provides a curated experience to help you monitor database fleet health, diagnose issues, and resolve performance bottlenecks. With support for self-managed databases, you use the Amazon CloudWatch agent to collect health and performance data from your self-managed PostgreSQL instances. Your database appears in the Database Insights fleet view with live performance data, including database load, wait event analysis, query-level statistics, and host metrics. Monitor and troubleshoot your self-managed PostgreSQL instances using the same familiar Database Insights console and workflows you already use for your AWS-managed databases.\n \nAmazon CloudWatch Database Insights support for self-managed PostgreSQL is available in all AWS Commercial Regions. To get started, see Monitoring Self-Managed Databases in the Amazon CloudWatch User Guide. For pricing details, see the Amazon CloudWatch pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/database-insights-self-managed-postgresql/",
-      "pubDate": "2026-09-01T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2",
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "rds",
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-06aec4203166",
-      "title": "Amazon Kinesis Data Streams now supports a dry run feature to validate API requests",
-      "description": "Amazon Kinesis Data Streams now supports a dry run feature to check whether an API request would succeed without executing the operation. Customers can now set the new optional parameter ‘DryRun’ to true in their API requests to validate permissions before interacting with a stream in production.\n \nPreviously, customers had no safe way to test whether their application had the correct permissions to access a stream. They would often send a request engineered to fail after checking permissions, such as a PutRecord request with a payload deliberately larger than the maximum supported size. This approach was fragile as it depended on current service limits, and if those limits ever changed, the request could unexpectedly succeed, writing unintended records into the production stream and into any downstream consumers. Now, customers can simply set the parameter ‘DryRun’ to true to indicate they only want to validate the API request. If all checks complete successfully, the API returns a ‘DryRunOperationException’, confirming the request would have succeeded without the ‘DryRun’ parameter.\n \nThe dry run feature is available for five APIs (PutRecord, PutRecords, GetRecords, GetShardIterator, and SubscribeToShard) in all AWS Regions where Amazon Kinesis Data Streams is available. For more information about dry run, see Test your permissions and request inputs with dry run in the Amazon Kinesis Data Streams Developer Guide. To get started with dry run, see the Amazon Kinesis Data Streams API Reference.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-kinesis-data-streams-api/",
-      "pubDate": "2026-09-01T19:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "kinesis"
-      ],
-      "categories": [
-        "generative-ai"
-      ],
-      "tags": [
-        "rds",
-        "kinesis",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-c6b8a3ab9d2c",
       "title": "Observing and evaluating production agents using OpenSearch Agent Health",
       "description": "Learn how to observe and evaluate production AI agents by combining an agent running on AWS with OpenSearch Agent Health. This post walks through deploying an agent and its observability pipeline to AWS, then using Agent Health to explore traces and run evaluations that measure and improve agent quality over time.",
@@ -2879,23 +2904,6 @@
         "s3",
         "redshift",
         "ga"
-      ]
-    },
-    {
-      "id": "aws-news-54eacf32853b",
-      "title": "How Picnic configured multiple OAuth providers for Amazon MQ",
-      "description": "Picnic runs RabbitMQ as the messaging backbone for hundreds of microservices on Amazon MQ for RabbitMQ. This post shows how to configure one broker to trust multiple OAuth 2.0 identity providers, Keycloak for operators and AWS IAM for services, so you can eliminate static credentials while maintaining separate identity paths for people and workloads.",
-      "link": "https://aws.amazon.com/blogs/big-data/how-picnic-configured-multiple-oauth-providers-for-amazon-mq/",
-      "pubDate": "2026-08-27T16:07:20.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "iam"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "iam"
       ]
     },
     {
@@ -3638,24 +3646,6 @@
       ]
     },
     {
-      "id": "aws-news-7a5e5020ab74",
-      "title": "Architecting for IOPS and throughput performance on AWS Outposts racks",
-      "description": "AWS Outposts extend AWS infrastructure, services, APIs, and tools to on-premises locations for workloads that require low latency, local data processing, or data residency. In this post, you learn how to configure instances running on an Outpost to support the required IOPS and throughput for your application. The actual IOPS available to an instance is […]",
-      "link": "https://aws.amazon.com/blogs/compute/architecting-for-iops-and-throughput-performance-on-aws-outposts-racks/",
-      "pubDate": "2026-07-10T17:10:39.000Z",
-      "source": "computeBlog",
-      "services": [
-        "outposts"
-      ],
-      "categories": [
-        "industry-cases"
-      ],
-      "tags": [
-        "outposts",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-b7983eb26316",
       "title": "AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)",
       "description": "A couple of editions ago I wrote about what I find so energizing about working with startups. Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving. One story that stayed with me came […]",
@@ -3686,23 +3676,6 @@
       "tags": [
         "eks",
         "new-feature"
-      ]
-    },
-    {
-      "id": "aws-news-66471cd99383",
-      "title": "Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode",
-      "description": "AWS CloudFormation speeds up infrastructure deployment with Express mode, enabling AI agents and developers to receive deployment confirmation in seconds and iterate faster. Available in all commercial Regions at no additional cost.",
-      "link": "https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/",
-      "pubDate": "2026-06-30T21:30:33.000Z",
-      "source": "newsBlog",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "news"
-      ],
-      "tags": [
-        "cloudformation"
       ]
     },
     {
