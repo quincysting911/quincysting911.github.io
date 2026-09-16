@@ -1,8 +1,62 @@
 {
-  "lastUpdated": "2026-09-15T10:35:56.028Z",
+  "lastUpdated": "2026-09-16T10:24:17.752Z",
   "category": "general",
   "totalItems": 37,
   "items": [
+    {
+      "id": "aws-news-97e325412381",
+      "title": "AWS Billing Conductor now supports custom rates and usage tier pricing configurations",
+      "description": "AWS Billing Conductor now lets you define custom rate pricing for AWS services, including defining custom usage tiers to configure rates by the desired usage volume. \n \nCustomers and Partners using AWS Billing Conductor to model commercial agreements with subsidiaries, affiliates, or end customers can now more easily reflect their negotiated pricing on pro forma billing data. Using SKU-scoped pricing rules, you can enter a custom rate and configure usage tier thresholds — instead of marking up or down from the public on-demand rates tied to pre-defined AWS usage tiers. \n \nBy configuring exact rates and tier breaks directly in a pricing rule, you no longer need to calculate percentage-based markups or markdowns against public on-demand pricing to model your commercial agreements. This gives you precise control over your pro forma billing configuration.\n \nCustom rates and custom usage tiers configuration via SKU-scoped pricing rules is available in all commercial AWS Regions, excluding the Amazon Web Services China (Beijing) Region, operated by Sinnet, and the Amazon Web Services China (Ningxia) Region, operated by NWCD. To learn more, visit the AWS Billing Conductor product page, or review the User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/AWS-Billing-Conductor-custom-rates-usage-tier",
+      "pubDate": "2026-09-15T18:58:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6d369be8312b",
+      "title": "AWS Glue zero-ETL now captures archived Salesforce records",
+      "description": "AWS Glue zero-ETL integrations for Salesforce now capture archived records in your target tables, giving you a complete replica of your Salesforce data for analytics and reporting. Archived records are identified and reflected accurately through the isArchived field, so your analytical data stays fully in sync with your Salesforce source. This is especially valuable for high-volume entities that Salesforce archives automatically, such as Events, Tasks, and Activities, giving you complete visibility into this data in your analytical data stores.\n \nThis feature applies to your zero-ETL integrations with no action required. New integrations capture archived records automatically from the moment the integration is created. For existing integrations, AWS Glue automatically backfills archived record status, with no re-sync, reconfiguration, or schema change needed. Your existing pipelines continue running uninterrupted while the isArchived field is populated accurately on your behalf.\n \nThis feature is available in all AWS Commercial and AWS GovCloud (US) Regions where AWS Glue zero-ETL integrations for Salesforce are supported.\n \nTo get started, create or continue using an AWS Glue zero-ETL integration for Salesforce using the AWS Glue console, CLI, or SDK. To learn more, see AWS Glue zero-ETL documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/glue-zero-etl-archived-salesforce/",
+      "pubDate": "2026-09-15T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "glue"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "glue",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-34cccf9cb4f5",
+      "title": "AWS improves regional resiliency for root user sign-in",
+      "description": "AWS root user sign-in is now served across US East (N. Virginia), US East (Ohio), and US West (Oregon), with sign-in traffic distributed across all three Regions. This change reduces reliance on US East (N. Virginia) and improves resiliency during service disruptions. AWS automatically routes your root user sign-in to a supported Region without requiring you to select a Region or change how you sign in. This improvement is available now for all AWS accounts.\n \nIn AWS CloudTrail, ConsoleLogin events for root user sign-ins are recorded in the Region that processed the sign-in request. To maintain full visibility into root user sign-in activity, update your monitoring and alerting to cover US East (N. Virginia), US East (Ohio), and US West (Oregon).\n \nTo learn more, see the AWS Sign-In documentation and the CloudTrail ConsoleLogin event reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/root-user-regional-resiliency/",
+      "pubDate": "2026-09-14T19:30:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "update",
+        "improvement",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-989be6721eda",
       "title": "Amazon EC2 X2idn instances are now available in Asia Pacific (Hong Kong)",
@@ -175,24 +229,6 @@
         "lambda",
         "ec2",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-345ac179b92c",
-      "title": "Simplify and support your TorchServe workloads using Ray Serve Deep Learning Containers",
-      "description": "TorchServe is no longer maintained, leaving teams to own the entire GPU inference stack. The AWS Ray Serve Deep Learning Container is a supported, pre-tested container with the framework, GPU drivers, and serving layer already assembled. This post walks through deploying a vision-language model on Amazon EKS using the Ray Serve DLC on a single GPU node.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/simplify-and-support-your-torchserve-workloads-using-ray-serve-deep-learning-containers/",
-      "pubDate": "2026-09-09T15:51:29.000Z",
-      "source": "mlBlog",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
         "support"
       ]
     },
@@ -439,45 +475,6 @@
         "ga",
         "now-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-74d455468480",
-      "title": "AWS CloudFormation now supports contract tests v2 for resource types",
-      "description": "AWS CloudFormation now supports contract tests v2, available through the --v2 flag of the cfn test command in the CloudFormation CLI. Previously, the contract test suite covered only basic scenarios around the CRUD handlers. Contract tests v2 adds deeper test scenarios that exercise your resource type implementation across each handler operation. All new resource types can run contract tests v2 through the test-type API during registry submission, and Java-based resource types can also run them locally with cfn test --v2, requiring only Docker and a built handler package.\n \nContract tests v2 introduces live-state verification that confirms actual resource state matches the requested state after create, update, and delete operations. Developers also benefit from schema backward-compatibility checks, test input linting that flags hardcoded Regions, account IDs, and partitions, and detailed HTML and JUnit XML reports for local contract test execution. These improvements significantly reduce iteration cycles by surfacing issues before registry submission.\n \nContract tests v2 is available in all AWS Regions where AWS CloudFormation is available. To learn more, visit the AWS CloudFormation contract tests documentation and the AWS CloudFormation product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-cloudformation-contract-tests-v2-resource-types/",
-      "pubDate": "2026-09-02T15:23:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "update",
-        "improvement",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-0bdfd704b971",
-      "title": "AWS User Experience Customization (UXC) is now available in all commercial AWS Regions",
-      "description": "AWS User Experience Customization (UXC) is now available in all commercial AWS Regions. UXC enables account administrators to set a custom account color and control which services and Regions appear in the AWS Management Console.\n \nPreviously, UXC was available only in US East (N. Virginia), requiring customers who manage these settings programmatically to direct API calls to that single Region. With today's expansion, customers can manage account customizations from any commercial AWS Region using the AWS CLI, AWS SDKs, or AWS CloudFormation — making it easier to configure the console experience alongside existing infrastructure automation.\n \nUXC is available at no additional charge. To get started, see the AWS User Experience Customization documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-uxc-aws-regions",
-      "pubDate": "2026-09-02T13:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "now-available",
-        "expansion"
       ]
     },
     {
