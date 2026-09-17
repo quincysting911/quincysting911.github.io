@@ -1,8 +1,49 @@
 {
-  "lastUpdated": "2026-09-16T10:24:17.752Z",
+  "lastUpdated": "2026-09-17T10:33:56.671Z",
   "category": "natural-language",
   "totalItems": 6,
   "items": [
+    {
+      "id": "aws-news-c4b33cabc0d1",
+      "title": "Amazon WorkSpaces adds support for NVIDIA Blackwell GPU instances",
+      "description": "Amazon WorkSpaces Personal and Amazon WorkSpaces Core now support Graphics G7 bundles, built on NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs and Intel Xeon 6 processors. Graphics G7 delivers up to 2.1x better performance for graphics-intensive workloads compared to previous generation Graphics G6 bundles. Four bundle sizes are available, ranging from 8 vCPUs, 32 GB of memory, and one GPU up to 48 vCPUs, 192 GB of memory, and two GPUs.\n \nWith Graphics G7, you can run demanding professional applications such as CAD/CAM, 3D rendering, scientific visualization, video editing, and AI-assisted design workflows at higher fidelity and frame rates. Each GPU provides 32 GB of GDDR7 memory, enabling larger and more complex 3D scenes and models. Graphics G7 bundles are available with Windows, including bring-your-own-license, and support both AlwaysOn and AutoStop running modes.\n \nGraphics G7 bundles are available for both WorkSpaces Personal and WorkSpaces Core in US East (N. Virginia), US East (Ohio), and US West (Oregon). Additional Regions will be added as availability expands.\n \nTo get started, select a Graphics G7 bundle when creating a workspace in the Amazon WorkSpaces console, or through your Workspaces Core partner solution. For more information on available instance types, see WorkSpaces Personal Instance Families. To learn more about G7 GPU capabilities, visit the EC2 G7 Instance Types page. For pricing details, see Amazon WorkSpaces Personal Pricing or Core Bundles Pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-workspaces-nvidia-blackwell-gpu-instances/",
+      "pubDate": "2026-09-16T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "ec2"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "ec2",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-779c53e8c79f",
+      "title": "AWS STS simplifies session token size limits and adds session token size monitoring",
+      "description": "AWS Security Token Service (STS) now enforces a single 4,096-byte size limit on session tokens. Previously, STS enforced separate limits on session token size and passed-in parameters (i.e., inline policies, managed policies, and session tags). STS has removed that separation, providing more flexibility for larger combinations of session policies and session tags.\n \nAdditionally, STS now returns response elements indicating session token size and percentage utilization relative to the token size limit. STS logs these values in AWS CloudTrail and publishes corresponding metrics in Amazon CloudWatch. A new optional API parameter also lets you generate larger session tokens (up to the 4,096-byte limit) to test whether your applications and infrastructure can handle them.\n \nThese capabilities are available in all commercial AWS Regions, the AWS GovCloud (US) Regions, and the AWS European Sovereign Cloud Region.\n \nTo learn more, please read the AWS Security Blogpost, AWS IAM User Guide, and AWS STS API Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-sts/",
+      "pubDate": "2026-09-15T22:42:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex",
+        "iam",
+        "cloudwatch"
+      ],
+      "categories": [
+        "natural-language"
+      ],
+      "tags": [
+        "lex",
+        "iam",
+        "cloudwatch"
+      ]
+    },
     {
       "id": "aws-news-7e9c361b3b61",
       "title": "AWS Elemental MediaLive enables frame-accurate pipeline locking for streams without timecode",
@@ -82,45 +123,6 @@
         "lex",
         "ecs",
         "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-db93b0aa3576",
-      "title": "Amazon WorkSpaces Applications adds support for NVIDIA Blackwell GPU instances",
-      "description": "Amazon WorkSpaces Applications now supports Graphics G7 instances, powered by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs and Intel Xeon Scalable (6th Gen) processors. G7 instances deliver up to 2.1× better performance for graphics-intensive workloads compared to previous generation G6 instances.\n \nWith Graphics G7, customers can stream demanding professional applications such as CAD/CAM, 3D rendering, scientific visualization, video editing, and AI-assisted design workflows at higher fidelity and frame rates. G7 instances feature 32 GB of GDDR7 GPU memory per GPU and 2.67× faster memory bandwidth, enabling streaming of larger, more complex 3D scenes and models. Six instance sizes are available, with 1 to 8 GPUs, vCPUs ranging from 8 to 192, and system memory from 32 GB to 768 GB.\n \nGraphics G7 instances are available in US East (N. Virginia), US East (Ohio), and US West (Oregon). Additional regions will be added as availability expands.\n \nTo get started, select a Graphics G7 instance when launching an image builder or creating a new fleet in the Amazon WorkSpaces Applications console. For more information on available instance types, see WorkSpaces Applications Instance Families. To learn more about G7 GPU capabilities, visit the EC2 G7 Instance Types page. For pricing details, see Amazon WorkSpaces Applications Pricing.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-workspaces-applications-nvidia-blackwell-gpu-instances/",
-      "pubDate": "2026-09-03T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex",
-        "ec2"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
-        "ec2",
-        "launch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-94934fe28be8",
-      "title": "Amazon SES now supports S/MIME email signing",
-      "description": "Amazon Simple Email Service (SES) now supports Secure/Multipurpose Internet Mail Extensions (S/MIME) signing, giving you a way to help recipients verify your emails are authentic. An S/MIME signature lets recipients confirm that a message was sent by the holder of the From address and that its content was not altered in transit.\n \nPreviously, senders who needed S/MIME had to sign each message themselves before submitting it to SES, adding complexity to their sending. With this feature, you store your signing certificate in AWS Certificate Manager and enable S/MIME signing for your sender identity. SES then signs your messages automatically as you send, so you don't have to sign messages yourself beforehand. Recipients whose email clients don't support S/MIME can still read the message normally. This gives security-conscious senders a simple way to add digital signatures to their email while continuing to use their existing SES setup.\n \nThis feature is available in all AWS Regions where Amazon SES is available. To learn more about S/MIME signing in Amazon SES, visit the Amazon SES console or refer to the documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ses-supports-smime-signing",
-      "pubDate": "2026-09-03T07:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "natural-language"
-      ],
-      "tags": [
-        "lex",
         "support"
       ]
     }

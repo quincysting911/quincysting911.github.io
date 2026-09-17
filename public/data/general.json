@@ -1,8 +1,60 @@
 {
-  "lastUpdated": "2026-09-16T10:24:17.752Z",
+  "lastUpdated": "2026-09-17T10:33:56.671Z",
   "category": "general",
-  "totalItems": 37,
+  "totalItems": 35,
   "items": [
+    {
+      "id": "aws-news-98553100dac6",
+      "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
+      "description": "Integrate NVIDIA Resiliency Extension (NVRx) into PyTorch FSDP training on Amazon EKS to overlap checkpoint I/O with training and recover from GPU faults in seconds. This post covers async checkpointing, in-process restart, and ft_launcher in-job restart, with H100 benchmarks at 2 to 8 nodes showing 99%+ training efficiency and second-scale recovery.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
+      "pubDate": "2026-09-16T18:59:25.000Z",
+      "source": "mlBlog",
+      "services": [
+        "eks"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-f4dbbec62bce",
+      "title": "AWS Client VPN is now supporting MacOS 27 Golden Gate",
+      "description": "AWS Client VPN now supports MacOS 27 Golden Gate client with versions 6.0+ You can now run the AWS supplied VPN client on the latest MacOS versions. AWS Client VPN desktop clients are available free of charge, and can be downloaded here.\n  AWS Client VPN is a managed service that securely connects your remote workforce to AWS or on-premises networks. It supports desktop clients for MacOS, Windows x64, Windows Arm64 and Ubuntu-Linux. With client version 6.0 onwards, Client VPN now supports the latest MacOS  Golden Gate 27.0. It already supports Mac OS version 13.0, 14.0, 15.0, and 26.0, Windows 10 (x64) and Windows 11 (Arm64 and x64), and Ubuntu Linux 22.04 and 24.04 LTS versions.\n To learn more about Client VPN:\n \n \n \nVisit the AWS Client VPN product page\n \n \nRead the AWS Client VPN documentation\n \n \nRead the AWS Client VPN user guide",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-client-vpn-macos-golden-gate/",
+      "pubDate": "2026-09-16T17:56:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-16e3d52dfd5a",
+      "title": "Amazon Connect Customer can now import evaluation form PDFs using AI",
+      "description": "Amazon Connect Customer now lets managers import a PDF of an evaluation form from a third-party quality management application, and automatically recreates it in Connect using AI, making it easier to migrate an existing quality program into Connect. Instead of rebuilding an existing form question by question, you upload the PDF and choose the preferred scoring method, either percentage or points-based, and Connect Customer automatically extracts the sections, questions, answer options, and scoring into a draft evaluation form. You can also provide natural language instructions to import the form more accurately or to adjust it as it's created — for example, splitting a broad question into simpler ones — minimizing the manual edits needed before you activate the form.\n \nThis feature is available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Canada (Central), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), and Europe (Frankfurt). To learn more, please visit our documentation and our webpage. For information about Amazon Connect Customer pricing, please visit our pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-connect-customer-import-evaluation-form-PDF/",
+      "pubDate": "2026-09-16T17:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-97e325412381",
       "title": "AWS Billing Conductor now supports custom rates and usage tier pricing configurations",
@@ -100,19 +152,6 @@
         "now-available",
         "support"
       ]
-    },
-    {
-      "id": "aws-news-274b2b4b803e",
-      "title": "Agent Evaluation Metric for multi-turn conversations",
-      "description": "Multi-turn agents fail in ways single-turn evaluation misses: one early mistake corrupts every later turn. This post introduces the Agent Evaluation Metric (AEM), a decomposable, turn-level way to measure agent quality, applied to its first dimension, correctness, to pinpoint the turn that caused a failure and separate it from the turns that inherited it.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
-      "pubDate": "2026-09-10T15:55:41.000Z",
-      "source": "mlBlog",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": []
     },
     {
       "id": "aws-news-89326dece7b6",
@@ -400,81 +439,6 @@
       "tags": [
         "ec2",
         "now-available"
-      ]
-    },
-    {
-      "id": "aws-news-8910ba5acae0",
-      "title": "AWS Gateway Load Balancer now supports TCP Reset for faster failure recovery",
-      "description": "AWS Gateway Load Balancer (GWLB) now supports sending TCP Reset (RST) packets when a target becomes unhealthy, is deregistered, or when a flow's idle timeout expires. This feature helps reduce traffic interruptions from minutes to seconds by enabling TCP endpoints to quickly detect failed connections and establish new TCP flows through healthy targets.\n  Previously, when a GWLB target failed, existing TCP connections would continue to be forwarded to the unhealthy target (aka fail-open behavior). Client and server applications could experience interruptions lasting several minutes due to TCP retry and exponential back-off mechanisms built in the TCP stacks of clients or servers. When this capability is enabled, GWLB sends TCP Resets in response to the incoming traffic, indicating to the sender that a TCP connection is no longer viable. This allows TCP endpoints to recover in quickly.\n  TCP Reset is not enabled by default to ensure backward compatibility. You can enable it per target group using the AWS Management Console, AWS CLI, or API. Three triggers are supported independently for generating TCP Reset: target becomes unhealthy, target deregistration (after connection draining), and TCP idle timeout expiry.\n  This feature is available for all new and existing Gateway Load Balancers in all AWS Regions where GWLB is available. There is no additional charge for using this feature.\n  To learn more, visit this AWS blog, and GWLB User Guide here and here.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-gateway-load-balancer-tcp-reset/",
-      "pubDate": "2026-09-03T17:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-91aaf0512a80",
-      "title": "Amazon Redshift rg.large instances now support single-node clusters",
-      "description": "Amazon Redshift rg.large instances, powered by AWS Graviton processors, now support single-node clusters. Single-node support for rg.large clusters is available on P204 or later patch versions. Customers can now create a single-node rg.large cluster for smaller workloads that do not require high availability, offering a cost-effective option to conduct proofs of concept and tests quickly.\n \nRG instances deliver up to 2.4x faster performance running data warehouse and data lake workloads when compared to previous generation RA3 instances, at 30% lower price per vCPU. RG instances include Redshift's custom-built vectorized data lake query engine that processes Apache Iceberg and Parquet data on your cluster nodes, turning on SQL analytics across your data warehouse and data lake using a single engine.\n \nThese RG instances are available in the following AWS Regions: Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Osaka), Asia Pacific (Mumbai), Asia Pacific (Hyderabad), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Jakarta), Asia Pacific (Melbourne), Asia Pacific (Malaysia), Asia Pacific (Taipei), Asia Pacific (Thailand), Canada (Central), Europe (Frankfurt), Europe (Stockholm), Europe (Spain), Europe (Ireland), Europe (London), Europe (Paris), South America (São Paulo), US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), AWS GovCloud (US-East), AWS GovCloud (US-West) and Mexico (Central).\n \nTo learn more, visit the Amazon Redshift RG Instance Documentation, the RA3 to RG Upgrade Guide, and the Amazon Redshift pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/redshift-rg-large-single-node",
-      "pubDate": "2026-09-03T16:03:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "redshift",
-        "graviton"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "redshift",
-        "graviton",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-bc06a78933e3",
-      "title": "Amazon MWAA adds built-in monitoring with Amazon CloudWatch",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) now includes a built-in monitoring experience on the environment detail page in the AWS Management Console. A new metrics dashboard displays key Amazon CloudWatch metrics for your environment in one place, and each graph includes an optional toggle to overlay suggested warning ranges, helping you quickly identify conditions that may affect your environment's health and performance.\n \nThe environment detail page also now shows an alarms table that lists all Amazon CloudWatch alarms associated with your MWAA environment. You can use the one-click Create Recommended Alarms action to provision a curated set of alarms from an AWS-managed template, so you can start monitoring critical metrics without having to configure each alarm manually. This feature is available for Amazon MWAA Provisioned environments in all regions where Amazon MWAA is available. Standard Amazon CloudWatch pricing applies for metric queries and alarms.\n \nTo get started, open the AWS Management Console, review the Amazon MWAA supported regions, or visit the Amazon MWAA documentation to learn more.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-cloudwatch-monitoring/",
-      "pubDate": "2026-09-03T15:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-d3863a3e77fd",
-      "title": "Amazon S3 now supports PrivateLink for FIPS endpoints",
-      "description": "Amazon S3 now supports AWS PrivateLink for endpoints that have been validated under the Federal Information Processing Standard (FIPS) 140-3 program.\n  Customers with security and compliance requirements can use FIPS-validated cryptographic modules when connecting to S3 while keeping their traffic within their Virtual Private Cloud (VPC). To get started, create a new or edit an existing interface VPC endpoint for S3 and configure it to use the FIPS S3 endpoint.\n  AWS PrivateLink support for FIPS S3 endpoints is now available in the AWS US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Canada (Central), Canada West (Calgary), and AWS GovCloud (US) Regions, at no additional cost. To learn more, visit accessing AWS services through AWS PrivateLink, FIPS 140-3 Compliance, and S3 documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-s3-privatelink-fips-endpoints",
-      "pubDate": "2026-09-03T04:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "s3"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "ga",
-        "now-available",
-        "support"
       ]
     },
     {
