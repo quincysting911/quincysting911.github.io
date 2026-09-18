@@ -1,8 +1,93 @@
 {
-  "lastUpdated": "2026-09-17T10:33:56.671Z",
+  "lastUpdated": "2026-09-18T10:09:57.776Z",
   "category": "general",
-  "totalItems": 35,
+  "totalItems": 36,
   "items": [
+    {
+      "id": "aws-news-89bab2c415cb",
+      "title": "AWS HealthOmics now supports IAM session policies",
+      "description": "AWS HealthOmics now supports IAM session policies, enabling you to restrict permissions for individual runs without creating and managing multiple IAM roles. Until now, there was no way to dynamically scope down permissions for a single run, requiring you to create a separate IAM role for each tenant or run. AWS HealthOmics is a HIPAA-eligible service that helps healthcare and life sciences customers accelerate scientific breakthroughs with fully managed bioinformatics workflows.\n \nAn IAM session policy is an inline policy that limits the maximum permissions of a run without modifying the underlying service role. Your effective permissions during a run are the intersection of permissions allowed by both the underlying identity-based policy and the temporary session policy. For example, if you operate a multi-tenant application, you can pass a session policy that limits a run's access to only that tenant's Amazon S3 buckets, without provisioning a dedicated IAM role for that tenant. You can also use IAM session policies to grant temporary access to specific Amazon S3 objects for a single run, and isolate access to sensitive resources on a per-run basis.\n \nIAM session policy support is available in all AWS Regions where AWS HealthOmics is available: US East (N. Virginia, Ohio), US West (Oregon), Europe (Frankfurt, Ireland, London), Israel (Tel Aviv), and Asia Pacific (Tokyo, Singapore, Seoul). To learn how to configure IAM session policies for your runs, visit the Permissions section of the  AWS HealthOmics User Guide. To learn more about the service, visit  AWS HealthOmics.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/omics-iam-session-policy/",
+      "pubDate": "2026-09-17T18:32:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "s3",
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "s3",
+        "iam",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-270a20c34314",
+      "title": "Introducing Amazon EC2 T8i instances",
+      "description": "AWS is announcing the general availability of new low-cost burstable Amazon EC2 T8i instances. These instances are powered by custom sixth generation Intel Xeon 6 processors, available exclusively on AWS, and built on the latest sixth generation AWS Nitro cards. T8i instances deliver up to 30% better price performance compared to previous generation T3 instances, and offer four sizes: nano, micro, small, and medium. These instances are designed for workloads requiring low to moderate CPU utilization, including data processing, login gateways, small databases, batch processing, event driven functions, CI/CD pipelines, microservices, and low traffic websites.  \n \nT8i instances deliver up to 70% higher compute performance, 1.25x higher network bandwidth, and 2.4x higher EBS bandwidth compared to T3 instances. They use the same CPU credit system as T3 with Standard and Unlimited modes, so existing T3 customers can upgrade to T8i and immediately benefit from better price performance, enabling them to lower their TCO. For customers new to AWS or migrating from on-premises, T8i instances provide one of the most cost-effective entry points to run a variety of workloads.\n \nT8i.micro and T8i.small are available under the AWS Free Tier. T8i instances are available in US East (N. Virginia, Ohio), US West (Oregon, N. California), Europe (Frankfurt, Ireland, London, Paris), Asia Pacific (Hyderabad, Malaysia, Mumbai, Seoul, Singapore, Sydney, Tokyo), and Canada (Central) regions. T8i instances are available to purchase via On-Demand instances, and Spot instances with Savings Plan option coming soon. To learn more, visit the Amazon EC2 T8i instances page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-t8i-instances-ga/",
+      "pubDate": "2026-09-17T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ec2",
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ec2",
+        "rds",
+        "ga",
+        "coming-soon"
+      ]
+    },
+    {
+      "id": "aws-news-ad9d92a3fa00",
+      "title": "AWS Elastic Beanstalk introduces Cluster Mode to run multiple applications on shared infrastructure",
+      "description": "AWS Elastic Beanstalk introduces Cluster Mode, a new deployment mode that lets you run and manage multiple applications on shared infrastructure in your account. Provide your source code, a Dockerfile, or a container image in Amazon ECR, and Elastic Beanstalk handles containerization, provisioning, and ongoing operations through the console, CLI, and APIs you already use. A new Elastic Beanstalk GitHub Action deploys your application directly from your repository as part of your CI/CD pipeline.\n \nAWS Elastic Beanstalk deploys, scales, and manages your applications for their full lifecycle while handling the infrastructure, so you can focus on your code. It now offers two deployment modes. Standard Mode is the existing Elastic Beanstalk experience and continues to support all currently available platforms, including .NET, Node.js, and Python. Cluster Mode runs multiple applications on pooled infrastructure in your account, powered by Amazon EKS, instead of a dedicated environment per application. This can lower your per-application compute cost as your applications scale or your application count grows. Cluster Mode supports event-driven autoscaling, OpenTelemetry-based observability to Amazon CloudWatch and third-party providers, AWS Secrets Manager integration, and HTTPS by default via AWS Certificate Manager.\n \nTo get started, create an environment in the Elastic Beanstalk console and select Cluster Mode. You can also deploy with the AWS CLI, the GitHub Action, or the agent skills.\n \nCluster Mode is available in all commercial AWS Regions where Elastic Beanstalk is available. Elastic Beanstalk is HIPAA eligible and in scope for programs including PCI DSS, SOC, FedRAMP, and IRAP. There is no additional charge for Cluster Mode. You pay for the AWS resources your applications consume, including the EKS cluster and EKS Auto Mode charges for the infrastructure Elastic Beanstalk provisions on your behalf. See the Elastic Beanstalk and EKS pricing pages for details.\n \nTo learn more, see the AWS News blog, the Elastic Beanstalk Developer Guide, and the Elastic Beanstalk product page, or download the agent skills.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/elastic-beanstalk-cluster-mode/",
+      "pubDate": "2026-09-17T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "eks",
+        "secrets manager",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "eks",
+        "secrets manager",
+        "cloudwatch",
+        "integration",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-7783a7636e2b",
+      "title": "Amazon ECS deployment observability for Amazon ECS Managed Daemons in AWS Management Console",
+      "description": "Amazon Elastic Container Service (Amazon ECS) now provides a consolidated deployment view for Amazon ECS Managed Daemons, giving you a single place to see how far a deployment has progressed, what is failing, and what could stop it. This helps you monitor Managed Daemon deployments at a glance and resolve issues faster, whether a rollout is in progress or you are reviewing what happened after it completed, eliminating the need to piece together deployment status from multiple sources.\n  The deployment view presents a lifecycle timeline with timestamps at each step and the total deployment duration, including the rollback path if a deployment is interrupted. Progress bars for each capacity provider track instances completed, in progress, and remaining, as well as instances draining and being replaced when a capacity provider is removed. A monitoring panel shows deployment circuit breaker, deployment alarm, and container health check state, each with live Amazon CloudWatch alarm detail and whether it can stop the deployment. If a daemon task fails, the affected capacity provider shows the stop reason with links to the task, its logs, and the matching troubleshooting guide, including the failure that caused a rollback. The view also displays target and source revisions with instance counts, drain percentage, and bake time.\n  This enhancement is available as a console-only view in all AWS Commercial Regions at no additional cost. To get started with Amazon ECS Managed Daemons, refer to our documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ecs-daemon-deployment-console/",
+      "pubDate": "2026-09-16T22:01:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "cloudwatch",
+        "enhancement"
+      ]
+    },
     {
       "id": "aws-news-98553100dac6",
       "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
@@ -392,56 +477,6 @@
       ]
     },
     {
-      "id": "aws-news-4c69f4c2393e",
-      "title": "AWS MCP Server adds a serverless capability for AWS Lambda functions",
-      "description": "Today, AWS Model Context Protocol Server (AWS MCP Server) added a serverless capability so that coding agents such as Claude Code and Kiro can efficiently diagnose issues with your Lambda functions. The serverless capability helps you troubleshoot your running Lambda functions and their connected resources.\n \nThe AWS MCP Server, available through the Agent Toolkit for AWS or as a standalone installation, is a managed service that gives AI coding agents secure access to AWS services. With the new serverless capability in the AWS MCP Server, your coding agent inspects your Lambda function and its connected resources across Amazon API Gateway, Amazon EventBridge, Amazon S3, Amazon DynamoDB, Amazon SNS, Amazon SQS, and AWS Step Functions. The agent can correlate error signals against a 7-day baseline to pinpoint what changed, surface recurring errors to identify trends, retrieve the deployed configuration of your function and connected resources, provide a timeline of recent changes to track what happened, and analyze service latency across connected resources. As the agent gets comprehensive data in a single call, it consumes fewer tokens compared to orchestrating multiple API calls.\n \nTo get started, configure the Agent toolkit for AWS by running ‘aws configure agent-toolkit’ from the AWS CLI, or enable the AWS MCP Server directly.\n \nThe AWS MCP Server can access services in all commercial AWS Regions, while the AWS MCP Server itself runs in the US East (N. Virginia) and Europe (Frankfurt) Regions. The serverless diagnostic capabilities in the AWS MCP Server are available at no additional cost. To learn more, see the user guide.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-mcp-server-serverless/",
-      "pubDate": "2026-09-04T16:31:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "s3",
-        "dynamodb",
-        "api gateway",
-        "eventbridge",
-        "step functions",
-        "sns",
-        "sqs"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "s3",
-        "dynamodb",
-        "api gateway",
-        "eventbridge",
-        "step functions",
-        "sns",
-        "sqs",
-        "ga"
-      ]
-    },
-    {
-      "id": "aws-news-bf5cea257dc6",
-      "title": "Amazon EC2 P6-B200 instances are now available in the AWS Asia Pacific (Hyderabad) Region",
-      "description": "Starting today, Amazon Elastic Compute Cloud (Amazon EC2) P6-B200 instances accelerated by NVIDIA Blackwell GPUs are available in the AWS Asia Pacific (Hyderabad) Region. These instances offer up to 2x performance compared to P5en instances for AI training and inference.\n \nP6-B200 instances feature 8 Blackwell GPUs with 1440 GB of high-bandwidth GPU memory and a 60% increase in GPU memory bandwidth compared to P5en, 5th Generation Intel Xeon processors (Emerald Rapids), and up to 3.2 terabits per second of Elastic Fabric Adapter (EFAv4) networking. P6-B200 instances are powered by the AWS Nitro System, so you can reliably and securely scale AI workloads within Amazon EC2 UltraClusters to tens of thousands of GPUs.\n \nP6-B200 instances are now available in p6-b200.48xlarge size in the following AWS Regions: US West (Oregon), US East (N. Virginia, Ohio), AWS GovCloud (US-West, US-East), and Asia Pacific (Hyderabad, Mumbai) Regions. To learn more about P6-B200 instances, visit Amazon EC2 P6 instances.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-p6-b200-instances-available-asia-pacific-hyderabad",
-      "pubDate": "2026-09-03T19:14:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "ec2",
-        "now-available"
-      ]
-    },
-    {
       "id": "aws-news-b970f4b780cc",
       "title": "Deliver real-time data to streaming tables for Apache Iceberg with Amazon Kinesis Data Streams",
       "description": "Amazon Kinesis Data Streams now supports streaming tables, a fully managed capability that continuously delivers your streaming data as queryable Apache Iceberg tables on Amazon S3 Tables. Streaming tables reduce data delivery costs to S3 Tables by up to 50% compared to self-managed alternatives and reduce downstream query costs by up to 30% through intelligent inline compaction that eliminates the small file problem. You need no custom applications, no self-managed compute, and no operational overhead.",
@@ -625,23 +660,6 @@
         "nova",
         "lambda",
         "launch"
-      ]
-    },
-    {
-      "id": "aws-news-a99683f22579",
-      "title": "Eliminating Java cold starts with AWS Lambda Managed Instances",
-      "description": "A single cold start can push your Java Lambda function’s response time from milliseconds to seconds, enough to violate your p99 SLA, timeout a downstream service, and page your on-call. The Java Virtual Machine (JVM) performs best in long-running processes. Its Just-In-Time (JIT) compiler progressively optimizes code over thousands of invocations. Standard serverless execution environments […]",
-      "link": "https://aws.amazon.com/blogs/compute/eliminating-java-cold-starts-with-aws-lambda-managed-instances/",
-      "pubDate": "2026-07-13T20:23:19.000Z",
-      "source": "computeBlog",
-      "services": [
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda"
       ]
     },
     {
