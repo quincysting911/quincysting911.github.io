@@ -1,8 +1,81 @@
 {
-  "lastUpdated": "2026-09-18T10:09:57.776Z",
+  "lastUpdated": "2026-09-19T09:51:17.985Z",
   "category": "general",
-  "totalItems": 36,
+  "totalItems": 39,
   "items": [
+    {
+      "id": "aws-news-5ce36a4b1b36",
+      "title": "AWS Continuum now supports credential testing and accessible domain suggestions",
+      "description": "AWS Continuum for penetration testing is a frontier agent that proactively secures applications throughout the development lifecycle by offering on-demand, customized penetration testing with real exploitability testing. Developers and security teams can now test login credentials and receive suggested domains before a penetration test runs. This makes it easier to configure an accurate network scope from the start, reducing misconfiguration and wasted test cycles.\n \nPreviously, identifying all the URLs your application reaches required manual effort, and authentication failures were only discovered after a full test cycle completed, costing time and resources. With this launch, when you add login credentials during test configuration, AWS Continuum authenticates into your application exactly as a real user would, capturing every accessible domain reached during login and surfacing them as in-scope URL suggestions. You can review accessible domains, validate credentials, and confirm the agent covers the right endpoints, all before the real test begins. Accessible domains are returned regardless of whether the credential test succeeds, fails, or times out. You can learn more about this feature in our updated documentaiton.\n \nThis capability is available in all regions where AWS Continuum for penetration testing is available and is detailed on the AWS Continuum product page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-security-agent/",
+      "pubDate": "2026-09-18T18:34:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-0117d2ef7794",
+      "title": "Amazon ECS Express Mode now supports AWS Graviton (ARM64) workloads",
+      "description": "Amazon Elastic Container Service Express Mode now supports specifying ARM64 as the CPU architecture for your service, making it easy to deploy ARM-based container images on AWS Graviton-powered compute and benefit from up to 40% better price-performance compared to x86-based instances.\n \nAmazon ECS Express Mode makes it easy to rapidly launch containerized applications, including web applications and APIs, by orchestrating and managing the cloud architecture for your application. You provide your container image, and ECS Express Mode handles the rest, configuring networking, load balancing, auto scaling, and deployments, and providing your application with an auto-generated URL. With ARM64 architecture support, you can choose the compute architecture that fits your workload, whether you're optimizing for cost with Graviton, matching your existing fleet, or deploying images built natively for ARM.\n \nYou can configure the CPU architecture for new and existing Amazon ECS Express Mode services using the AWS Management Console, AWS CLI, AWS SDKs, and infrastructure as code (IaC) tools. This capability is available in all AWS commercial Regions and AWS GovCloud (US) Regions. To learn more, see the ECS Express Mode documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ecs-express-mode-arm-architecture/",
+      "pubDate": "2026-09-18T17:27:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "ecs",
+        "graviton"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ecs",
+        "graviton",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-015c54313f64",
+      "title": "AWS RTB Fabric now supports configurable Availability Zone affinity",
+      "description": "AWS RTB Fabric now supports configurable Availability Zone (AZ) affinity for responder gateways. With this capability, you can configure how your partners connect to your responder gateway: either in their own Availability Zone or to any Availability Zone that the gateway spans. This launch helps advertising technology (AdTech) companies use their infrastructure more efficiently—with no extra charges on RTB Fabric.\n \nDemand-side platforms (DSPs) and supply-side platforms (SSPs) run their bidding systems across multiple Availability Zones. Previously, AWS RTB Fabric sent each request to available gateway capacity in the requester's own Availability Zone (AZ), so capacity in other AZs could go unused. Now you can set a client routing policy to control this: prefer the requester's own AZ to avoid added latency of crossing a boundary, or use every AZ that the responder gateway spans to give each requester access to more gateway capacity. Configurable Availability Zone affinity is available in all AWS Regions where AWS RTB Fabric is available. See the AWS RTB Fabric User Guide for fleet requirements before enabling.\n \nAWS RTB Fabric helps you connect with your AdTech partners such as Amazon Ads, GumGum, Kargo, MobileFuse, Sovrn, TripleLift, Viant, Yieldmo, and more in three steps while delivering single-digit millisecond latency through a private, high-performance network environment. RTB Fabric reduces standard cloud networking costs by up to 80% and does not require upfront commitments. AWS RTB Fabric is generally available in the following AWS Regions: US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), Europe (Frankfurt), and Europe (Ireland). See the AWS RTB Fabric Product Page to learn more.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-rtb-fabric-configurable-availability-zone-affinity/",
+      "pubDate": "2026-09-18T15:30:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-b85933c57c06",
+      "title": "AWS PrivateLink announces Tunnel Endpoints to access network segments",
+      "description": "AWS PrivateLink customers can now use VPC endpoint to privately and securely access network segments in another VPC/account. They can use a ‘tunnel’ endpoint, a new type of VPC endpoint, to tunnel into the network segment and access resources located within it.\n \nAWS PrivateLink is a highly available and scalable technology that enables private access across VPC and account boundaries to load balanced services, appliances, and resources such as databases and domains. Prior to this launch, customers who wanted to share their resources with another party such as an external vendor had to do it one at a time by creating a Resource Configuration for every resource. Now, customers can create a Resource Configuration to represent a CIDR range in their network, and share it with a vendor via AWS Resource Access Manager (RAM). The vendor can then create a tunnel endpoint and use GENEVE encapsulation to tunnel through it into the customer’s VPC to access resources located in CIDR range specified by the customer. There is an hourly charge for the tunnel endpoint and a per-GB charge for data processed through it. Please refer to the pricing page for AWS PrivateLink.  \n  The capability is available in the following AWS Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West (Oregon), Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Hyderabad), Asia Pacific (Jakarta), Asia Pacific (Malaysia), Asia Pacific (Melbourne), Asia Pacific (Mumbai), Asia Pacific (Osaka), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Milan), Europe (Paris), Europe (Spain), Europe (Stockholm), Europe (Zurich), Mexico (Central), South America (São Paulo).\n \nTo learn more about this capability and get started, please refer to the AWS PrivateLink documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/9/privatelink-tunnel-endpoint/",
+      "pubDate": "2026-09-18T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "launch",
+        "ga"
+      ]
+    },
     {
       "id": "aws-news-89bab2c415cb",
       "title": "AWS HealthOmics now supports IAM session policies",
@@ -457,22 +530,6 @@
         "cloudfront",
         "ga",
         "new-feature",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-67e5f4ba8a4e",
-      "title": "Amazon MWAA Serverless is now available in AWS GovCloud (US)",
-      "description": "Amazon Managed Workflows for Apache Airflow (MWAA) Serverless is now available in AWS GovCloud (US-East) and AWS GovCloud (US-West). Amazon MWAA Serverless eliminates the operational overhead of managing Apache Airflow infrastructure by automatically provisioning and scaling compute resources on demand, with a pay-per-use model that charges only for actual workflow run time.\n \nFor a full list of supported regions, see the Amazon MWAA Serverless regions page. To learn more, see the Amazon MWAA Serverless documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-serverless-aws-govcloud/",
-      "pubDate": "2026-09-04T22:00:00.000Z",
-      "source": "whatsNew",
-      "services": [],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "now-available",
         "support"
       ]
     },
