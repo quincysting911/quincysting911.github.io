@@ -1,8 +1,72 @@
 {
-  "lastUpdated": "2026-09-22T10:28:03.753Z",
+  "lastUpdated": "2026-09-23T10:23:17.249Z",
   "category": "general",
-  "totalItems": 42,
+  "totalItems": 39,
   "items": [
+    {
+      "id": "aws-news-d5a2d2077c27",
+      "title": "Billing Transfer now supports automatic billing group creation for two-level transfers",
+      "description": "AWS Billing Transfer users can now enable the Auto-Billing Transfer Billing Group Creation, a new AWS Billing Conductor preference that eliminates the manual billing group configuration in two-level billing transfer arrangements. Designed for AWS Distributors managing billing for downstream seller Partners and their end customers, this feature automatically creates billing groups when an end customer accepts a billing transfer from a downstream seller Partner, ensuring pro forma cost data is immediately available to the Partner, with no extra manual configuration.\nAuto-Billing Transfer Billing Group Creation is a one-time preference configuration per inbound transfer relationship, enabling you to request the creation of a billing group for any new indirect transfer coming through your Partners' account, as well as being able to specify an AWS Billing Conductor pricing plan for the billing groups created automatically. \nThe preference is accessible through two new API operations and through the AWS Management Console in the Billing Transfer details page. \nTo learn more about Auto-Billing Transfer Billing Group Creation and how to configure your billing transfer preferences, visit the AWS Billing Conductor documentation.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-billing-transfer-supports-automatic-billing-group-creation/",
+      "pubDate": "2026-09-22T20:08:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-2b6388b21d54",
+      "title": "How Moeve standardized dbt runs across data lakes with Amazon Athena",
+      "description": "Moeve standardized how it runs dbt across multiple data lakes by building a centralized, serverless launcher on Amazon Athena, AWS Step Functions, AWS Fargate, Amazon DynamoDB, and Amazon EventBridge, cutting new-project onboarding from days to about 15 minutes while keeping compute close to the data and orchestration loosely coupled.",
+      "link": "https://aws.amazon.com/blogs/big-data/how-moeve-standardized-dbt-runs-across-data-lakes-with-amazon-athena/",
+      "pubDate": "2026-09-22T15:13:31.000Z",
+      "source": "bigDataBlog",
+      "services": [
+        "dynamodb",
+        "fargate",
+        "athena",
+        "eventbridge",
+        "step functions"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "fargate",
+        "athena",
+        "eventbridge",
+        "step functions",
+        "launch",
+        "ga"
+      ]
+    },
+    {
+      "id": "aws-news-9591e36beb87",
+      "title": "Amazon Route 53 Resolver is now generally available on second-generation AWS Outposts racks",
+      "description": "Amazon Route 53 Resolver is now generally available on second-generation AWS Outposts, providing local, managed recursive DNS resolution directly on your Outpost. DNS queries from workloads running on your Outpost are resolved locally, reducing latency and eliminating the need to traverse the Service Link to reach the parent AWS Region. Route 53 Resolver maintains cached DNS records during Service Link disconnections, ensuring continuous DNS resolution even during connectivity interruptions. Route 53 Resolver runs entirely on AWS-managed infrastructure built into every second-generation Outpost, eliminating the need for customer compute capacity.\nRoute 53 Resolver is enabled by default on multi-rack second-generation Outposts. Customers who prefer to manage their own DNS resolution can opt out at any time by contacting AWS Support.\nRoute 53 Resolver on second-generation Outposts is available in all AWS Regions where second-generation Outposts are supported. All customers, including current preview customers, receive a 91-day free trial through December 21, 2026. Starting December 22, 2026, the service is priced at $0.65 per Outpost rack per hour. To get started, see the Route 53 Resolver on Outposts documentation. For pricing details, see Amazon Route 53 pricing.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/route-53-resolver-gen2-outposts/",
+      "pubDate": "2026-09-22T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "outposts"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "outposts",
+        "preview",
+        "generally-available",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-8b34bd1a0a4b",
       "title": "Amazon ECS now provides real-time deployment observability in the AWS Management Console",
@@ -208,24 +272,6 @@
       ],
       "tags": [
         "ecs"
-      ]
-    },
-    {
-      "id": "aws-news-98553100dac6",
-      "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
-      "description": "Integrate NVIDIA Resiliency Extension (NVRx) into PyTorch FSDP training on Amazon EKS to overlap checkpoint I/O with training and recover from GPU faults in seconds. This post covers async checkpointing, in-process restart, and ft_launcher in-job restart, with H100 benchmarks at 2 to 8 nodes showing 99%+ training efficiency and second-scale recovery.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
-      "pubDate": "2026-09-16T18:59:25.000Z",
-      "source": "mlBlog",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch"
       ]
     },
     {
@@ -514,89 +560,6 @@
       ]
     },
     {
-      "id": "aws-news-ea5b1a4e400e",
-      "title": "AWS Private CA EKS add-on and Connector for AD now available in AWS GovCloud (US)",
-      "description": "AWS Private Certificate Authority (AWS Private CA) announces the availability of the AWS Private CA Connector for Kubernetes as a managed Amazon EKS add-on and the AWS Private CA Connector for Active Directory in AWS GovCloud (US-East) and AWS GovCloud (US-West) Regions. These launches expand certificate automation capabilities available to AWS GovCloud (US) customers managing government workloads.\nThe AWS Private CA Connector for Kubernetes EKS add-on provides simplified installation, configuration, and lifecycle management through the EKS console, CLI, and API. The connector works with cert-manager to automate certificate requests, distribution to Kubernetes secrets, and renewal, enabling TLS for ingress controllers and securing service-to-service communication in service meshes such as Istio and Linkerd.\nThe AWS Private CA Connector for Active Directory enables AWS GovCloud (US) customers to use AWS Private CA as their certificate authority for Active Directory-enrolled objects. The connector provides automatic certificate issuance to domain-joined users, computers, and other objects through familiar Microsoft certificate enrollment interfaces, supporting enterprise scenarios including smart card authentication, LDAPS, and network device authentication (802.1x).\nAWS Private CA secures private key material using FIPS 140-3 Level 3 hardware security modules (HSMs).\nTo get started, see the AWS Private CA product page, the Amazon EKS add-ons user guide, and the AWS Private CA Connector for Active Directory documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/private-ca-eks-addon-ad-govcloud/",
-      "pubDate": "2026-09-09T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "eks"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "eks",
-        "launch",
-        "now-available",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-e8e8e6a1c970",
-      "title": "Amazon Timestream for InfluxDB 3 now supports custom plugins",
-      "description": "Amazon Timestream for InfluxDB now lets you run your own custom Python plugins on the managed versions of InfluxDB 3 Core and Enterprise editions. You host your plugin code in public or private repositories you control and the engine fetches and runs it in response to triggers, letting you implement logic specific to your workload without standing up separate external infrastructure.\nPlugins run on the trigger types the processing engine already supports and with them, you can build custom data transformations, alerting, aggregation, and integrations with your own services, all running close to your data. Plugins execute in a managed Python environment that includes the standard library and Amazon-vetted packages , so you can move workload-specific processing into the database instead of operating a separate pipeline to do it.\nTo get started, set a plugin repository on a DB parameter group, apply that parameter group to your cluster, and create triggers that reference your plugin using the influxdb3 CLI or HTTP API; private repositories are authenticated with a token stored in AWS Secrets Manager.  Custom plugins are available in all AWS Regions where Amazon Timestream for InfluxDB is available. To get started with Amazon Timestream for InfluxDB 3, visit the Amazon Timestream for InfluxDB console. For more information, see the Amazon Timestream for InfluxDB documentation and pricing page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/timestream-influxdb-custom-plugins/",
-      "pubDate": "2026-09-08T21:58:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "secrets manager"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "secrets manager",
-        "ga",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c76c57bc6bd4",
-      "title": "Amazon API Gateway now supports mutual TLS for backend integrations",
-      "description": "You can now configure Amazon API Gateway REST APIs to present an AWS Certificate Manager (ACM) certificate to your backend during the TLS handshake, enabling mutual TLS (mTLS). Previously, API Gateway could present only a self-signed certificate that it generated; now you can use a certificate signed by a certificate authority you trust. Your integration endpoint validates this certificate during the handshake to confirm the connection comes from your API. \nYou can import a certificate into ACM from your existing public key infrastructure (PKI), or have ACM issue and manage one for you through AWS Private Certificate Authority. When a certificate is reimported or renewed in ACM, API Gateway propagates the update automatically, with no redeployment and no downtime. Combined with the existing inbound mTLS support for client connections, you can apply mutual authentication across both the client-to-API and API-to-backend connections, which is a common requirement in financial services, healthcare, and other regulated or zero-trust environments.\nMutual TLS for backend integrations is available in all commercial AWS Regions and the AWS GovCloud (US) Regions, where API Gateway REST APIs are available. You can configure it through the API Gateway console, AWS CLI, or AWS CloudFormation. To get started, see Amazon API Gateway documentation and AWS blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-api-gateway-mutual-tls-backend/",
-      "pubDate": "2026-09-08T19:16:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "api gateway"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "api gateway",
-        "ga",
-        "update",
-        "integration",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-b970f4b780cc",
-      "title": "Deliver real-time data to streaming tables for Apache Iceberg with Amazon Kinesis Data Streams",
-      "description": "Amazon Kinesis Data Streams now supports streaming tables, a fully managed capability that continuously delivers your streaming data as queryable Apache Iceberg tables on Amazon S3 Tables. Streaming tables reduce data delivery costs to S3 Tables by up to 50% compared to self-managed alternatives and reduce downstream query costs by up to 30% through intelligent inline compaction that eliminates the small file problem. You need no custom applications, no self-managed compute, and no operational overhead.",
-      "link": "https://aws.amazon.com/blogs/big-data/deliver-real-time-data-to-streaming-tables-for-apache-iceberg-with-amazon-kinesis-data-streams/",
-      "pubDate": "2026-08-31T23:03:25.000Z",
-      "source": "bigDataBlog",
-      "services": [
-        "s3",
-        "kinesis"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "s3",
-        "kinesis",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-fbb6d56eac0a",
       "title": "Get started with the Agent Toolkit for AWS in the AWS CLI",
       "description": "AI coding agents such as Kiro, Claude Code, Codex, Cursor, and others play an increasingly important role in developer workflows. They write code, fix bugs, scaffold projects, and build infrastructure. By default, these agents have general knowledge of AWS. The Agent Toolkit for AWS gives them specialized, up-to-date expertise, so they’re more likely to pick […]",
@@ -740,26 +703,6 @@
         "lambda",
         "generally-available",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-221f9c3e243b",
-      "title": "Serverless ICYMI Q2 2026",
-      "description": "In this 33rd quarterly recap post, discover the most impactful AWS serverless launches, features, and resources from Q2 2026 that you might have missed. Stay current with the latest serverless innovations that can improve your applications. In case you missed our last ICYMI, read about what happened in Q1 2026. AWS Lambda MicroVMs AWS Lambda […]",
-      "link": "https://aws.amazon.com/blogs/compute/serverless-icymi-q2-2026/",
-      "pubDate": "2026-07-20T16:40:00.000Z",
-      "source": "computeBlog",
-      "services": [
-        "nova",
-        "lambda"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "nova",
-        "lambda",
-        "launch"
       ]
     },
     {
