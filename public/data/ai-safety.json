@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-09-23T10:23:17.249Z",
+  "lastUpdated": "2026-09-24T10:39:11.069Z",
   "category": "ai-safety",
-  "totalItems": 19,
+  "totalItems": 17,
   "items": [
     {
       "id": "aws-news-b26a23a66627",
@@ -24,6 +24,27 @@
         "ec2",
         "emr",
         "eks",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-713134a22e45",
+      "title": "Amazon Connect Customer launches agent-to-agent collaboration",
+      "description": "Amazon Connect Customer now supports agent-to-agent collaboration, giving customers the choice to bring in specialized AI agents during a live interaction to resolve a customer request. With this launch, Connect Customer AI agents can collaborate with each other, and with AI agents outside Connect Customer, over the open agent-to-agent (A2A) protocol through text or bidirectional voice. For example, a bank's frontline AI agent handling a customer call can delegate a fraud risk assessment to a specialist scoring AI agent, use the result to approve the transaction on the spot, and then transfer a complex dispute to another AI agent that resolves it directly with the customer.\nWorking with the A2A Technical Steering Committee at the Linux Foundation, AWS expanded the protocol to support voice streaming and interaction-level session continuity required for customer engagement. When using A2A, Connect Customer coordinates context passing between the AI agents so customers get a consistent experience, with unified observability, guardrails, and escalation controls across all the AI agents in an interaction. Administrators see one contact record showing what each agent said, which tools it called, and how long each step took, all captured as a single interaction for analytics, AI quality management, and to drive continual improvement.\nFor a full list of supported Regions, see region availability. To learn more about this feature, see the administrator guide. To learn more about Amazon Connect Customer, an AI solution that helps enterprises deliver exceptional customer experiences at every touchpoint, visit the Amazon Connect Customer website. For information about pricing, please visit our pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/Amazon-Connect-Customer-A2A",
+      "pubDate": "2026-09-22T04:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "lex"
+      ],
+      "categories": [
+        "ai-safety"
+      ],
+      "tags": [
+        "lex",
+        "launch",
+        "ga",
+        "improvement",
         "support"
       ]
     },
@@ -79,23 +100,6 @@
       "tags": [
         "launch",
         "support"
-      ]
-    },
-    {
-      "id": "aws-news-4a44c5f90221",
-      "title": "Reduce time-to-hire for quality candidates with AI-powered Amazon Connect Talent",
-      "description": "Amazon Connect Talent is an AI hiring solution built for talent acquisition leaders managing scaled hiring. It delivers AI-led interviews, data-driven assessments, and consistent evaluation, helping recruiters identify strong candidates more efficiently while providing applicants with a flexible interview experience. Informed by decades of Amazon's hiring science, Amazon Connect Talent provides transparency for every assessment, interview, and candidate score, enabling recruiters to stay in control of final hiring decisions.",
-      "link": "https://aws.amazon.com/blogs/machine-learning/reduce-time-to-hire-for-quality-candidates-with-ai-powered-amazon-connect-talent/",
-      "pubDate": "2026-09-17T17:55:20.000Z",
-      "source": "mlBlog",
-      "services": [
-        "lex"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "lex"
       ]
     },
     {
@@ -298,44 +302,6 @@
         "generally-available",
         "ga",
         "improvement"
-      ]
-    },
-    {
-      "id": "aws-news-6d0c20953d40",
-      "title": "Amazon Bedrock Managed Knowledge Base adds APIs and console support for debugging document-level access control",
-      "description": "AWS announces the CheckIngestedDocumentAcl and GetIngestedDocumentAcl APIs for Amazon Bedrock Managed Knowledge Base, giving customers a self-service way to debug document access issues and audit document-level permissions. When a user doesn't see an expected document in retrieval results for ACL-enabled data sources, it can be difficult to determine whether the cause is an access control misconfiguration or something else entirely. These new APIs and the accompanying console experience close that gap, enabling you to quickly diagnose and resolve permission issues without opening a support case.\nCheckIngestedDocumentAcl lets you verify whether a specific user has access to a given ingested document, while GetIngestedDocumentAcl returns the full ACL attached to a document so you can audit exactly what permissions are configured and catch misconfigurations. The console also introduces a new Document Access Control section on the data source details page, where you can check access by entering a document ID and user email or retrieve a document's full ACL by document ID. Together, these capabilities give administrators the visibility they need to manage access control at scale across enterprise knowledge bases.\nTo learn more, see CheckIngestedDocumentAcl and GetIngestedDocumentAcl in the Amazon Bedrock API Reference. For more information about Amazon Bedrock Managed Knowledge Base, visit the Amazon Bedrock Knowledge Bases product page.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-knowledge-base-debugging-document-access-control/",
-      "pubDate": "2026-09-09T16:03:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "bedrock"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "bedrock",
-        "ga",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-1c00e1f30584",
-      "title": "Amazon EBS Volume Clones now supports copying volumes across accounts",
-      "description": "Amazon Elastic Block Store (Amazon EBS) Volume Clones now supports copying EBS volumes across AWS accounts with re-encryption. You can copy EBS volumes to any AWS account, re-encrypting with an AWS Key Management Service (AWS KMS) key in the target account. This enables organizations that separate production and development workloads into different accounts to copy data across those account boundaries.\nWith cross-account copy, you can clone a production database volume into an isolated development account, giving developers a fresh copy of production data to experiment with safely. This capability also supports teams that require encryption key separation across environments, such as maintaining separate KMS keys for production and non-production accounts. Cross-account copy is supported for all volume types, including unencrypted volumes and volumes encrypted with customer managed keys.\nTo copy a volume across accounts, you first share the volume with the target account using AWS Resource Access Manager (AWS RAM), and then the target account creates a copy of the shared volume in the same Availability Zone. You can access this capability using the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs. It is available in all AWS Regions that support Amazon EBS Volume Clones, including all Commercial Regions, the AWS GovCloud (US) Regions, AWS China Regions, and supported Local Zones.\nTo learn more, visit the Amazon EBS Volume Clones documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/ebs-volume-clones-cross-account-copy/",
-      "pubDate": "2026-09-09T10:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "organizations"
-      ],
-      "categories": [
-        "ai-safety"
-      ],
-      "tags": [
-        "organizations",
-        "ga",
-        "support"
       ]
     },
     {

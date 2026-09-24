@@ -1,8 +1,48 @@
 {
-  "lastUpdated": "2026-09-23T10:23:17.249Z",
+  "lastUpdated": "2026-09-24T10:39:11.069Z",
   "category": "general",
-  "totalItems": 39,
+  "totalItems": 41,
   "items": [
+    {
+      "id": "aws-news-3fc28f85e1c2",
+      "title": "Amazon Kinesis Data Streams announces Service-Managed Partition Keys for simplified data ingestion",
+      "description": "Amazon Kinesis Data Streams now supports service-managed partition keys for On-Demand Standard and On-Demand Advantage streams, automatically distributing records across shards without requiring customers to specify partition keys to publish data. This capability simplifies data ingestion for workloads where record ordering is not required, eliminating hot partition keys and reducing time to production for streaming workloads.\nAmazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale. Many streaming use cases such as log aggregation, metrics collection, and IoT telemetry do not require ordering guarantees and benefit from prewarmed capacity for instant scaling. Previously, customers generated random partition keys (such as UUIDs) to distribute data, but random partitioning can still produce uneven throughput across shards, causing throttling for some partition keys even when the stream has sufficient aggregate capacity. By opting into service-managed partition keys, customers no longer need to specify partition keys when publishing data to streams in on-demand mode. The service automatically distributes records based on available warm capacity, allowing customers to scale to gigabytes per second without maintaining any distribution logic. Customers who want to send records without specifying a partition key can simply upgrade to the latest AWS SDK or Kinesis Producer Library (KPL) version to benefit from this capability.\nService-managed partition keys for Amazon Kinesis Data Streams is available today in all AWS commercial regions at no additional cost. To get started, visit the Amazon Kinesis Data Streams documentation (https://aws.amazon.com/kinesis).",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/kinesis/service-managed-partition-keys",
+      "pubDate": "2026-09-23T22:51:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "kinesis"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "kinesis",
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-6e5bd6d29e23",
+      "title": "Amazon DynamoDB global tables with multi-Region strong consistency now supports additional AWS Regions and cross-continent configurations",
+      "description": "Starting today, Amazon DynamoDB global tables with multi-Region strong consistency (MRSC) is available in five additional AWS Regions: Canada (Central), Europe (Stockholm), Europe (Spain), Asia Pacific (Mumbai), and Asia Pacific (Singapore), bringing the total number of supported Regions to 15. You can now create an MRSC global table in any three-Region configuration across the 15 supported AWS Regions, configured with either three replicas or two replicas and one witness Region. This includes configurations that span North America, Europe, and Asia Pacific.\nMRSC lets you build highly available multi-Region applications with a recovery point objective (RPO) of zero. By choosing replica Regions closer to your users in more geographies, you can route applications to nearby DynamoDB endpoints for strongly consistent reads while keeping your application available during Regional impairments. MRSC is ideal for global applications with strict consistency requirements, such as user profile management, inventory tracking, order state, and entitlement management.\nTo get started and view the complete list of supported Regions and configuration options, see the DynamoDB Developer Guide. To learn more about building resilient multi-Region applications, visit the DynamoDB global tables page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/dynamodb-mrsc-additional-regions/",
+      "pubDate": "2026-09-23T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "dynamodb"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "dynamodb",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d5a2d2077c27",
       "title": "Billing Transfer now supports automatic billing group creation for two-level transfers",
