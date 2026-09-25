@@ -1,8 +1,88 @@
 {
-  "lastUpdated": "2026-09-24T10:39:11.069Z",
+  "lastUpdated": "2026-09-25T10:43:02.045Z",
   "category": "general",
-  "totalItems": 41,
+  "totalItems": 43,
   "items": [
+    {
+      "id": "aws-news-edd84d8478c2",
+      "title": "AWS Billing and Cost Management now provides billing context for your account through a new API",
+      "description": "AWS Billing and Cost Management now offers the ListBillingViewSegments API, which returns the billing context of your account over a time period you specify.\nYou can use the API to retrieve information about how your accounts are positioned in the billing hierarchy, such as management accounts, member accounts, or billing group primary accounts. You can also identify which accounts managed your billing relationship and the rate settings, either billable or pro forma, applied to your cost data. The API returns billing context only, not cost and usage data. You can call the API directly or through an AI agent.\nYour billing context can change mid-period. The API therefore divides the requested period into time segments, each with its effective date range. For example, an account starts as its own payer, then moves under another organization as a member account, and in a later month has its new payer manage its billing through AWS Billing Conductor. A request covering all three periods returns three segments, each identifying the accounts and billing settings that were in effect.\nListBillingViewSegments is available in all commercial AWS Regions at no additional charge and supports primary billing views. To get started, visit the AWS Billing API Reference.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-billing-and-cost-management-billing-context-api/",
+      "pubDate": "2026-09-25T00:58:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "ga",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-d172c3c1d556",
+      "title": "Amazon RDS for PostgreSQL now supports PostgreSQL 19 Beta 4 in the Amazon RDS Database Preview Environment",
+      "description": "Starting today, Amazon RDS for PostgreSQL 19 Beta 4 is available in the Amazon RDS Database Preview Environment, allowing you to evaluate the pre-release of PostgreSQL 19 on Amazon RDS for PostgreSQL.\nPostgreSQL 19 Beta 4 refines the query performance and autovacuum management capabilities introduced in earlier releases and includes bug fixes and stability improvements since Beta 3. Fixes include pg_stat_autovacuum_scores view reporting for TOAST tables and corrected freeze-score scaling so you can tune autovaccum prioritization effectively. Parallel autovacuum now shares a rebalanced cost limit across its workers to keep maintenance on large tables within your configured limits. Refer to the PostgreSQL community announcement for more details.\nAmazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the Preview Environment can only be used to create or restore database instances within the Preview Environment. You can use the PostgreSQL dump and load functionality to import or export your databases from the Preview Environment. Amazon RDS Database Preview Environment database instances are priced as per the pricing in the US East (Ohio) Region.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/postgresql-19-beta-4-amazon-rds-database-preview-environment/",
+      "pubDate": "2026-09-24T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "preview",
+        "beta",
+        "improvement",
+        "support",
+        "announcement"
+      ]
+    },
+    {
+      "id": "aws-news-db05426c9e50",
+      "title": "Amazon RDS for PostgreSQL now supports post-quantum TLS key exchange",
+      "description": "Starting today, Amazon RDS for PostgreSQL introduces support for post-quantum TLS (PQ-TLS) key exchange, providing you with post-quantum cryptography options for encrypting your data in-transit.\nRDS for PostgreSQL versions 18 and higher support modification of the ssl_groups parameter. You can select cryptographic groups from the RDS for PostgreSQL allow list to align with your organization's security standards.\nAmazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. Create or update a fully managed Amazon RDS database in the Amazon RDS Management Console or by using the AWS Command Line Interface (AWS CLI).",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/postgresql-post-quantum-tls-key-exchange/",
+      "pubDate": "2026-09-24T16:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "ga",
+        "update",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1b319ce3e049",
+      "title": "AWS Network Security Manager is now generally available in US East (N. Virginia) Region",
+      "description": "Today, AWS announces the general availability of AWS Network Security Manager, a comprehensive network security management solution designed to simplify security policy deployment and enforcement at scale. Network Security Manager supports AWS WAF and AWS Shield Advanced, with support for AWS Network Firewall soon to follow. AWS Network Security Manager enables security teams to consistently enforce firewall and DDoS protection configurations across their entire AWS organization.\nNetwork Security Manager features always-on security deployment automation that applies AWS WAD and AWS Sheild Advanced security protection to Internet facing assets like AWS Application Load Balancer and Amazon CloudFront. This automated approach helps security teams deploy and manage WAF rules and Shield Advanced protections efficiently, ensuring consistent security posture across targeted accounts and resources. Teams can centrally manage security policies, automatically detect configuration drift, and apply remediation reducing the operational overhead of manual security management while maintaining comprehensive protection.\nAWS Network Security Manager is generally available in US East (N. Virginia). For pricing information, visit the AWS Network Security Manager Pricing page.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/network-security-manager-us-east-va/",
+      "pubDate": "2026-09-24T15:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "cloudfront",
+        "waf"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "cloudfront",
+        "waf",
+        "generally-available",
+        "ga",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-3fc28f85e1c2",
       "title": "Amazon Kinesis Data Streams announces Service-Managed Partition Keys for simplified data ingestion",
@@ -522,26 +602,6 @@
       ]
     },
     {
-      "id": "aws-news-f952bd34b70d",
-      "title": "AWS Elemental MediaTailor now offers Yield Optimization to automatically fill ad breaks with Amazon Ads demand",
-      "description": "AWS Elemental MediaTailor now offers Yield Optimization, a new capability that automatically monetizes unused ad inventory with Amazon Ads demand during server-side ad insertion (SSAI) for livestreams. Available exclusively to publishers in the Amazon Publisher Services (APS) Streaming TV program, yield optimization turns unfilled ad breaks into monetized impressions at zero cost to enable and with no additional infrastructure required.\nBecause ads are stitched directly into the stream before reaching the viewer, they play seamlessly on every device. Key highlights:\n- Built for scale: yield optimization is designed for large-scale live events such as professional league championships, with low latency and fast response times to maximize ad fill during peak viewership.\n- Brand safe: demand is filtered by category to avoid competitive conflicts within the same ad break. publishers set their own price floors and category rules to maintain full control over which ads run in their streams.\n- Simple to enable: configure yield optimization through the MediaTailor API or Console. No additional infrastructure or client-side changes are required.\n- Performance visibility: monitor ad fill rate improvements using MediaTailor metrics in Amazon CloudWatch. Track revenue and earnings through the APS Publisher portal.\nAWS Elemental MediaTailor yield optimization is available at no additional cost in all AWS Regions where MediaTailor is available, including US East (Ohio), US East (N. Virginia), US West (Oregon); Africa (Cape Town); Asia Pacific (Hyderabad, Malaysia, Melbourne, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokyo); Canada (Central); Europe (Frankfurt, Ireland, London, Paris, Stockholm); Middle East (UAE); and South America (São Paulo). To learn more, visit the AWS Elemental MediaTailor documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/mediatailor-yield-optimization/",
-      "pubDate": "2026-09-10T08:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudwatch",
-        "ga",
-        "improvement",
-        "new-capability"
-      ]
-    },
-    {
       "id": "aws-news-ffccf02be3f8",
       "title": "Customize Amazon API Gateway destinations for execution logs",
       "description": "Amazon API Gateway execution logs help you trace request processing step by step through your REST API stages. They capture authorization results, integration latency, mapping template output, and error details that are otherwise invisible at the API surface. When a production request fails in a way the access log cannot explain, the execution log is […]",
@@ -575,27 +635,6 @@
       ],
       "tags": [
         "lambda",
-        "support"
-      ]
-    },
-    {
-      "id": "aws-news-c11d6b4bdef3",
-      "title": "AWS Lambda now supports 90-minute function timeout on Lambda Managed Instances",
-      "description": "AWS Lambda now supports a 90-minute function timeout for asynchronous and event source mapping (ESM) invocations on Lambda Managed Instances (LMI), a 6x increase from the previous 15-minute limit. You can now run data processing, media transcoding, financial calculations, AI inference, and batch workloads on Lambda for jobs that require longer continuous execution, without re-architecting your applications.\nCustomers use Lambda to build serverless applications like event-driven processors, API backends, and data processing pipelines. For data-intensive workloads like media transcoding, financial calculations (such as Monte Carlo simulations), and AI inference that need longer continuous execution, Lambda's 15-minute function timeout limit required customers to adopt architectural workarounds. With today's launch, you can configure a function timeout of up to 90 minutes for asynchronous and ESM invocations on Lambda Managed Instances. Lambda Managed Instances lets you process multiple concurrent requests per instance, access specialized compute configurations, and drive cost efficiency through EC2 pricing advantages, without managing infrastructure. The increased function timeout also applies to invocations within Lambda durable functions, which allow you to checkpoint and replay steps for longer-running invocations. When invoked asynchronously, a multi-step durable execution can run for up to 1 year.\nYou can configure up to a 90-minute function timeout for asynchronous and ESM invocations via the AWS Lambda Console, AWS CLI, Lambda APIs, Infrastructure as Code tooling, or the Agent Toolkit for AWS. Synchronous invocations retain the existing 15-minute maximum timeout. This feature is available in all AWS Regions where Lambda Managed Instances is available.\nTo learn more about configuring the 90-minute function timeout, see the Lambda developer guide. For combining extended timeouts with checkpoint-and-replay resilience, see the durable functions documentation. For pricing details, see AWS Lambda Pricing. To learn more about AWS Lambda, visit aws.amazon.com/lambda.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-90-minute-function/",
-      "pubDate": "2026-09-09T18:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "lambda",
-        "ec2"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "lambda",
-        "ec2",
-        "launch",
         "support"
       ]
     },

@@ -1,8 +1,78 @@
 {
-  "lastUpdated": "2026-09-24T10:39:11.069Z",
+  "lastUpdated": "2026-09-25T10:43:02.045Z",
   "category": "machine-learning",
-  "totalItems": 13,
+  "totalItems": 16,
   "items": [
+    {
+      "id": "aws-news-d625937c175d",
+      "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
+      "description": "The AWS WhisperX Deep Learning Container packages Whisper, wav2vec2 forced alignment, and speaker diarization into a GPU-ready image. Learn how to deploy it to Amazon SageMaker AI real-time and asynchronous endpoints for word-level, speaker-labeled transcription, plus the production details that matter: the GPU AMI pin, scaling, and cost controls.",
+      "link": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
+      "pubDate": "2026-09-24T16:20:12.000Z",
+      "source": "mlBlog",
+      "services": [
+        "sagemaker",
+        "ec2"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "ec2"
+      ]
+    },
+    {
+      "id": "aws-news-8c28a0d8786d",
+      "title": "Amazon SageMaker HyperPod Inference Gateway for scalable LLM inference",
+      "description": "Amazon SageMaker HyperPod Inference Gateway is a Kubernetes-native, GPU-aware routing system that deploys as a single EKS managed add-on on existing SageMaker HyperPod infrastructure with zero application changes. By replacing unintelligent round-robin load balancing with real-time inference-signal-driven routing, it reduces first-token latency by up to 82% and p99 TTFT reductions of 97–98% in mixed-hardware and burst traffic scenarios.\nThe Gateway is built around 3 core components. The Envoy Endpoint terminates HTTPS traffic and exposes a single private endpoint per cluster. The Body-Based Router reads the model name directly from each incoming request and routes it to the correct GPU pool - enabling one gateway to serve many models from a single endpoint URL with no client-side changes required. The Endpoint Picker continuously scores every model server pod in real time across 6 inference-level signals - KV cache utilization, queue depth, LoRA adapter residency, prefix cache hit rate, predicted latency and running requests - selecting the optimal pod for each individual request.\nThe gateway works with any OpenAI-compatible model server, including vLLM and SGLang, requiring no application code changes.\nPer-cluster routing is available today in all AWS Regions where the SageMaker HyperPod inference add-on is supported. Coming soon - cross-cluster and cross-region routing with a centralized fleet gateway, global rate limiting, and cost-tier-aware traffic shaping.\nTo learn more, read the launch blog and explore the documentation",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/sagemaker-hyperpod-inference-gateway/",
+      "pubDate": "2026-09-24T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "hyperpod",
+        "eks"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "hyperpod",
+        "eks",
+        "launch",
+        "ga",
+        "support",
+        "coming-soon"
+      ]
+    },
+    {
+      "id": "aws-news-f56002a98f2b",
+      "title": "Run interactive workloads on Amazon EMR on EKS with Spark Connect",
+      "description": "Amazon EMR on EKS now supports interactive Apache Spark sessions with Spark Connect. Data engineers and data scientists can develop and debug Apache Spark applications interactively from managed notebooks in Amazon SageMaker Unified Studio and their own IDEs, such as Jupyter and Visual Studio Code, with Spark running on the Amazon EKS clusters they already operate.  \nAn interactive session provides a persistent Spark context that spans across cells and scripts, letting you blend local Python code execution with remote Spark operations. Spark Connect's client-server architecture decouples your application client from the Spark driver and allows you to maintain your preferred development environment and tooling while Spark runs on your Amazon EKS cluster. This architecture supports workflows including ad hoc data exploration and incremental PySpark job development before deploying to production. Each session runs as pods on a virtual cluster, secured with your AWS Identity and Access Management (IAM) execution role and tagged by project and user.\nSpark Connect on Amazon EMR on EKS is available with EMR release 7.14 (Apache Spark 3.5) and emr-spark-8.1.0 (Apache Spark 4.1), in all AWS Commercial Regions. The Amazon SageMaker Unified Studio experience is available in supported AWS Regions.\nTo get started, visit the Spark Connect on Amazon EMR on EKS documentation or the Amazon SageMaker Unified Studio Getting Started guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/emr-eks-spark-connect-interactive/",
+      "pubDate": "2026-09-24T08:00:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "sagemaker",
+        "unified studio",
+        "emr",
+        "eks",
+        "iam"
+      ],
+      "categories": [
+        "machine-learning"
+      ],
+      "tags": [
+        "sagemaker",
+        "unified studio",
+        "emr",
+        "eks",
+        "iam",
+        "support"
+      ]
+    },
     {
       "id": "aws-news-d021468480d8",
       "title": "Configure domain-level VPC networking in Amazon SageMaker Unified Studio",
