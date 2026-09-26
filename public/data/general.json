@@ -1,8 +1,75 @@
 {
-  "lastUpdated": "2026-09-25T10:43:02.045Z",
+  "lastUpdated": "2026-09-26T10:25:42.874Z",
   "category": "general",
-  "totalItems": 43,
+  "totalItems": 45,
   "items": [
+    {
+      "id": "aws-news-090ce0189f4a",
+      "title": "AWS IAM outbound identity federation now supports interface VPC endpoints for OIDC discovery",
+      "description": "AWS Identity and Access Management (IAM) outbound identity federation now supports Amazon Virtual Private Cloud (VPC) endpoints for the OpenID Connect (OIDC) discovery APIs. You can now access the OIDC discovery metadata and JSON Web Key Set (JWKS) verification key endpoints from within your VPC using AWS PrivateLink, without requiring traffic to traverse the public internet.\nIAM outbound identity federation eliminates the need to use long-lived credentials when your AWS workloads access external services. Instead, your workloads request short-lived JSON Web Tokens (JWTs) from AWS Security Token Service (AWS STS). External services verify these tokens using public verification keys and metadata available at OIDC discovery endpoints. Previously, the OIDC discovery endpoints were only reachable over the public internet, so a verifying workload running in a VPC without internet access could not retrieve them. With this launch, you can create an interface VPC endpoint to reach these endpoints privately, keeping the verification key retrieval traffic within the AWS network. This capability helps you meet network security requirements for workloads that operate in VPCs with restricted internet access, while still enabling external services to verify JWTs.\nThis feature is available in all commercial AWS Regions, the AWS GovCloud (US) Regions, and China Regions. There is no additional charge for this feature beyond standard AWS PrivateLink pricing. To learn more, see the IAM User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-sts-vpc-oidc/",
+      "pubDate": "2026-09-25T17:54:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "iam"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "iam",
+        "launch",
+        "support"
+      ]
+    },
+    {
+      "id": "aws-news-1fd68e2da54a",
+      "title": "AWS DataSync launches a monitoring dashboard for tracking task executions across your account",
+      "description": "AWS DataSync now provides a monitoring dashboard in the DataSync console that gives you visibility into your data transfers across your account. For each task execution, you can see its status, data and file transfer rates, duration, and the total data and files transferred. You can filter executions by status, task, task mode, execution ID, or start time to focus on a specific set of runs. The dashboard summarizes the filtered results, including the number of successful and failed executions, and the cumulative data and files transferred, grouped by task. To troubleshoot issues, you can select a failed execution to view its errors. The dashboard also displays counts of your configured tasks, locations, and agents, along with real-time total transfer rates.\nPreviously, monitoring multiple transfers required reviewing each execution individually or building custom Amazon CloudWatch dashboards. Now you can monitor the health, performance, and progress of concurrent transfers from a single view. This is useful for large migrations and recurring transfers that run many tasks at once.\nThe AWS DataSync dashboard is available at no additional cost in all commercial AWS Regions and the AWS GovCloud (US) Regions where AWS DataSync is available. To view your dashboard, go to the AWS DataSync console. To learn more about DataSync, visit the AWS DataSync User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/datasync-monitoring-dashboard",
+      "pubDate": "2026-09-25T15:24:00.000Z",
+      "source": "whatsNew",
+      "services": [
+        "rds",
+        "cloudwatch"
+      ],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "rds",
+        "cloudwatch",
+        "launch"
+      ]
+    },
+    {
+      "id": "aws-news-72537064a1ac",
+      "title": "Introducing SDK Client Warm-Up feature in the AWS SDK for Java 2.x",
+      "description": "The first service call from an application that uses the AWS SDK for Java 2.x takes longer than subsequent calls. This problem is known as cold start. The new SDK client warm-up feature reduces cold-start latency. One call to SdkWarmUp.warmUp() during application startup exercises the SDK request path before your first service call. With AWS […]",
+      "link": "https://aws.amazon.com/blogs/developer/introducing-sdk-client-warm-up-feature-in-the-aws-sdk-for-java-2-x/",
+      "pubDate": "2026-09-25T15:09:20.000Z",
+      "source": "developersAndDevOps",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aws-news-48cf4a03a7f6",
+      "title": "AWS End User Messaging now supports voice calling on WhatsApp",
+      "description": "AWS End User Messaging now lets businesses place and receive voice calls with their customers directly inside WhatsApp, using the same verified business identity they already use for messaging. With WhatsApp voice calling, a conversation can move seamlessly from a chat thread to a voice call without switching to a separate channel or application, so context is never lost and customers stay in the message thread where the conversation started.\nVoice calling works in both directions. Customers can call a business from within a WhatsApp chat, and businesses can call customers who have granted permission to be contacted. You can enable and manage WhatsApp voice calling on a registered WhatsApp business phone number using either the AWS End User Messaging console or the API.\nWhatsApp voice calling is available in all Regions where AWS End User Messaging Social is available.\nTo learn more and get started, see the AWS End User Messaging Social User Guide.",
+      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp",
+      "pubDate": "2026-09-25T07:00:00.000Z",
+      "source": "whatsNew",
+      "services": [],
+      "categories": [
+        "general"
+      ],
+      "tags": [
+        "support"
+      ]
+    },
     {
       "id": "aws-news-edd84d8478c2",
       "title": "AWS Billing and Cost Management now provides billing context for your account through a new API",
@@ -64,7 +131,7 @@
     {
       "id": "aws-news-1b319ce3e049",
       "title": "AWS Network Security Manager is now generally available in US East (N. Virginia) Region",
-      "description": "Today, AWS announces the general availability of AWS Network Security Manager, a comprehensive network security management solution designed to simplify security policy deployment and enforcement at scale. Network Security Manager supports AWS WAF and AWS Shield Advanced, with support for AWS Network Firewall soon to follow. AWS Network Security Manager enables security teams to consistently enforce firewall and DDoS protection configurations across their entire AWS organization.\nNetwork Security Manager features always-on security deployment automation that applies AWS WAD and AWS Sheild Advanced security protection to Internet facing assets like AWS Application Load Balancer and Amazon CloudFront. This automated approach helps security teams deploy and manage WAF rules and Shield Advanced protections efficiently, ensuring consistent security posture across targeted accounts and resources. Teams can centrally manage security policies, automatically detect configuration drift, and apply remediation reducing the operational overhead of manual security management while maintaining comprehensive protection.\nAWS Network Security Manager is generally available in US East (N. Virginia). For pricing information, visit the AWS Network Security Manager Pricing page.",
+      "description": "Today, AWS announces the general availability of AWS Network Security Manager, a comprehensive network security management solution designed to simplify security policy deployment and enforcement at scale. Network Security Manager supports AWS WAF and AWS Shield Advanced, with support for AWS Network Firewall soon to follow. AWS Network Security Manager enables security teams to consistently enforce firewall and DDoS protection configurations across their entire AWS organization.\nNetwork Security Manager features always-on security deployment automation that applies AWS WAF and AWS Shield Advanced security protection to Internet facing assets like AWS Application Load Balancer and Amazon CloudFront. This automated approach helps security teams deploy and manage WAF rules and Shield Advanced protections efficiently, ensuring consistent security posture across targeted accounts and resources. Teams can centrally manage security policies, automatically detect configuration drift, and apply remediation reducing the operational overhead of manual security management while maintaining comprehensive protection.\nAWS Network Security Manager is generally available in US East (N. Virginia). For pricing information, visit the AWS Network Security Manager Pricing page.",
       "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/network-security-manager-us-east-va/",
       "pubDate": "2026-09-24T15:00:00.000Z",
       "source": "whatsNew",
@@ -539,29 +606,6 @@
       ]
     },
     {
-      "id": "aws-news-bd47c718e78b",
-      "title": "Amazon API Gateway now supports 1 MB execution logs with configurable delivery destinations",
-      "description": "Amazon API Gateway now supports configurable delivery destinations and larger log events for REST API execution logs. Previously, execution logs were delivered to a single API Gateway-managed CloudWatch Logs log group with log events truncated at 1 KB, limiting visibility into request and response data.\n \nAmazon CloudWatch Pricing. You can set up delivery through the API Gateway console, AWS CLI, or AWS CloudFormation. To get started, see Amazon API Gateway documentation and AWS blog post.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-api-gateway-1-mb-execution-logs/",
-      "pubDate": "2026-09-10T20:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "cloudformation",
-        "api gateway",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "cloudformation",
-        "api gateway",
-        "cloudwatch",
-        "ga",
-        "support"
-      ]
-    },
-    {
       "id": "aws-news-89326dece7b6",
       "title": "Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work",
       "description": "AWS is announcing the AWS Data Analytics plugin for the new Data agent in ChatGPT Work. Teams can ask questions in natural language, analyze governed data across their Amazon Redshift data warehouse and data lakes, and build shareable dashboards, all from a conversation in ChatGPT Work.",
@@ -578,27 +622,6 @@
       "tags": [
         "redshift",
         "rds"
-      ]
-    },
-    {
-      "id": "aws-news-84489e3e63be",
-      "title": "Amazon CloudWatch now supports network health indicator for TGW inter-Region peering using synthetic monitors",
-      "description": "With synthetic monitors in Amazon CloudWatch Network Monitoring, you can now determine whether a network performance issue on a path that crosses an AWS Transit Gateway inter-Region peering connection is caused by the AWS network. This helps network operators and application developers cut the time spent isolating the source of degradation on these paths.\nPreviously, for synthetic monitors, the network health indicator (NHI) covered only paths that connect through AWS Direct Connect. With this release, synthetic monitors extend it to paths that reach a destination in a peered Region over Transit Gateway inter-Region peering. For these paths, the indicator reflects the health of the AWS network path up to the Transit Gateway peering connection, and is published to your Amazon CloudWatch account so you can build dashboards and set alarms.\nFor the full list of AWS Regions where Network Monitoring for AWS workloads is available, visit the Regions list. To learn more, visit the Amazon CloudWatch Network Monitoring documentation.",
-      "link": "https://aws.amazon.com/about-aws/whats-new/2026/09/cloudwatch-network-monitoring-tgw-support/",
-      "pubDate": "2026-09-10T11:00:00.000Z",
-      "source": "whatsNew",
-      "services": [
-        "rds",
-        "cloudwatch"
-      ],
-      "categories": [
-        "general"
-      ],
-      "tags": [
-        "rds",
-        "cloudwatch",
-        "ga",
-        "support"
       ]
     },
     {
