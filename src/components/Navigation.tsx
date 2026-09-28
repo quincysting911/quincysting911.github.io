@@ -7,11 +7,12 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
+    { href: '/agentic-ai', label: 'Agentic AI' },
     { href: '/generative-ai', label: 'Generative AI' },
+    { href: '/foundation-models', label: 'Models' },
     { href: '/machine-learning', label: 'ML Platform' },
-    { href: '/computer-vision', label: 'Vision' },
-    { href: '/natural-language', label: 'NLP' },
-    { href: '/industry-cases', label: 'Industry Cases' },
+    { href: '/ai-services', label: 'AI Services' },
+    { href: '/industry-cases', label: 'Customer Stories' },
     { href: '/contact', label: 'Contact Us' },
   ];
 
@@ -21,8 +22,8 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image src="/images/logo.svg" alt="CloudFormationStack" width={40} height={40} />
+            <Link href="/" prefetch={false} className="flex items-center space-x-3">
+              <Image src="/images/logo.svg" alt="AWS AI News Hub" width={40} height={40} />
               <div className="flex items-baseline">
                 <span className="text-2xl font-bold text-white">AWS</span>
                 <span className="ml-2 text-lg text-aws-orange">AI News Hub</span>
@@ -31,11 +32,12 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 className="text-white hover:text-aws-orange transition-colors font-medium"
               >
                 {item.label}
@@ -44,7 +46,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-white hover:text-aws-orange p-2"
@@ -78,12 +80,13 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-aws-squid">
+        <div className="lg:hidden bg-aws-squid">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 className="block px-3 py-2 text-white hover:text-aws-orange hover:bg-aws-navy rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >

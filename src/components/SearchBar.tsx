@@ -36,7 +36,9 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
           </svg>
         </div>
         <input
-          type="text"
+          type="search"
+          name="q"
+          aria-label="Search AWS AI/ML updates"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search AWS AI/ML updates..."

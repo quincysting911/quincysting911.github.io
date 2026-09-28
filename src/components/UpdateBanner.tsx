@@ -6,7 +6,7 @@ export default function UpdateBanner() {
 
   useEffect(() => {
     // Check if we have news data to get the last updated time
-    fetch('/data/news.json')
+    fetch('/data/meta.json')
       .then(response => response.json())
       .then(data => {
         if (data.lastUpdated) {

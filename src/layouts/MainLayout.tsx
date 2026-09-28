@@ -11,7 +11,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   useEffect(() => {
     // Check if banner should be visible
-    fetch('/data/news.json')
+    fetch('/data/meta.json')
       .then(response => response.json())
       .then(data => {
         if (data.lastUpdated) {
@@ -77,7 +77,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
               <h3 className="text-lg font-semibold mb-4">About</h3>
               <p className="text-gray-300 text-sm">
                 Automated aggregation of AWS AI/ML announcements from official sources.
-                Updated multiple times daily.
+                Updated daily.
               </p>
               <p className="text-gray-400 text-xs mt-4">
                 Built with Next.js • Hosted on GitHub Pages

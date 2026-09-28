@@ -1,59 +1,85 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useState, useEffect, useMemo } from 'react';
 import MainLayout from '@/layouts/MainLayout';
-import NewsCard from '@/components/NewsCard';
-import ServiceFilter from '@/components/ServiceFilter';
+import NewsList from '@/components/NewsList';
+import ChipGroup from '@/components/ChipGroup';
 import SearchBar from '@/components/SearchBar';
-import { NewsData, NewsItem, ServiceCategory } from '@/types/content';
-import fs from 'fs';
-import path from 'path';
+import { ContentSource, NewsData, ServiceCategory } from '@/types/content';
+import { CATEGORIES, LEVEL_TAGS, SOURCE_LABELS } from '@/utils/categories';
+import { filterNews, NewsFilters, topServices } from '@/utils/filterNews';
+import { loadNews } from '@/utils/loadNews';
 
 interface HomeProps {
   newsData: NewsData;
 }
 
+const INITIAL_FILTERS: NewsFilters = { category: 'all', source: 'all', tags: [], query: '' };
+const TOP_SERVICE_COUNT = 16;
+
+function asArray(value: string | string[] | undefined): string[] {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
 export default function Home({ newsData }: HomeProps) {
-  const [filteredItems, setFilteredItems] = useState<NewsItem[]>(newsData.items);
-  const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | 'all'>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+  const [filters, setFilters] = useState<NewsFilters>(INITIAL_FILTERS);
   const [lastUpdated, setLastUpdated] = useState<string>('');
+  const { items } = newsData;
 
   useEffect(() => {
     setLastUpdated(new Date(newsData.lastUpdated).toLocaleString());
   }, [newsData.lastUpdated]);
 
-  const handleCategoryFilter = (category: ServiceCategory | 'all') => {
-    setSelectedCategory(category);
-    filterItems(category, searchQuery);
+  // Restore filters from the URL (?tag=...&category=...&source=...) so filtered views are shareable.
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { tag, category, source } = router.query;
+    setFilters((current) => ({
+      ...current,
+      tags: asArray(tag),
+      category: CATEGORIES.some((c) => c.id === category) ? (category as ServiceCategory) : 'all',
+      source: typeof source === 'string' && source in SOURCE_LABELS ? (source as ContentSource) : 'all',
+    }));
+  }, [router.isReady, router.query]);
+
+  const updateFilters = (patch: Partial<NewsFilters>) => {
+    const next = { ...filters, ...patch };
+    setFilters(next);
+    const query: Record<string, string | string[]> = {};
+    if (next.tags.length) query.tag = next.tags;
+    if (next.category !== 'all') query.category = next.category;
+    if (next.source !== 'all') query.source = next.source;
+    router.replace({ pathname: '/', query }, undefined, { shallow: true, scroll: false });
   };
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    filterItems(selectedCategory, query);
-  };
+  const toggleTag = (tag: string) =>
+    updateFilters({
+      tags: filters.tags.includes(tag) ? filters.tags.filter((t) => t !== tag) : [...filters.tags, tag],
+    });
 
-  const filterItems = (category: ServiceCategory | 'all', query: string) => {
-    let items = newsData.items;
+  const filteredItems = useMemo(() => filterNews(items, filters), [items, filters]);
 
-    // Filter by category
-    if (category !== 'all') {
-      items = items.filter((item) => item.categories.includes(category));
-    }
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    items.forEach((item) => item.categories.forEach((c) => (counts[c] = (counts[c] || 0) + 1)));
+    return counts;
+  }, [items]);
 
-    // Filter by search query
-    if (query) {
-      const lowerQuery = query.toLowerCase();
-      items = items.filter(
-        (item) =>
-          item.title.toLowerCase().includes(lowerQuery) ||
-          item.description.toLowerCase().includes(lowerQuery) ||
-          item.services.some((service) => service.toLowerCase().includes(lowerQuery))
-      );
-    }
+  const levelCounts = useMemo(
+    () => Object.fromEntries(LEVEL_TAGS.map((level) => [level, items.filter((i) => i.level === level).length])),
+    [items]
+  );
 
-    setFilteredItems(items);
-  };
+  const services = useMemo(() => topServices(items, TOP_SERVICE_COUNT), [items]);
+  const sources = (Object.keys(SOURCE_LABELS) as ContentSource[]).filter((s) => newsData.sources?.[s]);
+  const otherBlogCount = sources
+    .filter((s) => s !== 'mlBlog' && s !== 'whatsNew')
+    .reduce((sum, s) => sum + (newsData.sources?.[s] || 0), 0);
+  const hasFilters =
+    filters.category !== 'all' || filters.source !== 'all' || filters.tags.length > 0 || filters.query !== '';
 
   return (
     <>
@@ -67,121 +93,119 @@ export default function Home({ newsData }: HomeProps) {
 
       <MainLayout>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-aws-navy mb-4">
-              AWS AI News Hub
-            </h1>
+          <div className="text-center mb-10">
+            <h1 className="text-4xl font-bold text-aws-navy mb-4">AWS AI News Hub</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Your central source for the latest AWS artificial intelligence and machine learning
-              service announcements, features, and updates
+              The latest AWS AI and machine learning launches and blog posts, tagged with AWS&apos;s own
+              service and level tags
             </p>
-            {lastUpdated && (
-              <div className="mt-2 text-sm text-gray-500">
-                Last updated: {lastUpdated}
-              </div>
-            )}
+            {lastUpdated && <div className="mt-2 text-sm text-gray-500">Last updated: {lastUpdated}</div>}
           </div>
 
-          {/* Search Bar */}
           <div className="mb-8">
-            <SearchBar onSearch={handleSearch} />
+            <SearchBar onSearch={(query) => updateFilters({ query })} />
           </div>
 
-          {/* Service Filter */}
-          <div className="mb-8">
-            <ServiceFilter
-              selectedCategory={selectedCategory}
-              onCategoryChange={handleCategoryFilter}
-              itemCounts={newsData.items.reduce((acc, item) => {
-                item.categories.forEach((cat) => {
-                  acc[cat] = (acc[cat] || 0) + 1;
-                });
-                return acc;
-              }, {} as Record<string, number>)}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[
+              { label: 'Total Updates', value: newsData.totalItems, source: 'all' as const },
+              { label: 'AWS ML Blog', value: newsData.sources?.mlBlog || 0, source: 'mlBlog' as const },
+              { label: "What's New", value: newsData.sources?.whatsNew || 0, source: 'whatsNew' as const },
+              { label: 'Other AWS Blogs', value: otherBlogCount, source: null },
+            ].map((stat) => {
+              const content = (
+                <>
+                  <div className="text-2xl font-bold text-aws-orange">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </>
+              );
+              const tileClass = 'bg-white p-4 rounded-lg shadow-sm border text-left w-full';
+              return stat.source ? (
+                <button
+                  key={stat.label}
+                  type="button"
+                  onClick={() => updateFilters({ source: stat.source })}
+                  aria-pressed={filters.source === stat.source}
+                  className={`${tileClass} transition-colors hover:border-aws-orange ${
+                    filters.source === stat.source ? 'border-aws-orange' : 'border-gray-200'
+                  }`}
+                >
+                  {content}
+                </button>
+              ) : (
+                <div key={stat.label} className={`${tileClass} border-gray-200`}>
+                  {content}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-8 space-y-5">
+            <ChipGroup
+              title="Category"
+              chips={[
+                { id: 'all', label: 'All Updates', icon: '📰', count: items.length },
+                ...CATEGORIES.map((c) => ({ id: c.id, label: c.label, icon: c.icon, count: categoryCounts[c.id] || 0 })),
+              ]}
+              isActive={(id) => filters.category === id}
+              onToggle={(id) => updateFilters({ category: id as ServiceCategory | 'all' })}
+            />
+            <ChipGroup
+              title="Source"
+              chips={[
+                { id: 'all', label: 'All Sources' },
+                ...sources.map((s) => ({ id: s, label: SOURCE_LABELS[s], count: newsData.sources?.[s] })),
+              ]}
+              isActive={(id) => filters.source === id}
+              onToggle={(id) => updateFilters({ source: id as ContentSource | 'all' })}
+            />
+            <ChipGroup
+              title="Level"
+              chips={LEVEL_TAGS.map((level) => ({ id: level, label: level, count: levelCounts[level] }))}
+              isActive={(id) => filters.tags.includes(id)}
+              onToggle={toggleTag}
+            />
+            <ChipGroup
+              title="Top AWS Services"
+              chips={services.map(([service, count]) => ({ id: service, label: service, count }))}
+              isActive={(id) => filters.tags.includes(id)}
+              onToggle={toggleTag}
             />
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl font-bold text-aws-orange">{newsData.totalItems}</div>
-              <div className="text-sm text-gray-600">Total Updates</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['whatsNew'] || 0}
-              </div>
-              <div className="text-sm text-gray-600">What&apos;s New</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['mlBlog'] || 0}
-              </div>
-              <div className="text-sm text-gray-600">ML Blog Posts</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl font-bold text-aws-orange">
-                {newsData.sources?.['newsBlog'] || 0}
-              </div>
-              <div className="text-sm text-gray-600">News Articles</div>
-            </div>
-          </div>
-
-          {/* Results Count */}
-          <div className="mb-4 text-gray-600">
-            Showing {filteredItems.length} of {newsData.items.length} updates
-          </div>
-
-          {/* News Items */}
-          <div className="space-y-6">
-            {filteredItems.length > 0 ? (
-              filteredItems.map((item) => <NewsCard key={item.id} item={item} />)
-            ) : (
-              <div className="text-center py-12 bg-white rounded-lg shadow-sm">
-                <p className="text-gray-500 text-lg">No updates found matching your criteria</p>
-                <p className="text-gray-400 mt-2">Try adjusting your filters or search query</p>
-              </div>
+          <div className="flex flex-wrap items-center gap-2 mb-4 text-gray-600">
+            <span>
+              Showing {filteredItems.length} of {items.length} updates
+            </span>
+            {filters.tags.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => toggleTag(tag)}
+                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-aws-orange text-white"
+                aria-label={`Remove tag filter ${tag}`}
+              >
+                {tag} <span className="ml-1">×</span>
+              </button>
+            ))}
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={() => updateFilters({ ...INITIAL_FILTERS, query: filters.query })}
+                className="text-sm text-aws-orange hover:text-aws-navy underline"
+              >
+                Clear filters
+              </button>
             )}
           </div>
+
+          <NewsList items={filteredItems} onTagClick={toggleTag} activeTags={filters.tags} />
         </div>
       </MainLayout>
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  try {
-    const dataPath = path.join(process.cwd(), 'public/data/all.json');
-
-    // Check if data file exists, if not create empty data
-    let newsData: NewsData;
-    try {
-      const fileContents = await fs.promises.readFile(dataPath, 'utf-8');
-      newsData = JSON.parse(fileContents);
-    } catch {
-      newsData = {
-        lastUpdated: '2025-09-28T00:00:00.000Z',
-        totalItems: 0,
-        items: [],
-      };
-    }
-
-    return {
-      props: {
-        newsData,
-      },
-    };
-  } catch (error) {
-    console.error('Error loading news data:', error);
-    return {
-      props: {
-        newsData: {
-          lastUpdated: '2025-09-28T00:00:00.000Z',
-          totalItems: 0,
-          items: [],
-        },
-      },
-    };
-  }
-};
+export const getStaticProps: GetStaticProps<HomeProps> = async () => ({
+  props: { newsData: await loadNews() },
+});

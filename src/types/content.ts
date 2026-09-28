@@ -2,17 +2,23 @@
  * TypeScript type definitions for AWS AI News Hub
  */
 
-export type ContentSource = 'whats-new' | 'ml-blog' | 'news-blog' | 'security-blog';
+export type ContentSource =
+  | 'whatsNew'
+  | 'mlBlog'
+  | 'newsBlog'
+  | 'bigDataBlog'
+  | 'architectureBlog'
+  | 'computeBlog'
+  | 'developersAndDevOps';
 
 export type ServiceCategory =
+  | 'agentic-ai'
   | 'generative-ai'
   | 'foundation-models'
   | 'machine-learning'
-  | 'natural-language'
-  | 'ai-safety'
   | 'ai-services'
+  | 'ai-safety'
   | 'industry-cases'
-  | 'news'
   | 'general';
 
 export interface NewsItem {
@@ -22,43 +28,19 @@ export interface NewsItem {
   link: string;
   pubDate: string;
   source: ContentSource;
-  services: string[];
-  categories: ServiceCategory[];
+  authors: string[];
+  /** Official AWS tags, verbatim (e.g. "Advanced (300)", "Amazon Bedrock AgentCore"). */
   tags: string[];
-  imageUrl?: string;
+  /** Subset of `tags` that are AWS products. */
+  services: string[];
+  /** Learning level tag, e.g. "Advanced (300)"; null when the source has none. */
+  level: string | null;
+  categories: ServiceCategory[];
 }
 
 export interface NewsData {
   lastUpdated: string;
   totalItems: number;
-  sources?: {
-    [key in ContentSource]?: number;
-  };
+  sources?: Partial<Record<ContentSource, number>>;
   items: NewsItem[];
-}
-
-export interface CategoryData extends NewsData {
-  category: ServiceCategory;
-}
-
-export interface AWSService {
-  id: string;
-  name: string;
-  displayName: string;
-  description: string;
-  category: ServiceCategory;
-  documentationUrl: string;
-  icon?: string;
-  keywords: string[];
-}
-
-export interface FilterOptions {
-  services?: string[];
-  categories?: ServiceCategory[];
-  sources?: ContentSource[];
-  dateRange?: {
-    from: Date;
-    to: Date;
-  };
-  searchQuery?: string;
 }
